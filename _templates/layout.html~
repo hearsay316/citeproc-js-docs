@@ -1,0 +1,11 @@
+{% extends "!layout.html" %}
+
+{%- block extrahead %} 
+ <script type="text/javascript">
+       MathJax.Hub.Config({
+           "HTML-CSS": {
+               scale: 90
+           }
+       });
+  </script>      
+{% endblock %}

@@ -3,8 +3,7 @@ Exploring the test suite
 ========================
 
 .. include:: substitutions.txt
-
-|CCBYSA|_
+|CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
 
 ------------------------
 
@@ -33,10 +32,11 @@ official CSL test fixtures as a submodule, in the following locations:
    | Official CSL test suite      | ``./tests/fixtures/std/processor-tests/humans`` |
    +------------------------------+-------------------------------------------------+
 
-Fixture names have two elements separated by an underscore, with a
-``.txt`` extension (e.g. ``name_WesternSimple.txt``). To run a single
-test, provide the test name as the argument to the ``-s`` option. For
-cut-and-paste convenience, various forms of the name are recognized::
+Fixture filenames have two elements (a group name and a test name),
+separated by an underscore and with a ``.txt`` extension. To run a
+single test, provide the test name as the argument to the ``-s``
+option. For cut-and-paste convenience, various forms of the name are
+recognized::
 
      ./test.py -s name WesternSimple
      ./test.py -s name_WesternSimple
@@ -97,7 +97,7 @@ compiling from scratch), check that it will run from the command line,
 and then edit its ``command`` entry in the configuration file at
 ``./tests/config/test.cnf`` as required: [#]_
 
-.. literalinclude:: ../tests/config/test.cnf
+.. literalinclude:: ./test.cnf
 
 .. [#] Note the use of a shell script for ``d8``, the standalone
        version of the Google Chrome V8 engine, which (apparently) must
@@ -139,6 +139,6 @@ To test a single fixture, provide its name::
 
     ./test.py -c name_WesternSimple.txt
 
-The script does not explicitly report success (apart from writing a
-progress dot to the console): it produces chatter only if a test
-fails.
+In its |jing| mode, the script does not explicitly report success
+(apart from writing a progress dot to the console): it produces
+chatter only if a test fails.

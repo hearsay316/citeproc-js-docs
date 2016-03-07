@@ -2,8 +2,7 @@ Acknowledgements
 ================
 
 .. include:: substitutions.txt
-
-|CCBYSA|_
+|CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
 
 ------------------------
 

@@ -8,9 +8,8 @@ citeproc-js
 
 A JavaScript implementation of the Citation Style Language
 
-|CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
-
 .. include:: substitutions.txt
+|CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
 
 ------------------------
 
@@ -24,5 +23,4 @@ Table of Contents
    acknowledgements.rst
    setting-up.rst
    testing.rst
-
-
+   deployments.rst
