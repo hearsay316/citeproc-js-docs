@@ -1,0 +1,114 @@
+{% extends "!layout.html" %}
+
+{%- block extrahead %} 
+ <style>
+   .csl-block {
+      width: 40em;
+      height: 10em;
+      position: relative;
+      top: 0px;
+      background:white;
+      border: solid black 1px;
+    }
+   .csl-hide {
+     -webkit-opacity: 0;
+     -moz-opacity: 0;
+     opacity: 0;
+     -webkit-transition: all 0.75s ease;
+     -moz-transition: all 0.75s ease;
+     -ms-transition: all 0.75s ease;
+     -o-transition: all 0.75s ease;
+     transition: all 0.75s ease;
+     -webkit-transition-delay: 0.25s;
+     -moz-transition-delay: 0.25s;
+     -ms-transition-delay: 0.25s;
+     -o-transition-delay: 0.25s;
+     transition-delay: 0.25s;
+   }
+   .csl-show {
+     -webkit-opacity: 100;
+     -moz-opacity: 100;
+     opacity: 100;
+     -webkit-transition: all 0.75s ease;
+     -moz-transition: all 0.75s ease;
+     -ms-transition: all 0.75s ease;
+     -o-transition: all 0.75s ease;
+     transition: all 0.75s ease;      
+   }
+ </style>
+ <script type="text/javascript">
+var chosenStyle = 'chicago-fullnote-bibliography';
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'citations.json', false);
+xhr.send(null);
+var citations = JSON.parse(xhr.responseText);;
+
+
+// Initialize a system object, which contains two methods needed by the
+// engine.
+citeprocSys = {
+    // Given a language tag in RFC-4646 form, this method retrieves the
+    // locale definition file.  This method must return a valid *serialized*
+    // CSL locale. (In other words, an blob of XML as an unparsed string.  The
+    // processor will fail on a native XML object or buffer).
+    retrieveLocale: function (lang){
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'locales-' + lang + '.xml', false);
+        xhr.send(null);
+        return xhr.responseText;
+    },
+
+    // Given an identifier, this retrieves one citation item.  This method
+    // must return a valid CSL-JSON object.
+    retrieveItem: function(id){
+        return citations[id];
+    }
+};
+
+// Given the identifier of a CSL style, this function instantiates a CSL.Engine
+// object that can render citations in that style.
+function getProcessor(styleID) {
+    // Get the CSL style as a serialized string of XML
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', styleID + '.csl', false);
+    xhr.send(null);
+    var styleAsText = xhr.responseText;
+
+    // Instantiate and return the engine
+    var citeproc = new CSL.Engine(citeprocSys, styleAsText);
+    return citeproc;
+};
+
+
+// This runs at document ready, and renders the bibliography
+function processorOutput() {
+    var items = ['Item-1', 'Item-2', 'Item-3', 'Item-4'];
+    ret = '';
+    var citeproc = getProcessor(chosenStyle);
+    var itemIDs = [];
+    for (var key in citations) {
+      itemIDs.push(key);
+    }
+    citeproc.updateItems(itemIDs);
+    var bibResult = citeproc.makeBibliography();
+    return bibResult[1].join('\n');
+}
+
+   function toggleCslDiv() {
+     var elem = document.getElementById("csl-block");
+     elem.hidden = false;
+     if (elem.classList.contains('csl-hide')) {
+       elem.classList.remove('csl-hide');
+       elem.classList.remove('csl-show');
+       elem.classList.add('csl-show');
+       elem.innerHTML = processorOutput();
+     } else {
+       elem.innerHTML = '';
+       elem.classList.remove('csl-show');
+       elem.classList.remove('csl-hide');
+       elem.classList.add('csl-hide');
+     }
+   }
+  </script>      
+{% endblock %}

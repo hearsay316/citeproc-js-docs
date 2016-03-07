@@ -6,6 +6,14 @@
 
    <br />
 
+.. |alert| raw:: html
+
+   <div style="position:absolute;">
+     <button onclick="toggleCslDiv();">Alert me</button>
+     <div id="csl-block" class="csl-block csl-hide">
+     </div>
+   </div>
+
 .. |citeproc-js| raw:: html
 
    <span style="background:#cccccc;border-radius:0.5em;padding-left:0.25em;padding-right:0.25em;font-weight:bold;font-family:'Courier New', Courier, monospace">citeproc-js</span>
