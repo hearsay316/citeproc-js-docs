@@ -9,9 +9,11 @@ Deployment example
 
 ------------------------
 
------------
-Hello there
------------
+--------
+The Code
+--------
+
+This page is a work in progress---tune in tomorrow for something a little more elegant.
 
 demo.js
 for citeproc-js CSL citation formatter
