@@ -53,7 +53,7 @@
   // Refactor citation data for keyed access
   var citations = {};
   var itemIDs = [];
-  for (var i=0,ilen-citationData.items.length;i<ilen;i++) {
+  for (var i=0,ilen=citationData.items.length;i<ilen;i++) {
     var id = citationData.items[i].id;
     citations[id] = citationData.items[i];
     itemIDs.push(id);
