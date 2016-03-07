@@ -76,7 +76,7 @@
   function getProcessor(styleID) {
     // Get the CSL style as a serialized string of XML
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://raw.githubusercontent.com/citation-style-language/styles/master/' styleID + '.csl', false);
+    xhr.open('GET', 'https://raw.githubusercontent.com/citation-style-language/styles/master/' + styleID + '.csl', false);
     xhr.send(null);
     var styleAsText = xhr.responseText;
     var citeproc = new CSL.Engine(citeprocSys, styleAsText);
