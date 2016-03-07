@@ -76,7 +76,7 @@
   function getProcessor(styleID) {
     // Get the CSL style as a serialized string of XML
     var xhr = new XMLHttpRequest();
-    var xhr.setRequestHeader("Origin", "https://citeproc-js.readthedocs.org");
+    xhr.setRequestHeader("Origin", "https://citeproc-js.readthedocs.org");
     xhr.open('GET', 'https://www.zotero.org/styles/' + styleID + '?source=1', false);
     xhr.send(null);
     var styleAsText = xhr.responseText;
