@@ -38,78 +38,75 @@
    }
  </style>
  <script type="text/javascript">
-var chosenStyle = 'chicago-fullnote-bibliography';
 
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'https://raw.githubusercontent.com/Juris-M/citeproc-js-docs/master/citations.json', false);
-xhr.send(null);
-var citations = JSON.parse(xhr.responseText);;
+  // Library of Cornell Conservation Agriculture
+  var chosenLibraryItems = "https://api.zotero.org/groups/348525/items?format=csljson&limit=5";
+  // Chicago Manual of Style (Full Note)
+  var chosenStyleID = "chicago-fullnote-bibliography";
 
+  // Fetch citation data
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', chosenLibraryItems, false);
+  xhr.send(null);
+  var citationData = JSON.parse(xhr.responseText);
 
-// Initialize a system object, which contains two methods needed by the
-// engine.
-citeprocSys = {
-    // Given a language tag in RFC-4646 form, this method retrieves the
-    // locale definition file.  This method must return a valid *serialized*
-    // CSL locale. (In other words, an blob of XML as an unparsed string.  The
-    // processor will fail on a native XML object or buffer).
+  // Refactor citation data for keyed access
+  var citations = {};
+  var itemIDs = [];
+  for (var i=0,ilen-citationData.items.length;i<ilen;i++) {
+    var id = citationData.items[i].id;
+    citations[id] = citationData.items[i];
+    itemIDs.push(id);
+  }
+
+  // Initialize a system object
+  citeprocSys = {
     retrieveLocale: function (lang){
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'https://raw.githubusercontent.com/Juris-M/citeproc-js-docs/master/locales-' + lang + '.xml', false);
-        xhr.send(null);
-        return xhr.responseText;
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://raw.githubusercontent.com/Juris-M/citeproc-js-docs/master/locales-' + lang + '.xml', false);
+      xhr.send(null);
+      return xhr.responseText;
     },
-
-    // Given an identifier, this retrieves one citation item.  This method
-    // must return a valid CSL-JSON object.
     retrieveItem: function(id){
-        return citations[id];
+      return citations[id];
     }
-};
+  };
 
-// Given the identifier of a CSL style, this function instantiates a CSL.Engine
-// object that can render citations in that style.
-function getProcessor(styleID) {
+  // Instantiate processor
+  function getProcessor(styleID) {
     // Get the CSL style as a serialized string of XML
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://raw.githubusercontent.com/Juris-M/citeproc-js-docs/master/' + styleID + '.csl', false);
+    xhr.open('GET', 'https://www.zotero.org/styles/' + styleID + '?source=1', false);
     xhr.send(null);
     var styleAsText = xhr.responseText;
-
-    // Instantiate and return the engine
     var citeproc = new CSL.Engine(citeprocSys, styleAsText);
     return citeproc;
-};
+  };
 
 
-// This runs at document ready, and renders the bibliography
-function processorOutput() {
-    var items = ['Item-1', 'Item-2', 'Item-3', 'Item-4'];
+  // This runs at document ready, and renders the bibliography
+  function processorOutput() {
     ret = '';
-    var citeproc = getProcessor(chosenStyle);
-    var itemIDs = [];
-    for (var key in citations) {
-      itemIDs.push(key);
-    }
+    var citeproc = getProcessor(chosenStyleID);
     citeproc.updateItems(itemIDs);
     var bibResult = citeproc.makeBibliography();
     return bibResult[1].join('\n');
-}
+  }
 
-   function toggleCslDiv() {
-     var elem = document.getElementById("csl-block");
-     elem.hidden = false;
-     if (elem.classList.contains('csl-hide')) {
-       elem.classList.remove('csl-hide');
-       elem.classList.remove('csl-show');
-       elem.classList.add('csl-show');
-       elem.innerHTML = processorOutput();
-     } else {
-       elem.innerHTML = '';
-       elem.classList.remove('csl-show');
-       elem.classList.remove('csl-hide');
-       elem.classList.add('csl-hide');
-     }
-   }
+  function toggleCslDiv() {
+    var elem = document.getElementById("csl-block");
+    elem.hidden = false;
+    if (elem.classList.contains('csl-hide')) {
+      elem.classList.remove('csl-hide');
+      elem.classList.remove('csl-show');
+      elem.classList.add('csl-show');
+      elem.innerHTML = processorOutput();
+    } else {
+      elem.innerHTML = '';
+      elem.classList.remove('csl-show');
+      elem.classList.remove('csl-hide');
+      elem.classList.add('csl-hide');
+    }
+  }
   </script>      
 {% endblock %}
