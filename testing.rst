@@ -3,8 +3,7 @@ Exploring the test suite
 ========================
 
 .. include:: substitutions.txt
-
-|CCBYSA|_
+|CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
 
 ------------------------
 
@@ -97,7 +96,7 @@ compiling from scratch), check that it will run from the command line,
 and then edit its ``command`` entry in the configuration file at
 ``./tests/config/test.cnf`` as required: [#]_
 
-.. literalinclude:: ../tests/config/test.cnf
+.. literalinclude:: ./test.cnf
 
 .. [#] Note the use of a shell script for ``d8``, the standalone
        version of the Google Chrome V8 engine, which (apparently) must

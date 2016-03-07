@@ -3,14 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-|logo| citeproc-js
-==================
+citeproc-js
+===========
 
 A JavaScript implementation of the Citation Style Language
 
-|CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
-
 .. include:: substitutions.txt
+|CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
 
 ------------------------
 
