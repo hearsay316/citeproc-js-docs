@@ -1,6 +1,9 @@
 .. |CCBYSA| image:: ./media/cc-by-sa-80x15.png
 .. _CCBYSA: http://creativecommons.org/licenses/by-sa/3.0/
 
+.. |logo| image:: ./media/citeproc-js-cpj.png
+
+
 .. |br| raw:: html
 
    <br />

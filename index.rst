@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-citeproc-js
-===========
+|logo| citeproc-js
+==================
 
 A JavaScript implementation of the Citation Style Language
 
