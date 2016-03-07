@@ -1,7 +1,7 @@
 {% extends "!layout.html" %}
 
 {%- block extrahead %} 
- <script src="citeproc.js"></script>
+ <script src="https://raw.githubusercontent.com/Juris-M/citeproc-js/master/citeproc.js"></script>
  <style>
    .csl-block {
       width: 40em;
@@ -41,7 +41,7 @@
 var chosenStyle = 'chicago-fullnote-bibliography';
 
 var xhr = new XMLHttpRequest();
-xhr.open('GET', 'citations.json', false);
+xhr.open('GET', 'https://raw.githubusercontent.com/Juris-M/citeproc-js-docs/master/citations.json', false);
 xhr.send(null);
 var citations = JSON.parse(xhr.responseText);;
 
@@ -55,7 +55,7 @@ citeprocSys = {
     // processor will fail on a native XML object or buffer).
     retrieveLocale: function (lang){
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'locales-' + lang + '.xml', false);
+        xhr.open('GET', 'https://raw.githubusercontent.com/Juris-M/citeproc-js-docs/master/locales-' + lang + '.xml', false);
         xhr.send(null);
         return xhr.responseText;
     },
@@ -72,7 +72,7 @@ citeprocSys = {
 function getProcessor(styleID) {
     // Get the CSL style as a serialized string of XML
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', styleID + '.csl', false);
+    xhr.open('GET', 'https://raw.githubusercontent.com/Juris-M/citeproc-js-docs/master/' + styleID + '.csl', false);
     xhr.send(null);
     var styleAsText = xhr.responseText;
 
