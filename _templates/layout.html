@@ -44,7 +44,7 @@
  <script type="text/javascript">
 
   // Library of Cornell Conservation Agriculture
-  var chosenLibraryItems = "https://api.zotero.org/groups/459003/items?format=csljson&limit=5";
+  var chosenLibraryItems = "https://api.zotero.org/groups/459003/items?format=csljson&limit=15";
   // Chicago Manual of Style (Full Note)
   var chosenStyleID = "chicago-fullnote-bibliography";
 
@@ -58,8 +58,10 @@
   var citations = {};
   var itemIDs = [];
   for (var i=0,ilen=citationData.items.length;i<ilen;i++) {
-    var id = citationData.items[i].id;
-    citations[id] = citationData.items[i];
+    var item = citationData.items[i];
+    if (!item.issued) continue;
+    var id = item.id;
+    citations[id] = item;
     itemIDs.push(id);
   }
 
