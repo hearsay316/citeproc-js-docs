@@ -17,9 +17,11 @@
       left: 2em;
       overflow-y: scroll;
       padding: 0.5em;
-      margin-right: 10px;
       box-shadow: 10px 10px 5px #888888;
     }
+    #csl-content-block {
+      margin-right: 10px;
+   }
    .csl-hide {
      -webkit-opacity: 0;
      -moz-opacity: 0;
@@ -113,8 +115,9 @@
   function toggleCslDiv() {
     var button = document.getElementById('csl-cites-button');
     var target = document.getElementById("csl-inner-block");
+    var content = document.getElementById("csl-content-block");
     if (target.classList.contains('csl-hide')) {
-      target.innerHTML = processorOutput();
+      content.innerHTML = processorOutput();
       target.classList.remove('csl-hide');
       target.classList.remove('csl-show');
       target.classList.add('csl-show');
