@@ -114,11 +114,11 @@
     var button = document.getElementById('csl-cites-button');
     var target = document.getElementById("csl-inner-block");
     if (target.classList.contains('csl-hide')) {
+      target.innerHTML = processorOutput();
       target.classList.remove('csl-hide');
       target.classList.remove('csl-show');
       target.classList.add('csl-show');
       button.innerHTML = "Hide citations";
-      target.innerHTML = processorOutput();
     } else {
       target.innerHTML = '';
       target.classList.remove('csl-show');
