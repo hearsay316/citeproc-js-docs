@@ -10,7 +10,7 @@
 
    <div id="csl-outer-block">
      <div id="csl-inner-block" class="csl-hide">
-       <div id="csl-content-block"/>
+       <div id="csl-content-block"></div>
      </div>
    </div>
 
