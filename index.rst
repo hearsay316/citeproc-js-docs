@@ -23,5 +23,4 @@ Table of Contents
    acknowledgements.rst
    setting-up.rst
    testing.rst
-
-
+   deployments.rst
