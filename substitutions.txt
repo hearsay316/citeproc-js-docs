@@ -6,13 +6,17 @@
 
    <br />
 
-.. |alert| raw:: html
+.. |cites-target| raw:: html
 
-   <div style="position:absolute;">
-     <button onclick="toggleCslDiv();">Alert me</button>
-     <div id="csl-block" class="csl-block csl-hide">
+   <div id="csl-outer-block">
+     <div id="csl-inner-block" class="csl-hide">
+       <div id="csl-content-block"></div>
      </div>
    </div>
+
+.. |cites-button| raw:: html
+
+   <button id="csl-cites-button" onclick="toggleCslDiv();">Generate citations</button>
 
 .. |citeproc-js| raw:: html
 

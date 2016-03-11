@@ -5,89 +5,141 @@ Deployment example
 .. include:: substitutions.txt
 |CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
 
-|alert|
-
 ------------------------
 
---------
-The Code
---------
+------------
+Introduction
+------------
 
-This page is a work in progress---tune in tomorrow for something a little more elegant.
+This page illustrates a simple deployment that renders a small
+bibliography. The original of this example was kindly provided by
+`Chris Maloney <https://github.com/Klortho>`_ back when |citeproc-js|
+was hosted on BitBucket. I have modified it (very) slightly to
+illustrate the use of the Zotero API.
 
-demo.js
-for citeproc-js CSL citation formatter
+The code explained below is embedded live in this page; you can take
+it through its paces by clicking the "Generate citations" button at
+the bottom of the document.
 
-Get the citations that we are supposed to render, in the CSL-json format
+--------------
+Style and Data
+--------------
 
-.. code-block:: javascript
-
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'citations.json', false);
-    xhr.send(null);
-    var citations = JSON.parse(xhr.responseText);;
-
-
-Initialize a system object, which contains two methods needed by the
-engine.
-
-.. code-block:: javascript
-
-    citeprocSys = {
-        retrieveLocale: function (lang){
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'locales-' + lang + '.xml', false);
-            xhr.send(null);
-            return xhr.responseText;
-        },
-
-        retrieveItem: function(id){
-            return citations[id];
-        }
-    };
-
-Given a language tag in RFC-4646 form, this method retrieves the
-locale definition file.  This method must return a valid *serialized*
-CSL locale. (In other words, an blob of XML as an unparsed string.  The
-processor will fail on a native XML object or buffer).
-
-Given an identifier, this retrieves one citation item.  This method
-must return a valid CSL-JSON object.
-
-
-Given the identifier of a CSL style, this function instantiates a CSL.Engine
-object that can render citations in that style.
+We're going to need some data. The URL below will pull eight items
+from the public library "Pitt-Greensburg English Literature Capstone"
+via the Zotero API.
 
 .. code-block:: javascript
 
-    function getProcessor(styleID) {
-        // Get the CSL style as a serialized string of XML
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', styleID + '.csl', false);
-        xhr.send(null);
-        var styleAsText = xhr.responseText;
+   var chosenLibraryItems = "https://api.zotero.org/groups/459003/items?format=csljson&limit=8&itemType=journalArticle";
 
-        // Instantiate and return the engine
-        var citeproc = new CSL.Engine(citeprocSys, styleAsText);
-        return citeproc;
-    };
-
-
-This runs at document ready, and renders the bibliography
+We're also going to need a style. The slug below is the
+machine-readable name of Chicago Full Note (with bibliography). In
+this demo we'll use it to fetch the style over the wire, but it
+could equally well be embedded in our "application," so we just
+note its name here.
 
 .. code-block:: javascript
 
-    function renderBib() {
-        var bibDivs = document.getElementsByClassName('bib-div');
-        for (var i = 0, ilen = bibDivs.length; i < ilen; ++i) {
-            var bibDiv = bibDivs[i];
-            var citeproc = getProcessor(bibDiv.getAttribute('data-csl'));
-            var itemIDs = [];
-            for (var key in citations) {
-                itemIDs.push(key);
-            }
-            citeproc.updateItems(itemIDs);
-            var bibResult = citeproc.makeBibliography();
-            bibDiv.innerHTML = bibResult[1].join('\n');
-        }
+   var chosenStyleID = "chicago-fullnote-bibliography";
+
+On page load, we fetch the citation data, and parse it into a
+JavaScript object.
+
+.. code-block:: javascript
+
+   var xhr = new XMLHttpRequest();
+   xhr.open('GET', chosenLibraryItems, false);
+   xhr.send(null);
+   var citationData = JSON.parse(xhr.responseText);
+
+------------------
+Data rearrangement
+------------------
+
+The Zotero API delivers citation objects in the CSL JSON format
+expected by the processor, but the objects need to be reorganized for
+keyed access. We also need an array of the keys. Here we store the
+keyed citations as ``citations``, and the array of IDs as ``itemIDs``.
+
+.. code-block:: javascript
+
+   var citations = {};
+   var itemIDs = [];
+   for (var i=0,ilen=citationData.items.length;i<ilen;i++) {
+     var item = citationData.items[i];
+     if (!item.issued) continue;
+     if (item.URL) delete item.URL;
+     var id = item.id;
+     citations[id] = item;
+     itemIDs.push(id);
+   }
+
+------------------
+The ``sys`` object
+------------------
+
+The processor needs two hook functions, one to acquire arbitrary
+locales (``retrieveLocale()``), and another to acquire items by key
+(``retrieveItem()``). Locales are identified by their RFC-5646 language
+and region. For this demo we'll pull them from a remote repository,
+but the files would ordinarily be stored locally.
+
+.. code-block:: javascript
+
+  citeprocSys = {
+    retrieveLocale: function (lang){
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://raw.githubusercontent.com/Juris-M/citeproc-js-docs/master/locales-' + lang + '.xml', false);
+      xhr.send(null);
+      return xhr.responseText;
+    },
+    retrieveItem: function(id){
+      return citations[id];
     }
+  };
+
+-----------------------
+Processor instantiation
+-----------------------
+
+We set up a function to instantiate the processor. In this code, we
+retrieve the style and locale as serialized XML because it is easy to
+do. If the objects were in DOM or E4X format, we could deliver that as
+well: the only constraint is that both need to be in the same form.
+
+.. code-block:: javascript
+
+   function getProcessor(styleID) {
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', 'https://raw.githubusercontent.com/citation-style-language/styles/master/' + styleID + '.csl', false);
+     xhr.send(null);
+     var styleAsText = xhr.responseText;
+     var citeproc = new CSL.Engine(citeprocSys, styleAsText);
+     return citeproc;
+   };
+
+-----------------------
+Putting it all together
+-----------------------
+
+To generate a bibliography, we grab the processor, set the item IDs on
+it, and request bibliography output. The result is a two-element array
+composed of a memo object and a list of rendered strings. Joining up
+the strings gives us the HTML for inclusion in the page.
+
+.. code-block:: javascript
+
+   function processorOutput() {
+     ret = '';
+     var citeproc = getProcessor(chosenStyleID);
+     citeproc.updateItems(itemIDs);
+     var result = citeproc.makeBibliography();
+     return result[1].join('\n');
+   }
+
+
+
+|cites-target|
+|cites-button|
+

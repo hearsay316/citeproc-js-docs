@@ -1,15 +1,27 @@
 {% extends "!layout.html" %}
 
 {%- block extrahead %} 
- <script src="https://raw.githubusercontent.com/Juris-M/citeproc-js/master/citeproc.js"></script>
+ <script src="https://fbennett.github.io/juris-m-top/js/citeproc.js"></script>
  <style>
-   .csl-block {
-      width: 40em;
+   #csl-outer-block {
+      position: absolute;
+      height: 0px;
+      max-width: 40em;
+    }
+   #csl-inner-block {
+      max-width: 40em;
+      height: 15em;
       position: relative;
-      top: 0px;
+      bottom: 17em;
+      left: 2em;
+    }
+    #csl-content-block {
       background:white;
       border: solid black 1px;
-    }
+      overflow-y: scroll;
+      padding: 0.5em;
+      box-shadow: 10px 10px 5px #888888;
+   }
    .csl-hide {
      -webkit-opacity: 0;
      -moz-opacity: 0;
@@ -101,18 +113,21 @@
   }
 
   function toggleCslDiv() {
-    var elem = document.getElementById("csl-block");
-    elem.hidden = false;
-    if (elem.classList.contains('csl-hide')) {
-      elem.classList.remove('csl-hide');
-      elem.classList.remove('csl-show');
-      elem.classList.add('csl-show');
-      elem.innerHTML = processorOutput();
+    var button = document.getElementById('csl-cites-button');
+    var target = document.getElementById("csl-inner-block");
+    var content = document.getElementById("csl-content-block");
+    if (target.classList.contains('csl-hide')) {
+      content.innerHTML = processorOutput();
+      target.classList.remove('csl-hide');
+      target.classList.remove('csl-show');
+      target.classList.add('csl-show');
+      button.innerHTML = "Hide citations";
     } else {
-      elem.innerHTML = '';
-      elem.classList.remove('csl-show');
-      elem.classList.remove('csl-hide');
-      elem.classList.add('csl-hide');
+      target.classList.remove('csl-show');
+      target.classList.remove('csl-hide');
+      target.classList.add('csl-hide');
+      //content.innerHTML = '';
+      button.innerHTML = "Generate citations";
     }
   }
   </script>      
