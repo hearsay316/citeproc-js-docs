@@ -1,38 +1,3 @@
-####################
-Loading runtime code
-####################
-
-The primary source code of the processor is in the ``./src``
-subdirectory.  Files for use in a runtime environment are catenated,
-in the appropriate sequence, in the ``citeproc.js`` file, located in
-the root of the source archive.  This file and the test fixtures can
-be refreshed using the ``./test.py -r`` command.
-
-To build the processor, the ``citeproc.js`` source code should be
-loaded into the JavaScript interpreter context, together with a
-``sys`` object provided by the integrator (see below), and the desired
-CSL style (as a string).
-
----------------
-Processor modes
----------------
-
-The processor recognizes styles that validate under two separate
-schemata, distinguished by the ``version`` attribute on the ``cs:style``
-node. Styles with ``version="1.0"`` (or ``version="1.0.1"``) are assumed
-to be valid under the `CSL Specification`_, and by default the processor will
-adopt internal settings that produce compliant output.
-
-.. _CSL Specification: http://docs.citationstyles.org/en/stable/specification.html
-
-Styles with ``version="1.1mlz1"`` are assumed to be valid under the
-Juris-M Schema described in the `Juris-M (CSL-m) Specification
-Supplement`_. With this version setting, internal settings of the
-processor will be adapted automatically to comply with the
-expectations of Juris-M.
-
-.. _Juris-M (CSL-m) Specification Supplement: http://citationstylist.org/docs/citeproc-js-csl.html
-
 
 --------------
 Readable Flags
@@ -58,109 +23,11 @@ True if citations are sorted by citation
        only; changing their value directly will have no effect on the
        actual behavior of the processor.
 
-
----------------------
-Running the processor
----------------------
-
-Instances of the processor are produced using ``CSL.Engine()`` function.
-Note that, as detailed below under `Locally defined system functions`_,
-certain local data access functions must be defined separately on an
-object supplied to the processor as its first argument.
-
-The instantiated processor provides a small set of runtime
-configuration methods.  Instance methods are also used to load item
-data into the processor, and to produce output objects suitable for
-consumption by a word processor plugin, or for constructing
-bibliographies.  Details of these and other methods available on
-processor instances are given below.
-
-###############################
-Instantiation: ``CSL.Engine()``
-###############################
-
-The ``CSL.Engine()`` command is invoked as shown below.  The command
-takes up to four arguments (two are required, two optional):
-
-.. admonition:: Important
-
-   See the section `Locally defined system functions`_ below for guidance
-   on the definition of the functions contained in the ``sys``
-   object.
-
-.. sourcecode:: js
-
-   var citeproc = new CSL.Engine(sys, 
-                                 style, 
-                                 lang,
-                                 forceLang)
-
-*sys* (object)
-    A JavaScript object providing (at least) the functions
-    ``retrieveLocale()`` and ``retrieveItem()``.
-
-*style* (xml string or object)
-    CSL style as serialized XML (if ``xmldom.js`` is used)
-    or as JavaScript object (if ``xmljson.js`` is used).
-
-*lang* (string, optional)
-    A language tag compliant with RFC 4646.  Defaults to ``en``.
-    Styles that contain a ``default-locale`` attribute value
-    on the ``style`` node will ignore this option unless
-    the ``forceLang`` argument is set to a non-nil value.
-
-*forceLang* (boolean, optional)
-    When set to a non-nil value, force the use of the
-    locale set in the ``lang`` argument, overriding
-    any language set in the ``default-locale`` attribute
-    on the ``style`` node.
-
 The version of the processor itself can be obtained
 from the attribute ``processor_version``.  The supported
 CSL version can be obtained from ``csl_version``.
 
-################################
-Locally defined system functions
-################################
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-Required ``sys`` functions
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Two functions must be supplied to the processor upon instantiation on
-the ``sys`` object.  These functions are used by the processor to
-obtain locale and item data from the environment.  Their exact
-definition may vary.
-
-!!!!!!!!!!!!!!!!!!!!
-``retrieveLocale()``
-!!!!!!!!!!!!!!!!!!!!
-
-The ``retrieveLocale()`` function is used internally to retrieve the
-serialized XML (or JavaScript object, if ``xmljson.js`` is used) of a
-given locale.  It takes a single RFC 4646 compliant language tag as
-argument, composed of a single language tag (``en``) or of a language
-tag and region subtag (``en-US``).
-
-.. sourcecode:: js
-
-   sys.retrieveLocale = function(lang){
-	   return DATA._locales[lang];
-   };
-
-!!!!!!!!!!!!!!!!!!
-``retrieveItem()``
-!!!!!!!!!!!!!!!!!!
-
-The ``retrieveItem()`` function is used by the processor to fetch
-individual items from storage. The function must be synchronous with
-the processor.
-
-.. sourcecode:: js
-
-   sys.retrieveItem = function(id){
-	   return DATA._items[id];
-   };
 
 #####################
 Configuration methods

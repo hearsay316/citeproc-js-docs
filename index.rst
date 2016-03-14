@@ -24,3 +24,7 @@ Table of Contents
    setting-up.rst
    testing.rst
    deployments.rst
+   commands.rst
+   csl.rst
+   input.rst
+   configuration.rst
