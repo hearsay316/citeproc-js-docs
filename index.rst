@@ -24,7 +24,8 @@ Table of Contents
    setting-up.rst
    testing.rst
    deployments.rst
-   commands.rst
+   running.rst
+   sys-extensions.rst
    csl.rst
    input.rst
    configuration.rst
