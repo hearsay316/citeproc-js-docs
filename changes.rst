@@ -7,9 +7,9 @@ Release Announcements
 
 ------------------------
 
-=======
+-------
 v1.1.90
-=======
+-------
 
 There are many changes to the infrastructure behind this release, and
 few changes to functionality apart from bug fixes. This back-room work
