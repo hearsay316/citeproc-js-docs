@@ -8,6 +8,59 @@ Release Announcements
 ------------------------
 
 -------
+v1.1.98
+-------
+
+**Expose ``parseNoteFieldHacks()``**
+   To allow small extensions to the schema of calling applications
+   (generally not needed in Juris-M, but useful elsewhere), CSL
+   variables can be set in the ``note`` field of the CSL JSON input to
+   the processor. The parsing code for doing so is now exposed, so
+   that calling applications (including Juris-M) can make use of it
+   where necessary for their own purposes.
+
+**Fix bugs in parsing of names from note field hack syntax**
+   When parsing hack syntax out of the note field, single-field names
+   were being returned as two-field names with a value in the ``family``
+   field only. This has been fixed.
+
+**Pre-title macros in style modules**
+   Cites to cases decided by the European Court of Justice require
+   the docket number *before* the case name. Style modules were
+   not capable of generating this cite form, so an additional
+   standard macro was added to the modules for that purpose.
+
+**Bibliography entries as strings**
+   In an initially unnoticed bug, the processor bibliography function
+   was returning the elements of a bibliography as one-item lists
+   rather than as strings. The bug was unnoticed in many contexts
+   because JavaScript has weak "typing": an array converts to a string
+   when combined with another string; and a one-element list
+   stringifies without braces or comma delimiters. The bug was noticed
+   in a context in Zotero that *required* a real string, and was duly
+   squashed.
+
+**Locators with leading space**
+   A Zotero user reported that entering a leading space in the locator
+   field in the word processor caused an unwanted page label ("p.")
+   to magically appear in some styles. This has been fixed.
+
+**Handle styles with DOS and Mac line endings**
+   A Zotero user reported that the latest processor version was crashing
+   hard when styles had DOS or Mac line endings---"normal" line endings
+   are ``line-feed`` only, DOS line endings are ``carriage-return+line-feed``,
+   and Mac line endings are ``carriage-return`` only. This bug did not affect
+   the distributed Juris-M styles, but it has been fixed, so if you
+   use a non-Unix editor (such as Windows Notepad) to modify a style
+   for some reason, it will continue to work.
+
+**Handle styles with signle-quoted XML attribute values**
+   In a bug arising from the same set of changes that yielded the line-endings
+   issue, styles (and locales) that used single-quotes on XML attribute
+   values were also crashing the processor. Single-quotes are perfectly
+   valid XML, and this bug has been squashed.
+
+-------
 v1.1.90
 -------
 
