@@ -21,6 +21,7 @@ Table of Contents
    :maxdepth: 1
 
    acknowledgements.rst
+   changes.rst
    setting-up.rst
    testing.rst
    deployments.rst
