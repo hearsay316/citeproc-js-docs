@@ -166,6 +166,4 @@ window.addEventListener('load', function() {
                               touch.screenX, touch.screenY, touch.clientX, touch.clientY,
                               evt.ctrlKey, evt.altKey, evt.shiftKey, evt.metaKey, 0, null);
         evt.originalTarget.dispatchEvent(newEvt);
-    }
-
-});
+    });
