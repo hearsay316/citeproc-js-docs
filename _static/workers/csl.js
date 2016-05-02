@@ -38,7 +38,6 @@ function getFileContent(type, filename, callback) {
 }
 
 function getStyle(styleName, localeName) {
-    console.log("XXX get style "+styleName);
     // Fetch style, call getLocales()
     getFileContent('styles', styleName, function(txt) {
         style = txt;
@@ -86,7 +85,6 @@ function normalizeLocales(locales) {
 
 function getLocales(locales) {
     // Fetch locales, call buildProcessor()
-    console.log("XXX get locales "+typeof locales+" "+locales);
     localesObj = {};
     fetchLocale(0, locales, function() {
         buildProcessor();
@@ -106,44 +104,60 @@ function fetchLocale(pos, locales, callback) {
 }
 
 function buildProcessor() {
-    console.log('Build processor');
     citeproc = new CSL.Engine(sys, style, preferredLocale);
-    console.log('Done!');
     postMessage({
         command: 'initProcessor',
         result: 'OK'
     });
 }
 
-function getItems(d, itemIDs) {
+function getItems(d, itemIDs, itemsCallback, jurisdictionsCallback) {
     // Fetch locales, call buildProcessor()
-    fetchItem(0, itemIDs, function() {
-        console.log(JSON.stringify(d.citation));
-        var res = citeproc.processCitationCluster(d.citation, d.preCitations, d.postCitations);
-        postMessage({
-            command: 'registerCitation',
-            result: 'OK',
-            citations: res[1]
-        });
-    });
+    fetchItem(0, itemIDs, itemsCallback, jurisdictionsCallback);
 }
 
-function fetchItem(pos, itemIDs, callback) {
+function fetchItem(pos, itemIDs, itemsCallback, jurisdictionsCallback) {
     if (pos === itemIDs.length) {
-        callback();
+        itemsCallback(jurisdictionsCallback);
         return;
     }
     getFileContent('items', itemIDs[pos], function(txt) {
         var itemID = itemIDs[pos];
         itemsObj[itemID] = JSON.parse(txt);
-        fetchItem(pos+1, itemIDs, callback);
+        fetchItem(pos+1, itemIDs, itemsCallback, jurisdictionsCallback);
     });
 }
 
-function configureJurisdictions(jurisdictionIDs) {
+function getJurisdictions(d, itemIDs, jurisdictionsCallback) {
     // Installs jurisdiction style modules required by an
     // item in the processor context.
-    // [forthcoming]
+    var jurisdictionIDs = [];
+    for (var i=0,ilen=itemIDs.length;i<ilen;i++) {
+        var itemID = itemIDs[i];
+        var item = itemsObj[itemID];
+        if (item.jurisdiction) {
+            var lst = item.jurisdiction.split(':');
+            for (var j=0,jlen=lst.length;j<jlen;j++) {
+                var jurisdiction = lst.slice(0, j+1).join(':');
+                if (!jurisdictionsObj[jurisdiction] && jurisdictionIDs.indexOf(jurisdiction) === -1) {
+                    jurisdictionIDs.push(jurisdiction);
+                }
+            }
+        }
+    }
+    fetchJurisdiction(0, jurisdictionIDs, jurisdictionsCallback);
+}
+
+function fetchJurisdiction(pos, jurisdictionIDs, jurisdictionsCallback) {
+    if (pos === jurisdictionIDs.length) {
+        jurisdictionsCallback();
+        return;
+    }
+    getFileContent('juris', jurisdictionIDs[pos], function(txt) {
+        var jurisdictionID = jurisdictionIDs[pos];
+        jurisdictionsObj[jurisdictionID] = txt;
+        fetchJurisdiction(pos+1, jurisdictionIDs, jurisdictionsCallback);
+    });
 }
 
 onmessage = function(e) {
@@ -161,7 +175,20 @@ onmessage = function(e) {
                 itemFetchLst.push(itemID);
             }
         }
-        getItems(d, itemFetchLst);
+        // First callback is executed after items are fetched
+        // Second callback is executed after jurisdictions are fetched
+        getItems(d, itemFetchLst,
+                 function(callback) {
+                     getJurisdictions(d, itemFetchLst, callback);
+                 },
+                 function() {
+                     var res = citeproc.processCitationCluster(d.citation, d.preCitations, d.postCitations);
+                     postMessage({
+                         command: 'registerCitation',
+                         result: 'OK',
+                         citations: res[1]
+                     });
+                 });
         break;
     }
 }
