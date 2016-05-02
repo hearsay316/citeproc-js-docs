@@ -2,7 +2,7 @@ importScripts('citeproc.js');
 
 var items = null;
 var style = null;
-var locales = null;
+var localesObj = null;
 var preferredLocale = null;
 var citeproc = null;
 
@@ -11,7 +11,7 @@ var sys = {
         return items[itemID];
     },
     retrieveLocale: function(locale) {
-        return locales[locale];
+        return localesObj[locale];
     }
 }
 
@@ -22,16 +22,19 @@ function getFileContent(type, filename, callback) {
     } else if (type === 'locales') {
         filename = 'locales-' + filename + '.xml';
     }
-    var url = '../data/' + type + '/' + filename;
-    xhr.open(url);
+    var url = '../' + type + '/' + filename;
+
+    xhr.open('GET', url);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             callback(xhr.responseText);
         }
     }
+    xhr.send(null);
 }
 
 function getStyle(styleName, localeName) {
+    console.log("XXX get style "+styleName);
     // Fetch style, call getLocales()
     getFileContent('styles', styleName, function(txt) {
         style = txt;
@@ -46,7 +49,7 @@ function extractRawLocales(style, localeName) {
     if (localeName) {
         locales.push(localeName);
     }
-    var m = txt.match(/locale=\"[^\"]+\"/g)
+    var m = style.match(/locale=\"[^\"]+\"/g)
     if (m) {
         for (var i=0,ilen=m.length;i<ilen;i++) {
             var vals = m[i].slice(0, -1).slice(8).split(/\s+/);
@@ -79,7 +82,8 @@ function normalizeLocales(locales) {
 
 function getLocales(locales) {
     // Fetch locales, call buildProcessor()
-    locales = {};
+    console.log("XXX get locales "+typeof locales+" "+locales);
+    localesObj = {};
     fetchLocale(0, locales, function() {
         buildProcessor();
     });
@@ -88,16 +92,19 @@ function getLocales(locales) {
 function fetchLocale(pos, locales, callback) {
     if (pos === locales.length) {
         callback();
+        return;
     }
     getFileContent('locales', locales[pos], function(txt) {
         var locale = locales[pos];
-        locales[locale] = txt;
+        localesObj[locale] = txt;
         fetchLocale(pos+1, locales, callback);
     });
 }
 
 function buildProcessor() {
+    console.log('Build processor');
     citeproc = new CSL.Engine(sys, style, preferredLocale);
+    console.log('Done!');
     postMessage({
         command: 'initProcessor',
         result: 'OK'
@@ -122,7 +129,7 @@ onmessage = function(e) {
         postMessage({
             command: 'registerCitation',
             result: 'OK',
-            citations: res[1];
+            citations: res[1]
         });
         break;
     }

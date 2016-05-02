@@ -1,12 +1,11 @@
-var processorReady = false;
+processorReady = false;
 
-var workaholic = new function () {
+workaholic = new function () {
     this.initProcessor = initProcessor;
     this.registerCitation = registerCitation;
-    this.refreshCitations = refreshCitations;
-    this.getBibliography = getBibliography;
 
-    var worker = new Worker('../workers/csl.js');
+    var worker = new Worker('_static/workers/csl.js');
+    this.worker = worker;
     
     function initProcessor(styleName, localeName) {
         // Instantiates the processor
@@ -26,16 +25,6 @@ var workaholic = new function () {
             citation: citation,
             preCitations: preCitations,
             postCitations: postCitations
-        });
-    }
-
-    function refreshCitations(citationIDs) {
-        // Use return from getCitationID and data fetched from
-        // selections in the UI to submit an edit request
-        if (!processorReady) return;
-        workerPostMessage({
-            command: 'refreshCitations',
-            citationIDs: citationIDs
         });
     }
 
@@ -76,6 +65,7 @@ var workaholic = new function () {
         case 'initProcessor':
             doCallback(d, function(d) {
                 processorReady = true;
+                console.log('Ready for action! '+processorReady);
             });
             break;
         case 'registerCitation':

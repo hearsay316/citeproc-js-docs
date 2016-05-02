@@ -25,6 +25,7 @@ Table of Contents
    setting-up.rst
    testing.rst
    deployments.rst
+   dynamic-editing.rst
    running.rst
    sys-extensions.rst
    csl.rst

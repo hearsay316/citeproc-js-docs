@@ -2,6 +2,10 @@
 
 .. _CCBYSA: http://creativecommons.org/licenses/by-sa/3.0/
 
+.. |citeme| raw:: html
+
+   <span class="citeme">X</span>
+
 .. |br| raw:: html
 
    <br />
