@@ -167,3 +167,4 @@ window.addEventListener('load', function() {
                               evt.ctrlKey, evt.altKey, evt.shiftKey, evt.metaKey, 0, null);
         evt.originalTarget.dispatchEvent(newEvt);
     });
+});
