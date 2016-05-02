@@ -763,7 +763,6 @@ CSL.TERMINAL_PUNCTUATION_REGEXP = new RegExp("^([" + CSL.TERMINAL_PUNCTUATION.sl
 CSL.CLOSURES = new RegExp(".*[\\]\\)]");
 if ("object" === typeof console && "function" === typeof console.log) {
     CSL.debug = function (str) {
-        print("CSL: " + str);
         console.log("CSL: " + str);
     };
     CSL.error = function (str) {
@@ -15489,6 +15488,7 @@ CSL.Disambiguation.prototype.initVars = function (akey) {
         return false;
     }
     var Item = false;
+    console.log("Another pre-check: "+myIds[0]);
     var myItem = this.state.retrieveItem("" + myIds[0]);
     this.getCiteData(myItem);
     this.base = CSL.getAmbigConfig.call(this.state);
@@ -15578,6 +15578,7 @@ CSL.Disambiguation.prototype.getCiteData = function(Item, base) {
         CSL.getAmbiguousCite.call(this.state, Item, base);
         base = CSL.getAmbigConfig.call(this.state);
         this.maxNamesByItemId[Item.id] = CSL.getMaxVals.call(this.state);
+console.log("Blast! "+Item.id);
         this.state.registry.registry[Item.id].disambig.givens = this.state.tmp.disambig_settings.givens.slice();
         for (var i=0,ilen=this.state.registry.registry[Item.id].disambig.givens.length;i<ilen;i+=1) {
             this.state.registry.registry[Item.id].disambig.givens[i] = this.state.tmp.disambig_settings.givens[i].slice();

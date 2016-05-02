@@ -1,6 +1,6 @@
 importScripts('citeproc.js');
 
-var items = null;
+var itemsObj = {};
 var style = null;
 var localesObj = null;
 var preferredLocale = null;
@@ -8,7 +8,7 @@ var citeproc = null;
 
 var sys = {
     retrieveItem: function(itemID) {
-        return items[itemID];
+        return itemsObj[itemID];
     },
     retrieveLocale: function(locale) {
         return localesObj[locale];
@@ -21,12 +21,16 @@ function getFileContent(type, filename, callback) {
         filename = filename + '.csl';
     } else if (type === 'locales') {
         filename = 'locales-' + filename + '.xml';
+    } else if (type === 'items') {
+        filename = filename + '.json';
+        console.log('fetch item: '+filename);
     }
     var url = '../' + type + '/' + filename;
 
     xhr.open('GET', url);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
+            console.log("Found us some text: "+xhr.responseText);
             callback(xhr.responseText);
         }
     }
@@ -111,6 +115,31 @@ function buildProcessor() {
     });
 }
 
+function getItems(d, itemIDs) {
+    // Fetch locales, call buildProcessor()
+    fetchItem(0, itemIDs, function() {
+        console.log(JSON.stringify(d.citation));
+        var res = citeproc.processCitationCluster(d.citation, d.preCitations, d.postCitations);
+        postMessage({
+            command: 'registerCitation',
+            result: 'OK',
+            citations: res[1]
+        });
+    });
+}
+
+function fetchItem(pos, itemIDs, callback) {
+    if (pos === itemIDs.length) {
+        callback();
+        return;
+    }
+    getFileContent('items', itemIDs[pos], function(txt) {
+        var itemID = itemIDs[pos];
+        itemsObj[itemID] = JSON.parse(txt);
+        fetchItem(pos+1, itemIDs, callback);
+    });
+}
+
 function configureJurisdictions(jurisdictionIDs) {
     // Installs jurisdiction style modules required by an
     // item in the processor context.
@@ -125,12 +154,14 @@ onmessage = function(e) {
         getStyle(d.styleName, d.localeName);
         break;
     case 'registerCitation':
-        var res = citeproc.processCitationCluster(d.citation, d.preCitations, d.postCitations);
-        postMessage({
-            command: 'registerCitation',
-            result: 'OK',
-            citations: res[1]
-        });
+        itemFetchLst = [];
+        for (var i=0,ilen=d.citation.citationItems.length;i<ilen;i++) {
+            var itemID = d.citation.citationItems[i].id;
+            if (!itemsObj[itemID]) {
+                itemFetchLst.push(itemID);
+            }
+        }
+        getItems(d, itemFetchLst);
         break;
     }
 }

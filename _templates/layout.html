@@ -1,76 +1,8 @@
 {% extends "!layout.html" %}
 
 {%- block extrahead %} 
- <style>
-   #cite-menu {
-       position: absolute;
-       display: inline-block;
-   }
-   #cite-menu .menu {
-       position: relative;
-       top: 0px;
-       left: 0px;
-       background: white;
-       padding: 0.5em;
-       border: 1px solid black;
-       border-radius: 0.5em;
-   }
-   .citeme {
-       background: #aaaaaa;
-       padding: 0em 0.4em;
-       border-radius: 1em;
-       cursor: pointer;
-   }
-   #csl-outer-block {
-      position: absolute;
-      height: 0px;
-      max-width: 40em;
-    }
-   #csl-inner-block {
-      max-width: 40em;
-      height: 15em;
-      position: relative;
-      bottom: 17em;
-      left: 2em;
-    }
-    #csl-content-block {
-      background:white;
-      border: solid black 1px;
-      overflow-y: scroll;
-      padding: 0.5em;
-      box-shadow: 10px 10px 5px #888888;
-   }
-   .csl-hide {
-     -webkit-opacity: 0;
-     -moz-opacity: 0;
-     opacity: 0;
-     -webkit-transition: all 0.75s ease;
-     -moz-transition: all 0.75s ease;
-     -ms-transition: all 0.75s ease;
-     -o-transition: all 0.75s ease;
-     transition: all 0.75s ease;
-     -webkit-transition-delay: 0.25s;
-     -moz-transition-delay: 0.25s;
-     -ms-transition-delay: 0.25s;
-     -o-transition-delay: 0.25s;
-     transition-delay: 0.25s;
-   }
-   .csl-show {
-     -webkit-opacity: 100;
-     -moz-opacity: 100;
-     opacity: 100;
-     -webkit-transition: all 0.75s ease;
-     -moz-transition: all 0.75s ease;
-     -ms-transition: all 0.75s ease;
-     -o-transition: all 0.75s ease;
-     transition: all 0.75s ease;      
-   }
-   .csl-entry {
-     text-indent: -1.5em;
-     margin-left: 1.5em;
-     margin-bottom: 0.5em;
-   }
- </style>
+ <link href='_static/octicons/octicons/octicons.css' rel='stylesheet' type='text/css'>
+ <link href='_static/css/screen.css' rel='stylesheet' type='text/css'>
  {% if pagename == 'deployments' %}
  <script type="text/javascript">
 
@@ -156,42 +88,6 @@
 
   {% if pagename == 'dynamic-editing' %}
   <script type="text/javascript" src="_static/workerapi/cslapi.js"></script>
-  <script type="text/javascript">
-
-window.addEventListener('load', function() {
-  workaholic.initProcessor('chicago-author-date', 'en-US');
-  var items = [
-      "Geller 2002",
-      "West 1934",
-      "Allen 1878"
-  ]
-  function removeCiteMenu() {
-         var node = document.getElementById('cite-menu');
-         console.log('Got him: '+node);
-         node.parentNode.removeChild(node);
-  };
-  document.body.addEventListener('click', function(e) {
-     if (e.target.classList.contains('citeme')) {
-       var node = e.target;
-       if (node.nextSibling && node.nextSibling.setAttribute && node.nextSibling.setAttribute('id') === 'cite-menu') return;
-       if (document.getElementById('cite-menu')) return;
-       var menu = document.createElement('div');
-       menu.setAttribute('id', 'cite-menu');
-       menu.innerHTML = '<div class="menu">'
-         + '<input type="checkbox">Geller 2002<br/>'
-         + '<input type="checkbox">West 1934<br/>'
-         + '<input type="checkbox">Allen 1878<br/>'
-         + '</div>';
-       var button = document.createElement('button');
-       button.setAttribute('type', 'button');
-       button.innerHTML = 'Save';
-       menu.firstChild.appendChild(button);
-       //node.parentNode.insertBefore(menu, node.nextSibling);
-       node.appendChild(menu);
-       button.addEventListener('click', removeCiteMenu);
-     }
-  });
-});
-  </script>
+  <script type="text/javascript" src="_static/workerapi/cslui.js"></script>
   {% endif %}
 {% endblock %}

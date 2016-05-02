@@ -4,7 +4,8 @@
 
 .. |citeme| raw:: html
 
-   <span class="citeme">X</span>
+   <span class="octicon octicon-chevron-down citeme" title="Edit citations"></span>
+
 
 .. |br| raw:: html
 
