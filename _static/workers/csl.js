@@ -23,14 +23,12 @@ function getFileContent(type, filename, callback) {
         filename = 'locales-' + filename + '.xml';
     } else if (type === 'items') {
         filename = filename + '.json';
-        console.log('fetch item: '+filename);
     }
     var url = '../' + type + '/' + filename;
 
     xhr.open('GET', url);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
-            console.log("Found us some text: "+xhr.responseText);
             callback(xhr.responseText);
         }
     }
@@ -186,7 +184,8 @@ onmessage = function(e) {
                      postMessage({
                          command: 'registerCitation',
                          result: 'OK',
-                         citations: res[1]
+                         citations: res[1],
+                         citationByIndex: citeproc.registry.citationreg.citationByIndex
                      });
                  });
         break;

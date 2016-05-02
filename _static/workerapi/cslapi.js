@@ -1,4 +1,5 @@
 processorReady = false;
+citationByIndex = [];
 
 workaholic = new function () {
     this.initProcessor = initProcessor;
@@ -37,26 +38,30 @@ workaholic = new function () {
     }
 
     function setCitations(citations) {
-        var nodes = document.getElementsByClassName('citation');
+        var citationNodes = document.getElementsByClassName('citation');
         // validate
-        if (!nodes) {
+        if (!citationNodes) {
             if (citations.length) {
                 alert('ERROR: have citations, but no document nodes to set them in');
             }
             return;
         }
-        if (citations.length > nodes.length) {
+        
+        if (citations.length > citationNodes.length) {
             alert('ERROR: have more citations than document nodes to set them in');
             return;
         }
         // process
         for (var i=0,ilen=citations.length;i<ilen;i++) {
             var citation = citations[i];
-            var pos = citation[0];
+            var index = citation[0];
             var txt = citation[1];
-            var node = nodes[i];
-            node.innerHTML = txt;
+            var citationNode = citationNodes[index];
+            fixupCitationPositionMap();
+            citationNode.innerHTML = txt;
         }
+        var node = document.getElementById('cite-menu');
+        node.parentNode.removeChild(node);
     }
 
     worker.onmessage = function(e) {
@@ -65,16 +70,12 @@ workaholic = new function () {
         case 'initProcessor':
             doCallback(d, function(d) {
                 processorReady = true;
-                console.log('Ready for action! '+processorReady);
             });
             break;
         case 'registerCitation':
             doCallback(d, function(d) {
-                setCitations(d.citations);
-            });
-            break;
-        case 'refreshCitations':
-            doCallback(d, function(d) {
+                citationByIndex = d.citationByIndex;
+                localStorage.setItem('citationByIndex', JSON.stringify(d.citationByIndex));
                 setCitations(d.citations);
             });
             break;
