@@ -3,6 +3,7 @@ Running the Processor
 =====================
 
 .. include:: substitutions.txt
+
 |CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
 
 ------------------------
@@ -101,9 +102,9 @@ the fields:
 
 *title* (ordinary-field example)
     Ordinary fields such as *title* may be set as strings or numbers.
-    For the fields available on each item type, see the listing for
-    `CSL <http://aurimasv.github.io/z2csl/typeMap.xml>`_ provided by
-    Aurimas Vinckevicius, and that for `CSL-M
+    For the fields available on each item type, see the `listing for
+    CSL <http://aurimasv.github.io/z2csl/typeMap.xml>`_ provided by
+    Aurimas Vinckevicius, and `that for CSL-M
     <http://fbennett.github.io/z2csl/>`_ provided by yours truly.
 
 *author* (creator-field example)
