@@ -6,6 +6,8 @@ workaholic = new function () {
     
     function initProcessor(styleName, localeName) {
         // Instantiates the processor
+        var bib = document.getElementById('bibliography');
+        bib.hidden = true;
         worker.postMessage({
             command: 'initProcessor',
             styleName: styleName,
@@ -39,6 +41,10 @@ workaholic = new function () {
         case 'initProcessor':
             doCallback(d, function(d) {
                 config.processorReady = true;
+                var menu = document.getElementById('cite-menu');
+                if (menu) {
+                    menu.parentNode.removeChild(menu);
+                }
             });
             break;
         case 'registerCitation':
@@ -46,12 +52,13 @@ workaholic = new function () {
                 config.citationByIndex = d.citationByIndex;
                 localStorage.setItem('citationByIndex', JSON.stringify(d.citationByIndex));
                 setCitations(d.citations);
+                setBibliography(d.bibliography);
+                var menu = document.getElementById('cite-menu');
+                if (menu) {
+                    menu.parentNode.removeChild(menu);
+                }
             });
             break;
         }
     }
-}
-
-function setBibliography() {
-    // Get the bibliography
 }

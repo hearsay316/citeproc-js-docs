@@ -1,4 +1,6 @@
 var config = {
+    defaultLocale: 'en-US',
+    defaultStyle: 'chicago-author-date',
     citationPositionMap: {},
     processorReady: false,
     citationByIndex: [],

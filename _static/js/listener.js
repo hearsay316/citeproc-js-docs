@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    workaholic.initProcessor('chicago-author-date', 'en-US');
+    workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
     document.body.addEventListener('click', function(e) {
         if (e.target.classList.contains('citeme')) {
             var node = e.target;

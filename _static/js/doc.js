@@ -23,17 +23,17 @@ function removeCiteMenu() {
         // Elsewise, assure that any existing citation span node is removed.
         if (next && next.classList && next.classList.contains('citation')) {
             var citationNode = next;
-            citationNode.parentNode.removeChild(citationNode);
             // true removes the existing citation from the database record
             fixupCitationPositionMap(true);
         }
-        node.parentNode.removeChild(node);
+        //node.parentNode.removeChild(node);
         return;
     }
     
-    
+
     // Figure out our list position, and cites before and after.
-    var prePost = getCitationSplits();
+    var nodes = document.getElementsByClassName('citation');
+    var prePost = getCitationSplits(nodes);
     // Compose the citation.
     var citation = {
         citationItems: citationItems,
@@ -69,12 +69,26 @@ function setCitations(citations) {
         fixupCitationPositionMap();
         citationNode.innerHTML = txt;
     }
-    var node = document.getElementById('cite-menu');
-    node.parentNode.removeChild(node);
 }
 
-function setBibliography() {
-    
+function setBibliography(data) {
+    var bib = document.getElementById('bibliography');
+    if (!data) {
+        bib.hidden = true;
+        return;
+    };
+    for (var i=0,ilen=bib.childNodes.length;i<ilen;i++) {
+        var node = bib.childNodes[0];
+        node.parentNode.removeChild(node);
+    }
+    var heading = document.createElement('h3');
+    heading.innerHTML = 'Bibliography';
+    bib.appendChild(heading);
+    var body = document.createElement('div');
+    var entries = data.join('\n');
+    body.innerHTML = entries;
+    bib.appendChild(body);
+    bib.hidden = false;
 }
 
 function setFootnotes() {

@@ -2,6 +2,10 @@
 
 .. _CCBYSA: http://creativecommons.org/licenses/by-sa/3.0/
 
+.. |bib| raw:: html
+
+   <div hidden id="bibliography"></div>
+
 .. |citeme| raw:: html
 
    <span class="octicon octicon-chevron-down citeme" title="Edit citations"></span>

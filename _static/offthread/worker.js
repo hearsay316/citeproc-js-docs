@@ -181,11 +181,16 @@ onmessage = function(e) {
                      getJurisdictions(d, itemFetchLst, callback);
                  },
                  function() {
-                     var res = citeproc.processCitationCluster(d.citation, d.preCitations, d.postCitations);
+                     var citeRes = citeproc.processCitationCluster(d.citation, d.preCitations, d.postCitations);
+                     var bibRes = null;
+                     if (citeproc.bibliography.tokens.length) {
+                         bibRes = citeproc.makeBibliography();
+                     }
                      postMessage({
                          command: 'registerCitation',
                          result: 'OK',
-                         citations: res[1],
+                         citations: citeRes[1],
+                         bibliography: bibRes[1],
                          citationByIndex: citeproc.registry.citationreg.citationByIndex
                      });
                  });
