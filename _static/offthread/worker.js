@@ -1,6 +1,7 @@
-importScripts('citeproc.js');
+importScripts('../js/citeproc.js');
 
 var itemsObj = {};
+var jurisdictionsObj = {};
 var style = null;
 var localesObj = null;
 var preferredLocale = null;
@@ -24,7 +25,7 @@ function getFileContent(type, filename, callback) {
     } else if (type === 'items') {
         filename = filename + '.json';
     }
-    var url = '../' + type + '/' + filename;
+    var url = '../data/' + type + '/' + filename;
 
     xhr.open('GET', url);
     xhr.onreadystatechange = function() {
