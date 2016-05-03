@@ -31,6 +31,7 @@
     padding: 0.5em;
     border: 1px solid black;
     border-radius: 0.5em;
+    z-index: 100;
 }
 .citeme {
     display: inline;
@@ -92,6 +93,4 @@
     vertical-align: top;
     right: 0.3em;
     top: 0px;
-}
-.csl-right-inline {
 }
