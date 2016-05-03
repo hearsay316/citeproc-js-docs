@@ -101,11 +101,33 @@ function setCitations(citations) {
 
 function setBibliography(data) {
     var bibContainer = document.getElementById('bibliography-container');
-    if (!data) {
+    if (!data || !data[1] || data[1].length === 0) {
         bibContainer.hidden = true;
         return;
     };
     var bib = document.getElementById('bibliography');
-    bib.innerHTML = data.join('\n');
+    bib.innerHTML = data[1].join('\n');
+    var entries = document.getElementsByClassName('csl-entry');
+    if (data[0].hangingindent) {
+        for (var i=0,ilen=entries.length;i<ilen;i++) {
+            var entry = entries[i];
+            entry.setAttribute('style', 'padding-left: 1.3em;text-indent: -1.3em;');
+        }
+    } else if (data[0]['second-field-align']) {
+        for (var i=0,ilen=entries.length;i<ilen;i++) {
+            var entry = entries[i];
+            entry.setAttribute('style', 'white-space: nowrap;');
+        }
+        var numbers = document.getElementsByClassName('csl-left-margin');
+        for (var i=0,ilen=numbers.length;i<ilen;i++) {
+            var number = numbers[i];
+            number.setAttribute('style', 'float: left;padding-right: 0.3em;');
+        }
+        var texts = document.getElementsByClassName('csl-right-inline');
+        for (var i=0,ilen=texts.length;i<ilen;i++) {
+            var text = texts[i];
+            text.setAttribute('style', 'display: inline-block;white-space: normal;');
+        }
+    }
     bibContainer.hidden = false;
 }

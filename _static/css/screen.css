@@ -89,9 +89,9 @@
     margin-bottom: 0.5em;
 }
 .csl-left-margin {
-    display: inline;
     vertical-align: top;
+    right: 0.3em;
+    top: 0px;
 }
 .csl-right-inline {
-    display: inline-block;
 }

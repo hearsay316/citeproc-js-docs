@@ -138,7 +138,6 @@ function fetchLocale(pos, locales, callback) {
 
 function buildProcessor() {
     citeproc = new CSL.Engine(sys, style, preferredLocale);
-    console.log('*** SO FAR ...');
     var itemIDs = [];
     if (citationByIndex) {
         for (var i=0,ilen=citationByIndex.length;i<ilen;i++) {
@@ -161,7 +160,7 @@ function buildProcessor() {
                  citationByIndex = null;
                  var bibRes = null;
                  if (citeproc.bibliography.tokens.length) {
-                     bibRes = citeproc.makeBibliography()[1];
+                     bibRes = citeproc.makeBibliography();
                  }
                  postMessage({
                      command: 'initProcessor',
@@ -183,7 +182,6 @@ function fetchItem(pos, itemIDs, itemsCallback, jurisdictionsCallback) {
         itemsCallback(jurisdictionsCallback);
         return;
     }
-    console.log('*** FETCH '+itemIDs[pos]);
     getFileContent('items', itemIDs[pos], function(txt) {
         var itemID = itemIDs[pos];
         itemsObj[itemID] = JSON.parse(txt);
@@ -254,7 +252,7 @@ onmessage = function(e) {
                      var citeRes = citeproc.processCitationCluster(d.citation, d.preCitations, d.postCitations);
                      var bibRes = null;
                      if (citeproc.bibliography.tokens.length) {
-                         bibRes = citeproc.makeBibliography()[1];
+                         bibRes = citeproc.makeBibliography();
                      }
                      postMessage({
                          command: 'registerCitation',
