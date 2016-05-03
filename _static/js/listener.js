@@ -1,6 +1,6 @@
 window.addEventListener('load', function() {
-    workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
     buildStyleMenu();
+    workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
     document.body.addEventListener('change', function(e) {
         if (e.target.getAttribute('id') === 'citation-styles') {
             config.defaultStyle = e.target.value;
