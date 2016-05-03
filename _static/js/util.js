@@ -1,9 +1,13 @@
 function buildStyleMenu() {
+    var lastStyle = localStorage.getItem('defaultStyle');
     var stylesMenu = document.getElementById('citation-styles');
     for (var i=0,ilen=config.styleData.length;i<ilen;i++) {
         var styleData = config.styleData[i];
         var option = document.createElement('option');
         option.setAttribute('value', styleData.id);
+        if (styleData.id === localStorage.getItem('defaultStyle')) {
+            option.selected = true;
+        }
         option.innerHTML = styleData.title;
         stylesMenu.appendChild(option);
     }
