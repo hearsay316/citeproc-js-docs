@@ -1,5 +1,5 @@
 var config = {
-    citationPositionMap = {},
+    citationPositionMap: {},
     processorReady: false,
     citationByIndex: [],
     itemData: [

@@ -5,17 +5,22 @@ window.addEventListener('load', function() {
             var node = e.target;
             if (document.getElementById('cite-menu')) return;
 
-            var menu = document.createElement('div');
-            menu.setAttribute('id', 'cite-menu');
-            menu.innerHTML = '<div class="menu">'
+            var citeMenu = document.createElement('div');
+            citeMenu.setAttribute('id', 'cite-menu');
+            var innerHTML = '<div class="menu">'
             var tmpl = '<input id="%%ID%%" type="checkbox" name="cite-menu-item" value="%%ID%%">%%TITLE%%<br/>'
             for (var i=0,ilen=config.itemData.length;i<ilen;i++) {
                 var datum = config.itemData[i];
-                menu.innerHTML += tmpl.split('%%ID%%').join(datum.id).replace('%%TITLE%%', datum.title);
+                innerHTML += tmpl.split('%%ID%%').join(datum.id).replace('%%TITLE%%', datum.title);
             }
-            menu.innerHTML += '<button type="button">Save</button>'
-            menu.innerHTML += '</div>';
-            node.appendChild(menu);
+            innerHTML += '</div>';
+            citeMenu.innerHTML = innerHTML;
+            var button = document.createElement('button');
+            button.setAttribute('type', 'button');
+            button.innerHTML = 'Save';
+            var menu = citeMenu.getElementsByClassName('menu')[0];
+            menu.appendChild(button);
+            node.appendChild(citeMenu);
 
             // XXX If no citation attached, menu is blank
             if (node.nextSibling && node.nextSibling.classList && node.nextSibling.classList.contains('citation')) {

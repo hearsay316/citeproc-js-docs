@@ -2,7 +2,7 @@ workaholic = new function () {
     this.initProcessor = initProcessor;
     this.registerCitation = registerCitation;
 
-    var worker = new Worker('_static/workers/csl.js');
+    var worker = new Worker('_static/offthread/worker.js');
     
     function initProcessor(styleName, localeName) {
         // Instantiates the processor
