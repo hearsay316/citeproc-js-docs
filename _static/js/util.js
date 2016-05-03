@@ -73,6 +73,7 @@ function fixupCitationPositionMap(removeCurrent) {
         }
 
         if (config.citationByIndex.length === 0) {
+            localStorage.removeItem('citationByIndex');
             workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
         } else {
             console.log('Remove by refreshing');
