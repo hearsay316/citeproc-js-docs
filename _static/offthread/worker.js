@@ -149,7 +149,6 @@ function buildProcessor() {
             }
         }
     }
-    console.log('*** SO FAR ... '+itemIDs);
     getItems(null, itemIDs,
              function(callback) {
                  getJurisdictions(null, itemIDs, callback);
@@ -160,10 +159,15 @@ function buildProcessor() {
                      rebuildData = citeproc.rebuildProcessorState(citationByIndex);
                  }
                  citationByIndex = null;
+                 var bibRes = null;
+                 if (citeproc.bibliography.tokens.length) {
+                     bibRes = citeproc.makeBibliography()[1];
+                 }
                  postMessage({
                      command: 'initProcessor',
                      xclass: citeproc.opt.xclass,
                      rebuildData: rebuildData,
+                     bibliography: bibRes,
                      result: 'OK'
                  });
              });
@@ -250,13 +254,13 @@ onmessage = function(e) {
                      var citeRes = citeproc.processCitationCluster(d.citation, d.preCitations, d.postCitations);
                      var bibRes = null;
                      if (citeproc.bibliography.tokens.length) {
-                         bibRes = citeproc.makeBibliography();
+                         bibRes = citeproc.makeBibliography()[1];
                      }
                      postMessage({
                          command: 'registerCitation',
                          result: 'OK',
                          citations: citeRes[1],
-                         bibliography: bibRes[1],
+                         bibliography: bibRes,
                          citationByIndex: citeproc.registry.citationreg.citationByIndex
                      });
                  });

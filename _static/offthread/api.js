@@ -55,6 +55,7 @@ workaholic = new function () {
                 removeCiteMenu();
                 config.processorReady = true;
                 rebuildCitations(d.rebuildData);
+                setBibliography(d.bibliography);
             });
             break;
         case 'registerCitation':
