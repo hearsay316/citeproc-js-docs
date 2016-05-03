@@ -51,7 +51,6 @@ workaholic = new function () {
         case 'initProcessor':
             doCallback(d, function(d) {
                 config.mode = d.xclass;
-                console.log('xclass: '+config.mode);
                 removeCiteMenu();
                 config.processorReady = true;
                 rebuildCitations(d.rebuildData);

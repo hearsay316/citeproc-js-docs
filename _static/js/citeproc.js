@@ -4664,7 +4664,6 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
     citationByIndex.push(citation);
     for (i = 0, ilen = citationsPost.length; i < ilen; i += 1) {
         c = citationsPost[i];
-        console.log('*** citationID: '+c[0]);
         this.registry.citationreg.citationById[c[0]].properties.noteIndex = c[1];
         citationByIndex.push(this.registry.citationreg.citationById[c[0]]);
     }
@@ -5980,7 +5979,7 @@ CSL.localeResolve = function (langstr, defaultLocale) {
     langlst = langstr.split(/[\-_]/);
     ret.base = CSL.LANG_BASES[langlst[0]];
     if ("undefined" === typeof ret.base) {
-        CSL.debug("Warning: unknown locale "+langstr+", setting fallback to "+defaultLocale);
+        //CSL.debug("Warning: unknown locale "+langstr+", setting fallback to "+defaultLocale);
         return {base:defaultLocale, best:langstr, bare:langlst[0]};
     }
     if (langlst.length === 1) {

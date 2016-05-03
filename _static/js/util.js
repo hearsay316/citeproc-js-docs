@@ -1,5 +1,7 @@
 function buildStyleMenu() {
-    config.defaultStyle = localStorage.getItem('defaultStyle');
+    if (localStorage.getItem('defaultStyle')) {
+        config.defaultStyle = localStorage.getItem('defaultStyle');
+    }
     var stylesMenu = document.getElementById('citation-styles');
     for (var i=0,ilen=config.styleData.length;i<ilen;i++) {
         var styleData = config.styleData[i];
@@ -32,7 +34,7 @@ function removeCiteMenu() {
 
 
 function fixupCitationPositionMap(removeCurrent) {
-    console.log('fixupCitationPositionMap('+removeCurrent+')');
+    //console.log('fixupCitationPositionMap('+removeCurrent+')');
     // Run this after citation node is initially set, and
     // before removal of the menu.
     config.citationPositionMap = {};
@@ -95,7 +97,9 @@ function rebuildCitations(rebuildData) {
     config.citationByIndex = JSON.parse(localStorage.getItem('citationByIndex'));
     config.citationPlacements = JSON.parse(localStorage.getItem('citationPlacements'));
     prepCitations(config.citationPlacements);
-    var citations = [for (datum of rebuildData) [0, datum[2]]]
+    var citations = rebuildData.map(function(obj){
+        return [0, obj[2]];
+    })
     for (var i=0,ilen=citations.length;i<ilen;i++) {
         citations[i][0] = i;
     }
@@ -146,7 +150,9 @@ function getCitationSplits(nodes) {
         }
     } else {
         splitData.citation = config.citationByIndex[0];
-        splitData.citationsPost = [for (citation of config.citationByIndex.slice(1)) [citation.citationID, 0]];
+        splitData.citationsPost = config.citationByIndex.slice(1).map(function(obj){
+            return [obj.citationID, 0];
+        })
     }
     if (config.mode === 'note') {
         for (var i=0,ilen=splitData.citationsPre.length;i<ilen;i++) {

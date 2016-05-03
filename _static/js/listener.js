@@ -37,7 +37,9 @@ window.addEventListener('load', function() {
                 var pos = config.citationPositionMap[citemeIndex];
                 var citation = config.citationByIndex[pos];
                 console.log("This should be a citation: "+citation);
-                var itemIDs = [for (item of citation.citationItems) item.id];
+                var itemIDs = citation.citationItems.map(function(obj){
+                    return obj.id;
+                });
                 for (var i=0,ilen=itemIDs.length;i<ilen;i++) {
                     var menuItem = document.getElementById(itemIDs[i]);
                     menuItem.checked = true;
