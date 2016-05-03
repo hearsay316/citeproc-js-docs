@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
             var citeMenu = document.createElement('div');
             citeMenu.setAttribute('id', 'cite-menu');
             var innerHTML = '<div class="menu">'
-            var tmpl = '<input id="%%ID%%" type="checkbox" name="cite-menu-item" value="%%ID%%">%%TITLE%%<br/>'
+            var tmpl = '<label><input id="%%ID%%" type="checkbox" name="cite-menu-item" value="%%ID%%">%%TITLE%%</label><br/>'
             for (var i=0,ilen=config.itemData.length;i<ilen;i++) {
                 var datum = config.itemData[i];
                 innerHTML += tmpl.split('%%ID%%').join(datum.id).replace('%%TITLE%%', datum.title);
