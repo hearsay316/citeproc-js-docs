@@ -1,4 +1,4 @@
-function removeCiteMenu() {
+function finalizeCitation() {
     var node = document.getElementById('cite-menu');
     // Get the cite itemIDs
     var citationItems = [];
@@ -33,17 +33,24 @@ function removeCiteMenu() {
 
     // Figure out our list position, and cites before and after.
     var nodes = document.getElementsByClassName('citation');
-    var prePost = getCitationSplits(nodes);
+    var splitData = getCitationSplits(nodes);
     // Compose the citation.
-    var citation = {
-        citationItems: citationItems,
-        properties: {
-            noteIndex: 0
+    var citation;
+    if (splitData.citation) {
+        citation = splitData.citation;
+        citation.citationItems = citationItems;
+        citation.properties.noteIndex = splitData.citationsPre.length;
+    } else {
+        citation = {
+            citationItems: citationItems,
+            properties: {
+                noteIndex: splitData.citationsPre.length
+            }
         }
     }
     // Submit the citation.
     // Remove menu in bounce-back.
-    workaholic.registerCitation(citation, prePost[0], prePost[1]);
+    workaholic.registerCitation(citation, splitData.citationsPre, splitData.citationsPost);
 };
 
 function setCitations(citations) {
@@ -61,37 +68,44 @@ function setCitations(citations) {
         return;
     }
     // process
+    if (config.mode === 'note') {
+        var footnoteContainer = document.getElementById('footnote-container');
+        footnoteContainer.hidden = false;
+        var footnotes = document.getElementsByClassName('footnote-text');
+    }
     for (var i=0,ilen=citations.length;i<ilen;i++) {
         var citation = citations[i];
         var index = citation[0];
         var txt = citation[1];
         var citationNode = citationNodes[index];
         fixupCitationPositionMap();
-        citationNode.innerHTML = txt;
+        if (config.mode === 'note') {
+            var nodeIndex = config.citationPositionReverseMap[index];
+            citationNode.innerHTML = '[' + (index+1) + ']';
+            footnotes[nodeIndex].parentNode.hidden = false;
+            footnotes[nodeIndex].innerHTML = txt;
+        } else {
+            citationNode.innerHTML = txt;
+        }
+    }
+    var footnoteNumber = 1;
+    var footnoteNumbers = document.getElementsByClassName('footnote-number');
+    for (var i=0,ilen=footnoteNumbers.length;i<ilen;i++) {
+        if (!footnoteNumbers[i].parentNode.hidden) {
+            citationNodes[footnoteNumber-1].innerHTML = '[' + footnoteNumber + ']';
+            footnoteNumbers[i].innerHTML = '' + footnoteNumber;
+            footnoteNumber++;
+        }
     }
 }
 
 function setBibliography(data) {
-    var bib = document.getElementById('bibliography');
+    var bibContainer = document.getElementById('bibliography-container');
     if (!data) {
-        bib.hidden = true;
+        bibContainer.hidden = true;
         return;
     };
-    for (var i=0,ilen=bib.childNodes.length;i<ilen;i++) {
-        var node = bib.childNodes[0];
-        node.parentNode.removeChild(node);
-    }
-    var heading = document.createElement('h3');
-    heading.innerHTML = 'Bibliography';
-    bib.appendChild(heading);
-    var body = document.createElement('div');
-    var entries = data.join('\n');
-    body.innerHTML = entries;
-    bib.appendChild(body);
-    bib.hidden = false;
+    var bib = document.getElementById('bibliography');
+    bib.innerHTML = data.join('\n');
+    bibContainer.hidden = false;
 }
-
-function setFootnotes() {
-
-}
-

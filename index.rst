@@ -28,6 +28,6 @@ Table of Contents
    dynamic-editing.rst
    running.rst
    sys-extensions.rst
-   csl.rst
-   input.rst
-   configuration.rst
+   #csl.rst
+   #input.rst
+   #configuration.rst

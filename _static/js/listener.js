@@ -1,5 +1,12 @@
 window.addEventListener('load', function() {
     workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
+    buildStyleMenu();
+    document.body.addEventListener('change', function(e) {
+        if (e.target.getAttribute('id') === 'citation-styles') {
+            config.defaultStyle = e.target.value;
+            workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
+        }
+    });
     document.body.addEventListener('click', function(e) {
         if (e.target.classList.contains('citeme')) {
             var node = e.target;
@@ -35,7 +42,7 @@ window.addEventListener('load', function() {
                     menuItem.checked = true;
                 }
             }
-            button.addEventListener('click', removeCiteMenu);
+            button.addEventListener('click', finalizeCitation);
         }
     });
 });

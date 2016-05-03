@@ -6,12 +6,21 @@ workaholic = new function () {
     
     function initProcessor(styleName, localeName) {
         // Instantiates the processor
-        var bib = document.getElementById('bibliography');
-        bib.hidden = true;
+        config.processorReady = false;
+        var citations = document.getElementsByClassName('citation');
+        for (var i=citations.length-1;i>-1;i--) {
+            citations[i].parentNode.removeChild(citations[i]);
+        }
+        var bibContainer = document.getElementById('bibliography-container');
+        bibContainer.hidden = true;
+        var footnoteContainer = document.getElementById('footnote-container');
+        footnoteContainer.hidden = true;
+        hideAllFootnotes();
         worker.postMessage({
             command: 'initProcessor',
             styleName: styleName,
-            localeName: localeName
+            localeName: localeName,
+            citationByIndex: localStorage.getItem('citationByIndex')
         });
     }
 
@@ -19,6 +28,7 @@ workaholic = new function () {
         // Use return from getCitationID and data fetched from
         // selections in the UI to submit an edit request
         if (!config.processorReady) return;
+        config.processorReady = false;
         worker.postMessage({
             command: 'registerCitation',
             citation: citation,
@@ -40,23 +50,20 @@ workaholic = new function () {
         switch(d.command) {
         case 'initProcessor':
             doCallback(d, function(d) {
+                config.mode = d.xclass;
+                console.log('xclass: '+config.mode);
+                removeCiteMenu();
                 config.processorReady = true;
-                var menu = document.getElementById('cite-menu');
-                if (menu) {
-                    menu.parentNode.removeChild(menu);
-                }
+                rebuildCitations(d.rebuildData);
             });
             break;
         case 'registerCitation':
             doCallback(d, function(d) {
-                config.citationByIndex = d.citationByIndex;
-                localStorage.setItem('citationByIndex', JSON.stringify(d.citationByIndex));
+                config.citationByIndex = d.citationByIndex.slice();
                 setCitations(d.citations);
                 setBibliography(d.bibliography);
-                var menu = document.getElementById('cite-menu');
-                if (menu) {
-                    menu.parentNode.removeChild(menu);
-                }
+                removeCiteMenu();
+                config.processorReady = true;
             });
             break;
         }

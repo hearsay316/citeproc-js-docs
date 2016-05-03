@@ -1679,6 +1679,7 @@ CSL.setupXml = function(xmlObject) {
             if (xmlObject.slice(0, 1) === "<") {
                 dataObj = CSL.parseXml(xmlObject);
             } else {
+                console.log("xmlObject "+typeof xmlObject+" "+xmlObject);
                 dataObj = JSON.parse(xmlObject);
             }
             parser = new CSL.XmlJSON(dataObj);
@@ -4663,6 +4664,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
     citationByIndex.push(citation);
     for (i = 0, ilen = citationsPost.length; i < ilen; i += 1) {
         c = citationsPost[i];
+        console.log('*** citationID: '+c[0]);
         this.registry.citationreg.citationById[c[0]].properties.noteIndex = c[1];
         citationByIndex.push(this.registry.citationreg.citationById[c[0]]);
     }

@@ -2,9 +2,29 @@
 
 .. _CCBYSA: http://creativecommons.org/licenses/by-sa/3.0/
 
+.. |styles| raw:: html
+
+   <select id="citation-styles"></select>
+
+.. |footnotes| raw:: html
+
+   <div hidden id="footnote-container">
+     <div class="footnote-header">
+       <b>Footnotes</b>
+     </div>
+     <div id="footnotes">
+       <div hidden class="footnote"><span class="footnote-number">1</span><span class="footnote-text"></span></div>
+       <div hidden class="footnote"><span class="footnote-number">2</span><span class="footnote-text"></span></div>
+       <div hidden class="footnote"><span class="footnote-number">3</span><span class="footnote-text"></span></div>
+     </div>
+   </div>
+
 .. |bib| raw:: html
 
-   <div hidden id="bibliography"></div>
+   <div hidden id="bibliography-container">
+     <h3>Bibliography</h3>
+     <div id="bibliography"></div>
+   </div>
 
 .. |citeme| raw:: html
 

@@ -6,13 +6,41 @@ var style = null;
 var localesObj = null;
 var preferredLocale = null;
 var citeproc = null;
-
+var citationByIndex = null;
+var abbreviationObj = {
+    "default": {
+        "container-title": {
+            "English Reports": "!authority>>>E.R."
+        },
+        "collection-title": {},
+        "institution-entire": {},
+        "institution-part": {
+            "court.appeals": "!here>>>",
+            "House of Lords": "HL"
+        },
+        nickname: {},
+        number: {},
+        title: {},
+        place: {
+            us: "!here>>>",
+            "us:c9": "9th Cir."
+        },
+        hereinafter: {},
+        classic: {}
+    }
+}
 var sys = {
     retrieveItem: function(itemID) {
         return itemsObj[itemID];
     },
     retrieveLocale: function(locale) {
         return localesObj[locale];
+    },
+    retrieveStyleModule: function(jurisdiction, preference) {
+        return jurisdictionsObj[jurisdiction];
+    },
+    getAbbreviation: function(listname, obj, jurisdiction, category, key) {
+        obj[jurisdiction][category][key] = abbreviationObj['default'][category][key];
     }
 }
 
@@ -24,13 +52,19 @@ function getFileContent(type, filename, callback) {
         filename = 'locales-' + filename + '.xml';
     } else if (type === 'items') {
         filename = filename + '.json';
+    } else if (type === 'juris') {
+        filename = 'juris-' + filename + '.csl';
     }
     var url = '../data/' + type + '/' + filename;
 
     xhr.open('GET', url);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
-            callback(xhr.responseText);
+            if (xhr.status === 200) {
+                callback(xhr.responseText);
+            } else {
+                callback();
+            }
         }
     }
     xhr.send(null);
@@ -104,10 +138,35 @@ function fetchLocale(pos, locales, callback) {
 
 function buildProcessor() {
     citeproc = new CSL.Engine(sys, style, preferredLocale);
-    postMessage({
-        command: 'initProcessor',
-        result: 'OK'
-    });
+    console.log('*** SO FAR ...');
+    var itemIDs = [];
+    if (citationByIndex) {
+        for (var i=0,ilen=citationByIndex.length;i<ilen;i++) {
+            var citation = citationByIndex[i];
+            for (var j=0,jlen=citation.citationItems.length;j<jlen;j++) {
+                var itemID = citation.citationItems[j].id;
+                itemIDs.push(itemID);
+            }
+        }
+    }
+    console.log('*** SO FAR ... '+itemIDs);
+    getItems(null, itemIDs,
+             function(callback) {
+                 getJurisdictions(null, itemIDs, callback);
+             },
+             function() {
+                 var rebuildData = null;
+                 if (citationByIndex) {
+                     rebuildData = citeproc.rebuildProcessorState(citationByIndex);
+                 }
+                 citationByIndex = null;
+                 postMessage({
+                     command: 'initProcessor',
+                     xclass: citeproc.opt.xclass,
+                     rebuildData: rebuildData,
+                     result: 'OK'
+                 });
+             });
 }
 
 function getItems(d, itemIDs, itemsCallback, jurisdictionsCallback) {
@@ -120,6 +179,7 @@ function fetchItem(pos, itemIDs, itemsCallback, jurisdictionsCallback) {
         itemsCallback(jurisdictionsCallback);
         return;
     }
+    console.log('*** FETCH '+itemIDs[pos]);
     getFileContent('items', itemIDs[pos], function(txt) {
         var itemID = itemIDs[pos];
         itemsObj[itemID] = JSON.parse(txt);
@@ -154,7 +214,9 @@ function fetchJurisdiction(pos, jurisdictionIDs, jurisdictionsCallback) {
     }
     getFileContent('juris', jurisdictionIDs[pos], function(txt) {
         var jurisdictionID = jurisdictionIDs[pos];
-        jurisdictionsObj[jurisdictionID] = txt;
+        if (txt) {
+            jurisdictionsObj[jurisdictionID] = txt;
+        }
         fetchJurisdiction(pos+1, jurisdictionIDs, jurisdictionsCallback);
     });
 }
@@ -164,6 +226,10 @@ onmessage = function(e) {
     switch (d.command) {
     case 'initProcessor':
         preferredLocale = d.localeName;
+        citationByIndex = d.citationByIndex;
+        if (citationByIndex) {
+            citationByIndex = JSON.parse(citationByIndex);
+        }
         getStyle(d.styleName, d.localeName);
         break;
     case 'registerCitation':

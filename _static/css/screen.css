@@ -1,3 +1,21 @@
+.footnote-header {
+    margin-bottom: 1em;
+}
+.footnote {
+    padding-left: 1.3em;
+    text-indent: -1.3em;
+    margin-bottom: 0.5em;
+}
+.footnote-number {
+    background: #dddddd;
+    margin-right: 0.2em;
+}
+.footnote-number::before {
+    content: '[';
+}
+.footnote-number::after {
+    content: ']';
+}
 .citation {
     background: #dddddd;
 }
