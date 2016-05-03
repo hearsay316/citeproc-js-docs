@@ -158,10 +158,15 @@ function getCitationSplits(nodes) {
         for (var i=0,ilen=splitData.citationsPre.length;i<ilen;i++) {
             splitData.citationsPre[i][1] = (i+1);
         }
+        if (splitData.citation) {
+            splitData.citation.properties.noteIndex = (splitData.citationsPre.length + 1);
+        }
         var offset = (splitData.citationsPre.length + 2);
         for (var i=0,ilen=splitData.citationsPost.length;i<ilen;i++) {
             splitData.citationsPost[i][1] = (i+offset);
         }
+        console.log('citationsPre: '+JSON.stringify(splitData.citationsPre));
+        console.log('citationsPost: '+JSON.stringify(splitData.citationsPost));
     }
     return splitData;
 }

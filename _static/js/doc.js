@@ -39,12 +39,12 @@ function finalizeCitation() {
     if (splitData.citation) {
         citation = splitData.citation;
         citation.citationItems = citationItems;
-        citation.properties.noteIndex = splitData.citationsPre.length;
+        citation.properties.noteIndex = (splitData.citationsPre.length+1);
     } else {
         citation = {
             citationItems: citationItems,
             properties: {
-                noteIndex: splitData.citationsPre.length
+                noteIndex: (splitData.citationsPre.length+1)
             }
         }
     }
