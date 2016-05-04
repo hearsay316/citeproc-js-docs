@@ -25,6 +25,9 @@ function finalizeCitation() {
             var citationNode = next;
             // true removes the existing citation from the database record
             fixupCitationPositionMap(true);
+        } else {
+            // If no citation and no selections, just close menu
+            node.parentNode.removeChild(node);
         }
         //node.parentNode.removeChild(node);
         return;
