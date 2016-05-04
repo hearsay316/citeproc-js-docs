@@ -11,6 +11,8 @@ var abbreviationObj = {
     "default": {
         "container-title": {
             "English Reports": "!authority>>>E.R."
+            "Archives of Dermatological Research": "Arch. Dermatol."
+            "British Medical Journal": "Brit. Med. J."
         },
         "collection-title": {},
         "institution-entire": {},
