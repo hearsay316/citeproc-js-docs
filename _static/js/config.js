@@ -17,7 +17,7 @@ var config = {
             id: "item02"
         },
         {
-            title: "Allen",
+            title: "Allen 1878",
             id: "item03"
         },
         {
