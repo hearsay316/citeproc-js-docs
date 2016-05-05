@@ -34,7 +34,7 @@ if (!Array.indexOf) {
     };
 }
 var CSL = {
-    PROCESSOR_VERSION: "1.1.101",
+    PROCESSOR_VERSION: "1.1.102",
     CONDITION_LEVEL_TOP: 1,
     CONDITION_LEVEL_BOTTOM: 2,
     PLAIN_HYPHEN_REGEX: /(?:[^\\]-|\u2013)/,
@@ -205,6 +205,15 @@ var CSL = {
         this.classic = {};
         this["container-phrase"] = {};
         this["title-phrase"] = {};
+    },
+    normalizeLocaleStr: function(str) {
+        if (!str) return;
+        var lst = str.split('-');
+        lst[0] = lst[0].toLowerCase();
+        if (lst[1]) {
+            lst[1] = lst[1].toUpperCase();
+        }
+        return lst.join("-");
     },
     parseNoteFieldHacks: function(Item, validFieldsForType) {
         if ("string" !== typeof Item.note) return;
@@ -1679,7 +1688,6 @@ CSL.setupXml = function(xmlObject) {
             if (xmlObject.slice(0, 1) === "<") {
                 dataObj = CSL.parseXml(xmlObject);
             } else {
-                console.log("xmlObject "+typeof xmlObject+" "+xmlObject);
                 dataObj = JSON.parse(xmlObject);
             }
             parser = new CSL.XmlJSON(dataObj);
@@ -2431,9 +2439,11 @@ CSL.Engine = function (sys, style, lang, forceLang) {
     }
     if (lang) {
         lang = lang.replace("_", "-");
+        lang = CSL.normalizeLocaleStr(lang);
     }
     if (this.opt["default-locale"][0]) {
         this.opt["default-locale"][0] = this.opt["default-locale"][0].replace("_", "-");
+        this.opt["default-locale"][0] = CSL.normalizeLocaleStr(this.opt["default-locale"][0]);
     }
     if (lang && forceLang) {
         this.opt["default-locale"] = [lang];
@@ -5007,6 +5017,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
             obj = [];
             obj.push(mycitation.properties.index);
             obj.push(this.process_CitationCluster.call(this, mycitation.sortedItems, mycitation.citationID));
+            obj.push(mycitation.citationID);
             ret.push(obj);
         }
         this.tmp.taintedItemIDs = {};
@@ -5017,6 +5028,7 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
         obj = [];
         obj.push(citationsPre.length);
         obj.push(this.process_CitationCluster.call(this, sortedItems, citation.citationID));
+        obj.push(citation.citationID);
         ret.push(obj);
         ret.sort(function (a, b) {
             if (a[0] > b[0]) {
@@ -5979,7 +5991,7 @@ CSL.localeResolve = function (langstr, defaultLocale) {
     langlst = langstr.split(/[\-_]/);
     ret.base = CSL.LANG_BASES[langlst[0]];
     if ("undefined" === typeof ret.base) {
-        //CSL.debug("Warning: unknown locale "+langstr+", setting fallback to "+defaultLocale);
+        CSL.debug("Warning: unknown locale "+langstr+", setting fallback to "+defaultLocale);
         return {base:defaultLocale, best:langstr, bare:langlst[0]};
     }
     if (langlst.length === 1) {
@@ -5996,11 +6008,6 @@ CSL.localeResolve = function (langstr, defaultLocale) {
 };
 CSL.Engine.prototype.localeConfigure = function (langspec, beShy) {
     var localexml;
-    if (this.opt.development_extensions.normalize_lang_keys_to_lowercase) {
-        langspec.best = langspec.best.toLowerCase();
-        langspec.bare = langspec.bare.toLowerCase();
-        langspec.base = langspec.base.toLowerCase();
-    }
     if (beShy && this.locale[langspec.best]) {
         return;
     }
