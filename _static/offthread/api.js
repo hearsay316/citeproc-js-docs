@@ -6,11 +6,13 @@ workaholic = new function () {
     
     function initProcessor(styleName, localeName) {
         // Instantiates the processor
+        debug('initProcessor() [CALL]');
         config.processorReady = false;
-        var citations = document.getElementsByClassName('citation');
-        for (var i=citations.length-1;i>-1;i--) {
-            citations[i].parentNode.removeChild(citations[i]);
+        var citationNodes = document.getElementsByClassName('citation');
+        for (var i=citationNodes.length-1;i>-1;i--) {
+            citationNodes[i].parentNode.removeChild(citationNodes[i]);
         }
+        prepCitations();
         var bibContainer = document.getElementById('bibliography-container');
         bibContainer.hidden = true;
         var footnoteContainer = document.getElementById('footnote-container');
@@ -20,7 +22,7 @@ workaholic = new function () {
             command: 'initProcessor',
             styleName: styleName,
             localeName: localeName,
-            citationByIndex: localStorage.getItem('citationByIndex')
+            citationByIndex: config.citationByIndex
         });
     }
 
@@ -28,6 +30,7 @@ workaholic = new function () {
         // Use return from getCitationID and data fetched from
         // selections in the UI to submit an edit request
         if (!config.processorReady) return;
+        debug('registerCitation() [CALL]');
         config.processorReady = false;
         worker.postMessage({
             command: 'registerCitation',
@@ -50,6 +53,7 @@ workaholic = new function () {
         switch(d.command) {
         case 'initProcessor':
             doCallback(d, function(d) {
+                debug('initProcessor() [RESPONSE]');
                 config.mode = d.xclass;
                 removeCiteMenu();
                 config.processorReady = true;
@@ -59,9 +63,13 @@ workaholic = new function () {
             break;
         case 'registerCitation':
             doCallback(d, function(d) {
-                config.citationByIndex = d.citationByIndex.slice();
+                debug('registerCitation() [RESPONSE]');
+                config.citationByIndex = d.citationByIndex;
                 setCitations(d.citations);
                 setBibliography(d.bibliography);
+                localStorage.setItem('citationByIndex', JSON.stringify(config.citationByIndex));
+                localStorage.setItem('citationIdToPos', JSON.stringify(config.citationIdToPos));
+                localStorage.setItem('posToCitationId', JSON.stringify(config.posToCitationId));
                 removeCiteMenu();
                 config.processorReady = true;
             });

@@ -33,10 +33,8 @@ window.addEventListener('load', function() {
             // XXX If no citation attached, menu is blank
             if (node.nextSibling && node.nextSibling.classList && node.nextSibling.classList.contains('citation')) {
                 // XXX If citation is attached, index should be in the map, so use it.
-                var citemeIndex = getCiteMeIndex(node);
-                var pos = config.citationPositionMap[citemeIndex];
-                var citation = config.citationByIndex[pos];
-                console.log("This should be a citation: "+citation);
+                var info = getCurrentCitationInfo();
+                var citation = config.citationByIndex[info.citationIndex];
                 var itemIDs = citation.citationItems.map(function(obj){
                     return obj.id;
                 });

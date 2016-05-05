@@ -1,4 +1,5 @@
 function buildStyleMenu() {
+    debug('buildStyleMenu()');
     if (localStorage.getItem('defaultStyle')) {
         config.defaultStyle = localStorage.getItem('defaultStyle');
     }
@@ -15,7 +16,51 @@ function buildStyleMenu() {
     }
 }
 
+function fixupNoteNumbers() {
+    debug('fixupNoteNumbers()');
+    if (config.mode !== 'note') return;
+    var citationNodes = document.getElementsByClassName('citation');
+    for (var i=0,ilen=citationNodes.length;i<ilen;i++) {
+        var citationNode = citationNodes[i];
+        citationNode.innerHTML = '[' + (i+1) + ']'
+    }
+    var footnoteNumberNodes = document.getElementsByClassName('footnote-number');
+    var footnoteNumber = 1;
+    for (var i=0,ilen=footnoteNumberNodes.length;i<ilen;i++) {
+        var footnoteNumberNode = footnoteNumberNodes[i];
+        if (!footnoteNumberNode.parentNode.hidden) {
+            footnoteNumberNode.innerHTML = "" + footnoteNumber;
+            footnoteNumber++;
+        }
+    }
+}
+
+function fixupPrePostNoteNumbers(citationsPre, citationsPost) {
+    debug('fixupPrePostNoteNumbers()');
+    for (var i=0,ilen=citationsPre.length;i<ilen;i++) {
+        citationsPre[i][1] = (i + 1);
+    }
+    var offset = (citationsPre.length+1)
+    for (var i=0,ilen=citationsPost.length;i<ilen;i++) {
+        citationsPost[i][1] = (i + offset + 1);
+    }
+}
+
+function prepCitations() {
+    debug('prepCitations()');
+    var positionNodes = document.getElementsByClassName('citeme');
+    for (var i=0,ilen=config.citationByIndex.length;i<ilen;i++) {
+        var citation = config.citationByIndex[i];
+        var positionNode = positionNodes[config.citationIdToPos[citation.citationID]];
+        var citationNode = document.createElement('span');
+        citationNode.classList.add('citation');
+        citationNode.setAttribute('id', citation.citationID);
+        positionNode.parentNode.insertBefore(citationNode, positionNode.nextSibling);
+    }
+}
+
 function getCiteMeIndex(node) {
+    debug('getCiteMeIndex()');
     var nodes = document.getElementsByClassName('citeme');
     for (var i=0,ilen=nodes.length;i<ilen;i++) {
         if (nodes[i].firstChild) {
@@ -26,79 +71,89 @@ function getCiteMeIndex(node) {
 }
 
 function removeCiteMenu() {
+    debug('removeCiteMenu()');
     var menu = document.getElementById('cite-menu');
     if (menu) {
         menu.parentNode.removeChild(menu);
     }
 }
 
-
-function fixupCitationPositionMap(removeCurrent) {
-    //console.log('fixupCitationPositionMap('+removeCurrent+')');
-    // Run this after citation node is initially set, and
-    // before removal of the menu.
-    config.citationPositionMap = {};
+function getCurrentCitationInfo() {
+    debug('getCurrentCitationInfo()');
+    var info = {
+        pos: 0,
+        citationID: null,
+        positionNode: null
+    };
     var citemeNodes = document.getElementsByClassName('citeme');
     var citationIndex = 0;
-    var removeCitationNode = null;
-    var removePos = null;
     for (var i=0,ilen=citemeNodes.length;i<ilen;i++) {
         var node = citemeNodes[i];
-        if (node.nextSibling && node.nextSibling.classList && node.nextSibling.classList.contains('citation')) {
-            if (removeCurrent && node.firstChild) {
-                removeCitationNode = node.nextSibling;
-                removePos = citationIndex;
-                removeFootnotePos = config.citationPositionReverseMap[removePos];
-                continue;
+        var sib = node.nextSibling;
+        var hasCitationNode = sib && sib.classList && sib.classList.contains('citation');
+        if (node.firstChild) {
+            info.pos = i;
+            info.citationIndex = citationIndex;
+            if (hasCitationNode) {
+                info.citationID = sib.getAttribute('id');
             } else {
-                config.citationPositionMap[i] = citationIndex;
-               citationIndex++;
+                info.positionNode = node;
             }
+            break;
+        } else if (hasCitationNode) {
+            citationIndex++;
         }
     }
-    config.citationPositionReverseMap = {};
-    for (var key in config.citationPositionMap) {
-        config.citationPositionReverseMap[config.citationPositionMap[key]] = key;
-    }
-    config.citationPlacements = [];
-    for (var i=0,ilen=config.citationByIndex.length;i<ilen;i++) {
-        config.citationPlacements.push(config.citationPositionReverseMap[i]);
-    }
-    localStorage.setItem('citationByIndex', JSON.stringify(config.citationByIndex));
-    localStorage.setItem('citationPlacements', JSON.stringify(config.citationPlacements));
-    if (removeCurrent) {
-        if (removeCitationNode) {
-            removeCitationNode.parentNode.removeChild(removeCitationNode);
-        }
-        if ('number' === typeof removePos) {
-            config.citationByIndex = config.citationByIndex.slice(0, removePos).concat(config.citationByIndex.slice(removePos+1));
-        }
+    return info;
+}
 
-        if (config.citationByIndex.length === 0) {
-            localStorage.removeItem('citationByIndex');
-            workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
-        } else {
-            console.log('Remove by refreshing');
-            if (config.mode === 'note') {
-                var footnotes = document.getElementById('footnotes').children;
-                footnotes[removeFootnotePos].hidden = true;
+
+function removeCitation() {
+    debug('removeCitation()');
+    var info = getCurrentCitationInfo();
+    if (info.citationID) {
+        var citationToRemove = document.getElementById(info.citationID);
+        citationToRemove.parentNode.removeChild(citationToRemove);
+        delete config.posToCitationId[config.citationIdToPos[citationToRemove.citationID]];
+        delete config.citationIdToPos[citationToRemove.citationID];
+        localStorage.setItem('posToCitationId', JSON.stringify(config.posToCitationId));
+        localStorage.setItem('citationIdToPos', JSON.stringify(config.citationIdToPos));
+    }
+    var removePos = -1;
+    for (var i=config.citationByIndex.length-1;i>-1;i--) {
+        if (config.citationByIndex[i].citationID === info.citationID) {
+            var citation = config.citationByIndex[i];
+            removePos = config.citationIdToPos[info.citationID];
+            delete config.posToCitationId[config.citationIdToPos[citation.citationID]];
+            delete config.citationIdToPos[citation.citationID];
+            
+            config.citationByIndex = config.citationByIndex.slice(0, i).concat(config.citationByIndex.slice(i+1));
+            for (var j=i,jlen=config.citationByIndex.length;j<jlen;j++) {
+                config.citationByIndex[j].properties.noteIndex += -1;
             }
-            var splitData = getCitationSplits();
-            splitData.citation.properties.noteIndex = 1;
-            config.processorReady = true;
-            workaholic.registerCitation(splitData.citation, splitData.citationsPre, splitData.citationsPost);
         }
     }
-    // console.log('configsies: '+JSON.stringify(config.citationPositionMap));
+    fixupNoteNumbers();
+    if (config.citationByIndex.length === 0) {
+        localStorage.removeItem('citationByIndex');
+        workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
+    } else {
+        if (config.mode === 'note') {
+            var footnotes = document.getElementById('footnotes').children;
+            footnotes[removePos].hidden = true;
+        }
+        var splitData = getCitationSplits();
+        splitData.citation.properties.noteIndex = 1;
+        config.processorReady = true;
+        workaholic.registerCitation(splitData.citation, splitData.citationsPre, splitData.citationsPost);
+    }
 }
 
 function rebuildCitations(rebuildData) {
     if (!rebuildData) return;
-    config.citationByIndex = JSON.parse(localStorage.getItem('citationByIndex'));
-    config.citationPlacements = JSON.parse(localStorage.getItem('citationPlacements'));
-    prepCitations(config.citationPlacements);
+    debug('rebuildCitations()');
     var citations = rebuildData.map(function(obj){
-        return [0, obj[2]];
+        return [0, obj[2], obj[0]];
     })
     for (var i=0,ilen=citations.length;i<ilen;i++) {
         citations[i][0] = i;
@@ -106,18 +161,8 @@ function rebuildCitations(rebuildData) {
     setCitations(citations);
 }
 
-function prepCitations(citationPlacements) {
-    var citemeNodes = document.getElementsByClassName('citeme');
-    for (var i=0,ilen=citationPlacements.length;i<ilen;i++) {
-        var pos = citationPlacements[i];
-        var citemeNode = citemeNodes[pos];
-        var citation = document.createElement('span');
-        citation.classList.add('citation');
-        citemeNodes[i].parentNode.insertBefore(citation, citemeNodes[i].nextSibling);
-    }
-}
-
 function hideAllFootnotes() {
+    debug('hideAllFootnotes()');
     var footnotes = document.getElementById('footnotes');
     for (var i=0,ilen=footnotes.children.length;i<ilen;i++) {
         footnotes.children[i].hidden = true;
@@ -125,6 +170,7 @@ function hideAllFootnotes() {
 }
 
 function getCitationSplits(nodes) {
+    debug('getCitationSplits()');
     var splitData = {
         citation: null,
         citationsPre: [],
@@ -145,7 +191,7 @@ function getCitationSplits(nodes) {
                     splitData.citation = config.citationByIndex[i];
                 }
             } else {
-                splitData[current].push([config.citationByIndex[i+offset].citationID, 0]);
+                splitData[current].push([config.citationByIndex[i + offset].citationID, 0]);
             }
         }
     } else {
@@ -153,20 +199,6 @@ function getCitationSplits(nodes) {
         splitData.citationsPost = config.citationByIndex.slice(1).map(function(obj){
             return [obj.citationID, 0];
         })
-    }
-    if (config.mode === 'note') {
-        for (var i=0,ilen=splitData.citationsPre.length;i<ilen;i++) {
-            splitData.citationsPre[i][1] = (i+1);
-        }
-        if (splitData.citation) {
-            splitData.citation.properties.noteIndex = (splitData.citationsPre.length + 1);
-        }
-        var offset = (splitData.citationsPre.length + 2);
-        for (var i=0,ilen=splitData.citationsPost.length;i<ilen;i++) {
-            splitData.citationsPost[i][1] = (i+offset);
-        }
-        console.log('citationsPre: '+JSON.stringify(splitData.citationsPre));
-        console.log('citationsPost: '+JSON.stringify(splitData.citationsPost));
     }
     return splitData;
 }

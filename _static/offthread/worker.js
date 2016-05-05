@@ -231,9 +231,6 @@ onmessage = function(e) {
     case 'initProcessor':
         preferredLocale = d.localeName;
         citationByIndex = d.citationByIndex;
-        if (citationByIndex) {
-            citationByIndex = JSON.parse(citationByIndex);
-        }
         getStyle(d.styleName, d.localeName);
         break;
     case 'registerCitation':
