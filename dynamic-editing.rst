@@ -7,6 +7,9 @@ Dynamic editing example
 
 ------------------------
 
+.. contents:: Table of Contents
+   :local:
+
 ------------
 Introduction
 ------------
@@ -19,11 +22,14 @@ selections. Citation updates are controlled by an HTML5 web worker
 with a simple API, that can be deployed to any web page, with suitable
 code to call the worker and merge the result to the target text.
 
------------
-Sample text
------------
+----------------------
+Demo: My Amazing Essay
+----------------------
 
-|styles|
+**Style:** |styles|
+
+..
+   **Locale:** |locales|
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 eiusmod tempor incididunt ut labore et dolore magna aliqua. |citeme|
@@ -59,9 +65,9 @@ Requirements
 .. _npm: https://www.npmjs.com/
 .. _Sphinx: http://www.sphinx-doc.org/en/stable/
 
-^^^^^
-Setup
-^^^^^
+^^^^^^^^^^^
+Local setup
+^^^^^^^^^^^
 
 Fetch the repo
    Clone the ``citeproc-js`` documentation project and enter
@@ -89,3 +95,135 @@ Run a server using ``node.js``
 
       npm install -g http-server
       http-server _build/html
+
+-------------
+Code elements
+-------------
+
+^^^^^^^^^^
+Data units
+^^^^^^^^^^
+
+Class: ``citation``
+  Citations in the document are represented by ``html:span``
+  elements of the ``citation`` class, each with a unique
+  ``id`` attribute assigned by the citation processor.
+  When initially inserted, a citation is assigned a
+  temporary placeholder ``id`` (this demo uses
+  ``citation-breadcrumb``), which is replaced by the
+  processor-assigned ``id`` after processing.
+
+Item object
+  The document editing interface must provide some mechanism for
+  selecting individual citeable items for inclusion in citations.  The
+  mechanism in this demo is drastically simplified; production code
+  will do something more sophisticated here. Items are held as hash
+  objects in CSL JSON format, each with a unique ID (string or
+  numeric). A simple object with the ID "item-1" and title "My Aunt
+  Sally" will have the following form:
+
+  .. code-block:: javascript
+
+     {
+         id: "item-1",
+         title: "My Aunt Sally"
+     }
+
+  See the source files under ``_static/data/items`` for sample entries
+  with each of the three CSL JSON data types (string, date, and creator).
+
+Citation object
+
+  In the data layer, a citation is a hash object that bundles one or
+  more items for inclusion in the document. The citation object for
+  a new citation is constructed "manually" without a ``citationID``:
+  an ID is assigned by the processor and included in the return.
+  A minimal citation object for a single item with an ``id`` of "item-1"
+  citing page 123 of that source will have the following form:
+
+  .. code-block:: javascript
+  
+     {
+       citationItems: [
+         {
+           id: "item-1",
+           label: "page",
+           locator: "123"
+         }
+       ],
+       properties: {
+         noteIndex: 1
+       }
+     }
+
+  In the example above, the ``label`` and ``locator`` attributes are
+  optional. The ``noteIndex`` value is manadatory, and should be set
+  to the note number for a citation in a footnote or in a ``note``
+  style. For in-text citations in an ``in-text`` style, its value
+  should be ``0``. 
+
+Array: ``citationByIndex``
+  An array of citation objects as delivered by the processor.
+  The return from the processor will contain full metadata for
+  each item in ``citationItems``, and a ``citationID`` as sibling
+  to ``citationItems`` and ``properties`` (items submitted without
+  a ``citationID`` will be assigned one by the processor).
+
+^^^^^^^^^^^^^^^^^^^^
+Demo-specific things
+^^^^^^^^^^^^^^^^^^^^
+
+The demo sets static placeholders at three locations in the text as
+"pegs" where citations can be inserted. This is the only markup: when
+the page is loaded, the document contains no citation
+placeholders. This differs from a production deployment, which would
+store citation placeholders with addressable IDs in the text.
+
+To spoof a production deployment, the demo stores a map of citation
+IDs to "peg" indices, and another map from "peg" indices to IDs.  The
+maps are reconciled with the data in ``citationByIndex`` on each edit,
+and saved into ``localStorage``, for use in re-inserting citation
+markers on page reload. This jiggery-pokery will not be needed in a
+production environment, where the document will be saved with its
+citation markers and their IDs, corresponding to a saved copy of
+the data in ``citationByIndex``.
+
+
+^^^^^^^^^^
+Worker API
+^^^^^^^^^^
+
+``initProcessor``
+   hello
+
+``registerCitation``
+   Other things go here
+
+------------------
+Editing operations
+------------------
+
+
+++++++++++++++++++++++++++
+Initializing the processor
+++++++++++++++++++++++++++
+
+++++++++++++++++++++++++
+Inserting a new citation
+++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++
+Editing an existing citation
+++++++++++++++++++++++++++++
+
++++++++++++++++++++
+Deleting a citation
++++++++++++++++++++
+
+++++++++++++++++++++++
+Removing last citation
+++++++++++++++++++++++
+
+++++++++++++++++++++++++
+Restoring document state
+++++++++++++++++++++++++
