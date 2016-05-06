@@ -36,3 +36,68 @@ in culpa qui officia deserunt mollit anim id est laborum. |citeme|
 |footnotes|
 
 |bib|
+
+---------------
+Running locally
+---------------
+
+One of the main purposes of this page is to provide a worked example
+for developers. A good way to explore the way it all works is to
+run the page locally. Here is how to set that up.
+
+^^^^^^^^^^^^
+Requirements
+^^^^^^^^^^^^
+
+Fetch the repo
+   Clone the ``citeproc-js`` documentation project and enter
+   its top-level directory:
+
+   .. code-block:: bash
+
+      git clone https://github.com/Juris-M/citeproc-js-docs.git --recursive
+      cd citeproc-js-docs
+
+
+Install Sphinx
+   The ``citeproc-js`` documentation is written in the `Sphinx`_
+   flavor of ``reStructuredText``, so you'll need have that installed.
+
+   .. _Sphinx: http://www.sphinx-doc.org/en/stable/
+
+Install node.js and friends
+
+   The built page uses ``XMLHttpRequest()`` calls, so it must be
+   viewed through a web server. The ``connect`` and ``serve-static``
+   modules available via ``npm`` are a quick solution. On a system
+   with ``node.js`` installed, fetch the modules:
+
+   .. code-block:: bash
+
+      npm install connect
+      npm install serve-static
+
+   Set up a server script with content like this:
+
+   .. code-block:: javascript
+     
+      var connect = require('connect');
+      var serveStatic = require('serve-static');
+      connect().use(serveStatic(__dirname + '/_build/html')).listen(8080, function(){
+          console.log('Server running on 8080...');
+      });
+     
+
+Build the page
+   The following command should work:
+
+   .. code-block:: bash
+
+      make html
+
+Run the webserver
+   This should give you access to the live page:
+
+   .. code-block:: bash
+
+      node server.js
