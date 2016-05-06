@@ -49,6 +49,20 @@ run the page locally. Here is how to set that up.
 Requirements
 ^^^^^^^^^^^^
 
+- `git`_
+- `node.js`_
+- `npm`_
+- `Sphinx`_
+
+.. _git: https://git-scm.com/
+.. _`node.js`: https://nodejs.org/en/
+.. _npm: https://www.npmjs.com/
+.. _Sphinx: http://www.sphinx-doc.org/en/stable/
+
+^^^^^
+Setup
+^^^^^
+
 Fetch the repo
    Clone the ``citeproc-js`` documentation project and enter
    its top-level directory:
@@ -59,35 +73,6 @@ Fetch the repo
       cd citeproc-js-docs
 
 
-Install Sphinx
-   The ``citeproc-js`` documentation is written in the `Sphinx`_
-   flavor of ``reStructuredText``, so you'll need have that installed.
-
-   .. _Sphinx: http://www.sphinx-doc.org/en/stable/
-
-Install node.js and friends
-
-   The built page uses ``XMLHttpRequest()`` calls, so it must be
-   viewed through a web server. The ``connect`` and ``serve-static``
-   modules available via ``npm`` are a quick solution. On a system
-   with ``node.js`` installed, fetch the modules:
-
-   .. code-block:: bash
-
-      npm install connect
-      npm install serve-static
-
-   Set up a server script with content like this:
-
-   .. code-block:: javascript
-     
-      var connect = require('connect');
-      var serveStatic = require('serve-static');
-      connect().use(serveStatic(__dirname + '/_build/html')).listen(8080, function(){
-          console.log('Server running on 8080...');
-      });
-     
-
 Build the page
    The following command should work:
 
@@ -95,9 +80,12 @@ Build the page
 
       make html
 
-Run the webserver
-   This should give you access to the live page:
+Run a server using ``node.js``
+   The built page uses ``XMLHttpRequest()`` calls, so it must be
+   viewed through a web server. To run a simple server using
+   ``node.js``, an incantation like this should do the trick:
 
    .. code-block:: bash
 
-      node server.js
+      npm install -g http-server
+      http-server _build/html
