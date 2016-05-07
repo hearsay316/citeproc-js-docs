@@ -1,11 +1,11 @@
 window.addEventListener('load', function() {
     buildStyleMenu();
-    workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
+    workaholic.initProcessor(config.defaultStyle, config.defaultLocale, config.citationByIndex);
     document.body.addEventListener('change', function(e) {
         if (e.target.getAttribute('id') === 'citation-styles') {
             config.defaultStyle = e.target.value;
             localStorage.setItem('defaultStyle', config.defaultStyle);
-            workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
+            workaholic.initProcessor(config.defaultStyle, config.defaultLocale, config.citationByIndex);
         }
     });
     document.body.addEventListener('click', function(e) {

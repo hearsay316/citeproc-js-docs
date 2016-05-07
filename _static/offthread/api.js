@@ -4,16 +4,19 @@ workaholic = new function () {
 
     var worker = new Worker('_static/offthread/worker.js');
     
-    function initProcessor(styleName, localeName) {
+    function initProcessor(styleName, localeName, citationByIndex) {
         // Instantiates the processor
         debug('initProcessor() [CALL]');
+        if (!citationByIndex) {
+            citationByIndex = {};
+        }
         config.processorReady = false;
         clearDocument();
         worker.postMessage({
             command: 'initProcessor',
             styleName: styleName,
             localeName: localeName,
-            citationByIndex: config.citationByIndex
+            citationByIndex: citationByIndex
         });
     }
 
