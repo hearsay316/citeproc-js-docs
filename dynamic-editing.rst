@@ -203,12 +203,12 @@ The object exposes two methods to the document context.
    context. If the array is empty, the processor will be initialized
    without citations. If the array contains citations, the processor
    will be initialized to that document state, and return an array of
-   arrays for use in reconstructing citations in the document
-   text. Each sub-array contains a citation ID, a note number, and a
-   citation string. For example, if the ``styleID`` is for a ``note``
-   style, and if ``citationByIndex`` yields the citations "Wurzel
-   Gummidge (1990)" and "My Aunt Sally (2001)," the returned structure
-   would look like this:
+   arrays as ``rebuildData``, for use in reconstructing citations in
+   the document text. Each sub-array contains a citation ID, a note
+   number, and a citation string. For example, if the ``styleID`` is
+   for a ``note`` style, and if ``citationByIndex`` yields the
+   citations "Wurzel Gummidge (1990)" and "My Aunt Sally (2001)," the
+   ``rebuildData`` structure would look like this:
 
    .. code-block:: javascript
 
@@ -216,22 +216,71 @@ The object exposes two methods to the document context.
           [
              "lu7Tu3ki",
              "1",
-             "(Wurzel Gummidge 1990)"
+             "Wurzel Gummidge (1990)"
           ],
           [
              "ko4aNoo9",
              "2",
-             "(My Aunt Sally 2001)"
+             "My Aunt Sally (2001)"
              
           ]
       ]
 
-``registerCitation``
-   hello
+``registerCitation(citation, preCitations, postCitations)``
+   This method is used to add or to edit citations. All three
+   arguments are mandatory. ``citation`` is an ordinary citation
+   object as described above. ``preCitations`` and ``postCitations``
+   are arrays of arrays, in which each sub-array is composed of a
+   citation ID and a note number. For example, if a note citation
+   is to be inserted between the "Wurzel Gummidge" and "Aunt Sally"
+   citations in the example above, these would have the following form:
+
+   .. code-block:: javascript
+
+      preCitations = [
+          [
+              "lu7Tu3ki",
+              "1"
+          ]
+      ];
+
+      postCitations = [
+          [
+              "ko4aNoo9",
+              "3"
+          ]
+      ];
+
+   Notice the change to the note number: the processor registers
+   note numbers for use in back-references, but maintenance of 
+   correct note numbering must be handled in document-side code.
+
+   The ``registerCitation`` method receives two values from the
+   processor: ``citationByIndex`` (described above) and ``citations``.
+   The latter is an array of one or more arrays, each composed of a
+   citation position index, a string, and a citation ID. For example,
+   the return value to insert a citation "Calvin (1995); Hobbes
+   (2016)" between the "Wurzel Gummidge" and "My Aunt Sally" citations
+   would look something like this:
+
+   .. code-block:: javascript
+
+      [
+         [
+             1,
+             "Calvin (1995); Hobbes (2016)",
+             "Ith7eg8T"
+         ]
+      ]
+
+   Note that the return value might contain updates for multiple
+   citations.
+
 
 ------------------
 Editing operations
 ------------------
+
 
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
