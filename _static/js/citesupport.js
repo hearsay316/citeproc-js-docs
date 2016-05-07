@@ -13,6 +13,7 @@ var citesupport = new function () {
         citationIdToPos: {},
         processorReady: false,
         citationByIndex: [],
+        current: {},
         itemData: [
             {
                 title: "Geller 2002",
@@ -143,9 +144,9 @@ var citesupport = new function () {
     function citationAddOrEditHandler(event) {
         debug('citationAddOrEditHandler()');
         var menu = document.getElementById('cite-menu');
-        var insertingNewCitation = false;
         var citationItems = getCitationItemIdsFrom(menu);
         var hasCitation = menuHasCitation(menu);
+        config.current = getCurrentCitationInfo();
 
         // If there are no citation items from the menu,
         // then we are either removing an existing citation
@@ -162,7 +163,6 @@ var citesupport = new function () {
         } else {
             if (!hasCitation) {
                 domInsertEmptyCitationMarkerAt(menu);
-                insertingNewCitation = true;
             }
         }
 
@@ -193,16 +193,15 @@ var citesupport = new function () {
 
     function removeCitation() {
         debug('removeCitation()');
-        var info = getCurrentCitationInfo();
 
         // Remove citation from DOM
-        if (info.citationID) {
-            domRemoveCitation(info.citationID);
+        if (config.current.citationID) {
+            domRemoveCitation(config.current.citationID);
         }
         
         // Remove citation from citationByIndex, posToCitationId, and citationIdToPos
         // Adjust note numbers in citationByIndex child properties if note style
-        removePos = removeIdFromDataSets(config.mode, info.citationID);
+        removePos = removeIdFromDataSets(config.mode, config.current.citationID);
 
         // If we have no citations left, initialize the processor
         // Otherwise, re-insert the first citation in the list to trigger and update
@@ -245,22 +244,22 @@ var citesupport = new function () {
         debug('getCurrentCitationInfo()');
         var info = {
             pos: 0,
-            citationID: null,
-            positionNode: null
+            citationID: null
         };
         var citemeNodes = document.getElementsByClassName('citeme');
         var citationIndex = 0;
         for (var i=0,ilen=citemeNodes.length;i<ilen;i++) {
             var node = citemeNodes[i];
             var sib = node.nextSibling;
-            var hasCitationNode = sib && sib.classList && sib.classList.contains('citation');
+            var hasCitationNode = false;
+            if (sib && sib.classList && sib.classList.contains('citation')) {
+                hasCitationNode = true;
+            }
             if (node.firstChild) {
                 info.pos = i;
                 info.citationIndex = citationIndex;
                 if (hasCitationNode) {
                     info.citationID = sib.getAttribute('id');
-                } else {
-                    info.positionNode = node;
                 }
                 break;
             } else if (hasCitationNode) {
@@ -271,12 +270,17 @@ var citesupport = new function () {
     }
 
     function menuHasCitation(menuNode) {
+        debug('menuHasCitation()');
         var sib = menuNode.parentNode.nextSibling;
-        var hasCitation = (sib && sib.classList && sib.classList.contains('citation'));
+        var hasCitation = false;
+        if (sib && sib.classList && sib.classList.contains('citation')) {
+            hasCitation = true;
+        };
         return hasCitation;
     }
 
     function getCitationItemIdsFrom(menuNode) {
+        debug('getCitationItemIdsFrom()');
         var citationItems = [];
         var checkboxes = menuNode.getElementsByTagName('input');
         for (var i=0,ilen=checkboxes.length;i<ilen;i++) {
@@ -341,6 +345,7 @@ var citesupport = new function () {
     }
 
     function removeIdFromDataSets(mode, citationID) {
+        debug('removeIdFromDataSets()');
         var removePos = -1;
         for (var i=config.citationByIndex.length-1;i>-1;i--) {
             if (config.citationByIndex[i].citationID === citationID) {
@@ -348,8 +353,8 @@ var citesupport = new function () {
                 removePos = config.citationIdToPos[citationID];
                 delete config.posToCitationId[config.citationIdToPos[citation.citationID]];
                 delete config.citationIdToPos[citation.citationID];
+                config.citationByIndex = config.citationByIndex.slice(0, i).concat(config.citationByIndex.slice(i+1));
                 if (mode === 'note') {
-                    config.citationByIndex = config.citationByIndex.slice(0, i).concat(config.citationByIndex.slice(i+1));
                     for (var j=i,jlen=config.citationByIndex.length;j<jlen;j++) {
                         config.citationByIndex[j].properties.noteIndex += -1;
                     }
@@ -363,13 +368,13 @@ var citesupport = new function () {
      * DOM methods
      */
     
-    function domSetCitations(mode, citeTuples, currentCitationInfo) {
+    function domSetCitations(mode, citeTuples, addOrEdit) {
         debug('domSetCitations()');
         // 
         for (var i=0,ilen=citeTuples.length;i<ilen;i++) {
-            if (currentCitationInfo) {
+            if (addOrEdit && !config.current.citationID) {
                 var citationID = citeTuples[i][2];
-                domSetNewCitation(currentCitationInfo, citationID);
+                domSetNewCitation(citationID);
             }
         }
         if (mode === 'note') {
@@ -388,7 +393,6 @@ var citesupport = new function () {
                 var citationNode = document.getElementById(citationID);
                 var citationText = tuple[1];
                 var citationIndex = tuple[0];
-                debug('citationID='+citationID);
                 // Apply changes
                 citationNode.innerHTML = '[' + (citationIndex+1) + ']';
                 var idx = config.citationIdToPos[citationID];
@@ -492,17 +496,19 @@ var citesupport = new function () {
         }
     }
 
-    function domSetNewCitation(currentCitationInfo, citationID) {
+    function domSetNewCitation(citationID) {
         debug('domSetNewCitation()');
         if ("number" !== typeof config.citationIdToPos[citationID]) {
             var citationNode = document.getElementById('citation-breadcrumb');
             citationNode.setAttribute('id', citationID);
-            config.citationIdToPos[citationID] = currentCitationInfo.pos;
-            config.posToCitationId[currentCitationInfo.pos] = citationID;
+            config.citationIdToPos[citationID] = config.current.pos;
+            config.posToCitationId[config.current.pos] = citationID;
+            config.current = getCurrentCitationInfo();
         }
     }
 
     function domInsertEmptyCitationMarkerAt(menu) {
+        debug('domInsertEmptyCitationMarkerAt()');
         var citationNode = document.createElement('span');
         citationNode.classList.add('citation');
         menu.parentNode.parentNode.insertBefore(citationNode, menu.parentNode.nextSibling);
@@ -529,8 +535,8 @@ var citesupport = new function () {
     }
 
     function domRemoveCitation(citationID) {
-        var info = getCurrentCitationInfo();
-        var citationToRemove = document.getElementById(info.citationID);
+        debug('domRemoveCitation()');
+        var citationToRemove = document.getElementById(config.current.citationID);
         citationToRemove.parentNode.removeChild(citationToRemove);
         delete config.posToCitationId[config.citationIdToPos[citationToRemove.citationID]];
         delete config.citationIdToPos[citationToRemove.citationID];
@@ -539,6 +545,7 @@ var citesupport = new function () {
     }
 
     function domHideFootnoteAt(pos) {
+        debug('domHideFootnoteAt()');
         if (config.mode === 'note') {
             var footnotes = document.getElementById('footnotes').children;
             footnotes[pos].hidden = true;
@@ -596,8 +603,7 @@ var citesupport = new function () {
         case 'registerCitation':
             debug('registerCitation() [RESPONSE]');
             config.citationByIndex = d.citationByIndex;
-            var currentCitationInfo = getCurrentCitationInfo();
-            domSetCitations(config.mode, d.citationData, currentCitationInfo);
+            domSetCitations(config.mode, d.citationData, true);
             domSetBibliography(d.bibliographyData);
             localStorage.setItem('citationByIndex', JSON.stringify(config.citationByIndex));
             localStorage.setItem('citationIdToPos', JSON.stringify(config.citationIdToPos));
@@ -667,8 +673,8 @@ window.addEventListener('load', function(event) {
             // XXX If no citation attached, menu is blank
             if (node.nextSibling && node.nextSibling.classList && node.nextSibling.classList.contains('citation')) {
                 // XXX If citation is attached, index should be in the map, so use it.
-                var info = citesupport.getCurrentCitationInfo();
-                var citation = citesupport.config.citationByIndex[info.citationIndex];
+                citesupport.config.current = citesupport.getCurrentCitationInfo();
+                var citation = citesupport.config.citationByIndex[citesupport.config.current.citationIndex];
                 var itemIDs = citation.citationItems.map(function(obj){
                     return obj.id;
                 });
