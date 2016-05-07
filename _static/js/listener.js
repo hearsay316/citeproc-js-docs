@@ -43,7 +43,7 @@ window.addEventListener('load', function() {
                     menuItem.checked = true;
                 }
             }
-            button.addEventListener('click', finalizeCitation);
+            button.addEventListener('click', citationAddOrEditHandler);
         }
     });
 });

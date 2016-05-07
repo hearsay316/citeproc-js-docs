@@ -16,25 +16,6 @@ function buildStyleMenu() {
     }
 }
 
-function fixupNoteNumbers() {
-    debug('fixupNoteNumbers()');
-    if (config.mode !== 'note') return;
-    var citationNodes = document.getElementsByClassName('citation');
-    for (var i=0,ilen=citationNodes.length;i<ilen;i++) {
-        var citationNode = citationNodes[i];
-        citationNode.innerHTML = '[' + (i+1) + ']'
-    }
-    var footnoteNumberNodes = document.getElementsByClassName('footnote-number');
-    var footnoteNumber = 1;
-    for (var i=0,ilen=footnoteNumberNodes.length;i<ilen;i++) {
-        var footnoteNumberNode = footnoteNumberNodes[i];
-        if (!footnoteNumberNode.parentNode.hidden) {
-            footnoteNumberNode.innerHTML = "" + footnoteNumber;
-            footnoteNumber++;
-        }
-    }
-}
-
 function fixupPrePostNoteNumbers(citationsPre, citationsPost) {
     debug('fixupPrePostNoteNumbers()');
     for (var i=0,ilen=citationsPre.length;i<ilen;i++) {
@@ -44,17 +25,6 @@ function fixupPrePostNoteNumbers(citationsPre, citationsPost) {
     for (var i=0,ilen=citationsPost.length;i<ilen;i++) {
         citationsPost[i][1] = (i + offset + 1);
     }
-}
-
-function getCiteMeIndex(node) {
-    debug('getCiteMeIndex()');
-    var nodes = document.getElementsByClassName('citeme');
-    for (var i=0,ilen=nodes.length;i<ilen;i++) {
-        if (nodes[i].firstChild) {
-            return i;
-        }
-    }
-    return false;
 }
 
 function removeCiteMenu() {
@@ -94,46 +64,24 @@ function getCurrentCitationInfo() {
     return info;
 }
 
+function menuHasCitation(menuNode) {
+    var sib = menuNode.parentNode.nextSibling;
+    var hasCitation = (sib && sib.classList && sib.classList.contains('citation'));
+    return hasCitation;
+}
 
-function removeCitation() {
-    debug('removeCitation()');
-    var info = getCurrentCitationInfo();
-    if (info.citationID) {
-        var citationToRemove = document.getElementById(info.citationID);
-        citationToRemove.parentNode.removeChild(citationToRemove);
-        delete config.posToCitationId[config.citationIdToPos[citationToRemove.citationID]];
-        delete config.citationIdToPos[citationToRemove.citationID];
-        localStorage.setItem('posToCitationId', JSON.stringify(config.posToCitationId));
-        localStorage.setItem('citationIdToPos', JSON.stringify(config.citationIdToPos));
-    }
-    var removePos = -1;
-    for (var i=config.citationByIndex.length-1;i>-1;i--) {
-        if (config.citationByIndex[i].citationID === info.citationID) {
-            var citation = config.citationByIndex[i];
-            removePos = config.citationIdToPos[info.citationID];
-            delete config.posToCitationId[config.citationIdToPos[citation.citationID]];
-            delete config.citationIdToPos[citation.citationID];
-            
-            config.citationByIndex = config.citationByIndex.slice(0, i).concat(config.citationByIndex.slice(i+1));
-            for (var j=i,jlen=config.citationByIndex.length;j<jlen;j++) {
-                config.citationByIndex[j].properties.noteIndex += -1;
-            }
+function getCitationItemIdsFrom(menuNode) {
+    var citationItems = [];
+    var checkboxes = menuNode.getElementsByTagName('input');
+    for (var i=0,ilen=checkboxes.length;i<ilen;i++) {
+        var checkbox = checkboxes[i];
+        if (checkbox.checked) {
+            citationItems.push({
+                id: checkbox.getAttribute('value')
+            });
         }
     }
-    fixupNoteNumbers();
-    if (config.citationByIndex.length === 0) {
-        localStorage.removeItem('citationByIndex');
-        workaholic.initProcessor(config.defaultStyle, config.defaultLocale, config.citationByIndex);
-    } else {
-        if (config.mode === 'note') {
-            var footnotes = document.getElementById('footnotes').children;
-            footnotes[removePos].hidden = true;
-        }
-        var splitData = getCitationSplits();
-        splitData.citation.properties.noteIndex = 1;
-        config.processorReady = true;
-        workaholic.registerCitation(splitData.citation, splitData.citationsPre, splitData.citationsPost);
-    }
+    return citationItems;
 }
 
 function convertRebuildDataToCitationData(rebuildData) {
@@ -141,7 +89,7 @@ function convertRebuildDataToCitationData(rebuildData) {
     debug('rebuildCitations()');
     // rebuildData has this structure:
     //   [<citation_id>, <note_number>, <citation_string>]
-    // setCitations() wants this structure:
+    // domSetCitations() wants this structure:
     //   [<citation_index>, <citation_string>, <citation_id>]
     var citationData = rebuildData.map(function(obj){
         return [0, obj[2], obj[0]];
@@ -186,3 +134,21 @@ function getCitationSplits(nodes) {
     return splitData;
 }
 
+function removeIdFromDataSets(mode, citationID) {
+    var removePos = -1;
+    for (var i=config.citationByIndex.length-1;i>-1;i--) {
+        if (config.citationByIndex[i].citationID === citationID) {
+            var citation = config.citationByIndex[i];
+            removePos = config.citationIdToPos[citationID];
+            delete config.posToCitationId[config.citationIdToPos[citation.citationID]];
+            delete config.citationIdToPos[citation.citationID];
+            if (mode === 'note') {
+                config.citationByIndex = config.citationByIndex.slice(0, i).concat(config.citationByIndex.slice(i+1));
+                for (var j=i,jlen=config.citationByIndex.length;j<jlen;j++) {
+                    config.citationByIndex[j].properties.noteIndex += -1;
+                }
+            }
+        }
+    }
+    return removePos;
+}

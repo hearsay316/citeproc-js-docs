@@ -42,16 +42,16 @@ workaholic = new function () {
             removeCiteMenu();
             config.mode = d.xclass;
             var citationData = convertRebuildDataToCitationData(d.rebuildData);
-            setCitations(config.mode, citationData);
-            setBibliography(d.bibliographyData);
+            domSetCitations(config.mode, citationData);
+            domSetBibliography(d.bibliographyData);
             config.processorReady = true;
             break;
         case 'registerCitation':
             debug('registerCitation() [RESPONSE]');
             config.citationByIndex = d.citationByIndex;
             var currentCitationInfo = getCurrentCitationInfo();
-            setCitations(config.mode, d.citationData, currentCitationInfo);
-            setBibliography(d.bibliographyData);
+            domSetCitations(config.mode, d.citationData, currentCitationInfo);
+            domSetBibliography(d.bibliographyData);
             localStorage.setItem('citationByIndex', JSON.stringify(config.citationByIndex));
             localStorage.setItem('citationIdToPos', JSON.stringify(config.citationIdToPos));
             localStorage.setItem('posToCitationId', JSON.stringify(config.posToCitationId));
