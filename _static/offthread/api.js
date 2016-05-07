@@ -4,20 +4,13 @@ workaholic = new function () {
 
     var worker = new Worker('_static/offthread/worker.js');
     
-    function initProcessor(styleName, localeName) {
+    function initProcessor(styleName, localeName, clearDocument) {
         // Instantiates the processor
         debug('initProcessor() [CALL]');
         config.processorReady = false;
-        var citationNodes = document.getElementsByClassName('citation');
-        for (var i=citationNodes.length-1;i>-1;i--) {
-            citationNodes[i].parentNode.removeChild(citationNodes[i]);
+        if (clearDocument) {
+            clearDocument();
         }
-        prepCitations();
-        var bibContainer = document.getElementById('bibliography-container');
-        bibContainer.hidden = true;
-        var footnoteContainer = document.getElementById('footnote-container');
-        footnoteContainer.hidden = true;
-        hideAllFootnotes();
         worker.postMessage({
             command: 'initProcessor',
             styleName: styleName,

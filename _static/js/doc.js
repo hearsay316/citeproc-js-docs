@@ -58,6 +58,19 @@ function finalizeCitation() {
     workaholic.registerCitation(citation, splitData.citationsPre, splitData.citationsPost);
 };
 
+function clearDocument() {
+    var citationNodes = document.getElementsByClassName('citation');
+    for (var i=citationNodes.length-1;i>-1;i--) {
+        citationNodes[i].parentNode.removeChild(citationNodes[i]);
+    }
+    prepCitations();
+    var bibContainer = document.getElementById('bibliography-container');
+    bibContainer.hidden = true;
+    var footnoteContainer = document.getElementById('footnote-container');
+    footnoteContainer.hidden = true;
+    hideAllFootnotes();
+}
+
 function setCitations(citeTuples) {
     debug('setCitations()');
     var info = getCurrentCitationInfo();

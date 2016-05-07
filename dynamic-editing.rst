@@ -7,20 +7,15 @@ Dynamic editing example
 
 ------------------------
 
+.. rubric:: Overview
+
+In the sample text below, click on a placeholder, select items and
+click "Save" to watch the magic. The code behind the page is explained
+below the demo.
+
 .. contents:: Table of Contents
    :local:
-
-------------
-Introduction
-------------
-
-This page illustrates dynamic editing of citations.  In the sample
-text below, clicking on a placeholder will open a menu with three
-items that can be cited. Selecting one or more items and clicking
-"Save" will adjust the citations and bibliography to reflect the
-selections. Citation updates are controlled by an HTML5 web worker
-with a simple API, that can be deployed to any web page, with suitable
-code to call the worker and merge the result to the target text.
+   :depth: 1
 
 ----------------------
 Demo: My Amazing Essay
@@ -193,11 +188,46 @@ the data in ``citationByIndex``.
 Worker API
 ^^^^^^^^^^
 
-``initProcessor``
-   hello
+In the demo, citation infrastructure is contained in the global
+``workaholic`` function object, loaded from ``_static/offthread/api.js``.
+The object exposes two methods to the document context.
+
+``initProcessor(styleID, localeID)``
+   This method is used on page load, on change of style, and when all
+   citations have been removed from the document.  The ``styleID``
+   argument is mandatory. If ``localeID`` is not provided, the
+   processor will be configured with the ``en-US`` locale.
+
+   The ``initProcessor`` method implicitly accesses the
+   ``citationByIndex`` array, which must be accessible in page
+   context. If the array is empty, the processor will be initialized
+   without citations. If the array contains citations, the processor
+   will be initialized to that document state, and return an array of
+   arrays for use in reconstructing citations in the document
+   text. Each sub-array contains a citation ID, a note number, and a
+   citation string. For example, if the ``styleID`` is for a ``note``
+   style, and if ``citationByIndex`` yields the citations "Wurzel
+   Gummidge (1990)" and "My Aunt Sally (2001)," the returned structure
+   would look like this:
+
+   .. code-block:: javascript
+
+      [
+          [
+             "lu7Tu3ki",
+             "1",
+             "(Wurzel Gummidge 1990)"
+          ],
+          [
+             "ko4aNoo9",
+             "2",
+             "(My Aunt Sally 2001)"
+             
+          ]
+      ]
 
 ``registerCitation``
-   Other things go here
+   hello
 
 ------------------
 Editing operations

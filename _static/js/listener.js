@@ -5,7 +5,7 @@ window.addEventListener('load', function() {
         if (e.target.getAttribute('id') === 'citation-styles') {
             config.defaultStyle = e.target.value;
             localStorage.setItem('defaultStyle', config.defaultStyle);
-            workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
+            workaholic.initProcessor(config.defaultStyle, config.defaultLocale, clearDocument);
         }
     });
     document.body.addEventListener('click', function(e) {
