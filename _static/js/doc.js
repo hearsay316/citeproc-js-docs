@@ -1,3 +1,59 @@
+function domClearDocument() {
+    debug('domClearDocument()');
+    domRemoveCitations();
+    domHideBibliographySection();
+    domHideFootnoteSection();
+    domHideFootnotes();
+    domPrepCitations();
+}
+
+function domRemoveCitations() {
+    var citationNodes = document.getElementsByClassName('citation');
+    for (var i=0,ilen=citationNodes.length;i<ilen;i++) {
+        citationNodes[0].parentNode.removeChild(citationNodes[0]);
+    }
+}
+
+function domHideBibliographySection() {
+    var bibContainer = document.getElementById('bibliography-container');
+    bibContainer.hidden = true;
+}
+
+function domHideFootnoteSection() {
+    var footnoteContainer = document.getElementById('footnote-container');
+    footnoteContainer.hidden = true;
+}
+
+function domHideFootnotes() {
+    debug('hideAllFootnotes()');
+    var footnotes = document.getElementById('footnotes');
+    for (var i=0,ilen=footnotes.children.length;i<ilen;i++) {
+        footnotes.children[i].hidden = true;
+    }
+}
+
+function domPrepCitations() {
+    debug('domPrepCitations()');
+    var positionNodes = document.getElementsByClassName('citeme');
+    for (var i=0,ilen=config.citationByIndex.length;i<ilen;i++) {
+        var citation = config.citationByIndex[i];
+        var positionNode = positionNodes[config.citationIdToPos[citation.citationID]];
+        var citationNode = document.createElement('span');
+        citationNode.classList.add('citation');
+        citationNode.setAttribute('id', citation.citationID);
+        positionNode.parentNode.insertBefore(citationNode, positionNode.nextSibling);
+    }
+}
+
+function domSetNewCitation(currentCitationInfo, citationID) {
+    if ("number" !== typeof config.citationIdToPos[citationID]) {
+        var citationNode = document.getElementById('citation-breadcrumb');
+        citationNode.setAttribute('id', citationID);
+        config.citationIdToPos[citationID] = currentCitationInfo.pos;
+        config.posToCitationId[currentCitationInfo.pos] = citationID;
+    }
+}
+
 function finalizeCitation() {
     debug('finalizeCitation()');
     var node = document.getElementById('cite-menu');
@@ -58,61 +114,46 @@ function finalizeCitation() {
     workaholic.registerCitation(citation, splitData.citationsPre, splitData.citationsPost);
 };
 
-function clearDocument() {
-    debug('clearDocument()');
-    var citationNodes = document.getElementsByClassName('citation');
-    for (var i=citationNodes.length-1;i>-1;i--) {
-        citationNodes[i].parentNode.removeChild(citationNodes[i]);
-    }
-    prepCitations();
-    var bibContainer = document.getElementById('bibliography-container');
-    bibContainer.hidden = true;
-    var footnoteContainer = document.getElementById('footnote-container');
-    footnoteContainer.hidden = true;
-    hideAllFootnotes();
-}
-
-function setCitations(citeTuples) {
+function setCitations(mode, citeTuples, currentCitationInfo) {
     debug('setCitations()');
-    var info = getCurrentCitationInfo();
+    // 
     for (var i=0,ilen=citeTuples.length;i<ilen;i++) {
         var tuple = citeTuples[i];
         var citationIndex = tuple[0];
-        var txt = tuple[1];
+        var citationText = tuple[1];
         var citationID = tuple[2];
-        if ("number" !== typeof config.citationIdToPos[citationID]) {
-            var citationNode = document.getElementById('citation-breadcrumb');
-            citationNode.setAttribute('id', citationID);
-            config.citationIdToPos[citationID] = info.pos;
-            config.posToCitationId[info.pos] = citationID;
+        if (currentCitationInfo) {
+            domSetNewCitation(currentCitationInfo, citationID);
         }
     }
-    var citationNodes = document.getElementsByClassName('citation');
-    if (config.mode === 'note') {
-        var footnoteContainer = document.getElementById('footnote-container');
+    if (mode === 'note') {
         var footnotes = document.getElementsByClassName('footnote-text');
         var footnoteNumbers = document.getElementsByClassName('footnote-number');
+    }
+    if (mode === 'note') {
+        var footnoteContainer = document.getElementById('footnote-container');
         if (citeTuples.length) {
             footnoteContainer.hidden = false;
         } else {
             footnoteContainer.hidden = true;
         }
     }
+    var citationNodes = document.getElementsByClassName('citation');
     for (var i=0,ilen=citeTuples.length;i<ilen;i++) {
         var tuple = citeTuples[i];
         var citationNumber = tuple[0];
-        var txt = tuple[1];
+        var citationText = tuple[1];
         var citationID = tuple[2];
         debug('citationID='+citationID);
         var citationNode = document.getElementById(citationID);
-        if (config.mode === 'note') {
+        if (mode === 'note') {
             citationNode.innerHTML = '[' + (citationNumber+1) + ']';
             var idx = config.citationIdToPos[citationID];
             footnotes[idx].parentNode.hidden = false;
-            footnotes[idx].innerHTML = txt;
+            footnotes[idx].innerHTML = citationText;
             footnoteNumbers[idx].innerHTML = "" + (citationNumber+1);
         } else {
-            citationNode.innerHTML = txt;
+            citationNode.innerHTML = citationText;
         }
     }
     fixupNoteNumbers();

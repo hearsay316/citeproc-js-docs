@@ -46,19 +46,6 @@ function fixupPrePostNoteNumbers(citationsPre, citationsPost) {
     }
 }
 
-function prepCitations() {
-    debug('prepCitations()');
-    var positionNodes = document.getElementsByClassName('citeme');
-    for (var i=0,ilen=config.citationByIndex.length;i<ilen;i++) {
-        var citation = config.citationByIndex[i];
-        var positionNode = positionNodes[config.citationIdToPos[citation.citationID]];
-        var citationNode = document.createElement('span');
-        citationNode.classList.add('citation');
-        citationNode.setAttribute('id', citation.citationID);
-        positionNode.parentNode.insertBefore(citationNode, positionNode.nextSibling);
-    }
-}
-
 function getCiteMeIndex(node) {
     debug('getCiteMeIndex()');
     var nodes = document.getElementsByClassName('citeme');
@@ -149,24 +136,20 @@ function removeCitation() {
     }
 }
 
-function rebuildCitations(rebuildData) {
+function convertRebuildDataToCitationData(rebuildData) {
     if (!rebuildData) return;
     debug('rebuildCitations()');
-    var citations = rebuildData.map(function(obj){
+    // rebuildData has this structure:
+    //   [<citation_id>, <note_number>, <citation_string>]
+    // setCitations() wants this structure:
+    //   [<citation_index>, <citation_string>, <citation_id>]
+    var citationData = rebuildData.map(function(obj){
         return [0, obj[2], obj[0]];
     })
-    for (var i=0,ilen=citations.length;i<ilen;i++) {
-        citations[i][0] = i;
+    for (var i=0,ilen=citationData.length;i<ilen;i++) {
+        citationData[i][0] = i;
     }
-    setCitations(citations);
-}
-
-function hideAllFootnotes() {
-    debug('hideAllFootnotes()');
-    var footnotes = document.getElementById('footnotes');
-    for (var i=0,ilen=footnotes.children.length;i<ilen;i++) {
-        footnotes.children[i].hidden = true;
-    }
+    return citationData;
 }
 
 function getCitationSplits(nodes) {

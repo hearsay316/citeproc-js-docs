@@ -11,7 +11,7 @@ workaholic = new function () {
         if (!citationByIndex) {
             citationByIndex = {};
         }
-        clearDocument();
+        domClearDocument();
         worker.postMessage({
             command: 'initProcessor',
             styleName: styleName,
@@ -39,17 +39,19 @@ workaholic = new function () {
         switch(d.command) {
         case 'initProcessor':
             debug('initProcessor() [RESPONSE]');
-            config.mode = d.xclass;
             removeCiteMenu();
-            rebuildCitations(d.rebuildData);
-            setBibliography(d.bibliography);
+            config.mode = d.xclass;
+            var citationData = convertRebuildDataToCitationData(d.rebuildData);
+            setCitations(config.mode, citationData);
+            setBibliography(d.bibliographyData);
             config.processorReady = true;
             break;
         case 'registerCitation':
             debug('registerCitation() [RESPONSE]');
             config.citationByIndex = d.citationByIndex;
-            setCitations(d.citations);
-            setBibliography(d.bibliography);
+            var currentCitationInfo = getCurrentCitationInfo();
+            setCitations(config.mode, d.citationData, currentCitationInfo);
+            setBibliography(d.bibliographyData);
             localStorage.setItem('citationByIndex', JSON.stringify(config.citationByIndex));
             localStorage.setItem('citationIdToPos', JSON.stringify(config.citationIdToPos));
             localStorage.setItem('posToCitationId', JSON.stringify(config.posToCitationId));

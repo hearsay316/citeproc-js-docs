@@ -168,7 +168,7 @@ function buildProcessor() {
                      command: 'initProcessor',
                      xclass: citeproc.opt.xclass,
                      rebuildData: rebuildData,
-                     bibliography: bibRes,
+                     bibliographyData: bibRes,
                      result: 'OK'
                  });
              });
@@ -256,8 +256,8 @@ onmessage = function(e) {
                      postMessage({
                          command: 'registerCitation',
                          result: 'OK',
-                         citations: citeRes[1],
-                         bibliography: bibRes,
+                         citationData: citeRes[1],
+                         bibliographyData: bibRes,
                          citationByIndex: citeproc.registry.citationreg.citationByIndex
                      });
                  });
