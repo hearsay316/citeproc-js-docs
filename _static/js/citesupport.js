@@ -5,7 +5,7 @@ var citesupport = new function () {
     this.citationAddOrEditHandler = citationAddOrEditHandler;
     //
     var config = {
-        debug: true,
+        debug: false,
         mode: 'note',
         defaultLocale: 'en-US',
         defaultStyle: 'jm-indigobook-law-review',
@@ -612,13 +612,13 @@ function initCiteSupport() {
         var ret;
         var val = localStorage.getItem(key);
         if (!val) {
-            debug('No value in storage!');
+            console.log('No value in storage!');
             ret = fallback;
         } else {
             try {
                 ret = JSON.parse(val);
             } catch (e) {
-                debug('JSON parse error! '+key+" "+val);
+                console.log('JSON parse error! '+key+" "+val);
                 ret = fallback;
             }
         }
