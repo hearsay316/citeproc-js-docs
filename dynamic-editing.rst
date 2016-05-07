@@ -154,7 +154,7 @@ Citation object
   ``citation-breadcrumb``), which is replaced by the
   processor-assigned ``id`` after processing.
 
-``citationByIndex``
+``config.citationByIndex``
   An array of citation objects as delivered by the processor.
   The return from the processor will contain full metadata for
   each item in ``citationItems``, and a ``citationID`` as sibling
@@ -173,12 +173,17 @@ store citation placeholders with addressable IDs in the text.
 
 To spoof a production deployment, the demo stores a map of citation
 IDs to "peg" indices, and another map from "peg" indices to IDs.  The
-maps are reconciled with the data in ``citationByIndex`` on each edit,
+maps are reconciled with the data in ``config.citationByIndex`` on each edit,
 and saved into ``localStorage``, for use in re-inserting citation
 markers on page reload. This jiggery-pokery will not be needed in a
 production environment, where the document will be saved with its
 citation markers and their IDs, corresponding to a saved copy of
-the data in ``citationByIndex``.
+the data in ``config.citationByIndex``.
+
+**However:** In production, a hash of the existing citation IDs
+contained in the document should be maintained, in order to
+identify a newly added citation in the ``citations`` array
+returned to ``registerCitation()``.
 
 
 ^^^^^^^^^^
@@ -189,21 +194,21 @@ In the demo, citation infrastructure is contained in the global
 ``workaholic`` function object, loaded from ``_static/offthread/api.js``.
 The object exposes two methods to the document context.
 
-``initProcessor(styleID, localeID)``
+``workaholic.initProcessor(styleID, localeID)``
    This method is used on page load, on change of style, and when all
    citations have been removed from the document.  The ``styleID``
    argument is mandatory. If ``localeID`` is not provided, the
    processor will be configured with the ``en-US`` locale.
 
-   The ``initProcessor`` method implicitly accesses the
-   ``citationByIndex`` array, which must be accessible in page
+   The ``workaholic.initProcessor`` method implicitly accesses the
+   ``config.citationByIndex`` array, which must be accessible in page
    context. If the array is empty, the processor will be initialized
    without citations. If the array contains citations, the processor
    will be initialized to that document state, and return an array of
    arrays as ``rebuildData``, for use in reconstructing citations in
    the document text. Each sub-array contains a citation ID, a note
    number, and a citation string. For example, if the ``styleID`` is
-   for a ``note`` style, and if ``citationByIndex`` yields the
+   for a ``note`` style, and if ``config.citationByIndex`` yields the
    citations "Wurzel Gummidge (1990)" and "My Aunt Sally (2001)," the
    ``rebuildData`` structure would look like this:
 
@@ -223,7 +228,7 @@ The object exposes two methods to the document context.
           ]
       ]
 
-``registerCitation(citation, preCitations, postCitations)``
+``workaholic.registerCitation(citation, preCitations, postCitations)``
    This method is used to add or to edit citations. All three
    arguments are mandatory. ``citation`` is an ordinary citation
    object as described above. ``preCitations`` and ``postCitations``
@@ -252,7 +257,7 @@ The object exposes two methods to the document context.
    note numbers for use in back-references, but maintenance of 
    correct note numbering must be handled in document-side code.
 
-   The ``registerCitation`` method receives two values from the
+   The ``workaholic.registerCitation`` method receives two values from the
    processor: ``citationByIndex`` (described above) and ``citations``.
    The latter is an array of one or more arrays, each composed of a
    citation position index, a string, and a citation ID. For example,
@@ -278,28 +283,84 @@ The object exposes two methods to the document context.
 Editing operations
 ------------------
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-Initializing the processor
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
 ^^^^^^^^^^^^^^^^^^^^^^^^
-Inserting a new citation
+Initialize the processor
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Editing an existing citation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+At startup against a document with no existing
+citations:
 
-^^^^^^^^^^^^^^^^^^^
-Deleting a citation
-^^^^^^^^^^^^^^^^^^^
+.. code-block:: javascript
+
+   workaholic.initProcessor(styleID, localeID);
+
 
 ^^^^^^^^^^^^^^^^^^^^^^
-Removing last citation
+Restore document state
 ^^^^^^^^^^^^^^^^^^^^^^
 
-^^^^^^^^^^^^^^^^^^^^^^^^
-Restoring document state
-^^^^^^^^^^^^^^^^^^^^^^^^
+If the previously stored copy of ``config.citationByIndex`` contains
+citation objects, the processor will return an array of
+data for insertion into the document, one element for each
+citation, in document order:
+
+.. code-block:: javascript
+
+   workaholic.initProcessor(styleID, localeID);
+
+Insert the strings into their target ``html:span`` tags
+and you are ready to go.
+
+^^^^^^^^^^^^^^^^^^^^^
+Insert a new citation
+^^^^^^^^^^^^^^^^^^^^^
+
+After setting an ``html:span`` tag with class ``citation`` and a
+placeholder ID at the location of the new citation, constructing a
+citation object and generating data arrays for citations before and
+after the target:
+
+.. code-block:: javascript
+
+   workaholic.registerCitation(citation, preCitations, postCitations);
+
+When inserting strings from the ``citations`` array into their
+respective locations, the freshly added citation will be the
+one with an unknown citation ID.
+
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Edit an existing citation
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The process is the same as for inserting a new citation, except
+that no placeholder tag is set, and all citation IDs will be
+known:
+
+.. code-block:: javascript
+
+   workaholic.processCitationCluster(citation, preCitations, postCitations);
+
+^^^^^^^^^^^^^^^^^
+Delete a citation
+^^^^^^^^^^^^^^^^^
+
+Remove the ``html:span`` node of the target citation, remove
+its data from the ``config.citationByIndex`` array, and remove its
+ID from any hash where its value is recorded. Then update
+citations by "editing" the first citation in the document:
+
+.. code-block:: javascript
+
+   workaholic.processCitationCluster(citation, [], postCitations);
+
+^^^^^^^^^^^^^^^^^^^^
+Remove last citation
+^^^^^^^^^^^^^^^^^^^^
+
+If ``config.citationByIndex`` has length zero after removing the
+target citation, reinitialize the processor:
+
+.. code-block:: javascript
+
+   workaholic.initProcessor(styleID, localeID);
+
