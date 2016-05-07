@@ -4,13 +4,11 @@ workaholic = new function () {
 
     var worker = new Worker('_static/offthread/worker.js');
     
-    function initProcessor(styleName, localeName, clearDocument) {
+    function initProcessor(styleName, localeName) {
         // Instantiates the processor
         debug('initProcessor() [CALL]');
         config.processorReady = false;
-        if (clearDocument) {
-            clearDocument();
-        }
+        clearDocument();
         worker.postMessage({
             command: 'initProcessor',
             styleName: styleName,

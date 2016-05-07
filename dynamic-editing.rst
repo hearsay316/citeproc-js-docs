@@ -7,15 +7,13 @@ Dynamic editing example
 
 ------------------------
 
-.. rubric:: Overview
+------------
+Introduction
+------------
 
 In the sample text below, click on a placeholder, select items and
 click "Save" to watch the magic. The code behind the page is explained
 below the demo.
-
-.. contents:: Table of Contents
-   :local:
-   :depth: 1
 
 ----------------------
 Demo: My Amazing Essay

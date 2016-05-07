@@ -59,6 +59,7 @@ function finalizeCitation() {
 };
 
 function clearDocument() {
+    debug('clearDocument()');
     var citationNodes = document.getElementsByClassName('citation');
     for (var i=citationNodes.length-1;i>-1;i--) {
         citationNodes[i].parentNode.removeChild(citationNodes[i]);
@@ -102,6 +103,7 @@ function setCitations(citeTuples) {
         var citationNumber = tuple[0];
         var txt = tuple[1];
         var citationID = tuple[2];
+        debug('citationID='+citationID);
         var citationNode = document.getElementById(citationID);
         if (config.mode === 'note') {
             citationNode.innerHTML = '[' + (citationNumber+1) + ']';

@@ -136,7 +136,7 @@ function removeCitation() {
     fixupNoteNumbers();
     if (config.citationByIndex.length === 0) {
         localStorage.removeItem('citationByIndex');
-        workaholic.initProcessor(config.defaultStyle, config.defaultLocale, clearDocument);
+        workaholic.initProcessor(config.defaultStyle, config.defaultLocale);
     } else {
         if (config.mode === 'note') {
             var footnotes = document.getElementById('footnotes').children;
