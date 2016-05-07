@@ -639,13 +639,13 @@ function initCiteSupport() {
             if ("number" === typeof citesupport.config.citationIdToPos[citation.citationID]) {
                 seenCitationIDs[citation.citationID] = true;
             } else {
-                debug('WARNING: removing unindexed citation from storage');
+                console.log('WARNING: removing unindexed citation from storage');
                 citesupport.config.citationByIndex = citesupport.config.citationByIndex.slice(0, i).concat(citesupport.config.citationByIndex.slice(i+1));
             }
         }
         for (var key in citesupport.config.citationIdToPos) {
             if (!seenCitationIDs[key]) {
-                debug('WARNING: removing orphan index entry from storage');
+                console.log('WARNING: removing orphan index entry from storage');
                 delete citesupport.config.citationIdToPos[key];
             }
         }
