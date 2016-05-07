@@ -144,7 +144,6 @@ function setCitations(mode, citeTuples, currentCitationInfo) {
         var citationNumber = tuple[0];
         var citationText = tuple[1];
         var citationID = tuple[2];
-        debug('citationID='+citationID);
         var citationNode = document.getElementById(citationID);
         if (mode === 'note') {
             citationNode.innerHTML = '[' + (citationNumber+1) + ']';
