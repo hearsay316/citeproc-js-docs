@@ -4,7 +4,7 @@ var citesupport = new function () {
     this.getCurrentCitationInfo = getCurrentCitationInfo;
     this.citationAddOrEditHandler = citationAddOrEditHandler;
     //
-    config = {
+    var config = {
         debug: true,
         mode: 'note',
         defaultLocale: 'en-US',
@@ -13,55 +13,7 @@ var citesupport = new function () {
         citationIdToPos: {},
         processorReady: false,
         citationByIndex: [],
-        current: {},
-        itemData: [
-            {
-                title: "Geller 2002",
-                id: "item01"
-            },
-            {
-                title: "West 1934",
-                id: "item02"
-            },
-            {
-                title: "Allen 1878",
-                id: "item03"
-            },
-            {
-                title: "American case",
-                id: "item04"
-            },
-            {
-                title: "British case",
-                id: "item05"
-            }
-        ],
-        styleData: [
-            {
-                title: "American Medical Association",
-                id: "american-medical-association"
-            },
-            {
-                title: "Chicago Manual of Style 16th edition (author-date)",
-                id: "chicago-author-date"
-            },
-            {
-                title: "JM Chicago Manual of Style 16th edition (full note)",
-                id: "jm-chicago-fullnote-bibliography"
-            },
-            {
-                title: "JM Indigo Book",
-                id: "jm-indigobook"
-            },
-            {
-                title: "JM Indigo Book (law reviews)",
-                id: "jm-indigobook-law-review"
-            },
-            {
-                title: "OSCOLA - Oxford Standard for Citation of Legal Authorities",
-                id: "jm-oscola"
-            }
-        ]
+        current: {}
     }
     this.config = config;
 
@@ -74,69 +26,7 @@ var citesupport = new function () {
             console.log('*** '+txt);
         }
     }
-
-    function safeStorageGet(key, fallback) {
-        var ret;
-        var val = localStorage.getItem(key);
-        if (!val) {
-            debug('No value in storage!');
-            ret = fallback;
-        } else {
-            try {
-                ret = JSON.parse(val);
-            } catch (e) {
-                debug('JSON parse error! '+key+" "+val);
-                ret = fallback;
-            }
-        }
-        config[key] = ret;
-        return ret;
-    }
-
-    safeStorageGet('citationIdToPos', {});
-    safeStorageGet('posToCitationId', {});
-    safeStorageGet('citationByIndex', []);
-
-    // Validate. All citation IDs and positions must be in maps,
-    // and vice-a-versa
-    function validateStorage () {
-        var seenCitationIDs = {};
-        for (var i=config.citationByIndex.length-1;i>-1;i--) {
-            var citation = config.citationByIndex[i];
-            if ("number" === typeof config.citationIdToPos[citation.citationID]) {
-                seenCitationIDs[citation.citationID] = true;
-            } else {
-                debug('WARNING: removing unindexed citation from storage');
-                config.citationByIndex = config.citationByIndex.slice(0, i).concat(config.citationByIndex.slice(i+1));
-            }
-        }
-        for (var key in config.citationIdToPos) {
-            if (!seenCitationIDs[key]) {
-                debug('WARNING: removing orphan index entry from storage');
-                delete config.citationIdToPos[key];
-            }
-        }
-        config.posToCitationId = {};
-        for (var i=0,ilen=config.citationByIndex.length;i<ilen;i++) {
-            var citation = config.citationByIndex[i];
-            config.posToCitationId[config.citationIdToPos[citation.citationID]] = citation.citationID;
-        }
-        for (var i=0,ilen=config.citationByIndex.length;i<ilen;i++) {
-            if (config.mode === 'note') {
-                config.citationByIndex[i].properties.noteIndex = (i+1);
-            } else {
-                config.citationByIndex[i].properties.noteIndex = 0;
-            }
-        }
-        localStorage.setItem('citationIdToPos', JSON.stringify(config.citationIdToPos));
-        localStorage.setItem('posToCitationId', JSON.stringify(config.posToCitationId));
-        localStorage.setItem('citationByIndex', JSON.stringify(config.citationByIndex));
-        debug('CONFIG citationByIndex: '+JSON.stringify(config.citationByIndex.map(function(obj){return obj.citationID})));
-        debug('CONFIG citationIdToPos: '+JSON.stringify(config.citationIdToPos));
-        debug('CONFIG posToCitationId: '+JSON.stringify(config.posToCitationId));
-    }
-    validateStorage();
-
+    
     /*
      * Insert handler
      */
@@ -615,29 +505,179 @@ var citesupport = new function () {
     }
 }
 
-/*
- * Listener
- */
-
-function buildStyleMenu() {
+function buildStyleMenu () {
     console.log('citesupport: buildStyleMenu()');
+    var styleData = [
+        {
+            title: "American Medical Association",
+            id: "american-medical-association"
+        },
+        {
+            title: "Chicago Manual of Style 16th edition (author-date)",
+            id: "chicago-author-date"
+        },
+        {
+            title: "JM Chicago Manual of Style 16th edition (full note)",
+            id: "jm-chicago-fullnote-bibliography"
+        },
+        {
+            title: "JM Indigo Book",
+            id: "jm-indigobook"
+        },
+        {
+            title: "JM Indigo Book (law reviews)",
+            id: "jm-indigobook-law-review"
+        },
+        {
+            title: "OSCOLA - Oxford Standard for Citation of Legal Authorities",
+            id: "jm-oscola"
+        }
+    ]
     if (localStorage.getItem('defaultStyle')) {
         citesupport.config.defaultStyle = localStorage.getItem('defaultStyle');
     }
     var stylesMenu = document.getElementById('citation-styles');
-    for (var i=0,ilen=config.styleData.length;i<ilen;i++) {
-        var styleData = config.styleData[i];
+    for (var i=0,ilen=styleData.length;i<ilen;i++) {
+        var styleDatum = styleData[i];
         var option = document.createElement('option');
-        option.setAttribute('value', styleData.id);
-        if (styleData.id === config.defaultStyle) {
+        option.setAttribute('value', styleDatum.id);
+        if (styleDatum.id === citesupport.config.defaultStyle) {
             option.selected = true;
         }
-        option.innerHTML = styleData.title;
+        option.innerHTML = styleDatum.title;
         stylesMenu.appendChild(option);
     }
 }
 
+function buildItemMenu(node) {
+    var itemData = [
+        {
+            title: "Geller 2002",
+            id: "item01"
+        },
+        {
+            title: "West 1934",
+            id: "item02"
+        },
+        {
+            title: "Allen 1878",
+            id: "item03"
+        },
+        {
+            title: "American case",
+            id: "item04"
+        },
+        {
+            title: "British case",
+            id: "item05"
+        }
+    ]
+    var citeMenu = document.createElement('div');
+    citeMenu.setAttribute('id', 'cite-menu');
+    var innerHTML = '<div class="menu">'
+    var tmpl = '<label><input id="%%ID%%" type="checkbox" name="cite-menu-item" value="%%ID%%">%%TITLE%%</label><br/>'
+
+    for (var i=0,ilen=itemData.length;i<ilen;i++) {
+        var datum = itemData[i];
+        innerHTML += tmpl.split('%%ID%%').join(datum.id).replace('%%TITLE%%', datum.title);
+    }
+    innerHTML += '</div>';
+    citeMenu.innerHTML = innerHTML;
+    var button = document.createElement('button');
+    button.setAttribute('type', 'button');
+    button.innerHTML = 'Save';
+    var menu = citeMenu.getElementsByClassName('menu')[0];
+    menu.appendChild(button);
+    node.appendChild(citeMenu);
+
+    // XXX If no citation attached, menu is blank
+    if (node.nextSibling && node.nextSibling.classList && node.nextSibling.classList.contains('citation')) {
+        // XXX If citation is attached, index should be in the map, so use it.
+        citesupport.config.current = citesupport.getCurrentCitationInfo();
+        var citation = citesupport.config.citationByIndex[citesupport.config.current.citationIndex];
+        var itemIDs = citation.citationItems.map(function(obj){
+            return obj.id;
+        });
+        for (var i=0,ilen=itemIDs.length;i<ilen;i++) {
+            var menuItem = document.getElementById(itemIDs[i]);
+            menuItem.checked = true;
+        }
+    }
+    button.addEventListener('click', citesupport.citationAddOrEditHandler);
+}
+
+
+function initCiteSupport() {
+    function safeStorageGet(key, fallback) {
+        var ret;
+        var val = localStorage.getItem(key);
+        if (!val) {
+            debug('No value in storage!');
+            ret = fallback;
+        } else {
+            try {
+                ret = JSON.parse(val);
+            } catch (e) {
+                debug('JSON parse error! '+key+" "+val);
+                ret = fallback;
+            }
+        }
+        citesupport.config[key] = ret;
+        return ret;
+    }
+
+    safeStorageGet('citationIdToPos', {});
+    safeStorageGet('posToCitationId', {});
+    safeStorageGet('citationByIndex', []);
+
+    // Validate. All citation IDs and positions must be in maps,
+    // and vice-a-versa
+    function validateStorage () {
+        var seenCitationIDs = {};
+        for (var i=citesupport.config.citationByIndex.length-1;i>-1;i--) {
+            var citation = citesupport.config.citationByIndex[i];
+            if ("number" === typeof citesupport.config.citationIdToPos[citation.citationID]) {
+                seenCitationIDs[citation.citationID] = true;
+            } else {
+                debug('WARNING: removing unindexed citation from storage');
+                citesupport.config.citationByIndex = citesupport.config.citationByIndex.slice(0, i).concat(citesupport.config.citationByIndex.slice(i+1));
+            }
+        }
+        for (var key in citesupport.config.citationIdToPos) {
+            if (!seenCitationIDs[key]) {
+                debug('WARNING: removing orphan index entry from storage');
+                delete citesupport.config.citationIdToPos[key];
+            }
+        }
+        citesupport.config.posToCitationId = {};
+        for (var i=0,ilen=citesupport.config.citationByIndex.length;i<ilen;i++) {
+            var citation = citesupport.config.citationByIndex[i];
+            citesupport.config.posToCitationId[citesupport.config.citationIdToPos[citation.citationID]] = citation.citationID;
+        }
+        for (var i=0,ilen=citesupport.config.citationByIndex.length;i<ilen;i++) {
+            if (citesupport.config.mode === 'note') {
+                citesupport.config.citationByIndex[i].properties.noteIndex = (i+1);
+            } else {
+                citesupport.config.citationByIndex[i].properties.noteIndex = 0;
+            }
+        }
+        localStorage.setItem('citationIdToPos', JSON.stringify(citesupport.config.citationIdToPos));
+        localStorage.setItem('posToCitationId', JSON.stringify(citesupport.config.posToCitationId));
+        localStorage.setItem('citationByIndex', JSON.stringify(citesupport.config.citationByIndex));
+        console.log('CONFIG citationByIndex: '+JSON.stringify(citesupport.config.citationByIndex.map(function(obj){return obj.citationID})));
+        console.log('CONFIG citationIdToPos: '+JSON.stringify(citesupport.config.citationIdToPos));
+        console.log('CONFIG posToCitationId: '+JSON.stringify(citesupport.config.posToCitationId));
+    }
+    validateStorage();
+}
+
+
+/*
+ * Listener
+ */
+
 window.addEventListener('load', function(event) {
+    initCiteSupport();
     buildStyleMenu();
     citesupport.initProcessor(citesupport.config.defaultStyle, citesupport.config.defaultLocale, citesupport.config.citationByIndex);
     document.body.addEventListener('change', function(e) {
@@ -649,41 +689,9 @@ window.addEventListener('load', function(event) {
     });
     document.body.addEventListener('click', function(e) {
         if (e.target.classList.contains('citeme')) {
-            var node = e.target;
             if (document.getElementById('cite-menu')) return;
-
-            var citeMenu = document.createElement('div');
-            citeMenu.setAttribute('id', 'cite-menu');
-            var innerHTML = '<div class="menu">'
-            var tmpl = '<label><input id="%%ID%%" type="checkbox" name="cite-menu-item" value="%%ID%%">%%TITLE%%</label><br/>'
-
-            for (var i=0,ilen=citesupport.config.itemData.length;i<ilen;i++) {
-                var datum = citesupport.config.itemData[i];
-                innerHTML += tmpl.split('%%ID%%').join(datum.id).replace('%%TITLE%%', datum.title);
-            }
-            innerHTML += '</div>';
-            citeMenu.innerHTML = innerHTML;
-            var button = document.createElement('button');
-            button.setAttribute('type', 'button');
-            button.innerHTML = 'Save';
-            var menu = citeMenu.getElementsByClassName('menu')[0];
-            menu.appendChild(button);
-            node.appendChild(citeMenu);
-
-            // XXX If no citation attached, menu is blank
-            if (node.nextSibling && node.nextSibling.classList && node.nextSibling.classList.contains('citation')) {
-                // XXX If citation is attached, index should be in the map, so use it.
-                citesupport.config.current = citesupport.getCurrentCitationInfo();
-                var citation = citesupport.config.citationByIndex[citesupport.config.current.citationIndex];
-                var itemIDs = citation.citationItems.map(function(obj){
-                    return obj.id;
-                });
-                for (var i=0,ilen=itemIDs.length;i<ilen;i++) {
-                    var menuItem = document.getElementById(itemIDs[i]);
-                    menuItem.checked = true;
-                }
-            }
-            button.addEventListener('click', citesupport.citationAddOrEditHandler);
+            var node = e.target;
+            buildItemMenu(node);
         }
     });
 });
