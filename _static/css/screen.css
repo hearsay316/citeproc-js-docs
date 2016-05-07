@@ -1,3 +1,9 @@
+#demo-my-amazing-essay {
+    padding:1em;
+    border: 1px solid #999999;
+    background: #efefef;
+    border-radius: 1em;
+}
 #cite-menu .menu {
     line-height: 0.5em;
 }
@@ -39,7 +45,7 @@
 .citeme {
     display: inline;
     cursor: pointer;
-    background: #eeeeee;
+    background: white;
     border: 1px solid #aaaaaa;
     border-radius: 2px;
     margin: 0px 5px 0px 2px;
