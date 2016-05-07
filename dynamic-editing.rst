@@ -97,15 +97,6 @@ Code elements
 Data units
 ^^^^^^^^^^
 
-Class: ``citation``
-  Citations in the document are represented by ``html:span``
-  elements of the ``citation`` class, each with a unique
-  ``id`` attribute assigned by the citation processor.
-  When initially inserted, a citation is assigned a
-  temporary placeholder ``id`` (this demo uses
-  ``citation-breadcrumb``), which is replaced by the
-  processor-assigned ``id`` after processing.
-
 Item object
   The document editing interface must provide some mechanism for
   selecting individual citeable items for inclusion in citations.  The
@@ -126,7 +117,6 @@ Item object
   with each of the three CSL JSON data types (string, date, and creator).
 
 Citation object
-
   In the data layer, a citation is a hash object that bundles one or
   more items for inclusion in the document. The citation object for
   a new citation is constructed "manually" without a ``citationID``:
@@ -155,7 +145,16 @@ Citation object
   style. For in-text citations in an ``in-text`` style, its value
   should be ``0``. 
 
-Array: ``citationByIndex``
+``<span class-"citation"/>``
+  Citations in the document are represented by ``html:span``
+  elements of the ``citation`` class, each with a unique
+  ``id`` attribute assigned by the citation processor.
+  When initially inserted, a citation is assigned a
+  temporary placeholder ``id`` (this demo uses
+  ``citation-breadcrumb``), which is replaced by the
+  processor-assigned ``id`` after processing.
+
+``citationByIndex``
   An array of citation objects as delivered by the processor.
   The return from the processor will contain full metadata for
   each item in ``citationItems``, and a ``citationID`` as sibling
@@ -279,11 +278,11 @@ The object exposes two methods to the document context.
 Editing operations
 ------------------
 
-
-
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Initializing the processor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Inserting a new citation
