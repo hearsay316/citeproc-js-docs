@@ -7,10 +7,10 @@ workaholic = new function () {
     function initProcessor(styleName, localeName, citationByIndex) {
         // Instantiates the processor
         debug('initProcessor() [CALL]');
+        config.processorReady = false;
         if (!citationByIndex) {
             citationByIndex = {};
         }
-        config.processorReady = false;
         clearDocument();
         worker.postMessage({
             command: 'initProcessor',
@@ -34,39 +34,27 @@ workaholic = new function () {
         });
     }
 
-    function doCallback(d, callback) {
-        if (d.result === 'OK') {
-            callback(d);
-        } else {
-            alert('ERROR: '+d.msg);
-        }
-    }
-
     worker.onmessage = function(e) {
         var d = e.data;
         switch(d.command) {
         case 'initProcessor':
-            doCallback(d, function(d) {
-                debug('initProcessor() [RESPONSE]');
-                config.mode = d.xclass;
-                removeCiteMenu();
-                config.processorReady = true;
-                rebuildCitations(d.rebuildData);
-                setBibliography(d.bibliography);
-            });
+            debug('initProcessor() [RESPONSE]');
+            config.mode = d.xclass;
+            removeCiteMenu();
+            rebuildCitations(d.rebuildData);
+            setBibliography(d.bibliography);
+            config.processorReady = true;
             break;
         case 'registerCitation':
-            doCallback(d, function(d) {
-                debug('registerCitation() [RESPONSE]');
-                config.citationByIndex = d.citationByIndex;
-                setCitations(d.citations);
-                setBibliography(d.bibliography);
-                localStorage.setItem('citationByIndex', JSON.stringify(config.citationByIndex));
-                localStorage.setItem('citationIdToPos', JSON.stringify(config.citationIdToPos));
-                localStorage.setItem('posToCitationId', JSON.stringify(config.posToCitationId));
-                removeCiteMenu();
-                config.processorReady = true;
-            });
+            debug('registerCitation() [RESPONSE]');
+            config.citationByIndex = d.citationByIndex;
+            setCitations(d.citations);
+            setBibliography(d.bibliography);
+            localStorage.setItem('citationByIndex', JSON.stringify(config.citationByIndex));
+            localStorage.setItem('citationIdToPos', JSON.stringify(config.citationIdToPos));
+            localStorage.setItem('posToCitationId', JSON.stringify(config.posToCitationId));
+            removeCiteMenu();
+            config.processorReady = true;
             break;
         }
     }
