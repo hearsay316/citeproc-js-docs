@@ -19,11 +19,13 @@
 //           ... if still citations, refile 1st citation.
 //      ... and menu content: file request w/citationID
 
+"use strict";
+
 class CiteSupport {
 
     constructor() {
         this.config = {
-            debug: false,
+            debug: true,
             mode: 'note',
             defaultLocale: 'en-US',
             defaultStyle: 'jm-indigobook-law-review',
@@ -43,6 +45,8 @@ class CiteSupport {
             console.log(`*** ${txt}`);
         }
     }
+
+    
 
     citationAddOrEditHandler(e) {
         this.debug('citationAddOrEditHandler()');
@@ -187,9 +191,45 @@ class CiteSupport {
     //         config.processorReady = true;
     //         citesupport.registerCitation(splitData.citation, splitData.citationsPre, splitData.citationsPost);
     //     }
-    }
-
-
 }
 
-const support = new CiteSupport();
+/*
+var DemoDocumentInit = CiteSupport => class extends CiteSupport {
+    initDocument() {
+        console.log('Boo');
+    }
+    
+    showMenu() {
+        
+    }
+}
+
+class MyCiteSupport extends DemoDocumentInit(CiteSupport) { }
+*/
+
+
+class MyCiteSupport extends CiteSupport {
+    initDocument() {
+        console.log('Boo');
+        this.debug('Boozie');
+    }
+}
+
+const citesupport = new MyCiteSupport();
+
+// So far so good.
+
+// We can add low-level data-gathering functions that
+// touch the DOM as a mixin, and then for the demo only,
+// extend that class with a documentInit() method.
+
+// For production, we would just leave out the demo-specific
+// method, and provide low-level methods that will get\
+// what the processor logic needs, and place strings
+// in whatever document we're looking at.
+
+// Something like that, anyway.
+
+citesupport.initDocument();
+
+citesupport.debug('Hi');
