@@ -11,13 +11,13 @@
 //   (b) Hang menu off of class:citation span.
 // (2) Perform click-handler from menu, which:
 //   * If no citationID on class:citation span ...
-//      (a) and empty menu: just deletes the node.
-//      (b) and menu content: file request w/empty citationID
+//      ... and empty menu: just deletes the node.
+//      ... and menu content: file request w/empty citationID
 //   * If has citationID on class:citation span ...
-//      (a) and empty menu, then ...
-//           (i) if now no citations, file init request.
-//           (ii) if still citations, refile 1st citation.
-//      (b) and menu content: file request w/citationID
+//      ... and empty menu, then ...
+//           ... if now no citations, file init request.
+//           ... if still citations, refile 1st citation.
+//      ... and menu content: file request w/citationID
 
 class CiteSupport {
 
