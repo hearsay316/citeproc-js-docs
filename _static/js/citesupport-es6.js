@@ -1,3 +1,23 @@
+// Okay, so we've done the first pass over this.
+// The essential ops:
+
+// (1) Open a menu at current document position.
+// (2) Insert, edit, or remove citation node.
+
+// Unpacking that, it looks like this:
+
+// (1) Open a menu at current document position.
+//   (a) Set a class:citation span placeholder if necessary.
+//   (b) Hang menu off of class:citation span.
+// (2) Perform click-handler from menu, which:
+//   * If no citationID on class:citation span ...
+//      (a) and empty menu: just deletes the node.
+//      (b) and menu content: file request w/empty citationID
+//   * If has citationID on class:citation span ...
+//      (a) and empty menu, then ...
+//           (i) if now no citations, file init request.
+//           (ii) if still citations, refile 1st citation.
+//      (b) and menu content: file request w/citationID
 
 class CiteSupport {
 
@@ -7,11 +27,9 @@ class CiteSupport {
             mode: 'note',
             defaultLocale: 'en-US',
             defaultStyle: 'jm-indigobook-law-review',
-            posToCitationId: {},
-            citationIdToPos: {},
-            processorReady: false,
+            documentCitationIDs: {},
             citationByIndex: [],
-            current: {},
+            processorReady: false
         };
     }
 
@@ -32,7 +50,6 @@ class CiteSupport {
         const menu = document.getElementById('cite-menu');
         const citationItems = this.getCitationIdsFrom(menu);
         const hasCitation = this.menuHasCitation(menu);
-        this.config.current = this.getCurrentCitationInfo();
 
         if (citationItems.length === 0) {
             if (hasCitation) {
