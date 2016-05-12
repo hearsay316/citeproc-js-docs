@@ -1,3 +1,5 @@
+"use strict";
+
 // Okay, so we've done the first pass over this.
 // The essential ops:
 
@@ -19,7 +21,6 @@
 //           ... if still citations, refile 1st citation.
 //      ... and menu content: file request w/citationID
 
-"use strict";
 
 class CiteSupportBase {
 
@@ -257,7 +258,18 @@ class CiteSupportBase {
 }
 
 
-var CiteSupport = CiteSupportBase => class extends CiteSupportBase {
+const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
+
+    /**
+     * Function to be run immediately after document has been loaded, and
+     *   before any editing operations.
+     *
+     * @return {void}
+     */
+    initDocument() {
+        this.debug('initDocument()');
+        
+    }
 
     showMenu() {
         this.debug('showMenu()');
@@ -270,27 +282,128 @@ var CiteSupport = CiteSupportBase => class extends CiteSupportBase {
     
 }
 
+class SafeStorage {
+    
+    constructor(citesupport) {
+        this.citesupport = citesupport;
+    }
+    
+    _safeStorageGet(key, fallback) {
+        var ret;
+        var val = localStorage.getItem(key);
+        if (!val) {
+            this.citesupport.debug('No value in storage!');
+            ret = fallback;
+        } else {
+            try {
+                ret = JSON.parse(val);
+            } catch (e) {
+                this.citesupport.debug(`JSON parse error! ${key} ${val}`);
+                ret = fallback;
+            }
+        }
+        this.citesupport.config[key] = ret;
+        return ret;
+    }
+    
+    set defaultLocale(localeName) {
+        this.citesupport.config.defaultLocale = localeName;
+        localStorage.setItem('defaultLocale', localeName);
+    }
+    
+    set defaultStyle(styleName) {
+        this.citesupport.config.styleName = styleName;
+        localStorage.setItem('defaultStyle', styleName);
+    }
+    
+    set citationByIndex(citationByIndex) {
+        this.citesupport.config.citationByIndex = citationByIndex;
+        localStorage.setItem('citationByIndex', JSON.stringify(citationByIndex));
+    }
+
+    get defaultLocale() {
+        return this._safeStorageGet('defaultLocale', 'en-US');
+    }
+    
+    get defaultStyle() {
+        return this._safeStorageGet('defaultStyle', 'jm-indigobook-law-review');
+    }
+    
+    get citationByIndex() {
+        return this._safeStorageGet('citationByIndex', []);
+    }
+
+}
+
 class MyCiteSupport extends CiteSupport(CiteSupportBase) {
-    initDocument() {
-        this.debug('initDocument()');
+    
+    constructor() {
+        super();
+        this.posToCitationId = [];
+        this.safeStorage = new SafeStorage(this);
+    }
+    
+    /**
+     * Replace citation span nodes and get ready to roll. Puts
+     *   document into the state it would have been in at first
+     *   opening had it been properly saved.
+     *
+     * @return {void}
+     */
+    spoofDocument() {
+        this.debug('spoofDocument()');
+
+        // Stage 1: Check that all array items have citationID
+        const citationByIndex = this.safeStorage.citationByIndex;
+        const citationIDs = {};
+        for (let i=0, ilen=citesupport.config.citationByIndex.length; i > ilen; i++) {
+            let citation = citesupport.config.citationByIndex[i];
+            if (!citesupport.config.citationIDs[citation.citationID]) {
+                console.log('*** WARNING: encountered a stored citation that was invalid or had no citationID. Removing citations.');
+                this.safeStorage.citationByIndex = [];
+                this.safeStorage.citationIDs = {};
+                break;
+            }
+            citationIDs[citation.citationID] = true;
+        }
+        this.config.citationIDs = citationIDs;
+            
+        // Stage 2: check that all citeme pegs are in posToCitationId with existing citationIDs
+        const pegs = document.getElementsByClassName('citeme');
+        for (let i=0, ilen=pegs.length; i < ilen; i++) {
+            let peg = pegs[i];
+            if (!this.posToCitationId[peg] || !citationIDs[this.posToCitationId[peg]]) {
+                console.log('*** WARNING: invalid state data. Removing citations.');
+            }
+        }
         
+        // Stage 3: check that number of citation nodes and number of stored citations matches
+        const objectLength = citesupport.config.citationByIndex.length;
+        const nodeLength = document.getElementsByClassName('citation').length;
+        if (objectLength !== nodeLength) {
+            console.log('*** WARNING: document citation node and citation object counts do not match. Removing citations.');
+            this.safeStorage.citationByIndex = [];
+            this.safeStorage.citationIDs = {};
+            const citations = document.getElementsByClassName('citation');
+            for (let i=0, ilen=citations.length; i < ilen; i++) {
+                citations[0].parentNode.removeChild(citations[0]);
+            }
+        }
+        
+        // Stage 4: set citation nodes
+        for (let i=0, ilen=pegs.length; i < ilen; i++) {
+            let peg = pegs[i];
+            let citationNode = document.createElement('span');
+            citationNode.classList.add('citation');
+            peg.insertBefore(citationNode, peg.nextSibling);
+        }
     }
 }
 
+
 const citesupport = new MyCiteSupport();
 
-// So far so good.
-
-// We can add low-level data-gathering functions that
-// touch the DOM as a mixin, and then for the demo only,
-// extend that class with a documentInit() method.
-
-// For production, we would just leave out the demo-specific
-// method, and provide low-level methods that will get\
-// what the processor logic needs, and place strings
-// in whatever document we're looking at.
-
-// Something like that, anyway.
+citesupport.spoofDocument();
 
 citesupport.initDocument();
 
