@@ -21,7 +21,7 @@
 
 "use strict";
 
-class CiteSupport {
+class CiteSupportBase {
 
     constructor() {
         this.config = {
@@ -193,25 +193,20 @@ class CiteSupport {
     //     }
 }
 
-/*
-var DemoDocumentInit = CiteSupport => class extends CiteSupport {
-    initDocument() {
-        console.log('Boo');
+
+var CiteSupport = CiteSupportBase => class extends CiteSupportBase {
+
+    showMenu() {
+        console.log('showMenu() OK');
+        this.debug('  + debug() OK');
     }
     
-    showMenu() {
-        
-    }
 }
 
-class MyCiteSupport extends DemoDocumentInit(CiteSupport) { }
-*/
-
-
-class MyCiteSupport extends CiteSupport {
+class MyCiteSupport extends CiteSupport(CiteSupportBase) {
     initDocument() {
-        console.log('Boo');
-        this.debug('Boozie');
+        console.log('initDocument() OK');
+        this.debug('  + debug() OK');
     }
 }
 
@@ -232,4 +227,4 @@ const citesupport = new MyCiteSupport();
 
 citesupport.initDocument();
 
-citesupport.debug('Hi');
+citesupport.showMenu();
