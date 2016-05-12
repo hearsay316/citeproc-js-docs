@@ -282,6 +282,7 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
     
 }
 
+
 class SafeStorage {
     
     constructor(citesupport) {
@@ -356,9 +357,9 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
         // Stage 1: Check that all array items have citationID
         const citationByIndex = this.safeStorage.citationByIndex;
         const citationIDs = {};
-        for (let i=0, ilen=citesupport.config.citationByIndex.length; i > ilen; i++) {
-            let citation = citesupport.config.citationByIndex[i];
-            if (!citesupport.config.citationIDs[citation.citationID]) {
+        for (let i=0, ilen=this.config.citationByIndex.length; i > ilen; i++) {
+            let citation = this.config.citationByIndex[i];
+            if (!this.config.citationIDs[citation.citationID]) {
                 console.log('*** WARNING: encountered a stored citation that was invalid or had no citationID. Removing citations.');
                 this.safeStorage.citationByIndex = [];
                 this.safeStorage.citationIDs = {};
@@ -370,10 +371,13 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
             
         // Stage 2: check that all citeme pegs are in posToCitationId with existing citationIDs
         const pegs = document.getElementsByClassName('citeme');
-        for (let i=0, ilen=pegs.length; i < ilen; i++) {
-            let peg = pegs[i];
-            if (!this.posToCitationId[peg] || !citationIDs[this.posToCitationId[peg]]) {
+        for (let i=0, ilen=this.config.citationByIndex.length; i < ilen; i++) {
+            let citationID = this.config.citationByIndex[i].citationID;
+            if ("number" !== typeof this.citationIdToPos[citationID]) {
                 console.log('*** WARNING: invalid state data. Removing citations.');
+                this.safeStorage.citationByIndex = [];
+                this.safeStorage.citationIDs = {};
+                break;
             }
         }
         
@@ -395,7 +399,7 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
             let peg = pegs[i];
             let citationNode = document.createElement('span');
             citationNode.classList.add('citation');
-            peg.insertBefore(citationNode, peg.nextSibling);
+            peg.parentNode.insertBefore(citationNode, peg.nextSibling);
         }
     }
 }
@@ -403,8 +407,8 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
 
 const citesupport = new MyCiteSupport();
 
-citesupport.spoofDocument();
 
-citesupport.initDocument();
-
-citesupport.showMenu();
+window.addEventListener('load', function(e){
+    citesupport.spoofDocument();
+    citesupport.initDocument();
+});
