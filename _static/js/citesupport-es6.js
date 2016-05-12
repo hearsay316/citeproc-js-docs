@@ -43,8 +43,8 @@ class CiteSupportBase {
              *   and document bibliography (if any).
              *
              * @param {string} xclass Either `note` or `in-text` as a string
-             * @param {Object[]} rebuildData An array of elements with the form `[citationID, noteNumber, citeString]`
-             * @param {Object[]} bibliographyData An array of bibliography entries as serialized xHTML
+             * @param {Object[]} rebuildData Array of elements with the form `[citationID, noteNumber, citeString]`
+             * @param {Object[]} bibliographyData Array of serialized xHTML bibliography entries
              */
             case 'initProcessor':
                 me.debug('initProcessor()');
@@ -60,7 +60,9 @@ class CiteSupportBase {
               *   the bibliography in the document, and save the `citationByIndex` array
               *   and the `citationIDs` object for persistence.
               *
-              * 
+              * @param {Object[]} citationByIndex Array of registered citation objects
+              * @param {Object[]} citationData Array of elements with the form `[noteNumber, citeString]`
+              * @param {Object[]} bibliographyData Array of serialized xHTML bibliography entries
               */
             case 'registerCitation':
                 me.debug('registerCitation()');
@@ -87,8 +89,9 @@ class CiteSupportBase {
     }
 
     /**
-     * Initializes the processor, optionally populating it
-     *   with a preexisting list of citations.
+     * Initializes the processor, optionally populating it with a
+     *   preexisting list of citations.
+     *
      * @param {string} styleName The ID of a style
      * @param {string} localeName The ID of a locale
      * @param {Object[]} citationByIndex An array of citation objects with citationIDs
@@ -110,8 +113,10 @@ class CiteSupportBase {
     }
 
     /**
-     * Registers a single citation in the processor to follow citations
-     *   described by `preCitations` and precede those described in `postCitations`.
+     * Registers a single citation in the processor to follow
+     *   citations described by `preCitations` and precede those
+     *   described in `postCitations`.
+     *
      * @param {Object{}} citation A citation object
      * @param {Object[]} preCitations An array of `[citationID, noteNumber]` pairs in document order
      * @param {Object[]} postCitations An array of `[citationID, noteNumber]` pairs in document order
