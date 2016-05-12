@@ -81,7 +81,7 @@ class CiteSupportBase {
         const citationItems = [];
         const checkboxes = element.getElementsByTagName('input');
 
-        for (const checkbox of checkboxes) {
+        for (let checkbox of checkboxes) {
             if (checkbox.checked) {
                 citationItems.push({
                     id: checkbox.value,
