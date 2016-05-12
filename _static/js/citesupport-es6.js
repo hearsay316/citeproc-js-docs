@@ -35,8 +35,8 @@ class CiteSupportBase {
             processorReady: false
         };
         const me = this;
-        const worker = new Worker('_static/js/citeworker.js');
-        worker.onmessage = function(e) {
+        this.worker = new Worker('_static/js/citeworker.js');
+        this.worker.onmessage = function(e) {
             switch(e.data.command) {
             /**
              * In response to `callInitProcessor` request, refresh
@@ -104,7 +104,6 @@ class CiteSupportBase {
         if (!citationByIndex) {
             citationByIndex = [];
         }
-        domClearDocument();
         this.worker.postMessage({
             command: 'initProcessor',
             styleName: styleName,
@@ -133,6 +132,31 @@ class CiteSupportBase {
             preCitations: preCitations,
             postCitations: postCitations
         });
+    }
+
+    /**
+     * Converts the array returned by the processor `rebuildProcessor()` method
+     * to the form digested by our own `setCitations()` method.
+     *
+     * rebuildData has this structure:
+     *    [<citation_id>, <note_number>, <citation_string>]
+     *
+     * domSetCitations() wants this structure:
+     *    [<citation_index>, <citation_string>, <citation_id>]
+     * 
+     * @param {Object[]} rebuildData An array of values for insertion of citations into a document
+     * @return {Object[]}
+     */
+    convertRebuildDataToCitationData(rebuildData) {
+        if (!rebuildData) return;
+        this.debug('convertRebuildDataToCitationData()');
+        var citationData = rebuildData.map(function(obj){
+            return [0, obj[2], obj[0]];
+        })
+        for (var i = 0, ilen = citationData.length; i < ilen; i++) {
+            citationData[i][0] = i;
+        }
+        return citationData;
     }
 
     /**
@@ -268,7 +292,57 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
      */
     initDocument() {
         this.debug('initDocument()');
+        this.callInitProcessor(this.config.defaultStyle, this.config.defaultLocale);
+    }
+
+    setCitations(mode, citeTuples, addOrEdit) {
+        this.debug('setCitations()');
         
+        if (addOrEdit) {
+            let citationNodes = document.getElementsByClassName('citation');
+            for (let i = 0, ilen = citeTuples.length; i < ilen; i++) {
+                let citationNode = citationNodes[citeTuples[i][0]];
+                let citationID = citeTuples[i][2];
+                citationNode.setAttribute('id', citationID);
+            }
+        }
+        
+        if (mode === 'note') {
+            var footnoteTexts = document.getElementsByClassName('footnote-text');
+            var footnoteNumbers = document.getElementsByClassName('footnote-number');
+            var footnoteContainer = document.getElementById('footnote-container');
+            if (citeTuples.length) {
+                footnoteContainer.hidden = false;
+            } else {
+                footnoteContainer.hidden = true;
+            }
+            for (var i = 0, ilen = citeTuples.length; i < ilen; i++) {
+                // Marshal data
+                var tuple = citeTuples[i];
+                var citationID = tuple[2];
+                var citationNode = document.getElementById(citationID);
+                var citationText = tuple[1];
+                var citationIndex = tuple[0];
+                // Apply changes
+                citationNode.innerHTML = '[' + (citationIndex+1) + ']';
+
+                // XXXXXX Can't do this!!!
+                // XXXXXX Knocking off for now. See you tomorrow!
+                var idx = config.citationIdToPos[citationID];
+                footnoteNumbers[idx].innerHTML = "" + (citationIndex+1);
+                footnoteTexts[idx].parentNode.hidden = false;
+                footnoteTexts[idx].innerHTML = citationText;
+            }
+            domFixupNoteNumbers();
+        } else {
+            for (var i=0,ilen=citeTuples.length;i<ilen;i++) {
+                var tuple = citeTuples[i];
+                var citationID = tuple[2];
+                var citationNode = document.getElementById(citationID);
+                var citationText = citeTuples[i][1];
+                citationNode.innerHTML = citationText;
+            }
+        }
     }
 
     showMenu() {
