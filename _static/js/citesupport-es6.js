@@ -33,7 +33,46 @@ class CiteSupportBase {
             citationByIndex: [],
             processorReady: false
         };
-        this.worker = new Worker('_static/js/citeworker.js');
+        const me = this;
+        const worker = new Worker('_static/js/citeworker.js');
+        worker.onmessage = function(e) {
+            switch(e.data.command) {
+                /**
+                 * In response to `callInitProcessor` request, refresh
+                 *   `config.mode`, and document citations (if any)
+                 *   and document bibliography (if any).
+                 *
+                 * @param {string} xclass Either `note` or `in-text` as a string
+                 * @param {Object[]} rebuildData An array of elements with the form `[citationID, noteNumber, citeString]`
+                 * @param {Object[]} bibliographyData An array of bibliography entries as serialized xHTML
+                 */
+            case 'initProcessor':
+                me.debug('initProcessor()');
+                me.config.mode = e.data.xclass;
+                const citationData = me.convertRebuildDataToCitationData(e.data.rebuildData);
+                me.setCitations(me.config.mode, citationData);
+                me.setBibliography(e.data.bibliographyData);
+                me.config.processorReady = true;
+                break;
+                /**
+                 * In response to `callRegisterCitation`, refresh `config.citationsByIndex`,
+                 *   set citations that require update in the document, replace
+                 *   the bibliography in the document, and save the `citationByIndex` array
+                 *   and the `citationIDs` object for persistence.
+                 *
+                 * 
+                 */
+            case 'registerCitation':
+                me.debug('registerCitation()');
+                me.config.citationByIndex = e.data.citationByIndex;
+                // setCitations() implicitly updates this.config.citationIDs
+                me.setCitations(me.config.mode, e.data.citationData, true);
+                me.setBibliography(e.data.bibliographyData);
+                me.saveData(me.config.citationByIndex, me.config.citationIDs);
+                me.config.processorReady = true;
+                break;
+            }
+        }
     }
 
     /**
