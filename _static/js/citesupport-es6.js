@@ -327,6 +327,12 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 citationNode.innerHTML = '[' + (citationIndex+1) + ']';
 
                 // XXXXXX Can't do this!!!
+                // XXXXXX The way to handle it may be to manage these
+                // XXXXXX in perfect parallel with citation nodes, using
+                // XXXXXX parallel methods. ... That will require identifying
+                // XXXXXX the split at the point of pulling up the menu.
+                // XXXXXX Gotta do that anyway, though, so just do in early.
+
                 // XXXXXX Knocking off for now. See you tomorrow!
                 var idx = config.citationIdToPos[citationID];
                 footnoteNumbers[idx].innerHTML = "" + (citationIndex+1);
