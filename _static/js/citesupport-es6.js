@@ -150,10 +150,10 @@ class CiteSupportBase {
     convertRebuildDataToCitationData(rebuildData) {
         if (!rebuildData) return;
         this.debug('convertRebuildDataToCitationData()');
-        var citationData = rebuildData.map(function(obj){
+        const citationData = rebuildData.map(function(obj){
             return [0, obj[2], obj[0]];
         })
-        for (var i = 0, ilen = citationData.length; i < ilen; i++) {
+        for (let i = 0, ilen = citationData.length; i < ilen; i++) {
             citationData[i][0] = i;
         }
         return citationData;
@@ -295,60 +295,130 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
         this.callInitProcessor(this.config.defaultStyle, this.config.defaultLocale);
     }
 
-    setCitations(mode, citeTuples, addOrEdit) {
+    /**
+     * Update all citations based on data returned by the processor.
+     * The update has two effects: (1) the id of all in-text citation
+     * nodes is set to the processor-assigned citationID; and (2)
+     * citation texts are updated. For footnote styles, the footnote
+     * block is regenerated from scratch, using hidden text stored
+     * in the citation elements.
+     * 
+     * @param {string} mode The mode of the current style, either `in-text` or `note`
+     * @param {Object[]} data An array of elements with the form `[citationIndex, citationText, citationID]`
+     * @return {void}
+     */
+    setCitations(mode, data) {
         this.debug('setCitations()');
-        
-        if (addOrEdit) {
-            let citationNodes = document.getElementsByClassName('citation');
-            for (let i = 0, ilen = citeTuples.length; i < ilen; i++) {
-                let citationNode = citationNodes[citeTuples[i][0]];
-                let citationID = citeTuples[i][2];
-                citationNode.setAttribute('id', citationID);
-            }
+
+        // Assure that every citation node has citationID
+        // (there is a little redundancy here, we update all nodes
+        // for which update details are returned by the processor)
+        let citationNodes = document.getElementsByClassName('citation');
+        for (let i = 0, ilen = data.length; i < ilen; i++) {
+            let citationNode = citationNodes[data[i][0]];
+            let citationID = data[i][2];
+            citationNode.setAttribute('id', citationID);
         }
         
         if (mode === 'note') {
-            var footnoteTexts = document.getElementsByClassName('footnote-text');
-            var footnoteNumbers = document.getElementsByClassName('footnote-number');
-            var footnoteContainer = document.getElementById('footnote-container');
-            if (citeTuples.length) {
+            const footnoteContainer = document.getElementById('footnote-container');
+            if (data.length) {
                 footnoteContainer.hidden = false;
             } else {
                 footnoteContainer.hidden = true;
             }
-            for (var i = 0, ilen = citeTuples.length; i < ilen; i++) {
-                // Marshal data
-                var tuple = citeTuples[i];
-                var citationID = tuple[2];
-                var citationNode = document.getElementById(citationID);
-                var citationText = tuple[1];
-                var citationIndex = tuple[0];
-                // Apply changes
-                citationNode.innerHTML = '[' + (citationIndex+1) + ']';
+            for (let i = 0, ilen = data.length; i < ilen; i++) {
+                // Get data for each cite for update (ain't pretty)
+                let tuple = data[i];
+                let citationID = tuple[2];
+                let citationNode = document.getElementById(citationID);
+                let citationText = tuple[1];
+                let citationIndex = tuple[0];
+                let footnoteNumber = (citationIndex + 1);
 
-                // XXXXXX Can't do this!!!
-                // XXXXXX The way to handle it may be to manage these
-                // XXXXXX in perfect parallel with citation nodes, using
-                // XXXXXX parallel methods. ... That will require identifying
-                // XXXXXX the split at the point of pulling up the menu.
-                // XXXXXX Gotta do that anyway, though, so just do in early.
-
-                // XXXXXX Knocking off for now. See you tomorrow!
-                var idx = config.citationIdToPos[citationID];
-                footnoteNumbers[idx].innerHTML = "" + (citationIndex+1);
-                footnoteTexts[idx].parentNode.hidden = false;
-                footnoteTexts[idx].innerHTML = citationText;
+                // The update itself is tricky and hackish because
+                // HTML has no native mechanism for binding
+                // footnote markers to footnotes proper.
+                //
+                //   (1) We write the citationText in a hidden sibling to
+                // the in-text note number. This gives us a persistent
+                // record of the footnote text.
+                //
+                //   (2) We then (later) iterate over the citation
+                // nodes to regenerate the footnote block from scratch.
+                citationNode.innerHTML = `[${footnoteNumber}]<span hidden="true">${citationText}</span>`;
             }
-            domFixupNoteNumbers();
+            // Reset the number on all footnote markers
+            // (the processor does not issue updates for note-number-only changes)
+            const citationNodes = document.getElementsByClassName('citation');
+            for (let i = 0, ilen = citationNodes.length; i < ilen; i++) {
+                let citationNode = citationNodes[i];
+                let footnoteNumber = (i + 1);
+                let footnoteNumberTextNode = document.createTextNode(`${footnoteNumber}`);
+                citationNode.replaceChild(citationNode.firstChild, footnoteNumberTextNode);
+            }
+            // Remove all footnotes
+            const footnotes = footnoteContainer.childNodes;
+            for (let i = 0, ilen = footnotes.length; i < ilen; i++) {
+                footnotes[0].parentNode.removeChild(footnotes[0]);
+            }
+            // Regenerate all footnotes from hidden texts
+            for (let i = 0, ilen = citationNodes.length; i < ilen; i++) {
+                let footnoteText = citationNodes[i].childNodes[1].innerHTML;
+                let footnoteNumber = (i + 1);
+                let footnote = document.createElement('div');
+                footnote.classList.add('footnote');
+                footnote.innerHTML = `<span class="footnote"><span class="footnote-number">[${footnoteNumber}]</span><span class="footnote-text">${footnoteText}</span></span>`;
+                footnoteContainer.appendChild(footnote);
+            }
         } else {
-            for (var i=0,ilen=citeTuples.length;i<ilen;i++) {
-                var tuple = citeTuples[i];
-                var citationID = tuple[2];
-                var citationNode = document.getElementById(citationID);
-                var citationText = citeTuples[i][1];
+            for (let i = 0, ilen = data.length; i < ilen; i++) {
+                let tuple = data[i];
+                let citationID = tuple[2];
+                let citationNode = document.getElementById(citationID);
+                let citationText = tuple[1];
                 citationNode.innerHTML = citationText;
             }
         }
+    }
+
+    /**
+     * Replace bibliography with xHTML returned by the processor.
+     *
+     * @param {Object[]} data An array consisting of [0] an object with style information and [1] an array of serialized xHMTL bibliography entries.
+     */
+    setBibliography(data) {
+        this.debug('domSetBibliography()');
+        const bibContainer = document.getElementById('bibliography-container');
+        if (!data || !data[1] || data[1].length === 0) {
+            bibContainer.hidden = true;
+            return;
+        };
+        const bib = document.getElementById('bibliography');
+        bib.innerHTML = data[1].join('\n');
+        const entries = document.getElementsByClassName('csl-entry');
+        if (data[0].hangingindent) {
+            for (let i = 0, ilen = entries.length; i < ilen; i++) {
+                let entry = entries[i];
+                entry.setAttribute('style', 'padding-left: 1.3em;text-indent: -1.3em;');
+            }
+        } else if (data[0]['second-field-align']) {
+            for (let i = 0, ilen = entries.length; i < ilen; i++) {
+                let entry = entries[i];
+                entry.setAttribute('style', 'white-space: nowrap;');
+            }
+            const numbers = document.getElementsByClassName('csl-left-margin');
+            for (let i = 0, ilen = numbers.length; i < ilen; i++) {
+                let number = numbers[i];
+                number.setAttribute('style', 'float: left;padding-right: 0.3em;');
+            }
+            const texts = document.getElementsByClassName('csl-right-inline');
+            for (let i = 0, ilen = texts.length; i < ilen; i++) {
+                let text = texts[i];
+                text.setAttribute('style', 'display: inline-block;white-space: normal;');
+            }
+        }
+        bibContainer.hidden = false;
     }
 
     showMenu() {
@@ -370,8 +440,8 @@ class SafeStorage {
     }
     
     _safeStorageGet(key, fallback) {
-        var ret;
-        var val = localStorage.getItem(key);
+        const ret;
+        const val = localStorage.getItem(key);
         if (!val) {
             this.citesupport.debug('No value in storage!');
             ret = fallback;
