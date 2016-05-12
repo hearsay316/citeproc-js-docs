@@ -29,10 +29,11 @@ class CiteSupportBase {
             mode: 'note',
             defaultLocale: 'en-US',
             defaultStyle: 'jm-indigobook-law-review',
-            documentCitationIDs: {},
+            citationIDs: {},
             citationByIndex: [],
             processorReady: false
         };
+        this.worker = new Worker('_static/js/citeworker.js');
     }
 
     /**
@@ -46,7 +47,52 @@ class CiteSupportBase {
         }
     }
 
-    
+    /**
+     * Initializes the processor, optionally populating it
+     *   with a preexisting list of citations.
+     * @param {string} styleName The ID of a style
+     * @param {string} localeName The ID of a locale
+     * @param {Object[]} citationByIndex An array of citation objects with citationIDs
+     * @return {void}
+     */
+    callInitProcessor(styleName, localeName, citationByIndex) {
+        this.debug('callInitProcessor()');
+        this.config.processorReady = false;
+        if (!citationByIndex) {
+            citationByIndex = [];
+        }
+        domClearDocument();
+        this.worker.postMessage({
+            command: 'initProcessor',
+            styleName: styleName,
+            localeName: localeName,
+            citationByIndex: citationByIndex
+        });
+    }
+
+    /**
+     * Registers a single citation in the processor to follow citations
+     *   described by `preCitations` and precede those described in `postCitations`.
+     * @param {Object{}} citation A citation object
+     * @param {Object[]} preCitations An array of `[citationID, noteNumber]` pairs in document order
+     * @param {Object[]} postCitations An array of `[citationID, noteNumber]` pairs in document order
+     * @return {void}
+     */
+    callRegisterCitation(citation, preCitations, postCitations) {
+        if (!config.processorReady) return;
+        this.debug('callRegisterCitation()');
+        this.config.processorReady = false;
+        worker.postMessage({
+            command: 'registerCitation',
+            citation: citation,
+            preCitations: preCitations,
+            postCitations: postCitations
+        });
+    }
+
+    /**
+     * Done to here
+     */
 
     citationAddOrEditHandler(e) {
         this.debug('citationAddOrEditHandler()');
@@ -163,50 +209,27 @@ class CiteSupportBase {
         }
         return false;
     }
-
-
-    // TODO: Combine this function with some of the others to create one unified
-    // DOM update/refresh utility.
-    // removeCitation() {
-    //     this.debug('removeCitation()');
-    //
-    //     // Remove citation from DOM
-    //     if (this.config.current.citationID) {
-    //         domRemoveCitation(config.current.citationID);
-    //     }
-    //
-    //     // Remove citation from citationByIndex, posToCitationId, and citationIdToPos
-    //     // Adjust note numbers in citationByIndex child properties if note style
-    //     removePos = removeIdFromDataSets(config.mode, config.current.citationID);
-    //
-    //     // If we have no citations left, initialize the processor
-    //     // Otherwise, re-insert the first citation in the list to trigger and update
-    //     if (config.citationByIndex.length === 0) {
-    //         localStorage.removeItem('citationByIndex');
-    //         citesupport.initProcessor(config.defaultStyle, config.defaultLocale, config.citationByIndex);
-    //     } else {
-    //         domHideFootnoteAt(removePos);
-    //         var splitData = getCitationSplits();
-    //         splitData.citation.properties.noteIndex = 1;
-    //         config.processorReady = true;
-    //         citesupport.registerCitation(splitData.citation, splitData.citationsPre, splitData.citationsPost);
-    //     }
+    
 }
 
 
 var CiteSupport = CiteSupportBase => class extends CiteSupportBase {
 
     showMenu() {
-        console.log('showMenu() OK');
-        this.debug('  + debug() OK');
+        this.debug('showMenu()');
+        
+    }
+    
+    handleMenuSelect() {
+        this.debug('handleMenuSelect()');
     }
     
 }
 
 class MyCiteSupport extends CiteSupport(CiteSupportBase) {
     initDocument() {
-        console.log('initDocument() OK');
-        this.debug('  + debug() OK');
+        this.debug('initDocument()');
+        
     }
 }
 
