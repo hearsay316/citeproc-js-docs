@@ -494,6 +494,13 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
     spoofDocument() {
         this.debug('spoofDocument()');
 
+        // Fix up demo-only value of citationIdToPos
+        this.citationIdToPos = localStorage.getItem('citationIdToPos');
+        if (!this.citationIdToPos) {
+            this.citationIdToPos = {};
+            localStorage.setItem('citationIdToPos', JSON.stringify({}));
+        }
+
         // Stage 1: Check that all array items have citationID
         const citationByIndex = this.safeStorage.citationByIndex;
         const citationIDs = {};
@@ -503,6 +510,9 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
                 console.log('*** WARNING: encountered a stored citation that was invalid or had no citationID. Removing citations.');
                 this.safeStorage.citationByIndex = [];
                 this.safeStorage.citationIDs = {};
+                // Demo-only value
+                localStorage.setItem('citationIdToPos', JSON.stringify({}));
+                this.citationIdToPos = {};
                 break;
             }
             citationIDs[citation.citationID] = true;
@@ -517,6 +527,9 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
                 console.log('*** WARNING: invalid state data. Removing citations.');
                 this.safeStorage.citationByIndex = [];
                 this.safeStorage.citationIDs = {};
+                // Demo-only value
+                localStorage.setItem('citationIdToPos', JSON.stringify({}));
+                this.citationIdToPos = {};
                 break;
             } else {
                 let citationNode = document.createElement('span');
@@ -532,6 +545,9 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
         const nodeLength = document.getElementsByClassName('citation').length;
         if (objectLength !== nodeLength) {
             console.log('*** WARNING: document citation node and citation object counts do not match. Removing citations.');
+            // Demo-only value
+            localStorage.setItem('citationIdToPos', JSON.stringify({}));
+            this.citationIdToPos = {};
             this.safeStorage.citationByIndex = [];
             this.safeStorage.citationIDs = {};
             const citations = document.getElementsByClassName('citation');
@@ -541,6 +557,12 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
         }
     }
 
+    /**
+     * Listen for click events on the fixed pegs used in the demo.
+     *   This is cheating. :-)
+     *
+     * @return {void}
+     */
     setPegListener() {
         document.body.addEventListener('click', function(e) {
             if (e.target.classList.contains('citeme')) {
@@ -549,6 +571,55 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
             }
         });
     }
+
+    /**
+     * Build a menu to set the style and trigger reinstantiation of
+     *   the processor. This menu will be needed in all deployments,
+     *   but is not part of the processor code itself.
+     *
+     * @return {void}
+     */
+    buildStyleMenu () {
+        this.debug('buildStyleMenu()');
+        const styleData = [
+            {
+                title: "American Medical Association",
+                id: "american-medical-association"
+            },
+            {
+                title: "Chicago Manual of Style 16th edition (author-date)",
+                id: "chicago-author-date"
+            },
+            {
+                title: "JM Chicago Manual of Style 16th edition (full note)",
+                id: "jm-chicago-fullnote-bibliography"
+            },
+            {
+                title: "JM Indigo Book",
+                id: "jm-indigobook"
+            },
+            {
+                title: "JM Indigo Book (law reviews)",
+                id: "jm-indigobook-law-review"
+            },
+            {
+                title: "OSCOLA - Oxford Standard for Citation of Legal Authorities",
+                id: "jm-oscola"
+            }
+        ]
+        let defaultStyle = this.safeStorage.defaultStyle;
+        const stylesMenu = document.getElementById('citation-styles');
+        for (let i = 0, ilen = styleData.length; i < ilen; i++) {
+            let styleDatum = styleData[i];
+            let option = document.createElement('option');
+            option.setAttribute('value', styleDatum.id);
+            if (styleDatum.id === defaultStyle) {
+                option.selected = true;
+            }
+            option.innerHTML = styleDatum.title;
+            stylesMenu.appendChild(option);
+        }
+    }
 }
 
 
@@ -556,6 +627,7 @@ const citesupport = new MyCiteSupport();
 
 
 window.addEventListener('load', function(e){
+    citesupport.buildStyleMenu();
     citesupport.spoofDocument();
     citesupport.initDocument();
     citesupport.setPegListener();
