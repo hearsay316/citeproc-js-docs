@@ -4,6 +4,12 @@
     background: #efefef;
     border-radius: 1em;
 }
+.footnote-mark::before {
+    content: '[';
+}
+.footnote-mark::after {
+    content: ']';
+}
 #cite-menu .menu {
     line-height: 0.5em;
 }

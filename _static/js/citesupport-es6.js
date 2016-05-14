@@ -8,20 +8,6 @@
 
 // Unpacking that, it looks like this:
 
-// (1) Open a menu at current document position.
-//   (a) Set a class:citation span placeholder if necessary.
-//   (b) Hang menu off of class:citation span.
-// (2) Perform click-handler from menu, which:
-//   * If no citationID on class:citation span ...
-//      ... and empty menu: just deletes the node.
-//      ... and menu content: file request w/empty citationID
-//   * If has citationID on class:citation span ...
-//      ... and empty menu, then ...
-//           ... if now no citations, file init request.
-//           ... if still citations, refile 1st citation.
-//      ... and menu content: file request w/citationID
-
-
 class CiteSupportBase {
 
     constructor() {
@@ -178,7 +164,9 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
      */
     initDocument() {
         this.debug('initDocument()');
-        this.callInitProcessor(this.config.defaultStyle, this.config.defaultLocale);
+        // Recalls citationByIndex from storage
+        this.safeStorage.citationByIndex;
+        this.callInitProcessor(this.safeStorage.defaultStyle, this.safeStorage.defaultLocale, this.safeStorage.citationByIndex);
     }
 
     /**
@@ -195,17 +183,44 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
      */
     setCitations(mode, data) {
         this.debug('setCitations()');
-
+        
         // Assure that every citation node has citationID
-        // (there is a little redundancy here, we update all nodes
-        // for which update details are returned by the processor)
+        // Store data on any node of first impression
         let citationNodes = document.getElementsByClassName('citation');
         for (let i = 0, ilen = data.length; i < ilen; i++) {
             let citationNode = citationNodes[data[i][0]];
             let citationID = data[i][2];
-            citationNode.setAttribute('id', citationID);
+            if (!citationNode.getAttribute('id')) {
+                citationNode.setAttribute('id', citationID);
+                // Demo-only hack
+                let pegs = document.getElementsByClassName('citeme');
+                for (let j = 0, jlen = pegs.length; j < jlen; j++) {
+                    let sib = pegs[j].nextSibling;
+                    if (sib && sib.getAttribute && sib.getAttribute('id') === citationID) {
+                        this.config.citationIdToPos[citationID] = j;
+                    }
+                }
+                this.safeStorage.citationIdToPos = this.config.citationIdToPos;
+            }
         }
         
+        /*
+         * Pseudo-code
+         *
+         * (1) Open a menu at current document position.
+         *   (a) Set a class:citation span placeholder if necessary.
+         *   (b) Hang menu off of class:citation span.
+         * (2) Perform click-handler from menu, which:
+         *   * If no citationID on class:citation span ...
+         *      ... and empty menu: just deletes the node.
+         *      ... and menu content: file request w/empty citationID
+         *   * If has citationID on class:citation span ...
+         *      ... and empty menu, then ...
+         *           ... if now no citations, file init request.
+         *           ... if still citations, refile 1st citation.
+         *      ... and menu content: file request w/citationID
+         */
+
         if (mode === 'note') {
             const footnoteContainer = document.getElementById('footnote-container');
             if (data.length) {
@@ -222,7 +237,7 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 let citationIndex = tuple[0];
                 let footnoteNumber = (citationIndex + 1);
 
-                // The update itself is tricky and hackish because
+                // The footnote update is tricky and hackish because
                 // HTML has no native mechanism for binding
                 // footnote markers to footnotes proper.
                 //
@@ -232,29 +247,28 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 //
                 //   (2) We then (later) iterate over the citation
                 // nodes to regenerate the footnote block from scratch.
-                citationNode.innerHTML = `[${footnoteNumber}]<span hidden="true">${citationText}</span>`;
+                citationNode.innerHTML = `<span class="footnote-mark">${footnoteNumber}</span><span hidden="true">${citationText}</span>`;
             }
             // Reset the number on all footnote markers
             // (the processor does not issue updates for note-number-only changes)
-            const citationNodes = document.getElementsByClassName('citation');
-            for (let i = 0, ilen = citationNodes.length; i < ilen; i++) {
-                let citationNode = citationNodes[i];
-                let footnoteNumber = (i + 1);
-                let footnoteNumberTextNode = document.createTextNode(`${footnoteNumber}`);
-                citationNode.replaceChild(footnoteNumberTextNode, citationNode.firstChild); 
+            const footnoteMarkNodes = document.getElementsByClassName('footnote-mark');
+            for (let i = 0, ilen = footnoteMarkNodes.length; i < ilen; i++) {
+                let footnoteMarkNode = footnoteMarkNodes[i];
+                footnoteMarkNode.innerHTML = (i + 1);
             }
             // Remove all footnotes
-            const footnotes = footnoteContainer.childNodes;
-            for (let i = 0, ilen = footnotes.length; i < ilen; i++) {
-                footnotes[0].parentNode.removeChild(footnotes[0]);
+            const footnotes = document.getElementsByClassName('footnote');
+            for (let i = footnotes.length - 1; i > -1; i--) {
+                footnotes[i].parentNode.removeChild(footnotes[i]);
             }
             // Regenerate all footnotes from hidden texts
+            const citationNodes = document.getElementsByClassName('citation');
             for (let i = 0, ilen = citationNodes.length; i < ilen; i++) {
                 let footnoteText = citationNodes[i].childNodes[1].innerHTML;
                 let footnoteNumber = (i + 1);
                 let footnote = document.createElement('div');
                 footnote.classList.add('footnote');
-                footnote.innerHTML = `<span class="footnote"><span class="footnote-number">[${footnoteNumber}]</span><span class="footnote-text">${footnoteText}</span></span>`;
+                footnote.innerHTML = `<span class="footnote"><span class="footnote-number">${footnoteNumber}</span><span class="footnote-text">${footnoteText}</span></span>`;
                 footnoteContainer.appendChild(footnote);
             }
         } else {
@@ -377,7 +391,7 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 id: "item05"
             }
         ]
-
+        
         const citeMenu = document.createElement('div');
         citeMenu.setAttribute('id', 'cite-menu');
         var innerHTML = '<div class="menu">'
@@ -394,14 +408,15 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
         const button = document.getElementById('cite-save-button');
         
         const citationID = citationNode.getAttribute('id');
+        
         if (citationID) {
             let citation;
             for (let i = 0, ilen = citesupport.config.citationByIndex.length; i < ilen; i++) {
-                if (citesupport.config.citationByIndex[i].id === citationID) {
+                if (citesupport.config.citationByIndex[i].citationID === citationID) {
                     citation = citesupport.config.citationByIndex[i];
                 }
             }
-            // Although citation should ALWAYS exist if document data has passed validation
+            // Although citation should ALWAYS exist if document data has cleared validation
             if (citation) {
                 const itemIDs = citation.citationItems.map(function(obj){
                     return obj.id;
@@ -456,7 +471,6 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
             let citation = citesupport.config.citationByIndex[i];
             citationMap[citation.citationID] = i;
         }
-        console.log('XX citationMap: '+JSON.stringify(citationMap));
         for (let i = 0, ilen = citationNodes.length; i < ilen; i++) {
             let node = citationNodes[i];
             let id = node.getAttribute('id');
@@ -464,8 +478,6 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 citationByIndex.push(citesupport.config.citationByIndex[citationMap[id]]);
             }
         }
-        console.log('XX orig citationByIndex: '+JSON.stringify(citesupport.config.citationByIndex));
-        console.log('XX citationByIndex: '+JSON.stringify(citationByIndex));
         citesupport.safeStorage.citationByIndex = citationByIndex;
 
         // Next, we normalize our record of the note numbers.
@@ -499,8 +511,8 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 
                 // Remove citation data from memory objects and storage
                 delete citesupport.config.citationIDs[citationID];
-                delete citesupport.citationIdToPos[citationID];
-                localStorage.setItem('citationIdToPos', JSON.stringify(citesupport.citationIdToPos));
+                // Demo-only
+                delete citesupport.config.citationIdToPos[citationID];
 
                 // Remove citation from citationByIndex and citationIDs
                 for (let i = citesupport.config.citationByIndex.length - 1; i > -1; i--) {
@@ -515,10 +527,9 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                         }
                     }
                 }
-
+                
                 if (citesupport.config.citationByIndex.length === 0) {
                     // If we have no citations left, initialize the processor
-                    citesupport.safeStorage.citationByIndex = [];
                     citesupport.callInitProcessor(citesupport.config.defaultStyle, citesupport.config.defaultLocale, citesupport.config.citationByIndex);
                 } else {
                     // Get citation, citationsPre, citationsPost
@@ -558,6 +569,7 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                     }
                 }
             }
+            
             // Submit the update request.
             citesupport.callRegisterCitation(citation, splitData.citationsPre, splitData.citationsPost);
         }
@@ -585,7 +597,6 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                         splitData.citation = citesupport.config.citationByIndex[i];
                     }
                 } else {
-                    console.log('XXX i='+i+" offset="+offset+" indexed="+citesupport.config.citationByIndex.length+" nodes="+nodes.length);
                     splitData[current].push([citesupport.config.citationByIndex[i + offset].citationID, 0]);
                 }
             }
@@ -653,13 +664,18 @@ class SafeStorage {
     }
     
     set defaultStyle(styleName) {
-        this.citesupport.config.styleName = styleName;
         localStorage.setItem('defaultStyle', styleName);
+        this.citesupport.config.defaultStyle = styleName;
     }
     
     set citationByIndex(citationByIndex) {
-        this.citesupport.config.citationByIndex = citationByIndex;
         localStorage.setItem('citationByIndex', JSON.stringify(citationByIndex));
+        this.citesupport.config.citationByIndex = citationByIndex;
+    }
+
+    set citationIdToPos(citationIdToPos) {
+        localStorage.setItem('citationIdToPos', JSON.stringify(citationIdToPos));
+        this.citesupport.config.citationIdToPos = citationIdToPos;
     }
 
     get defaultLocale() {
@@ -674,13 +690,16 @@ class SafeStorage {
         return this._safeStorageGet('citationByIndex', []);
     }
 
+    get citationIdToPos() {
+        return this._safeStorageGet('citationIdToPos', {});
+    }
+
 }
 
 class MyCiteSupport extends CiteSupport(CiteSupportBase) {
     
     constructor() {
         super();
-        this.citationIdToPos = {};
         this.safeStorage = new SafeStorage(this);
     }
     
@@ -694,12 +713,8 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
     spoofDocument() {
         this.debug('spoofDocument()');
 
-        // Fix up demo-only value of citationIdToPos
-        this.citationIdToPos = localStorage.getItem('citationIdToPos');
-        if (!this.citationIdToPos) {
-            this.citationIdToPos = {};
-            localStorage.setItem('citationIdToPos', JSON.stringify({}));
-        }
+        // Initialize demo-only position object from storage
+        this.safeStorage.citationIdToPos;
 
         // Stage 1: Check that all array items have citationID
         const citationByIndex = this.safeStorage.citationByIndex;
@@ -707,12 +722,11 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
         for (let i=0, ilen=this.config.citationByIndex.length; i > ilen; i++) {
             let citation = this.config.citationByIndex[i];
             if (!this.config.citationIDs[citation.citationID]) {
-                console.log('*** WARNING: encountered a stored citation that was invalid or had no citationID. Removing citations.');
+                this.debug('WARNING: encountered a stored citation that was invalid or had no citationID. Removing citations.');
                 this.safeStorage.citationByIndex = [];
                 this.safeStorage.citationIDs = {};
                 // Demo-only value
-                localStorage.setItem('citationIdToPos', JSON.stringify({}));
-                this.citationIdToPos = {};
+                this.safeStorage.citationIdToPos = {};
                 break;
             }
             citationIDs[citation.citationID] = true;
@@ -724,19 +738,18 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
         for (let i = 0, ilen = this.config.citationByIndex.length; i < ilen; i++) {
             let citation = this.config.citationByIndex[i];
             let citationID = citation ? citation.citationID : null;
-            if ("number" !== typeof this.citationIdToPos[citationID]) {
-                console.log('*** WARNING: invalid state data. Removing citations.');
+            if ("number" !== typeof this.config.citationIdToPos[citationID]) {
+                this.debug('WARNING: invalid state data. Removing citations.');
                 this.safeStorage.citationByIndex = [];
                 this.safeStorage.citationIDs = {};
                 // Demo-only value
-                localStorage.setItem('citationIdToPos', JSON.stringify({}));
-                this.citationIdToPos = {};
+                this.safeStorage.citationIdToPos = {};
                 break;
             } else {
                 let citationNode = document.createElement('span');
                 citationNode.classList.add('citation');
                 citationNode.setAttribute('id', citationID);
-                let peg = pegs[this.citationIdToPos[citationID]];
+                let peg = pegs[this.config.citationIdToPos[citationID]];
                 peg.parentNode.insertBefore(citationNode, peg.nextSibling);
             }
         }
@@ -745,12 +758,11 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
         const objectLength = citesupport.config.citationByIndex.length;
         const nodeLength = document.getElementsByClassName('citation').length;
         if (objectLength !== nodeLength) {
-            console.log('*** WARNING: document citation node and citation object counts do not match. Removing citations.');
-            // Demo-only value
-            localStorage.setItem('citationIdToPos', JSON.stringify({}));
-            this.citationIdToPos = {};
+            this.debug('WARNING: document citation node and citation object counts do not match. Removing citations.');
             this.safeStorage.citationByIndex = [];
             this.safeStorage.citationIDs = {};
+            // Demo-only value
+            this.safeStorage.citationIdToPos = {};
             const citations = document.getElementsByClassName('citation');
             for (let i=0, ilen=citations.length; i < ilen; i++) {
                 citations[0].parentNode.removeChild(citations[0]);
