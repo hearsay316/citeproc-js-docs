@@ -1,12 +1,55 @@
 "use strict";
 
-// Okay, so we've done the first pass over this.
-// The essential ops:
-
-// (1) Open a menu at current document position.
-// (2) Insert, edit, or remove citation node.
-
-// Unpacking that, it looks like this:
+/**
+ * citesupport - Citation support for xHTML documents
+ *
+ * An es6 class object that provides support for dynamic citation
+ * management similar to that found in reference managers (Zotero,
+ * Mendeley, EndNote, Citavi, Papers2 etc.)
+ *
+ * Here are some notes on things relevant to deployment:
+ *
+ * - The class should be instantiated as `citesupport`. The event
+ *   handlers expect the class object to be available in global
+ *   context under that name.
+ *
+ * - If `config.demo` is `true`, the stored object `citationIdToPos`
+ *   maps citationIDs to the index position of fixed "pegs" in the
+ *   document that have class `citeme`. In the demo, this map is
+ *   stored in localStorage, and is used to reconstruct the document
+ *   state (by reinserting `class:citation` span tags) on page reload.
+ *
+ * - If `config.demo` is `false`, the document is assumed to contain
+ *   `class:citation` span tags, and operations on `citeme` nodes will
+ *   not be performed. In non-demo mode, `citationIdToPos` carries
+ *   the index position of citation nodes for good measure, but the
+ *   mapping is not used for anything.
+ *
+ * - The `spoofDocument()` function brings citation data into memory.
+ *   In the demo, this data is held in localStorage, and
+ *   `spoofDocument()` performs some sanity checks on data and
+ *   document. For a production deployment, this is the place for code
+ *   that initially extracts citation data the document (if, for example,
+ *   it is stashed in data-attributes on citation nodes).
+ *
+ * - The `setCitations()` function is where citation data for individual
+ *   citations would be saved, at the location marked by NOTE.
+ *
+ * - The user-interface functions `buildStyleMenu()` and
+ *   `citationWidget()` are simple things cast for the demo, and
+ *   should be replaced with something a bit more functional.
+ *
+ * - The `SafeStorage` class should be replaced (or subclassed?) for
+ *   deployment with a class that provides the same methods. If
+ *   the citation objects making up `citationByIndex` are stored
+ *   directly on the `class:citation` span nodes, the getter for
+ *   that value should harvest the values from the nodes, and
+ *   store them on `config.citationByIndex`. The setter should
+ *   set `config.citationByIndex` only, relying on other code
+ *   to update the node value.
+ *   
+ * - Probably some other stuff that I've overlooked.
+ */
 
 class CiteSupportBase {
 
@@ -41,14 +84,13 @@ class CiteSupportBase {
                 me.setCitations(me.config.mode, citationData);
                 me.setBibliography(e.data.bibliographyData);
                 me.safeStorage.citationByIndex = me.config.citationByIndex;
-                me.safeStorage.citationIDs = me.config.citationIDs;
                 me.config.processorReady = true;
                 break;
              /**
               * In response to `callRegisterCitation`, refresh `config.citationByIndex`,
               *   set citations that require update in the document, replace
               *   the bibliography in the document, and save the `citationByIndex` array
-              *   and the `citationIDs` object for persistence.
+              *   for persistence.
               *
               * @param {Object[]} citationByIndex Array of registered citation objects
               * @param {Object[]} citationData Array of elements with the form `[noteNumber, citeString]`
@@ -61,7 +103,6 @@ class CiteSupportBase {
                 me.setCitations(me.config.mode, e.data.citationData, true);
                 me.setBibliography(e.data.bibliographyData);
                 me.safeStorage.citationByIndex = me.config.citationByIndex;
-                me.safeStorage.citationIDs = me.config.citationIDs;
                 me.config.processorReady = true;
                 break;
             }
@@ -199,11 +240,12 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                         }
                     }
                 } else {
-                    // This isn't used for anything other than validation
+                    // citationIdToPos isn't used for anything other than (optionally) validation
                     let citations = document.getElementsByClassName('citation');
                     for (let j = 0, jlen = citations.length; j < jlen; j++) {
                         let citation = citations[j];
                         if (citation && citation.getAttribute && citation.getAttribute('id') === citationID) {
+                            // NOTE: If stashing data on citation nodes, that should happen here.
                             this.config.citationIdToPos[citationID] = j;
                         }
                     }
@@ -521,7 +563,6 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 
                 // Remove citation data from memory objects and storage
                 delete citesupport.config.citationIDs[citationID];
-                // Demo-only
                 delete citesupport.config.citationIdToPos[citationID];
 
                 // Remove citation from citationByIndex and citationIDs
@@ -549,7 +590,7 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                     // Adjust note numbers in citationByIndex child properties if note style
                     if (citesupport.config.mode === 'note') {
                         for (let i = 1, ilen = citesupport.config.citationByIndex.length; i < ilen; i++) {
-                            citesupport.config.citationByIndex[j].properties.noteIndex = (i + 1);
+                            citesupport.config.citationByIndex[i].properties.noteIndex = (i + 1);
                         }
                     }
                     
@@ -723,7 +764,6 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
     spoofDocument() {
         this.debug('spoofDocument()');
 
-        // Initialize demo-only position object from storage
         this.safeStorage.citationIdToPos;
 
         // Stage 1: Check that all array items have citationID
@@ -734,8 +774,6 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
             if (!this.config.citationIDs[citation.citationID]) {
                 this.debug('WARNING: encountered a stored citation that was invalid or had no citationID. Removing citations.');
                 this.safeStorage.citationByIndex = [];
-                this.safeStorage.citationIDs = {};
-                // Demo-only value
                 this.safeStorage.citationIdToPos = {};
                 break;
             }
@@ -743,16 +781,19 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
         }
         this.config.citationIDs = citationIDs;
             
-        // Stage 2: check that all citeme pegs are in posToCitationId with existing citationIDs and set span tags
-        const pegs = document.getElementsByClassName('citeme');
+        // Stage 2: check that all citation locations are in posToCitationId with existing citationIDs and have span tags set
+        let pegs;
+        if (this.config.demo) {
+            pegs = document.getElementsByClassName('citeme');
+        } else {
+            pegs = document.getElementsByClassName('citation');
+        }
         for (let i = 0, ilen = this.config.citationByIndex.length; i < ilen; i++) {
             let citation = this.config.citationByIndex[i];
             let citationID = citation ? citation.citationID : null;
             if ("number" !== typeof this.config.citationIdToPos[citationID]) {
                 this.debug('WARNING: invalid state data. Removing citations.');
                 this.safeStorage.citationByIndex = [];
-                this.safeStorage.citationIDs = {};
-                // Demo-only value
                 this.safeStorage.citationIdToPos = {};
                 break;
             } else if (this.config.demo) {
@@ -770,8 +811,6 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
         if (objectLength !== nodeLength) {
             this.debug('WARNING: document citation node and citation object counts do not match. Removing citations.');
             this.safeStorage.citationByIndex = [];
-            this.safeStorage.citationIDs = {};
-            // Demo-only value
             this.safeStorage.citationIdToPos = {};
             const citations = document.getElementsByClassName('citation');
             for (let i=0, ilen=citations.length; i < ilen; i++) {
@@ -855,7 +894,7 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
     setPegListener() {
         this.debug('setPegListener()');
         document.body.addEventListener('click', function(e) {
-            if (e.target.classList.contains('citeme')) {
+            if (!citesupport.config.demo || e.target.classList.contains('citeme')) {
                 if (document.getElementById('cite-menu')) return;
                 citesupport.citationWidgetHandler(e);
             }
