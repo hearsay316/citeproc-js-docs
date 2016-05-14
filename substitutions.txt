@@ -28,7 +28,7 @@
 
 .. |citeme| raw:: html
 
-   <span class="octicon octicon-chevron-down citeme" title="Edit citations"></span>
+   &nbsp;<span class="octicon octicon-chevron-down citeme" title="Edit citations"></span>
 
 
 .. |br| raw:: html

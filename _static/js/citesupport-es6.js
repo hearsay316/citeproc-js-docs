@@ -58,7 +58,7 @@ class CiteSupportBase {
             debug: true,
             mode: 'note',
             defaultLocale: 'en-US',
-            defaultStyle: 'jm-indigobook-law-review',
+            defaultStyle: 'american-medical-association',
             citationIDs: {},
             citationByIndex: [],
             processorReady: false,
@@ -734,7 +734,7 @@ class SafeStorage {
     }
     
     get defaultStyle() {
-        return this._safeStorageGet('defaultStyle', 'jm-indigobook-law-review');
+        return this._safeStorageGet('defaultStyle', 'american-medical-association');
     }
     
     get citationByIndex() {
@@ -834,11 +834,11 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
                 id: "american-medical-association"
             },
             {
-                title: "Chicago Manual of Style 16th edition (author-date)",
+                title: "Chicago (author-date)",
                 id: "chicago-author-date"
             },
             {
-                title: "JM Chicago Manual of Style 16th edition (full note)",
+                title: "Chicago (full note)",
                 id: "jm-chicago-fullnote-bibliography"
             },
             {
@@ -846,11 +846,11 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
                 id: "jm-indigobook"
             },
             {
-                title: "JM Indigo Book (law reviews)",
+                title: "JM Indigo Book (L. Rev.)",
                 id: "jm-indigobook-law-review"
             },
             {
-                title: "OSCOLA - Oxford Standard for Citation of Legal Authorities",
+                title: "JM OSCOLA",
                 id: "jm-oscola"
             }
         ]
