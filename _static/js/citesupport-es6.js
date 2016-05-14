@@ -18,7 +18,8 @@ class CiteSupportBase {
             defaultStyle: 'jm-indigobook-law-review',
             citationIDs: {},
             citationByIndex: [],
-            processorReady: false
+            processorReady: false,
+            demo: true
         };
         const me = this;
         this.worker = new Worker('_static/js/citeworker.js');
@@ -147,12 +148,6 @@ class CiteSupportBase {
         }
         return citationData;
     }
-    
-
-    /**
-     * Done to here
-     */
-
 }
 
 
@@ -166,7 +161,7 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
      */
     initDocument() {
         this.debug('initDocument()');
-        // Recalls citationByIndex from storage
+        // Restores citationByIndex from storage
         this.safeStorage.citationByIndex;
         this.callInitProcessor(this.safeStorage.defaultStyle, this.safeStorage.defaultLocale, this.safeStorage.citationByIndex);
     }
@@ -194,12 +189,23 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
             let citationID = data[i][2];
             if (!citationNode.getAttribute('id')) {
                 citationNode.setAttribute('id', citationID);
-                // Demo-only hack
-                let pegs = document.getElementsByClassName('citeme');
-                for (let j = 0, jlen = pegs.length; j < jlen; j++) {
-                    let sib = pegs[j].nextSibling;
-                    if (sib && sib.getAttribute && sib.getAttribute('id') === citationID) {
-                        this.config.citationIdToPos[citationID] = j;
+                if (this.config.demo) {
+                    // Demo-only hack, used to reconstruct document state on load
+                    let pegs = document.getElementsByClassName('citeme');
+                    for (let j = 0, jlen = pegs.length; j < jlen; j++) {
+                        let sib = pegs[j].nextSibling;
+                        if (sib && sib.getAttribute && sib.getAttribute('id') === citationID) {
+                            this.config.citationIdToPos[citationID] = j;
+                        }
+                    }
+                } else {
+                    // This isn't used for anything other than validation
+                    let citations = document.getElementsByClassName('citation');
+                    for (let j = 0, jlen = citations.length; j < jlen; j++) {
+                        let citation = citations[j];
+                        if (citation && citation.getAttribute && citation.getAttribute('id') === citationID) {
+                            this.config.citationIdToPos[citationID] = j;
+                        }
                     }
                 }
                 this.safeStorage.citationIdToPos = this.config.citationIdToPos;
@@ -749,7 +755,7 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
                 // Demo-only value
                 this.safeStorage.citationIdToPos = {};
                 break;
-            } else {
+            } else if (this.config.demo) {
                 let citationNode = document.createElement('span');
                 citationNode.classList.add('citation');
                 citationNode.setAttribute('id', citationID);
