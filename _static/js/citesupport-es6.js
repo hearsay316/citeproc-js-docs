@@ -39,6 +39,8 @@ class CiteSupportBase {
                 const citationData = me.convertRebuildDataToCitationData(e.data.rebuildData);
                 me.setCitations(me.config.mode, citationData);
                 me.setBibliography(e.data.bibliographyData);
+                me.safeStorage.citationByIndex = me.config.citationByIndex;
+                me.safeStorage.citationIDs = me.config.citationIDs;
                 me.config.processorReady = true;
                 break;
              /**
