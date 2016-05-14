@@ -274,6 +274,8 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 footnoteContainer.appendChild(footnote);
             }
         } else {
+            const footnoteContainer = document.getElementById('footnote-container');
+            footnoteContainer.hidden = true;
             for (let i = 0, ilen = data.length; i < ilen; i++) {
                 let tuple = data[i];
                 let citationID = tuple[2];
