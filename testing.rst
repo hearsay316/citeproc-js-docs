@@ -3,7 +3,7 @@ Exploring the test suite
 ========================
 
 .. include:: substitutions.txt
-|CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
+|CCBYSA| `Frank Bennett <https://twitter.com/fgbjr>`_
 
 ------------------------
 

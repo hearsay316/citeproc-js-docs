@@ -1,6 +1,6 @@
-.. |CCBYSA| image:: ./media/cc-by-sa-80x15.png
+.. |CCBYSA| raw:: html
 
-.. _CCBYSA: http://creativecommons.org/licenses/by-sa/3.0/
+   <div style="width:80px !important;"><a alt="CCBYSA" href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="_static/images/cc-by-sa-80x15.png"/></a></div>
 
 .. |styles| raw:: html
 
