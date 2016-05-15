@@ -456,6 +456,12 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
         }
         innerHTML += '<button id="cite-save-button" type="button">Save</button></div>';
         citeMenu.innerHTML = innerHTML;
+        if (!hasRoomForMenu(citationNode)) {
+            console.log("HELLO");
+            citeMenu.firstChild.setAttribute('style', 'left:-160px !important;');
+        } else {
+            citeMenu.firstChild.setAttribute('style', 'left:0px !important;');
+        }
         citationNode.insertBefore(citeMenu, citationNode.firstChild);
 
         const button = document.getElementById('cite-save-button');

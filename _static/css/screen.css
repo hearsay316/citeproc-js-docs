@@ -48,7 +48,8 @@
 #cite-menu .menu {
     position: relative;
     top: 0px;
-    left: 0px;
+    /* left: 0px; */
+    width: 135px;
     background: white;
     padding: 0.5em;
     border: 1px solid black;
