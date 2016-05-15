@@ -157,6 +157,9 @@ class CiteSupportBase {
         if (!this.config.processorReady) return;
         this.debug('callRegisterCitation()');
         this.config.processorReady = false;
+        console.log('XXX -- citation index='+JSON.stringify(citation.properties.noteIndex));
+        console.log('XXX -- citationsPre indexes='+JSON.stringify(preCitations));
+        console.log('XXX -- citationsPost indexes='+JSON.stringify(postCitations));
         this.worker.postMessage({
             command: 'registerCitation',
             citation: citation,
@@ -202,8 +205,6 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
      */
     initDocument() {
         this.debug('initDocument()');
-        // Restores citationByIndex from storage
-        this.safeStorage.citationByIndex;
         this.callInitProcessor(this.safeStorage.defaultStyle, this.safeStorage.defaultLocale, this.safeStorage.citationByIndex);
     }
 
@@ -512,7 +513,8 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
         // Before touching the processor, we need to assure that citationByIndex
         // reflects current document state. In the demo, that's easy: the two are
         // always congruent at the top of this handler. With free-text editing
-        // and the possibility of both internal and external cut-and-paste.
+        // and the possibility of both internal and external cut-and-paste it won't
+        // be so easy.
         
         // In the code here, we assume that external cut-and-paste (i.e. pasting
         // in text with `citesupport` citations) is not possible.
@@ -530,7 +532,6 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 citationByIndex.push(citesupport.config.citationByIndex[citationMap[id]]);
             }
         }
-        citesupport.safeStorage.citationByIndex = citationByIndex;
 
         // Next, we normalize our record of the note numbers.
         // * In word processor context, note numbers are controlled by the
@@ -544,12 +545,17 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
         //   This will give the processor correct information for back-reference
         //   cites in footnote styles.
 
-        for (let i = 0, ilen = citesupport.config.citationByIndex.length; i < ilen; i++) {
-            let citation = citesupport.config.citationByIndex[i];
-            if (citation.id) {
-                citation.properties.noteIndex = (i + 1);
+        for (let i = 0, ilen = citationByIndex.length; i < ilen; i++) {
+            let citation = citationByIndex[i];
+            if (citation.citationID) {
+                if (citesupport.config.mode === 'note') {
+                    citation.properties.noteIndex = (i + 1);
+                } else {
+                    citation.properties.noteIndex = 0;
+                }
             }
         }
+        citesupport.safeStorage.citationByIndex = citationByIndex;
 
         // If there are no citation items from the menu,
         // then we are either removing an existing citation
@@ -607,6 +613,9 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
             const citationNodes = document.getElementsByClassName('citation');
             const splitData = citesupport.getCitationSplits(citationNodes);
             
+            // Get the note number
+            const noteNumber = citesupport.config.mode === 'note' ? (splitData.citationsPre.length + 1) : 0;
+
             // Compose the citation.
             let citation;
             if (splitData.citation) {
@@ -616,7 +625,7 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 citation = {
                     citationItems: citationItems,
                     properties: {
-                        noteIndex: 0
+                        noteIndex: noteNumber
                     }
                 }
             }
@@ -625,7 +634,21 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
             citesupport.callRegisterCitation(citation, splitData.citationsPre, splitData.citationsPost);
         }
     }
-
+    
+    /**
+     * Return a citation and descriptive arrays representing
+     *   citations before and after its position.
+     *
+     * If `nodes` argument is provided, return a citation object for
+     *   the current citation open for editing. If no `nodes` argument
+     *   is given, use the first citation in the document as the
+     *   "current" citation.
+     *
+     * 
+     *
+     * @param {HtmlElementList} nodes A list of citation nodes
+     * @return {Object[]} splitData An object with citation object as `citation`, an 
+     */
     getCitationSplits(nodes) {
         citesupport.debug('getCitationSplits()');
         const splitData = {
@@ -648,13 +671,14 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                         splitData.citation = citesupport.config.citationByIndex[i];
                     }
                 } else {
-                    splitData[current].push([citesupport.config.citationByIndex[i + offset].citationID, 0]);
+                    let citation = citesupport.config.citationByIndex[i + offset];
+                    splitData[current].push([citation.citationID, citation.properties.noteIndex]);
                 }
             }
         } else {
             splitData.citation = citesupport.config.citationByIndex[0];
             splitData.citationsPost = citesupport.config.citationByIndex.slice(1).map(function(obj){
-                return [obj.citationID, 0];
+                return [obj.citationID, obj.properties.noteIndex];
             })
         }
         return splitData;

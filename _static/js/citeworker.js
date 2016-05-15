@@ -141,12 +141,19 @@ function fetchLocale(pos, locales, callback) {
 function buildProcessor() {
     citeproc = new CSL.Engine(sys, style, preferredLocale);
     var itemIDs = [];
+    
     if (citationByIndex) {
         for (var i=0,ilen=citationByIndex.length;i<ilen;i++) {
             var citation = citationByIndex[i];
             for (var j=0,jlen=citation.citationItems.length;j<jlen;j++) {
                 var itemID = citation.citationItems[j].id;
                 itemIDs.push(itemID);
+            }
+            // Set note numbers for style, assuming that all notes are citesupport notes
+            if (citeproc.opt.xclass === 'note') {
+                citation.properties.noteIndex = (i + 1);
+            } else {
+                citation.properties.noteIndex = 0;
             }
         }
     }
