@@ -1,8 +1,15 @@
-#demo-my-amazing-essay {
+#integrator-notes li {
+    margin-bottom: 1em;
+    background: #efefef;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+#demo-my-amazing-essay, #demo-my-amazing-bibliography {
     padding:1em;
     border: 1px solid #999999;
     background: #efefef;
     border-radius: 1em;
+    margin-bottom: 1em;
 }
 .footnote-mark::before {
     content: '[';

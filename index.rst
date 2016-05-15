@@ -22,10 +22,9 @@ Table of Contents
 
    acknowledgements.rst
    changes.rst
+   demos.rst
    setting-up.rst
    testing.rst
-   deployments.rst
-   dynamic-editing.rst
    running.rst
    sys-extensions.rst
 
@@ -33,3 +32,6 @@ Table of Contents
    csl.rst
    input.rst
    configuration.rst
+
+   deployments.rst
+   dynamic-editing.rst

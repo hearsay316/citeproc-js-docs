@@ -1,19 +1,14 @@
-=======================
-Dynamic editing example
-=======================
+===============
+Dynamic Editing
+===============
 
 .. include:: substitutions.txt
 |CCBYSA| `Frank Bennett <https://twitter.com/fgbjr>`_
 
 ------------------------
 
-------------
-Introduction
-------------
-
-In the sample text below, click on a placeholder, select items and
-click "Save" to watch the magic. The code behind the page is explained
-below the demo.
+Click on the placeholders, choose a style. This demo was inspired
+by the work of `Derek Sifford <https://github.com/dsifford>`_.
 
 ----------------------
 Demo: My Amazing Essay
@@ -32,6 +27,8 @@ dolore.\ |citeme|
 |footnotes|
 
 |bib|
+
+|more|
 
 ---------------
 Running locally
@@ -69,7 +66,7 @@ Fetch the repo
       cd citeproc-js-docs
 
 
-Build the page
+Build the docs
    The following command should work:
 
    .. code-block:: bash
@@ -86,118 +83,124 @@ Run a server using ``node.js``
       npm install -g http-server
       http-server _build/html
 
--------------
-Code elements
--------------
 
-^^^^^^^^^^
-Data units
-^^^^^^^^^^
+--------------------
+Source File Overview
+--------------------
 
-Item object
-  The document editing interface must provide some mechanism for
-  selecting individual citeable items for inclusion in citations.  The
-  mechanism in this demo is drastically simplified; production code
-  will do something more sophisticated here. Items are held as hash
-  objects in CSL JSON format, each with a unique ID (string or
-  numeric). A simple object with the ID "item-1" and title "My Aunt
-  Sally" will have the following form:
+``_static/js/citeproc.js``
+   The |citeproc-js| `CSL <https://citationstyles.org>`_ processor.
+   Seven years in development, backed up by 1,260 test fixtures and
+   1,318 unique citation styles, with extended support for
+   multilingual and legal citation.
 
-  .. code-block:: javascript
+``_static/js/citeworker.js``
+   A web worker implementing the two API calls on which ``citesupport``
+   depends.
 
-     {
-         id: "item-1",
-         title: "My Aunt Sally"
-     }
+``_static/js/citesupport-es6.js``
+   An ``es6`` class object with DOM logic for dynamic citation editing.
+   With some tweaks, this can be run inside a WYSIWYG editor of your
+   choice.
 
-  See the source files under ``_static/data/items`` for sample entries
-  with each of the three CSL JSON data types (string, date, and creator).
+``_static/css/screen.css``
+   The CSS code for the |citeproc-js| documentation, including
+   the demo pages.
 
-Citation object
-  In the data layer, a citation is a hash object that bundles one or
-  more items for inclusion in the document. The citation object for
-  a new citation is constructed "manually" without a ``citationID``:
-  an ID is assigned by the processor and included in the return.
-  A minimal citation object for a single item with an ``id`` of "item-1"
-  citing page 123 of that source will have the following form:
+``_static/data/items``
+   A few sample items for the dynamic editing demo, in CSL JSON format.
 
-  .. code-block:: javascript
+``_static/data/locales``
+   The `standard CSL locales <https://github.com/citation-style-language/locales>`_.
+
+``_static/data/styles``
+   The CSL styles used in the demo. The "JM" styles are from the
+   `Juris-M styles repository
+   <https://github.com/juris-m/jm-styles>`_, and have modular legal
+   style support. The remainder are from the `official CSL repository <https://github.com/citation-style-language/styles/>`_,
+   which feeds the `Zotero styles <https://www.zotero.org/styles>`_ distribution site.
+
+``_static/data/juris``
+   A set of legal style modules resides here. Legal citation
+   support is easily extensible to jurisdictions worldwide
+   via the `Juris-M Style Editor <https://juris-m.github.io/editor/>`_
+   (GitHub account required).
+
+----------------
+Integrator notes
+----------------
+
+Here are some notes on things relevant to deployment:
+
+- The class should be instantiated as ``citesupport``. The event
+  handlers expect the class object to be available in global
+  context under that name.
+
+- If ``config.demo`` is ``true``, the stored object ``citationIdToPos``
+  maps citationIDs to the index position of fixed "pegs" in the
+  document that have class ``citeme``. In the demo, this map is
+  stored in localStorage, and is used to reconstruct the document
+  state (by reinserting ``class:citation`` span tags) on page reload.
+
+- If ``config.demo`` is ``false``, the document is assumed to contain
+  ``class:citation`` span tags, and operations on ``citeme`` nodes will
+  not be performed. In non-demo mode, ``citationIdToPos`` carries
+  the index position of citation nodes for good measure, but the
+  mapping is not used for anything.
+
+- The ``spoofDocument()`` function brings citation data into memory.
+  In the demo, this data is held in localStorage, and
+  ``spoofDocument()`` performs some sanity checks on data and
+  document. For a production deployment, this is the place for code
+  that initially extracts citation data the document (if, for example,
+  it is stashed in data-attributes on citation nodes).
+
+- The ``setCitations()`` function is where citation data for individual
+  citations would be saved, at the location marked by NOTE.
+
+- The user-interface functions ``buildStyleMenu()`` and
+  ``citationWidget()`` are simple things cast for the demo, and
+  should be replaced with something a bit more functional.
+
+- The ``SafeStorage`` class should be replaced (or subclassed?) for
+  deployment with a class that provides the same methods. If
+  the citation objects making up ``citationByIndex`` are stored
+  directly on the ``class:citation`` span nodes, the getter for
+  that value should harvest the values from the nodes, and
+  store them on ``config.citationByIndex``. The setter should
+  set ``config.citationByIndex`` only, relying on other code
+  to update the node value.
   
-     {
-       citationItems: [
-         {
-           id: "item-1",
-           label: "page",
-           locator: "123"
-         }
-       ],
-       properties: {
-         noteIndex: 1
-       }
-     }
-
-  In the example above, the ``label`` and ``locator`` attributes are
-  optional. The ``noteIndex`` value is manadatory, and should be set
-  to the note number for a citation in a footnote or in a ``note``
-  style. For in-text citations in an ``in-text`` style, its value
-  should be ``0``. 
-
-``<span class-"citation"/>``
-  Citations in the document are represented by ``html:span``
-  elements of the ``citation`` class, each with a unique
-  ``id`` attribute assigned by the citation processor.
-  When initially inserted, a citation is assigned a
-  temporary placeholder ``id`` (this demo uses
-  ``citation-breadcrumb``), which is replaced by the
-  processor-assigned ``id`` after processing.
-
-``config.citationByIndex``
-  An array of citation objects as delivered by the processor.
-  The return from the processor will contain full metadata for
-  each item in ``citationItems``, and a ``citationID`` as sibling
-  to ``citationItems`` and ``properties`` (items submitted without
-  a ``citationID`` will be assigned one by the processor).
-
-^^^^^^^^^^^^^^^^^^^^
-Demo-specific things
-^^^^^^^^^^^^^^^^^^^^
-
-The demo sets static placeholders at three locations in the text as
-"pegs" where citations can be inserted. This is the only markup: when
-the page is loaded, the document contains no citation
-placeholders. This differs from a production deployment, which would
-store citation placeholders with addressable IDs in the text.
-
-To spoof a production deployment, the demo stores a map of citation
-IDs to "peg" indices, and another map from "peg" indices to IDs.  The
-maps are reconciled with the data in ``config.citationByIndex`` on each edit,
-and saved into ``localStorage``, for use in re-inserting citation
-markers on page reload. This jiggery-pokery will not be needed in a
-production environment, where the document will be saved with its
-citation markers and their IDs, corresponding to a saved copy of
-the data in ``config.citationByIndex``.
-
-**However:** In production, a hash of the existing citation IDs
-contained in the document should be maintained, in order to
-identify a newly added citation in the ``citations`` array
-returned to ``registerCitation()``.
+- Probably some other stuff that I've overlooked.
 
 
-^^^^^^^^^^
+
+----------
 Worker API
-^^^^^^^^^^
+----------
 
-In the demo, citation infrastructure is contained in the global
-``workaholic`` function object, loaded from ``_static/offthread/api.js``.
-The object exposes two methods to the document context.
+The heavy lifting is done by the CSL processor, which runs in a
+separate thread as a web worker. Only the document-facing interface of
+the worker is described here: it should not be necessary to tangle
+with the internals of the worker itself. Its only idiosyncracy is that
+it assigns note numbers (reflected in the return) in citation
+sequence---in contrast to word processor context, it assumes that the
+only footnotes in the document are those generated automatically by a
+note style. If that is not true in your context, you will want to
+disable that behavior, and do whatever is necessary on document side
+to extract real note numbers for delivery to the processor.
 
-``workaholic.initProcessor(styleID, localeID)``
+The worker is controlled by two methods, ``callInitProcessor()`` and
+``callRegisterCitation()``, each with a corresponding message and
+return event.
+
+``citesupport.callInitProcessor(styleID, localeID)``
    This method is used on page load, on change of style, and when all
    citations have been removed from the document.  The ``styleID``
    argument is mandatory. If ``localeID`` is not provided, the
    processor will be configured with the ``en-US`` locale.
 
-   The ``workaholic.initProcessor`` method implicitly accesses the
+   The ``citesupport.callInitProcessor`` method implicitly accesses the
    ``config.citationByIndex`` array, which must be accessible in page
    context. If the array is empty, the processor will be initialized
    without citations. If the array contains citations, the processor
@@ -225,7 +228,7 @@ The object exposes two methods to the document context.
           ]
       ]
 
-``workaholic.registerCitation(citation, preCitations, postCitations)``
+``citesupport.callRegisterCitation(citation, preCitations, postCitations)``
    This method is used to add or to edit citations. All three
    arguments are mandatory. ``citation`` is an ordinary citation
    object as described above. ``preCitations`` and ``postCitations``
@@ -254,7 +257,7 @@ The object exposes two methods to the document context.
    note numbers for use in back-references, but maintenance of 
    correct note numbering must be handled in document-side code.
 
-   The ``workaholic.registerCitation`` method receives two values from the
+   The ``citesupport.callRegisterCitation`` method returns two values from the
    processor: ``citationByIndex`` (described above) and ``citations``.
    The latter is an array of one or more arrays, each composed of a
    citation position index, a string, and a citation ID. For example,
@@ -274,90 +277,3 @@ The object exposes two methods to the document context.
 
    Note that the return value might contain updates for multiple
    citations.
-
-
-------------------
-Editing operations
-------------------
-
-^^^^^^^^^^^^^^^^^^^^^^^^
-Initialize the processor
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-At startup against a document with no existing
-citations:
-
-.. code-block:: javascript
-
-   workaholic.initProcessor(styleID, localeID);
-
-
-^^^^^^^^^^^^^^^^^^^^^^
-Restore document state
-^^^^^^^^^^^^^^^^^^^^^^
-
-If the previously stored copy of ``config.citationByIndex`` contains
-citation objects, the processor will return an array of
-data for insertion into the document, one element for each
-citation, in document order:
-
-.. code-block:: javascript
-
-   workaholic.initProcessor(styleID, localeID);
-
-Insert the strings into their target ``html:span`` tags
-and you are ready to go.
-
-^^^^^^^^^^^^^^^^^^^^^
-Insert a new citation
-^^^^^^^^^^^^^^^^^^^^^
-
-After setting an ``html:span`` tag with class ``citation`` and a
-placeholder ID at the location of the new citation, constructing a
-citation object and generating data arrays for citations before and
-after the target:
-
-.. code-block:: javascript
-
-   workaholic.registerCitation(citation, preCitations, postCitations);
-
-When inserting strings from the ``citations`` array into their
-respective locations, the freshly added citation will be the
-one with an unknown citation ID.
-
-^^^^^^^^^^^^^^^^^^^^^^^^^
-Edit an existing citation
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The process is the same as for inserting a new citation, except
-that no placeholder tag is set, and all citation IDs will be
-known:
-
-.. code-block:: javascript
-
-   workaholic.processCitationCluster(citation, preCitations, postCitations);
-
-^^^^^^^^^^^^^^^^^
-Delete a citation
-^^^^^^^^^^^^^^^^^
-
-Remove the ``html:span`` node of the target citation, remove
-its data from the ``config.citationByIndex`` array, and remove its
-ID from any hash where its value is recorded. Then update
-citations by "editing" the first citation in the document:
-
-.. code-block:: javascript
-
-   workaholic.processCitationCluster(citation, [], postCitations);
-
-^^^^^^^^^^^^^^^^^^^^
-Remove last citation
-^^^^^^^^^^^^^^^^^^^^
-
-If ``config.citationByIndex`` has length zero after removing the
-target citation, reinitialize the processor:
-
-.. code-block:: javascript
-
-   workaholic.initProcessor(styleID, localeID);
-
