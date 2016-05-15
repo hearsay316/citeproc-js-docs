@@ -157,9 +157,6 @@ class CiteSupportBase {
         if (!this.config.processorReady) return;
         this.debug('callRegisterCitation()');
         this.config.processorReady = false;
-        console.log('XXX -- citation index='+JSON.stringify(citation.properties.noteIndex));
-        console.log('XXX -- citationsPre indexes='+JSON.stringify(preCitations));
-        console.log('XXX -- citationsPost indexes='+JSON.stringify(postCitations));
         this.worker.postMessage({
             command: 'registerCitation',
             citation: citation,
@@ -457,7 +454,6 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
         innerHTML += '<button id="cite-save-button" type="button">Save</button></div>';
         citeMenu.innerHTML = innerHTML;
         if (!hasRoomForMenu(citationNode)) {
-            console.log("HELLO");
             citeMenu.firstChild.setAttribute('style', 'left:-160px !important;');
         } else {
             citeMenu.firstChild.setAttribute('style', 'left:0px !important;');
@@ -610,8 +606,8 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                     citesupport.callRegisterCitation(splitData.citation, splitData.citationsPre, splitData.citationsPost);
                 }
             } else {
-                // Just remove the menu
-                menu.parentNode.removeChild(menu);
+                // Just remove the menu AND the citation
+                menu.parentNode.parentNode.removeChild(menu.parentNode);
             }
         } else {
 
