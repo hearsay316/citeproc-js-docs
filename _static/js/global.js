@@ -42,7 +42,7 @@ window.addEventListener('load', function(e){
     moreButton.parentNode.removeChild(moreButton);
     moreParent.parentNode.insertBefore(moreButton, postContainer);
     moreButton.firstChild.hidden = false;
-    if (document.URL.match(/\#/) && !document.URL.match(/#my-amazing/)) {
+    if (document.URL.match(/\#/) && !document.URL.match(/#(?:my-amazing|dynamic-editing)/)) {
         const more = document.getElementById('more');
         const moreContainer = document.getElementById('more-container');
         more.innerHTML = 'Less ...';

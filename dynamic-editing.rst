@@ -7,22 +7,24 @@ Demo: Dynamic Editing
 
 ------------------------
 
-Click on the placeholders, choose a style. This demo was inspired
-by the work of `Derek Sifford <https://github.com/dsifford>`_.
-
-----------------
-My Amazing Essay
-----------------
+---------------
+Dynamic Editing
+---------------
 
 **Style:** |styles|
 
 ..
    **Locale:** |locales|
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.\ |citeme| Ut
-enim ad minim veniam, quis nostrud exercitation ullamco.\ |citeme| Duis
-aute irure dolor in reprehenderit in voluptate velit esse cillum
-dolore.\ |citeme|
+This page demonstrates dynamic citation editing in the browser.\
+|citeme| The underlying code was prepared in response to work by
+`Derek Sifford <https://github.com/dsifford>`_.\ |citeme|
+
+Click on the chevrons to open a citation widget, select one or more
+references, and press "Save" to add them to the document.\ |citeme|
+Use the pulldown list above to transform the document to another
+style.\ |citeme| Click on the "More" button below for information on running
+the code locally, and on adapting it for use in production.
 
 |footnotes|
 
