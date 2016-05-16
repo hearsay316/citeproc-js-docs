@@ -22,7 +22,8 @@ Table of Contents
 
    acknowledgements.rst
    changes.rst
-   demos.rst
+   deployments.rst
+   dynamic-editing.rst
    setting-up.rst
    testing.rst
    running.rst

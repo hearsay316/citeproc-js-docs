@@ -1,6 +1,6 @@
-===============
-Dynamic Editing
-===============
+=====================
+Demo: Dynamic Editing
+=====================
 
 .. include:: substitutions.txt
 |CCBYSA| `Frank Bennett <https://twitter.com/fgbjr>`_
@@ -10,9 +10,9 @@ Dynamic Editing
 Click on the placeholders, choose a style. This demo was inspired
 by the work of `Derek Sifford <https://github.com/dsifford>`_.
 
-----------------------
-Demo: My Amazing Essay
-----------------------
+----------------
+My Amazing Essay
+----------------
 
 **Style:** |styles|
 

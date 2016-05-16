@@ -1,6 +1,6 @@
-=======================
-Standalone Bibliography
-=======================
+=============================
+Demo: Standalone Bibliography
+=============================
 
 .. include:: substitutions.txt
 |CCBYSA| `Frank Bennett <https://twitter.com/fgbjr>`_
@@ -13,9 +13,9 @@ bibliography. The original of this example was kindly provided by
 was hosted on BitBucket. I have modified it (very) slightly to
 illustrate the use of the Zotero API.
 
------------------------------
-Demo: My Amazing Bibliography
------------------------------
+-----------------------
+My Amazing Bibliography
+-----------------------
 
 |cites-target|
 |cites-button|
