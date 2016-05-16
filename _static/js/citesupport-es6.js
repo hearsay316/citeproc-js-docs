@@ -116,7 +116,7 @@ class CiteSupportBase {
      */
     debug(txt) {
         if (this.config.debug) {
-            console.log(`*** ${txt}`);
+            console.log('*** ' + txt);
         }
     }
 
@@ -295,7 +295,7 @@ var CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 //
                 //   (2) We then (later) iterate over the citation
                 // nodes to regenerate the footnote block from scratch.
-                citationNode.innerHTML = `<span class="footnote-mark">${footnoteNumber}</span><span hidden="true">${citationText}</span>`;
+                citationNode.innerHTML = '<span class="footnote-mark">' + footnoteNumber + '</span><span hidden="true">' + citationText + '</span>';
             }
             // Reset the number on all footnote markers
             // (the processor does not issue updates for note-number-only changes)
@@ -316,7 +316,7 @@ var CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 var footnoteNumber = (i + 1);
                 var footnote = document.createElement('div');
                 footnote.classList.add('footnote');
-                footnote.innerHTML = `<span class="footnote"><span class="footnote-number">${footnoteNumber}</span><span class="footnote-text">${footnoteText}</span></span>`;
+                footnote.innerHTML = '<span class="footnote"><span class="footnote-number">' + footnoteNumber + '</span><span class="footnote-text">' + footnoteText + '</span></span>';
                 footnoteContainer.appendChild(footnote);
             }
         } else {
@@ -470,7 +470,7 @@ var CiteSupport = CiteSupportBase => class extends CiteSupportBase {
         for (var i=0,ilen=itemData.length;i<ilen;i++) {
             var itemID = itemData[i].id;
             var itemTitle = itemData[i].title;
-            innerHTML += `<label><input id="${itemID}" type="checkbox" name="cite-menu-item" value="${itemID}">${itemTitle}</label><br/>`
+            innerHTML += '<label><input id="' + itemID + '" type="checkbox" name="cite-menu-item" value="' + itemID + '">' + itemTitle + '</label><br/>';
         }
         innerHTML += '<button id="cite-save-button" type="button">Save</button></div>';
         citeMenu.innerHTML = innerHTML;
@@ -746,7 +746,7 @@ class SafeStorage {
             try {
                 ret = JSON.parse(val);
             } catch (e) {
-                this.citesupport.debug(`JSON parse error! ${key} ${val}`);
+                this.citesupport.debug('JSON parse error! ' + key +' ' + val);
                 ret = fallback;
             }
         } else {
@@ -933,7 +933,7 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
         this.debug('setStyleListener()');
         document.body.addEventListener('change', function(e) {
             if (e.target.getAttribute('id') === 'citation-styles') {
-                citesupport.debug(`SET STYLE TO: ${e.target.value}`);
+                citesupport.debug('SET STYLE TO: ' + e.target.value);
                 citesupport.safeStorage.defaultStyle = e.target.value;
                 citesupport.callInitProcessor(citesupport.config.defaultStyle, citesupport.config.defaultLocale, citesupport.config.citationByIndex);
             }
