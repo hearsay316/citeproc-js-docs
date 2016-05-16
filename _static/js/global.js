@@ -1,28 +1,3 @@
-function hasRoomForMenu(obj) {
-
-    function findXpos(obj) {
-	    var curleft = curtop = 0;
-        if (obj.offsetParent) {
-            do {
-			    curleft += obj.offsetLeft;
-			    curtop += obj.offsetTop;
-            } while (obj = obj.offsetParent);
-        }
-	    return [curleft,curtop][0];
-    }
-
-    function findScreenWidth() {
-        var w = window,
-        d = document,
-        e = d.documentElement,
-        g = d.getElementsByTagName('body')[0],
-        x = w.innerWidth || e.clientWidth || g.clientWidth
-        return x;
-    }
-    
-    return ((findScreenWidth() - findXpos(obj)) > 114);
-}
-
 window.addEventListener('load', function(e){
     var moreButton = document.getElementById('more').parentNode;
     var moreParent = moreButton.parentNode;

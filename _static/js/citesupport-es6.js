@@ -51,9 +51,74 @@
  * - Probably some other stuff that I've overlooked.
  */
 
-class CiteSupportBase {
+class SafeStorage {
+    
+    constructor(citesupport) {
+        this.citesupport = citesupport;
+    }
+    
+    _safeStorageGet(key, fallback) {
+        var ret;
+        var val = localStorage.getItem(key);
+        if (!val) {
+            this.citesupport.debug('No value in storage!');
+            ret = fallback;
+        } else if (['{', '['].indexOf(val.slice(0, 1)) > -1) {
+            try {
+                ret = JSON.parse(val);
+            } catch (e) {
+                this.citesupport.debug('JSON parse error! ' + key +' ' + val);
+                ret = fallback;
+            }
+        } else {
+            ret = val;
+        }
+        this.citesupport.config[key] = ret;
+        return ret;
+    }
+    
+    set defaultLocale(localeName) {
+        this.citesupport.config.defaultLocale = localeName;
+        localStorage.setItem('defaultLocale', localeName);
+    }
+    
+    set defaultStyle(styleName) {
+        localStorage.setItem('defaultStyle', styleName);
+        this.citesupport.config.defaultStyle = styleName;
+    }
+    
+    set citationByIndex(citationByIndex) {
+        localStorage.setItem('citationByIndex', JSON.stringify(citationByIndex));
+        this.citesupport.config.citationByIndex = citationByIndex;
+    }
+
+    set citationIdToPos(citationIdToPos) {
+        localStorage.setItem('citationIdToPos', JSON.stringify(citationIdToPos));
+        this.citesupport.config.citationIdToPos = citationIdToPos;
+    }
+
+    get defaultLocale() {
+        return this._safeStorageGet('defaultLocale', 'en-US');
+    }
+    
+    get defaultStyle() {
+        return this._safeStorageGet('defaultStyle', 'american-medical-association');
+    }
+    
+    get citationByIndex() {
+        return this._safeStorageGet('citationByIndex', []);
+    }
+
+    get citationIdToPos() {
+        return this._safeStorageGet('citationIdToPos', {});
+    }
+
+}
+
+class CiteSupport {
 
     constructor() {
+        this.safeStorage = new SafeStorage(this);
         this.config = {
             debug: true,
             mode: 'note',
@@ -189,10 +254,6 @@ class CiteSupportBase {
         }
         return citationData;
     }
-}
-
-
-var CiteSupport = CiteSupportBase => class extends CiteSupportBase {
 
     /**
      * Function to be run immediately after document has been loaded, and
@@ -474,7 +535,7 @@ var CiteSupport = CiteSupportBase => class extends CiteSupportBase {
         }
         innerHTML += '<button id="cite-save-button" type="button">Save</button></div>';
         citeMenu.innerHTML = innerHTML;
-        if (!hasRoomForMenu(citationNode)) {
+        if (!this.hasRoomForMenu(citationNode)) {
             citeMenu.firstChild.setAttribute('style', 'left:-160px !important;');
         } else {
             citeMenu.firstChild.setAttribute('style', 'left:0px !important;');
@@ -727,79 +788,6 @@ var CiteSupport = CiteSupportBase => class extends CiteSupportBase {
         }
         return citationItems;
     }
-}
-
-
-class SafeStorage {
-    
-    constructor(citesupport) {
-        this.citesupport = citesupport;
-    }
-    
-    _safeStorageGet(key, fallback) {
-        var ret;
-        var val = localStorage.getItem(key);
-        if (!val) {
-            this.citesupport.debug('No value in storage!');
-            ret = fallback;
-        } else if (['{', '['].indexOf(val.slice(0, 1)) > -1) {
-            try {
-                ret = JSON.parse(val);
-            } catch (e) {
-                this.citesupport.debug('JSON parse error! ' + key +' ' + val);
-                ret = fallback;
-            }
-        } else {
-            ret = val;
-        }
-        this.citesupport.config[key] = ret;
-        return ret;
-    }
-    
-    set defaultLocale(localeName) {
-        this.citesupport.config.defaultLocale = localeName;
-        localStorage.setItem('defaultLocale', localeName);
-    }
-    
-    set defaultStyle(styleName) {
-        localStorage.setItem('defaultStyle', styleName);
-        this.citesupport.config.defaultStyle = styleName;
-    }
-    
-    set citationByIndex(citationByIndex) {
-        localStorage.setItem('citationByIndex', JSON.stringify(citationByIndex));
-        this.citesupport.config.citationByIndex = citationByIndex;
-    }
-
-    set citationIdToPos(citationIdToPos) {
-        localStorage.setItem('citationIdToPos', JSON.stringify(citationIdToPos));
-        this.citesupport.config.citationIdToPos = citationIdToPos;
-    }
-
-    get defaultLocale() {
-        return this._safeStorageGet('defaultLocale', 'en-US');
-    }
-    
-    get defaultStyle() {
-        return this._safeStorageGet('defaultStyle', 'american-medical-association');
-    }
-    
-    get citationByIndex() {
-        return this._safeStorageGet('citationByIndex', []);
-    }
-
-    get citationIdToPos() {
-        return this._safeStorageGet('citationIdToPos', {});
-    }
-
-}
-
-class MyCiteSupport extends CiteSupport(CiteSupportBase) {
-    
-    constructor() {
-        super();
-        this.safeStorage = new SafeStorage(this);
-    }
     
     /**
      * Replace citation span nodes and get ready to roll. Puts
@@ -955,10 +943,37 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
             }
         });
     }
+
+
+    /**
+     * This is a demo-specific hack for the citation widget.
+     * It's a helper function used to keep the widget in-frame on 
+     * small devices.
+     */
+    hasRoomForMenu(obj) {
+	    var curleft = 0, curtop = 0;
+        if (obj.offsetParent) {
+            do {
+			    curleft += obj.offsetLeft;
+			    curtop += obj.offsetTop;
+            } while (obj = obj.offsetParent);
+        }
+	    var xpos = [curleft,curtop][0];
+
+        var w = window,
+        d = document,
+        e = d.documentElement,
+        g = d.getElementsByTagName('body')[0],
+        x = (w.innerWidth || e.clientWidth || g.clientWidth);
+
+        var screenwidth = x;
+        
+        return ((screenwidth - xpos) > 114);
+    }
 }
 
 
-var citesupport = new MyCiteSupport();
+var citesupport = new CiteSupport();
 
 
 window.addEventListener('load', function(e){
