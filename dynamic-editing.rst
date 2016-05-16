@@ -16,15 +16,14 @@ Dynamic Editing
 ..
    **Locale:** |locales|
 
-This page demonstrates dynamic citation editing in the browser.\
-|citeme| The underlying code was prepared in response to work by
-`Derek Sifford <https://github.com/dsifford>`_.\ |citeme|
-
-Click on the chevrons to open a citation widget, select one or more
-references, and press "Save" to add them to the document.\ |citeme|
-Use the pulldown list above to transform the document to another
-style.\ |citeme| Click on the "More" button below for information on running
-the code locally, and on adapting it for use in production.
+This page demonstrates dynamic citation editing in the browser. The
+underlying code was prepared in response to work by `Derek Sifford
+<https://github.com/dsifford>`_. Click on the chevrons to open a
+citation widget,\ |citeme| select one or more references, and press
+"Save" to add them to the document.\ |citeme| Use the pulldown list
+above to transform the document to another style.\ |citeme| Click on
+the "More" button below for information on running the code locally,
+and on adapting it for use in production.\ |citeme|
 
 |footnotes|
 

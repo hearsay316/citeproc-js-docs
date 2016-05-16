@@ -11,6 +11,10 @@
     border-radius: 1em;
     margin-bottom: 1em;
 }
+#dynamic-editing p {
+    line-height: 2em;
+}
+
 .footnote-mark::before {
     content: '[';
 }
