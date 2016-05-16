@@ -373,7 +373,7 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 // cheat
                 let widthSpec = '';
                 const texts = document.getElementsByClassName('csl-right-inline');
-                const containerWidth = document.getElementById('demo-my-amazing-essay').offsetWidth;
+                const containerWidth = document.getElementById('my-amazing-essay').offsetWidth;
                 const numberWidth = (data[0].maxoffset*(90/9));
                 widthSpec = 'width:' + (containerWidth-numberWidth-20) + 'px;';
                 for (let i = 0, ilen = texts.length; i < ilen; i++) {

@@ -42,7 +42,7 @@ window.addEventListener('load', function(e){
     moreButton.parentNode.removeChild(moreButton);
     moreParent.parentNode.insertBefore(moreButton, postContainer);
     moreButton.firstChild.hidden = false;
-    if (document.URL.match(/\#/) && !document.URL.match(/#demo-my-amazing/)) {
+    if (document.URL.match(/\#/) && !document.URL.match(/#my-amazing/)) {
         const more = document.getElementById('more');
         const moreContainer = document.getElementById('more-container');
         more.innerHTML = 'Less ...';
@@ -53,7 +53,7 @@ window.addEventListener('load', function(e){
 window.addEventListener('hashchange', function(e){
     const more = document.getElementById('more');
     const moreContainer = document.getElementById('more-container');
-    if (e.newURL.match(/\#/) && !document.URL.match(/#demo-my-amazing/)) {
+    if (e.newURL.match(/\#/) && !document.URL.match(/#my-amazing/)) {
         more.innerHTML = 'Less ...';
         moreContainer.hidden = false;
     } else {
