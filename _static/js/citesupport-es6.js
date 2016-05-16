@@ -353,6 +353,10 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 entry.setAttribute('style', 'padding-left: 1.3em;text-indent: -1.3em;');
             }
         } else if (data[0]['second-field-align']) {
+            let offsetSpec = 'padding-right:0.3em;';
+            if (data[0].maxoffset) {
+                offsetSpec = 'width: ' + ((data[0].maxoffset/2)+0.5) + 'em;';
+            }
             for (let i = 0, ilen = entries.length; i < ilen; i++) {
                 let entry = entries[i];
                 entry.setAttribute('style', 'white-space: nowrap;');
@@ -360,12 +364,17 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
             const numbers = document.getElementsByClassName('csl-left-margin');
             for (let i = 0, ilen = numbers.length; i < ilen; i++) {
                 let number = numbers[i];
-                number.setAttribute('style', 'float: left;padding-right: 0.3em;');
+                number.setAttribute('style', 'float: left;' + offsetSpec);
             }
             const texts = document.getElementsByClassName('csl-right-inline');
+            let widthSpec = '';
+            if (data[0].maxoffset) {
+                // cheat
+                widthSpec = 'width:90%;';
+            }
             for (let i = 0, ilen = texts.length; i < ilen; i++) {
                 let text = texts[i];
-                text.setAttribute('style', 'display: inline-block;white-space: normal;');
+                text.setAttribute('style', 'display: inline-block;white-space: normal;' + widthSpec);
             }
         }
         bibContainer.hidden = false;
@@ -856,7 +865,11 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
         this.debug('buildStyleMenu()');
         const styleData = [
             {
-                title: "American Medical Association",
+                title: "ACM Proceedings",
+                id: "acm-sig-proceedings"
+            },
+            {
+                title: "AMA",
                 id: "american-medical-association"
             },
             {
@@ -868,11 +881,15 @@ class MyCiteSupport extends CiteSupport(CiteSupportBase) {
                 id: "jm-chicago-fullnote-bibliography"
             },
             {
-                title: "JM Indigo Book",
+                title: "DIN-1505-2 (alpha)",
+                id: "din-1505-2-alphanumeric"
+            },
+            {
+                title: "JM Indigo",
                 id: "jm-indigobook"
             },
             {
-                title: "JM Indigo Book (L. Rev.)",
+                title: "JM Indigo (L. Rev.)",
                 id: "jm-indigobook-law-review"
             },
             {

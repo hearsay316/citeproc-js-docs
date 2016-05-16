@@ -3144,6 +3144,25 @@ CSL.Engine.prototype.getCitationLabel = function (Item) {
             break;
         }
     }
+    if (!label) {
+        if (Item.title) {
+            var skipWords = this.locale[this.opt.lang].opts["skip-words"];
+            var lst = Item.title.split(/\s+/);
+            for (var i = lst.length - 1; i > -1; i--) {
+                if (skipWords.indexOf(lst[i]) > -1) {
+                    lst = lst.slice(0, i).concat(lst.slice(i + 1));
+                }
+            }
+            var str = lst.join('');
+            str = str.slice(0, params[0].authors[0]);
+            if (str.length > 1) {
+                str = str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase();
+            } else if (str.length === 1) {
+                str = str.toUpperCase();
+            }
+            label = str;
+        }
+    }
     var year = "0000";
     if (Item.issued) {
         if (Item.issued.year) {
