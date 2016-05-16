@@ -374,8 +374,8 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 let widthSpec = '';
                 const texts = document.getElementsByClassName('csl-right-inline');
                 const containerWidth = document.getElementById('demo-my-amazing-essay').offsetWidth;
-                const numberWidth = (data[0].maxoffset*(85/9));
-                widthSpec = 'width:' + (containerWidth-numberWidth-10) + 'px;';
+                const numberWidth = (data[0].maxoffset*(90/9));
+                widthSpec = 'width:' + (containerWidth-numberWidth) + 'px;';
                 for (let i = 0, ilen = texts.length; i < ilen; i++) {
                     let text = texts[i];
                     text.setAttribute('style', 'display: inline-block;white-space: normal;' + widthSpec);
