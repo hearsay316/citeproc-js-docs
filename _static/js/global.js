@@ -24,15 +24,15 @@ function hasRoomForMenu(obj) {
 }
 
 window.addEventListener('load', function(e){
-    const moreButton = document.getElementById('more').parentNode;
-    const moreParent = moreButton.parentNode;
-    const siblings = [];
+    var moreButton = document.getElementById('more').parentNode;
+    var moreParent = moreButton.parentNode;
+    var siblings = [];
     while (moreParent.nextSibling) {
         let last = moreParent.parentNode.childNodes[moreParent.parentNode.childNodes.length - 1];
         siblings.push(last);
         moreParent.parentNode.removeChild(last);
     }
-    const postContainer = document.createElement('div');
+    var postContainer = document.createElement('div');
     postContainer.setAttribute('id', 'more-container');
     postContainer.hidden = true;
     moreParent.parentNode.insertBefore(postContainer, moreParent.nextSibling);
@@ -43,16 +43,16 @@ window.addEventListener('load', function(e){
     moreParent.parentNode.insertBefore(moreButton, postContainer);
     moreButton.firstChild.hidden = false;
     if (document.URL.match(/\#/) && !document.URL.match(/#(?:my-amazing|dynamic-editing)/)) {
-        const more = document.getElementById('more');
-        const moreContainer = document.getElementById('more-container');
+        var more = document.getElementById('more');
+        var moreContainer = document.getElementById('more-container');
         more.innerHTML = 'Less ...';
         moreContainer.hidden = false;
     }
 });
 
 window.addEventListener('hashchange', function(e){
-    const more = document.getElementById('more');
-    const moreContainer = document.getElementById('more-container');
+    var more = document.getElementById('more');
+    var moreContainer = document.getElementById('more-container');
     if (e.newURL.match(/\#/) && !document.URL.match(/#my-amazing/)) {
         more.innerHTML = 'Less ...';
         moreContainer.hidden = false;
@@ -64,8 +64,8 @@ window.addEventListener('hashchange', function(e){
 
 window.addEventListener('click', function(e){
     if (e.target.getAttribute('id') === 'more') {
-        const more = document.getElementById('more');
-        const moreContainer = document.getElementById('more-container');
+        var more = document.getElementById('more');
+        var moreContainer = document.getElementById('more-container');
         if (moreContainer.hidden) {
             more.innerHTML = 'Less ...';
             moreContainer.hidden = false;
