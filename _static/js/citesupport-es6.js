@@ -364,26 +364,24 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 let entry = entries[i];
                 entry.setAttribute('style', 'white-space: nowrap;');
             }
-            const numbers = document.getElementsByClassName('csl-left-margin');
+            let numbers = document.getElementsByClassName('csl-left-margin');
             for (let i = 0, ilen = numbers.length; i < ilen; i++) {
                 let number = numbers[i];
                 number.setAttribute('style', 'display:inline-block;' + offsetSpec);
             }
             if (data[0].maxoffset) {
                 // cheat
-                setTimeout(function(){
-                    const texts = document.getElementsByClassName('csl-right-inline');
-                    let widthSpec = '';
-                    const containerWidth = document.getElementById('demo-my-amazing-essay').offsetWidth;
-                    const numberWidth = document.getElementsByClassName('csl-left-margin')[0].offsetWidth;
-                    widthSpec = 'width:' + (containerWidth-numberWidth-10) + 'px;';
-                    for (let i = 0, ilen = texts.length; i < ilen; i++) {
-                        let text = texts[i];
-                        text.setAttribute('style', 'display: inline-block;white-space: normal;' + widthSpec);
-                    }
-                    bibContainer.hidden = false;
-                    bib.setAttribute('style', 'visibility: visible;');
-                }, 100);
+                let widthSpec = '';
+                const texts = document.getElementsByClassName('csl-right-inline');
+                const containerWidth = document.getElementById('demo-my-amazing-essay').offsetWidth;
+                const numberWidth = (data[0].maxoffset*(85/9));
+                widthSpec = 'width:' + (containerWidth-numberWidth-10) + 'px;';
+                for (let i = 0, ilen = texts.length; i < ilen; i++) {
+                    let text = texts[i];
+                    text.setAttribute('style', 'display: inline-block;white-space: normal;' + widthSpec);
+                }
+                bibContainer.hidden = false;
+                bib.setAttribute('style', 'visibility: visible;');
             } else {
                 bibContainer.hidden = false;
                 bib.setAttribute('style', 'visibility: visible;');
