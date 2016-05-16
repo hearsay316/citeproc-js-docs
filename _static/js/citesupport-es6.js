@@ -345,6 +345,7 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
             return;
         };
         const bib = document.getElementById('bibliography');
+        bib.setAttribute('style', 'visibility: hidden;');
         bib.innerHTML = data[1].join('\n');
         const entries = document.getElementsByClassName('csl-entry');
         if (data[0].hangingindent) {
@@ -352,6 +353,8 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
                 let entry = entries[i];
                 entry.setAttribute('style', 'padding-left: 1.3em;text-indent: -1.3em;');
             }
+            bibContainer.hidden = false;
+            bib.setAttribute('style', 'visibility: visible;');
         } else if (data[0]['second-field-align']) {
             let offsetSpec = 'padding-right:0.3em;';
             if (data[0].maxoffset) {
@@ -364,20 +367,31 @@ const CiteSupport = CiteSupportBase => class extends CiteSupportBase {
             const numbers = document.getElementsByClassName('csl-left-margin');
             for (let i = 0, ilen = numbers.length; i < ilen; i++) {
                 let number = numbers[i];
-                number.setAttribute('style', 'float: left;' + offsetSpec);
+                number.setAttribute('style', 'display:inline-block;' + offsetSpec);
             }
-            const texts = document.getElementsByClassName('csl-right-inline');
-            let widthSpec = '';
             if (data[0].maxoffset) {
                 // cheat
-                widthSpec = 'width:90%;';
+                setTimeout(function(){
+                    const texts = document.getElementsByClassName('csl-right-inline');
+                    let widthSpec = '';
+                    const containerWidth = document.getElementById('demo-my-amazing-essay').offsetWidth;
+                    const numberWidth = document.getElementsByClassName('csl-left-margin')[0].offsetWidth;
+                    widthSpec = 'width:' + (containerWidth-numberWidth-10) + 'px;';
+                    for (let i = 0, ilen = texts.length; i < ilen; i++) {
+                        let text = texts[i];
+                        text.setAttribute('style', 'display: inline-block;white-space: normal;' + widthSpec);
+                    }
+                    bibContainer.hidden = false;
+                    bib.setAttribute('style', 'visibility: visible;');
+                }, 100);
+            } else {
+                bibContainer.hidden = false;
+                bib.setAttribute('style', 'visibility: visible;');
             }
-            for (let i = 0, ilen = texts.length; i < ilen; i++) {
-                let text = texts[i];
-                text.setAttribute('style', 'display: inline-block;white-space: normal;' + widthSpec);
-            }
+        } else {
+            bibContainer.hidden = false;
+            bib.setAttribute('style', 'visibility: visible;');
         }
-        bibContainer.hidden = false;
     }
     /**
      * Set or acquire a citation node for editing. If the node is
