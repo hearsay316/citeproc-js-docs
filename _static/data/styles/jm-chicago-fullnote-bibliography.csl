@@ -28,7 +28,7 @@
     <category citation-format="note"/>
     <category field="generic-base"/>
     <summary>Chicago format with full notes and bibliography</summary>
-    <updated>2016-04-20T20:26:09.471122</updated>
+    <updated>2016-05-07T23:16:22.589288</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
@@ -69,7 +69,7 @@
             <group>
               <names variable="container-author reviewed-author">
                 <label form="verb-short" text-case="lowercase" suffix=" "/>
-                <name and="text" delimiter=", " name-as-sort-order="never"/>
+                <name and="text" delimiter=", "/>
                 <institution/>
               </names>
             </group>
@@ -78,7 +78,7 @@
       </group>
       <names variable="editor translator" delimiter=", ">
         <label form="verb-short" text-case="lowercase" suffix=" "/>
-        <name and="text" delimiter=", " name-as-sort-order="never"/>
+        <name and="text" delimiter=", "/>
         <institution/>
       </names>
     </group>
@@ -102,7 +102,7 @@
       <if type="chapter paper-conference" match="none">
         <names variable="editor translator" delimiter=". ">
           <label form="verb" text-case="capitalize-first" suffix=" "/>
-          <name and="text" delimiter=", " name-as-sort-order="never"/>
+          <name and="text" delimiter=", "/>
           <institution/>
         </names>
       </if>
@@ -118,7 +118,7 @@
                 <if variable="container-author" match="any">
                   <names variable="container-author">
                     <label form="verb-short" text-case="lowercase" suffix=" "/>
-                    <name and="text" delimiter=", " name-as-sort-order="never"/>
+                    <name and="text" delimiter=", "/>
                     <institution/>
                   </names>
                 </if>
@@ -130,7 +130,7 @@
                     <number variable="page"/>
                     <names variable="editor translator" delimiter=", ">
                       <label form="verb" suffix=" "/>
-                      <name and="text" delimiter=", " name-as-sort-order="never"/>
+                      <name and="text" delimiter=", "/>
                       <institution/>
                     </names>
                   </group>
@@ -138,7 +138,7 @@
                 <else>
                   <names variable="editor translator" delimiter=", ">
                     <label form="verb" text-case="lowercase" suffix=" "/>
-                    <name and="text" delimiter=", " name-as-sort-order="never"/>
+                    <name and="text" delimiter=", "/>
                     <institution/>
                   </names>
                 </else>
@@ -152,14 +152,14 @@
   <macro name="recipient-note">
     <names variable="recipient" delimiter=", ">
       <label form="verb" text-case="lowercase" suffix=" "/>
-      <name and="text" delimiter=", " name-as-sort-order="never"/>
+      <name and="text" delimiter=", "/>
       <institution/>
     </names>
   </macro>
   <macro name="contributors-note">
     <group delimiter=" ">
       <names variable="author">
-        <name and="text" sort-separator=", " delimiter=", " name-as-sort-order="never"/>
+        <name and="text" sort-separator=", " delimiter=", "/>
         <institution institution-parts="short">
           <institution-part name="short" strip-periods="true"/>
         </institution>
@@ -227,14 +227,14 @@
   <macro name="recipient-short">
     <names variable="recipient">
       <label form="verb" text-case="lowercase" suffix=" "/>
-      <name form="short" and="text" delimiter=", " name-as-sort-order="never"/>
+      <name form="short" and="text" delimiter=", "/>
       <institution/>
     </names>
   </macro>
   <macro name="contributors-short">
     <group delimiter=" ">
       <names variable="author">
-        <name form="short" and="text" delimiter=", " name-as-sort-order="never"/>
+        <name form="short" and="text" delimiter=", "/>
         <institution institution-parts="short">
           <institution-part name="short" strip-periods="true"/>
         </institution>
@@ -250,7 +250,7 @@
     <group delimiter=" in ">
       <names variable="interviewer" delimiter=", ">
         <label form="verb" text-case="lowercase" suffix=" "/>
-        <name and="text" delimiter=", " name-as-sort-order="never"/>
+        <name and="text" delimiter=", "/>
         <institution/>
       </names>
       <choose>
@@ -266,14 +266,14 @@
         <if variable="medium">
           <names variable="interviewer" delimiter=", ">
             <label form="verb" suffix=" "/>
-            <name and="text" delimiter=", " name-as-sort-order="never"/>
+            <name and="text" delimiter=", "/>
             <institution/>
           </names>
         </if>
         <else>
           <names variable="interviewer" delimiter=", ">
             <label form="verb" text-case="capitalize-first" suffix=" "/>
-            <name and="text" delimiter=", " name-as-sort-order="never"/>
+            <name and="text" delimiter=", "/>
             <institution/>
           </names>
         </else>
@@ -334,7 +334,7 @@
           <text variable="title" font-style="italic" prefix="Review of "/>
           <names variable="reviewed-author">
             <label form="verb-short" text-case="lowercase" suffix=" "/>
-            <name and="text" delimiter=", " name-as-sort-order="never"/>
+            <name and="text" delimiter=", "/>
             <institution/>
           </names>
         </group>
@@ -393,9 +393,18 @@
         <if variable="title" match="none"/>
         <else-if type="manuscript thesis speech" match="any"/>
         <else-if match="any" type="treaty">
-          <date variable="available-date" form="text" date-parts="year-month-day"/>
-          <text variable="collection-title"/>
-          <text variable="genre"/>
+          <group delimiter=" ">
+            <group delimiter=", ">
+              <date variable="available-date" form="text" date-parts="year-month-day"/>
+              <text variable="collection-title"/>
+              <text variable="genre"/>
+            </group>
+            <choose>
+              <if variable="collection-title genre" match="any">
+                <date variable="accessed" date-parts="year-month-day" form="numeric" prefix="[" suffix="]"/>
+              </if>
+            </choose>
+          </group>
         </else-if>
         <else>
           <group delimiter=" ">
@@ -428,9 +437,18 @@
         <if variable="title" match="none"/>
         <else-if type="thesis speech" match="any"/>
         <else-if match="any" type="treaty">
-          <date variable="available-date" form="text" date-parts="year-month-day"/>
-          <text variable="collection-title"/>
-          <text variable="genre"/>
+          <group delimiter=" ">
+            <group delimiter=". ">
+              <date variable="available-date" form="text" date-parts="year-month-day"/>
+              <text variable="collection-title"/>
+              <text variable="genre"/>
+            </group>
+            <choose>
+              <if variable="collection-title genre" match="any">
+                <date variable="accessed" date-parts="year-month-day" form="numeric" prefix="[" suffix="]"/>
+              </if>
+            </choose>
+          </group>
         </else-if>
         <else>
           <group delimiter=" ">
@@ -471,7 +489,7 @@
         <group delimiter=" ">
           <choose>
             <if type="chapter paper-conference" match="any">
-          <text term="in" text-case="capitalize-first"/>
+              <text term="in" text-case="capitalize-first"/>
             </if>
           </choose>
           <text variable="container-title" text-case="title" font-style="italic" form="short"/>
@@ -1026,7 +1044,7 @@
       <else-if type="article-newspaper">
         <text macro="issued"/>
       </else-if>
-      <else-if type="report" variable="publisher-place event-place publisher genre" match="any">
+      <else-if type="report treaty" variable="publisher-place event-place publisher genre" match="any">
         <group prefix="(" suffix=")" delimiter=", ">
           <choose>
             <if variable="title" match="none"/>
@@ -1054,7 +1072,12 @@
               </choose>
             </group>
           </group>
-          <text macro="issued"/>
+          <choose>
+            <if type="treaty"/>
+            <else>
+              <text macro="issued"/>
+            </else>
+          </choose>
         </group>
       </else-if>
       <else>
@@ -1148,7 +1171,7 @@
       <else-if type="article-newspaper">
         <text macro="issued"/>
       </else-if>
-      <else-if type="report" variable="publisher-place publisher" match="any">
+      <else-if type="report treaty" variable="publisher-place publisher" match="any">
         <group delimiter=", ">
           <choose>
             <if type="thesis">
@@ -1174,7 +1197,14 @@
               </choose>
             </group>
           </group>
-          <text macro="issued"/>
+          <choose>
+            <if type="treaty">
+              <group delimiter=" ">
+                <text value="in force" font-style="italic"/>
+                <text macro="issued"/>
+              </group>
+            </if>
+          </choose>
         </group>
       </else-if>
       <else>
@@ -1200,14 +1230,21 @@
           </group>
         </if>
       </choose>
-      <!-- choose>
+      <choose>
         <if variable="DOI">
           <text variable="DOI" prefix="doi:"/>
         </if>
-        <else -->
-          <text variable="URL"/>
-        <!-- /else>
-      </choose -->
+        <else-if match="none" type="treaty book chapter article-journal">
+          <text variable="URL" prefix=""/>
+        </else-if>
+        <else-if>
+          <conditions match="all">
+            <condition match="any" type="article-journal"/>
+            <condition match="none" variable="page"/>
+          </conditions>
+          <text variable="URL" prefix=""/>
+        </else-if>
+      </choose>
     </group>
   </macro>
   <macro name="access">
@@ -1228,14 +1265,21 @@
           </group>
         </if>
       </choose>
-      <!-- choose>
+      <choose>
         <if variable="DOI">
           <text variable="DOI" prefix="doi:"/>
         </if>
-        <else -->
+        <else-if match="none" type="treaty book chapter article-journal">
           <text variable="URL"/>
-        <!-- /else>
-      </choose -->
+        </else-if>
+        <else-if>
+          <conditions match="all">
+            <condition match="any" type="article-journal"/>
+            <condition match="none" variable="page"/>
+          </conditions>
+          <text variable="URL" prefix=""/>
+        </else-if>
+      </choose>
     </group>
   </macro>
 
