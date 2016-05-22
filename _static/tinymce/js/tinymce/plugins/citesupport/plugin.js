@@ -424,7 +424,9 @@ tinymce.PluginManager.add('citesupport', function(editor) {
                 var widthSpec = '';
                 alert('Test');
                 var texts = doc.getElementsByClassName('csl-right-inline');
-                var containerWidth = doc.getElementById('tinymce').offsetWidth;
+                // Force this -- reported width is wildly wrong on iPad
+                //var containerWidth = doc.getElementById('tinymce').offsetWidth;
+                var containerWidth = 680;
                 alert('containerWidth='+containerWidth);
                 var numberWidth = (data[0].maxoffset*(90/9));
                 alert('numberWidth='+numberWidth);
