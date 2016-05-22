@@ -19,9 +19,9 @@ Editor
 Running locally
 ---------------
 
-One of the main purposes of this page is to provide a worked example
-for developers. A good way to explore the way it all works is to
-run the page locally. Here is how to set that up.
+Like the previous page, the main purpose here is to provide a worked
+example for developers. A good way to explore the way it all works is
+to run the page locally. Here is how to set that up.
 
 ^^^^^^^^^^^^
 Requirements
@@ -73,24 +73,36 @@ Run a server using ``node.js``
 Source File Overview
 --------------------
 
-``_static/js/citeproc.js``
-   The |citeproc-js| `CSL <https://citationstyles.org>`_ processor.
-   Seven years in development, backed up by 1,260 test fixtures and
-   1,318 unique citation styles, with extended support for
-   multilingual and legal citation.
+As this demo is built as a Sphinx page for deployment on ReadTheDocs,
+the source files are kind of scattered and mixed. The following list
+should help you find the essentials.
 
-``_static/js/citeworker.js``
-   A web worker implementing the two API calls on which ``citesupport``
-   depends.
+``_static/tinymce/js/tinymce/plugins/citesupport.js``
+   This is the core plugin for citation support. It spins up a web
+   worker (from ``classes/citeworker.js``) that runs ``citeproc.js``
+   to handle the actual formatting of citations, and manages page
+   updates.
 
-``_static/js/citesupport-es6.js``
-   An ``es6`` class object with DOM logic for dynamic citation editing.
-   With some tweaks, this can be run inside a WYSIWYG editor of your
-   choice.
+``_static/tinymce/js/tinymce/plugins/citestylemenu.js``
+   This supplies a tinyMCE menu for changing citation styles.
+
+``_static/tinymce/js/tinymce/plugins/citeaddedit.js``
+   This supplies the primitive citation widget used in the demo
+   editor. In production you would obviously want something a
+   *little* more sophisticated. This plugin is the place to
+   implement that.
 
 ``_static/css/screen.css``
-   The CSS code for the |citeproc-js| documentation, including
-   the demo pages.
+   There is some CSS code in here that is relevant to the layout
+   of bibliographies and the decoration of citations and footnotes.
+
+``_templates/layout.html``
+   Check here (particularly at the bottom of the file) for the
+   incantations that bring up tinyMCE with citation support.
+
+``substitutions.txt``
+   The placeholder that tinyMCE installs itself to is supplied
+   by the "editor" substitution element.
 
 ``_static/data/items``
    A few sample items for the dynamic editing demo, in CSL JSON format.
@@ -110,55 +122,6 @@ Source File Overview
    support is easily extensible to jurisdictions worldwide
    via the `Juris-M Style Editor <https://juris-m.github.io/editor/>`_
    (GitHub account required).
-
-----------------
-Integrator notes
-----------------
-
-Here are some notes on things relevant to deployment:
-
-- The class should be instantiated as ``citesupport``. The event
-  handlers expect the class object to be available in global
-  context under that name.
-
-- If ``config.demo`` is ``true``, the stored object ``citationIdToPos``
-  maps citationIDs to the index position of fixed "pegs" in the
-  document that have class ``citeme``. In the demo, this map is
-  stored in localStorage, and is used to reconstruct the document
-  state (by reinserting ``class:citation`` span tags) on page reload.
-
-- If ``config.demo`` is ``false``, the document is assumed to contain
-  ``class:citation`` span tags, and operations on ``citeme`` nodes will
-  not be performed. In non-demo mode, ``citationIdToPos`` carries
-  the index position of citation nodes for good measure, but the
-  mapping is not used for anything.
-
-- The ``spoofDocument()`` function brings citation data into memory.
-  In the demo, this data is held in localStorage, and
-  ``spoofDocument()`` performs some sanity checks on data and
-  document. For a production deployment, this is the place for code
-  that initially extracts citation data the document (if, for example,
-  it is stashed in data-attributes on citation nodes).
-
-- The ``setCitations()`` function is where citation data for individual
-  citations would be saved, at the location marked by NOTE.
-
-- The user-interface functions ``buildStyleMenu()`` and
-  ``citationWidget()`` are simple things cast for the demo, and
-  should be replaced with something a bit more functional.
-
-- The ``SafeStorage`` class should be replaced (or subclassed?) for
-  deployment with a class that provides the same methods. If
-  the citation objects making up ``citationByIndex`` are stored
-  directly on the ``class:citation`` span nodes, the getter for
-  that value should harvest the values from the nodes, and
-  store them on ``config.citationByIndex``. The setter should
-  set ``config.citationByIndex`` only, relying on other code
-  to update the node value.
-  
-- Probably some other stuff that I've overlooked.
-
-
 
 ----------
 Worker API

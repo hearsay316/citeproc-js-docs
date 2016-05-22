@@ -1,6 +1,6 @@
-=====================
-Demo: Dynamic Editing
-=====================
+=======================
+Demo: Dynamic Citations
+=======================
 
 .. include:: substitutions.txt
 |CCBYSA| `Frank Bennett <https://twitter.com/fgbjr>`_

@@ -89,6 +89,19 @@
   {% endif %}
 
   {% if pagename == 'dynamic-editing' %}
-  <script type="text/javascript" src="_static/js/citesupport-es6.js"></script>
+  <!-- script type="text/javascript" src="_static/js/citesupport-es6.js"></script -->
+  <script src="_static/tinymce/js/tinymce/tinymce.js"></script>
+  <script>
+    tinyMCE.baseURL = '/_static/tinymce/js/tinymce/'
+    tinymce.init({
+        selector:"textarea",
+        content_css: "/_static/css/screen.css",
+        plugins: "noneditable citesupport citeaddedit citestylemenu",
+        toolbar: [ "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+                   "citeaddedit | citestylemenu"
+        ],
+        height: "300"
+    });
+  </script>
   {% endif %}
 {% endblock %}
