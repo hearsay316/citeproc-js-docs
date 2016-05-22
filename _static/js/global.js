@@ -1,4 +1,5 @@
 window.addEventListener('load', function(e){
+try {
     var moreButton = document.getElementById('more').parentNode;
     var moreParent = moreButton.parentNode;
     var siblings = [];
@@ -17,6 +18,7 @@ window.addEventListener('load', function(e){
     moreButton.parentNode.removeChild(moreButton);
     moreParent.parentNode.insertBefore(moreButton, postContainer);
     moreButton.firstChild.hidden = false;
+    alert('So far so good');
     if (document.location.href.match(/\#/) && !document.location.href.match(/#(?:my-amazing|dynamic-editing|editor)/)) {
         var more = document.getElementById('more');
         var moreContainer = document.getElementById('more-container');
@@ -26,6 +28,9 @@ window.addEventListener('load', function(e){
     if (document.getElementById('editor')) {
         document.getElementById('editor').children[0].hidden = true;
     }
+} catch (e) {
+    alert('Oops: '+e);
+}
 });
 
 window.addEventListener('hashchange', function(e){
