@@ -3,7 +3,7 @@ window.addEventListener('load', function(e){
     var moreParent = moreButton.parentNode;
     var siblings = [];
     while (moreParent.nextSibling) {
-        let last = moreParent.parentNode.childNodes[moreParent.parentNode.childNodes.length - 1];
+        var last = moreParent.parentNode.childNodes[moreParent.parentNode.childNodes.length - 1];
         siblings.push(last);
         moreParent.parentNode.removeChild(last);
     }
@@ -11,7 +11,7 @@ window.addEventListener('load', function(e){
     postContainer.setAttribute('id', 'more-container');
     postContainer.hidden = true;
     moreParent.parentNode.insertBefore(postContainer, moreParent.nextSibling);
-    for (let i = 0, ilen = siblings.length; i < ilen; i++) {
+    for (var i = 0, ilen = siblings.length; i < ilen; i++) {
         postContainer.insertBefore(siblings[i], postContainer.firstChild);
     }
     moreButton.parentNode.removeChild(moreButton);
