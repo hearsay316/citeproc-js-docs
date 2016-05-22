@@ -420,10 +420,14 @@ tinymce.PluginManager.add('citesupport', function(editor) {
             if (data[0].maxoffset) {
                 // cheat
                 var widthSpec = '';
+                alert('Test');
                 var texts = doc.getElementsByClassName('csl-right-inline');
                 var containerWidth = doc.getElementById('tinymce').offsetWidth;
+                alert('containerWidth='+containerWidth);
                 var numberWidth = (data[0].maxoffset*(90/9));
+                alert('numberWidth='+numberWidth);
                 widthSpec = 'width:' + (containerWidth-numberWidth-20) + 'px;';
+                alert('widthSpec='+widthSpec);
                 for (var i = 0, ilen = texts.length; i < ilen; i++) {
                     var text = texts[i];
                     text.setAttribute('style', 'display: inline-block;white-space: normal;' + widthSpec);
