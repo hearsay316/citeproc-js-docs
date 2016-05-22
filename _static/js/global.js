@@ -17,7 +17,7 @@ window.addEventListener('load', function(e){
     moreButton.parentNode.removeChild(moreButton);
     moreParent.parentNode.insertBefore(moreButton, postContainer);
     moreButton.firstChild.hidden = false;
-    if (document.URL.match(/\#/) && !document.URL.match(/#(?:my-amazing|dynamic-editing|editor)/)) {
+    if (document.location.href.match(/\#/) && !document.location.href.match(/#(?:my-amazing|dynamic-editing|editor)/)) {
         var more = document.getElementById('more');
         var moreContainer = document.getElementById('more-container');
         more.innerHTML = 'Less ...';
@@ -31,7 +31,7 @@ window.addEventListener('load', function(e){
 window.addEventListener('hashchange', function(e){
     var more = document.getElementById('more');
     var moreContainer = document.getElementById('more-container');
-    if (e.newURL.match(/\#/) && !document.URL.match(/#my-amazing/)) {
+    if (e.newURL.match(/\#/) && !document.location.href.match(/#(?:my-amazing|dynamic-editing|editor)/)) {
         more.innerHTML = 'Less ...';
         moreContainer.hidden = false;
     } else {
