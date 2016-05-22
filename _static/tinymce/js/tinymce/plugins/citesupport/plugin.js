@@ -387,6 +387,7 @@ tinymce.PluginManager.add('citesupport', function(editor) {
     CiteSupport.prototype.setBibliography = function(data) {
         this.debug('setBibliography()');
         var doc = this.editor.getDoc();
+        var body = this.editor.getBody();
         var bibContainer = doc.getElementById('bibliography-container');
         if (!data || !data[1] || data[1].length === 0) {
             bibContainer.hidden = true;
@@ -411,6 +412,7 @@ tinymce.PluginManager.add('citesupport', function(editor) {
             for (var i = 0, ilen = entries.length; i < ilen; i++) {
                 var entry = entries[i];
                 entry.setAttribute('style', 'white-space: nowrap;');
+                alert('set to nowrap');
             }
             var numbers = doc.getElementsByClassName('csl-left-margin');
             for (var i = 0, ilen = numbers.length; i < ilen; i++) {
@@ -430,6 +432,7 @@ tinymce.PluginManager.add('citesupport', function(editor) {
                 alert('widthSpec='+widthSpec);
                 for (var i = 0, ilen = texts.length; i < ilen; i++) {
                     var text = texts[i];
+                    alert('set to normal');
                     text.setAttribute('style', 'display: inline-block;white-space: normal;' + widthSpec);
                 }
                 bibContainer.hidden = false;
