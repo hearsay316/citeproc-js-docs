@@ -1,3 +1,7 @@
+.. |editor| raw:: html
+
+   <textarea>Here we are!</textarea>
+
 .. |because tradition| raw:: html
 
    <span style="font-variant:small-caps;">Because Tradition</span>
