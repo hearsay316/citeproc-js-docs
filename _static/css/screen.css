@@ -4,17 +4,6 @@
     padding: 0.5em;
     border-radius: 0.5em;
 }
-#dynamic-editing, #my-amazing-bibliography {
-    padding:1em;
-    border: 1px solid #999999;
-    background: #efefef;
-    border-radius: 1em;
-    margin-bottom: 1em;
-}
-#dynamic-editing p {
-    line-height: 2em;
-}
-
 .footnote-mark::before {
     content: '[';
 }
@@ -44,30 +33,6 @@
 }
 .citation {
     background: #dddddd;
-}
-#cite-menu {
-    position: absolute;
-    display: inline-block;
-}
-#cite-menu .menu {
-    position: relative;
-    top: 0px;
-    /* left: 0px; */
-    width: 135px;
-    background: white;
-    padding: 0.5em;
-    border: 1px solid black;
-    border-radius: 0.5em;
-    z-index: 100;
-}
-.citeme {
-    display: inline;
-    cursor: pointer;
-    background: white;
-    border: 1px solid #aaaaaa;
-    border-radius: 2px;
-    margin: 0px 5px 0px 2px;
-    padding: 0px 2px 0px 2px;
 }
 #csl-outer-block {
     position: absolute;
@@ -120,4 +85,38 @@
     vertical-align: top;
     right: 0.3em;
     top: 0px;
+}
+#dynamic-editing, #my-amazing-bibliography {
+    padding:1em;
+    border: 1px solid #999999;
+    background: #efefef;
+    border-radius: 1em;
+    margin-bottom: 1em;
+}
+#dynamic-editing p {
+    line-height: 2em;
+}
+.citeme {
+    display: inline;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #aaaaaa;
+    border-radius: 2px;
+    margin: 0px 5px 0px 2px;
+    padding: 0px 2px 0px 2px;
+}
+#cite-menu {
+    position: absolute;
+    display: inline-block;
+}
+#cite-menu .menu {
+    position: relative;
+    top: 0px;
+    /* left: 0px; */
+    width: 135px;
+    background: white;
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    z-index: 100;
 }

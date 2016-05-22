@@ -17,11 +17,14 @@ window.addEventListener('load', function(e){
     moreButton.parentNode.removeChild(moreButton);
     moreParent.parentNode.insertBefore(moreButton, postContainer);
     moreButton.firstChild.hidden = false;
-    if (document.URL.match(/\#/) && !document.URL.match(/#(?:my-amazing|dynamic-editing)/)) {
+    if (document.URL.match(/\#/) && !document.URL.match(/#(?:my-amazing|dynamic-editing|editor)/)) {
         var more = document.getElementById('more');
         var moreContainer = document.getElementById('more-container');
         more.innerHTML = 'Less ...';
         moreContainer.hidden = false;
+    }
+    if (document.getElementById('editor')) {
+        document.getElementById('editor').children[0].hidden = true;
     }
 });
 

@@ -24,6 +24,7 @@ Table of Contents
    changes.rst
    deployments.rst
    dynamic-editing.rst
+   editor.rst
    setting-up.rst
    testing.rst
    running.rst
