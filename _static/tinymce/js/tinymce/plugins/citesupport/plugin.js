@@ -395,6 +395,7 @@ tinymce.PluginManager.add('citesupport', function(editor) {
         };
         var bib = doc.getElementById('bibliography');
         bib.setAttribute('style', 'visibility: hidden;');
+        bibContainer.hidden = true;
         bib.innerHTML = data[1].join('\n');
         var entries = doc.getElementsByClassName('csl-entry');
         if (data[0].hangingindent) {
@@ -422,7 +423,7 @@ tinymce.PluginManager.add('citesupport', function(editor) {
             if (data[0].maxoffset) {
                 // cheat
                 var widthSpec = '';
-                alert('Test');
+                alert('TestX');
                 var texts = doc.getElementsByClassName('csl-right-inline');
                 // Force this -- reported width is wildly wrong on iPad
                 var containerWidth = document.getElementById('mce_0_ifr').offsetWidth;
