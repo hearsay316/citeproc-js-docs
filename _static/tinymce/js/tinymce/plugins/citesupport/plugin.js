@@ -408,12 +408,11 @@ tinymce.PluginManager.add('citesupport', function(editor) {
         } else if (data[0]['second-field-align']) {
             var offsetSpec = 'padding-right:0.3em;';
             if (data[0].maxoffset) {
-                offsetSpec = 'width: ' + ((data[0].maxoffset/2)+0.5) + 'em;';
+                offsetSpec = 'width: ' + ((data[0].maxoffset/2)+0.75) + 'em;';
             }
             for (var i = 0, ilen = entries.length; i < ilen; i++) {
                 var entry = entries[i];
                 entry.setAttribute('style', 'white-space: nowrap;');
-                alert('set to nowrap');
             }
             var numbers = doc.getElementsByClassName('csl-left-margin');
             for (var i = 0, ilen = numbers.length; i < ilen; i++) {
@@ -423,18 +422,13 @@ tinymce.PluginManager.add('citesupport', function(editor) {
             if (data[0].maxoffset) {
                 // cheat
                 var widthSpec = '';
-                alert('TestX');
                 var texts = doc.getElementsByClassName('csl-right-inline');
                 // Force this -- reported width is wildly wrong on iPad
                 var containerWidth = document.getElementById('mce_0_ifr').offsetWidth;
-                alert('containerWidth='+containerWidth);
                 var numberWidth = (data[0].maxoffset*(90/9));
-                alert('numberWidth='+numberWidth);
                 widthSpec = 'width:' + (containerWidth-numberWidth-20) + 'px;';
-                alert('widthSpec='+widthSpec);
                 for (var i = 0, ilen = texts.length; i < ilen; i++) {
                     var text = texts[i];
-                    alert('set to normal');
                     text.setAttribute('style', 'display: inline-block;white-space: normal;' + widthSpec);
                 }
                 bibContainer.hidden = false;
