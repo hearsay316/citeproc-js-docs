@@ -1,6 +1,24 @@
 .. |editor| raw:: html
 
-   <textarea>Here we are!</textarea>
+   <textarea>
+   <p>
+   This page illustrates dynamic citation support in the tinyMCE
+   WYSIWYG editor. The text here is open for editing. Edits will
+   persist across page refreshes. A full reload of the page URL will
+   restore this text.
+   </p>
+   <p>
+   Click on the "Add/Edit citation" button in the toolbar to add a
+   citation at the current cursor position. Highlight a citation
+   and click on the button again to edit the citation content.
+   To remove a citation, either save it with no content, or delete
+   it in the usual way and refresh the page to reformat any remaining
+   citations.
+   </p>
+   <p>
+   Use the style selector in the toolbar to change citation styles.
+   </p>
+   </textarea>
 
 .. |because tradition| raw:: html
 
@@ -24,11 +42,7 @@
      <div class="footnote-header">
        <b>Footnotes</b>
      </div>
-     <div id="footnotes">
-       <div hidden class="footnote"><span class="footnote-number">1</span><span class="footnote-text"></span></div>
-       <div hidden class="footnote"><span class="footnote-number">2</span><span class="footnote-text"></span></div>
-       <div hidden class="footnote"><span class="footnote-number">3</span><span class="footnote-text"></span></div>
-     </div>
+     <div id="footnotes"></div>
    </div>
 
 .. |bib| raw:: html
