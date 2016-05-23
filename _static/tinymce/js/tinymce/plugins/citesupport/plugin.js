@@ -207,18 +207,6 @@ tinymce.PluginManager.add('citesupport', function(editor) {
     }
 
     /**
-     * Function to be run immediately after document has been loaded, and
-     *   before any editing operations.
-     *
-     * @return {void}
-     */
-    CiteSupport.prototype.initDocument = function() {
-        this.debug('initDocument()');
-        this.spoofDocument();
-        this.callInitProcessor(this.config.defaultStyle, this.config.defaultLocale, this.config.citationByIndex);
-    }
-
-    /**
      * Update all citations based on data returned by the processor.
      * The update has two effects: (1) the id of all in-text citation
      * nodes is set to the processor-assigned citationID; and (2)
@@ -395,6 +383,8 @@ tinymce.PluginManager.add('citesupport', function(editor) {
         };
         var bib = doc.getElementById('bibliography');
         bib.setAttribute('style', 'visibility: hidden;');
+        // If bib is not hidden on transition, container width
+        // can be wildly exaggerated on mobile Safari.
         bibContainer.hidden = true;
         bib.innerHTML = data[1].join('\n');
         var entries = doc.getElementsByClassName('csl-entry');
@@ -423,7 +413,6 @@ tinymce.PluginManager.add('citesupport', function(editor) {
                 // cheat
                 var widthSpec = '';
                 var texts = doc.getElementsByClassName('csl-right-inline');
-                // Force this -- reported width is wildly wrong on iPad
                 var containerWidth = document.getElementById('mce_0_ifr').offsetWidth;
                 var numberWidth = (data[0].maxoffset*(90/9));
                 widthSpec = 'width:' + (containerWidth-numberWidth-20) + 'px;';
@@ -464,83 +453,58 @@ tinymce.PluginManager.add('citesupport', function(editor) {
     CiteSupport.prototype.spoofDocument = function() {
         this.debug('spoofDocument()');
         var doc = this.editor.getDoc();
-        // Stage 0: Collect data from document nodes
-        this.config.citationIdToPos = {};
-        var citationNodes = this.pruneNodeList(doc.getElementsByClassName('citation'));
-        for (var i = 0, ilen = citationNodes.length; i < ilen; i++) {
-            var citationID = citationNodes[i].id;
-            this.config.citationIdToPos[citationID] = i;
-        }
+        
         // Use stored style if available
         var styleContainer = doc.getElementById('citesupport-style-container');
         if (styleContainer) {
             this.config.defaultStyle = styleContainer.innerHTML;
         }
+        
+        // Initialize array and object
+        this.config.citationByIndex = [];
+        this.config.citationIdToPos = {};
+        
+        // Get citation nodes
+        var citationNodes = this.pruneNodeList(doc.getElementsByClassName('citation'));
+        
+        // Build citationByIndex
         var dataContainer = doc.getElementById('citesupport-data-container');
-        if (!dataContainer) {
-            this.config.citationByIndex = [];
-            this.config.citationIdToPos = {};
-        } else {
-            var sortableData = [];
-            for (var i = 0, ilen = dataContainer.children.length; i < ilen; i++) {
-                var dataElement = dataContainer.children[i];
-                if (!dataElement.classList || !dataElement.classList.contains('citation-data')) {
-                    continue;
-                }
-                var data = JSON.parse(atob(dataElement.innerHTML));
-                sortableData.push({
-                    seq: this.config.citationIdToPos[data.citationID],
-                    citation: data
-                });
-            }
-            sortableData.sort(function(a,b){
-                if (a.seq > b.seq) {
-                    return 1
-                } else if (a.seq < b.seq) {
-                    return -1
+        if (dataContainer) {
+            for (var i = citationNodes.length - 1; i > -1; i--) {
+                var citationNode = citationNodes[i];
+                var citationID = citationNode.id;
+                var citationDataNode = doc.getElementById('csdata-' + citationID);
+                if (citationDataNode) {
+                    this.config.citationByIndex.push(JSON.parse(atob(dataElement.innerHTML)));
                 } else {
-                    return 0
+                    citationNode.parentNode.removeChild(citationNode);
                 }
-            });
-            this.config.citationByIndex = sortableData.map(function(obj){
-                return obj.citation;
-            });
-        }
-
-        // Stage 1: remove data nodes that are not reflected in citations
-        var nodes = doc.getElementsByClassName('citation-data');
-        for (var i = nodes.length - 1; i > -1; i--) {
-            if ("number" !== typeof this.config.citationIdToPos[nodes.id]) {
-                nodes[i].parentNode.removeChild(nodes[i]);
-            }
-        }
-
-        // The rest of this may not be necessary ...
-
-        // Stage 2: check that all citation locations are in posToCitationId with existing citationIDs and have span tags set
-        var pegs = this.pruneNodeList(doc.getElementsByClassName('citation'));
-        for (var i = this.config.citationByIndex.length - 1; i > -1; i--) {
-            var citation = this.config.citationByIndex[i];
-            var citationID = citation ? citation.citationID : null;
-            if ("number" !== typeof this.config.citationIdToPos[citationID]) {
-                this.debug('WARNING: invalid state data. Removing offending citation record.');
-                this.config.citationByIndex = this.config.citationByIndex.slice(0, i).concat(this.config.citationByIndex.slice(i + 1));
             }
         }
         
-        // Stage 3: check that number of citation nodes and number of stored citations matches
-        var objectLength = this.config.citationByIndex.length;
-        var nodeLength = this.pruneNodeList(doc.getElementsByClassName('citation')).length;
-        if (objectLength !== nodeLength) {
-            this.debug('WARNING: document citation node and citation object counts do not match. Removing citations.');
-            this.config.citationByIndex = [];
-            this.config.citationIdToPos = {};
-            var citations = doc.getElementsByClassName('citation');
-            for (var i=0, ilen=citations.length; i < ilen; i++) {
-                citations[0].parentNode.removeChild(citations[0]);
-            }
-        }
+        // This gives us assurance of one-to-one correspondence between
+        // citation nodes and citationByIndex data. The processor
+        // and the code for handling its return will need to cope with possible 
+        // duplicate citationIDs in data and node citationIDs.
+
     }
+    
+    /**
+     * Function to be run immediately after document has been loaded, and
+     *   before any editing operations.
+     *
+     * @return {void}
+     */
+    CiteSupport.prototype.initDocument = function() {
+        this.debug('initDocument()');
+        this.spoofDocument();
+        this.callInitProcessor(this.config.defaultStyle, this.config.defaultLocale, this.config.citationByIndex);
+    }
+
+    // Maybe for consistency there should be a spoofCitation() method
+    // and an initCitation() method here. Would save all of the clutter
+    // at the top of setCitation(), which is a little late to be dealing
+    // with obvious data/node reconciliation issues.
 
     var citesupport = new CiteSupport(editor);
     this.citesupport = citesupport;
