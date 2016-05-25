@@ -98,6 +98,7 @@ tinymce.PluginManager.add('citesupport', function(editor) {
             case 'initProcessor':
                 me.debug('initProcessor()');
                 me.config.mode = e.data.xclass;
+                me.config.citationByIndex = e.data.citationByIndex;
                 var citationData = me.convertRebuildDataToCitationData(e.data.rebuildData);
                 me.setCitations(me.config.mode, citationData);
                 me.setBibliography(e.data.bibliographyData);
@@ -171,7 +172,7 @@ tinymce.PluginManager.add('citesupport', function(editor) {
      */
     CiteSupport.prototype.callRegisterCitation = function(citation, preCitations, postCitations) {
         if (!this.config.processorReady) return;
-        this.debug('callRegisterCitation()');
+        this.debug('callRegisterCitation() ('+citation+") ("+JSON.stringify(preCitations)+") ("+JSON.stringify(postCitations)+")");
         this.config.processorReady = false;
         this.worker.postMessage({
             command: 'registerCitation',
@@ -257,18 +258,20 @@ tinymce.PluginManager.add('citesupport', function(editor) {
             citesupportDataContainer = doc.getElementById('citesupport-data-container');
         }
 
-        // Assure that every citation node has citationID
+        // Assure that every single citation node has citationID
         var citationNodes = this.pruneNodeList(doc.getElementsByClassName('citation'));
         for (var i = 0, ilen = data.length; i < ilen; i++) {
-            var citationNode = citationNodes[data[i][0]];
-            var citationID = data[i][2];
-            if (!citationNode.hasAttribute('id')) {
+            var pos = data[i][0];
+            var citationNode = citationNodes[pos];
+            var citationID = this.config.citationByIndex[pos].citationID;
+            if (!citationNode.hasAttribute('id') || citationNode.getAttribute('id') !== citationID) {
                 citationNode.setAttribute('id', citationID);
             }
         }
         // Update citationIdToPos for all nodes
+        var citationNodes = this.pruneNodeList(doc.getElementsByClassName('citation'));
         for (var i = 0, ilen = citationNodes.length; i < ilen; i++) {
-            var citationID = citationNodes[i].id;
+            var citationID = citationNodes[i].getAttribute('id');
             this.config.citationIdToPos[citationID] = i;
         }
         // Update data on all nodes in the return
@@ -468,6 +471,7 @@ tinymce.PluginManager.add('citesupport', function(editor) {
         var citationNodes = this.pruneNodeList(doc.getElementsByClassName('citation'));
         
         // Build citationByIndex
+        var offset = 0;
         var dataContainer = doc.getElementById('citesupport-data-container');
         if (dataContainer) {
             for (var i = citationNodes.length - 1; i > -1; i--) {
@@ -475,17 +479,27 @@ tinymce.PluginManager.add('citesupport', function(editor) {
                 var citationID = citationNode.id;
                 var citationDataNode = doc.getElementById('csdata-' + citationID);
                 if (citationDataNode) {
-                    this.config.citationByIndex.push(JSON.parse(atob(dataElement.innerHTML)));
+                    var citation = JSON.parse(atob(citationDataNode.innerHTML));
+                    if (this.config.mode === 'note') {
+                        citation.properties.noteIndex = (i + offset + 1);
+                    } else {
+                        citation.properties.noteIndex = 0;
+                    }
+                    this.config.citationByIndex.push(citation);
                 } else {
                     citationNode.parentNode.removeChild(citationNode);
+                    offset--;
                 }
             }
+            this.config.citationByIndex.reverse();
         }
         
         // This gives us assurance of one-to-one correspondence between
         // citation nodes and citationByIndex data. The processor
-        // and the code for handling its return will need to cope with possible 
+        // and the code for handling its return must cope with possible 
         // duplicate citationIDs in data and node citationIDs.
+        
+        
 
     }
     
@@ -501,10 +515,58 @@ tinymce.PluginManager.add('citesupport', function(editor) {
         this.callInitProcessor(this.config.defaultStyle, this.config.defaultLocale, this.config.citationByIndex);
     }
 
-    // Maybe for consistency there should be a spoofCitation() method
-    // and an initCitation() method here. Would save all of the clutter
+    // Maybe for consistency there should be a spoofCitations() method
+    // and an initCitations() method here. Would save all of the clutter
     // at the top of setCitation(), which is a little late to be dealing
     // with obvious data/node reconciliation issues.
+
+    CiteSupport.prototype.spoofCitations = function() {
+        this.debug('spoofCitations()');
+        // Make a pos map
+        var doc = this.editor.getDoc();
+        var citationIdToPos = {};
+        for (var i = 0, ilen = this.config.citationByIndex.length; i < ilen; i++) {
+            var citationID = this.config.citationByIndex[i].citationID;
+            citationIdToPos[citationID] = i;
+        }
+        // Step through nodes to build citationByIndex, cloning duplicates and removing nodes for which there is no data
+        var citationByIndex = [];
+        var citationsSeen = {};
+        var offset = 0;
+        var citationNodes = this.pruneNodeList(doc.getElementsByClassName('citation'));
+        for (var i = 0, ilen = citationNodes.length; i < ilen; i++) {
+            var citationNode = citationNodes[i];
+            var citationID = citationNode.id;
+            if (citationsSeen[citationID]) {
+                // Duplicate. Clone citation.
+                var citation = JSON.parse(JSON.stringify(this.config.citationByIndex[citationIdToPos[citationID]]));
+                citationByIndex.push(citation);
+            } else if ("number" !== typeof citationIdToPos[citationID]) {
+                var citationDataNode = doc.getElementById('csdata-' + citationID);
+                if (citationDataNode) {
+                    // Restore data from document record.
+                    this.config.citationByIndex.push(JSON.parse(atob(citationDataNode.innerHTML)));
+                    citationsSeen[citationID] = true;
+                } else {
+                    // No data. Just remove node.
+                    citationNode.parentNode.removeChild(citationNode);
+                    offset--;
+                }
+            } else {
+                // Normal. Push data.
+                var citation = this.config.citationByIndex[citationIdToPos[citationID]];
+                citationByIndex.push(citation);
+                citationsSeen[citationID] = true;
+            }
+        }
+        return citationByIndex;
+    }
+
+    //CiteSupport.prototype.initCitations - function() {
+    //    this.debug('initCitations()');
+    //    spoofCitations();
+    //    // ...
+    //}
 
     var citesupport = new CiteSupport(editor);
     this.citesupport = citesupport;

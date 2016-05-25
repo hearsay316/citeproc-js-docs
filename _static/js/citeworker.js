@@ -89,9 +89,9 @@ function extractRawLocales(style, localeName) {
     }
     var m = style.match(/locale=\"[^\"]+\"/g)
     if (m) {
-        for (var i = 0; i < m.length; i++) {
+        for (var i=0,ilen=m.length;i<ilen;i++) {
             var vals = m[i].slice(0, -1).slice(8).split(/\s+/);
-            for (var j = 0; j < vals.length; j++) {
+            for (var j=0,jlen=vals.length;j<jlen;j++) {
                 var val = vals[j];
                 locales.push(val);
             }
@@ -102,7 +102,7 @@ function extractRawLocales(style, localeName) {
 
 function normalizeLocales(locales) {
     var obj = {};
-    for (var i = 0; i < locales.length; i++) {
+    for (var i=0,ilen=locales.length;i<ilen;i++) {
         var locale = locales[i];
         locale = locale.split('-').slice(0, 2).join('-');
         if (CSL.LANGS[locale]) {
@@ -141,11 +141,11 @@ function fetchLocale(pos, locales, callback) {
 function buildProcessor() {
     citeproc = new CSL.Engine(sys, style, preferredLocale);
     var itemIDs = [];
-
+    
     if (citationByIndex) {
-        for (var i = 0; i < citationByIndex.length; i++) {
+        for (var i=0,ilen=citationByIndex.length;i<ilen;i++) {
             var citation = citationByIndex[i];
-            for (var j = 0; j < citation.citationItems.length; j++) {
+            for (var j=0,jlen=citation.citationItems.length;j<jlen;j++) {
                 var itemID = citation.citationItems[j].id;
                 itemIDs.push(itemID);
             }
@@ -174,6 +174,7 @@ function buildProcessor() {
                  postMessage({
                      command: 'initProcessor',
                      xclass: citeproc.opt.xclass,
+                     citationByIndex: citeproc.registry.citationreg.citationByIndex,
                      rebuildData: rebuildData,
                      bibliographyData: bibRes,
                      result: 'OK'
@@ -202,12 +203,12 @@ function getJurisdictions(d, itemIDs, jurisdictionsCallback) {
     // Installs jurisdiction style modules required by an
     // item in the processor context.
     var jurisdictionIDs = [];
-    for (var i = 0; i < itemIDs.length; i++) {
+    for (var i=0,ilen=itemIDs.length;i<ilen;i++) {
         var itemID = itemIDs[i];
         var item = itemsObj[itemID];
         if (item.jurisdiction) {
             var lst = item.jurisdiction.split(':');
-            for (var j = 0; j < lst.length; j++) {
+            for (var j=0,jlen=lst.length;j<jlen;j++) {
                 var jurisdiction = lst.slice(0, j+1).join(':');
                 if (!jurisdictionsObj[jurisdiction] && jurisdictionIDs.indexOf(jurisdiction) === -1) {
                     jurisdictionIDs.push(jurisdiction);
@@ -242,7 +243,7 @@ onmessage = function(e) {
         break;
     case 'registerCitation':
         itemFetchLst = [];
-        for (var i = 0; i < d.citation.citationItems.length; i++) {
+        for (var i=0,ilen=d.citation.citationItems.length;i<ilen;i++) {
             var itemID = d.citation.citationItems[i].id;
             if (!itemsObj[itemID]) {
                 itemFetchLst.push(itemID);

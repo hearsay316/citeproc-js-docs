@@ -4635,6 +4635,48 @@ CSL.Engine.prototype.processCitationCluster = function (citation, citationsPre, 
         }
     }
     this.tmp.taintedCitationIDs = {};
+    // Fix if duplicate IDs exist
+    var citationIDs = {};
+    citationIDs[citation.citationID] = true;
+    for (var i = 0, ilen = citationsPre.length; i < ilen; i++) {
+        var citationID = citationsPre[i][0];
+        if (citationIDs[citationID]) {
+            var noteIndex = citationsPre[i][1];
+            var newCitation = JSON.parse(JSON.stringify(this.registry.citationreg.citationById[citationID]));
+            newCitation.properties.noteIndex = noteIndex;
+            var oldID = newCitation.citationID;
+            delete newCitation.citationID;
+            this.setCitationId(newCitation);
+            citationID = newCitation.citationID;
+            this.tmp.taintedCitationIDs[citationID] = true;
+            this.registry.citationreg.citationById[citationID] = newCitation;
+            this.registry.citationreg.citationByIndex[i] = newCitation;
+            citationsPre[i][0] = citationID;
+        }
+        citationIDs[citationID] = true;
+    }
+    var offset = 1;
+    for (var i = 0, ilen = citationsPost.length; i < ilen; i++) {
+
+        // XXX MORE WORK TO DO HERE!
+
+        var citationID = citationsPost[i][0];
+        if (citationIDs[citationID]) {
+            var noteIndex = citationsPost[i][1];
+            var newCitation = JSON.parse(JSON.stringify(this.registry.citationreg.citationById[citationID]));
+            newCitation.properties.noteIndex = noteIndex;
+            var oldID = newCitation.citationID;
+            delete newCitation.citationID;
+            this.setCitationId(newCitation);
+            citationID = newCitation.citationID;
+            this.tmp.taintedCitationIDs[citationID] = true;
+            this.registry.citationreg.citationById[citationID] = newCitation;
+            this.registry.citationreg.citationByIndex[i + offset] = newCitation;
+            citationsPost[i][0] = citationID;
+        }
+        citationIDs[citationID] = true;
+    }
+    // Proceed
     var sortedItems = [];
     var rerunAkeys = {};
     for (i = 0, ilen = citation.citationItems.length; i < ilen; i += 1) {
@@ -5849,7 +5891,20 @@ CSL.Engine.prototype.rebuildProcessorState = function (citations, mode, uncitedI
     }
     var doneIDs = {};
     var itemIDs = [];
+    var citationIDs = {};
     for (var i=0,ilen=citations.length;i<ilen;i+=1) {
+        // NOTE: this assumes that supplied noteIndex is correct!
+        var citation = citations[i];
+        var citationID = citation.citationID;
+        if (citationIDs[citationID]) {
+            var newCitation = JSON.parse(JSON.stringify(citation));
+            delete newCitation.citationID;
+            this.setCitationId(newCitation);
+            citationID = newCitation.citationID;
+            citations[i] = newCitation;
+        }
+        citationIDs[citationID] = true;
+        
         for (var j=0,jlen=citations[i].citationItems.length;j<jlen;j+=1) {
             var itemID = "" + citations[i].citationItems[j].id;
             if (!doneIDs[itemID]) {
@@ -6010,7 +6065,7 @@ CSL.localeResolve = function (langstr, defaultLocale) {
     langlst = langstr.split(/[\-_]/);
     ret.base = CSL.LANG_BASES[langlst[0]];
     if ("undefined" === typeof ret.base) {
-        CSL.debug("Warning: unknown locale "+langstr+", setting fallback to "+defaultLocale);
+        //CSL.debug("Warning: unknown locale "+langstr+", setting fallback to "+defaultLocale);
         return {base:defaultLocale, best:langstr, bare:langlst[0]};
     }
     if (langlst.length === 1) {
