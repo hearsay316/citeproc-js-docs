@@ -7,9 +7,10 @@ Release Announcements
 
 ------------------------
 
-==========================
-Changes in version 1.1.103
-==========================
+--------
+v1.1.103
+--------
+
 
 **Title-case capitalization following forward slash**
   With ``text-case="title"`` in an English locale, capitalize a word
@@ -28,9 +29,9 @@ Changes in version 1.1.103
   oblique, and boldface in supplementary (secondary and tertiary)
   text.
 
-==========================
-Changes in version 1.1.102
-==========================
+--------
+v1.1.102
+--------
 
 **Include ``citationID`` in return from ``processCitationCluster()``**
   This is a technical change, with no impact at user level.
@@ -42,9 +43,10 @@ Changes in version 1.1.102
   page updates following a citation edit, so I added that
   value to the return.
 
-==========================
-Changes in version 1.1.101
-==========================
+--------
+v1.1.101
+--------
+
 
 **Delimiter bug with ``year-suffix``**
   Certain delimiters were being dropped when rendering an explicit
@@ -61,9 +63,9 @@ Changes in version 1.1.101
 
   This has been fixed.
 
--------
-1.1.100
--------
+--------
+v1.1.100
+--------
 
 **Non-breaking-space joins following initials**
   Retain zero-width non-breaking space (``\uFEFF``) and non-breaking
