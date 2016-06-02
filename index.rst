@@ -29,6 +29,7 @@ Table of Contents
    testing.rst
    running.rst
    sys-extensions.rst
+   csl-m/index.rst
 
 ..
    csl.rst
