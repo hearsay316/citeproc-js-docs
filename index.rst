@@ -28,6 +28,7 @@ Table of Contents
    setting-up.rst
    testing.rst
    running.rst
+   csl-json/markup.rst
    sys-extensions.rst
    csl-m/index.rst
 

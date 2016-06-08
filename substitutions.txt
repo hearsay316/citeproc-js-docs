@@ -1,3 +1,15 @@
+.. |superscript| raw:: html
+
+   <sup>superscript</sup>
+
+.. |subscript| raw:: html
+
+   <sub>subscript</sub>
+
+.. |small-caps| raw:: html
+
+   <span style="font-variant: small-caps;">small caps</span>
+
 .. |editor| raw:: html
 
    <textarea>
