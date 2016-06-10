@@ -8,6 +8,58 @@ Release Announcements
 ------------------------
 
 --------
+v1.1.107
+--------
+
+**Add ``default-locale`` to ``cs-date``**
+  Previously, in multi-layout styles, the default-locale form of dates
+  as always used for the ``accessed`` date variable, and the localized
+  form was used on all other date variables. The use of default locale
+  can now be controlled in the same way as for ``cs:label`` and
+  ``cs:text``.
+
+
+--------
+v1.1.106
+--------
+
+**Avoid array comprehensions**
+  On line of processor code depended on a form of assignment that is
+  apparently not supported in some JavaScript implementations.  This
+  has been fixed.
+
+**New ``default-locale`` attribute for ``cs:label``, ``cs:text``**
+  In multi-layout styles, there was no way to force use of the
+  default-locale version of specific terms. With ``default-locale="true"``
+  on ``cs:label`` and ``cs:text`` this is now possible.
+
+
+--------
+v1.1.105
+--------
+
+**Extend use of en-dash on locator labels**
+  An en-dash was used for hyphen only on a limited subset of
+  labels. It is generally the right thing to do, so its use
+  has been extended.
+
+--------
+v1.1.104
+--------
+
+**Split Institution field**
+
+**Fix ``locator-date`` and ``locator-extra`` bugs**
+  The ``locator-date`` and ``locator-extra`` variables that depend on
+  content parsed out of the ``locator`` field were not updating
+  correctly in dynamic environments. This has been fixed.
+
+**Fix bugs in new ``year-suffix`` code from 1.1.100**
+  The fix at 1.1.100 introduced fresh bugs in year-suffix
+  disambiguation.  These have been squashed.
+
+
+--------
 v1.1.103
 --------
 
