@@ -7,6 +7,154 @@ Release Announcements
 
 ------------------------
 
+--------
+v1.1.107
+--------
+
+**Add ``default-locale`` to ``cs-date``**
+  Previously, in multi-layout styles, the default-locale form of dates
+  as always used for the ``accessed`` date variable, and the localized
+  form was used on all other date variables. The use of default locale
+  can now be controlled in the same way as for ``cs:label`` and
+  ``cs:text``.
+
+
+--------
+v1.1.106
+--------
+
+**Avoid array comprehensions**
+  On line of processor code depended on a form of assignment that is
+  apparently not supported in some JavaScript implementations.  This
+  has been fixed.
+
+**New ``default-locale`` attribute for ``cs:label``, ``cs:text``**
+  In multi-layout styles, there was no way to force use of the
+  default-locale version of specific terms. With ``default-locale="true"``
+  on ``cs:label`` and ``cs:text`` this is now possible.
+
+
+--------
+v1.1.105
+--------
+
+**Extend use of en-dash on locator labels**
+  An en-dash was used for hyphen only on a limited subset of
+  labels. It is generally the right thing to do, so its use
+  has been extended.
+
+--------
+v1.1.104
+--------
+
+**Split Institution field**
+
+**Fix ``locator-date`` and ``locator-extra`` bugs**
+  The ``locator-date`` and ``locator-extra`` variables that depend on
+  content parsed out of the ``locator`` field were not updating
+  correctly in dynamic environments. This has been fixed.
+
+**Fix bugs in new ``year-suffix`` code from 1.1.100**
+  The fix at 1.1.100 introduced fresh bugs in year-suffix
+  disambiguation.  These have been squashed.
+
+
+--------
+v1.1.103
+--------
+
+
+**Title-case capitalization following forward slash**
+  With ``text-case="title"`` in an English locale, capitalize a word
+  that follows a forward slash.
+
+**Escape ``sup`` and ``sub`` tags when capitalizing**
+  Properly escape <sup></sup> and <sub></sub> markup when applying
+  text transforms (fixes a bug unmasked by the change above).
+
+**Use title as fallback for ``citation-label``**
+  When no authors are available for ``citation-label``, use a fragment
+  of the title.
+
+**Strip font style and weight in multilingual variants**
+  When adding multilingual variants in output, suppress italics,
+  oblique, and boldface in supplementary (secondary and tertiary)
+  text.
+
+--------
+v1.1.102
+--------
+
+**Include ``citationID`` in return from ``processCitationCluster()``**
+  This is a technical change, with no impact at user level.
+
+  While building a small demo of dynamic citation editing
+  is a Web-based WYSIWYG editor, I found that including 
+  the value of ``citationID`` in the return from the
+  ``processCitationCluster()`` function greatly simplified
+  page updates following a citation edit, so I added that
+  value to the return.
+
+--------
+v1.1.101
+--------
+
+
+**Delimiter bug with ``year-suffix``**
+  Certain delimiters were being dropped when rendering an explicit
+  ``year-suffix`` element (a numeric value rendered as a string). This
+  has been fixed.
+
+**Stray ``year-suffix`` bug**
+
+  In a bug related to the one above, and apparently triggered by
+  changes in ``1.1.100``, an implicit ``year-suffix`` was rendering on
+  dates with empty variables.
+
+    https://forums.zotero.org/discussion/58636/collapse-yearsuffix-in-chicago-manual-of-style/#Item_5
+
+  This has been fixed.
+
+--------
+v1.1.100
+--------
+
+**Non-breaking-space joins following initials**
+  Retain zero-width non-breaking space (``\uFEFF``) and non-breaking
+  space (``\u00A0``) as the inter-initials join when these are the
+  last character in the ``@initialize-with`` attribute value.
+  
+  In the RU (Russian), CS (Czech) and FR (French) locales only, when
+  either of the non-breaking space elements is present in the
+  attribute value, use non-breaking space (``\u00A0``) as the
+  given-to-family join when building initialized names in non-sort
+  order. Otherwise, use an ordinary space for the given-to-family
+  join.
+
+  Resolves the issue discussed at:
+
+    https://forums.zotero.org/discussion/31693/nonbreaking-space-unavailable-between-initials-and-names
+
+  **NB:** This behaviour was added for the CS locale at later tag ``1.1.103``.
+
+**Date styling bug**
+  The affixes of a ``cs:date`` node with no variable content
+  could affect the styling of subsequent date nodes. This
+  has been fixed.
+
+**Bug in ``year-suffix``**
+  The ``year-suffix`` form of disambiguation was misbehaving when used
+  with ``collapse="year"`` or ``collapse="year-suffix"``. This has been fixed.
+
+-------
+v1.1.99
+-------
+
+**Fix pluralism of embedded labels**
+   Shortcode labels that differ from the "main" label on a number
+   (as in "p. 123 n. 1 & 2") were not pluralizing properly. This
+   has been fixed.
+
 -------
 v1.1.98
 -------
