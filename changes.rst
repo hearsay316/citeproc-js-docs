@@ -8,6 +8,84 @@ Release Announcements
 ------------------------
 
 --------
+v1.1.113
+--------
+
+**Fix bug in logging code introduced at 1.1.111**
+  Minutes after a Juris-M release incorporating the changes below,
+  a colleague knocked on my door to say that word processor input
+  had suddenly broken. We traced the cause to entries with an
+  invalid language code ("Japanese" rather than "ja"), which should
+  have logged a warning without throwing an error. The cause was
+  a typo in the logging function itself (a missing argument in the
+  signature). Now fixed, and things should work normally.
+
+--------
+v1.1.112
+--------
+
+**Fix Homer-worthy nesting bug**
+  A research group (at Heidelberg University) had been getting
+  persistent errors when attempting to generate multilingual
+  bibliographies. The fault was traced to a clear coding error in the
+  code used to output tertiary variants (i.e. the second of two
+  variants to a cite field value). The fault has been fixed, and
+  multilingual bibliographies in all configurations should now render
+  without error.
+
+--------
+v1.1.111
+--------
+
+**Use dump rather than throw if console not available**
+  Previously, the ``CSL.error()`` function would throw a hard
+  (crashing) error on systems that did not have a native
+  ``console.log()`` function with the expected characteristics (hello
+  Windows). With this fix, the code falls back to the more primitive
+  ``dump()`` logging function, avoiding a crash.  (Note that there was
+  a bug in this fix, repaired at 1.1.113)
+
+--------
+v1.1.110
+--------
+
+**Wrap section field remap in condition**
+  For legal item types in CSL-M styles, the ``section`` field is remapped to
+  ``locator``, the allow storage of individual statutory sections as separate
+  items in the database. This behaviour is not desired in standard CSL,
+  but was not properly disabled. With the addition of a conditional,
+  remapping is now properly disabled in vanilla CSL.
+
+--------
+v1.1.109
+--------
+
+**Fix sorting behaviour**
+  Sort comparisons in JavaScript engines are (still) producing
+  inconsistent results. This fix tests the effect of separator strings
+  hacked into processor-generated sort keys, choosing the separating
+  character (at-mark ``@`` or field-separator ``|``) that will produce
+  a correct sort. Tests prepared in response to the relevant
+  bug report (from a user with Danish requirements) now pass,
+  and existing sort tests also clear.
+
+--------
+v1.1.108
+--------
+
+**Remove ``indexOf()`` definition**
+  Modern JavaScript engines all have ``indexOf()`` as a native
+  method on ``Array()``, so this workaround is no longer necessary.
+
+**Show institution name variants even when abbrev is used**
+  Previously, when the short form of an institution name was used,
+  its variants were not displayed, even in the first reference.
+  With this change, variants are displayed. Some further tuning
+  may be in order here, since institution names have differing
+  roles for courts and for "proper" institutional authors, but
+  we will pick up those use cases as they emerge over time.
+
+--------
 v1.1.107
 --------
 
