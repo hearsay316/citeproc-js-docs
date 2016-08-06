@@ -69,7 +69,7 @@ Note that tags must be JSON-encoded in the input object::
 **<sup>superscript</sup>**
   Set the enclosed text in |superscript| form.
 
-**<sup>superscript</sup>**
+**<sub>subscript</sub>**
   Set the enclosed text in |subscript| form.
 
 **<span class="nocase">superscript</span>**
