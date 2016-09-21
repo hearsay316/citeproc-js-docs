@@ -46,9 +46,10 @@ Encoding citation data items in properly formatted CSL-JSON is essential to gett
 Field Types
 ===========
 
-!!!!!!!!
+!!!!!!!!!!
 *ID* Field
-!!!!!!!!
+!!!!!!!!!!
+
 **Required.** The *id* field is a simple field containing any string or numeric value. The value of the ID field must uniquely identify the item, as this field is used to retrieve items by their ID value.
 
 .. code-block:: javascript
@@ -57,9 +58,10 @@ Field Types
 	"id":"unique_string-1219205"
    }
 
-!!!!!!!!!!
+!!!!!!!!!!!!
 *Type* Field
-!!!!!!!!!!
+!!!!!!!!!!!!
+
 **Required.** The *type* field is a simple field containing a string value. CSL-JSON constrains the possible for values of the *type* field to a limited set of possible values (*e.g.*, "book" or "article"). The type must be a valid CSL type under the schema of the installed style. See the schemata of `CSL <https://github.com/citation-style-language/schema/blob/master/csl-types.rnc>`_ and `CSL-M <https://github.com/Juris-M/schema/blob/master/csl-mlz.rnc#L763>`_ for their respective lists of valid types.
 
 .. code-block:: javascript
@@ -159,6 +161,7 @@ The second date format is a raw string. The recommended encoding is a string tha
 *Raw Format*
 
 .. code-block:: javascript
+
    "archived": [
 	{
 		"raw": "2005-4-12"
@@ -176,6 +179,7 @@ Citation Items Container
 In CSL-JSON, a container for citation items is an array. When passing citation items to the Processor, an array ensures that the ordering of citations is preserved.
 
 .. code-block:: javascript
+
    CitationItems = [
 	{
 		"id":"item1",
@@ -227,3 +231,95 @@ Note that tags must be JSON-encoded in the input object::
 **<span class="nocase">superscript</span>**
   Suppress case-changes that would otherwise be applied to the
   enclosed text by the style.
+
+-------------------------------
+"Cheater Syntax" for Odd Fields
+-------------------------------
+
+The CSL variables needed to render a particular citation may not be
+available directly in the data structures of a calling application.
+For those situations, the processor recognizes supplementary values
+entered into the ``note`` field of a CSL item. The facility is available
+when the processor is run with the ``field_hack`` option (enabled by
+default)::
+
+  citeproc.opt.development_extensions.field_hack = true
+
+This method of data entry is intended as a temporary workaround to
+avoid blocking issues in user projects; it is not supported by all CSL
+processors, and does not form part of the CSL standard.
+
+Two forms of "cheater syntax" are recognized in the CSL ``note`` field.
+When ``field_hack`` is enabled, the processor will recognize both,
+and the two forms may be mixed within the field.
+
+Note that values added with "cheater syntax" via the ``note`` field
+will take effect *only if the field has no existing value in the 
+CSL item*. The entry forms described here will not overwrite existing
+data.
+
+Braced-entry
+============
+
+Awkward to type and ugly to read, the braced-entry syntax has been
+recognized by the processor for several years, and a significant
+proportion of entries in circulation rely on it. The general
+markup pattern for a single variable looks like this::
+
+  {:<variable_name>:<value>}
+
+``<variable_name>`` must be a recognized (case-sensitive) CSL variable
+name.  The entry may be located anywhere in the field, and may be
+embedded in other text within a line. Multiple entries are recognized.
+In the case of name variables (see below), entries are cumulative; for
+other variables, the last entry encountered wins.
+
+Within an entry, there must be no space between the opening brace and
+the second colon. Spaces are permitted after the second colon (leading
+and trailing space will be trimmed from the variable value). Newlines
+are not permitted between the opening and closing braces, and there is
+no means of escaping a closing brace.
+
+Line-entry
+==========
+
+The line-entry format was introduced with ``citeproc-js`` version
+``1.1.132``, in belated response to repeated suggestions on the
+Zotero forums. The general markup for inline syntax looks like this::
+
+  Some text (or no text) ...
+  <variable_name>:<value>
+  ... other text (or no text) ...
+
+Again, ``<variable_name>`` is a recognized (case-sensitive) CSL variable.
+All characters other than newline are valid after the colon. Leading
+or trailing space on the extracted ``<value>`` will be trimmed.
+
+Value formats
+=============
+
+The ``<value>`` is assigned literally to ordinary numeric or text variables.
+The content of name and date variables must be parsed out, and there
+are some syntax conventions for these.
+
+
+**Date variables**
+  Date variables should be entered in ISO year-month-day syntax::
+
+      orginal-date: 2001-12-31
+
+**Name variables**
+  Name variables come in two flavors: single-field names and two-field names.
+  Personal names are ordinarily of the two-field flavor. Fields are separated
+  by *double* field-separator characters (``||``)::
+
+      editor: Thompson || Hunter S.
+
+  Single-field names may represent institutions, and these may be
+  composed of several sub-units separated by a *single* field-separator
+  character (``|``)::
+
+      author: Prince
+      author: National Weather Service|Office of International Affairs
+
+  Unlike the other variable types, entries for name variables are cumulative.
