@@ -238,10 +238,10 @@ Note that tags must be JSON-encoded in the input object::
 
 The CSL variables needed to render a particular citation may not be
 available directly in the data structures of a calling application.
-For those situations, the processor recognizes supplementary values
-entered into the ``note`` field of a CSL item. The facility is available
-when the processor is run with the ``field_hack`` option (enabled by
-default)::
+For those situations, the processor can recognize supplementary values
+entered into the ``note`` field of a CSL item. The facility is
+available when the processor is run with the ``field_hack`` option
+(default is ``true``)::
 
   citeproc.opt.development_extensions.field_hack = true
 
@@ -251,12 +251,8 @@ processors, and does not form part of the CSL standard.
 
 Two forms of "cheater syntax" are recognized in the CSL ``note`` field.
 When ``field_hack`` is enabled, the processor will recognize both,
-and the two forms may be mixed within the field.
-
-Note that values added with "cheater syntax" via the ``note`` field
-will take effect *only if the field has no existing value in the 
-CSL item*. The entry forms described here will not overwrite existing
-data.
+and the two forms may be mixed within the field. Entries in the "cheater
+syntax" are referred to below as "objects."
 
 Braced-entry
 ============
@@ -268,45 +264,72 @@ markup pattern for a single variable looks like this::
 
   {:<variable_name>:<value>}
 
-``<variable_name>`` must be a recognized (case-sensitive) CSL variable
-name.  The entry may be located anywhere in the field, and may be
-embedded in other text within a line. Multiple entries are recognized.
-In the case of name variables (see below), entries are cumulative; for
-other variables, the last entry encountered wins.
+Within a braced-entry object, there must be no space between the
+opening brace and the second colon, with no uppercase
+characters. Arbitrary text, including spaces but excluding newlines,
+is permitted after the second colon (leading and trailing space will
+be trimmed from the variable value). There is no means of escaping a
+closing brace.
 
-Within an entry, there must be no space between the opening brace and
-the second colon. Spaces are permitted after the second colon (leading
-and trailing space will be trimmed from the variable value). Newlines
-are not permitted between the opening and closing braces, and there is
-no means of escaping a closing brace.
+Entries must be placed at the top of the field, and will be removed
+from the ``note`` field before further processing. To be recognized in
+styles, ``<variable_name>`` must be a valid (case-sensitive) CSL
+variable name.
 
 Line-entry
 ==========
 
-The line-entry format was introduced with ``citeproc-js`` version
-``1.1.132``, in belated response to repeated suggestions on the
-Zotero forums. The general markup for inline syntax looks like this::
+Full support for the line-entry format debuted with ``citeproc-js``
+version ``1.1.135``, in belated response to repeated suggestions on
+the Zotero forums. The general markup for inline syntax looks like
+this::
 
-  Some text (or no text) ...
   <variable_name>:<value>
-  ... other text (or no text) ...
 
-Again, ``<variable_name>`` is a recognized (case-sensitive) CSL variable.
-All characters other than newline are valid after the colon. Leading
-or trailing space on the extracted ``<value>`` will be trimmed.
+Within a line-entry object, there must be no space between the
+beginning of the line and the colon, with no uppercase characters.
+Arbitrary text, including spaces, is permitted to the end of the line
+(leading and trailing space will be trimmed from the variable value).
+
+Handling of entries
+===================
+
+Conforming braced-entry and line-entry objects must occur at the top
+of the ``note`` field: parsing stops when ordinary text (or an entry
+that does not satisfy the conditions stated above) is encountered.
+
+Multiple entries are recognized. In the case of name variables (see
+below), entries are cumulative; for other variables, the last entry
+encountered wins (but see the cautionary notes on the override of
+existing item data, below).
+
 
 Value formats
 =============
 
-The ``<value>`` is assigned literally to ordinary numeric or text variables.
-The content of name and date variables must be parsed out, and there
-are some syntax conventions for these.
-
+Variables that can be set with the "cheater syntax" are of four types:
+*date*, *name*, *type*, and *ordinary*
 
 **Date variables**
   Date variables should be entered in ISO year-month-day syntax::
 
-      orginal-date: 2001-12-31
+      original-date: 2001-12-31
+
+  The processor's internal date parsing function, applied to the
+  date content, recognizes date ranges as well::
+
+      original-date: 2001-12-15/2001-12-31
+
+  .. caution:: **Overrides (date variables)**
+
+     By default, date variables entered in "cheater syntax" will override
+     an existing value in the item. This is permitted because the processor's
+     internal parser may offer better recognition of date forms (such as ranges)
+     than that of the calling application. Date value override may be disabled
+     by setting the relevant toggle to ``false`` after processor instantiation::
+       
+       citeproc.opt.development_extensions.allow_field_hack_date_override = false
+  
 
 **Name variables**
   Name variables come in two flavors: single-field names and two-field names.
@@ -322,4 +345,32 @@ are some syntax conventions for these.
       author: Prince
       author: National Weather Service|Office of International Affairs
 
-  Unlike the other variable types, entries for name variables are cumulative.
+  .. caution:: **Overrides (name variables)**
+
+     Unlike the other variable types, entries for name variables are cumulative;
+     however, name entries in "cheater syntax" will not override an existing
+     creator of the same CSL category.
+
+**Item type**
+  The item type may also be set with either syntax::
+
+      type: dataset
+
+  Note, however, that when a type not recognized by the target style
+  is set in this way, the item will be processed as an untyped item
+  (sometimes described as a generic type such as "Document" in calling
+  applications).
+
+  .. caution:: **Overrides (item type)**
+
+     An item type value set in "cheater syntax" always overrides the
+     existing item type.
+
+**Ordinary variables**
+  Entries other than those above are assumed to be ordinary variables.
+  these are set literally on the item, with no pre-processing.
+
+  .. caution:: **Overrides (ordinary variables)**
+
+     Ordinary variables set in "cheater syntax" will not override
+     an existing value for the same variable.
