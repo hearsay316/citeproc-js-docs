@@ -251,30 +251,33 @@ processors, and does not form part of the CSL standard.
 
 Two forms of "cheater syntax" are recognized in the CSL ``note`` field.
 When ``field_hack`` is enabled, the processor will recognize both,
-and the two forms may be mixed within the field. Entries in the "cheater
-syntax" are referred to below as "objects."
+and the two forms may be mixed within the field.
+
+.. _variable-names-tip:
+
+.. tip:: **Variable Names**
+
+   In the braced-entry and line-entry descriptions below, a
+   recognized ``<variable_name>`` is one which consists of:
+
+   * Uppercase roman characters *only* (i.e. ``[A-Z]+``); or
+   * Lowercase roman characters, hyphens, or underscores *only* (i.e. ``[-_a-z]+``).
 
 Braced-entry
 ============
 
-Awkward to type and ugly to read, the braced-entry syntax has been
-recognized by the processor for several years, and a significant
-proportion of entries in circulation rely on it. The general
-markup pattern for a single variable looks like this::
+Awkward to type, ugly to read and fragile, the braced-entry syntax has
+been recognized by the processor for several years, and a significant
+proportion of entries in circulation rely on it. The general markup
+pattern for a single variable looks like this::
 
   {:<variable_name>:<value>}
 
-Within a braced-entry object, there must be no space between the
-opening brace and the second colon, with no uppercase
-characters. Arbitrary text, including spaces but excluding newlines,
-is permitted after the second colon (leading and trailing space will
-be trimmed from the variable value). There is no means of escaping a
-closing brace.
-
-Entries must be placed at the top of the field, and will be removed
-from the ``note`` field before further processing. To be recognized in
-styles, ``<variable_name>`` must be a valid (case-sensitive) CSL
-variable name.
+A recognized ``<variable_name>`` must appear be between the colons
+(see :ref:`Tip: Variable Names <variable-names-tip>` above).  Arbitrary
+text, including spaces but excluding newlines, is permitted after the
+second colon (leading and trailing space will be trimmed from the
+variable value). There is no means of escaping a closing brace.
 
 Line-entry
 ==========
@@ -286,10 +289,11 @@ this::
 
   <variable_name>:<value>
 
-Within a line-entry object, there must be no space between the
-beginning of the line and the colon, with no uppercase characters.
-Arbitrary text, including spaces, is permitted to the end of the line
-(leading and trailing space will be trimmed from the variable value).
+The line must begin with a recognized ``<variable_name>`` punctuated
+with a colon (see :ref:`Tip: Variable Names <variable-names-tip>`
+above). Arbitrary text, including spaces, is permitted to the end of
+the line (leading and trailing space will be trimmed from the variable
+value).
 
 Handling of entries
 ===================
@@ -297,6 +301,7 @@ Handling of entries
 Conforming braced-entry and line-entry objects must occur at the top
 of the ``note`` field: parsing stops when ordinary text (or an entry
 that does not satisfy the conditions stated above) is encountered.
+Entries are removed from the ``note`` field before onward processing.
 
 Multiple entries are recognized. In the case of name variables (see
 below), entries are cumulative; for other variables, the last entry
