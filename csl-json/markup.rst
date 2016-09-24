@@ -298,10 +298,12 @@ value).
 Handling of entries
 ===================
 
-Conforming braced-entry and line-entry objects must occur at the top
-of the ``note`` field: parsing stops when ordinary text (or an entry
-that does not satisfy the conditions stated above) is encountered.
-Entries are removed from the ``note`` field before onward processing.
+Conforming braced-entries and line-entries must occur at the top of
+the ``note`` field. The set of entries may begin on the first *or* the
+second line of the field: parsing stops when the parser encounters a
+non-empty line *after the first* that does not fit the descriptions
+above.  Parsed entries are removed from the ``note`` field before onward
+processing.
 
 Multiple entries are recognized. In the case of name variables (see
 below), entries are cumulative; for other variables, the last entry
