@@ -139,14 +139,14 @@ Some personal names are represented by a single field (e.g. mononyms such as "Pr
 !!!!!!!!!!!!!!!
 Date Field Type
 !!!!!!!!!!!!!!!
-A date field is a complex field that expresses a date or a range of dates. An example date field in CSL is *issued*, which identifies the date an item was issued or published. Date fields can be expressed in two different formats. The first format is an array format. To express a date range in this format, the ending date would be set as a second array.
+A date field is a complex field that expresses a date or a range of dates. An example date field in CSL is *issued*, which identifies the date an item was issued or published. Date fields can be expressed in two different formats. The first format is an array format (note the double-nesting of the array). To express a date range in this format, the ending date would be set as a second array.
 
 *Array Format*
 
 .. code-block:: javascript
 
    "archived": {
-	"date-parts": [ 2005, 4, 12 ]
+	"date-parts": [[ 2005, 4, 12 ]]
    },
    "issued": {
 	"date-parts": [[ 2000, 3, 15 ], [2000, 3, 17]]
