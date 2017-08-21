@@ -1,15 +1,11 @@
-==================
-Deployment example
-==================
+=============================
+Demo: Standalone Bibliography
+=============================
 
 .. include:: substitutions.txt
-|CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
+|CCBYSA| `Frank Bennett <https://twitter.com/fgbjr>`_
 
 ------------------------
-
-------------
-Introduction
-------------
 
 This page illustrates a simple deployment that renders a small
 bibliography. The original of this example was kindly provided by
@@ -17,9 +13,15 @@ bibliography. The original of this example was kindly provided by
 was hosted on BitBucket. I have modified it (very) slightly to
 illustrate the use of the Zotero API.
 
-The code explained below is embedded live in this page; you can take
-it through its paces by clicking the "Generate citations" button at
-the bottom of the document.
+-----------------------
+My Amazing Bibliography
+-----------------------
+
+|cites-target|
+|cites-button|
+
+
+|more|
 
 --------------
 Style and Data
@@ -138,8 +140,4 @@ the strings gives us the HTML for inclusion in the page.
      return result[1].join('\n');
    }
 
-
-
-|cites-target|
-|cites-button|
 

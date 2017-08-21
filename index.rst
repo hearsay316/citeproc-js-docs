@@ -9,7 +9,7 @@ citeproc-js
 A JavaScript implementation of the Citation Style Language
 
 .. include:: substitutions.txt
-|CCBYSA|_ `Frank Bennett <https://twitter.com/fgbjr>`_
+|CCBYSA| `Frank Bennett <https://twitter.com/fgbjr>`_
 
 ------------------------
 
@@ -21,11 +21,21 @@ Table of Contents
    :maxdepth: 1
 
    acknowledgements.rst
+   changes.rst
+   deployments.rst
+   dynamic-editing.rst
+   editor.rst
    setting-up.rst
    testing.rst
-   deployments.rst
    running.rst
+   csl-json/markup.rst
    sys-extensions.rst
+   csl-m/index.rst
+
+..
    csl.rst
    input.rst
    configuration.rst
+
+   deployments.rst
+   dynamic-editing.rst

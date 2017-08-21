@@ -1,58 +1,10 @@
 {% extends "!layout.html" %}
 
 {%- block extrahead %} 
- <script src="https://fbennett.github.io/juris-m-top/js/citeproc.js"></script>
- <style>
-   #csl-outer-block {
-      position: absolute;
-      height: 0px;
-      max-width: 40em;
-    }
-   #csl-inner-block {
-      max-width: 40em;
-      height: 15em;
-      position: relative;
-      bottom: 17em;
-      left: 2em;
-    }
-    #csl-content-block {
-      background:white;
-      border: solid black 1px;
-      overflow-y: scroll;
-      padding: 0.5em;
-      box-shadow: 10px 10px 5px #888888;
-   }
-   .csl-hide {
-     -webkit-opacity: 0;
-     -moz-opacity: 0;
-     opacity: 0;
-     -webkit-transition: all 0.75s ease;
-     -moz-transition: all 0.75s ease;
-     -ms-transition: all 0.75s ease;
-     -o-transition: all 0.75s ease;
-     transition: all 0.75s ease;
-     -webkit-transition-delay: 0.25s;
-     -moz-transition-delay: 0.25s;
-     -ms-transition-delay: 0.25s;
-     -o-transition-delay: 0.25s;
-     transition-delay: 0.25s;
-   }
-   .csl-show {
-     -webkit-opacity: 100;
-     -moz-opacity: 100;
-     opacity: 100;
-     -webkit-transition: all 0.75s ease;
-     -moz-transition: all 0.75s ease;
-     -ms-transition: all 0.75s ease;
-     -o-transition: all 0.75s ease;
-     transition: all 0.75s ease;      
-   }
-   .csl-entry {
-     text-indent: -1.5em;
-     margin-left: 1.5em;
-     margin-bottom: 0.5em;
-   }
- </style>
+ <link href='_static/css/screen.css' rel='stylesheet' type='text/css'>
+ <script type="text/javascript" src="_static/js/global.js"></script>
+ {% if pagename == 'deployments' %}
+ <script type="text/javascript" src="_static/js/citeproc.js"></script>
  <script type="text/javascript">
 
   // Library of Cornell Conservation Agriculture
@@ -130,5 +82,28 @@
       button.innerHTML = "Generate citations";
     }
   }
-  </script>      
+
+  
+  </script>
+  {% endif %}
+
+  {% if pagename == 'dynamic-editing' %}
+  <link href='_static/octicons/octicons/octicons.css' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="_static/js/citesupport-es6.js"></script>
+  {% endif %}
+  {% if pagename == 'editor' %}
+  <script src="_static/tinymce/js/tinymce/tinymce.min.js"></script>
+  <script>
+    tinyMCE.baseURL = '_static/tinymce/js/tinymce'
+    tinymce.init({
+        selector:"textarea",
+        content_css: "_static/css/screen.css",
+        plugins: "noneditable citesupport citeaddedit citestylemenu",
+        toolbar: [ "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+                   "citeaddedit | citestylemenu"
+        ],
+        height: "300"
+    });
+  </script>
+  {% endif %}
 {% endblock %}
