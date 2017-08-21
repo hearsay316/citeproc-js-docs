@@ -11,12 +11,12 @@ Running the Processor
 Introduction
 ------------
 
-The processor loads as a single ``CSL`` object. To run the processor, create
-and instance with the ``CSL.Engine()`` method:
+The processor loads as a single ``CSL`` object, and must be instantiated
+before use:
 
 .. code-block:: javascript
 
-   var citeproc = CSL.Engine(sys, style, lang, forceLang);
+   var citeproc = new CSL.Engine(sys, style, lang, forceLang);
 
 *sys*
     **Required.** A JavaScript object providing (at least) the functions
@@ -174,3 +174,293 @@ the fields:
     a number of sensible date conventions, but the numeric
     year-month-day format is unambiguous, easy to remember and simple
     to produce.
+
+----------------------------------
+Public methods: data and rendering
+----------------------------------
+
+The instantiated processor offers a few basic methods for handling
+input and obtaining rendered output. A few terms will be used with
+a specific meaning in the descriptions below.
+
+*item*
+    An item is a single bundle of metadata for a source to be referenced.
+    See the `CSL Specification <http://docs.citationstyles.org/en/stable/specification.html>`_
+    for details on the fields available on an item, and the `CSL-JSON chapter of this manual <http://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html>`_
+    for the format of specific field types. Every item must have an ``id``
+    and a ``type``.
+    
+*citation*
+    A citation is a set of one or more items, optionally supplemented by
+    locator information, prefixes or suffixes supplied by the user.
+
+*registry*
+    The processor maintains a stateful registry of details on each item
+    submitted for processing. Registry entries are maintained
+    automatically, and cover matters such as disambiguation parameters,
+    sort sequence, and the first reference in which an item occurs.
+
+*citable items*
+    Citable items are those meant for inclusion only if used in one or
+    more citations.
+
+*uncited items*
+    Uncited items are those meant for inclusion regardless of whether
+    they are used in a citation.
+
+    
+!!!!!!!!!!!
+updateItems
+!!!!!!!!!!!
+
+The ``updateItems()`` method accepts a single argument when invoked
+as a public method, and refreshes the registry with a designated
+set of citable items. Citable items not listed in the argument are removed from the
+registry:
+
+.. code-block:: javascript
+
+   citeproc.updateItems(idList);
+
+*idList*
+    **Required.** A JavaScript array of item ``id`` values,
+    which may be number or string: 
+
+    .. code-block:: javascript
+
+        ['Item-1', 'Item-2']
+
+!!!!!!!!!!!!!!!!!!
+updateUncitedItems
+!!!!!!!!!!!!!!!!!!
+
+Like its corollary above, the ``updateUncitedItems()`` method  the registry accepts a single
+argument, but refreshes the registry with a designated set of uncited items.
+Uncited items not listed in the argument are removed from the registry.
+
+
+.. code-block:: javascript
+
+   citeproc.updateItems(idList);
+
+*idList*
+    **Required.** A JavaScript array of item ``id`` values,
+    which may be number or string: 
+
+    .. code-block:: javascript
+
+        ['Item-1', 'Item-2']
+
+!!!!!!!!!!!!!!!!
+makeBibliography
+!!!!!!!!!!!!!!!!
+
+The ``makeBibliography()`` method returns a single bibliography object based on
+the current state of the processor registry. It accepts on optional argument.
+
+
+.. code-block:: javascript
+
+   var result = citeproc.makeBibliography(filter);
+
+
+   
+The object returned is an array 
+
+
+The value returned by this command is a two-element list, composed of
+a JavaScript array containing certain formatting parameters, and a
+list of strings representing bibliography entries.  It is the responsibility
+of the calling application to compose the list into a finish string
+for insertion into the document.  The first
+element —- the array of formatting parameters —- contains the key/value
+pairs shown below (the values shown are the processor defaults in the
+HTML output mode):
+
+.. sourcecode:: js
+
+   [
+      { 
+         maxoffset: 0,
+         entryspacing: 0,
+         linespacing: 0,
+         hangingindent: 0,
+         second-field-align: false,
+         bibstart: "<div class=\"csl-bib-body\">\n",
+         bibend: "</div>",
+         bibliography_errors: [],
+         entry_ids: [\"Item-1\", \"Item-2\"]
+      },
+      [
+         "<div class=\"csl-entry\">Book A</div>",
+         "<div class=\"csl-entry\">Book C</div>"
+      ]
+   ]
+
+*maxoffset*
+   Some citation styles apply a label (either a number or an
+   alphanumeric code) to each bibliography entry, and use this label
+   to cite bibliography items in the main text.  In the bibliography,
+   the labels may either be hung in the margin, or they may be set
+   flush to the margin, with the citations indented by a uniform
+   amount to the right.  In the latter case, the amount of indentation
+   needed depends on the maximum width of any label.  The
+   ``maxoffset`` value gives the maximum number of characters that
+   appear in any label used in the bibliography.  The client that
+   controls the final rendering of the bibliography string should use
+   this value to calculate and apply a suitable indentation length.
+
+*entryspacing*
+   An integer representing the spacing between entries in the bibliography.
+
+*linespacing*
+   An integer representing the spacing between the lines within
+   each bibliography entry.
+
+*hangingindent*
+   The number of em-spaces to apply in hanging indents within the
+   bibliography.
+
+*second-field-align*
+   When the ``second-field-align`` CSL option is set, this returns
+   either "flush" or "margin".  The calling application should
+   align text in bibliography output as described in the `CSL specification`__.
+   Where ``second-field-align`` is not set, this return value is set to ``false``.
+
+*bibstart*
+   A string to be appended to the front of the finished bibliography
+   string.
+   
+*bibend*
+   A string to be appended to the end of the finished bibliography
+   string.
+
+
+__ http://citationstyles.org/downloads/specification.html#bibliography-specific-options
+
+
+!!!!!!!!!!!!!!!!
+Selective output
+!!!!!!!!!!!!!!!!
+
+The ``makeBibliography()`` command accepts one optional argument,
+which is a nested JavaScript object that may contain
+*one of* the objects ``select``, ``include`` or ``exclude``, and
+optionally an additional  ``quash`` object.  Each of these four objects
+is an array containing one or more objects with ``field`` and ``value``
+attributes, each with a simple string value (see the examples below).
+The matching behavior for each of the four object types, with accompanying
+input examples, is as follows:
+
+``select``
+   For each item in the bibliography, try every match object in the array against
+   the item, and include the item if, and only if, *all* of the objects match.
+
+.. admonition:: Hint
+
+   The target field in the data items registered in the processor
+   may either be a string or an array.  In the latter case,
+   an array containing a value identical to the
+   relevant value is treated as a match.
+
+.. sourcecode:: js
+
+   var myarg = {
+      "select" : [
+         {
+            "field" : "type",
+            "value" : "book"
+         },
+         {  "field" : "categories",
+             "value" : "1990s"
+         }
+      ]
+   }
+
+   var mybib = cp.makeBibliography(myarg);
+
+``include``
+   Try every match object in the array against the item, and include the
+   item if *any* of the objects match.
+
+.. sourcecode:: js
+
+   var myarg = {
+      "include" : [
+         {
+            "field" : "type",
+            "value" : "book"
+         }
+      ]
+   }
+
+   var mybib = cp.makeBibliography(myarg);
+
+``exclude``
+   Include the item if *none* of the objects match.
+
+.. sourcecode:: js
+
+   var myarg = {
+      "exclude" : [
+         {
+            "field" : "type",
+            "value" : "legal_case"
+         },
+         {
+            "field" : "type",
+            "value" : "legislation"
+         }
+      ]
+   }
+
+   var mybib = cp.makeBibliography(myarg);
+
+``quash``
+   Regardless of the result from ``select``, ``include`` or ``exclude``,
+   skip the item if *all* of the objects match.
+
+
+.. admonition:: Hint
+
+   An empty string given as the field value will match items
+   for which that field is missing or has a nil value.
+
+.. sourcecode:: js
+
+   var myarg = {
+      "include" : [
+         {
+            "field" : "categories",
+            "value" : "classical"
+         }
+      ],
+      "quash" : [
+         {
+            "field" : "type",
+            "value" : "manuscript"
+         },
+         {
+            "field" : "issued",
+            "value" : ""
+         }
+      ]
+   }
+
+   var mybib = cp.makeBibliography(myarg);
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!
+processCitationCluster
+!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!
+previewCitationCluster
+!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!
+makeCitationCluster
+!!!!!!!!!!!!!!!!!!!
+
