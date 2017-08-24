@@ -1,3 +1,11 @@
+div.admonition {
+    border-left: 1px solid #aaaaaa;
+    border-right: 1px solid #aaaaaa;
+    border-bottom: 1px solid #aaaaaa;
+    background: #d4e3ec;
+    padding: 12px;
+    margin-bottom: 6px;
+}
 #integrator-notes li {
     margin-bottom: 1em;
     background: #efefef;
