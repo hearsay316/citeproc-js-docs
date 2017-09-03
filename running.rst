@@ -290,7 +290,7 @@ HTML output mode, with registered items "Item-1" and "Item-2").
          maxoffset: 0,
          entryspacing: 0,
          linespacing: 0,
-         hangingindent: 0,
+         hangingindent: false,
          second-field-align: false,
          bibstart: "<div class=\"csl-bib-body\">\n",
          bibend: "</div>",
