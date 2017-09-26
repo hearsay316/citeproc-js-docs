@@ -146,7 +146,7 @@ A date field is a complex field that expresses a date or a range of dates. An ex
 
 .. code-block:: javascript
 
-   "archived": {
+   "accessed": {
 	"date-parts": [[ 2005, 4, 12 ]]
    },
    "issued": {
@@ -159,7 +159,7 @@ The second date format is a raw string. The recommended encoding is a string tha
 
 .. code-block:: javascript
 
-   "archived": {
+   "accessed": {
 	"raw": "2005-4-12"
    },
    "issued": {
