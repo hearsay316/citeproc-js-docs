@@ -89,7 +89,7 @@ An ordinary field type is a simple field containing a string or numeric value. I
 !!!!!!!!!!!
 Name Fields
 !!!!!!!!!!!
-A name field is a complex field that lists persons as authors, contributors, or creators, etc. The field is an array of objects, with each object containing information about one person. Date fields should generally have two properties: "family", and "given". The "family" property represents the familial name that a person inherits. The "given" property represents the name a person has been given.
+A name field is a complex field that lists persons as authors, contributors, or creators, etc. The field is an array of objects, with each object containing information about one person. Name fields should generally have two properties: "family", and "given". The "family" property represents the familial name that a person inherits. The "given" property represents the name a person has been given.
 
 The CSL-JSON allows some flexibility about how parts of a person's name are encoded. For instance, family name affixes such as "van" and "de las" can be encoded as part the family name in the "family" property. Likewise, suffixes such as titles, generational designations, credentials, and honors can be encoded as part of the given name. Generational designations (like "Jr" or "IV") immediately follow the given name without a comma. All other suffixes should follow next, with each suffix preceeded by a comma.
 
