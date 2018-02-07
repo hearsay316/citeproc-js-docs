@@ -31,6 +31,18 @@ var abbreviationObj = {
         classic: {}
     }
 }
+var emptyAbbreviationObj = {
+    "container-title": {},
+    "collection-title": {},
+    "institution-entire": {},
+    "institution-part": {},
+    nickname: {},
+    number: {},
+    title: {},
+    place: {},
+    hereinafter: {},
+    classic: {}
+}
 var sys = {
     retrieveItem: function(itemID) {
         return itemsObj[itemID];
@@ -42,6 +54,9 @@ var sys = {
         return jurisdictionsObj[jurisdiction];
     },
     getAbbreviation: function(listname, obj, jurisdiction, category, key) {
+        if (!obj[jurisdiction]) {
+            obj[jurisdiction] = emptyAbbreviationObj;
+        }
         obj[jurisdiction][category][key] = abbreviationObj['default'][category][key];
     }
 }
