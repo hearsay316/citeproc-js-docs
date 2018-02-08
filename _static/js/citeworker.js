@@ -55,9 +55,10 @@ var sys = {
     },
     getAbbreviation: function(listname, obj, jurisdiction, category, key) {
         if (!obj[jurisdiction]) {
-            obj[jurisdiction] = emptyAbbreviationObj;
+            obj[jurisdiction] = JSON.parse(JSON.stringify(emptyAbbreviationObj));
         }
         obj[jurisdiction][category][key] = abbreviationObj['default'][category][key];
+	return jurisdiction;
     }
 }
 
