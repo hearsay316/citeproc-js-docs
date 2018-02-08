@@ -4,7 +4,8 @@
     "description": "",
     "main": "citeproc.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+	"transpile-citeproc-interface": "babel _static/js/citesupport-es6.js --out-file _static/js/citesupport-es5.js"
     },
     "repository": {
         "type": "git",
@@ -17,6 +18,8 @@
     },
     "homepage": "https://github.com/Juris-M/citeproc-js-docs#readme",
     "devDependencies": {
+        "babel": "^6.23.0",
+        "babel-cli": "^6.26.0",
         "eslint": "^2.9.0",
         "eslint-config-airbnb": "^9.0.1",
         "eslint-plugin-import": "^1.7.0",
@@ -31,7 +34,13 @@
         "extends": "airbnb",
         "rules": {
             "no-console": 0,
-            "indent": ["error", 4]
+            "indent": [
+                "error",
+                4
+            ]
         }
+    },
+    "dependencies": {
+        "babel-preset-es2015": "^6.24.1"
     }
 }
