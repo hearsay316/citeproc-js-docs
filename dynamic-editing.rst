@@ -95,7 +95,8 @@ Source File Overview
 ``_static/js/citesupport-es5.js``
    A middleware module that connects the processor, which runs in a web worker, with the DOM of the page.
 
-``_static/js/citeworker.js`` A web worker to run the processor. This
+``_static/js/citeworker.js``
+   A web worker to run the processor. This
    supplies data I/O methods required by the processor, and implements
    a simple messaging interface for purposes of the demo page.
 
