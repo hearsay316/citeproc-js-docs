@@ -286,7 +286,7 @@ Note that tags must be JSON-encoded in the input object::
   setting the text in roman type if the style applies boldface type
   to the field.
 
-**<span style="font-variant: small-caps;">superscript</span>**
+**<span style="font-variant: small-caps;">small-caps</span>**
   Set the enclosed text in |small-caps|. This tag will "flip-flop,"
   setting the text in roman type if the style applies small-caps
   to the field.
@@ -297,7 +297,7 @@ Note that tags must be JSON-encoded in the input object::
 **<sub>subscript</sub>**
   Set the enclosed text in |subscript| form.
 
-**<span class="nocase">superscript</span>**
+**<span class="nocase">nocase</span>**
   Suppress case-changes that would otherwise be applied to the
   enclosed text by the style.
 
