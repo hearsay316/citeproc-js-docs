@@ -1,2 +1,5 @@
+*~
 _build
 node_modules
+_static/js/.babelrc
+package-lock.json
