@@ -504,6 +504,12 @@ or ``de`` (or ``de-AT``) set in the ``language``
 variable will be render by the ``layout-citation-roman``
 macro, with locale terms set to the appropriate language.
 
+============================================================
+``cs:alternative`` and ``cs:alternative-text`` |(extension)|
+============================================================
+
+FORTHCOMING SOON
+
 
 
 %%%%%%%%%
