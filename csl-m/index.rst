@@ -155,6 +155,34 @@ a DVD release of "The Wizard of Oz" should be set to ``motion_picture``.
 Elements
 %%%%%%%%
 
+================================
+``cs:alternative`` |(extension)|
+================================
+
+Use ``cs:alternative`` to add supplementary reference information to a
+cited item, such as a translation or reprint. Elements within the
+scope of ``cs:alternative`` are rendered only when the value of
+``language`` contains two valid ISO language codes joined by ``<`` or
+``>`` (to indicate the direction of translation). The two language
+codes may be identical.
+
+In a multi-layout style, elements within the scope of
+``cs:alternative`` are rendered in the primary locale associated with
+the target language code. Thus, if the input item has a ``language``
+value of ``en>zh``, and a multi-layout style has a layout with
+``locale="ja zh"``, elements within the scope of ``cs:alternative``
+will be rendered in the Japanese locale, with Japanese term
+definitions.
+
+=====================================
+``cs:alternative-text`` |(extension)|
+=====================================
+
+Use the ``cs:alternative-text`` element to rerun the layout applied
+to ``cs:alternative`` with alternative item content. Variables
+for rendering via ``cs:alternative-text`` are set with an ``alt-``
+prefix.
+
 ===============================
 ``cs:conditions`` |(extension)|
 ===============================
@@ -504,12 +532,6 @@ or ``de`` (or ``de-AT``) set in the ``language``
 variable will be render by the ``layout-citation-roman``
 macro, with locale terms set to the appropriate language.
 
-============================================================
-``cs:alternative`` and ``cs:alternative-text`` |(extension)|
-============================================================
-
-FORTHCOMING SOON
-
 
 
 %%%%%%%%%
@@ -726,10 +748,79 @@ a publisher's series, described  by ``collection-title``).
 
    <text variable="volume-title"/>
 
+================================
+``alt-translator`` |(extension)|
+================================
+
+While any variable can be set with an ``alt-`` prefix for rendering in
+``cs:alternative-text``, a few variables are recognized as
+``first-class`` variable names that can be referenced directly
+in the style, for testing purposes.
+
+===========================
+``alt-title`` |(extension)|
+===========================
+
+See ``alt-translator`` above.
+
+=====================================
+``alt-container-title`` |(extension)|
+=====================================
+
+See ``alt-translator`` above.
+
+============================
+``alt-issued`` |(extension)|
+============================
+
+See ``alt-translator`` above.
+
+
 
 %%%%%%%%%%
 Attributes
 %%%%%%%%%%
+
+===============================
+``require-match`` |(extension)|
+===============================
+
+The ``require-match`` attribute is available on ``cs:names`` elements.
+When set to ``true``, it takes effect if and only if exactly two
+variables are called by the element, and the current locale contains a
+term (such as ``editortranslator``) that matches the sorted and
+concatenated variable names. If those conditions are not satisfied,
+the variables will be rendered according to the standard CSL
+Specification.  If the conditions *are* satisfied, the attribute has
+the following effects:
+
+* If the content of the name variables match exactly, the matching
+  content will be rendered once, using the matching term as label.
+  This is in accordance with the standard CSL Specification.
+
+* Otherwise, the variables will not be rendered, and processing
+  will proceed to ``cs:substitute``, and the two variables called on
+  ``cs:names`` remain available for rendering.
+
+This can be useful where and editor and a translator, for example,
+should be rendered as a unit if they refer to the same person,
+but in separate parts of the citation if they differ.
+
+===============================
+``exclude-types`` |(extension)|
+===============================
+
+The ``exclude-types`` option is available on the ``cs:bibliography``
+element. Use it to specify a list of item types that are to be
+excluded from the bibliography.
+
+=====================================
+``exclude-with-fields`` |(extension)|
+=====================================
+
+The ``exclude-with-fields`` option is available on the ``cs:bibliography``
+element. Use it to specify a list of fields to be excluded from the
+bibliography if they contain a value.
 
 =====================================
 ``default-locale-sort`` |(extension)|
@@ -1187,11 +1278,11 @@ Conditions
 =========================
 
 The ``context`` test attribute takes exactly one of the arguments
-``bibliography`` or ``citation``. It does exactly what its name and
-value suggest, returning true when the condition is executed in the
-relevant context. This test is useful where complex logic is needed
-to compose a particular element, which changes only slightly in the
-other context.
+``bibliography``, ``citation``, or ``alternative``. It does exactly
+what its name and value suggest, returning true when the condition is
+executed in the relevant context. This test is useful where complex
+logic is needed to compose a particular element, which changes only
+slightly depending on context.
 
 .. sourcecode:: xml
 
