@@ -136,7 +136,7 @@ Uncited items not listed in the argument are removed from the registry.
 
 .. code-block:: javascript
 
-   citeproc.updateItems(idList);
+   citeproc.updateUncitedItems(idList);
 
 **idList**
     *Required.* A JavaScript array of item ``id`` values,
