@@ -163,6 +163,9 @@ class CiteSupport {
               */
             case 'registerCitation':
                 me.debug('registerCitation()');
+                if (e.data.errors) {
+                    me.debug(e.data.errors);
+                }
                 me.config.citationByIndex = e.data.citationByIndex;
                 // setCitations() implicitly updates this.config.citationIDs
                 me.setCitations(me.config.mode, e.data.citationData, true);

@@ -504,6 +504,12 @@ or ``de`` (or ``de-AT``) set in the ``language``
 variable will be render by the ``layout-citation-roman``
 macro, with locale terms set to the appropriate language.
 
+============================================================
+``cs:alternative`` and ``cs:alternative-text`` |(extension)|
+============================================================
+
+FORTHCOMING SOON
+
 
 
 %%%%%%%%%
@@ -847,7 +853,7 @@ style, the ``leading-noise-words`` attribute takes a comma-delimited
 list of words as its argument.
 
 When a list is set, the same attribute on a ``cs:text`` node with
-``variable="title" takes an argument of ``demote`` or ``drop``.  With
+``variable="title"`` takes an argument of ``demote`` or ``drop``.  With
 the ``demote`` attribute, noise words at the start of the field are
 rendered after the remainder of the title field, delimited by a comma.
 With the ``drop`` attribute the leading noise words are simply
@@ -975,7 +981,7 @@ value should be a comma-delimited list of words or phrases.
 
 .. sourcecode:: xml
 
-   <style-options skip-list="a,an,the,or,and,over,under"/>
+   <style-options skip-words="a,an,the,or,and,over,under"/>
 
 ====================================================================================
 ``subgroup-delimiter``,  ``subgroup-delimiter-precedes-last``, ``and`` |(extension)|

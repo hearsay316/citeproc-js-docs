@@ -90,26 +90,22 @@ Source File Overview
 --------------------
 
 ``_static/js/citeproc.js``
-   The |citeproc-js| `CSL <https://citationstyles.org>`_ processor.
-   Seven years in development, backed up by 1,260 test fixtures and
-   1,318 unique citation styles, with extended support for
-   multilingual and legal citation.
+   The |citeproc-js| `CSL <https://citationstyles.org>`_ processor for Citation Style Language (CSL) stylesheets.
+
+``_static/js/citesupport-es5.js``
+   A middleware module that connects the processor, which runs in a web worker, with the DOM of the page.
 
 ``_static/js/citeworker.js``
-   A web worker implementing the two API calls on which ``citesupport``
-   depends.
-
-``_static/js/citesupport-es6.js``
-   An ``es6`` class object with DOM logic for dynamic citation editing.
-   With some tweaks, this can be run inside a WYSIWYG editor of your
-   choice.
+   A web worker to run the processor. This
+   supplies data I/O methods required by the processor, and implements
+   a simple messaging interface for purposes of the demo page.
 
 ``_static/css/screen.css``
-   The CSS code for the |citeproc-js| documentation, including
+   CSS code for the |citeproc-js| documentation, including
    the demo pages.
 
 ``_static/data/items``
-   A few sample items for the dynamic editing demo, in CSL JSON format.
+   A few sample items for the editing demo, in CSL JSON format.
 
 ``_static/data/locales``
    The `standard CSL locales <https://github.com/citation-style-language/locales>`_.
@@ -122,9 +118,9 @@ Source File Overview
    which feeds the `Zotero styles <https://www.zotero.org/styles>`_ distribution site.
 
 ``_static/data/juris``
-   A set of legal style modules resides here. Legal citation
-   support is easily extensible to jurisdictions worldwide
-   via the `Juris-M Style Editor <https://juris-m.github.io/editor/>`_
+A set of legal style modules resides here. For information on legal
+   style support in CSL-M (multilingual-enhanced CSL) see the
+   `Juris-M Style Editor <https://juris-m.github.io/editor/>`_
    (GitHub account required).
 
 ----------------
