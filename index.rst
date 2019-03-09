@@ -18,7 +18,7 @@ Table of Contents
 -----------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    acknowledgements.rst
    changes.rst
@@ -28,9 +28,9 @@ Table of Contents
    setting-up.rst
    testing.rst
    running.rst
-   csl-json/markup.rst
+   csl-json/*
    sys-extensions.rst
-   csl-m/index.rst
+   csl-m/*
 
 ..
    csl.rst
