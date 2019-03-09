@@ -118,7 +118,7 @@ Source File Overview
    which feeds the `Zotero styles <https://www.zotero.org/styles>`_ distribution site.
 
 ``_static/data/juris``
-A set of legal style modules resides here. For information on legal
+   A set of legal style modules resides here. For information on legal
    style support in CSL-M (multilingual-enhanced CSL) see the
    `Juris-M Style Editor <https://juris-m.github.io/editor/>`_
    (GitHub account required).
