@@ -9,10 +9,10 @@ CSL-M: extensions to CSL
 
 
 .. |link| image:: link.png
-.. |(multilingual)| image:: multilingual-required-90.png
-.. |(modification)| image:: modification.png
-.. |(extension)| image:: extension.png
-.. |(approved for CSL)| image:: csl-approved-90.png
+.. |(multilingual)| image:: ../_static/images/multilingual-required-90.png
+.. |(modification)| image:: ../_static/images/modification.png
+.. |(extension)| image:: ../_static/images/extension.png
+.. |(approved for CSL)| image:: ../_static/images/csl-approved-90.png
 .. |ndash|  unicode:: U+02013 .. EN DASH
 .. |mdash|  unicode:: U+02014 .. EM DASH
 .. |para|   unicode:: U+000B6 .. PILCROW SIGN
@@ -292,7 +292,7 @@ Single or multiple personal Names that are co-authors with an
 organization would be entered above the relevant organization name.
 
 
-.. image:: affiliated-authors.png
+.. image:: ../_static/images/affiliated-authors.png
 
 In a very simple style, the sample above might be rendered as: *Clarke,
 Ministry of Fear and Smith & Brown, Large Corporation*.
@@ -304,7 +304,7 @@ Unaffiliated authors
 Authors with no affiliation would be listed after any organizational
 names:
 
-.. image:: unaffiliated-authors.png
+.. image:: ../_static/images/unaffiliated-authors.png
 
 
 In a very simple style, the sample above might be rendered as: *Doe &

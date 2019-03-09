@@ -30,7 +30,7 @@ Table of Contents
    running.rst
    csl-json/*
    sys-extensions.rst
-   csl-m-features.rst
+   csl-m/index.rst
 
 ..
    csl.rst
