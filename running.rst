@@ -259,7 +259,9 @@ sole argument:
 While ``makeCitationCluster()`` is faster than its companions, note that
 it does not perform the citation sort, if any, that might be required by the
 style, and that it does not perform disambiguation or apply style rules to
-adjust the cites as appropriate to the context.
+adjust the cites as appropriate to the context. This method is primarily
+useful for writing simplified test fixtures. It should not be relied on
+in production.
 
 
 !!!!!!!!!!!!!!!!
@@ -325,8 +327,7 @@ HTML output mode, with registered items "Item-1" and "Item-2").
    each bibliography entry.
 
 *hangingindent*
-   The number of em-spaces to apply in hanging indents within the
-   bibliography.
+   A boolean value indicating whether hanging indent should be applied.
 
 *second-field-align*
    When the ``second-field-align`` CSL option is set, this returns
@@ -351,143 +352,269 @@ __ http://citationstyles.org/downloads/specification.html#bibliography-specific-
 Dirty Tricks
 ------------
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Partial suppression of citation content
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!
+Special citation forms
+!!!!!!!!!!!!!!!!!!!!!!
 
 
 In ordinary operation, the processor generates citation strings
-suitable for a given position in the document.  To support some use
-cases, the processor is capable of delivering special-purpose
-fragments of a citation.
+suitable for a given position in the document, in accordance with the
+`CSL Specification
+<http://docs.citationstyles.org/en/1.0.1/specification.html>`_.  The
+processor is also capable of rendering citation content in three special
+forms:
 
-
-^^^^^^^^^^^^^^^
 ``author-only``
-^^^^^^^^^^^^^^^
+    Render only the author of the item, or where a title is substituted
+    in lieu of an author, the title, without citation affixes or styling.
 
-When the ``makeCitationCluster()`` command (not documented here) is
-invoked with a non-nil ``author-only`` element, everything but the
-author name in a cite is suppressed.  The name is returned without
-decorative markup (italics, superscript, and so forth).
-
-.. code-block:: javascript
-
-   var my_ids = { 
-     ["ID-1", {"author-only": 1}]
-   }
-
-You might think that printing the author of a cited work,
-without printing the cite itself, is a useless thing to do.
-And if that were the end of the story, you would be right ...
-
-
-^^^^^^^^^^^^^^^^^^^
 ``suppress-author``
-^^^^^^^^^^^^^^^^^^^
+    Render the citation omitting the author, or where the title was
+    substituted in lieu of an author, the title.
 
-To suppress the rendering of names in a cite, include a ``suppress-author``
-element with a non-nil value in the supplementary data:
+``composite``
+    Render the ``author-only`` form, optionally followed by a user-supplied
+    ``infix``, followed by the ``suppress-author`` form.
+
+These effects are achieved by setting "citation flags" on processor
+input items.  For styles that do not produce satisfactory results for
+the ``author-only`` form by default (such as numeric or "trigraph"
+styles), an optional ``cs:intext`` element can be added to the style
+as a sibling to ``cs:citation`` and ``cs:bibliography``. (Note that
+the ``cs:intext`` element is outside the official CSL Specification.)
+
+The citation flags are applied differently in the two methods of running the
+processor (``makeCitationCluster`` and ``processCitationCluster``). As the
+former is used primarily for testing purposes, it is explained only briefly
+below, followed by a more complete explanation of citation flags with
+the ``processCitationCluster`` method.
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Citation flags with ``makeCitationCluster``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+With the ``makeCitationCluster`` method, citation flags are added to
+input citation items as boolean flags. For example, citations to
+Ken Kesey's novel *Sometimes a Great Notion* might be called as follows:
+
+.. code-block:: json
+
+    [
+        { "ITEM-1" },
+        { "ITEM-1", "author-only": true },
+        { "ITEM-1", "suppress-author": true }
+    ]
+
+With a simple author-date style, this produces the following citation strings:
+
+.. code-block:: html
+
+    (Kesey 1964)
+    Kesey
+    (1964)
+
+The ``composite`` citation flag is not available in the
+``makeCitationCluster`` method. If applied, it will have no effect.
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Citation flags with ``processCitationCluster``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ``processCitationCluster`` method provides full support for
+citation flags. In addition to recognizing ``composite``, this method
+will ignore citations set with the ``author-only`` flag for
+back-referencing purposes (i.e. ibid and targeted references using
+``first-reference-note-number``). The following input sample
+exercises the flags in a series of four citations. Note the use
+of the ``mode`` attribute on the ``properties`` segment of each
+citation:
+
+.. code-block:: json
+
+    [
+        [
+            {
+                "citationID": "CITATION-1",
+                "citationItems": [ { "id": "ITEM-1" } ],
+                "properties": { "noteIndex": 0 }
+            },
+            [],
+            []
+        ],
+        [
+            {
+                "citationID": "CITATION-2",
+                "citationItems": [ { "id": "ITEM-1" } ],
+                "properties": { "noteIndex": 0, "mode": "author-only" }
+            },
+            [["CITATION-1", 0]],
+            []
+        ],
+        [
+            {
+                "citationID": "CITATION-3",
+                "citationItems": [ { "id": "ITEM-1" } ],
+                "properties": { "noteIndex": 0, "mode": "suppress-author" }
+            },
+            [["CITATION-1", 0],["CITATION-2", 0]],
+            []
+        ],
+        [
+            {
+                "citationID": "CITATION-4",
+                "citationItems": [ { "id": "ITEM-1" } ],
+                "properties": { "noteIndex": 0, "mode": "composite" }
+            },
+            [["CITATION-1", 0],["CITATION-2", 0],["CITATION-3", 0]],
+            []
+        ]
+    ]
+
+In a simple author-date style that italicizes author names, this
+produces the following citation strings. Note that formatting is
+stripped from the ``author-only`` and ``composite`` renderings of the
+author name:
+    
+.. code-block:: html
+
+    (<i>Kesey</i> 1964)
+    Kesey
+    (1964)
+    Kesey (1964)
+
+When ``suppress-author`` or ``composite`` are set on a multiple
+citation, collapsing is performed in the usual way. For example, in
+our simple italicizing author-date style, a citation to Ken Kesey's
+novels *One Flew Over the Cuckoo's Nest* and *Sometimes a Great
+Notion*, followed by Ursula Le Guin's *Left Hand of Darkness* will
+render as follows if ``collapse="year"`` is set on the ``cs:citation``
+element:
+
+.. code-block:: html
+
+    Kesey (1962, 1964; <i>Le Guin</i> 1969)
+
+An ``infix`` attribute can be used to insert text between the two
+halves of a ``composite`` citation, with input like the following:
+
+.. code-block:: json
+
+    [
+        [
+            {
+                "citationID": "CITATION-1",
+                "citationItems": [
+                    { "id": "ITEM-1" },
+                    { "id": "ITEM-2" },
+                    { "id": "ITEM-3", "prefix": "cf." }
+                ],
+                "properties": {
+                    "mode": "composite",
+                    "noteIndex": 0,
+                    "infix": "'s early work"
+                }
+            },
+            [],
+            []
+        ]
+    ]
+
+In our simple style, this produces the following output:
+
+.. code-block:: text
+
+    Kesey’s early work (1962, 1964; cf. <i>Le Guin</i> 1969)
+
+In the example above, space before the apostrophe is quashed
+automatically: text without leading punctuation will attract
+a leading space. Note also that affixes are recognized
+within items.
+
+To support styles that require discrete formatting of names written
+into the document text, the processor recognizes a ``cs:intext``
+element as a sibling to ``cs:citation`` and ``cs:bibliography``.  The
+following minimal style will render author names joined by ``&`` in citations,
+and by ``and`` in the ``author-only`` or ``composite`` forms:
+
+.. code-block:: xml
+
+    <style 
+          xmlns="http://purl.org/net/xbiblio/csl"
+          class="in-text"
+          version="1.0">
+      <info>
+        <id />
+        <title />
+        <updated>2009-08-10T04:49:00+09:00</updated>
+      </info>
+      <citation collapse="year">
+        <layout prefix="(" suffix=")" delimiter="; ">
+          <group delimiter=" ">
+            <names variable="author">
+              <name form="short" font-style="italic" and="symbol"/>
+            </names>
+            <date variable="issued" date-parts="year" form="text"/>
+          </group>
+        </layout>
+      </citation>
+      <bibliography>
+        <layout prefix="(" suffix=")" delimiter="; ">
+          <group delimiter=" ">
+            <group delimiter=", ">
+              <names variable="author">
+                <name form="short" and="symbol"/>
+              </names>
+              <text variable="title"/>
+              <date variable="issued" date-parts="year" form="text" prefix="(" suffix=")"/>
+            </group>
+          </group>
+        </layout>
+      </bibliography>
+      <intext>
+        <layout>
+          <names variable="author">
+            <name and="text" form="short"/>
+          </names>
+        </layout>
+      </intext>
+    </style>
+
+The style produces the output below when called against Fisher &
+Ury's classic negotiation text, *Getting to Yes: Reaching Agreement
+Without Giving In*, with no citation flags, and with the ``composite``
+flag respectively:
+
+.. code-block:: html
+
+    (<i>Fisher</i> &#38; <i>Ury</i> 1991)
+    Fisher and Ury (1991)
+
+In some cases, the processor will be unable to produce content for an
+``author-only`` citation flag, or for the corresponding portion of a
+``composite`` citation. This may occur when no ``cs:intext`` is
+provided, and the item begins with a bare ``cs:text`` or other
+non-names element. This may be true for a legal item type, and is
+always true of numeric and trigraph styles; and a ``cs:intext``
+element may itself fail to produce output for a particular item.  By
+default in such cases, the processor will output an ugly slug:
+
+.. code-block:: html
+
+    (Unauthored thing 1964)
+    [NO_PRINTED_FORM]
+    (Unauthored thing 1964)
+    [NO_PRINTED_FORM] (Unauthored thing 1964)
+
+The instantiated processor can be set to throw a JavaScript error with
+code ``ECSEMPTY`` rather than printing the slug:
 
 .. code-block:: javascript
 
-   var my_ids = [
-       ["ID-1", { "locator": "21", "suppress-author": 1 }]
-   ]
+   citeproc.opt.development_extensions.throw_on_empty = true;
 
-This option is useful on its own.  It can also be used in
-combination with the ``author-only`` element, as described below.
-
-
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-Automating text insertions
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Calls to the ``makeCitationCluster()`` command with the ``author-only`` 
-and to ``processCitationCluster()`` or ``appendCitationCluster()`` with the
-``suppress-author`` control elements can be used to produce
-cites that divide their content into two parts.  This permits the
-support of styles such as the Chinese national standard style GB7714-87,
-which requires formatting like the following:
-
-   **The Discovery of Wetness**
-
-   While it has long been known that rocks are dry :superscript:`[1]`  
-   and that air is moist :superscript:`[2]` it has been suggested by Source [3] that 
-   water is wet.
-
-   **Bibliography**
-
-   [1] John Noakes, *The Dryness of Rocks* (1952).
-
-   [2] Richard Snoakes, *The Moistness of Air* (1967).
-
-   [3] Jane Roe, *The Wetness of Water* (2000).
-
-In an author-date style, the same passage should be rendered more or
-less as follows:
-
-   **The Discovery of Wetness**
-
-   While it has long been known that rocks are dry (Noakes 1952)  
-   and that air is moist (Snoakes 1967) it has been suggested by Roe (2000)
-   that water is wet.
-
-   **Bibliography**
-
-   John Noakes, *The Dryness of Rocks* (1952).
-
-   Richard Snoakes, *The Moistness of Air* (1967).
-
-   Jane Roe, *The Wetness of Water* (2000).
-
-In both of the example passages above, the cites to Noakes and Snoakes
-can be obtained with ordinary calls to citation processing commands.  The
-cite to Roe must be obtained in two parts: the first with a call
-controlled by the ``author-only`` element; and the second with
-a call controlled by the ``suppress-author`` element, *in that order*:
-
-.. code-block:: javascript
-
-   var my_ids = { 
-     ["ID-3", {"author-only": 1}]
-   }
-
-   var result = citeproc.makeCitationCluster( my_ids );
-
-... and then ...
-   
-.. code-block:: javascript
-
-   var citation, result;
-
-   citation = { 
-     "citationItems": ["ID-3", {"suppress-author": 1}],
-     "properties": { "noteIndex": 5 }
-   }
-
-   [data, result] = citeproc.processCitationCluster( citation );
-
-In the first call, the processor will automatically suppress decorations (superscripting).
-Also in the first call, if a numeric style is used, the processor will provide a localized 
-label in lieu of the author name, and include the numeric source identifier, free of decorations.
-In the second call, if a numeric style is used, the processor will suppress output, since
-the numeric identifier was included in the return to the first call.
-
-Detailed illustrations of the interaction of these two control
-elements are in the processor test fixtures in the
-"discretionary" category: 
-
-* `AuthorOnly`__
-* `CitationNumberAuthorOnlyThenSuppressAuthor`__
-* `CitationNumberSuppressAuthor`__
-* `SuppressAuthorSolo`__
-
-__ http://bitbucket.org/bdarcus/citeproc-test/src/tip/processor-tests/humans/discretionary_AuthorOnly.txt
-__ http://bitbucket.org/bdarcus/citeproc-test/src/tip/processor-tests/humans/discretionary_CitationNumberAuthorOnlyThenSuppressAuthor.txt
-__ http://bitbucket.org/bdarcus/citeproc-test/src/tip/processor-tests/humans/discretionary_CitationNumberSuppressAuthor.txt
-__ http://bitbucket.org/bdarcus/citeproc-test/src/tip/processor-tests/humans/discretionary_SuppressAuthorSolo.txt
-
+The toggle can be turned on and off to select the behavior appropriate
+the context in the calling application.
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Selective output with ``makeBibliography()``
