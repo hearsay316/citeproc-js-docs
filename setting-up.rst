@@ -25,7 +25,7 @@ The items below are required to download and test the processor.
 In deployment environments, only JavaScript is required.
 
     ``git``
-        A GitHub clone is needed to clone the code repository.
+        Needed to fetch a clone of the ``citeproc-js`` repository on GitHub.
     ``node.js``
         Any recent-ish version should work. Version 7 is used for automated testing.
     ``mocha``

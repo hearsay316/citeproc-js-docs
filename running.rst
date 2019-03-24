@@ -613,8 +613,8 @@ code ``ECSEMPTY`` rather than printing the slug:
 
    citeproc.opt.development_extensions.throw_on_empty = true;
 
-The toggle can be turned on and off to select the behavior appropriate
-the context in the calling application.
+The toggle can be switched on and off to select the behavior appropriate
+to context in the calling application.
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Selective output with ``makeBibliography()``
