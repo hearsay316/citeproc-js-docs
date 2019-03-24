@@ -8,7 +8,7 @@ CSL-M: extensions to CSL
 ------------------------
 
 
-.. |link| image:: link.png
+.. |link| image:: ../_static/images/link.png
 .. |(multilingual)| image:: ../_static/images/multilingual-required-90.png
 .. |(modification)| image:: ../_static/images/modification.png
 .. |(extension)| image:: ../_static/images/extension.png
