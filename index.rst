@@ -20,17 +20,14 @@ Table of Contents
 .. toctree::
    :maxdepth: 1
 
-   acknowledgements.rst
-   changes.rst
-   deployments.rst
-   dynamic-editing.rst
-   editor.rst
-   setting-up.rst
-   testing.rst
-   running.rst
-   csl-json/markup.rst
-   sys-extensions.rst
-   csl-m/index.rst
+   acknowledgements
+   changes
+   demos
+   setting-up
+   running
+   csl-json/markup
+   sys-extensions
+   csl-m/index
 
 ..
    csl.rst
