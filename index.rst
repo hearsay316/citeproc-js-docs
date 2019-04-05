@@ -21,7 +21,7 @@ Table of Contents
    :maxdepth: 1
 
    acknowledgements
-   changes
+   news/index
    demos
    setting-up
    running

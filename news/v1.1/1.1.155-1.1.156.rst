@@ -1,0 +1,54 @@
+========================================================
+1.1.155-1.1.156
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Update std tests
+
+:commit:
+    `9c838cc <https://github.com/Juris-M/zotero/commit/9c838cce3ebdbac2b0f0d44e82791c837cc3fb1e>`_
+:author:
+    fbennett
+:date:
+    2017-02-24 08:19 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.156
+
+:commit:
+    `108ab70 <https://github.com/Juris-M/zotero/commit/108ab7013c2bb5507f22949511c55fcbff7ce14d>`_
+:author:
+    fbennett
+:date:
+    2017-02-24 08:18 (JST)
+
+
+------
+
+Fix particle-parsing bug
+
+:commit:
+    `8c01fce <https://github.com/Juris-M/zotero/commit/8c01fce0175dcc2d741f6c86dd363f98b6b18344>`_
+:author:
+    fbennett
+:date:
+    2017-02-24 08:15 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.155
+
+:commit:
+    `75b155a <https://github.com/Juris-M/zotero/commit/75b155a1d2d9e5d12237cda5224da2b235d0e23f>`_
+:author:
+    fbennett
+:date:
+    2017-02-16 10:29 (JST)
+

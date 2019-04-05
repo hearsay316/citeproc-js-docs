@@ -1,0 +1,78 @@
+========================================================
+1.1.170-1.1.172
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, release as 1.1.172
+
+:commit:
+    `6daf6f0 <https://github.com/Juris-M/zotero/commit/6daf6f00de9c740683084081e1b7d82c017e5659>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-02 10:36 (JST)
+
+
+------
+
+Fix bug in the handling of prefixes containing terminal punctuation
+
+:commit:
+    `99f4e29 <https://github.com/Juris-M/zotero/commit/99f4e2984d3399d36e288190e53f8f1dabce1282>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-02 10:33 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.171
+
+:commit:
+    `0e7f1cc <https://github.com/Juris-M/zotero/commit/0e7f1cca15e2d3be5ded32e929ad32d8601ea7c7>`_
+:author:
+    Frank Bennett
+:date:
+    2017-06-17 16:56 (JST)
+
+
+------
+
+Fix wrapper test
+
+:commit:
+    `2cef7c2 <https://github.com/Juris-M/zotero/commit/2cef7c2d0a37c42fc68eded32dc6c880d053b712>`_
+:author:
+    Frank Bennett
+:date:
+    2017-06-17 16:54 (JST)
+
+
+------
+
+Merge in changes
+
+:commit:
+    `a0a16b0 <https://github.com/Juris-M/zotero/commit/a0a16b0f19c27c61b29c12ecf8d34dfe0a6d0963>`_
+:author:
+    Frank Bennett
+:date:
+    2017-06-17 16:07 (JST)
+
+
+------
+
+Bump version, update CHANGES (previous commit), bundle as 1.1.170
+
+:commit:
+    `f16eee5 <https://github.com/Juris-M/zotero/commit/f16eee5700d901bd7e247c4f52a46790bf547b99>`_
+:author:
+    fbennett
+:date:
+    2017-06-03 07:56 (JST)
+

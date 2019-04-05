@@ -1,0 +1,78 @@
+========================================================
+1.1.173-1.1.174
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, bundle as 1.1.174
+
+:commit:
+    `671e109 <https://github.com/Juris-M/zotero/commit/671e1090bba5729a8df1601f7289236dc0e9a60b>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-19 09:05 (JST)
+
+
+------
+
+Processor test of makeCitationCluster on unregistered item
+
+:commit:
+    `2cf7194 <https://github.com/Juris-M/zotero/commit/2cf7194d2d7b0b289e735ceca0d10c5ee58eeefd>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-19 08:33 (JST)
+
+
+------
+
+Avoid crash on unregistered items, affecting makeCitationCluster()
+
+:commit:
+    `15c11fb <https://github.com/Juris-M/zotero/commit/15c11fb2093f84ee1514d7519c6ffbeb7f43e4e5>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-19 08:32 (JST)
+
+
+------
+
+Fix initialization bug affecting processor tests
+
+:commit:
+    `d72ba85 <https://github.com/Juris-M/zotero/commit/d72ba85eb24f76e34e98217e1588b98e4db236f7>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-19 08:27 (JST)
+
+
+------
+
+Restore processor test option in test.py
+
+:commit:
+    `1a9e304 <https://github.com/Juris-M/zotero/commit/1a9e3046cdfaee811ea936dee688b291c758a346>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-19 08:26 (JST)
+
+
+------
+
+Push version bump missing from last checkin
+
+:commit:
+    `f4a3479 <https://github.com/Juris-M/zotero/commit/f4a34799e37357ffccd8fda715f019977ff85e42>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-18 11:22 (JST)
+

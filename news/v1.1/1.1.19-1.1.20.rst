@@ -1,0 +1,54 @@
+========================================================
+1.1.19-1.1.20
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `14ac706 <https://github.com/Juris-M/zotero/commit/14ac706997f96195b0faf3d553345bdceca3bba9>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-23 10:24 (JST)
+
+
+------
+
+More correct handling of juris-locator-label cs:group condition
+
+:commit:
+    `c707d6f <https://github.com/Juris-M/zotero/commit/c707d6f30bed5803f1d2c252a02738ad71e0f42e>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-23 10:11 (JST)
+
+
+------
+
+Added tag 1.1.19 for changeset e27802155280
+
+:commit:
+    `bedf08d <https://github.com/Juris-M/zotero/commit/bedf08d99f725cba46b5c70d1342fe5f6636fefb>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-21 10:30 (JST)
+
+
+------
+
+Bump version, update CHANGES.txt, bundle
+
+:commit:
+    `008e6dd <https://github.com/Juris-M/zotero/commit/008e6dde627bfd29c32c8da8621670fbfcb00ae5>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-21 10:29 (JST)
+

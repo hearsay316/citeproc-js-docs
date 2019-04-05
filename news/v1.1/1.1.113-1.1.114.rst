@@ -1,0 +1,78 @@
+========================================================
+1.1.113-1.1.114
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.114
+
+:commit:
+    `6c04435 <https://github.com/Juris-M/zotero/commit/6c04435e04400eac6ef76587cef6d6726e445e7c>`_
+:author:
+    fbennett
+:date:
+    2016-08-19 09:49 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `e91e8da <https://github.com/Juris-M/zotero/commit/e91e8daf6ad105ef56ed13a65ee29bcabb9ec2ee>`_
+:author:
+    fbennett
+:date:
+    2016-08-19 09:48 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `0629001 <https://github.com/Juris-M/zotero/commit/062900100ee0da66a144f08919d99e2cbb68d8cd>`_
+:author:
+    fbennett
+:date:
+    2016-08-19 09:47 (JST)
+
+
+------
+
+Update CSL-M schema
+
+:commit:
+    `e825271 <https://github.com/Juris-M/zotero/commit/e82527182a47162276d7ee2c4e1c4a59b748a51c>`_
+:author:
+    fbennett
+:date:
+    2016-08-19 09:46 (JST)
+
+
+------
+
+Properly sort tainted citation items after preceding reinsert of existing citation
+
+:commit:
+    `66149b7 <https://github.com/Juris-M/zotero/commit/66149b7d85519a24fb6b06b98f85f261c4abbfcc>`_
+:author:
+    fbennett
+:date:
+    2016-08-19 09:40 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.113
+
+:commit:
+    `2591758 <https://github.com/Juris-M/zotero/commit/2591758001af6f5c99fad950fd715710bcc960fb>`_
+:author:
+    Frank Bennett
+:date:
+    2016-07-08 14:12 (JST)
+

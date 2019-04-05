@@ -1,0 +1,66 @@
+========================================================
+1.1.17-1.1.18
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `0222de6 <https://github.com/Juris-M/zotero/commit/0222de67ab5e196af60b08d4642b166395af51c8>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-20 07:04 (JST)
+
+
+------
+
+Add fallback for lv
+
+:commit:
+    `4ad8793 <https://github.com/Juris-M/zotero/commit/4ad87938f260f8fd2ca67ad68cb25c462c772f8f>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-20 07:04 (JST)
+
+
+------
+
+Check for missing fallbacks in test runner.
+
+:commit:
+    `50827dc <https://github.com/Juris-M/zotero/commit/50827dcd788295789baf5e75d89919117ff54b7f>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-20 07:03 (JST)
+
+
+------
+
+Added tag 1.1.17 for changeset 20fb6a25eeb5
+
+:commit:
+    `b863723 <https://github.com/Juris-M/zotero/commit/b86372389b8dd6aad4dd5ee3208a854ae8027493>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-16 08:55 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `91c7c54 <https://github.com/Juris-M/zotero/commit/91c7c541e76b204dc7a5f1210433581da84eccbb>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-16 08:55 (JST)
+

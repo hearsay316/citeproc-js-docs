@@ -1,0 +1,54 @@
+========================================================
+1.1.197-1.1.198
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.198
+
+:commit:
+    `e424b6d <https://github.com/Juris-M/zotero/commit/e424b6d9db038b3cbd55125659377ea1275d20b3>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-24 14:04 (JST)
+
+
+------
+
+Pass through machine code of jurisdiction if human forms not available
+
+:commit:
+    `386d5ab <https://github.com/Juris-M/zotero/commit/386d5ab9c1ad1dc38f56b20b42d9ecf705e51ee6>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-24 14:01 (JST)
+
+
+------
+
+Block rendering of jurisdiction when the value is a top-level country code
+
+:commit:
+    `2c01e43 <https://github.com/Juris-M/zotero/commit/2c01e437659e2286210c1dd1f3a39aa9f040e12a>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-23 22:49 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.197
+
+:commit:
+    `cf44e3f <https://github.com/Juris-M/zotero/commit/cf44e3f694692f73f2730d654b7819fd828cdfb9>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-21 07:07 (JST)
+

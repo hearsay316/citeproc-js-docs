@@ -1,0 +1,138 @@
+========================================================
+1.1.212-1.1.213
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, release as 1.1.213
+
+:commit:
+    `b9ce3f0 <https://github.com/Juris-M/zotero/commit/b9ce3f0377c97708dc70e8b92823cc602017d0b7>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-26 16:17 (JST)
+
+
+------
+
+Update images
+
+:commit:
+    `b1aef30 <https://github.com/Juris-M/zotero/commit/b1aef302679f985f1cec3d4e516fb8713647adc4>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-26 16:17 (JST)
+
+
+------
+
+Update standard tests
+
+:commit:
+    `1b9c198 <https://github.com/Juris-M/zotero/commit/1b9c19837fe3130defd6c5607da592b9434a9ddd>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-26 16:15 (JST)
+
+
+------
+
+Clean up test runner
+
+:commit:
+    `82290fa <https://github.com/Juris-M/zotero/commit/82290fa2b8d6829d47cb323fc80dd029b55f1f22>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-26 14:55 (JST)
+
+
+------
+
+Fix memory lead in citationById object
+
+:commit:
+    `aaf1f7d <https://github.com/Juris-M/zotero/commit/aaf1f7d901f5fbec8aa3d6b4b31e3a0306ba656f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-26 16:07 (JST)
+
+
+------
+
+Remove declarations of unused variables in api_bibliography
+
+:commit:
+    `9fbdea8 <https://github.com/Juris-M/zotero/commit/9fbdea8a99f6141c855e1eb6f7a44ad2d256254f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-22 09:50 (JST)
+
+
+------
+
+Protect against erronenous numeric value in string split array
+
+:commit:
+    `83510d2 <https://github.com/Juris-M/zotero/commit/83510d21cadb08b77e2b79140469adaab4312c37>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-21 11:13 (JST)
+
+
+------
+
+Add tests for non-CSL collection-title-short variable
+
+:commit:
+    `ea6a1e9 <https://github.com/Juris-M/zotero/commit/ea6a1e9be90d078cba6cbfa0be8b5a0d462ac27c>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-19 14:19 (JST)
+
+
+------
+
+Recognize -short form of any variable rendered via cs:text
+
+:commit:
+    `4f7dabd <https://github.com/Juris-M/zotero/commit/4f7dabd814aeb66b0f9c7392f6f92fc4149e9d7e>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-19 14:17 (JST)
+
+
+------
+
+Update standard tests
+
+:commit:
+    `6e2699f <https://github.com/Juris-M/zotero/commit/6e2699fcce0d40ce08424317f9a6fbab80c37da9>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-18 12:17 (JST)
+
+
+------
+
+Update images
+
+:commit:
+    `30b4da2 <https://github.com/Juris-M/zotero/commit/30b4da29f6c7cc4b1629ac27808d1bfe9106a91a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 18:40 (JST)
+

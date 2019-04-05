@@ -1,0 +1,186 @@
+========================================================
+1.1.157-1.1.162
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.162
+
+:commit:
+    `f33382a <https://github.com/Juris-M/zotero/commit/f33382a654dae00b66bcd81179ed0a3cb6bbb388>`_
+:author:
+    fbennett
+:date:
+    2017-04-18 08:49 (JST)
+
+
+------
+
+Belated commit of 1.1.161 bundle. Ouch.
+
+:commit:
+    `5c2c254 <https://github.com/Juris-M/zotero/commit/5c2c254fe3ce0821be4b142d230a9e4f42e70d83>`_
+:author:
+    fbennett
+:date:
+    2017-04-18 08:46 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.166
+
+:commit:
+    `e0b0b37 <https://github.com/Juris-M/zotero/commit/e0b0b37e01de905dc49592668e2fb6cf975567be>`_
+:author:
+    fbennett
+:date:
+    2017-03-23 13:00 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `1943dfa <https://github.com/Juris-M/zotero/commit/1943dfaafdcc0cb7a4ab04420fd452bb07647392>`_
+:author:
+    fbennett
+:date:
+    2017-03-23 12:55 (JST)
+
+
+------
+
+Fix bug triggered by weird name input
+
+:commit:
+    `785c163 <https://github.com/Juris-M/zotero/commit/785c1634cc89426d43f3080f535a05dc5f36fa57>`_
+:author:
+    fbennett
+:date:
+    2017-03-23 12:50 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.160
+
+:commit:
+    `ec348cc <https://github.com/Juris-M/zotero/commit/ec348cc63dc5aa6b3d4ba4abcbe4050793f23312>`_
+:author:
+    fbennett
+:date:
+    2017-03-20 23:39 (JST)
+
+
+------
+
+Fix crashing error on orphan quotes
+
+:commit:
+    `eaf0d85 <https://github.com/Juris-M/zotero/commit/eaf0d85e95466e25b7188e450b456c2c5114da2b>`_
+:author:
+    fbennett
+:date:
+    2017-03-20 23:38 (JST)
+
+
+------
+
+Adopt a precautionary change to the JSON parser posted to citeproc-js-node
+
+:commit:
+    `8ccf5ca <https://github.com/Juris-M/zotero/commit/8ccf5ca157b6ecdef6a88b60f2f227f909f95a8c>`_
+:author:
+    fbennett
+:date:
+    2017-03-20 23:36 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.159
+
+:commit:
+    `fc29c65 <https://github.com/Juris-M/zotero/commit/fc29c652ed9d3c256e89e78c4b670937a146c79b>`_
+:author:
+    fbennett
+:date:
+    2017-03-18 12:50 (JST)
+
+
+------
+
+Do not print an error-placeholder for items omitted from bibliography
+
+:commit:
+    `639dbbb <https://github.com/Juris-M/zotero/commit/639dbbbcc3bec32d07d5e4b6466cba1dc3b2f3c1>`_
+:author:
+    fbennett
+:date:
+    2017-03-18 12:46 (JST)
+
+
+------
+
+Add default empty-string value for missing splice delimiter
+
+:commit:
+    `7c2ef5c <https://github.com/Juris-M/zotero/commit/7c2ef5c0010ed019ff44f9934c001aed85d6c305>`_
+:author:
+    fbennett
+:date:
+    2017-03-18 11:22 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `b966deb <https://github.com/Juris-M/zotero/commit/b966debaae64f5672bf4ed05c454f3a64fc41eb9>`_
+:author:
+    fbennett
+:date:
+    2017-03-13 08:44 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.158
+
+:commit:
+    `7754dbd <https://github.com/Juris-M/zotero/commit/7754dbdbf6676c4f1c48790eb26bd4ed5b9bda01>`_
+:author:
+    fbennett
+:date:
+    2017-03-13 08:42 (JST)
+
+
+------
+
+Fix mistaken collapse delimiter
+
+:commit:
+    `38667aa <https://github.com/Juris-M/zotero/commit/38667aabe8723ae7947f090d4ff4acaab045121c>`_
+:author:
+    fbennett
+:date:
+    2017-03-13 08:41 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.157
+
+:commit:
+    `140370a <https://github.com/Juris-M/zotero/commit/140370afab3a3ff1a01f3d6860b72b1a70fee0b3>`_
+:author:
+    fbennett
+:date:
+    2017-03-03 08:21 (JST)
+

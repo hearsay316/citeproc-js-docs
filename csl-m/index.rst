@@ -3,7 +3,7 @@ CSL-M: extensions to CSL
 ########################
 
 .. include:: ../substitutions.txt
-|CCBYSA-SUBDIR| `Frank Bennett <https://twitter.com/fgbjr>`_
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
 
 ------------------------
 

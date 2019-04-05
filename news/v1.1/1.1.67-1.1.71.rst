@@ -1,0 +1,306 @@
+========================================================
+1.1.67-1.1.71
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Add US-BB module for testing
+
+:commit:
+    `4468ada <https://github.com/Juris-M/zotero/commit/4468ada47d6d5f36ea6109429f3706a9210492e5>`_
+:author:
+    Frank Bennett
+:date:
+    2016-02-22 08:13 (JST)
+
+
+------
+
+Test of near-note only
+
+:commit:
+    `cfaee10 <https://github.com/Juris-M/zotero/commit/cfaee104c273738c21d6da220877e617fbd1f6f8>`_
+:author:
+    Frank Bennett
+:date:
+    2016-02-22 08:12 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `36d7510 <https://github.com/Juris-M/zotero/commit/36d75109f2b62525b91339745eb6a40fc7d4904b>`_
+:author:
+    Frank Bennett
+:date:
+    2016-02-22 08:11 (JST)
+
+
+------
+
+Set near-note to true when testing for ambiguity
+
+:commit:
+    `1325c25 <https://github.com/Juris-M/zotero/commit/1325c25cc9a6bb3eb2716e0c46822cdcf32eae0c>`_
+:author:
+    Frank Bennett
+:date:
+    2016-02-22 08:11 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `f2d8c60 <https://github.com/Juris-M/zotero/commit/f2d8c606f4d63ebd00d636f39d1baa3e2d27bccb>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-24 14:52 (JST)
+
+
+------
+
+Fix mismatch error, masked in Rhino tests by write to console.log.
+
+:commit:
+    `49cb5f0 <https://github.com/Juris-M/zotero/commit/49cb5f035f94878753b330f75d547f25ed730067>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-24 14:42 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `a2f2677 <https://github.com/Juris-M/zotero/commit/a2f26778730a4a4068f9919109f6f53c8cf6493b>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-24 09:07 (JST)
+
+
+------
+
+Fix numeric processing bug affecting Vancouver style
+
+:commit:
+    `ebc5083 <https://github.com/Juris-M/zotero/commit/ebc5083e453f350a20f415311f271dbafc719b8d>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-24 09:01 (JST)
+
+
+------
+
+Update to manual
+
+:commit:
+    `613b48a <https://github.com/Juris-M/zotero/commit/613b48a6679c002d419878fa81ad8757d297a137>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-24 09:00 (JST)
+
+
+------
+
+Bump version, update CHANGES.txt, bundle
+
+:commit:
+    `2375a43 <https://github.com/Juris-M/zotero/commit/2375a433ab59e54df21224c2369c649d15bc6a00>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-12 10:31 (JST)
+
+
+------
+
+Working code for new numerics, with locator placeholder support
+
+:commit:
+    `949cce8 <https://github.com/Juris-M/zotero/commit/949cce8f9c4e3178c07dcd5768fe60c1ce203ada>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-12 10:05 (JST)
+
+
+------
+
+Add test of short-default of embedded labels, for good measure
+
+:commit:
+    `aa91efa <https://github.com/Juris-M/zotero/commit/aa91efac8e6f52a65535d3e9fdc152bea42fef24>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-12 10:04 (JST)
+
+
+------
+
+Remove stale fixtures
+
+:commit:
+    `9ffe37f <https://github.com/Juris-M/zotero/commit/9ffe37fa8bce320e3ab2b9574c302322e68ea929>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-12 10:03 (JST)
+
+
+------
+
+Adapt tests to final behaviour
+
+:commit:
+    `dd1dc80 <https://github.com/Juris-M/zotero/commit/dd1dc803068895c95417adbdf802c8f90aa7df76>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-12 10:02 (JST)
+
+
+------
+
+Rename and finalize tests
+
+:commit:
+    `d0042e7 <https://github.com/Juris-M/zotero/commit/d0042e7ac1ba73fb97d59c5034225ddb7ceb16b4>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-12 10:00 (JST)
+
+
+------
+
+Adjust test fixtures to fix consistency bug
+
+:commit:
+    `64f3006 <https://github.com/Juris-M/zotero/commit/64f3006e59227996831ed197571d2400383b3f76>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-06 10:48 (JST)
+
+
+------
+
+Revised number handling
+
+:commit:
+    `db084af <https://github.com/Juris-M/zotero/commit/db084afc6997644ad27d310d7d0b1c3e8dff2514>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-05 13:45 (JST)
+
+
+------
+
+Adapt tests to new number handling
+
+:commit:
+    `d64017f <https://github.com/Juris-M/zotero/commit/d64017f10b80b591e27aefd616bfde080903399a>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-05 13:41 (JST)
+
+
+------
+
+Jurisdiction module straggler
+
+:commit:
+    `d5a438b <https://github.com/Juris-M/zotero/commit/d5a438b46ba548710b5187eb3aec224cdc96ac29>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-05 13:39 (JST)
+
+
+------
+
+Updated style module tests
+
+:commit:
+    `844d563 <https://github.com/Juris-M/zotero/commit/844d563938ab11618ce98135479b561b15e673d0>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-05 13:39 (JST)
+
+
+------
+
+Add revised style modules
+
+:commit:
+    `fa7e6da <https://github.com/Juris-M/zotero/commit/fa7e6da6ba41726075987d1a808b762c9a106fb0>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-05 13:38 (JST)
+
+
+------
+
+Remove stale style modules
+
+:commit:
+    `f612e09 <https://github.com/Juris-M/zotero/commit/f612e09aa284cf9989b32d0811d7fb03b64edd3e>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-05 13:37 (JST)
+
+
+------
+
+Tests of revised numeric handling
+
+:commit:
+    `0f3a10b <https://github.com/Juris-M/zotero/commit/0f3a10ba6a98ef108c6c2b3da1c7513d705f6648>`_
+:author:
+    Frank Bennett
+:date:
+    2016-01-05 13:35 (JST)
+
+
+------
+
+Added tag 1.1.67 for changeset b9fd01caeb10
+
+:commit:
+    `ff05c28 <https://github.com/Juris-M/zotero/commit/ff05c289d020f8800ec661e0ad0651bc2eb9f938>`_
+:author:
+    Frank Bennett
+:date:
+    2015-11-23 11:24 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `1e1b201 <https://github.com/Juris-M/zotero/commit/1e1b2016e375ff7b7164f39461d9e4741e88de00>`_
+:author:
+    Frank Bennett
+:date:
+    2015-11-23 11:24 (JST)
+

@@ -1,0 +1,246 @@
+========================================================
+1.1.226-1.1.227
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.227
+
+:commit:
+    `dcebdd9 <https://github.com/Juris-M/zotero/commit/dcebdd9bf612b6b418cf102601146f635f417a2a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-28 00:16 (JST)
+
+
+------
+
+Adjust README, .travis.yml, .gitignore
+
+:commit:
+    `e602793 <https://github.com/Juris-M/zotero/commit/e60279356741d677d53c9deb5df260f3b0a700ef>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-28 00:08 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `d935611 <https://github.com/Juris-M/zotero/commit/d9356115941ce84cb6cc0655423509c9cb12e071>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-27 23:48 (JST)
+
+
+------
+
+Fix locale test to properly set locale within scope of test
+
+:commit:
+    `6db883c <https://github.com/Juris-M/zotero/commit/6db883cd09bc8a4c5546699131263d76668e5347>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-27 23:00 (JST)
+
+
+------
+
+Move style tests to fixtures/styles
+
+:commit:
+    `2126e25 <https://github.com/Juris-M/zotero/commit/2126e259418ca1d997283c06ac4b0035f5810beb>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-27 15:30 (JST)
+
+
+------
+
+Use CSL-M schema repo for both grammars. Amend cslrun to suit.
+
+:commit:
+    `c72ff9a <https://github.com/Juris-M/zotero/commit/c72ff9a8dda69b90ebc459da1846a18efc861b90>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-27 12:20 (JST)
+
+
+------
+
+Remove csl-m
+
+:commit:
+    `50fbbff <https://github.com/Juris-M/zotero/commit/50fbbff79aee41c4918cf2c1e9e2c02624944736>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-27 12:16 (JST)
+
+
+------
+
+Remove npm files from repo. Runner is now a separate package.
+
+:commit:
+    `071c816 <https://github.com/Juris-M/zotero/commit/071c816967c4915f51b3adfdbf3f729d32b340e6>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-27 11:23 (JST)
+
+
+------
+
+Use the right repo for juris-modules
+
+:commit:
+    `e38adc2 <https://github.com/Juris-M/zotero/commit/e38adc21e3492d5c5ce524dbaf1acc2df6b5e026>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-27 10:21 (JST)
+
+
+------
+
+Runner config file
+
+:commit:
+    `347522b <https://github.com/Juris-M/zotero/commit/347522bdb58bce3309504398ec1c92225ac4b3b8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-26 22:01 (JST)
+
+
+------
+
+Remove jing
+
+:commit:
+    `e920f7f <https://github.com/Juris-M/zotero/commit/e920f7f53ad9738d298ba195695c45f64e782e12>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-26 22:00 (JST)
+
+
+------
+
+Update submodules
+
+:commit:
+    `8568084 <https://github.com/Juris-M/zotero/commit/85680845e7cac8f76e1d54682e5635685c3a3232>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-26 21:59 (JST)
+
+
+------
+
+Move in standard tests
+
+:commit:
+    `77144a5 <https://github.com/Juris-M/zotero/commit/77144a53216b0e6248e5d79eff66d3888da3538d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-26 10:42 (JST)
+
+
+------
+
+Move tests/fixtures/std to fixtures/std
+
+:commit:
+    `714c22e <https://github.com/Juris-M/zotero/commit/714c22e6f2403c882bbb4e575f2272ca0443f6ca>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-26 08:18 (JST)
+
+
+------
+
+Merge branch 'master' of github.com:Juris-M/citeproc-js
+
+:commit:
+    `a58a714 <https://github.com/Juris-M/zotero/commit/a58a7146d456eed12cbeb200425729014b86fba8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-26 07:00 (JST)
+
+
+------
+
+Suppress raw assertion at source, simplify output regexp
+
+:commit:
+    `b7f3c1f <https://github.com/Juris-M/zotero/commit/b7f3c1f276e7937975a34d33f642de7d192625dd>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-26 07:00 (JST)
+
+
+------
+
+Move dojo unit tests aside. BDD fixtures to come.
+
+:commit:
+    `1f8da33 <https://github.com/Juris-M/zotero/commit/1f8da33a3cfc3b5ecbb45c8003a8809b2eccec5f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-25 10:37 (JST)
+
+
+------
+
+Set conditional attributes on tokens only as required, not everywhere
+
+:commit:
+    `e33456f <https://github.com/Juris-M/zotero/commit/e33456f97d5d0d9a6d6c2dcf52e603101200aff3>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-24 17:19 (JST)
+
+
+------
+
+Small edit to README, update docs
+
+:commit:
+    `2f66f2e <https://github.com/Juris-M/zotero/commit/2f66f2e7c346f69dffacaee8c176e3a25b84e0f8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-24 14:15 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.226
+
+:commit:
+    `c4478a8 <https://github.com/Juris-M/zotero/commit/c4478a8f4eb7b71770102fb8f8ce5405733a8d70>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-24 10:40 (JST)
+

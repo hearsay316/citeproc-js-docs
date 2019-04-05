@@ -1,0 +1,114 @@
+========================================================
+1.1.181-1.1.182
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.182
+
+:commit:
+    `149f6c3 <https://github.com/Juris-M/zotero/commit/149f6c3118bf29470edcb4a0585cf37d8ee28805>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-10 09:16 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `248794c <https://github.com/Juris-M/zotero/commit/248794cf4ba0b44f57cbc4304ce12737c4c591d6>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-10 09:15 (JST)
+
+
+------
+
+Fix wrapped DOI handling
+
+:commit:
+    `b8ee6f6 <https://github.com/Juris-M/zotero/commit/b8ee6f6c4c7420eadad8683a3ae137d5bf8293aa>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-10 09:10 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `ea819bb <https://github.com/Juris-M/zotero/commit/ea819bbd1195b32cf36809828d95b96ebbdc50a7>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-10 09:09 (JST)
+
+
+------
+
+Permit testing for an empty return
+
+:commit:
+    `5355b11 <https://github.com/Juris-M/zotero/commit/5355b115680c839a2ff3af271e0a4f30e5d23934>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-09 13:07 (JST)
+
+
+------
+
+Working note on DOI fixup approach
+
+:commit:
+    `4dc3ccc <https://github.com/Juris-M/zotero/commit/4dc3ccc03d906f55b06883c989b6a4d1a5cab243>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-09 11:48 (JST)
+
+
+------
+
+Do not crash on an empty array of items
+
+:commit:
+    `e922d81 <https://github.com/Juris-M/zotero/commit/e922d81b919af00dbee14ebc78df140f50675bf6>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-09 10:37 (JST)
+
+
+------
+
+Fix typo
+
+:commit:
+    `92b80a5 <https://github.com/Juris-M/zotero/commit/92b80a5408cfdefe0e89b7ba77bfc37de83342a3>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-01 11:04 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.181
+
+:commit:
+    `a4e009f <https://github.com/Juris-M/zotero/commit/a4e009fd6d52856db91821cf34948434751694d5>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-01 11:02 (JST)
+

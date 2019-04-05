@@ -1,3 +1,11 @@
+.. |CCBYSA| image:: cc-by-sa-80x15.png
+
+.. _CCBYSA: http://creativecommons.org/licenses/by-sa/3.0/
+
+.. |CCBYSA-SUBDIR| raw:: html
+
+   <div style="width:80px !important;"><a alt="CCBYSA" href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../_static/images/cc-by-sa-80x15.png"/></a></div>
+
 .. |superscript| raw:: html
 
    <sup>superscript</sup>
@@ -39,14 +47,6 @@
 .. |more| raw:: html
 
    <button id="more" hidden="true">More ...</button>
-
-.. |CCBYSA| raw:: html
-
-   <div style="width:80px !important;"><a alt="CCBYSA" href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="_static/images/cc-by-sa-80x15.png"/></a></div>
-
-.. |CCBYSA-SUBDIR| raw:: html
-
-   <div style="width:80px !important;"><a alt="CCBYSA" href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="../_static/images/cc-by-sa-80x15.png"/></a></div>
 
 .. |styles| raw:: html
 

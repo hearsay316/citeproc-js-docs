@@ -1,0 +1,78 @@
+========================================================
+1.1.214-1.1.215
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.215
+
+:commit:
+    `3d42d7b <https://github.com/Juris-M/zotero/commit/3d42d7b1adbcba904537bf585b827a5f3ab7925b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-03 07:37 (JST)
+
+
+------
+
+Update standard tests
+
+:commit:
+    `40fc7ab <https://github.com/Juris-M/zotero/commit/40fc7abba92a3e71673a3a7300b7d2c6efd37e60>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-03 07:37 (JST)
+
+
+------
+
+Update images
+
+:commit:
+    `9d9d776 <https://github.com/Juris-M/zotero/commit/9d9d776ec766a6a550ce927df5f8e391f845eb5a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-03 07:34 (JST)
+
+
+------
+
+Stricter regexp for parsing input blocks
+
+:commit:
+    `26d6471 <https://github.com/Juris-M/zotero/commit/26d6471447fb73b41300d7617784c32c6d0605d1>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-03 07:03 (JST)
+
+
+------
+
+Address a memory leak - Modify item objects store in registry.refhash in place - Call registry copy of item data when safe to do so - Taint items for which input changes on update - Quash some side effects that unnecessarily altered data after input
+
+:commit:
+    `6204c45 <https://github.com/Juris-M/zotero/commit/6204c45376a526cbc0183eec92309e905359c2a4>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-03 07:24 (JST)
+
+
+------
+
+Bump version, update CHANGES, release as 1.1.214
+
+:commit:
+    `c946085 <https://github.com/Juris-M/zotero/commit/c946085add493da611f311a1307f975e03866c1d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-26 21:59 (JST)
+

@@ -1,0 +1,42 @@
+========================================================
+1.1.9-1.1.10
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Fix conditional test of label embedded in "number" variable
+
+:commit:
+    `f1b027e <https://github.com/Juris-M/zotero/commit/f1b027e86b0fc11857e8e722d5e3514c9b7a2b05>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-20 19:19 (JST)
+
+
+------
+
+Added tag 1.1.9 for changeset d5e02af70a61
+
+:commit:
+    `38099f4 <https://github.com/Juris-M/zotero/commit/38099f46217609eff01b4e3301e57639ee8cbcfb>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-20 10:00 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `7497222 <https://github.com/Juris-M/zotero/commit/74972227b9d3c4785382b5c570e5feb95cee91c4>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-20 10:00 (JST)
+

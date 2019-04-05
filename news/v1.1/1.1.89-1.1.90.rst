@@ -1,0 +1,54 @@
+========================================================
+1.1.89-1.1.90
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.90
+
+:commit:
+    `69490f3 <https://github.com/Juris-M/zotero/commit/69490f389d3336302a15a784a208c8390a7d2652>`_
+:author:
+    fbennett
+:date:
+    2016-03-26 20:05 (JST)
+
+
+------
+
+Return false for comma-safe when term is a value attribute
+
+:commit:
+    `6c36763 <https://github.com/Juris-M/zotero/commit/6c367633368438be45e2d0598389e817fa16286b>`_
+:author:
+    fbennett
+:date:
+    2016-03-26 20:03 (JST)
+
+
+------
+
+Adjust test results
+
+:commit:
+    `358bc1e <https://github.com/Juris-M/zotero/commit/358bc1e4afa7f8a41e161a7447fc5c9db1391c23>`_
+:author:
+    fbennett
+:date:
+    2016-03-26 20:02 (JST)
+
+
+------
+
+Set just_did_number on cs:text with term or value
+
+:commit:
+    `5e9e42d <https://github.com/Juris-M/zotero/commit/5e9e42d0a0c435134cfa5cc3ebb26b39b7eb792b>`_
+:author:
+    fbennett
+:date:
+    2016-03-26 16:51 (JST)
+

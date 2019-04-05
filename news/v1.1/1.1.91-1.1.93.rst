@@ -1,0 +1,78 @@
+========================================================
+1.1.91-1.1.93
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.93
+
+:commit:
+    `bb7bf2f <https://github.com/Juris-M/zotero/commit/bb7bf2f69b47a49e0d42573092bbc120366b1ce2>`_
+:author:
+    fbennett
+:date:
+    2016-04-14 10:45 (JST)
+
+
+------
+
+Expose parseNoteFieldHacks() method.
+
+:commit:
+    `bc7e1da <https://github.com/Juris-M/zotero/commit/bc7e1da26bb30daeeb1798a35a09003bebd75909>`_
+:author:
+    fbennett
+:date:
+    2016-04-14 10:42 (JST)
+
+
+------
+
+Protect against possible crash condition
+
+:commit:
+    `2ac462d <https://github.com/Juris-M/zotero/commit/2ac462d2c0a65ea25953a29cf65209855f60217c>`_
+:author:
+    fbennett
+:date:
+    2016-04-05 16:14 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.92
+
+:commit:
+    `9449839 <https://github.com/Juris-M/zotero/commit/944983907d02336c3c812e121b0023286f98d1f2>`_
+:author:
+    fbennett
+:date:
+    2016-04-04 13:39 (JST)
+
+
+------
+
+Add pretitle macros. Thank you OSCOLA.
+
+:commit:
+    `4da1920 <https://github.com/Juris-M/zotero/commit/4da1920eeb94b571bf5274fbd84cb095c64e7083>`_
+:author:
+    fbennett
+:date:
+    2016-04-04 13:37 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.91
+
+:commit:
+    `d0cac40 <https://github.com/Juris-M/zotero/commit/d0cac4037f6bb89cd555c4c9636aab8438a7bb92>`_
+:author:
+    fbennett
+:date:
+    2016-03-31 08:41 (JST)
+

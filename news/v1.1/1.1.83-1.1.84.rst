@@ -1,0 +1,78 @@
+========================================================
+1.1.83-1.1.84
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.84
+
+:commit:
+    `409658d <https://github.com/Juris-M/zotero/commit/409658d8cd04333233d17f2b0bfd7f47c5f2eb55>`_
+:author:
+    fbennett
+:date:
+    2016-03-21 12:42 (JST)
+
+
+------
+
+Amend require and reject tests
+
+:commit:
+    `264546d <https://github.com/Juris-M/zotero/commit/264546d34b9b5676b6eecf77b9e2cae0741f6259>`_
+:author:
+    fbennett
+:date:
+    2016-03-21 12:42 (JST)
+
+
+------
+
+Replace reject/require conditions with comma-safe
+
+:commit:
+    `3b2fc2c <https://github.com/Juris-M/zotero/commit/3b2fc2c2cd076257440232cca4243c18a0d0f8b4>`_
+:author:
+    fbennett
+:date:
+    2016-03-21 12:31 (JST)
+
+
+------
+
+Test of comma-safe
+
+:commit:
+    `e8c7d52 <https://github.com/Juris-M/zotero/commit/e8c7d52890de647443a8b058af91df2499c6f826>`_
+:author:
+    fbennett
+:date:
+    2016-03-21 12:30 (JST)
+
+
+------
+
+Update schema
+
+:commit:
+    `5717001 <https://github.com/Juris-M/zotero/commit/5717001a486f124a17c3a4e9490403fc6e9394ef>`_
+:author:
+    fbennett
+:date:
+    2016-03-21 12:30 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.83
+
+:commit:
+    `a5e5e34 <https://github.com/Juris-M/zotero/commit/a5e5e346219c7d0acc18c169c1bceb616d3186e5>`_
+:author:
+    fbennett
+:date:
+    2016-03-21 00:01 (JST)
+

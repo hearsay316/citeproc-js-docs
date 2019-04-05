@@ -1,0 +1,54 @@
+========================================================
+1.1.1-1.1.2
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Release 1.1.2
+
+:commit:
+    `5d327aa <https://github.com/Juris-M/zotero/commit/5d327aa4f892607b31edb779154b289de5559055>`_
+:author:
+    Frank Bennett
+:date:
+    2015-02-27 11:43 (JST)
+
+
+------
+
+Fix affixes on failed juris load, implement item-specific testing, some code cleanup
+
+:commit:
+    `161869d <https://github.com/Juris-M/zotero/commit/161869d901a060d8eed18f5fe3d56362b650ae2d>`_
+:author:
+    Frank Bennett
+:date:
+    2015-02-27 11:39 (JST)
+
+
+------
+
+Added tag 1.1.1 for changeset 404a8cc7dcff
+
+:commit:
+    `5cdf156 <https://github.com/Juris-M/zotero/commit/5cdf156db3523484d52236f783a54a09436551af>`_
+:author:
+    Frank Bennett
+:date:
+    2015-02-26 17:25 (JST)
+
+
+------
+
+Release for 1.1.1
+
+:commit:
+    `c59b77b <https://github.com/Juris-M/zotero/commit/c59b77bd9d4d4108bed69b2a87d900038bf8953d>`_
+:author:
+    Frank Bennett
+:date:
+    2015-02-26 17:24 (JST)
+

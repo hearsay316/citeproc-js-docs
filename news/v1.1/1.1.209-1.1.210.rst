@@ -1,0 +1,45 @@
+========================================================
+1.1.209-1.1.210
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.210
+
+:commit:
+    `5d24189 <https://github.com/Juris-M/zotero/commit/5d241893f957e471970782c594a38f0ef7d1fbb3>`_
+:author:
+    Frank Bennett
+:date:
+    2018-07-15 14:40 (JST)
+
+
+------
+
+Fixes for creator variable list
+
+:commit:
+    `23bebbe <https://github.com/Juris-M/zotero/commit/23bebbe240d56f900662c756863ba25b6660343a>`_
+:author:
+    Frank Bennett
+:date:
+    2018-07-15 14:36 (JST)
+
+- Add illustrator to the NAME_VARIABLES
+- Remove CREATORS list and refer to NAME_VARIABLES instead
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.209
+
+:commit:
+    `88dcacf <https://github.com/Juris-M/zotero/commit/88dcacfd810076f6b1b9dc682196db5e2c65a3a0>`_
+:author:
+    Frank Bennett
+:date:
+    2018-07-15 10:59 (JST)
+

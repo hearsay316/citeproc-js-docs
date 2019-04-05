@@ -1,0 +1,90 @@
+========================================================
+1.1.199-1.1.201
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.201
+
+:commit:
+    `f9ff8c8 <https://github.com/Juris-M/zotero/commit/f9ff8c8532acc56d0421fbe639a9128208d32b93>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-04 15:43 (JST)
+
+
+------
+
+Fix testing bug affecting dates with cs:substitute
+
+:commit:
+    `319a21b <https://github.com/Juris-M/zotero/commit/319a21b23e6c3d5efc76134023c85eabd77f5a5b>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-04 15:04 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.200
+
+:commit:
+    `e5871c5 <https://github.com/Juris-M/zotero/commit/e5871c53a3431f625601226e223d6c1a3f9904df>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-04 07:28 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `14948fc <https://github.com/Juris-M/zotero/commit/14948fcf2ec103484dd922795b06dd0248347a33>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-04 07:26 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `6c18ad2 <https://github.com/Juris-M/zotero/commit/6c18ad28330317d34609aa3afb1f70ffb298f491>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-04 07:15 (JST)
+
+
+------
+
+Extend apostrophe fix to cover Latin1 and others
+
+:commit:
+    `5023d9f <https://github.com/Juris-M/zotero/commit/5023d9fa3f39f5abe8addf21e4e5efbd8d1ab567>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-04 07:13 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.199
+
+:commit:
+    `1790ce3 <https://github.com/Juris-M/zotero/commit/1790ce341893ff7050d8ff227d97485984694c83>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-30 06:53 (JST)
+

@@ -1,0 +1,54 @@
+========================================================
+1.1.131-1.1.132
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.132
+
+:commit:
+    `c88d082 <https://github.com/Juris-M/zotero/commit/c88d082634dac93fb8ef313c5b756a733d51c4eb>`_
+:author:
+    fbennett
+:date:
+    2016-09-22 08:17 (JST)
+
+
+------
+
+Fix braced-entry and add line-entry support for hack syntax
+
+:commit:
+    `13d2bc9 <https://github.com/Juris-M/zotero/commit/13d2bc91daa18b5d1b26380e351a5eba41b80ff0>`_
+:author:
+    fbennett
+:date:
+    2016-09-22 08:16 (JST)
+
+
+------
+
+Test of braced-entry and line-entry cheater syntax
+
+:commit:
+    `f81698b <https://github.com/Juris-M/zotero/commit/f81698bd7e14ec2071fb337048826c91e039e653>`_
+:author:
+    fbennett
+:date:
+    2016-09-22 08:01 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.131
+
+:commit:
+    `bb74634 <https://github.com/Juris-M/zotero/commit/bb7463420a8e67b34c88c4f7e0d156c7684a64c6>`_
+:author:
+    fbennett
+:date:
+    2016-09-21 07:12 (JST)
+

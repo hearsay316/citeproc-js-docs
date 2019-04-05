@@ -1,0 +1,42 @@
+========================================================
+1.1.120-1.1.121
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.121
+
+:commit:
+    `e94c0c3 <https://github.com/Juris-M/zotero/commit/e94c0c358a3e8a9bbc9561d5b8a3c26540b4f05b>`_
+:author:
+    fbennett
+:date:
+    2016-09-08 06:11 (JST)
+
+
+------
+
+Fix style module inheritance
+
+:commit:
+    `f974b89 <https://github.com/Juris-M/zotero/commit/f974b89d2bc73dc7f73cd83caea936a4aecac1de>`_
+:author:
+    fbennett
+:date:
+    2016-09-08 06:10 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.120
+
+:commit:
+    `c6cbe40 <https://github.com/Juris-M/zotero/commit/c6cbe40404fe4285dab04991fc471b6f92dc3a66>`_
+:author:
+    fbennett
+:date:
+    2016-09-07 19:32 (JST)
+

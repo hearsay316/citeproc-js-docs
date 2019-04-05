@@ -1,0 +1,54 @@
+========================================================
+1.1.132-1.1.133
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.133
+
+:commit:
+    `22e86b4 <https://github.com/Juris-M/zotero/commit/22e86b46576bde2c2b78896bbe00644017d02d39>`_
+:author:
+    fbennett
+:date:
+    2016-09-22 08:58 (JST)
+
+
+------
+
+Add test of date in line-entry cheater syntax
+
+:commit:
+    `84a5404 <https://github.com/Juris-M/zotero/commit/84a540499cf2f4e9cd7e694af5cd411e745e8d25>`_
+:author:
+    fbennett
+:date:
+    2016-09-22 08:40 (JST)
+
+
+------
+
+Fix bugs in new cheater-syntax code
+
+:commit:
+    `a29c35d <https://github.com/Juris-M/zotero/commit/a29c35d900c33a27f690c37904cec4f82d96e570>`_
+:author:
+    fbennett
+:date:
+    2016-09-22 08:40 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.132
+
+:commit:
+    `c88d082 <https://github.com/Juris-M/zotero/commit/c88d082634dac93fb8ef313c5b756a733d51c4eb>`_
+:author:
+    fbennett
+:date:
+    2016-09-22 08:17 (JST)
+

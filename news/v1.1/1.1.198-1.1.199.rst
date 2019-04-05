@@ -1,0 +1,42 @@
+========================================================
+1.1.198-1.1.199
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.199
+
+:commit:
+    `1790ce3 <https://github.com/Juris-M/zotero/commit/1790ce341893ff7050d8ff227d97485984694c83>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-30 06:53 (JST)
+
+
+------
+
+Fix curly single-quote apostrophe inside markup
+
+:commit:
+    `5c835fd <https://github.com/Juris-M/zotero/commit/5c835fdaf0f1f08b7201260511a84cca90d944f1>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-30 06:51 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.198
+
+:commit:
+    `e424b6d <https://github.com/Juris-M/zotero/commit/e424b6d9db038b3cbd55125659377ea1275d20b3>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-24 14:04 (JST)
+

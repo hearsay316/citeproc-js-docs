@@ -1,0 +1,102 @@
+========================================================
+1.1.188-1.1.190
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.190
+
+:commit:
+    `5b7b6d5 <https://github.com/Juris-M/zotero/commit/5b7b6d502f25e23b25790db2678960300b8027e2>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-24 22:34 (JST)
+
+
+------
+
+Adjust test to cover previous two checkins
+
+:commit:
+    `d3ff27c <https://github.com/Juris-M/zotero/commit/d3ff27ccb3c8ebe2a3542e55442d140d8c2df6f5>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-24 22:26 (JST)
+
+
+------
+
+Fix bug in static+embedded locators
+
+:commit:
+    `333b900 <https://github.com/Juris-M/zotero/commit/333b900e00bd727260481c51105a478a419cbde1>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-24 22:25 (JST)
+
+
+------
+
+Implement capitalize-if-first and label-capitalize-if-first attributes
+
+:commit:
+    `af22b5c <https://github.com/Juris-M/zotero/commit/af22b5c89c487c0906ed3f6c43426b56a52c0f05>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-24 22:24 (JST)
+
+
+------
+
+Remove an unused variable declaration
+
+:commit:
+    `8e35dc7 <https://github.com/Juris-M/zotero/commit/8e35dc7f261918f71e1ca0983427b79b47528187>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-24 20:46 (JST)
+
+
+------
+
+Remove commment, and an output queue append of an always-undefined value
+
+:commit:
+    `2b78478 <https://github.com/Juris-M/zotero/commit/2b78478fbe7cce8dc9517d2a02f81762bca6375e>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-24 20:45 (JST)
+
+
+------
+
+Add empty-label-no-decor require/reject group conditional
+
+:commit:
+    `4b245e0 <https://github.com/Juris-M/zotero/commit/4b245e0f3b8c8a8cd869506ccbbc5a8780a9ec64>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-24 15:03 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.188
+
+:commit:
+    `689af05 <https://github.com/Juris-M/zotero/commit/689af052b14dbc55ba8981c76c671c2baaf5782c>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-23 12:38 (JST)
+

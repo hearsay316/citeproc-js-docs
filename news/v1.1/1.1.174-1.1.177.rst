@@ -1,0 +1,199 @@
+========================================================
+1.1.174-1.1.177
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Update CHANGES
+
+:commit:
+    `c902651 <https://github.com/Juris-M/zotero/commit/c902651b104e602a43d7068b1b2711abf4c4f4af>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-23 17:33 (JST)
+
+
+------
+
+Bump version, bundle as 1.1.177
+
+:commit:
+    `72cb069 <https://github.com/Juris-M/zotero/commit/72cb06966223c6befcdd102fea4df41a717e4e32>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-23 17:33 (JST)
+
+
+------
+
+Update locales
+
+:commit:
+    `732b935 <https://github.com/Juris-M/zotero/commit/732b935b19e8f589486e3858e153f65e96e440c5>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-23 17:31 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `c2c4d5e <https://github.com/Juris-M/zotero/commit/c2c4d5e6a146aa90509c3723768ff64d5de85506>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-23 17:31 (JST)
+
+
+------
+
+Bundle without 'use strict'
+
+:commit:
+    `876b1cf <https://github.com/Juris-M/zotero/commit/876b1cf669efabccdab25e86ffac6b4b37349e21>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-23 16:47 (JST)
+
+
+------
+
+Tweak to test
+
+:commit:
+    `f8b9f1d <https://github.com/Juris-M/zotero/commit/f8b9f1d52090ca4f8d593bfde0ea7019f9e9e42c>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-23 16:46 (JST)
+
+
+------
+
+Recognize quote before comma as a close-quote
+
+:commit:
+    `39ff986 <https://github.com/Juris-M/zotero/commit/39ff9860553f855d589543c0b5bf88819aec828e>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-23 16:46 (JST)
+
+
+------
+
+Avoid redundant load of en-US when default-locale differs
+
+:commit:
+    `79ce090 <https://github.com/Juris-M/zotero/commit/79ce090cc0899f1ec56ed077233a6173d9429df1>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-23 16:44 (JST)
+
+
+------
+
+Do not force given names to lowercase
+
+:commit:
+    `ced8368 <https://github.com/Juris-M/zotero/commit/ced8368d1dcf19e20fbbc1b74e44685e83283e8e>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-22 17:01 (JST)
+
+
+------
+
+Bump version, bundle as 1.1.175
+
+:commit:
+    `8610915 <https://github.com/Juris-M/zotero/commit/86109151686357aec002a5f3fdfb8be24ab54cd4>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-22 13:18 (JST)
+
+
+------
+
+Protect against unassignable variables
+
+:commit:
+    `11ecbc2 <https://github.com/Juris-M/zotero/commit/11ecbc29bd74a31c47ad5e7cbed83746f4417630>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-22 13:17 (JST)
+
+
+------
+
+Test of makeCitationCluster with updateUncitedItems
+
+:commit:
+    `9e450e7 <https://github.com/Juris-M/zotero/commit/9e450e7bd76e6093d6a4f79c5c5027b5c718052e>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-22 13:15 (JST)
+
+
+------
+
+Do not distribute unneeded files to NPM
+
+:commit:
+    `6fbfd1d <https://github.com/Juris-M/zotero/commit/6fbfd1d8b09fb596325e14d65ba8d995e09d94ca>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-21 07:57 (JST)
+
+
+------
+
+Merge pull request #52 from dsifford/patch-1
+
+:commit:
+    `d86e260 <https://github.com/Juris-M/zotero/commit/d86e260cdd674943100695b7cfaab79ce8959237>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-20 11:20 (JST)
+
+Remove all unnecessary files from npm
+
+------
+
+Remove all unnecessary files from npm
+
+:commit:
+    `249da11 <https://github.com/Juris-M/zotero/commit/249da11767353b563d727f3bf57aea37be63d15f>`_
+:author:
+    Derek Sifford
+:date:
+    2017-08-20 05:59 (JST)
+
+
+------
+
+Bump version, bundle as 1.1.174
+
+:commit:
+    `671e109 <https://github.com/Juris-M/zotero/commit/671e1090bba5729a8df1601f7289236dc0e9a60b>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-19 09:05 (JST)
+

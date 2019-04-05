@@ -1,0 +1,48 @@
+========================================================
+1.1.225-1.1.226
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.226
+
+:commit:
+    `c4478a8 <https://github.com/Juris-M/zotero/commit/c4478a8f4eb7b71770102fb8f8ce5405733a8d70>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-24 10:40 (JST)
+
+
+------
+
+Refinements to AO/SA/Composite support 
+
+* Bugfixes 
+
+* Implement option to throw an error on empty renderings 
+
+* Document the new behavior
+
+:commit:
+    `21f257c <https://github.com/Juris-M/zotero/commit/21f257ca0e1d76649c21c9251a1cf0789f0e839d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-24 09:54 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.225
+
+:commit:
+    `658036a <https://github.com/Juris-M/zotero/commit/658036a401935b1227df39f9e86312c9b6c1d4a3>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-23 23:16 (JST)
+

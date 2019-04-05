@@ -1,0 +1,66 @@
+========================================================
+1.1.129-1.1.130
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.130
+
+:commit:
+    `b730523 <https://github.com/Juris-M/zotero/commit/b730523d74e166e0cce46632b494e0ad8912d81d>`_
+:author:
+    fbennett
+:date:
+    2016-09-17 21:59 (JST)
+
+
+------
+
+Further fix for "no." label on number variable
+
+:commit:
+    `c448a87 <https://github.com/Juris-M/zotero/commit/c448a87db6ace86b811eb8288209bd65578eb2c8>`_
+:author:
+    fbennett
+:date:
+    2016-09-17 21:54 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `f5b2d99 <https://github.com/Juris-M/zotero/commit/f5b2d99f7b4f4a3180f8aa65d2d6e023f83bfde1>`_
+:author:
+    fbennett
+:date:
+    2016-09-17 21:51 (JST)
+
+
+------
+
+Add tests of non-standard numeric label behaviour
+
+:commit:
+    `c028dc0 <https://github.com/Juris-M/zotero/commit/c028dc0fae1d6711cfb3b2117af0df0aa5196597>`_
+:author:
+    fbennett
+:date:
+    2016-09-17 21:50 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.129
+
+:commit:
+    `825afbe <https://github.com/Juris-M/zotero/commit/825afbe54b8359688fc3378287bb4bb610e34e53>`_
+:author:
+    fbennett
+:date:
+    2016-09-17 14:09 (JST)
+

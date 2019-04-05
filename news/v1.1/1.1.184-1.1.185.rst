@@ -1,0 +1,66 @@
+========================================================
+1.1.184-1.1.185
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.185
+
+:commit:
+    `3c107a4 <https://github.com/Juris-M/zotero/commit/3c107a49ace2c0210cf0337c3217422d1843d878>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-17 12:38 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `9cbb720 <https://github.com/Juris-M/zotero/commit/9cbb720ddcd8cab1b195c3e664063fbc0eb827fb>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-17 12:37 (JST)
+
+
+------
+
+Never shrink name forms below default
+
+:commit:
+    `d066c15 <https://github.com/Juris-M/zotero/commit/d066c150c9eb2b2567b35459fa68ff0f2c62c6de>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-17 12:31 (JST)
+
+
+------
+
+Set default value when calling for name-form inheritance
+
+:commit:
+    `d9afbcf <https://github.com/Juris-M/zotero/commit/d9afbcff0cfcc29bda58b44103507cf44ccf777b>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-17 11:52 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.184
+
+:commit:
+    `cae6cd4 <https://github.com/Juris-M/zotero/commit/cae6cd4cf8bcda270aac99f4d24cc5518611584f>`_
+:author:
+    Frank Bennett
+:date:
+    2018-02-15 07:08 (JST)
+

@@ -1,0 +1,66 @@
+========================================================
+1.1.8-1.1.9
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `7497222 <https://github.com/Juris-M/zotero/commit/74972227b9d3c4785382b5c570e5feb95cee91c4>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-20 10:00 (JST)
+
+
+------
+
+Allow only one label on a variable. Code still probably not robust to pre- and post- label placement on the same variable.
+
+:commit:
+    `ec2ed37 <https://github.com/Juris-M/zotero/commit/ec2ed373d166c5c310dc896d6bd0300258ad1d29>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-20 09:57 (JST)
+
+
+------
+
+Remove treaty from modular types, add report
+
+:commit:
+    `96aa749 <https://github.com/Juris-M/zotero/commit/96aa7491da36c9fd855bfa730eab800dc5cb626d>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-20 09:55 (JST)
+
+
+------
+
+Added tag 1.1.8 for changeset 59fc8a74ee8d
+
+:commit:
+    `b8cab56 <https://github.com/Juris-M/zotero/commit/b8cab56362fb81b890ae2572d54ba9beb87b89be>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-15 23:26 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `f946177 <https://github.com/Juris-M/zotero/commit/f9461776ac2ba67ab0f96f528aa89e98b7877c02>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-15 23:26 (JST)
+

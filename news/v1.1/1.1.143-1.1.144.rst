@@ -1,0 +1,42 @@
+========================================================
+1.1.143-1.1.144
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.144
+
+:commit:
+    `e9d3f5a <https://github.com/Juris-M/zotero/commit/e9d3f5a5cd78c2e2d706d98b19f169a98de8ce2d>`_
+:author:
+    fbennett
+:date:
+    2017-01-07 15:28 (JST)
+
+
+------
+
+Use logging method not "print" for fatal error
+
+:commit:
+    `4dcbf0c <https://github.com/Juris-M/zotero/commit/4dcbf0cc0e9c2f1b4a64e7e6031a175f4ad9d128>`_
+:author:
+    fbennett
+:date:
+    2017-01-07 15:26 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.143
+
+:commit:
+    `5e5d5f5 <https://github.com/Juris-M/zotero/commit/5e5d5f5c8cd876ac5e22163c0ecb30c8fea90bc6>`_
+:author:
+    fbennett
+:date:
+    2016-12-23 17:03 (JST)
+

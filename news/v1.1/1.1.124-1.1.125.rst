@@ -1,0 +1,54 @@
+========================================================
+1.1.124-1.1.125
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.125
+
+:commit:
+    `d7a9fd3 <https://github.com/Juris-M/zotero/commit/d7a9fd3f957c2b4bd2eaba2fbfa0d2b81ae7e1b1>`_
+:author:
+    fbennett
+:date:
+    2016-09-11 12:14 (JST)
+
+
+------
+
+Add getLocaleNames() method
+
+:commit:
+    `8c27e13 <https://github.com/Juris-M/zotero/commit/8c27e137a80f2a62a52ede14c9d688931cca8fcb>`_
+:author:
+    fbennett
+:date:
+    2016-09-11 12:13 (JST)
+
+
+------
+
+Comment out chatter
+
+:commit:
+    `c04dddc <https://github.com/Juris-M/zotero/commit/c04dddcbe5ff406b5a15d32282f3dadaceded49f>`_
+:author:
+    fbennett
+:date:
+    2016-09-11 12:12 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.124
+
+:commit:
+    `69f2194 <https://github.com/Juris-M/zotero/commit/69f219444a7a2598cc547f25a527e7f6dfd584e7>`_
+:author:
+    fbennett
+:date:
+    2016-09-10 08:44 (JST)
+

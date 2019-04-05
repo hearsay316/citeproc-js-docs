@@ -1,0 +1,80 @@
+========================================================
+1.1.179-1.1.180
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.180
+
+:commit:
+    `4dfbce6 <https://github.com/Juris-M/zotero/commit/4dfbce6b2ab689746cd964fabc4bf1a55b414ae1>`_
+:author:
+    Frank Bennett
+:date:
+    2017-11-05 12:40 (JST)
+
+
+------
+
+Fix issue with name abbreviation formatting
+
+:commit:
+    `f20a9bd <https://github.com/Juris-M/zotero/commit/f20a9bd8d6b28a338df14ce683dfecfdb55a537e>`_
+:author:
+    Frank Bennett
+:date:
+    2017-11-05 12:39 (JST)
+
+
+------
+
+Update standard test fixtures
+
+:commit:
+    `2e7ceef <https://github.com/Juris-M/zotero/commit/2e7ceeffe078d004ba8f0470fcdf65fbad57d4dd>`_
+:author:
+    Frank Bennett
+:date:
+    2017-11-05 12:38 (JST)
+
+
+------
+
+Merge branch 'id-in-html-output' of https://github.com/ailintom/citeproc-js into ailintom-id-in-html-output
+
+:commit:
+    `336bb39 <https://github.com/Juris-M/zotero/commit/336bb39cdbd08042bf504bedd971a69bfc9e6822>`_
+:author:
+    Frank Bennett
+:date:
+    2017-10-26 06:43 (JST)
+
+Set system_id on HTML output. Useful for linking to refs from a doc.
+
+
+------
+
+Bump npm version
+
+:commit:
+    `cb9bef8 <https://github.com/Juris-M/zotero/commit/cb9bef876e3b89f535bf81d1feeb3ef5a806daec>`_
+:author:
+    Frank Bennett
+:date:
+    2017-10-26 06:40 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.179
+
+:commit:
+    `e6d54bc <https://github.com/Juris-M/zotero/commit/e6d54bc1dc3bc76804bfc93891dfdd94b1d8e234>`_
+:author:
+    Frank Bennett
+:date:
+    2017-10-26 06:38 (JST)
+

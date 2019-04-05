@@ -1,0 +1,54 @@
+========================================================
+1.1.36-1.1.37
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `8d6823f <https://github.com/Juris-M/zotero/commit/8d6823fafeab76e89b45b9fb29321d713d675e5b>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-30 22:45 (JST)
+
+
+------
+
+Fix rtf scoping
+
+:commit:
+    `82519c3 <https://github.com/Juris-M/zotero/commit/82519c314c989518adbefd0d8ad51ab124a8cdd3>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-30 22:45 (JST)
+
+
+------
+
+Added tag 1.1.36 for changeset dce4b8476f56
+
+:commit:
+    `186a494 <https://github.com/Juris-M/zotero/commit/186a49491a6700c00844efc8eca648ac910e5783>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-29 21:15 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `f8dcedd <https://github.com/Juris-M/zotero/commit/f8dcedd75d11792ed45ea958ee4d336e7778d447>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-29 21:15 (JST)
+

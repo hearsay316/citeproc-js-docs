@@ -1,0 +1,54 @@
+========================================================
+1.1.203-1.1.204
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.204
+
+:commit:
+    `cbf3eeb <https://github.com/Juris-M/zotero/commit/cbf3eeb53a808228097f062dd52e49092388fd40>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-13 07:15 (JST)
+
+
+------
+
+Avoid needless exercise of abbreviate() function
+
+:commit:
+    `4897280 <https://github.com/Juris-M/zotero/commit/4897280f4981ed2e9aec886ca9e32b13908d7743>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-13 07:09 (JST)
+
+
+------
+
+Streamline language-name split
+
+:commit:
+    `f83de6e <https://github.com/Juris-M/zotero/commit/f83de6e61b707cdb687516aa5b51ec44fbf234e6>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-13 07:01 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.203
+
+:commit:
+    `b828d0e <https://github.com/Juris-M/zotero/commit/b828d0e49ba6b80330eb116777d64475e871dd0f>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-11 08:28 (JST)
+

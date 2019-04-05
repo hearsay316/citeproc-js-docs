@@ -1,0 +1,66 @@
+========================================================
+1.1.90-1.1.91
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.91
+
+:commit:
+    `d0cac40 <https://github.com/Juris-M/zotero/commit/d0cac4037f6bb89cd555c4c9636aab8438a7bb92>`_
+:author:
+    fbennett
+:date:
+    2016-03-31 08:41 (JST)
+
+
+------
+
+Emit bibliography entries as strings, not as single-element array
+
+:commit:
+    `19b31fa <https://github.com/Juris-M/zotero/commit/19b31fa02f8b38f69c9c149d859bab6fc3babc16>`_
+:author:
+    fbennett
+:date:
+    2016-03-31 08:40 (JST)
+
+
+------
+
+Pull in fixed heading
+
+:commit:
+    `eae365b <https://github.com/Juris-M/zotero/commit/eae365b3303249938b39b68de6263e2ce0d848a4>`_
+:author:
+    fbennett
+:date:
+    2016-03-27 15:59 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `17673fa <https://github.com/Juris-M/zotero/commit/17673fa2b7a624c39ae682bba23a0e5b0605b15d>`_
+:author:
+    fbennett
+:date:
+    2016-03-27 15:57 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.90
+
+:commit:
+    `69490f3 <https://github.com/Juris-M/zotero/commit/69490f389d3336302a15a784a208c8390a7d2652>`_
+:author:
+    fbennett
+:date:
+    2016-03-26 20:05 (JST)
+

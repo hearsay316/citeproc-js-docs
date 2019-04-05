@@ -1,0 +1,138 @@
+========================================================
+1.1.2-1.1.4
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, bundle
+
+:commit:
+    `99e3f87 <https://github.com/Juris-M/zotero/commit/99e3f8771a01fe42e02f0554c2c59da08f64ec2c>`_
+:author:
+    Frank Bennett
+:date:
+    2015-03-01 16:03 (JST)
+
+
+------
+
+Tweak a test
+
+:commit:
+    `ce87dae <https://github.com/Juris-M/zotero/commit/ce87dae99f7f2fb2d1f782e04381b664c6e30917>`_
+:author:
+    Frank Bennett
+:date:
+    2015-03-01 15:52 (JST)
+
+
+------
+
+Try multiple matches in particles parser
+
+:commit:
+    `d3005e9 <https://github.com/Juris-M/zotero/commit/d3005e9ae814e1f646e4eb77a329f9fb29aba7fd>`_
+:author:
+    Frank Bennett
+:date:
+    2015-03-01 15:52 (JST)
+
+
+------
+
+Working draft of OSCOLA
+
+:commit:
+    `8a5ddf3 <https://github.com/Juris-M/zotero/commit/8a5ddf390f54130a90b3b868795594d9cc36f357>`_
+:author:
+    Frank Bennett
+:date:
+    2015-03-01 07:09 (JST)
+
+
+------
+
+Add name particle parser to bundled code
+
+:commit:
+    `8a975fa <https://github.com/Juris-M/zotero/commit/8a975fadd04962671e2bc4f336658809e4796842>`_
+:author:
+    Frank Bennett
+:date:
+    2015-02-28 17:26 (JST)
+
+
+------
+
+Add a static-ordering flag
+
+:commit:
+    `bf5e03d <https://github.com/Juris-M/zotero/commit/bf5e03d51cfbafa2a23712a665fb82fc1a898270>`_
+:author:
+    Frank Bennett
+:date:
+    2015-02-28 17:25 (JST)
+
+
+------
+
+The new name particle parser
+
+:commit:
+    `6dfde09 <https://github.com/Juris-M/zotero/commit/6dfde09f13c292693b8487cb5fafc1356f4d4f0a>`_
+:author:
+    Frank Bennett
+:date:
+    2015-02-28 17:24 (JST)
+
+
+------
+
+Implement static-particles, call new name particle parser
+
+:commit:
+    `76d0d30 <https://github.com/Juris-M/zotero/commit/76d0d30639c3985762863d05c8b17a99963ec529>`_
+:author:
+    Frank Bennett
+:date:
+    2015-02-28 17:24 (JST)
+
+
+------
+
+New name for alt-macro
+
+:commit:
+    `23b0197 <https://github.com/Juris-M/zotero/commit/23b0197dacdc72b3ea1f0f922f3d73f1c123e371>`_
+:author:
+    Frank Bennett
+:date:
+    2015-02-28 17:19 (JST)
+
+
+------
+
+Added tag 1.1.2 for changeset 36e9291fc1ea
+
+:commit:
+    `62eac9f <https://github.com/Juris-M/zotero/commit/62eac9fbc50d3217f3220916fe0ff76412960d10>`_
+:author:
+    Frank Bennett
+:date:
+    2015-02-27 11:43 (JST)
+
+
+------
+
+Release 1.1.2
+
+:commit:
+    `5d327aa <https://github.com/Juris-M/zotero/commit/5d327aa4f892607b31edb779154b289de5559055>`_
+:author:
+    Frank Bennett
+:date:
+    2015-02-27 11:43 (JST)
+

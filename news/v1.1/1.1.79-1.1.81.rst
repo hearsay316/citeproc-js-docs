@@ -1,0 +1,156 @@
+========================================================
+1.1.79-1.1.81
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.81
+
+:commit:
+    `57e8a2d <https://github.com/Juris-M/zotero/commit/57e8a2d8f739806d7dca1014aa11c3ddf986245f>`_
+:author:
+    fbennett
+:date:
+    2016-03-16 13:31 (JST)
+
+
+------
+
+Fixes to schema and modular macro handling
+
+:commit:
+    `9abdeba <https://github.com/Juris-M/zotero/commit/9abdebaef5ea40fb289d0385294db2cec8f8db4d>`_
+:author:
+    fbennett
+:date:
+    2016-03-16 10:59 (JST)
+
+Update docs
+
+Remove some dingbat-like things from ALL_ROMANESEQUE_REGEXP, remove stale modular macro names
+
+Move group context condition to load.js
+
+Fix nesting bug
+
+Adopt function for conditional code in node_text.js and node_label.js
+
+Properly return styleID and styleName in xmljson.js styleID()
+
+Stop immediately in node_number.js if output will be suppressed
+
+Fix juris tests
+
+Utility to print chars by their hex numbers
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.80
+
+:commit:
+    `096b5a8 <https://github.com/Juris-M/zotero/commit/096b5a82e9899975e270a544bc7d0faa9724efd1>`_
+:author:
+    fbennett
+:date:
+    2016-03-14 11:03 (JST)
+
+
+------
+
+Update standard test suite
+
+:commit:
+    `fe1ce8f <https://github.com/Juris-M/zotero/commit/fe1ce8f171f1affe46ed47f1b48657d021b8bf8e>`_
+:author:
+    fbennett
+:date:
+    2016-03-14 10:57 (JST)
+
+
+------
+
+Fix validation errors on test fixtures
+
+:commit:
+    `d26ff0c <https://github.com/Juris-M/zotero/commit/d26ff0c3636c80272d3b33a0af1e196bc8720c92>`_
+:author:
+    fbennett
+:date:
+    2016-03-14 10:57 (JST)
+
+
+------
+
+Add fixtures migrated from official test suite
+
+:commit:
+    `aa8c760 <https://github.com/Juris-M/zotero/commit/aa8c76026a261631c0c6935307d572b7c016521f>`_
+:author:
+    fbennett
+:date:
+    2016-03-14 10:34 (JST)
+
+
+------
+
+Set A as delimiter between elements of name, spoofing keys
+
+:commit:
+    `b6237de <https://github.com/Juris-M/zotero/commit/b6237de598d1d888023da9519d01474c3237d7d8>`_
+:author:
+    fbennett
+:date:
+    2016-03-13 13:43 (JST)
+
+
+------
+
+Fix validation error it test
+
+:commit:
+    `3b0c4a4 <https://github.com/Juris-M/zotero/commit/3b0c4a4c84f41e2664aacc5c89fe2a1f04ffc9c2>`_
+:author:
+    fbennett
+:date:
+    2016-03-13 13:42 (JST)
+
+
+------
+
+Fix reject and require when label is contained in a nested macro
+
+:commit:
+    `67db07c <https://github.com/Juris-M/zotero/commit/67db07cb23d5cbfa9179f25eb93fb54ed888b46a>`_
+:author:
+    fbennett
+:date:
+    2016-03-13 11:39 (JST)
+
+
+------
+
+Add test of reject with macro nesting
+
+:commit:
+    `474f23c <https://github.com/Juris-M/zotero/commit/474f23cb9875cee1a0e9e99c7bf1782c18542a0a>`_
+:author:
+    fbennett
+:date:
+    2016-03-13 11:37 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.79
+
+:commit:
+    `73bbaeb <https://github.com/Juris-M/zotero/commit/73bbaebfc7ecc9ee1306b8a4864b7002503c6ec5>`_
+:author:
+    fbennett
+:date:
+    2016-03-12 08:12 (JST)
+

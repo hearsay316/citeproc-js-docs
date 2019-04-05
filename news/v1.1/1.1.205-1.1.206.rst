@@ -1,0 +1,90 @@
+========================================================
+1.1.205-1.1.206
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.206
+
+:commit:
+    `d2ca790 <https://github.com/Juris-M/zotero/commit/d2ca79088b97c87ccc51ae2d798d6c9c3238f840>`_
+:author:
+    Frank Bennett
+:date:
+    2018-05-05 08:52 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `c80549f <https://github.com/Juris-M/zotero/commit/c80549f20c7df92c9c2077eb5e728ce113a2ad9e>`_
+:author:
+    Frank Bennett
+:date:
+    2018-05-05 08:45 (JST)
+
+
+------
+
+Update CSL locales
+
+:commit:
+    `57df266 <https://github.com/Juris-M/zotero/commit/57df2666a8eb649b06745e4e78159c077a72c963>`_
+:author:
+    Frank Bennett
+:date:
+    2018-05-05 08:40 (JST)
+
+
+------
+
+Reorganize and align regexp for romanesque detection
+
+:commit:
+    `2b4d771 <https://github.com/Juris-M/zotero/commit/2b4d771b1532d4b917941567a0d13aede4454b6a>`_
+:author:
+    Frank Bennett
+:date:
+    2018-05-05 08:39 (JST)
+
+
+------
+
+Align test result with current locale text
+
+:commit:
+    `0c9946d <https://github.com/Juris-M/zotero/commit/0c9946dd5e9137d10e099a780746ff4e840ed247>`_
+:author:
+    Frank Bennett
+:date:
+    2018-05-05 08:38 (JST)
+
+
+------
+
+Fix Firefox mismatch against a-circumflex, caused by raw Unicode in regexp
+
+:commit:
+    `797a74d <https://github.com/Juris-M/zotero/commit/797a74dcb27aa3a6ab04925b480297c9e6cf25c9>`_
+:author:
+    Frank Bennett
+:date:
+    2018-05-05 00:11 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.205
+
+:commit:
+    `456ad41 <https://github.com/Juris-M/zotero/commit/456ad4179e6270ad567562af9097b44975508f5f>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-13 07:42 (JST)
+

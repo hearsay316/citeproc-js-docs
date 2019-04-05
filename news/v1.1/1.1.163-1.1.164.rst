@@ -1,0 +1,54 @@
+========================================================
+1.1.163-1.1.164
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.164
+
+:commit:
+    `618661d <https://github.com/Juris-M/zotero/commit/618661d83e70b3340ab1ba1304d637d2f0270e50>`_
+:author:
+    fbennett
+:date:
+    2017-05-03 05:32 (JST)
+
+
+------
+
+Extend hyphen treatment to em-dash
+
+:commit:
+    `10540f1 <https://github.com/Juris-M/zotero/commit/10540f17d4d48fd6b11bb63277e489a9ce4831a8>`_
+:author:
+    fbennett
+:date:
+    2017-05-03 05:30 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `1ec5c48 <https://github.com/Juris-M/zotero/commit/1ec5c484ce4d5ab91bb2bd2f05d664705c76e883>`_
+:author:
+    fbennett
+:date:
+    2017-05-03 05:30 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.163
+
+:commit:
+    `94f4118 <https://github.com/Juris-M/zotero/commit/94f41187a05072676b27068892b6ccba0697af37>`_
+:author:
+    fbennett
+:date:
+    2017-05-02 09:38 (JST)
+

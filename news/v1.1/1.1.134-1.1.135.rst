@@ -1,0 +1,78 @@
+========================================================
+1.1.134-1.1.135
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.135
+
+:commit:
+    `39cfe68 <https://github.com/Juris-M/zotero/commit/39cfe68c2d958579ea7e45957e1f84578b3cbeb4>`_
+:author:
+    fbennett
+:date:
+    2016-09-24 10:52 (JST)
+
+
+------
+
+Smarten up parsing, limit parsing to top of field
+
+:commit:
+    `caee5a1 <https://github.com/Juris-M/zotero/commit/caee5a145d77ec2f76ba5cca08ca9698b5f8a705>`_
+:author:
+    fbennett
+:date:
+    2016-09-24 10:50 (JST)
+
+
+------
+
+Add a toggle for date field override
+
+:commit:
+    `4f29cfe <https://github.com/Juris-M/zotero/commit/4f29cfee4f1264779059c18703739dc9f2724019>`_
+:author:
+    fbennett
+:date:
+    2016-09-24 10:48 (JST)
+
+
+------
+
+Add a test of hacked-in type
+
+:commit:
+    `bcd5eee <https://github.com/Juris-M/zotero/commit/bcd5eeea29f82a23e8efe44e7e4fd99a42528c3d>`_
+:author:
+    fbennett
+:date:
+    2016-09-24 10:47 (JST)
+
+
+------
+
+Add a little more challenge to test fixture
+
+:commit:
+    `74b53d3 <https://github.com/Juris-M/zotero/commit/74b53d362338635fe86439f079a0d250893a616d>`_
+:author:
+    fbennett
+:date:
+    2016-09-24 10:47 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.134
+
+:commit:
+    `7528f1e <https://github.com/Juris-M/zotero/commit/7528f1e1e89898b6ed39cf3ad1150c956df2c21f>`_
+:author:
+    fbennett
+:date:
+    2016-09-23 13:32 (JST)
+

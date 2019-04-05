@@ -1,0 +1,78 @@
+========================================================
+1.1.82-1.1.83
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.83
+
+:commit:
+    `a5e5e34 <https://github.com/Juris-M/zotero/commit/a5e5e346219c7d0acc18c169c1bceb616d3186e5>`_
+:author:
+    fbennett
+:date:
+    2016-03-21 00:01 (JST)
+
+
+------
+
+Add note of fixing commit
+
+:commit:
+    `fd9611c <https://github.com/Juris-M/zotero/commit/fd9611c87198a323f4414bcecb62294c8e446584>`_
+:author:
+    fbennett
+:date:
+    2016-03-21 00:01 (JST)
+
+
+------
+
+Add a test of straight-quotes as inner quotes, with apostrophe in field
+
+:commit:
+    `3f7a1a3 <https://github.com/Juris-M/zotero/commit/3f7a1a3f00291608a86965472bb026788eb97b5d>`_
+:author:
+    fbennett
+:date:
+    2016-03-20 23:58 (JST)
+
+
+------
+
+Remove while loop that could hang if straight single quotes were set as inner quotes in the locale
+
+:commit:
+    `9848939 <https://github.com/Juris-M/zotero/commit/98489396ab7b16876780bdd25f2a684679420cde>`_
+:author:
+    fbennett
+:date:
+    2016-03-20 23:53 (JST)
+
+
+------
+
+Remove potentially crashing print statement
+
+:commit:
+    `4c59563 <https://github.com/Juris-M/zotero/commit/4c595634cdee16cd7c7103fa92abee186541ca7b>`_
+:author:
+    fbennett
+:date:
+    2016-03-20 23:51 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.82
+
+:commit:
+    `029cb21 <https://github.com/Juris-M/zotero/commit/029cb210885d479bbdc13d710cabb605bff1b118>`_
+:author:
+    fbennett
+:date:
+    2016-03-20 07:18 (JST)
+

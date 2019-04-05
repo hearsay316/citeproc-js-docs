@@ -1,0 +1,114 @@
+========================================================
+1.1.167-1.1.169
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Update std tests
+
+:commit:
+    `5c8ed64 <https://github.com/Juris-M/zotero/commit/5c8ed6404fbabacb32c4efa472025e757ad8b3ed>`_
+:author:
+    fbennett
+:date:
+    2017-05-23 20:02 (JST)
+
+
+------
+
+Bump version, update CHANGES, release as 1.1.169
+
+:commit:
+    `489161e <https://github.com/Juris-M/zotero/commit/489161ed8f729f5494a01197548f7294e0ae5fb7>`_
+:author:
+    fbennett
+:date:
+    2017-05-23 20:00 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `ec7e4c0 <https://github.com/Juris-M/zotero/commit/ec7e4c064cc9aa1eccfb01a4238847d2ca4e84cc>`_
+:author:
+    fbennett
+:date:
+    2017-05-23 20:00 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `670cb58 <https://github.com/Juris-M/zotero/commit/670cb58af852e2bfb5919331e747be150d486faf>`_
+:author:
+    fbennett
+:date:
+    2017-05-23 19:53 (JST)
+
+
+------
+
+Handle in-field quotes under quotes="false"
+
+:commit:
+    `d8d999d <https://github.com/Juris-M/zotero/commit/d8d999dc62cee9969588429db38ad3ce07bdb0ff>`_
+:author:
+    fbennett
+:date:
+    2017-05-23 19:50 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.168
+
+:commit:
+    `b49f790 <https://github.com/Juris-M/zotero/commit/b49f79041943eeb69a7702c5effad964d55ed3e6>`_
+:author:
+    fbennett
+:date:
+    2017-05-20 23:17 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `0f3fbcc <https://github.com/Juris-M/zotero/commit/0f3fbccd31c8884ec91354f741132987a3a8bd74>`_
+:author:
+    fbennett
+:date:
+    2017-05-20 23:17 (JST)
+
+
+------
+
+Fix hinting for opening straight-quotes immediately following other markup
+
+:commit:
+    `82730cc <https://github.com/Juris-M/zotero/commit/82730ccd44395ecd182b71436b5c0b1d3457ae7f>`_
+:author:
+    fbennett
+:date:
+    2017-05-20 23:11 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.167
+
+:commit:
+    `066951a <https://github.com/Juris-M/zotero/commit/066951a53b053db17ecc96bf735cb86e539c2d85>`_
+:author:
+    fbennett
+:date:
+    2017-05-19 11:04 (JST)
+

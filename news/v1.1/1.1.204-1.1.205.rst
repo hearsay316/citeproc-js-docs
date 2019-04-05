@@ -1,0 +1,42 @@
+========================================================
+1.1.204-1.1.205
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.205
+
+:commit:
+    `456ad41 <https://github.com/Juris-M/zotero/commit/456ad4179e6270ad567562af9097b44975508f5f>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-13 07:42 (JST)
+
+
+------
+
+List only default-jurisdiction entry for language names
+
+:commit:
+    `b03d472 <https://github.com/Juris-M/zotero/commit/b03d472bf84ec8cebdd0ff7b3d00e47d63207fef>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-13 07:39 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.204
+
+:commit:
+    `cbf3eeb <https://github.com/Juris-M/zotero/commit/cbf3eeb53a808228097f062dd52e49092388fd40>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-13 07:15 (JST)
+

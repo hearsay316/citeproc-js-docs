@@ -1,0 +1,67 @@
+========================================================
+1.1.219-1.1.220
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.220
+
+:commit:
+    `f71c0ef <https://github.com/Juris-M/zotero/commit/f71c0ef47f2fdf6f114e0044f8ea585d0bdc1049>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-08 09:04 (JST)
+
+
+------
+
+Update copyright assertion
+
+:commit:
+    `7023ac9 <https://github.com/Juris-M/zotero/commit/7023ac9a5cea9edd307131ac6f998ea09601480e>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-08 09:03 (JST)
+
+
+------
+
+Bibliograhy options to exclude items
+
+:commit:
+    `eeb6d32 <https://github.com/Juris-M/zotero/commit/eeb6d32cdb17743930c26cdd662b24f3dc776073>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-08 08:57 (JST)
+
+
+
+* exclude_types: omit items matching one or more specified types.
+
+
+
+* exclude_with_fields: omit items that have a value in one or more
+  specified fields.
+
+
+
+* A test that excercises the new options.
+
+
+------
+
+Bump version, update CHANGES, bundle as tag 1.1.219
+
+:commit:
+    `d9b984a <https://github.com/Juris-M/zotero/commit/d9b984a7021729179aaaf8c7283496f66a9adb89>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-08 07:44 (JST)
+

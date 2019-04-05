@@ -1,0 +1,162 @@
+========================================================
+1.1.229-1.1.232
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.232
+
+:commit:
+    `928936b <https://github.com/Juris-M/zotero/commit/928936b23eb4330632620a2b51e17b22aa4fd6f1>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-02 11:30 (JST)
+
+
+------
+
+Properly fix style tests path
+
+:commit:
+    `db7471e <https://github.com/Juris-M/zotero/commit/db7471e8a59840d9f5a40f29bd107e2d909d84c5>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-02 11:25 (JST)
+
+
+------
+
+Separate uppercase_subtitles from main_title_from_short_title
+
+:commit:
+    `e44d93c <https://github.com/Juris-M/zotero/commit/e44d93cee1fe7317b38b200f50488c41da9f5d90>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-02 11:25 (JST)
+
+
+------
+
+Implement short-title variant fallback
+
+:commit:
+    `b902348 <https://github.com/Juris-M/zotero/commit/b902348c7635592aafe842617e66b4b748e83c2c>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-02 11:24 (JST)
+
+
+------
+
+Fixes and extension to short-title fallback test
+
+:commit:
+    `41ef451 <https://github.com/Juris-M/zotero/commit/41ef451ff704d9695917abbc8651a5137c6632d9>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-02 11:24 (JST)
+
+
+------
+
+Fix result string in test
+
+:commit:
+    `c8636bc <https://github.com/Juris-M/zotero/commit/c8636bc23c86b906ed175f0664ca944b878deb5b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-01 12:39 (JST)
+
+
+------
+
+Initial fixture to test fallback for short forms when variant available only from full field
+
+:commit:
+    `0a4dbae <https://github.com/Juris-M/zotero/commit/0a4dbae9e3949fb5d4a3cbed73b98d4473fca380>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-01 12:34 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.231
+
+:commit:
+    `885a803 <https://github.com/Juris-M/zotero/commit/885a803d12aa76160478b90a9e1111a48dcc03b6>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-01 09:44 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `8e5958d <https://github.com/Juris-M/zotero/commit/8e5958dd29c3e6fe666aa6f26e1237742a1c16cf>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-01 09:43 (JST)
+
+
+------
+
+Do not suppress comma-space et-al prefix
+
+:commit:
+    `8833c74 <https://github.com/Juris-M/zotero/commit/8833c74d5a65ad16b0a71df1c7a845d5c7317676>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-01 09:36 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.230
+
+:commit:
+    `96d2825 <https://github.com/Juris-M/zotero/commit/96d282548d9b8584572ae4846a6b5f4672bccc72>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-31 11:18 (JST)
+
+
+------
+
+Do not register Classic when no author is seen in data
+
+:commit:
+    `97fede7 <https://github.com/Juris-M/zotero/commit/97fede7de8eafa37ee1eeb57f65f95e61eae3384>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-31 11:18 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.229
+
+:commit:
+    `c3995fe <https://github.com/Juris-M/zotero/commit/c3995fef1fd05cb7711f6e05013bb661cd60e411>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-31 10:53 (JST)
+

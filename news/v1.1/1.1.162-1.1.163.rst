@@ -1,0 +1,66 @@
+========================================================
+1.1.162-1.1.163
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.163
+
+:commit:
+    `94f4118 <https://github.com/Juris-M/zotero/commit/94f41187a05072676b27068892b6ccba0697af37>`_
+:author:
+    fbennett
+:date:
+    2017-05-02 09:38 (JST)
+
+
+------
+
+Update std tests again
+
+:commit:
+    `a477c2f <https://github.com/Juris-M/zotero/commit/a477c2f431823429f717301ba5016dba649cd45a>`_
+:author:
+    fbennett
+:date:
+    2017-05-02 09:37 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `4063d3d <https://github.com/Juris-M/zotero/commit/4063d3d39a4e2077bacc9f8a46f3e19eac00fde9>`_
+:author:
+    fbennett
+:date:
+    2017-05-02 09:33 (JST)
+
+
+------
+
+Treat endash same as hyphen
+
+:commit:
+    `394e8e4 <https://github.com/Juris-M/zotero/commit/394e8e43f96eb8d7652367dfc11a7ddf0a3dfc02>`_
+:author:
+    fbennett
+:date:
+    2017-05-02 09:32 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.162
+
+:commit:
+    `f33382a <https://github.com/Juris-M/zotero/commit/f33382a654dae00b66bcd81179ed0a3cb6bbb388>`_
+:author:
+    fbennett
+:date:
+    2017-04-18 08:49 (JST)
+

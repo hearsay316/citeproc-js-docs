@@ -1,0 +1,114 @@
+========================================================
+1.1.103-1.1.104
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.104
+
+:commit:
+    `39fdbf2 <https://github.com/Juris-M/zotero/commit/39fdbf29e80fe6059cc34f3a5ef61c35aee91085>`_
+:author:
+    fbennett
+:date:
+    2016-06-03 07:41 (JST)
+
+
+------
+
+Illustrative test of multi-layout style
+
+:commit:
+    `4b9e696 <https://github.com/Juris-M/zotero/commit/4b9e696c757d557fcea480748c948d0380544724>`_
+:author:
+    fbennett
+:date:
+    2016-06-03 07:31 (JST)
+
+
+------
+
+Simple test of incremental ambiguous additions with APA style
+
+:commit:
+    `77f265f <https://github.com/Juris-M/zotero/commit/77f265fe121333b8a184d2988efdcc5536b350c0>`_
+:author:
+    fbennett
+:date:
+    2016-06-03 07:29 (JST)
+
+
+------
+
+Properly fix previous disambiguation issue
+
+:commit:
+    `2390c06 <https://github.com/Juris-M/zotero/commit/2390c066230143751ef987b46a066bead0acf778>`_
+:author:
+    fbennett
+:date:
+    2016-06-03 07:28 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `6617079 <https://github.com/Juris-M/zotero/commit/6617079108dc720f96a36fbd4ea6df5ff009444c>`_
+:author:
+    fbennett
+:date:
+    2016-06-03 07:27 (JST)
+
+
+------
+
+Reverse 8669b9308d9341c2c6600064b8c59d22c7cfaf7b
+
+:commit:
+    `543cbde <https://github.com/Juris-M/zotero/commit/543cbde2b478632f59b48fc75883e48fff0d693b>`_
+:author:
+    fbennett
+:date:
+    2016-06-02 23:00 (JST)
+
+
+------
+
+Handle locator date and extra better
+
+:commit:
+    `98075eb <https://github.com/Juris-M/zotero/commit/98075ebd3648aca948d69b4eacad2d12eb1b20f6>`_
+:author:
+    fbennett
+:date:
+    2016-06-02 22:39 (JST)
+
+
+------
+
+Split institutions on semi-colon
+
+:commit:
+    `8c4fb1e <https://github.com/Juris-M/zotero/commit/8c4fb1e5ed000056e26af4747aac0311481751dc>`_
+:author:
+    fbennett
+:date:
+    2016-06-02 22:38 (JST)
+
+
+------
+
+Fix markup
+
+:commit:
+    `dbeb4df <https://github.com/Juris-M/zotero/commit/dbeb4df7b87fcd61a815b2299b0a52089c587de3>`_
+:author:
+    fbennett
+:date:
+    2016-05-30 22:28 (JST)
+

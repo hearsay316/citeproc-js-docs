@@ -1,0 +1,102 @@
+========================================================
+1.1.193-1.1.194
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.194
+
+:commit:
+    `b0da67a <https://github.com/Juris-M/zotero/commit/b0da67aaf53c2e4fad82c18de47c1a54187ea49c>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-10 10:55 (JST)
+
+
+------
+
+Remove more unused code
+
+:commit:
+    `f85921e <https://github.com/Juris-M/zotero/commit/f85921e4952ffb8361e410f5f5c2ec86bf9bb11f>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-10 10:52 (JST)
+
+
+------
+
+Remove unused code
+
+:commit:
+    `93d4b93 <https://github.com/Juris-M/zotero/commit/93d4b93ca8162e364fcdc6b293ec172324f73fb7>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-10 10:44 (JST)
+
+
+------
+
+Updates to numeric field parsing tests
+
+:commit:
+    `d3d812c <https://github.com/Juris-M/zotero/commit/d3d812c39e1ae48b08123014afb14605b899eb45>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-10 10:20 (JST)
+
+
+------
+
+Some cleanup in numeric field parsing.
+
+:commit:
+    `4e00f69 <https://github.com/Juris-M/zotero/commit/4e00f69726b5654dd6348e20f75f37c1cf066c1a>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-10 10:19 (JST)
+
+
+------
+
+Apply particle on non-pure numbers
+
+:commit:
+    `79219a4 <https://github.com/Juris-M/zotero/commit/79219a47934804965c8fa71d7237ddb77e6a195a>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-10 10:17 (JST)
+
+
+------
+
+Further fixes for number parsing. So far so good.
+
+:commit:
+    `de77bc9 <https://github.com/Juris-M/zotero/commit/de77bc9a3251c1862c5c725e24b3a45ee2d74245>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-09 06:44 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.193
+
+:commit:
+    `3fc8f80 <https://github.com/Juris-M/zotero/commit/3fc8f801e736ea99705fc3a3409e93e2b2836ee1>`_
+:author:
+    Frank Bennett
+:date:
+    2018-03-08 16:05 (JST)
+

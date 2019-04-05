@@ -1,0 +1,42 @@
+========================================================
+1.1.71-1.1.72
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Option to set JS engine
+
+:commit:
+    `96f76e1 <https://github.com/Juris-M/zotero/commit/96f76e101dee3344a6803972d2ef9c6a464d46a2>`_
+:author:
+    Frank Bennett
+:date:
+    2016-03-04 09:28 (JST)
+
+
+------
+
+Added tag 1.1.71 for changeset 2cce3396ab43
+
+:commit:
+    `86cc91d <https://github.com/Juris-M/zotero/commit/86cc91d55f997d0879624b327af524b0ff31080c>`_
+:author:
+    Frank Bennett
+:date:
+    2016-02-22 08:13 (JST)
+
+
+------
+
+Add US-BB module for testing
+
+:commit:
+    `4468ada <https://github.com/Juris-M/zotero/commit/4468ada47d6d5f36ea6109429f3706a9210492e5>`_
+:author:
+    Frank Bennett
+:date:
+    2016-02-22 08:13 (JST)
+

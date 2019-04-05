@@ -1,0 +1,54 @@
+========================================================
+1.1.136-1.1.137
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.137
+
+:commit:
+    `2d1bb8d <https://github.com/Juris-M/zotero/commit/2d1bb8dddf152f7c3e034dda3df3ec7e426939a3>`_
+:author:
+    fbennett
+:date:
+    2016-10-05 09:38 (JST)
+
+
+------
+
+Updates for style modules and cheater hack
+
+:commit:
+    `da0e659 <https://github.com/Juris-M/zotero/commit/da0e65986bc1b875ce4af4e151a1e1028cc67f2a>`_
+:author:
+    fbennett
+:date:
+    2016-10-05 09:37 (JST)
+
+- Remove completeness check for modules (this can be restored later,
+  but these are only available via Myles, and its modules are evaluated
+  before release)
+
+- Add "standard" as a legal style type. This gives a second
+  quasi-primary source after "report" to increase flexibility.
+
+- Restore the validFieldsForType argument in parseNoteFieldHacks(),
+  preserving hacked entries that are not recognized in the calling
+  application. This revision also normalizes the remaining fields
+  to line-entry syntax, which may be useful in Zotero translators.
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.136
+
+:commit:
+    `95697fa <https://github.com/Juris-M/zotero/commit/95697faedb267bfcaaa41c9a8557700b1f334119>`_
+:author:
+    fbennett
+:date:
+    2016-09-26 19:10 (JST)
+

@@ -1,0 +1,262 @@
+========================================================
+1.1.215-1.1.216
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Update csl-m schema
+
+:commit:
+    `7123d18 <https://github.com/Juris-M/zotero/commit/7123d184797ba70131696bd742b02ab4a297096b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-23 12:54 (JST)
+
+
+------
+
+Update csl schema
+
+:commit:
+    `0b5756c <https://github.com/Juris-M/zotero/commit/0b5756cde2aec044c3c150564c43b0c3b924246a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-23 12:54 (JST)
+
+
+------
+
+Bug fixes for alternative element
+
+:commit:
+    `d1be9ae <https://github.com/Juris-M/zotero/commit/d1be9aeb721e4bb4161bd4ee0f52026a5321ff2d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-23 12:53 (JST)
+
+
+------
+
+Honor both < and > as locale vectors in Item.language
+
+:commit:
+    `8683657 <https://github.com/Juris-M/zotero/commit/868365779668e0b0e02590bb4e1c0d7ef78d747d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-23 12:41 (JST)
+
+
+------
+
+Permit setting empty values in variables added via the note field
+
+:commit:
+    `df09f60 <https://github.com/Juris-M/zotero/commit/df09f6069800fdf5a8e6fd167223750b9c908858>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-23 12:40 (JST)
+
+
+------
+
+Extend test of alternative element
+
+:commit:
+    `fa61024 <https://github.com/Juris-M/zotero/commit/fa6102496185cbd9018830720dc1b4da807e36ff>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-23 12:39 (JST)
+
+
+------
+
+Syntax fixes
+
+:commit:
+    `7b62187 <https://github.com/Juris-M/zotero/commit/7b621879a7103feffbb9b06f1f08a64737114578>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-22 18:07 (JST)
+
+
+------
+
+Merge support for cs:alternative and cs:alternative-text elements
+
+:commit:
+    `f63dbad <https://github.com/Juris-M/zotero/commit/f63dbad051833adace467fbec125616630fb5871>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-22 17:57 (JST)
+
+
+------
+
+Merge branch 'tidy-syntax'
+
+:commit:
+    `14e77cf <https://github.com/Juris-M/zotero/commit/14e77cf38e16722408b71ba5ef1d391880343caa>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-22 17:30 (JST)
+
+
+
+* Syntax edits suggested by jshint
+
+
+------
+
+Remove e4x support
+
+:commit:
+    `245fee7 <https://github.com/Juris-M/zotero/commit/245fee74ea3006b01e2f9dac9f54d63f7b44f208>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-22 17:28 (JST)
+
+
+------
+
+Bug fixes for date parser
+
+:commit:
+    `ff374bb <https://github.com/Juris-M/zotero/commit/ff374bb37e8f2279afd3ce0bef0cce5315f17325>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-22 17:14 (JST)
+
+
+------
+
+More syntax fixes
+
+:commit:
+    `96d9b6c <https://github.com/Juris-M/zotero/commit/96d9b6cdb3521d16238694c399fc796e71d8ec9a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-22 17:13 (JST)
+
+
+------
+
+Add tests for two-source translation cites
+
+:commit:
+    `1a56ec6 <https://github.com/Juris-M/zotero/commit/1a56ec68b4836e5366beae87ee23d8b2eaf59f7a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-22 09:32 (JST)
+
+
+------
+
+Add tests for two-source translation cites
+
+:commit:
+    `dba1fab <https://github.com/Juris-M/zotero/commit/dba1fabb915e273c366c153808ddb3187a5d2388>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-22 09:32 (JST)
+
+
+------
+
+First stage of syntax fixes
+
+:commit:
+    `d28718f <https://github.com/Juris-M/zotero/commit/d28718fc05988517d71165f8336895a39e941b63>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-15 12:59 (JST)
+
+
+------
+
+Modify result in test of corrupt input data
+
+:commit:
+    `ce08228 <https://github.com/Juris-M/zotero/commit/ce082289e6e04db2e0c8490420754c197b7e25ee>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-20 17:56 (JST)
+
+
+------
+
+Adjustments to name initialization fixtures
+
+:commit:
+    `ab6e8ac <https://github.com/Juris-M/zotero/commit/ab6e8ac84e2336c082a45bbdcaae0558631d7f8c>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-20 17:55 (JST)
+
+
+------
+
+Adjustments to name abbreviation
+
+:commit:
+    `3ab52b1 <https://github.com/Juris-M/zotero/commit/3ab52b192adb1617638591f6146bc102de220500>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-20 14:38 (JST)
+
+
+------
+
+Fix bugs in name abbreviation
+
+:commit:
+    `0454e49 <https://github.com/Juris-M/zotero/commit/0454e493fdf99506ea62282fcf71558a4581042c>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-20 12:18 (JST)
+
+
+------
+
+Capture a closing period in NAME_INITIAL_REGEXP
+
+:commit:
+    `0f3ae97 <https://github.com/Juris-M/zotero/commit/0f3ae97ee23e6bc68c824bb4fa5d819507393283>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-20 12:17 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.215
+
+:commit:
+    `3d42d7b <https://github.com/Juris-M/zotero/commit/3d42d7b1adbcba904537bf585b827a5f3ab7925b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-03 07:37 (JST)
+

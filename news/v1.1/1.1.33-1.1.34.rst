@@ -1,0 +1,54 @@
+========================================================
+1.1.33-1.1.34
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `f331798 <https://github.com/Juris-M/zotero/commit/f331798ae32015319ffeb3eef1508a62dd41b511>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-29 05:09 (JST)
+
+
+------
+
+Force authority and committee to obj.literal when called from cs:name
+
+:commit:
+    `88a3cc0 <https://github.com/Juris-M/zotero/commit/88a3cc02a350d25189a0448e38f68f3af0605dac>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-29 05:08 (JST)
+
+
+------
+
+Added tag 1.1.33 for changeset 89086de649fd
+
+:commit:
+    `d41b4aa <https://github.com/Juris-M/zotero/commit/d41b4aa1c5c31d48c18d24ffc4baf51d34fc073f>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-27 09:13 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `4fe672e <https://github.com/Juris-M/zotero/commit/4fe672efa0a0511d890f36c42100c6f95d97781b>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-27 09:13 (JST)
+

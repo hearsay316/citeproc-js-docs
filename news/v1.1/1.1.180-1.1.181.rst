@@ -1,0 +1,113 @@
+========================================================
+1.1.180-1.1.181
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.181
+
+:commit:
+    `a4e009f <https://github.com/Juris-M/zotero/commit/a4e009fd6d52856db91821cf34948434751694d5>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-01 11:02 (JST)
+
+
+------
+
+Merge branch 'master' of github.com:Juris-M/citeproc-js
+
+:commit:
+    `2efc05f <https://github.com/Juris-M/zotero/commit/2efc05f09bf021dcfe06679a023e7ab33411f4e1>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-01 09:51 (JST)
+
+
+------
+
+Merge pull request #58 from MatthewRichardsonICPSR/master
+
+:commit:
+    `3a8627a <https://github.com/Juris-M/zotero/commit/3a8627ad0a6343058bd53cd8087f3255b8ffe965>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-01 09:51 (JST)
+
+Added a null/empty/undefined test before termtxt.slice
+
+------
+
+Update tests
+
+:commit:
+    `aacb713 <https://github.com/Juris-M/zotero/commit/aacb71301a1b14743d5369d6b8926d00aa13b06a>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-01 09:45 (JST)
+
+
+------
+
+Fix accidental caps after some apostrophes
+
+:commit:
+    `a73a552 <https://github.com/Juris-M/zotero/commit/a73a552afe6e47c2eaaddf09735c75f0067201a1>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-01 09:43 (JST)
+
+
+------
+
+Rename clashing fixture
+
+:commit:
+    `f634a16 <https://github.com/Juris-M/zotero/commit/f634a165abc5f287290838a802269ed52eb3556a>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-01 09:42 (JST)
+
+
+------
+
+Changed
+
+:commit:
+    `4dd140b <https://github.com/Juris-M/zotero/commit/4dd140b8eb873778c13aec2943b94c53cb39d22a>`_
+:author:
+    Matthew Richardson
+:date:
+    2017-11-10 22:10 (JST)
+
+if(termtxt.slice(-1).match(/[0-9]/))
+
+to
+
+if(termtxt && termtxt.slice(-1).match(/[0-9]/))
+
+In some environments, failing to test for undefined/null/empty before doing the slice produces
+an error, preventing the generation of some pub types (report, thesis) from some styles
+(APA 6th edition, Glossa, Chicago 17th edition notes).
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.180
+
+:commit:
+    `4dfbce6 <https://github.com/Juris-M/zotero/commit/4dfbce6b2ab689746cd964fabc4bf1a55b414ae1>`_
+:author:
+    Frank Bennett
+:date:
+    2017-11-05 12:40 (JST)
+

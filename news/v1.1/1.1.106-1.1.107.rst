@@ -1,0 +1,66 @@
+========================================================
+1.1.106-1.1.107
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.107
+
+:commit:
+    `dbb8594 <https://github.com/Juris-M/zotero/commit/dbb85942335aa24649a1487e0e42838c9a02ffd8>`_
+:author:
+    fbennett
+:date:
+    2016-06-07 22:22 (JST)
+
+
+------
+
+Update multilingual layout tests
+
+:commit:
+    `f32beb0 <https://github.com/Juris-M/zotero/commit/f32beb0eebcffcb32e666fa237f25c8c73e0dcc0>`_
+:author:
+    fbennett
+:date:
+    2016-06-07 22:12 (JST)
+
+
+------
+
+Update CSL-M schema
+
+:commit:
+    `53d4884 <https://github.com/Juris-M/zotero/commit/53d4884f6cb7f0222f01c8e7c69c32af5c1009b2>`_
+:author:
+    fbennett
+:date:
+    2016-06-07 22:12 (JST)
+
+
+------
+
+Recognize default-locale on cs:date
+
+:commit:
+    `4523bc9 <https://github.com/Juris-M/zotero/commit/4523bc90a6c111b61e4a8087b8b0fade7272b6dc>`_
+:author:
+    fbennett
+:date:
+    2016-06-07 18:17 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.106
+
+:commit:
+    `bf4d157 <https://github.com/Juris-M/zotero/commit/bf4d157403465fdfffd93b5623b231dea033cfda>`_
+:author:
+    fbennett
+:date:
+    2016-06-04 20:44 (JST)
+

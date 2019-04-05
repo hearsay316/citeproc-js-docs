@@ -1,0 +1,54 @@
+========================================================
+1.1.141-1.1.142
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.142
+
+:commit:
+    `78002ed <https://github.com/Juris-M/zotero/commit/78002edc0c04df1ce8b3fbc41b8c2e1ab5ddf000>`_
+:author:
+    fbennett
+:date:
+    2016-11-19 21:51 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `4a2481d <https://github.com/Juris-M/zotero/commit/4a2481da5263ba0b0e2f5708f26ab9bdabf8d924>`_
+:author:
+    fbennett
+:date:
+    2016-11-19 21:50 (JST)
+
+
+------
+
+Fix name label inheritance bug
+
+:commit:
+    `19440fe <https://github.com/Juris-M/zotero/commit/19440fe4c40f2a2d6abf634e15d48f0bb5a7c925>`_
+:author:
+    fbennett
+:date:
+    2016-11-19 21:49 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.141
+
+:commit:
+    `7b1b215 <https://github.com/Juris-M/zotero/commit/7b1b215261dbdffdcfb5e8c3fea342426d7c4da4>`_
+:author:
+    fbennett
+:date:
+    2016-11-17 08:54 (JST)
+

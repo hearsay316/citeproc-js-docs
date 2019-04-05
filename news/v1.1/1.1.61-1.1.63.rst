@@ -1,0 +1,78 @@
+========================================================
+1.1.61-1.1.63
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `591c4ad <https://github.com/Juris-M/zotero/commit/591c4adb54f9edffee07abf50fe14e21110b11ed>`_
+:author:
+    Frank Bennett
+:date:
+    2015-11-01 09:57 (JST)
+
+
+------
+
+Extend uppercase-subtitles code to allow coverage of multiple variables
+
+:commit:
+    `53cd387 <https://github.com/Juris-M/zotero/commit/53cd3871ae7eff41162cb8c90b776a28e8e4b33a>`_
+:author:
+    Frank Bennett
+:date:
+    2015-11-01 09:57 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `c143f39 <https://github.com/Juris-M/zotero/commit/c143f394fa55e7733069ed070c21f57b9d637d46>`_
+:author:
+    Frank Bennett
+:date:
+    2015-10-30 09:41 (JST)
+
+
+------
+
+Fix cite-group-delimiter bug
+
+:commit:
+    `7a4d925 <https://github.com/Juris-M/zotero/commit/7a4d92510877dfad5031b3d77e158296d808d0e7>`_
+:author:
+    Frank Bennett
+:date:
+    2015-10-30 09:41 (JST)
+
+
+------
+
+Added tag 1.1.61 for changeset 468d478cd8ac
+
+:commit:
+    `96e9d8d <https://github.com/Juris-M/zotero/commit/96e9d8d3c2d269b9d730cb464c9af68656506a8a>`_
+:author:
+    Frank Bennett
+:date:
+    2015-10-10 04:27 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `c7088f2 <https://github.com/Juris-M/zotero/commit/c7088f2a97162474d772add2637b8ad593757694>`_
+:author:
+    Frank Bennett
+:date:
+    2015-10-10 04:27 (JST)
+
