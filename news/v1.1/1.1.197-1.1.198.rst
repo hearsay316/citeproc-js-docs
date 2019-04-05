@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.198
 
 :commit:
-    `e424b6d <https://github.com/Juris-M/zotero/commit/e424b6d9db038b3cbd55125659377ea1275d20b3>`_
+    `e424b6d <https://github.com/Juris-M/citeproc-js/commit/e424b6d9db038b3cbd55125659377ea1275d20b3>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.198
 Pass through machine code of jurisdiction if human forms not available
 
 :commit:
-    `386d5ab <https://github.com/Juris-M/zotero/commit/386d5ab9c1ad1dc38f56b20b42d9ecf705e51ee6>`_
+    `386d5ab <https://github.com/Juris-M/citeproc-js/commit/386d5ab9c1ad1dc38f56b20b42d9ecf705e51ee6>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Pass through machine code of jurisdiction if human forms not available
 Block rendering of jurisdiction when the value is a top-level country code
 
 :commit:
-    `2c01e43 <https://github.com/Juris-M/zotero/commit/2c01e437659e2286210c1dd1f3a39aa9f040e12a>`_
+    `2c01e43 <https://github.com/Juris-M/citeproc-js/commit/2c01e437659e2286210c1dd1f3a39aa9f040e12a>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Block rendering of jurisdiction when the value is a top-level country code
 Bump version, update CHANGES, bundle as 1.1.197
 
 :commit:
-    `cf44e3f <https://github.com/Juris-M/zotero/commit/cf44e3f694692f73f2730d654b7819fd828cdfb9>`_
+    `cf44e3f <https://github.com/Juris-M/citeproc-js/commit/cf44e3f694692f73f2730d654b7819fd828cdfb9>`_
 :author:
     Frank Bennett
 :date:

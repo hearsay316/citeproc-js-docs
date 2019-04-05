@@ -10,7 +10,7 @@
 Make test a little more challenging
 
 :commit:
-    `6bfa956 <https://github.com/Juris-M/zotero/commit/6bfa956f9e9d80821be746a4b91391b2ecddedf1>`_
+    `6bfa956 <https://github.com/Juris-M/citeproc-js/commit/6bfa956f9e9d80821be746a4b91391b2ecddedf1>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Make test a little more challenging
 Bump version, update CHANGES, bundle as 1.1.100
 
 :commit:
-    `7a2569c <https://github.com/Juris-M/zotero/commit/7a2569ca051ef2951272be907f86ded5f97b805d>`_
+    `7a2569c <https://github.com/Juris-M/citeproc-js/commit/7a2569ca051ef2951272be907f86ded5f97b805d>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Bump version, update CHANGES, bundle as 1.1.100
 Fix bugs in explicit year-suffix when used with collapse
 
 :commit:
-    `8669b93 <https://github.com/Juris-M/zotero/commit/8669b9308d9341c2c6600064b8c59d22c7cfaf7b>`_
+    `8669b93 <https://github.com/Juris-M/citeproc-js/commit/8669b9308d9341c2c6600064b8c59d22c7cfaf7b>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Fix bugs in explicit year-suffix when used with collapse
 Prevent styling from empty date nodes from taking effect
 
 :commit:
-    `897b45f <https://github.com/Juris-M/zotero/commit/897b45fd643915e6b5e6ba9a91899e7f6cfe833a>`_
+    `897b45f <https://github.com/Juris-M/citeproc-js/commit/897b45fd643915e6b5e6ba9a91899e7f6cfe833a>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Prevent styling from empty date nodes from taking effect
 Preserve zwnbsp and nbsp between initials, and infer nbsp in FR and RU domains
 
 :commit:
-    `792cd48 <https://github.com/Juris-M/zotero/commit/792cd481437fccc903315951f87ba0c4de8fedd9>`_
+    `792cd48 <https://github.com/Juris-M/citeproc-js/commit/792cd481437fccc903315951f87ba0c4de8fedd9>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Preserve zwnbsp and nbsp between initials, and infer nbsp in FR and RU domains
 Tests of non-breaking joins for initials
 
 :commit:
-    `828769e <https://github.com/Juris-M/zotero/commit/828769ea953c6676b118e1e94409feced9e95f8b>`_
+    `828769e <https://github.com/Juris-M/citeproc-js/commit/828769ea953c6676b118e1e94409feced9e95f8b>`_
 :author:
     fbennett
 :date:
@@ -82,7 +82,7 @@ Tests of non-breaking joins for initials
 Update std tests
 
 :commit:
-    `9bde825 <https://github.com/Juris-M/zotero/commit/9bde82513d0a5800d7e5c6d77336b16878b49793>`_
+    `9bde825 <https://github.com/Juris-M/citeproc-js/commit/9bde82513d0a5800d7e5c6d77336b16878b49793>`_
 :author:
     fbennett
 :date:
@@ -94,7 +94,7 @@ Update std tests
 Bump version, update CHANGES, bundle as 1.1.99
 
 :commit:
-    `8c20b02 <https://github.com/Juris-M/zotero/commit/8c20b02156210a81f10f2c113660210972294954>`_
+    `8c20b02 <https://github.com/Juris-M/citeproc-js/commit/8c20b02156210a81f10f2c113660210972294954>`_
 :author:
     fbennett
 :date:

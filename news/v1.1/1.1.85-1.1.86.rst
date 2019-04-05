@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.86
 
 :commit:
-    `19130bc <https://github.com/Juris-M/zotero/commit/19130bc81502bce427434261153793f9d5f8f92b>`_
+    `19130bc <https://github.com/Juris-M/citeproc-js/commit/19130bc81502bce427434261153793f9d5f8f92b>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.86
 Add test exposing a bug in require/reject, and fix it
 
 :commit:
-    `d1b95cd <https://github.com/Juris-M/zotero/commit/d1b95cdb7de8379cc87ea2125228c7c2810b3088>`_
+    `d1b95cd <https://github.com/Juris-M/citeproc-js/commit/d1b95cdb7de8379cc87ea2125228c7c2810b3088>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Add test exposing a bug in require/reject, and fix it
 Bump version, update CHANGES, bundle as 1.1.85
 
 :commit:
-    `bf34018 <https://github.com/Juris-M/zotero/commit/bf34018404ad1355d6240ff087402332d323a956>`_
+    `bf34018 <https://github.com/Juris-M/citeproc-js/commit/bf34018404ad1355d6240ff087402332d323a956>`_
 :author:
     fbennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.74
 
 :commit:
-    `be83d32 <https://github.com/Juris-M/zotero/commit/be83d326c37f470a930b3b221832eef015a3f27c>`_
+    `be83d32 <https://github.com/Juris-M/citeproc-js/commit/be83d326c37f470a930b3b221832eef015a3f27c>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.74
 Fix license claim
 
 :commit:
-    `5394fe4 <https://github.com/Juris-M/zotero/commit/5394fe4c8e19af54672a2ce00d89a27eb89a4d4b>`_
+    `5394fe4 <https://github.com/Juris-M/citeproc-js/commit/5394fe4c8e19af54672a2ce00d89a27eb89a4d4b>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Fix license claim
 Fix raw delimiter
 
 :commit:
-    `04f2f08 <https://github.com/Juris-M/zotero/commit/04f2f082959ab3fe0e08facb7ca7fb98940707d2>`_
+    `04f2f08 <https://github.com/Juris-M/citeproc-js/commit/04f2f082959ab3fe0e08facb7ca7fb98940707d2>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Fix raw delimiter
 Update test suite
 
 :commit:
-    `c0eac91 <https://github.com/Juris-M/zotero/commit/c0eac91325bc262795c68321af6d7466d892b9c9>`_
+    `c0eac91 <https://github.com/Juris-M/citeproc-js/commit/c0eac91325bc262795c68321af6d7466d892b9c9>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Update test suite
 Re-add docs
 
 :commit:
-    `b3f28aa <https://github.com/Juris-M/zotero/commit/b3f28aa42af1c70d4e9d166eb6654ad7cf3dfbfb>`_
+    `b3f28aa <https://github.com/Juris-M/citeproc-js/commit/b3f28aa42af1c70d4e9d166eb6654ad7cf3dfbfb>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Re-add docs
 Remove docs dir again
 
 :commit:
-    `202133b <https://github.com/Juris-M/zotero/commit/202133b8b24d67beaac6359fe6c96012836a5f78>`_
+    `202133b <https://github.com/Juris-M/citeproc-js/commit/202133b8b24d67beaac6359fe6c96012836a5f78>`_
 :author:
     fbennett
 :date:
@@ -82,7 +82,7 @@ Remove docs dir again
 Merge branch 'master' of github.com:Juris-M/citeproc-js
 
 :commit:
-    `62a14ce <https://github.com/Juris-M/zotero/commit/62a14ce77dc2386b1b4aeb2ba86205c89aaf21be>`_
+    `62a14ce <https://github.com/Juris-M/citeproc-js/commit/62a14ce77dc2386b1b4aeb2ba86205c89aaf21be>`_
 :author:
     fbennett
 :date:
@@ -94,7 +94,7 @@ Merge branch 'master' of github.com:Juris-M/citeproc-js
 Remove docs dir
 
 :commit:
-    `6679677 <https://github.com/Juris-M/zotero/commit/6679677c491bae552ebf8f8369c1ed3a157afff6>`_
+    `6679677 <https://github.com/Juris-M/citeproc-js/commit/6679677c491bae552ebf8f8369c1ed3a157afff6>`_
 :author:
     fbennett
 :date:
@@ -106,7 +106,7 @@ Remove docs dir
 Update test suite
 
 :commit:
-    `1020d38 <https://github.com/Juris-M/zotero/commit/1020d38533bd44a9a2cf8fb16d1779d7618ee799>`_
+    `1020d38 <https://github.com/Juris-M/citeproc-js/commit/1020d38533bd44a9a2cf8fb16d1779d7618ee799>`_
 :author:
     fbennett
 :date:
@@ -118,7 +118,7 @@ Update test suite
 Clean up the runner mess and enable an RTF runtime option
 
 :commit:
-    `73d4f90 <https://github.com/Juris-M/zotero/commit/73d4f902415062e7f8bdaf5d6798607bceb8edfc>`_
+    `73d4f90 <https://github.com/Juris-M/citeproc-js/commit/73d4f902415062e7f8bdaf5d6798607bceb8edfc>`_
 :author:
     fbennett
 :date:
@@ -130,7 +130,7 @@ Clean up the runner mess and enable an RTF runtime option
 Move old grinder to attic
 
 :commit:
-    `caae2df <https://github.com/Juris-M/zotero/commit/caae2df532ac3cafda30695322fede0eeddbadce>`_
+    `caae2df <https://github.com/Juris-M/citeproc-js/commit/caae2df532ac3cafda30695322fede0eeddbadce>`_
 :author:
     fbennett
 :date:
@@ -142,7 +142,7 @@ Move old grinder to attic
 Add docs as submodule
 
 :commit:
-    `dc168c8 <https://github.com/Juris-M/zotero/commit/dc168c82480ecd7050165b656fe88c47d98689d6>`_
+    `dc168c8 <https://github.com/Juris-M/citeproc-js/commit/dc168c82480ecd7050165b656fe88c47d98689d6>`_
 :author:
     Frank Bennett
 :date:
@@ -154,7 +154,7 @@ Add docs as submodule
 Remove documention
 
 :commit:
-    `e61c8a5 <https://github.com/Juris-M/zotero/commit/e61c8a54a5e1c9930ff12fa014a04fb4bb573908>`_
+    `e61c8a5 <https://github.com/Juris-M/citeproc-js/commit/e61c8a54a5e1c9930ff12fa014a04fb4bb573908>`_
 :author:
     Frank Bennett
 :date:
@@ -166,7 +166,7 @@ Remove documention
 Update index.rst
 
 :commit:
-    `7cda7c9 <https://github.com/Juris-M/zotero/commit/7cda7c9106ac8ab5d111d116bb807b2a9cd06c82>`_
+    `7cda7c9 <https://github.com/Juris-M/citeproc-js/commit/7cda7c9106ac8ab5d111d116bb807b2a9cd06c82>`_
 :author:
     Frank Bennett
 :date:
@@ -178,7 +178,7 @@ Update index.rst
 Update index.rst
 
 :commit:
-    `6f972f2 <https://github.com/Juris-M/zotero/commit/6f972f2dd3ba59ed2dceefc36c91a028eba5b62e>`_
+    `6f972f2 <https://github.com/Juris-M/citeproc-js/commit/6f972f2dd3ba59ed2dceefc36c91a028eba5b62e>`_
 :author:
     Frank Bennett
 :date:
@@ -190,7 +190,7 @@ Update index.rst
 Update docs
 
 :commit:
-    `c7c04f5 <https://github.com/Juris-M/zotero/commit/c7c04f5101ee0122215b4401f41c34c868831088>`_
+    `c7c04f5 <https://github.com/Juris-M/citeproc-js/commit/c7c04f5101ee0122215b4401f41c34c868831088>`_
 :author:
     fbennett
 :date:
@@ -202,7 +202,7 @@ Update docs
 Embedded parsers for JS, JSON, XML strings, DOM and E4X
 
 :commit:
-    `96f1728 <https://github.com/Juris-M/zotero/commit/96f172825c89ed33e97f3c4c7ad4a2b6e59f5b5f>`_
+    `96f1728 <https://github.com/Juris-M/citeproc-js/commit/96f172825c89ed33e97f3c4c7ad4a2b6e59f5b5f>`_
 :author:
     fbennett
 :date:
@@ -214,7 +214,7 @@ Embedded parsers for JS, JSON, XML strings, DOM and E4X
 Add e4x loading protection module to repo
 
 :commit:
-    `fe07a48 <https://github.com/Juris-M/zotero/commit/fe07a483d61a24e4bf46d281f3d35202c40dfc7d>`_
+    `fe07a48 <https://github.com/Juris-M/citeproc-js/commit/fe07a483d61a24e4bf46d281f3d35202c40dfc7d>`_
 :author:
     fbennett
 :date:
@@ -226,7 +226,7 @@ Add e4x loading protection module to repo
 Adapt script to rely on implicit parsing choice
 
 :commit:
-    `1205d1e <https://github.com/Juris-M/zotero/commit/1205d1e2a65dd5614cdfe11bc74a756208adaca2>`_
+    `1205d1e <https://github.com/Juris-M/citeproc-js/commit/1205d1e2a65dd5614cdfe11bc74a756208adaca2>`_
 :author:
     fbennett
 :date:
@@ -238,7 +238,7 @@ Adapt script to rely on implicit parsing choice
 Adapt test framework to rely on implicit parsing choice
 
 :commit:
-    `bef0050 <https://github.com/Juris-M/zotero/commit/bef005075c3afe1fd3f6c13a3d7589fa3bd18a19>`_
+    `bef0050 <https://github.com/Juris-M/citeproc-js/commit/bef005075c3afe1fd3f6c13a3d7589fa3bd18a19>`_
 :author:
     fbennett
 :date:
@@ -250,7 +250,7 @@ Adapt test framework to rely on implicit parsing choice
 Carry parsing modules in processor.
 
 :commit:
-    `fa29e44 <https://github.com/Juris-M/zotero/commit/fa29e4440b86e24564c4c80a67b247ac8e1c643a>`_
+    `fa29e44 <https://github.com/Juris-M/citeproc-js/commit/fa29e4440b86e24564c4c80a67b247ac8e1c643a>`_
 :author:
     fbennett
 :date:
@@ -262,7 +262,7 @@ Carry parsing modules in processor.
 Fix bad global string replacements
 
 :commit:
-    `0a6d144 <https://github.com/Juris-M/zotero/commit/0a6d1445265f2501c4461e03177e5c439e29994a>`_
+    `0a6d144 <https://github.com/Juris-M/citeproc-js/commit/0a6d1445265f2501c4461e03177e5c439e29994a>`_
 :author:
     fbennett
 :date:
@@ -274,7 +274,7 @@ Fix bad global string replacements
 Add some local test fixtures
 
 :commit:
-    `64ddd7d <https://github.com/Juris-M/zotero/commit/64ddd7d7d2de3b74f1bf67879181a87bb7cf984e>`_
+    `64ddd7d <https://github.com/Juris-M/citeproc-js/commit/64ddd7d7d2de3b74f1bf67879181a87bb7cf984e>`_
 :author:
     fbennett
 :date:
@@ -286,7 +286,7 @@ Add some local test fixtures
 Update CSL-M schema
 
 :commit:
-    `ab1778f <https://github.com/Juris-M/zotero/commit/ab1778f6e3465bc114e6e991a1991f3927268c0d>`_
+    `ab1778f <https://github.com/Juris-M/citeproc-js/commit/ab1778f6e3465bc114e6e991a1991f3927268c0d>`_
 :author:
     fbennett
 :date:
@@ -298,7 +298,7 @@ Update CSL-M schema
 Add docs to repo
 
 :commit:
-    `2bfbbeb <https://github.com/Juris-M/zotero/commit/2bfbbebbe2248d832b194a9b0a075dd745bd1a3f>`_
+    `2bfbbeb <https://github.com/Juris-M/citeproc-js/commit/2bfbbebbe2248d832b194a9b0a075dd745bd1a3f>`_
 :author:
     fbennett
 :date:
@@ -310,7 +310,7 @@ Add docs to repo
 Update tests
 
 :commit:
-    `6f5648d <https://github.com/Juris-M/zotero/commit/6f5648d736cb1e6dbe2013db5749caed483e687e>`_
+    `6f5648d <https://github.com/Juris-M/citeproc-js/commit/6f5648d736cb1e6dbe2013db5749caed483e687e>`_
 :author:
     fbennett
 :date:
@@ -322,7 +322,7 @@ Update tests
 Remove bad language. Tsk-tsk.
 
 :commit:
-    `1160b44 <https://github.com/Juris-M/zotero/commit/1160b443aca8538fdfc6f07c2d68c60ebf5d1ea9>`_
+    `1160b44 <https://github.com/Juris-M/citeproc-js/commit/1160b443aca8538fdfc6f07c2d68c60ebf5d1ea9>`_
 :author:
     fbennett
 :date:
@@ -334,7 +334,7 @@ Remove bad language. Tsk-tsk.
 Touch test.py
 
 :commit:
-    `29ece6e <https://github.com/Juris-M/zotero/commit/29ece6ed82d07c23ce2aa97f749f3934a0950536>`_
+    `29ece6e <https://github.com/Juris-M/citeproc-js/commit/29ece6ed82d07c23ce2aa97f749f3934a0950536>`_
 :author:
     fbennett
 :date:
@@ -346,7 +346,7 @@ Touch test.py
 Do not load unused parser
 
 :commit:
-    `77a6e00 <https://github.com/Juris-M/zotero/commit/77a6e005b405e03b73a3b578a78dd812a800a570>`_
+    `77a6e00 <https://github.com/Juris-M/citeproc-js/commit/77a6e005b405e03b73a3b578a78dd812a800a570>`_
 :author:
     fbennett
 :date:
@@ -358,7 +358,7 @@ Do not load unused parser
 Remove stale files
 
 :commit:
-    `2985ec3 <https://github.com/Juris-M/zotero/commit/2985ec39fa82d6bf1dac22727cba2332c6e5e2f2>`_
+    `2985ec3 <https://github.com/Juris-M/citeproc-js/commit/2985ec39fa82d6bf1dac22727cba2332c6e5e2f2>`_
 :author:
     fbennett
 :date:
@@ -370,7 +370,7 @@ Remove stale files
 Make local test fixtures validate
 
 :commit:
-    `b04ea90 <https://github.com/Juris-M/zotero/commit/b04ea906c7b53fdddb20f7a0f1046f263dbf5755>`_
+    `b04ea90 <https://github.com/Juris-M/citeproc-js/commit/b04ea906c7b53fdddb20f7a0f1046f263dbf5755>`_
 :author:
     fbennett
 :date:
@@ -382,7 +382,7 @@ Make local test fixtures validate
 Add jing and CSL schemata to repo, report local path on RELAX NG failures
 
 :commit:
-    `155b81c <https://github.com/Juris-M/zotero/commit/155b81ca9ab4516cab79fc578cd745ef1a956dcf>`_
+    `155b81c <https://github.com/Juris-M/citeproc-js/commit/155b81ca9ab4516cab79fc578cd745ef1a956dcf>`_
 :author:
     fbennett
 :date:
@@ -394,7 +394,7 @@ Add jing and CSL schemata to repo, report local path on RELAX NG failures
 Add submodule path objects
 
 :commit:
-    `56179c7 <https://github.com/Juris-M/zotero/commit/56179c705f46771920eca1e91981127a65fd6fb4>`_
+    `56179c7 <https://github.com/Juris-M/citeproc-js/commit/56179c705f46771920eca1e91981127a65fd6fb4>`_
 :author:
     fbennett
 :date:
@@ -406,7 +406,7 @@ Add submodule path objects
 Add submodules config
 
 :commit:
-    `5b21105 <https://github.com/Juris-M/zotero/commit/5b211056b4f647f62a3810a1ba62b464996aa404>`_
+    `5b21105 <https://github.com/Juris-M/citeproc-js/commit/5b211056b4f647f62a3810a1ba62b464996aa404>`_
 :author:
     fbennett
 :date:
@@ -418,7 +418,7 @@ Add submodules config
 Tidy up license notices a bit
 
 :commit:
-    `6f202bd <https://github.com/Juris-M/zotero/commit/6f202bd83c6df37a96f9b1af5e93743d08191d62>`_
+    `6f202bd <https://github.com/Juris-M/citeproc-js/commit/6f202bd83c6df37a96f9b1af5e93743d08191d62>`_
 :author:
     fbennett
 :date:
@@ -430,7 +430,7 @@ Tidy up license notices a bit
 Clear out some unused files
 
 :commit:
-    `2c6b1c2 <https://github.com/Juris-M/zotero/commit/2c6b1c2b49536173fe2f9405508f88c47512628e>`_
+    `2c6b1c2 <https://github.com/Juris-M/citeproc-js/commit/2c6b1c2b49536173fe2f9405508f88c47512628e>`_
 :author:
     fbennett
 :date:
@@ -442,7 +442,7 @@ Clear out some unused files
 Bump version, update CHANGES, bundle
 
 :commit:
-    `c24852b <https://github.com/Juris-M/zotero/commit/c24852b5506b59721f01881797d04714dc56efc1>`_
+    `c24852b <https://github.com/Juris-M/citeproc-js/commit/c24852b5506b59721f01881797d04714dc56efc1>`_
 :author:
     fbennett
 :date:
@@ -454,7 +454,7 @@ Bump version, update CHANGES, bundle
 Flipping tests
 
 :commit:
-    `cdb9cbf <https://github.com/Juris-M/zotero/commit/cdb9cbf326e4974b26853bf3fd9217c1e9a4fa66>`_
+    `cdb9cbf <https://github.com/Juris-M/citeproc-js/commit/cdb9cbf326e4974b26853bf3fd9217c1e9a4fa66>`_
 :author:
     fbennett
 :date:
@@ -466,7 +466,7 @@ Flipping tests
 Make test fixtures work with standard CSL locales
 
 :commit:
-    `a8874fa <https://github.com/Juris-M/zotero/commit/a8874fa07cfe06d0c59c71e1ff25baaca66fa1f8>`_
+    `a8874fa <https://github.com/Juris-M/citeproc-js/commit/a8874fa07cfe06d0c59c71e1ff25baaca66fa1f8>`_
 :author:
     fbennett
 :date:
@@ -478,7 +478,7 @@ Make test fixtures work with standard CSL locales
 Suppress parens flip in all but note styles
 
 :commit:
-    `cc1c8e3 <https://github.com/Juris-M/zotero/commit/cc1c8e3ae3bbe1f75754d9ab039446721ede58f0>`_
+    `cc1c8e3 <https://github.com/Juris-M/citeproc-js/commit/cc1c8e3ae3bbe1f75754d9ab039446721ede58f0>`_
 :author:
     fbennett
 :date:
@@ -490,7 +490,7 @@ Suppress parens flip in all but note styles
 Permit leading-noise-words on style-level locale declarations
 
 :commit:
-    `0edbc3a <https://github.com/Juris-M/zotero/commit/0edbc3ae5daa7f11c737c083fe3bba407bbfc629>`_
+    `0edbc3a <https://github.com/Juris-M/citeproc-js/commit/0edbc3ae5daa7f11c737c083fe3bba407bbfc629>`_
 :author:
     fbennett
 :date:
@@ -502,7 +502,7 @@ Permit leading-noise-words on style-level locale declarations
 Remove makejson.py, no longer used in test framework
 
 :commit:
-    `0117b7f <https://github.com/Juris-M/zotero/commit/0117b7fd43cd06b0aab9c178d7bf0b1bb0afa4ce>`_
+    `0117b7f <https://github.com/Juris-M/citeproc-js/commit/0117b7fd43cd06b0aab9c178d7bf0b1bb0afa4ce>`_
 :author:
     fbennett
 :date:
@@ -514,7 +514,7 @@ Remove makejson.py, no longer used in test framework
 Bump version, update CHANGES, bundle
 
 :commit:
-    `9e31487 <https://github.com/Juris-M/zotero/commit/9e314870ff43a48a15d5a880eaca5bc714838051>`_
+    `9e31487 <https://github.com/Juris-M/citeproc-js/commit/9e314870ff43a48a15d5a880eaca5bc714838051>`_
 :author:
     Frank Bennett
 :date:
@@ -526,7 +526,7 @@ Bump version, update CHANGES, bundle
 More robust implementation of parens-flipping
 
 :commit:
-    `02ffd73 <https://github.com/Juris-M/zotero/commit/02ffd73b6b626a13c344b30b792389d5dbd45a02>`_
+    `02ffd73 <https://github.com/Juris-M/citeproc-js/commit/02ffd73b6b626a13c344b30b792389d5dbd45a02>`_
 :author:
     Frank Bennett
 :date:
@@ -538,7 +538,7 @@ More robust implementation of parens-flipping
 Make global replacements work across all JS engines
 
 :commit:
-    `feca4da <https://github.com/Juris-M/zotero/commit/feca4da710ddeb6e22e2b1165d3f6ef541b44617>`_
+    `feca4da <https://github.com/Juris-M/citeproc-js/commit/feca4da710ddeb6e22e2b1165d3f6ef541b44617>`_
 :author:
     Frank Bennett
 :date:
@@ -550,7 +550,7 @@ Make global replacements work across all JS engines
 Remove spaces from sort keys
 
 :commit:
-    `2e29206 <https://github.com/Juris-M/zotero/commit/2e292064e1d6709b26e83e6afec16364b2a0d3c7>`_
+    `2e29206 <https://github.com/Juris-M/citeproc-js/commit/2e292064e1d6709b26e83e6afec16364b2a0d3c7>`_
 :author:
     Frank Bennett
 :date:
@@ -562,7 +562,7 @@ Remove spaces from sort keys
 Add var declarations, comment out code invalid in some JS engines
 
 :commit:
-    `bac73ce <https://github.com/Juris-M/zotero/commit/bac73ce47ed945892dcda58e72c16ae66118b292>`_
+    `bac73ce <https://github.com/Juris-M/citeproc-js/commit/bac73ce47ed945892dcda58e72c16ae66118b292>`_
 :author:
     Frank Bennett
 :date:
@@ -574,7 +574,7 @@ Add var declarations, comment out code invalid in some JS engines
 Additional test fixtures
 
 :commit:
-    `16beab3 <https://github.com/Juris-M/zotero/commit/16beab3c11eefc26577f474f1b1b49927b99a248>`_
+    `16beab3 <https://github.com/Juris-M/citeproc-js/commit/16beab3c11eefc26577f474f1b1b49927b99a248>`_
 :author:
     Frank Bennett
 :date:
@@ -586,7 +586,7 @@ Additional test fixtures
 Add alternative JS engines to test framework runtime config
 
 :commit:
-    `7880cce <https://github.com/Juris-M/zotero/commit/7880ccea7b7309049cc7f0eceb11044dffc05826>`_
+    `7880cce <https://github.com/Juris-M/citeproc-js/commit/7880ccea7b7309049cc7f0eceb11044dffc05826>`_
 :author:
     Frank Bennett
 :date:
@@ -598,7 +598,7 @@ Add alternative JS engines to test framework runtime config
 Revised XML parsing modules
 
 :commit:
-    `d489e29 <https://github.com/Juris-M/zotero/commit/d489e293387b5898ad64cb2f19b35b3b4eebe222>`_
+    `d489e29 <https://github.com/Juris-M/citeproc-js/commit/d489e293387b5898ad64cb2f19b35b3b4eebe222>`_
 :author:
     Frank Bennett
 :date:
@@ -610,7 +610,7 @@ Revised XML parsing modules
 Remove stale JS engine support files
 
 :commit:
-    `8ec9ee6 <https://github.com/Juris-M/zotero/commit/8ec9ee64eea6f209149af7d7c0a5c60b05438a2b>`_
+    `8ec9ee6 <https://github.com/Juris-M/citeproc-js/commit/8ec9ee64eea6f209149af7d7c0a5c60b05438a2b>`_
 :author:
     Frank Bennett
 :date:
@@ -622,7 +622,7 @@ Remove stale JS engine support files
 JS support files for alternative JS engines
 
 :commit:
-    `3b548da <https://github.com/Juris-M/zotero/commit/3b548da237ee0613c52209089be590c5291e3fe6>`_
+    `3b548da <https://github.com/Juris-M/citeproc-js/commit/3b548da237ee0613c52209089be590c5291e3fe6>`_
 :author:
     Frank Bennett
 :date:
@@ -634,7 +634,7 @@ JS support files for alternative JS engines
 Added tag 1.1.72 for changeset 621ba9c69071
 
 :commit:
-    `70800ce <https://github.com/Juris-M/zotero/commit/70800ce41fb4914e7aea6480dd88b698079f2da7>`_
+    `70800ce <https://github.com/Juris-M/citeproc-js/commit/70800ce41fb4914e7aea6480dd88b698079f2da7>`_
 :author:
     Frank Bennett
 :date:
@@ -646,7 +646,7 @@ Added tag 1.1.72 for changeset 621ba9c69071
 Option to set JS engine
 
 :commit:
-    `96f76e1 <https://github.com/Juris-M/zotero/commit/96f76e101dee3344a6803972d2ef9c6a464d46a2>`_
+    `96f76e1 <https://github.com/Juris-M/citeproc-js/commit/96f76e101dee3344a6803972d2ef9c6a464d46a2>`_
 :author:
     Frank Bennett
 :date:

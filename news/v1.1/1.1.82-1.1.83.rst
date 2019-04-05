@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.83
 
 :commit:
-    `a5e5e34 <https://github.com/Juris-M/zotero/commit/a5e5e346219c7d0acc18c169c1bceb616d3186e5>`_
+    `a5e5e34 <https://github.com/Juris-M/citeproc-js/commit/a5e5e346219c7d0acc18c169c1bceb616d3186e5>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.83
 Add note of fixing commit
 
 :commit:
-    `fd9611c <https://github.com/Juris-M/zotero/commit/fd9611c87198a323f4414bcecb62294c8e446584>`_
+    `fd9611c <https://github.com/Juris-M/citeproc-js/commit/fd9611c87198a323f4414bcecb62294c8e446584>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Add note of fixing commit
 Add a test of straight-quotes as inner quotes, with apostrophe in field
 
 :commit:
-    `3f7a1a3 <https://github.com/Juris-M/zotero/commit/3f7a1a3f00291608a86965472bb026788eb97b5d>`_
+    `3f7a1a3 <https://github.com/Juris-M/citeproc-js/commit/3f7a1a3f00291608a86965472bb026788eb97b5d>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Add a test of straight-quotes as inner quotes, with apostrophe in field
 Remove while loop that could hang if straight single quotes were set as inner quotes in the locale
 
 :commit:
-    `9848939 <https://github.com/Juris-M/zotero/commit/98489396ab7b16876780bdd25f2a684679420cde>`_
+    `9848939 <https://github.com/Juris-M/citeproc-js/commit/98489396ab7b16876780bdd25f2a684679420cde>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Remove while loop that could hang if straight single quotes were set as inner qu
 Remove potentially crashing print statement
 
 :commit:
-    `4c59563 <https://github.com/Juris-M/zotero/commit/4c595634cdee16cd7c7103fa92abee186541ca7b>`_
+    `4c59563 <https://github.com/Juris-M/citeproc-js/commit/4c595634cdee16cd7c7103fa92abee186541ca7b>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Remove potentially crashing print statement
 Bump version, update CHANGES, bundle as 1.1.82
 
 :commit:
-    `029cb21 <https://github.com/Juris-M/zotero/commit/029cb210885d479bbdc13d710cabb605bff1b118>`_
+    `029cb21 <https://github.com/Juris-M/citeproc-js/commit/029cb210885d479bbdc13d710cabb605bff1b118>`_
 :author:
     fbennett
 :date:

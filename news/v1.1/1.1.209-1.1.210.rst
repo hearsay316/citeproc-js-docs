@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.210
 
 :commit:
-    `5d24189 <https://github.com/Juris-M/zotero/commit/5d241893f957e471970782c594a38f0ef7d1fbb3>`_
+    `5d24189 <https://github.com/Juris-M/citeproc-js/commit/5d241893f957e471970782c594a38f0ef7d1fbb3>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.210
 Fixes for creator variable list
 
 :commit:
-    `23bebbe <https://github.com/Juris-M/zotero/commit/23bebbe240d56f900662c756863ba25b6660343a>`_
+    `23bebbe <https://github.com/Juris-M/citeproc-js/commit/23bebbe240d56f900662c756863ba25b6660343a>`_
 :author:
     Frank Bennett
 :date:
@@ -37,7 +37,7 @@ Fixes for creator variable list
 Bump version, update CHANGES, bundle as 1.1.209
 
 :commit:
-    `88dcacf <https://github.com/Juris-M/zotero/commit/88dcacfd810076f6b1b9dc682196db5e2c65a3a0>`_
+    `88dcacf <https://github.com/Juris-M/citeproc-js/commit/88dcacfd810076f6b1b9dc682196db5e2c65a3a0>`_
 :author:
     Frank Bennett
 :date:

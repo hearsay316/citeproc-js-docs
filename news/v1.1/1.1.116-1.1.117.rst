@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.117
 
 :commit:
-    `58049a2 <https://github.com/Juris-M/zotero/commit/58049a2823e9390edc33e790f7fea432819e6424>`_
+    `58049a2 <https://github.com/Juris-M/citeproc-js/commit/58049a2823e9390edc33e790f7fea432819e6424>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.117
 Update std tests
 
 :commit:
-    `519db86 <https://github.com/Juris-M/zotero/commit/519db86b260f4291c19f36e9c5da0ee2db8db545>`_
+    `519db86 <https://github.com/Juris-M/citeproc-js/commit/519db86b260f4291c19f36e9c5da0ee2db8db545>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Update std tests
 Fix delimiters between number and following text
 
 :commit:
-    `4592125 <https://github.com/Juris-M/zotero/commit/4592125f918fcc2bfd1e800f66080aa29859e23b>`_
+    `4592125 <https://github.com/Juris-M/citeproc-js/commit/4592125f918fcc2bfd1e800f66080aa29859e23b>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Fix delimiters between number and following text
 Bump version, update CHANGES, bundle as 1.1.116
 
 :commit:
-    `76cfdfa <https://github.com/Juris-M/zotero/commit/76cfdfaa649ad10eefeff26cf7425b8722305c97>`_
+    `76cfdfa <https://github.com/Juris-M/citeproc-js/commit/76cfdfaa649ad10eefeff26cf7425b8722305c97>`_
 :author:
     fbennett
 :date:

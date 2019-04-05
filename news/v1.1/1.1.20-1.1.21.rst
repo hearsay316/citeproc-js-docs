@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `4ebce68 <https://github.com/Juris-M/zotero/commit/4ebce68e4baa2ff59974597565280fda376fb8bb>`_
+    `4ebce68 <https://github.com/Juris-M/citeproc-js/commit/4ebce68e4baa2ff59974597565280fda376fb8bb>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Add far-note test
 
 :commit:
-    `9cf473c <https://github.com/Juris-M/zotero/commit/9cf473cf919395e241919a0f9c36dc04ff74d004>`_
+    `9cf473c <https://github.com/Juris-M/citeproc-js/commit/9cf473cf919395e241919a0f9c36dc04ff74d004>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Add far-note test
 Added tag 1.1.20 for changeset 3460e4af8faa
 
 :commit:
-    `bf375d6 <https://github.com/Juris-M/zotero/commit/bf375d600cca4afb6eaa0edaa27f0daf7b04a25c>`_
+    `bf375d6 <https://github.com/Juris-M/citeproc-js/commit/bf375d600cca4afb6eaa0edaa27f0daf7b04a25c>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Added tag 1.1.20 for changeset 3460e4af8faa
 Bump version, update CHANGES, bundle
 
 :commit:
-    `14ac706 <https://github.com/Juris-M/zotero/commit/14ac706997f96195b0faf3d553345bdceca3bba9>`_
+    `14ac706 <https://github.com/Juris-M/citeproc-js/commit/14ac706997f96195b0faf3d553345bdceca3bba9>`_
 :author:
     Frank Bennett
 :date:

@@ -10,7 +10,7 @@
 Update images
 
 :commit:
-    `30b4da2 <https://github.com/Juris-M/zotero/commit/30b4da29f6c7cc4b1629ac27808d1bfe9106a91a>`_
+    `30b4da2 <https://github.com/Juris-M/citeproc-js/commit/30b4da29f6c7cc4b1629ac27808d1bfe9106a91a>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Update images
 Bump version, update CHANGES, bundle as 1.1.212
 
 :commit:
-    `f16cea3 <https://github.com/Juris-M/zotero/commit/f16cea3e66ada34a3ada8155aeb15ccaebac1a09>`_
+    `f16cea3 <https://github.com/Juris-M/citeproc-js/commit/f16cea3e66ada34a3ada8155aeb15ccaebac1a09>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Bump version, update CHANGES, bundle as 1.1.212
 Wrap DOI correctly even if cruft exists before protocol in prefix attribute
 
 :commit:
-    `bcd824f <https://github.com/Juris-M/zotero/commit/bcd824f3c7f390483a50306d075e02c9bd251a41>`_
+    `bcd824f <https://github.com/Juris-M/citeproc-js/commit/bcd824f3c7f390483a50306d075e02c9bd251a41>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Wrap DOI correctly even if cruft exists before protocol in prefix attribute
 Test for wrapped DOI with cruft before protocol + domain prefix
 
 :commit:
-    `eccd73f <https://github.com/Juris-M/zotero/commit/eccd73f4838a603320130beab97b1659341a8aa1>`_
+    `eccd73f <https://github.com/Juris-M/citeproc-js/commit/eccd73f4838a603320130beab97b1659341a8aa1>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Test for wrapped DOI with cruft before protocol + domain prefix
 Fix typo
 
 :commit:
-    `a8b9327 <https://github.com/Juris-M/zotero/commit/a8b93279d4f0d2b70f0e15e4634f41c95eadc468>`_
+    `a8b9327 <https://github.com/Juris-M/citeproc-js/commit/a8b93279d4f0d2b70f0e15e4634f41c95eadc468>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Fix typo
 Bump version, update CHANGES, bundle as 1.1.211
 
 :commit:
-    `c93166f <https://github.com/Juris-M/zotero/commit/c93166f598470ea8e5c4bcdf66ec40f9c56e0d2a>`_
+    `c93166f <https://github.com/Juris-M/citeproc-js/commit/c93166f598470ea8e5c4bcdf66ec40f9c56e0d2a>`_
 :author:
     Frank Bennett
 :date:

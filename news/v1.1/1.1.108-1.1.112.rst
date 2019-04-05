@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.112
 
 :commit:
-    `5127f6b <https://github.com/Juris-M/zotero/commit/5127f6b2b76bbb654f4a5bba2e5e115b72afd22c>`_
+    `5127f6b <https://github.com/Juris-M/citeproc-js/commit/5127f6b2b76bbb654f4a5bba2e5e115b72afd22c>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.112
 Fix Homer-worthy nesting bug
 
 :commit:
-    `2edf95a <https://github.com/Juris-M/zotero/commit/2edf95a247a9cce4cccc9819d80ad32093d85d32>`_
+    `2edf95a <https://github.com/Juris-M/citeproc-js/commit/2edf95a247a9cce4cccc9819d80ad32093d85d32>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Fix Homer-worthy nesting bug
 Bump version, update CHANGES, bundle as 1.1.111
 
 :commit:
-    `d4febfd <https://github.com/Juris-M/zotero/commit/d4febfd31a4e4eebbdab21b9afa1c3b76ac54594>`_
+    `d4febfd <https://github.com/Juris-M/citeproc-js/commit/d4febfd31a4e4eebbdab21b9afa1c3b76ac54594>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Bump version, update CHANGES, bundle as 1.1.111
 Use dump if console not available. Do not throw on CSL error
 
 :commit:
-    `57aca0e <https://github.com/Juris-M/zotero/commit/57aca0e031e4a4264e6f93c24c6523022a90f87d>`_
+    `57aca0e <https://github.com/Juris-M/citeproc-js/commit/57aca0e031e4a4264e6f93c24c6523022a90f87d>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Use dump if console not available. Do not throw on CSL error
 Bump version, update CHANGES, bundle as 1.1.110
 
 :commit:
-    `95475c6 <https://github.com/Juris-M/zotero/commit/95475c69b17dbc621c294be07711a87522e7306c>`_
+    `95475c6 <https://github.com/Juris-M/citeproc-js/commit/95475c69b17dbc621c294be07711a87522e7306c>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Bump version, update CHANGES, bundle as 1.1.110
 Update standard tests
 
 :commit:
-    `c6cbfac <https://github.com/Juris-M/zotero/commit/c6cbfacdd4c6caab574d406e27952313e2f654e8>`_
+    `c6cbfac <https://github.com/Juris-M/citeproc-js/commit/c6cbfacdd4c6caab574d406e27952313e2f654e8>`_
 :author:
     fbennett
 :date:
@@ -82,7 +82,7 @@ Update standard tests
 Wrap section field remap in condition
 
 :commit:
-    `bc85372 <https://github.com/Juris-M/zotero/commit/bc85372b5633c8096933f124cbf84adea21f3755>`_
+    `bc85372 <https://github.com/Juris-M/citeproc-js/commit/bc85372b5633c8096933f124cbf84adea21f3755>`_
 :author:
     fbennett
 :date:
@@ -94,7 +94,7 @@ Wrap section field remap in condition
 Disable static_statute_locator in test harness, enable in tests
 
 :commit:
-    `e5fae6d <https://github.com/Juris-M/zotero/commit/e5fae6d024e0c3f4b411c34bb15aebbf4d1d832d>`_
+    `e5fae6d <https://github.com/Juris-M/citeproc-js/commit/e5fae6d024e0c3f4b411c34bb15aebbf4d1d832d>`_
 :author:
     fbennett
 :date:
@@ -106,7 +106,7 @@ Disable static_statute_locator in test harness, enable in tests
 Bump version, update CHANGES, bundle as 1.1.109
 
 :commit:
-    `f218582 <https://github.com/Juris-M/zotero/commit/f21858211a5a429bed12a09c0ff04a87d52d7bdf>`_
+    `f218582 <https://github.com/Juris-M/citeproc-js/commit/f21858211a5a429bed12a09c0ff04a87d52d7bdf>`_
 :author:
     fbennett
 :date:
@@ -118,7 +118,7 @@ Bump version, update CHANGES, bundle as 1.1.109
 Update tests
 
 :commit:
-    `62d7c05 <https://github.com/Juris-M/zotero/commit/62d7c0528b67fc479860fd82f5849f550c7f30a2>`_
+    `62d7c05 <https://github.com/Juris-M/citeproc-js/commit/62d7c0528b67fc479860fd82f5849f550c7f30a2>`_
 :author:
     fbennett
 :date:
@@ -130,7 +130,7 @@ Update tests
 Fix sorting behaviour again
 
 :commit:
-    `81e05d4 <https://github.com/Juris-M/zotero/commit/81e05d46e2c09c67c1fb37704f27ccde28f017e4>`_
+    `81e05d4 <https://github.com/Juris-M/citeproc-js/commit/81e05d46e2c09c67c1fb37704f27ccde28f017e4>`_
 :author:
     fbennett
 :date:
@@ -142,7 +142,7 @@ Fix sorting behaviour again
 Bump version, update CHANGES, bundle as 1.1.108
 
 :commit:
-    `0bbc3e1 <https://github.com/Juris-M/zotero/commit/0bbc3e1a286447a5cf623db7d2056e4846a6c092>`_
+    `0bbc3e1 <https://github.com/Juris-M/citeproc-js/commit/0bbc3e1a286447a5cf623db7d2056e4846a6c092>`_
 :author:
     fbennett
 :date:

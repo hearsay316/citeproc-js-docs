@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.120
 
 :commit:
-    `c6cbe40 <https://github.com/Juris-M/zotero/commit/c6cbe40404fe4285dab04991fc471b6f92dc3a66>`_
+    `c6cbe40 <https://github.com/Juris-M/citeproc-js/commit/c6cbe40404fe4285dab04991fc471b6f92dc3a66>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.120
 Update tests
 
 :commit:
-    `fdee605 <https://github.com/Juris-M/zotero/commit/fdee605b272ece88fdc884314e93d0e090dd6099>`_
+    `fdee605 <https://github.com/Juris-M/citeproc-js/commit/fdee605b272ece88fdc884314e93d0e090dd6099>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Update tests
 Fix subsequent-author-substitute
 
 :commit:
-    `7a27299 <https://github.com/Juris-M/zotero/commit/7a2729979e34ed3ea7fd785dfea8c0db3979b55a>`_
+    `7a27299 <https://github.com/Juris-M/citeproc-js/commit/7a2729979e34ed3ea7fd785dfea8c0db3979b55a>`_
 :author:
     fbennett
 :date:
@@ -59,7 +59,7 @@ a macro, the bug has less impact there.
 Bump version, update CHANGES, bundle as 1.1.119
 
 :commit:
-    `9309e4b <https://github.com/Juris-M/zotero/commit/9309e4b802edd236c81f7dff195e8f5057cc3979>`_
+    `9309e4b <https://github.com/Juris-M/citeproc-js/commit/9309e4b802edd236c81f7dff195e8f5057cc3979>`_
 :author:
     fbennett
 :date:

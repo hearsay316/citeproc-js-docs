@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `a6642af <https://github.com/Juris-M/zotero/commit/a6642af5805b5057d2070b8a58526ce46639fb52>`_
+    `a6642af <https://github.com/Juris-M/citeproc-js/commit/a6642af5805b5057d2070b8a58526ce46639fb52>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Control for empty item when juggling suffixes
 
 :commit:
-    `c88adaf <https://github.com/Juris-M/zotero/commit/c88adaf3eb081efc7ad610f865df067a61b738fe>`_
+    `c88adaf <https://github.com/Juris-M/citeproc-js/commit/c88adaf3eb081efc7ad610f865df067a61b738fe>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Control for empty item when juggling suffixes
 Added tag 1.1.34 for changeset 11678b29429a
 
 :commit:
-    `ccfe4c6 <https://github.com/Juris-M/zotero/commit/ccfe4c61fa27bfb3e3e0a11ec6375c6a07158179>`_
+    `ccfe4c6 <https://github.com/Juris-M/citeproc-js/commit/ccfe4c61fa27bfb3e3e0a11ec6375c6a07158179>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Added tag 1.1.34 for changeset 11678b29429a
 Bump version, update CHANGES, bundle
 
 :commit:
-    `f331798 <https://github.com/Juris-M/zotero/commit/f331798ae32015319ffeb3eef1508a62dd41b511>`_
+    `f331798 <https://github.com/Juris-M/citeproc-js/commit/f331798ae32015319ffeb3eef1508a62dd41b511>`_
 :author:
     Frank Bennett
 :date:

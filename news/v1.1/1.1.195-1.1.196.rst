@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.196
 
 :commit:
-    `69ac01a <https://github.com/Juris-M/zotero/commit/69ac01a35de5dc8044ee8d24bbec58c8356801bf>`_
+    `69ac01a <https://github.com/Juris-M/citeproc-js/commit/69ac01a35de5dc8044ee8d24bbec58c8356801bf>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.196
 Throw more informative errors in three locations
 
 :commit:
-    `048fc12 <https://github.com/Juris-M/zotero/commit/048fc12bcaad803de5108f5d0bcf9fd4c62ca715>`_
+    `048fc12 <https://github.com/Juris-M/citeproc-js/commit/048fc12bcaad803de5108f5d0bcf9fd4c62ca715>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Throw more informative errors in three locations
 Bump version, update CHANGES, bundle as 1.1.195
 
 :commit:
-    `0887f02 <https://github.com/Juris-M/zotero/commit/0887f022b621419b91b4e1558889d7a3ddaa05fe>`_
+    `0887f02 <https://github.com/Juris-M/citeproc-js/commit/0887f022b621419b91b4e1558889d7a3ddaa05fe>`_
 :author:
     Frank Bennett
 :date:

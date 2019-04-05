@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.132
 
 :commit:
-    `c88d082 <https://github.com/Juris-M/zotero/commit/c88d082634dac93fb8ef313c5b756a733d51c4eb>`_
+    `c88d082 <https://github.com/Juris-M/citeproc-js/commit/c88d082634dac93fb8ef313c5b756a733d51c4eb>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.132
 Fix braced-entry and add line-entry support for hack syntax
 
 :commit:
-    `13d2bc9 <https://github.com/Juris-M/zotero/commit/13d2bc91daa18b5d1b26380e351a5eba41b80ff0>`_
+    `13d2bc9 <https://github.com/Juris-M/citeproc-js/commit/13d2bc91daa18b5d1b26380e351a5eba41b80ff0>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Fix braced-entry and add line-entry support for hack syntax
 Test of braced-entry and line-entry cheater syntax
 
 :commit:
-    `f81698b <https://github.com/Juris-M/zotero/commit/f81698bd7e14ec2071fb337048826c91e039e653>`_
+    `f81698b <https://github.com/Juris-M/citeproc-js/commit/f81698bd7e14ec2071fb337048826c91e039e653>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Test of braced-entry and line-entry cheater syntax
 Bump version, update CHANGES, bundle as 1.1.131
 
 :commit:
-    `bb74634 <https://github.com/Juris-M/zotero/commit/bb7463420a8e67b34c88c4f7e0d156c7684a64c6>`_
+    `bb74634 <https://github.com/Juris-M/citeproc-js/commit/bb7463420a8e67b34c88c4f7e0d156c7684a64c6>`_
 :author:
     fbennett
 :date:

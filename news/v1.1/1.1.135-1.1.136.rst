@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.136
 
 :commit:
-    `95697fa <https://github.com/Juris-M/zotero/commit/95697faedb267bfcaaa41c9a8557700b1f334119>`_
+    `95697fa <https://github.com/Juris-M/citeproc-js/commit/95697faedb267bfcaaa41c9a8557700b1f334119>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.136
 Do not terminate parsing on non-conforming first line
 
 :commit:
-    `6d257cc <https://github.com/Juris-M/zotero/commit/6d257ccb091f36c09828e400adbba722e0156fd9>`_
+    `6d257cc <https://github.com/Juris-M/citeproc-js/commit/6d257ccb091f36c09828e400adbba722e0156fd9>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Do not terminate parsing on non-conforming first line
 Toughen up test a little
 
 :commit:
-    `31448fe <https://github.com/Juris-M/zotero/commit/31448fe2cbf13435e9528a87c0cb58ab371af7a8>`_
+    `31448fe <https://github.com/Juris-M/citeproc-js/commit/31448fe2cbf13435e9528a87c0cb58ab371af7a8>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Toughen up test a little
 Bump version, update CHANGES, bundle as 1.1.135
 
 :commit:
-    `39cfe68 <https://github.com/Juris-M/zotero/commit/39cfe68c2d958579ea7e45957e1f84578b3cbeb4>`_
+    `39cfe68 <https://github.com/Juris-M/citeproc-js/commit/39cfe68c2d958579ea7e45957e1f84578b3cbeb4>`_
 :author:
     fbennett
 :date:

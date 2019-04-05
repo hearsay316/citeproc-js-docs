@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `030602f <https://github.com/Juris-M/zotero/commit/030602f9861591e8e2d70d99361defef1f2b50ea>`_
+    `030602f <https://github.com/Juris-M/citeproc-js/commit/030602f9861591e8e2d70d99361defef1f2b50ea>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Test fixture moved from main
 
 :commit:
-    `f59b85a <https://github.com/Juris-M/zotero/commit/f59b85a8505d53b7a6f7a4898fa731ff947363fa>`_
+    `f59b85a <https://github.com/Juris-M/citeproc-js/commit/f59b85a8505d53b7a6f7a4898fa731ff947363fa>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Test fixture moved from main
 Memo scraper and source used for Dutch particles
 
 :commit:
-    `f289ae2 <https://github.com/Juris-M/zotero/commit/f289ae25c254781ce8f15a78c62f049a80f5567e>`_
+    `f289ae2 <https://github.com/Juris-M/citeproc-js/commit/f289ae25c254781ce8f15a78c62f049a80f5567e>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Memo scraper and source used for Dutch particles
 Simplify particle parsing, provide particles list separately
 
 :commit:
-    `23b8b91 <https://github.com/Juris-M/zotero/commit/23b8b910e5ef6e36210acdf4527ec02c94054fe4>`_
+    `23b8b91 <https://github.com/Juris-M/citeproc-js/commit/23b8b910e5ef6e36210acdf4527ec02c94054fe4>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Simplify particle parsing, provide particles list separately
 Do not add redundant spaces when splicing particles
 
 :commit:
-    `5a33515 <https://github.com/Juris-M/zotero/commit/5a3351500161a851fdda29ed2b7c4130087deb96>`_
+    `5a33515 <https://github.com/Juris-M/citeproc-js/commit/5a3351500161a851fdda29ed2b7c4130087deb96>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Do not add redundant spaces when splicing particles
 Bump version, update CHANGES, bundle
 
 :commit:
-    `22d4b89 <https://github.com/Juris-M/zotero/commit/22d4b896a8e3aa5168bb7683b98469f1369946c2>`_
+    `22d4b89 <https://github.com/Juris-M/citeproc-js/commit/22d4b896a8e3aa5168bb7683b98469f1369946c2>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ Bump version, update CHANGES, bundle
 Fix bug in cite-group-delimiter
 
 :commit:
-    `f3308f4 <https://github.com/Juris-M/zotero/commit/f3308f489cf0fbab913464a565b6b7f3b08a846a>`_
+    `f3308f4 <https://github.com/Juris-M/citeproc-js/commit/f3308f489cf0fbab913464a565b6b7f3b08a846a>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ Fix bug in cite-group-delimiter
 Fix particle shorthand, take 2
 
 :commit:
-    `ebe449e <https://github.com/Juris-M/zotero/commit/ebe449e7305afaceaaaa0665f503e346be221cf0>`_
+    `ebe449e <https://github.com/Juris-M/citeproc-js/commit/ebe449e7305afaceaaaa0665f503e346be221cf0>`_
 :author:
     Frank Bennett
 :date:
@@ -106,7 +106,7 @@ Fix particle shorthand, take 2
 Shorthand used in last corrections
 
 :commit:
-    `070404a <https://github.com/Juris-M/zotero/commit/070404ae610c8c7706274a55046060f41bc8355d>`_
+    `070404a <https://github.com/Juris-M/citeproc-js/commit/070404ae610c8c7706274a55046060f41bc8355d>`_
 :author:
     Frank Bennett
 :date:
@@ -118,7 +118,7 @@ Shorthand used in last corrections
 Particle corrections
 
 :commit:
-    `87177c3 <https://github.com/Juris-M/zotero/commit/87177c3ac7e5b511397c7fa25ebd498b1a49d22d>`_
+    `87177c3 <https://github.com/Juris-M/citeproc-js/commit/87177c3ac7e5b511397c7fa25ebd498b1a49d22d>`_
 :author:
     Frank Bennett
 :date:
@@ -130,7 +130,7 @@ Particle corrections
 Bump version, update CHANGES, bundle
 
 :commit:
-    `b149f6d <https://github.com/Juris-M/zotero/commit/b149f6d244b24de9faa0ee342010570710639dd0>`_
+    `b149f6d <https://github.com/Juris-M/citeproc-js/commit/b149f6d244b24de9faa0ee342010570710639dd0>`_
 :author:
     Frank Bennett
 :date:
@@ -142,7 +142,7 @@ Bump version, update CHANGES, bundle
 Add full set of known Dutch particles, merge duplicates
 
 :commit:
-    `bbacc0c <https://github.com/Juris-M/zotero/commit/bbacc0c5dd328c8396d18e98db8eb408e515e5cd>`_
+    `bbacc0c <https://github.com/Juris-M/citeproc-js/commit/bbacc0c5dd328c8396d18e98db8eb408e515e5cd>`_
 :author:
     Frank Bennett
 :date:
@@ -154,7 +154,7 @@ Add full set of known Dutch particles, merge duplicates
 Fix variable typo
 
 :commit:
-    `7bdc351 <https://github.com/Juris-M/zotero/commit/7bdc351059661b7a3aa2fd05069957bffa99141f>`_
+    `7bdc351 <https://github.com/Juris-M/citeproc-js/commit/7bdc351059661b7a3aa2fd05069957bffa99141f>`_
 :author:
     Frank Bennett
 :date:
@@ -166,7 +166,7 @@ Fix variable typo
 Bump version, update CHANGES, bundle
 
 :commit:
-    `f75178a <https://github.com/Juris-M/zotero/commit/f75178a7c0cc3ca9a5cc7cb3e8221fcf91ee22ce>`_
+    `f75178a <https://github.com/Juris-M/citeproc-js/commit/f75178a7c0cc3ca9a5cc7cb3e8221fcf91ee22ce>`_
 :author:
     Frank Bennett
 :date:
@@ -178,7 +178,7 @@ Bump version, update CHANGES, bundle
 Reformat particle list
 
 :commit:
-    `03732f9 <https://github.com/Juris-M/zotero/commit/03732f9b2588f47955acfa596c333d014461a654>`_
+    `03732f9 <https://github.com/Juris-M/citeproc-js/commit/03732f9b2588f47955acfa596c333d014461a654>`_
 :author:
     Frank Bennett
 :date:
@@ -190,7 +190,7 @@ Reformat particle list
 Bump version, update CHANGES, bundle
 
 :commit:
-    `4f78a06 <https://github.com/Juris-M/zotero/commit/4f78a06738d9b12716cf62f42c5a4b0c12af4d2e>`_
+    `4f78a06 <https://github.com/Juris-M/citeproc-js/commit/4f78a06738d9b12716cf62f42c5a4b0c12af4d2e>`_
 :author:
     Frank Bennett
 :date:
@@ -202,7 +202,7 @@ Bump version, update CHANGES, bundle
 Fix some Italian name particles
 
 :commit:
-    `3d35bad <https://github.com/Juris-M/zotero/commit/3d35badcb3559e8ac4cce9a552370301d09b3003>`_
+    `3d35bad <https://github.com/Juris-M/citeproc-js/commit/3d35badcb3559e8ac4cce9a552370301d09b3003>`_
 :author:
     Frank Bennett
 :date:
@@ -214,7 +214,7 @@ Fix some Italian name particles
 Add a particle, fill out case-insensitive code
 
 :commit:
-    `972fc90 <https://github.com/Juris-M/zotero/commit/972fc9021afe9d5943a7121f0bb85d0dbfc0c3b9>`_
+    `972fc90 <https://github.com/Juris-M/citeproc-js/commit/972fc9021afe9d5943a7121f0bb85d0dbfc0c3b9>`_
 :author:
     Frank Bennett
 :date:
@@ -226,7 +226,7 @@ Add a particle, fill out case-insensitive code
 Use https for git subrepo
 
 :commit:
-    `b50fce1 <https://github.com/Juris-M/zotero/commit/b50fce13544ec448fba7186296c272f7e23b0f84>`_
+    `b50fce1 <https://github.com/Juris-M/citeproc-js/commit/b50fce13544ec448fba7186296c272f7e23b0f84>`_
 :author:
     Frank Bennett
 :date:
@@ -238,7 +238,7 @@ Use https for git subrepo
 Particle parsing adjustment to test
 
 :commit:
-    `3b65a44 <https://github.com/Juris-M/zotero/commit/3b65a443a74a85e937141db652b200c73917cdd7>`_
+    `3b65a44 <https://github.com/Juris-M/citeproc-js/commit/3b65a443a74a85e937141db652b200c73917cdd7>`_
 :author:
     Frank Bennett
 :date:
@@ -250,7 +250,7 @@ Particle parsing adjustment to test
 Restore case sensitivity, fix Dutch particle classifications
 
 :commit:
-    `d5868a8 <https://github.com/Juris-M/zotero/commit/d5868a8d6d615cf1d07dfe59a053894aeda119b1>`_
+    `d5868a8 <https://github.com/Juris-M/citeproc-js/commit/d5868a8d6d615cf1d07dfe59a053894aeda119b1>`_
 :author:
     Frank Bennett
 :date:
@@ -262,7 +262,7 @@ Restore case sensitivity, fix Dutch particle classifications
 Bump version, update CHANGES, bundle
 
 :commit:
-    `03e2da7 <https://github.com/Juris-M/zotero/commit/03e2da7d170b2523567f321a04fcaf0339cc3951>`_
+    `03e2da7 <https://github.com/Juris-M/citeproc-js/commit/03e2da7d170b2523567f321a04fcaf0339cc3951>`_
 :author:
     Frank Bennett
 :date:
@@ -274,7 +274,7 @@ Bump version, update CHANGES, bundle
 Drop unused function, fix typo
 
 :commit:
-    `508e94d <https://github.com/Juris-M/zotero/commit/508e94d499b255253684657e2b2c3c9b18f8e818>`_
+    `508e94d <https://github.com/Juris-M/citeproc-js/commit/508e94d499b255253684657e2b2c3c9b18f8e818>`_
 :author:
     Frank Bennett
 :date:
@@ -286,7 +286,7 @@ Drop unused function, fix typo
 Fix bugs in displayed jurisdiction names
 
 :commit:
-    `50cad0f <https://github.com/Juris-M/zotero/commit/50cad0f0eae5761be81bfe6e0d98e1fed963c15f>`_
+    `50cad0f <https://github.com/Juris-M/citeproc-js/commit/50cad0f0eae5761be81bfe6e0d98e1fed963c15f>`_
 :author:
     Frank Bennett
 :date:
@@ -298,7 +298,7 @@ Fix bugs in displayed jurisdiction names
 Bump version, update CHANGES, bundle
 
 :commit:
-    `4d8abab <https://github.com/Juris-M/zotero/commit/4d8abab4e4521f6ec25bf9bd890a47d1da98e3b6>`_
+    `4d8abab <https://github.com/Juris-M/citeproc-js/commit/4d8abab4e4521f6ec25bf9bd890a47d1da98e3b6>`_
 :author:
     Frank Bennett
 :date:
@@ -310,7 +310,7 @@ Bump version, update CHANGES, bundle
 Always display human form of jurisdiction
 
 :commit:
-    `012bbcb <https://github.com/Juris-M/zotero/commit/012bbcb578863597ae296478614a7dbbbc8a4e79>`_
+    `012bbcb <https://github.com/Juris-M/citeproc-js/commit/012bbcb578863597ae296478614a7dbbbc8a4e79>`_
 :author:
     Frank Bennett
 :date:
@@ -322,7 +322,7 @@ Always display human form of jurisdiction
 Simplify suppressed jurisdiction support. Includes change to API.
 
 :commit:
-    `4ec79f2 <https://github.com/Juris-M/zotero/commit/4ec79f2316d243eaea6761696d50032daa3c39bb>`_
+    `4ec79f2 <https://github.com/Juris-M/citeproc-js/commit/4ec79f2316d243eaea6761696d50032daa3c39bb>`_
 :author:
     Frank Bennett
 :date:
@@ -334,7 +334,7 @@ Simplify suppressed jurisdiction support. Includes change to API.
 Bump version, update CHANGES, bundle
 
 :commit:
-    `74e9c06 <https://github.com/Juris-M/zotero/commit/74e9c0615d7f541b6fce199176638744008f6689>`_
+    `74e9c06 <https://github.com/Juris-M/citeproc-js/commit/74e9c0615d7f541b6fce199176638744008f6689>`_
 :author:
     Frank Bennett
 :date:
@@ -346,7 +346,7 @@ Bump version, update CHANGES, bundle
 Fix bugs in punctuation swapping and migration
 
 :commit:
-    `f513579 <https://github.com/Juris-M/zotero/commit/f513579ee16806f7be920e6254dac26dc2805eb0>`_
+    `f513579 <https://github.com/Juris-M/citeproc-js/commit/f513579ee16806f7be920e6254dac26dc2805eb0>`_
 :author:
     Frank Bennett
 :date:
@@ -358,7 +358,7 @@ Fix bugs in punctuation swapping and migration
 Fix error in test result
 
 :commit:
-    `30a2d91 <https://github.com/Juris-M/zotero/commit/30a2d91143faa1fa933e70fb488a8fa6d4b9d648>`_
+    `30a2d91 <https://github.com/Juris-M/citeproc-js/commit/30a2d91143faa1fa933e70fb488a8fa6d4b9d648>`_
 :author:
     Frank Bennett
 :date:
@@ -370,7 +370,7 @@ Fix error in test result
 Avoid crash on first-entry data with styles using first-reference-note-number
 
 :commit:
-    `ac297d8 <https://github.com/Juris-M/zotero/commit/ac297d86da6685b53def2dd26eb9c68dd8a77449>`_
+    `ac297d8 <https://github.com/Juris-M/citeproc-js/commit/ac297d86da6685b53def2dd26eb9c68dd8a77449>`_
 :author:
     Frank Bennett
 :date:
@@ -382,7 +382,7 @@ Avoid crash on first-entry data with styles using first-reference-note-number
 Bump version, update CHANGES, bundle
 
 :commit:
-    `a25d44d <https://github.com/Juris-M/zotero/commit/a25d44dba9256c15a36c4223d7f2c0126f7f5cc0>`_
+    `a25d44d <https://github.com/Juris-M/citeproc-js/commit/a25d44dba9256c15a36c4223d7f2c0126f7f5cc0>`_
 :author:
     Frank Bennett
 :date:
@@ -394,7 +394,7 @@ Bump version, update CHANGES, bundle
 Fix flipflop parse crash on multiple U+2018 followed by straight single quote
 
 :commit:
-    `1622f84 <https://github.com/Juris-M/zotero/commit/1622f84f3458db0bc921c2317acb7939f0b8cece>`_
+    `1622f84 <https://github.com/Juris-M/citeproc-js/commit/1622f84f3458db0bc921c2317acb7939f0b8cece>`_
 :author:
     Frank Bennett
 :date:
@@ -406,7 +406,7 @@ Fix flipflop parse crash on multiple U+2018 followed by straight single quote
 Fix test
 
 :commit:
-    `751a556 <https://github.com/Juris-M/zotero/commit/751a55677a0ff232deff3dd656b56ce457b6fc3a>`_
+    `751a556 <https://github.com/Juris-M/citeproc-js/commit/751a55677a0ff232deff3dd656b56ce457b6fc3a>`_
 :author:
     Frank Bennett
 :date:
@@ -418,7 +418,7 @@ Fix test
 Remove unneeded getHumanForm() remapping
 
 :commit:
-    `172f710 <https://github.com/Juris-M/zotero/commit/172f7104f6c78a8994adaa24b91d7a6e3c10e54d>`_
+    `172f710 <https://github.com/Juris-M/citeproc-js/commit/172f7104f6c78a8994adaa24b91d7a6e3c10e54d>`_
 :author:
     Frank Bennett
 :date:
@@ -430,7 +430,7 @@ Remove unneeded getHumanForm() remapping
 Fix for flipflop string normalizer
 
 :commit:
-    `95ce32c <https://github.com/Juris-M/zotero/commit/95ce32cf1ab3a9b1bc67df5ecd257f6afba6728c>`_
+    `95ce32c <https://github.com/Juris-M/citeproc-js/commit/95ce32cf1ab3a9b1bc67df5ecd257f6afba6728c>`_
 :author:
     Frank Bennett
 :date:
@@ -442,7 +442,7 @@ Fix for flipflop string normalizer
 Text of many left-single-quote characters
 
 :commit:
-    `fc0d712 <https://github.com/Juris-M/zotero/commit/fc0d71260eda9c6ebe87414607a00136b862e149>`_
+    `fc0d712 <https://github.com/Juris-M/citeproc-js/commit/fc0d71260eda9c6ebe87414607a00136b862e149>`_
 :author:
     Frank Bennett
 :date:
@@ -454,7 +454,7 @@ Text of many left-single-quote characters
 Normalize left-single-quotes to avoid processor crash
 
 :commit:
-    `d48e521 <https://github.com/Juris-M/zotero/commit/d48e521e85656a1d81cfd3b53ae3c2b0334a67cc>`_
+    `d48e521 <https://github.com/Juris-M/citeproc-js/commit/d48e521e85656a1d81cfd3b53ae3c2b0334a67cc>`_
 :author:
     Frank Bennett
 :date:
@@ -466,7 +466,7 @@ Normalize left-single-quotes to avoid processor crash
 Bump version, update CHANGES, bundle
 
 :commit:
-    `aec6aea <https://github.com/Juris-M/zotero/commit/aec6aea24a5685377a21b29b221a155ff9d46df0>`_
+    `aec6aea <https://github.com/Juris-M/citeproc-js/commit/aec6aea24a5685377a21b29b221a155ff9d46df0>`_
 :author:
     Frank Bennett
 :date:
@@ -478,7 +478,7 @@ Bump version, update CHANGES, bundle
 Fix some particle category assignments, and make algo case-indifferent for now.
 
 :commit:
-    `6680670 <https://github.com/Juris-M/zotero/commit/66806707c03c8c84795b645cfefdc507c3302f10>`_
+    `6680670 <https://github.com/Juris-M/citeproc-js/commit/66806707c03c8c84795b645cfefdc507c3302f10>`_
 :author:
     Frank Bennett
 :date:
@@ -490,7 +490,7 @@ Fix some particle category assignments, and make algo case-indifferent for now.
 Assume a smarter suppressJurisdiction() function
 
 :commit:
-    `0ace012 <https://github.com/Juris-M/zotero/commit/0ace0122f4478b087e96a974acf6c9207c0b9407>`_
+    `0ace012 <https://github.com/Juris-M/citeproc-js/commit/0ace0122f4478b087e96a974acf6c9207c0b9407>`_
 :author:
     Frank Bennett
 :date:
@@ -502,7 +502,7 @@ Assume a smarter suppressJurisdiction() function
 Added tag 1.1.42 for changeset bb7a9abc5f96
 
 :commit:
-    `358fad8 <https://github.com/Juris-M/zotero/commit/358fad894d7c0482f9ffaf2f1449a460ef18fb40>`_
+    `358fad8 <https://github.com/Juris-M/citeproc-js/commit/358fad894d7c0482f9ffaf2f1449a460ef18fb40>`_
 :author:
     Frank Bennett
 :date:
@@ -514,7 +514,7 @@ Added tag 1.1.42 for changeset bb7a9abc5f96
 Bump version, update CHANGES, bundle
 
 :commit:
-    `9b77075 <https://github.com/Juris-M/zotero/commit/9b770755fc0163d74be0ab4d7d1ba36256fcdb5c>`_
+    `9b77075 <https://github.com/Juris-M/citeproc-js/commit/9b770755fc0163d74be0ab4d7d1ba36256fcdb5c>`_
 :author:
     Frank Bennett
 :date:

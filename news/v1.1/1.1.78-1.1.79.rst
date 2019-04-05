@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.79
 
 :commit:
-    `73bbaeb <https://github.com/Juris-M/zotero/commit/73bbaebfc7ecc9ee1306b8a4864b7002503c6ec5>`_
+    `73bbaeb <https://github.com/Juris-M/citeproc-js/commit/73bbaebfc7ecc9ee1306b8a4864b7002503c6ec5>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.79
 Fix validation error in test
 
 :commit:
-    `2ad7bdc <https://github.com/Juris-M/zotero/commit/2ad7bdca7a2cfb7ac24e0cbd836492abe8723e00>`_
+    `2ad7bdc <https://github.com/Juris-M/citeproc-js/commit/2ad7bdca7a2cfb7ac24e0cbd836492abe8723e00>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Fix validation error in test
 Apply require and reject attributes to cs:text value and term modes
 
 :commit:
-    `51cd6be <https://github.com/Juris-M/zotero/commit/51cd6be15725892255249fa63d620c31b47a54e7>`_
+    `51cd6be <https://github.com/Juris-M/citeproc-js/commit/51cd6be15725892255249fa63d620c31b47a54e7>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Apply require and reject attributes to cs:text value and term modes
 Remove code that is not reached
 
 :commit:
-    `51fb7b6 <https://github.com/Juris-M/zotero/commit/51fb7b61ce8930b88ea3b430c370d0bc5c4ec939>`_
+    `51fb7b6 <https://github.com/Juris-M/citeproc-js/commit/51fb7b61ce8930b88ea3b430c370d0bc5c4ec939>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Remove code that is not reached
 Adjustments to require and reject tests
 
 :commit:
-    `c079500 <https://github.com/Juris-M/zotero/commit/c079500413eded8a4d07319cbb06046929ab49c1>`_
+    `c079500 <https://github.com/Juris-M/citeproc-js/commit/c079500413eded8a4d07319cbb06046929ab49c1>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Adjustments to require and reject tests
 Bump version, update CHANGES, bundle as 1.1.78
 
 :commit:
-    `2780216 <https://github.com/Juris-M/zotero/commit/2780216f4d451384609f29bd8930618c205457f6>`_
+    `2780216 <https://github.com/Juris-M/citeproc-js/commit/2780216f4d451384609f29bd8930618c205457f6>`_
 :author:
     fbennett
 :date:

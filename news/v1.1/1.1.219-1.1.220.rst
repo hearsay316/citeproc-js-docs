@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.220
 
 :commit:
-    `f71c0ef <https://github.com/Juris-M/zotero/commit/f71c0ef47f2fdf6f114e0044f8ea585d0bdc1049>`_
+    `f71c0ef <https://github.com/Juris-M/citeproc-js/commit/f71c0ef47f2fdf6f114e0044f8ea585d0bdc1049>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.220
 Update copyright assertion
 
 :commit:
-    `7023ac9 <https://github.com/Juris-M/zotero/commit/7023ac9a5cea9edd307131ac6f998ea09601480e>`_
+    `7023ac9 <https://github.com/Juris-M/citeproc-js/commit/7023ac9a5cea9edd307131ac6f998ea09601480e>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Update copyright assertion
 Bibliograhy options to exclude items
 
 :commit:
-    `eeb6d32 <https://github.com/Juris-M/zotero/commit/eeb6d32cdb17743930c26cdd662b24f3dc776073>`_
+    `eeb6d32 <https://github.com/Juris-M/citeproc-js/commit/eeb6d32cdb17743930c26cdd662b24f3dc776073>`_
 :author:
     Frank Bennett
 :date:
@@ -59,7 +59,7 @@ Bibliograhy options to exclude items
 Bump version, update CHANGES, bundle as tag 1.1.219
 
 :commit:
-    `d9b984a <https://github.com/Juris-M/zotero/commit/d9b984a7021729179aaaf8c7283496f66a9adb89>`_
+    `d9b984a <https://github.com/Juris-M/citeproc-js/commit/d9b984a7021729179aaaf8c7283496f66a9adb89>`_
 :author:
     Frank Bennett
 :date:

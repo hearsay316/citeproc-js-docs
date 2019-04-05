@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.199
 
 :commit:
-    `1790ce3 <https://github.com/Juris-M/zotero/commit/1790ce341893ff7050d8ff227d97485984694c83>`_
+    `1790ce3 <https://github.com/Juris-M/citeproc-js/commit/1790ce341893ff7050d8ff227d97485984694c83>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.199
 Fix curly single-quote apostrophe inside markup
 
 :commit:
-    `5c835fd <https://github.com/Juris-M/zotero/commit/5c835fdaf0f1f08b7201260511a84cca90d944f1>`_
+    `5c835fd <https://github.com/Juris-M/citeproc-js/commit/5c835fdaf0f1f08b7201260511a84cca90d944f1>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Fix curly single-quote apostrophe inside markup
 Bump version, update CHANGES, bundle as 1.1.198
 
 :commit:
-    `e424b6d <https://github.com/Juris-M/zotero/commit/e424b6d9db038b3cbd55125659377ea1275d20b3>`_
+    `e424b6d <https://github.com/Juris-M/citeproc-js/commit/e424b6d9db038b3cbd55125659377ea1275d20b3>`_
 :author:
     Frank Bennett
 :date:

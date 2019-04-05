@@ -10,7 +10,7 @@
 Bump version, update CHANGES, release as 1.1.214
 
 :commit:
-    `c946085 <https://github.com/Juris-M/zotero/commit/c946085add493da611f311a1307f975e03866c1d>`_
+    `c946085 <https://github.com/Juris-M/citeproc-js/commit/c946085add493da611f311a1307f975e03866c1d>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, release as 1.1.214
 Update images
 
 :commit:
-    `8e65fc7 <https://github.com/Juris-M/zotero/commit/8e65fc73172f1b7673102a612ca7afeabbee65cb>`_
+    `8e65fc7 <https://github.com/Juris-M/citeproc-js/commit/8e65fc73172f1b7673102a612ca7afeabbee65cb>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Update images
 Fix potential crash condition in ibid evaluation
 
 :commit:
-    `59f8b47 <https://github.com/Juris-M/zotero/commit/59f8b47a3239a1822ccd672147ea6b10503baa1d>`_
+    `59f8b47 <https://github.com/Juris-M/citeproc-js/commit/59f8b47a3239a1822ccd672147ea6b10503baa1d>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Fix potential crash condition in ibid evaluation
 Bump version, update CHANGES, release as 1.1.213
 
 :commit:
-    `b9ce3f0 <https://github.com/Juris-M/zotero/commit/b9ce3f0377c97708dc70e8b92823cc602017d0b7>`_
+    `b9ce3f0 <https://github.com/Juris-M/citeproc-js/commit/b9ce3f0377c97708dc70e8b92823cc602017d0b7>`_
 :author:
     Frank Bennett
 :date:

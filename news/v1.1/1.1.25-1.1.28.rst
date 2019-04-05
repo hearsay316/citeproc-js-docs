@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `22d3b89 <https://github.com/Juris-M/zotero/commit/22d3b8965e8316dab2f0942da5c83d191e4cf795>`_
+    `22d3b89 <https://github.com/Juris-M/citeproc-js/commit/22d3b8965e8316dab2f0942da5c83d191e4cf795>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Fix multilingual mappings
 
 :commit:
-    `1295599 <https://github.com/Juris-M/zotero/commit/1295599f2aef631532a813e668667670cec24558>`_
+    `1295599 <https://github.com/Juris-M/citeproc-js/commit/1295599f2aef631532a813e668667670cec24558>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Fix multilingual mappings
 Make short form of names empty by default
 
 :commit:
-    `16697bf <https://github.com/Juris-M/zotero/commit/16697bfd230b05e1610969b62507f317e06ce609>`_
+    `16697bf <https://github.com/Juris-M/citeproc-js/commit/16697bfd230b05e1610969b62507f317e06ce609>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Make short form of names empty by default
 Bump version, update CHANGES.txt, bundle
 
 :commit:
-    `b7d9d22 <https://github.com/Juris-M/zotero/commit/b7d9d22b6daccee92d3f1b7f4fa260038c5c0d32>`_
+    `b7d9d22 <https://github.com/Juris-M/citeproc-js/commit/b7d9d22b6daccee92d3f1b7f4fa260038c5c0d32>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Bump version, update CHANGES.txt, bundle
 Enable language-name and language-name-original with short forms
 
 :commit:
-    `618b9ea <https://github.com/Juris-M/zotero/commit/618b9eab4e921d387cd8c2164e4dc2e286604e01>`_
+    `618b9ea <https://github.com/Juris-M/citeproc-js/commit/618b9eab4e921d387cd8c2164e4dc2e286604e01>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Enable language-name and language-name-original with short forms
 Added tag 1.1.25 for changeset 203837d37d82
 
 :commit:
-    `26f82c1 <https://github.com/Juris-M/zotero/commit/26f82c143c871733d47cae10ea323922eaa76203>`_
+    `26f82c1 <https://github.com/Juris-M/citeproc-js/commit/26f82c143c871733d47cae10ea323922eaa76203>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ Added tag 1.1.25 for changeset 203837d37d82
 Bump version, update CHANGES, bundle
 
 :commit:
-    `0b6f700 <https://github.com/Juris-M/zotero/commit/0b6f700f8527f13f89afd174d8871f29471dd6a6>`_
+    `0b6f700 <https://github.com/Juris-M/citeproc-js/commit/0b6f700f8527f13f89afd174d8871f29471dd6a6>`_
 :author:
     Frank Bennett
 :date:

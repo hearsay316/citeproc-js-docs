@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.193
 
 :commit:
-    `3fc8f80 <https://github.com/Juris-M/zotero/commit/3fc8f801e736ea99705fc3a3409e93e2b2836ee1>`_
+    `3fc8f80 <https://github.com/Juris-M/citeproc-js/commit/3fc8f801e736ea99705fc3a3409e93e2b2836ee1>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.193
 Adjustments to splice delimiters, to better serve after-collapse-delimiter
 
 :commit:
-    `84a3916 <https://github.com/Juris-M/zotero/commit/84a3916a20fc33ab53a2b57a8af1fe3b9d82452c>`_
+    `84a3916 <https://github.com/Juris-M/citeproc-js/commit/84a3916a20fc33ab53a2b57a8af1fe3b9d82452c>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Adjustments to splice delimiters, to better serve after-collapse-delimiter
 Bump version, update CHANGES, bundle as 1.1.192
 
 :commit:
-    `1d900b7 <https://github.com/Juris-M/zotero/commit/1d900b7ffaf734b2dc324bf9e96881640dc8bf31>`_
+    `1d900b7 <https://github.com/Juris-M/citeproc-js/commit/1d900b7ffaf734b2dc324bf9e96881640dc8bf31>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Bump version, update CHANGES, bundle as 1.1.192
 A little more help for page ranges
 
 :commit:
-    `e85300a <https://github.com/Juris-M/zotero/commit/e85300a8245c8f4109fedee7a4d7d6df599bc2a9>`_
+    `e85300a <https://github.com/Juris-M/citeproc-js/commit/e85300a8245c8f4109fedee7a4d7d6df599bc2a9>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ A little more help for page ranges
 A test of Chicago-style page-n-note ranges
 
 :commit:
-    `2ab68fb <https://github.com/Juris-M/zotero/commit/2ab68fb0b2d7a4e992e4181c1972717fbf335961>`_
+    `2ab68fb <https://github.com/Juris-M/citeproc-js/commit/2ab68fb0b2d7a4e992e4181c1972717fbf335961>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ A test of Chicago-style page-n-note ranges
 Bump version, update CHANGES, bundle as 1.1.191
 
 :commit:
-    `76ce5a1 <https://github.com/Juris-M/zotero/commit/76ce5a1b1262a66b3b05a67f56650ce1d271c04b>`_
+    `76ce5a1 <https://github.com/Juris-M/citeproc-js/commit/76ce5a1b1262a66b3b05a67f56650ce1d271c04b>`_
 :author:
     Frank Bennett
 :date:

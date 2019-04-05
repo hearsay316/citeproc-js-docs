@@ -10,7 +10,7 @@
 Amend CHANGES
 
 :commit:
-    `dd3d7fe <https://github.com/Juris-M/zotero/commit/dd3d7fe53fe66a3d7b9f7c3ecc9826bd9d69fd71>`_
+    `dd3d7fe <https://github.com/Juris-M/citeproc-js/commit/dd3d7fe53fe66a3d7b9f7c3ecc9826bd9d69fd71>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Amend CHANGES
 Added tag 1.1.65 for changeset 6d45a3cd4a9b
 
 :commit:
-    `f83f1a4 <https://github.com/Juris-M/zotero/commit/f83f1a47ca6b277bd289b31a5647fa321fba647d>`_
+    `f83f1a4 <https://github.com/Juris-M/citeproc-js/commit/f83f1a47ca6b277bd289b31a5647fa321fba647d>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Added tag 1.1.65 for changeset 6d45a3cd4a9b
 Pass literal if date is incomplete
 
 :commit:
-    `5ecca4f <https://github.com/Juris-M/zotero/commit/5ecca4f9bd02dd2c56e1e8396f5271b1087d7ebb>`_
+    `5ecca4f <https://github.com/Juris-M/citeproc-js/commit/5ecca4f9bd02dd2c56e1e8396f5271b1087d7ebb>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Pass literal if date is incomplete
 Test of weird Japanese-ish date
 
 :commit:
-    `0329eb8 <https://github.com/Juris-M/zotero/commit/0329eb8442cde39963f62991f38ebc9d0f5bdfca>`_
+    `0329eb8 <https://github.com/Juris-M/citeproc-js/commit/0329eb8442cde39963f62991f38ebc9d0f5bdfca>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Test of weird Japanese-ish date
 Test that failed with Turkish date strings registered
 
 :commit:
-    `90d7a65 <https://github.com/Juris-M/zotero/commit/90d7a654b364314e64e6c3b0d1b5eda971f5d841>`_
+    `90d7a65 <https://github.com/Juris-M/citeproc-js/commit/90d7a654b364314e64e6c3b0d1b5eda971f5d841>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Test that failed with Turkish date strings registered
 Test parse of underscore as date range delimiter
 
 :commit:
-    `2322de1 <https://github.com/Juris-M/zotero/commit/2322de1d35f10fd097df8f72c1d85b725aa11c7c>`_
+    `2322de1 <https://github.com/Juris-M/citeproc-js/commit/2322de1d35f10fd097df8f72c1d85b725aa11c7c>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ Test parse of underscore as date range delimiter
 Test parse of slash-delimited dates
 
 :commit:
-    `07e9813 <https://github.com/Juris-M/zotero/commit/07e9813d65621786cdec7220209c696c72c23226>`_
+    `07e9813 <https://github.com/Juris-M/citeproc-js/commit/07e9813d65621786cdec7220209c696c72c23226>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ Test parse of slash-delimited dates
 Recognize underscore workaround as a date range delimiter
 
 :commit:
-    `6a0a2c6 <https://github.com/Juris-M/zotero/commit/6a0a2c6106845cd73ad29021d04e86cd839282bc>`_
+    `6a0a2c6 <https://github.com/Juris-M/citeproc-js/commit/6a0a2c6106845cd73ad29021d04e86cd839282bc>`_
 :author:
     Frank Bennett
 :date:
@@ -106,7 +106,7 @@ Recognize underscore workaround as a date range delimiter
 Added tag 1.1.65 for changeset 7bce8ae6df1c
 
 :commit:
-    `8653df9 <https://github.com/Juris-M/zotero/commit/8653df9d988abdc88b4f9baeb80d8dbc97f22135>`_
+    `8653df9 <https://github.com/Juris-M/citeproc-js/commit/8653df9d988abdc88b4f9baeb80d8dbc97f22135>`_
 :author:
     Frank Bennett
 :date:
@@ -118,7 +118,7 @@ Added tag 1.1.65 for changeset 7bce8ae6df1c
 Amend CHANGES
 
 :commit:
-    `963b2d9 <https://github.com/Juris-M/zotero/commit/963b2d98be84cd4930fc127a48e40dec3cadd49c>`_
+    `963b2d9 <https://github.com/Juris-M/citeproc-js/commit/963b2d98be84cd4930fc127a48e40dec3cadd49c>`_
 :author:
     Frank Bennett
 :date:
@@ -130,7 +130,7 @@ Amend CHANGES
 Added tag 1.1.65 for changeset 71653a8de4e2
 
 :commit:
-    `5446701 <https://github.com/Juris-M/zotero/commit/544670156b82d68a39ddcd0f4f2749b74f963b5f>`_
+    `5446701 <https://github.com/Juris-M/citeproc-js/commit/544670156b82d68a39ddcd0f4f2749b74f963b5f>`_
 :author:
     Frank Bennett
 :date:
@@ -142,7 +142,7 @@ Added tag 1.1.65 for changeset 71653a8de4e2
 Fix bug in month string regexp, convert date values to numbers
 
 :commit:
-    `1790edf <https://github.com/Juris-M/zotero/commit/1790edfec48855412b0887318e1c331360ceb563>`_
+    `1790edf <https://github.com/Juris-M/citeproc-js/commit/1790edfec48855412b0887318e1c331360ceb563>`_
 :author:
     Frank Bennett
 :date:
@@ -154,7 +154,7 @@ Fix bug in month string regexp, convert date values to numbers
 Add Turkish date strings to stress-test date parser
 
 :commit:
-    `7cf0dee <https://github.com/Juris-M/zotero/commit/7cf0deeb8a8520d753266863f92ade81cbed4c85>`_
+    `7cf0dee <https://github.com/Juris-M/citeproc-js/commit/7cf0deeb8a8520d753266863f92ade81cbed4c85>`_
 :author:
     Frank Bennett
 :date:
@@ -166,7 +166,7 @@ Add Turkish date strings to stress-test date parser
 Fix bug affecting slash-delimited dates
 
 :commit:
-    `1d76351 <https://github.com/Juris-M/zotero/commit/1d7635118c45c8fcac80ba96654f3cbbcddf26a5>`_
+    `1d76351 <https://github.com/Juris-M/citeproc-js/commit/1d7635118c45c8fcac80ba96654f3cbbcddf26a5>`_
 :author:
     Frank Bennett
 :date:
@@ -178,7 +178,7 @@ Fix bug affecting slash-delimited dates
 Added tag 1.1.65 for changeset 42614b388d02
 
 :commit:
-    `46d6495 <https://github.com/Juris-M/zotero/commit/46d649547a5f627095053bbe441508f0feac0fb4>`_
+    `46d6495 <https://github.com/Juris-M/citeproc-js/commit/46d649547a5f627095053bbe441508f0feac0fb4>`_
 :author:
     Frank Bennett
 :date:
@@ -190,7 +190,7 @@ Added tag 1.1.65 for changeset 42614b388d02
 Bump version, update CHANGES, bundle
 
 :commit:
-    `1413118 <https://github.com/Juris-M/zotero/commit/14131188b265d734920472311d3bff6d64d94cb3>`_
+    `1413118 <https://github.com/Juris-M/citeproc-js/commit/14131188b265d734920472311d3bff6d64d94cb3>`_
 :author:
     Frank Bennett
 :date:
@@ -202,7 +202,7 @@ Bump version, update CHANGES, bundle
 Provide parse() method for backward compatibility
 
 :commit:
-    `8753f6b <https://github.com/Juris-M/zotero/commit/8753f6b5ab09b284acea175281c6049a19b9bca6>`_
+    `8753f6b <https://github.com/Juris-M/citeproc-js/commit/8753f6b5ab09b284acea175281c6049a19b9bca6>`_
 :author:
     Frank Bennett
 :date:
@@ -214,7 +214,7 @@ Provide parse() method for backward compatibility
 Amend date parser module to accomodate Juris-M usage
 
 :commit:
-    `3234c96 <https://github.com/Juris-M/zotero/commit/3234c96813286bec99ac9b35e05dc45e67c5c111>`_
+    `3234c96 <https://github.com/Juris-M/citeproc-js/commit/3234c96813286bec99ac9b35e05dc45e67c5c111>`_
 :author:
     Frank Bennett
 :date:
@@ -226,7 +226,7 @@ Amend date parser module to accomodate Juris-M usage
 Added tag 1.1.64 for changeset a7c911a6b6b7
 
 :commit:
-    `aa3f603 <https://github.com/Juris-M/zotero/commit/aa3f603860bd70b6fc6cd76360d6fd22348a56d0>`_
+    `aa3f603 <https://github.com/Juris-M/citeproc-js/commit/aa3f603860bd70b6fc6cd76360d6fd22348a56d0>`_
 :author:
     Frank Bennett
 :date:
@@ -238,7 +238,7 @@ Added tag 1.1.64 for changeset a7c911a6b6b7
 Bump version, update CHANGES, bundle
 
 :commit:
-    `965c9bc <https://github.com/Juris-M/zotero/commit/965c9bcabbf8216457799a4a1769039acea998dd>`_
+    `965c9bc <https://github.com/Juris-M/citeproc-js/commit/965c9bcabbf8216457799a4a1769039acea998dd>`_
 :author:
     Frank Bennett
 :date:

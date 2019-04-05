@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `5749451 <https://github.com/Juris-M/zotero/commit/5749451059718bb457e9db590caf37e87369c91f>`_
+    `5749451 <https://github.com/Juris-M/citeproc-js/commit/5749451059718bb457e9db590caf37e87369c91f>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Fix code-o in new code
 
 :commit:
-    `f1343a2 <https://github.com/Juris-M/zotero/commit/f1343a23081496ac00f1ecd848ebcb33f69f9580>`_
+    `f1343a2 <https://github.com/Juris-M/citeproc-js/commit/f1343a23081496ac00f1ecd848ebcb33f69f9580>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Fix code-o in new code
 Bump version, update CHANGES, bundle
 
 :commit:
-    `3dfed1c <https://github.com/Juris-M/zotero/commit/3dfed1c4ee293b08d26def8cf1c39bc8240a7406>`_
+    `3dfed1c <https://github.com/Juris-M/citeproc-js/commit/3dfed1c4ee293b08d26def8cf1c39bc8240a7406>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Bump version, update CHANGES, bundle
 Enable alternative-macro calls from modular code.
 
 :commit:
-    `9ce6d89 <https://github.com/Juris-M/zotero/commit/9ce6d896068dba2fa8b6f48f2ba5c08d6513ce0a>`_
+    `9ce6d89 <https://github.com/Juris-M/citeproc-js/commit/9ce6d896068dba2fa8b6f48f2ba5c08d6513ce0a>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Enable alternative-macro calls from modular code.
 Bump version, update CHANGES, bundle
 
 :commit:
-    `a0b3a76 <https://github.com/Juris-M/zotero/commit/a0b3a763c80f3cc24a2e1f6d32ac1ad6f000dd54>`_
+    `a0b3a76 <https://github.com/Juris-M/citeproc-js/commit/a0b3a763c80f3cc24a2e1f6d32ac1ad6f000dd54>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Bump version, update CHANGES, bundle
 Extend creators handling to committee variable
 
 :commit:
-    `9987533 <https://github.com/Juris-M/zotero/commit/99875336a859116caa0a8161a9d7034a01370704>`_
+    `9987533 <https://github.com/Juris-M/citeproc-js/commit/99875336a859116caa0a8161a9d7034a01370704>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ Extend creators handling to committee variable
 Added tag 1.1.28 for changeset b4c6c4aba6fc
 
 :commit:
-    `313a164 <https://github.com/Juris-M/zotero/commit/313a16422d812d570617395316489011144d2fae>`_
+    `313a164 <https://github.com/Juris-M/citeproc-js/commit/313a16422d812d570617395316489011144d2fae>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ Added tag 1.1.28 for changeset b4c6c4aba6fc
 Bump version, update CHANGES, bundle
 
 :commit:
-    `22d3b89 <https://github.com/Juris-M/zotero/commit/22d3b8965e8316dab2f0942da5c83d191e4cf795>`_
+    `22d3b89 <https://github.com/Juris-M/citeproc-js/commit/22d3b8965e8316dab2f0942da5c83d191e4cf795>`_
 :author:
     Frank Bennett
 :date:

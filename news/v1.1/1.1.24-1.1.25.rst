@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `0b6f700 <https://github.com/Juris-M/zotero/commit/0b6f700f8527f13f89afd174d8871f29471dd6a6>`_
+    `0b6f700 <https://github.com/Juris-M/citeproc-js/commit/0b6f700f8527f13f89afd174d8871f29471dd6a6>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Use both use-last and stop-last to set and evaluate authority consumption
 
 :commit:
-    `474150c <https://github.com/Juris-M/zotero/commit/474150c8457ecc4f9bcce5e8c67cf6f41b7d05db>`_
+    `474150c <https://github.com/Juris-M/citeproc-js/commit/474150c8457ecc4f9bcce5e8c67cf6f41b7d05db>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Use both use-last and stop-last to set and evaluate authority consumption
 Add authority-residue condition
 
 :commit:
-    `16ddb8d <https://github.com/Juris-M/zotero/commit/16ddb8dc79235703ba7e9285807e3a817a8de918>`_
+    `16ddb8d <https://github.com/Juris-M/citeproc-js/commit/16ddb8dc79235703ba7e9285807e3a817a8de918>`_
 :author:
     Frank Bennett
 :date:
@@ -51,7 +51,7 @@ for some time to come.
 Conditional to cope with OSCOLA punctuation rules
 
 :commit:
-    `6816208 <https://github.com/Juris-M/zotero/commit/681620856932b42b3cf71972314c9340b38cbf10>`_
+    `6816208 <https://github.com/Juris-M/citeproc-js/commit/681620856932b42b3cf71972314c9340b38cbf10>`_
 :author:
     Frank Bennett
 :date:
@@ -63,7 +63,7 @@ Conditional to cope with OSCOLA punctuation rules
 Stop at first matching all-name acronym key
 
 :commit:
-    `513acb5 <https://github.com/Juris-M/zotero/commit/513acb58e36524a6cfa177fb36d2b1bf8900972b>`_
+    `513acb5 <https://github.com/Juris-M/citeproc-js/commit/513acb58e36524a6cfa177fb36d2b1bf8900972b>`_
 :author:
     Frank Bennett
 :date:
@@ -75,7 +75,7 @@ Stop at first matching all-name acronym key
 Require space after period for page number split
 
 :commit:
-    `a7eba3b <https://github.com/Juris-M/zotero/commit/a7eba3be5f60f1935807febd14c8d49acefb6687>`_
+    `a7eba3b <https://github.com/Juris-M/citeproc-js/commit/a7eba3be5f60f1935807febd14c8d49acefb6687>`_
 :author:
     Frank Bennett
 :date:
@@ -87,7 +87,7 @@ Require space after period for page number split
 Added tag 1.1.24 for changeset 1bea84ad4163
 
 :commit:
-    `156b9b7 <https://github.com/Juris-M/zotero/commit/156b9b704c6bf4947b4a33dce4c4b3e6cac9e871>`_
+    `156b9b7 <https://github.com/Juris-M/citeproc-js/commit/156b9b704c6bf4947b4a33dce4c4b3e6cac9e871>`_
 :author:
     Frank Bennett
 :date:
@@ -99,7 +99,7 @@ Added tag 1.1.24 for changeset 1bea84ad4163
 Bump version, update CHANGES, bundle
 
 :commit:
-    `0eba265 <https://github.com/Juris-M/zotero/commit/0eba265083473b402ab6a44264f673a4c34ddc02>`_
+    `0eba265 <https://github.com/Juris-M/citeproc-js/commit/0eba265083473b402ab6a44264f673a4c34ddc02>`_
 :author:
     Frank Bennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.181
 
 :commit:
-    `a4e009f <https://github.com/Juris-M/zotero/commit/a4e009fd6d52856db91821cf34948434751694d5>`_
+    `a4e009f <https://github.com/Juris-M/citeproc-js/commit/a4e009fd6d52856db91821cf34948434751694d5>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.181
 Merge branch 'master' of github.com:Juris-M/citeproc-js
 
 :commit:
-    `2efc05f <https://github.com/Juris-M/zotero/commit/2efc05f09bf021dcfe06679a023e7ab33411f4e1>`_
+    `2efc05f <https://github.com/Juris-M/citeproc-js/commit/2efc05f09bf021dcfe06679a023e7ab33411f4e1>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Merge branch 'master' of github.com:Juris-M/citeproc-js
 Merge pull request #58 from MatthewRichardsonICPSR/master
 
 :commit:
-    `3a8627a <https://github.com/Juris-M/zotero/commit/3a8627ad0a6343058bd53cd8087f3255b8ffe965>`_
+    `3a8627a <https://github.com/Juris-M/citeproc-js/commit/3a8627ad0a6343058bd53cd8087f3255b8ffe965>`_
 :author:
     Frank Bennett
 :date:
@@ -47,7 +47,7 @@ Added a null/empty/undefined test before termtxt.slice
 Update tests
 
 :commit:
-    `aacb713 <https://github.com/Juris-M/zotero/commit/aacb71301a1b14743d5369d6b8926d00aa13b06a>`_
+    `aacb713 <https://github.com/Juris-M/citeproc-js/commit/aacb71301a1b14743d5369d6b8926d00aa13b06a>`_
 :author:
     Frank Bennett
 :date:
@@ -59,7 +59,7 @@ Update tests
 Fix accidental caps after some apostrophes
 
 :commit:
-    `a73a552 <https://github.com/Juris-M/zotero/commit/a73a552afe6e47c2eaaddf09735c75f0067201a1>`_
+    `a73a552 <https://github.com/Juris-M/citeproc-js/commit/a73a552afe6e47c2eaaddf09735c75f0067201a1>`_
 :author:
     Frank Bennett
 :date:
@@ -71,7 +71,7 @@ Fix accidental caps after some apostrophes
 Rename clashing fixture
 
 :commit:
-    `f634a16 <https://github.com/Juris-M/zotero/commit/f634a165abc5f287290838a802269ed52eb3556a>`_
+    `f634a16 <https://github.com/Juris-M/citeproc-js/commit/f634a165abc5f287290838a802269ed52eb3556a>`_
 :author:
     Frank Bennett
 :date:
@@ -83,7 +83,7 @@ Rename clashing fixture
 Changed
 
 :commit:
-    `4dd140b <https://github.com/Juris-M/zotero/commit/4dd140b8eb873778c13aec2943b94c53cb39d22a>`_
+    `4dd140b <https://github.com/Juris-M/citeproc-js/commit/4dd140b8eb873778c13aec2943b94c53cb39d22a>`_
 :author:
     Matthew Richardson
 :date:
@@ -105,7 +105,7 @@ an error, preventing the generation of some pub types (report, thesis) from some
 Bump version, update CHANGES, bundle as 1.1.180
 
 :commit:
-    `4dfbce6 <https://github.com/Juris-M/zotero/commit/4dfbce6b2ab689746cd964fabc4bf1a55b414ae1>`_
+    `4dfbce6 <https://github.com/Juris-M/citeproc-js/commit/4dfbce6b2ab689746cd964fabc4bf1a55b414ae1>`_
 :author:
     Frank Bennett
 :date:

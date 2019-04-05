@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.205
 
 :commit:
-    `456ad41 <https://github.com/Juris-M/zotero/commit/456ad4179e6270ad567562af9097b44975508f5f>`_
+    `456ad41 <https://github.com/Juris-M/citeproc-js/commit/456ad4179e6270ad567562af9097b44975508f5f>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.205
 List only default-jurisdiction entry for language names
 
 :commit:
-    `b03d472 <https://github.com/Juris-M/zotero/commit/b03d472bf84ec8cebdd0ff7b3d00e47d63207fef>`_
+    `b03d472 <https://github.com/Juris-M/citeproc-js/commit/b03d472bf84ec8cebdd0ff7b3d00e47d63207fef>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ List only default-jurisdiction entry for language names
 Bump version, update CHANGES, bundle as 1.1.204
 
 :commit:
-    `cbf3eeb <https://github.com/Juris-M/zotero/commit/cbf3eeb53a808228097f062dd52e49092388fd40>`_
+    `cbf3eeb <https://github.com/Juris-M/citeproc-js/commit/cbf3eeb53a808228097f062dd52e49092388fd40>`_
 :author:
     Frank Bennett
 :date:

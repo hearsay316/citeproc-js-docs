@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.148
 
 :commit:
-    `ab147e2 <https://github.com/Juris-M/zotero/commit/ab147e2fa29c18c81a35ec007cbb2849c83e5578>`_
+    `ab147e2 <https://github.com/Juris-M/citeproc-js/commit/ab147e2fa29c18c81a35ec007cbb2849c83e5578>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.148
 Add missing multi setting to test runner
 
 :commit:
-    `2a93539 <https://github.com/Juris-M/zotero/commit/2a935393c1ba24db6cb412a98eacdfd85420c047>`_
+    `2a93539 <https://github.com/Juris-M/citeproc-js/commit/2a935393c1ba24db6cb412a98eacdfd85420c047>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Add missing multi setting to test runner
 By default use only original segments, not variants
 
 :commit:
-    `8267255 <https://github.com/Juris-M/zotero/commit/82672556928ba75e6a3d3281b1534ead99a892a5>`_
+    `8267255 <https://github.com/Juris-M/citeproc-js/commit/82672556928ba75e6a3d3281b1534ead99a892a5>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ By default use only original segments, not variants
 Recognize additional space characters in text-case word parse
 
 :commit:
-    `bbeb54b <https://github.com/Juris-M/zotero/commit/bbeb54bc96f351c522a77f6bfbbac6dde0340cf0>`_
+    `bbeb54b <https://github.com/Juris-M/citeproc-js/commit/bbeb54bc96f351c522a77f6bfbbac6dde0340cf0>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Recognize additional space characters in text-case word parse
 Do not capitalise last stop word if followed by a nocase
 
 :commit:
-    `7cf974d <https://github.com/Juris-M/zotero/commit/7cf974d467b86a6eebfafac653a29bc74c3c22c4>`_
+    `7cf974d <https://github.com/Juris-M/citeproc-js/commit/7cf974d467b86a6eebfafac653a29bc74c3c22c4>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Do not capitalise last stop word if followed by a nocase
 Recognize nbsp as space when splitting for text-case conversions
 
 :commit:
-    `ac7bc72 <https://github.com/Juris-M/zotero/commit/ac7bc723aa8034676b831ad27b78308a3039b66b>`_
+    `ac7bc72 <https://github.com/Juris-M/citeproc-js/commit/ac7bc723aa8034676b831ad27b78308a3039b66b>`_
 :author:
     fbennett
 :date:
@@ -82,7 +82,7 @@ Recognize nbsp as space when splitting for text-case conversions
 Bump version, update CHANGES, bundle as 1.1.147
 
 :commit:
-    `4ecaef0 <https://github.com/Juris-M/zotero/commit/4ecaef0f397df3d13d74ddf585582efe84110f89>`_
+    `4ecaef0 <https://github.com/Juris-M/citeproc-js/commit/4ecaef0f397df3d13d74ddf585582efe84110f89>`_
 :author:
     fbennett
 :date:
@@ -94,7 +94,7 @@ Bump version, update CHANGES, bundle as 1.1.147
 Rewrite of "flipflop" parsing module
 
 :commit:
-    `6a8a47f <https://github.com/Juris-M/zotero/commit/6a8a47fc8d5c736faeb7860e6bd6e6c1f595026f>`_
+    `6a8a47f <https://github.com/Juris-M/citeproc-js/commit/6a8a47fc8d5c736faeb7860e6bd6e6c1f595026f>`_
 :author:
     fbennett
 :date:
@@ -111,7 +111,7 @@ Rewrite of "flipflop" parsing module
 Bump version, update CHANGES.txt, bundle was 1.1.146
 
 :commit:
-    `e42d85b <https://github.com/Juris-M/zotero/commit/e42d85b7904610c3013eb6f40ae3e400e5d2ba33>`_
+    `e42d85b <https://github.com/Juris-M/citeproc-js/commit/e42d85b7904610c3013eb6f40ae3e400e5d2ba33>`_
 :author:
     fbennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.101
 
 :commit:
-    `86a737f <https://github.com/Juris-M/zotero/commit/86a737faaf089c0cf9e853f804b76364e4e9bad8>`_
+    `86a737f <https://github.com/Juris-M/citeproc-js/commit/86a737faaf089c0cf9e853f804b76364e4e9bad8>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.101
 Suppress year-suffix render if no variable content, fix missing-delimiter bug
 
 :commit:
-    `c21bcd5 <https://github.com/Juris-M/zotero/commit/c21bcd5baabb7ed4eaa020eab27ea381d8e8116c>`_
+    `c21bcd5 <https://github.com/Juris-M/citeproc-js/commit/c21bcd5baabb7ed4eaa020eab27ea381d8e8116c>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Suppress year-suffix render if no variable content, fix missing-delimiter bug
 Bugfix test
 
 :commit:
-    `ec86b89 <https://github.com/Juris-M/zotero/commit/ec86b89d34619a02761160005177c3456d93bfb9>`_
+    `ec86b89 <https://github.com/Juris-M/citeproc-js/commit/ec86b89d34619a02761160005177c3456d93bfb9>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Bugfix test
 Make test a little more challenging
 
 :commit:
-    `6bfa956 <https://github.com/Juris-M/zotero/commit/6bfa956f9e9d80821be746a4b91391b2ecddedf1>`_
+    `6bfa956 <https://github.com/Juris-M/citeproc-js/commit/6bfa956f9e9d80821be746a4b91391b2ecddedf1>`_
 :author:
     fbennett
 :date:

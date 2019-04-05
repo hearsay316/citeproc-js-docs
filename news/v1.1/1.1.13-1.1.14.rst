@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `fa570e7 <https://github.com/Juris-M/zotero/commit/fa570e7bb6b02390dbb6c1fee6e60bdeb1ddcd39>`_
+    `fa570e7 <https://github.com/Juris-M/citeproc-js/commit/fa570e7bb6b02390dbb6c1fee6e60bdeb1ddcd39>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Improvements to handling of suppressed jurisdiction names
 
 :commit:
-    `8a36bc3 <https://github.com/Juris-M/zotero/commit/8a36bc3ee3c4c2ad3dadfd18e6e637ac14463022>`_
+    `8a36bc3 <https://github.com/Juris-M/citeproc-js/commit/8a36bc3ee3c4c2ad3dadfd18e6e637ac14463022>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Improvements to handling of suppressed jurisdiction names
 Attempt to repair miscast name input, with a warning.
 
 :commit:
-    `733f003 <https://github.com/Juris-M/zotero/commit/733f0037d964fa2b0e7cc38a02d45b12d416b331>`_
+    `733f003 <https://github.com/Juris-M/citeproc-js/commit/733f0037d964fa2b0e7cc38a02d45b12d416b331>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Attempt to repair miscast name input, with a warning.
 Added tag 1.1.13 for changeset aefd4ded3219
 
 :commit:
-    `43f73c0 <https://github.com/Juris-M/zotero/commit/43f73c029f9d2725e80907392c4a62409f7c9a6a>`_
+    `43f73c0 <https://github.com/Juris-M/citeproc-js/commit/43f73c029f9d2725e80907392c4a62409f7c9a6a>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Added tag 1.1.13 for changeset aefd4ded3219
 Bump version, update CHANGES, bundle
 
 :commit:
-    `b77f0be <https://github.com/Juris-M/zotero/commit/b77f0be227c7f8e87fe9bcc14cab4b8ef10b18b9>`_
+    `b77f0be <https://github.com/Juris-M/citeproc-js/commit/b77f0be227c7f8e87fe9bcc14cab4b8ef10b18b9>`_
 :author:
     Frank Bennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.75
 
 :commit:
-    `2b2ba8c <https://github.com/Juris-M/zotero/commit/2b2ba8cca208484da8ffd67f91894ddced571b3a>`_
+    `2b2ba8c <https://github.com/Juris-M/citeproc-js/commit/2b2ba8cca208484da8ffd67f91894ddced571b3a>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.75
 Update tests
 
 :commit:
-    `0a15f10 <https://github.com/Juris-M/zotero/commit/0a15f1080e4214dccf4bf4fa9ec6f9b1f56cdec1>`_
+    `0a15f10 <https://github.com/Juris-M/citeproc-js/commit/0a15f1080e4214dccf4bf4fa9ec6f9b1f56cdec1>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Update tests
 Unescape angle brackets
 
 :commit:
-    `1cb23ca <https://github.com/Juris-M/zotero/commit/1cb23cac8a814558531f66907383814317c4ae7d>`_
+    `1cb23ca <https://github.com/Juris-M/citeproc-js/commit/1cb23cac8a814558531f66907383814317c4ae7d>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Unescape angle brackets
 Fix URL
 
 :commit:
-    `0739122 <https://github.com/Juris-M/zotero/commit/0739122a8cff95d354641fe5f3d5ba5362be762c>`_
+    `0739122 <https://github.com/Juris-M/citeproc-js/commit/0739122a8cff95d354641fe5f3d5ba5362be762c>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Fix URL
 Update README
 
 :commit:
-    `80532f0 <https://github.com/Juris-M/zotero/commit/80532f0551b9646be3a062ae62dc16f9b6c1eede>`_
+    `80532f0 <https://github.com/Juris-M/citeproc-js/commit/80532f0551b9646be3a062ae62dc16f9b6c1eede>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Update README
 Update docs
 
 :commit:
-    `1f739e0 <https://github.com/Juris-M/zotero/commit/1f739e03cc5c27f6299a188691a6323798393278>`_
+    `1f739e0 <https://github.com/Juris-M/citeproc-js/commit/1f739e03cc5c27f6299a188691a6323798393278>`_
 :author:
     fbennett
 :date:
@@ -82,7 +82,7 @@ Update docs
 Bump version, update CHANGES, bundle as 1.1.74
 
 :commit:
-    `be83d32 <https://github.com/Juris-M/zotero/commit/be83d326c37f470a930b3b221832eef015a3f27c>`_
+    `be83d32 <https://github.com/Juris-M/citeproc-js/commit/be83d326c37f470a930b3b221832eef015a3f27c>`_
 :author:
     fbennett
 :date:

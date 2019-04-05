@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.98
 
 :commit:
-    `2176620 <https://github.com/Juris-M/zotero/commit/21766202bec23fabbcb1a26ed9e11393afddbbd7>`_
+    `2176620 <https://github.com/Juris-M/citeproc-js/commit/21766202bec23fabbcb1a26ed9e11393afddbbd7>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.98
 Recognize balanced single or balanced double quotes in XML markup
 
 :commit:
-    `a932cea <https://github.com/Juris-M/zotero/commit/a932cea87bf3e87cf8391fda51cd21fc24ef9c54>`_
+    `a932cea <https://github.com/Juris-M/citeproc-js/commit/a932cea87bf3e87cf8391fda51cd21fc24ef9c54>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Recognize balanced single or balanced double quotes in XML markup
 Update std tests
 
 :commit:
-    `a7cd11f <https://github.com/Juris-M/zotero/commit/a7cd11fa2f0d5d6100e1eaff5104f54bed09d391>`_
+    `a7cd11f <https://github.com/Juris-M/citeproc-js/commit/a7cd11fa2f0d5d6100e1eaff5104f54bed09d391>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Update std tests
 Recognize single or double quotes in XML markup
 
 :commit:
-    `53d9d33 <https://github.com/Juris-M/zotero/commit/53d9d33461fb91a0d78a75d03746bbd5833faa16>`_
+    `53d9d33 <https://github.com/Juris-M/citeproc-js/commit/53d9d33461fb91a0d78a75d03746bbd5833faa16>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Recognize single or double quotes in XML markup
 Bump version, update CHANGES, bundle as 1.1.97
 
 :commit:
-    `8b0660f <https://github.com/Juris-M/zotero/commit/8b0660ff22cec7cdf5b9e431a79d7d07eb42a4ed>`_
+    `8b0660f <https://github.com/Juris-M/citeproc-js/commit/8b0660ff22cec7cdf5b9e431a79d7d07eb42a4ed>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Bump version, update CHANGES, bundle as 1.1.97
 Use literal hash instead of isInstitution flag when converting from hack-field to CSL JSON
 
 :commit:
-    `d45c67d <https://github.com/Juris-M/zotero/commit/d45c67d3f431dc2fb4cc1b23c17d6824ee166d40>`_
+    `d45c67d <https://github.com/Juris-M/citeproc-js/commit/d45c67d3f431dc2fb4cc1b23c17d6824ee166d40>`_
 :author:
     fbennett
 :date:
@@ -82,7 +82,7 @@ Use literal hash instead of isInstitution flag when converting from hack-field t
 Fix script paths
 
 :commit:
-    `bb39960 <https://github.com/Juris-M/zotero/commit/bb39960f11b6510f258f05654a7f0d86729d4852>`_
+    `bb39960 <https://github.com/Juris-M/citeproc-js/commit/bb39960f11b6510f258f05654a7f0d86729d4852>`_
 :author:
     fbennett
 :date:

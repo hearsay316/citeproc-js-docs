@@ -10,7 +10,7 @@
 Push version bump missing from last checkin
 
 :commit:
-    `f4a3479 <https://github.com/Juris-M/zotero/commit/f4a34799e37357ffccd8fda715f019977ff85e42>`_
+    `f4a3479 <https://github.com/Juris-M/citeproc-js/commit/f4a34799e37357ffccd8fda715f019977ff85e42>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Push version bump missing from last checkin
 Bump version, update CHANGES, bundle as 1.1.173
 
 :commit:
-    `def6812 <https://github.com/Juris-M/zotero/commit/def68129b53175e4262c98f306a0b533be7ef393>`_
+    `def6812 <https://github.com/Juris-M/citeproc-js/commit/def68129b53175e4262c98f306a0b533be7ef393>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Bump version, update CHANGES, bundle as 1.1.173
 Build commmonjs module as well as raw object
 
 :commit:
-    `abd6db7 <https://github.com/Juris-M/zotero/commit/abd6db7692215825263f2940af64baaa7b9b3379>`_
+    `abd6db7 <https://github.com/Juris-M/citeproc-js/commit/abd6db7692215825263f2940af64baaa7b9b3379>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Build commmonjs module as well as raw object
 Avoid assignment to undefined object key on possibly boolean var
 
 :commit:
-    `fced073 <https://github.com/Juris-M/zotero/commit/fced0738d6d480843efd824363f80b7315cfb770>`_
+    `fced073 <https://github.com/Juris-M/citeproc-js/commit/fced0738d6d480843efd824363f80b7315cfb770>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Avoid assignment to undefined object key on possibly boolean var
 Merge pull request #38 from miguelsm/es5-compatibility
 
 :commit:
-    `0631a9c <https://github.com/Juris-M/zotero/commit/0631a9c8c4b14043649bc6e14e6d4f2ad28e6ea4>`_
+    `0631a9c <https://github.com/Juris-M/citeproc-js/commit/0631a9c8c4b14043649bc6e14e6d4f2ad28e6ea4>`_
 :author:
     Frank Bennett
 :date:
@@ -71,7 +71,7 @@ Fix ES5 compatibility breaking because of for..of loops
 Declare loose variables
 
 :commit:
-    `ee5b0d4 <https://github.com/Juris-M/zotero/commit/ee5b0d4d1397ced86aa467dada4036dfc6b66659>`_
+    `ee5b0d4 <https://github.com/Juris-M/citeproc-js/commit/ee5b0d4d1397ced86aa467dada4036dfc6b66659>`_
 :author:
     Frank Bennett
 :date:
@@ -83,7 +83,7 @@ Declare loose variables
 Fix ES5 compatibility breaking because of for..of loops
 
 :commit:
-    `f2b1c6b <https://github.com/Juris-M/zotero/commit/f2b1c6bdef1d6903fd01ef28b4f568dbed53a231>`_
+    `f2b1c6b <https://github.com/Juris-M/citeproc-js/commit/f2b1c6bdef1d6903fd01ef28b4f568dbed53a231>`_
 :author:
     miguelsm
 :date:
@@ -95,7 +95,7 @@ Fix ES5 compatibility breaking because of for..of loops
 Bump version, update CHANGES, release as 1.1.172
 
 :commit:
-    `6daf6f0 <https://github.com/Juris-M/zotero/commit/6daf6f00de9c740683084081e1b7d82c017e5659>`_
+    `6daf6f0 <https://github.com/Juris-M/citeproc-js/commit/6daf6f00de9c740683084081e1b7d82c017e5659>`_
 :author:
     Frank Bennett
 :date:

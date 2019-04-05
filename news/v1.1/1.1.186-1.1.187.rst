@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.187
 
 :commit:
-    `f15e35a <https://github.com/Juris-M/zotero/commit/f15e35a893c965055ff9e0051baf6bb299138d9c>`_
+    `f15e35a <https://github.com/Juris-M/citeproc-js/commit/f15e35a893c965055ff9e0051baf6bb299138d9c>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.187
 Be more aggressive about en-dashes
 
 :commit:
-    `9efe631 <https://github.com/Juris-M/zotero/commit/9efe63173f7fe51f7e24b9b1991d5349ceaf672d>`_
+    `9efe631 <https://github.com/Juris-M/citeproc-js/commit/9efe63173f7fe51f7e24b9b1991d5349ceaf672d>`_
 :author:
     Frank Bennett
 :date:
@@ -42,7 +42,7 @@ Be more aggressive about en-dashes
 Test of locator string with ad hoc abbrev label
 
 :commit:
-    `c9234cd <https://github.com/Juris-M/zotero/commit/c9234cdbcb50296c021ac64f6252f6e1e01d0a2e>`_
+    `c9234cd <https://github.com/Juris-M/citeproc-js/commit/c9234cdbcb50296c021ac64f6252f6e1e01d0a2e>`_
 :author:
     Frank Bennett
 :date:
@@ -54,7 +54,7 @@ Test of locator string with ad hoc abbrev label
 Amend tests to require en-dash on unrecognized slugs
 
 :commit:
-    `fff6c37 <https://github.com/Juris-M/zotero/commit/fff6c370d2386b95e9f3429ee320a3f0f4157697>`_
+    `fff6c37 <https://github.com/Juris-M/citeproc-js/commit/fff6c370d2386b95e9f3429ee320a3f0f4157697>`_
 :author:
     Frank Bennett
 :date:
@@ -66,7 +66,7 @@ Amend tests to require en-dash on unrecognized slugs
 Bump version, update CHANGES, bundle as 1.1.186
 
 :commit:
-    `dbda9de <https://github.com/Juris-M/zotero/commit/dbda9de4b8ee4d22ebf3761ceaa7082602dab399>`_
+    `dbda9de <https://github.com/Juris-M/citeproc-js/commit/dbda9de4b8ee4d22ebf3761ceaa7082602dab399>`_
 :author:
     Frank Bennett
 :date:

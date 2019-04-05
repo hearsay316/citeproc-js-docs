@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `c7088f2 <https://github.com/Juris-M/zotero/commit/c7088f2a97162474d772add2637b8ad593757694>`_
+    `c7088f2 <https://github.com/Juris-M/citeproc-js/commit/c7088f2a97162474d772add2637b8ad593757694>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Parse out multiple creators from Extra, and parse for articlar and particles
 
 :commit:
-    `15c6e2d <https://github.com/Juris-M/zotero/commit/15c6e2d358fda114ece1087d7412b7163ea6f3bf>`_
+    `15c6e2d <https://github.com/Juris-M/citeproc-js/commit/15c6e2d358fda114ece1087d7412b7163ea6f3bf>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Parse out multiple creators from Extra, and parse for articlar and particles
 Restore Zotero build
 
 :commit:
-    `0d40081 <https://github.com/Juris-M/zotero/commit/0d4008160390b5e6ec0ed13bed84f115f09b4163>`_
+    `0d40081 <https://github.com/Juris-M/citeproc-js/commit/0d4008160390b5e6ec0ed13bed84f115f09b4163>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Restore Zotero build
 Bump version, update CHANGES, bundle
 
 :commit:
-    `0e439da <https://github.com/Juris-M/zotero/commit/0e439da45ab1749419e73e38e2c55094e28658c6>`_
+    `0e439da <https://github.com/Juris-M/citeproc-js/commit/0e439da45ab1749419e73e38e2c55094e28658c6>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Bump version, update CHANGES, bundle
 Block only the accessed date variable when generating internal cites
 
 :commit:
-    `7ffaa59 <https://github.com/Juris-M/zotero/commit/7ffaa59ea29997984fd759ff5a704ca8da16445c>`_
+    `7ffaa59 <https://github.com/Juris-M/citeproc-js/commit/7ffaa59ea29997984fd759ff5a704ca8da16445c>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Block only the accessed date variable when generating internal cites
 Edits to processor manual
 
 :commit:
-    `f2e760d <https://github.com/Juris-M/zotero/commit/f2e760d4fea2228a91fba295d67587bee4d3158b>`_
+    `f2e760d <https://github.com/Juris-M/citeproc-js/commit/f2e760d4fea2228a91fba295d67587bee4d3158b>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ Edits to processor manual
 Remove parse-names from manual
 
 :commit:
-    `ed40666 <https://github.com/Juris-M/zotero/commit/ed406663c9b6341e6a595174dae5b45d9a84cd94>`_
+    `ed40666 <https://github.com/Juris-M/citeproc-js/commit/ed406663c9b6341e6a595174dae5b45d9a84cd94>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ Remove parse-names from manual
 Bump version, update CHANGES, bundle
 
 :commit:
-    `b68f6de <https://github.com/Juris-M/zotero/commit/b68f6deeaeb3f19d5341d307aa1b56be8b5a43bc>`_
+    `b68f6de <https://github.com/Juris-M/citeproc-js/commit/b68f6deeaeb3f19d5341d307aa1b56be8b5a43bc>`_
 :author:
     Frank Bennett
 :date:
@@ -106,7 +106,7 @@ Bump version, update CHANGES, bundle
 Fix for dropping particle + articular parsing
 
 :commit:
-    `cf5cca1 <https://github.com/Juris-M/zotero/commit/cf5cca158252221366a66bad1ec8b6beb2ad628b>`_
+    `cf5cca1 <https://github.com/Juris-M/citeproc-js/commit/cf5cca158252221366a66bad1ec8b6beb2ad628b>`_
 :author:
     Frank Bennett
 :date:
@@ -118,7 +118,7 @@ Fix for dropping particle + articular parsing
 Revisions to processor manual
 
 :commit:
-    `121c3a1 <https://github.com/Juris-M/zotero/commit/121c3a1183f1acfe2be0cc85b7c4a878d3c2cef7>`_
+    `121c3a1 <https://github.com/Juris-M/citeproc-js/commit/121c3a1183f1acfe2be0cc85b7c4a878d3c2cef7>`_
 :author:
     Frank Bennett
 :date:
@@ -130,7 +130,7 @@ Revisions to processor manual
 Remove some likely-unused options (can restore if this hurts anyone)
 
 :commit:
-    `bd4f354 <https://github.com/Juris-M/zotero/commit/bd4f35468ed033c8c789611941b0c503945e71e6>`_
+    `bd4f354 <https://github.com/Juris-M/citeproc-js/commit/bd4f35468ed033c8c789611941b0c503945e71e6>`_
 :author:
     Frank Bennett
 :date:
@@ -142,7 +142,7 @@ Remove some likely-unused options (can restore if this hurts anyone)
 Make name particle parser compatible with node.js
 
 :commit:
-    `4af9445 <https://github.com/Juris-M/zotero/commit/4af9445d86e6fb09e834ac354671dab9cb3c3047>`_
+    `4af9445 <https://github.com/Juris-M/citeproc-js/commit/4af9445d86e6fb09e834ac354671dab9cb3c3047>`_
 :author:
     Frank Bennett
 :date:
@@ -154,7 +154,7 @@ Make name particle parser compatible with node.js
 Added tag 1.1.58 for changeset caf45aa87090
 
 :commit:
-    `2a15259 <https://github.com/Juris-M/zotero/commit/2a15259d1113f1f79d9ce68d479e06d82365585d>`_
+    `2a15259 <https://github.com/Juris-M/citeproc-js/commit/2a15259d1113f1f79d9ce68d479e06d82365585d>`_
 :author:
     Frank Bennett
 :date:
@@ -166,7 +166,7 @@ Added tag 1.1.58 for changeset caf45aa87090
 Bump version, update CHANGES, bundle
 
 :commit:
-    `5558464 <https://github.com/Juris-M/zotero/commit/55584640aabcd74f112d5564f3144bff83fba4d4>`_
+    `5558464 <https://github.com/Juris-M/citeproc-js/commit/55584640aabcd74f112d5564f3144bff83fba4d4>`_
 :author:
     Frank Bennett
 :date:

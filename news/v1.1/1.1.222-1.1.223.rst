@@ -10,7 +10,7 @@
 Bump version, update CHANGES.txt, bundle as 1.1.223
 
 :commit:
-    `67601f2 <https://github.com/Juris-M/zotero/commit/67601f2f7c55d94f0eea783e940ac804092574e8>`_
+    `67601f2 <https://github.com/Juris-M/citeproc-js/commit/67601f2f7c55d94f0eea783e940ac804092574e8>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES.txt, bundle as 1.1.223
 Update std tests
 
 :commit:
-    `057dccb <https://github.com/Juris-M/zotero/commit/057dccb71592b1c89b7c2e35ca98b41ea5f4fe7e>`_
+    `057dccb <https://github.com/Juris-M/citeproc-js/commit/057dccb71592b1c89b7c2e35ca98b41ea5f4fe7e>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Update std tests
 Recognize EDTF season dates
 
 :commit:
-    `761f3b7 <https://github.com/Juris-M/zotero/commit/761f3b738965e29fb68004a87af138bef87905d1>`_
+    `761f3b7 <https://github.com/Juris-M/citeproc-js/commit/761f3b738965e29fb68004a87af138bef87905d1>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Recognize EDTF season dates
 Trigger refresh directly, not via touch, and do not enforce UTF-8 encoding
 
 :commit:
-    `e25894e <https://github.com/Juris-M/zotero/commit/e25894eda345cc9c40f295fdf331b1ea1e77d6a1>`_
+    `e25894e <https://github.com/Juris-M/citeproc-js/commit/e25894eda345cc9c40f295fdf331b1ea1e77d6a1>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Trigger refresh directly, not via touch, and do not enforce UTF-8 encoding
 Fix another typo
 
 :commit:
-    `c29f9d3 <https://github.com/Juris-M/zotero/commit/c29f9d3c3683035ebd8a22058bd561e0bfb2e51b>`_
+    `c29f9d3 <https://github.com/Juris-M/citeproc-js/commit/c29f9d3c3683035ebd8a22058bd561e0bfb2e51b>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Fix another typo
 Fix a typo
 
 :commit:
-    `74d515a <https://github.com/Juris-M/zotero/commit/74d515a41c89270c375eb5021fb04c99400d5fbe>`_
+    `74d515a <https://github.com/Juris-M/citeproc-js/commit/74d515a41c89270c375eb5021fb04c99400d5fbe>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ Fix a typo
 State requirements clealy topside
 
 :commit:
-    `560761e <https://github.com/Juris-M/zotero/commit/560761ee64b92b1a94325166433302913fb2793e>`_
+    `560761e <https://github.com/Juris-M/citeproc-js/commit/560761ee64b92b1a94325166433302913fb2793e>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ State requirements clealy topside
 Update help text sample in README
 
 :commit:
-    `7d8fb94 <https://github.com/Juris-M/zotero/commit/7d8fb942f158a72e98c7204ccd6b0934f957526c>`_
+    `7d8fb94 <https://github.com/Juris-M/citeproc-js/commit/7d8fb942f158a72e98c7204ccd6b0934f957526c>`_
 :author:
     Frank Bennett
 :date:
@@ -106,7 +106,7 @@ Update help text sample in README
 Enable a --help option on runtests.js
 
 :commit:
-    `8ad8afc <https://github.com/Juris-M/zotero/commit/8ad8afca00cabdcbd20b3cd82b314741d9f87ded>`_
+    `8ad8afc <https://github.com/Juris-M/citeproc-js/commit/8ad8afca00cabdcbd20b3cd82b314741d9f87ded>`_
 :author:
     Frank Bennett
 :date:
@@ -118,7 +118,7 @@ Enable a --help option on runtests.js
 Reporter options.
 
 :commit:
-    `7a8848c <https://github.com/Juris-M/zotero/commit/7a8848cc649bde52ec561e46a739b3e38908e058>`_
+    `7a8848c <https://github.com/Juris-M/citeproc-js/commit/7a8848cc649bde52ec561e46a739b3e38908e058>`_
 :author:
     Frank Bennett
 :date:
@@ -130,7 +130,7 @@ Reporter options.
 Rearrange files in test dir to avoid CLI autocorrect blockage
 
 :commit:
-    `5eb79fb <https://github.com/Juris-M/zotero/commit/5eb79fbd0a870bee29ee6c396b59c748396150e9>`_
+    `5eb79fb <https://github.com/Juris-M/citeproc-js/commit/5eb79fbd0a870bee29ee6c396b59c748396150e9>`_
 :author:
     Frank Bennett
 :date:
@@ -142,7 +142,7 @@ Rearrange files in test dir to avoid CLI autocorrect blockage
 Make a test more readable
 
 :commit:
-    `7ea1a25 <https://github.com/Juris-M/zotero/commit/7ea1a258d339aba01542cc141c3a12a67e4868ad>`_
+    `7ea1a25 <https://github.com/Juris-M/citeproc-js/commit/7ea1a258d339aba01542cc141c3a12a67e4868ad>`_
 :author:
     Frank Bennett
 :date:
@@ -154,7 +154,7 @@ Make a test more readable
 Update standard tests
 
 :commit:
-    `358408b <https://github.com/Juris-M/zotero/commit/358408bf845528824cff2ca45687fe2a3d78f640>`_
+    `358408b <https://github.com/Juris-M/citeproc-js/commit/358408bf845528824cff2ca45687fe2a3d78f640>`_
 :author:
     Frank Bennett
 :date:
@@ -166,7 +166,7 @@ Update standard tests
 Change shortTitle to title-short everywhere
 
 :commit:
-    `a5d7d56 <https://github.com/Juris-M/zotero/commit/a5d7d56bc9837e22f5e4f0c8cf59dc759b088b42>`_
+    `a5d7d56 <https://github.com/Juris-M/citeproc-js/commit/a5d7d56bc9837e22f5e4f0c8cf59dc759b088b42>`_
 :author:
     Frank Bennett
 :date:
@@ -178,7 +178,7 @@ Change shortTitle to title-short everywhere
 Small extension to test
 
 :commit:
-    `5f67148 <https://github.com/Juris-M/zotero/commit/5f67148ee9bc2f4bdea18eeed554d473a27d4e5d>`_
+    `5f67148 <https://github.com/Juris-M/citeproc-js/commit/5f67148ee9bc2f4bdea18eeed554d473a27d4e5d>`_
 :author:
     Frank Bennett
 :date:
@@ -190,7 +190,7 @@ Small extension to test
 Add a harder case to a test
 
 :commit:
-    `e5d5a65 <https://github.com/Juris-M/zotero/commit/e5d5a6506b877d3994d2178fea41c18691ea7f1c>`_
+    `e5d5a65 <https://github.com/Juris-M/citeproc-js/commit/e5d5a6506b877d3994d2178fea41c18691ea7f1c>`_
 :author:
     Frank Bennett
 :date:
@@ -202,7 +202,7 @@ Add a harder case to a test
 Simplify and clarify a test
 
 :commit:
-    `fc0c85a <https://github.com/Juris-M/zotero/commit/fc0c85afcba865596c94038d8e445ea2ee5d07ca>`_
+    `fc0c85a <https://github.com/Juris-M/citeproc-js/commit/fc0c85afcba865596c94038d8e445ea2ee5d07ca>`_
 :author:
     Frank Bennett
 :date:
@@ -214,7 +214,7 @@ Simplify and clarify a test
 Make runtests.js work in Windows terminals
 
 :commit:
-    `1858f71 <https://github.com/Juris-M/zotero/commit/1858f7166961b38a4f0332a3a6882dd38c7211d9>`_
+    `1858f71 <https://github.com/Juris-M/citeproc-js/commit/1858f7166961b38a4f0332a3a6882dd38c7211d9>`_
 :author:
     Frank Bennett
 :date:
@@ -226,7 +226,7 @@ Make runtests.js work in Windows terminals
 Tweaks to README
 
 :commit:
-    `def53b7 <https://github.com/Juris-M/zotero/commit/def53b752d179df7d166ac442a30884ed244071d>`_
+    `def53b7 <https://github.com/Juris-M/citeproc-js/commit/def53b752d179df7d166ac442a30884ed244071d>`_
 :author:
     Frank Bennett
 :date:
@@ -238,7 +238,7 @@ Tweaks to README
 Use spec reporter for Travis CI builds
 
 :commit:
-    `efca893 <https://github.com/Juris-M/zotero/commit/efca8934cf5abc6194f2fd7d6c000b5857517f26>`_
+    `efca893 <https://github.com/Juris-M/citeproc-js/commit/efca8934cf5abc6194f2fd7d6c000b5857517f26>`_
 :author:
     Frank Bennett
 :date:
@@ -250,7 +250,7 @@ Use spec reporter for Travis CI builds
 Bump version, update CHANGES, bundle as 1.1.222
 
 :commit:
-    `b51b934 <https://github.com/Juris-M/zotero/commit/b51b934c98560cf1ea1afffa5758167fa1a13784>`_
+    `b51b934 <https://github.com/Juris-M/citeproc-js/commit/b51b934c98560cf1ea1afffa5758167fa1a13784>`_
 :author:
     Frank Bennett
 :date:

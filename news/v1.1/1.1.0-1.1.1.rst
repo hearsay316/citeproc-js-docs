@@ -10,7 +10,7 @@
 Release for 1.1.1
 
 :commit:
-    `c59b77b <https://github.com/Juris-M/zotero/commit/c59b77bd9d4d4108bed69b2a87d900038bf8953d>`_
+    `c59b77b <https://github.com/Juris-M/citeproc-js/commit/c59b77bd9d4d4108bed69b2a87d900038bf8953d>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Release for 1.1.1
 Add juris-locator-label to required macros, with tests
 
 :commit:
-    `b841e98 <https://github.com/Juris-M/zotero/commit/b841e987926de8519997d6a3157ca0c1bb549fc0>`_
+    `b841e98 <https://github.com/Juris-M/citeproc-js/commit/b841e987926de8519997d6a3157ca0c1bb549fc0>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Add juris-locator-label to required macros, with tests
 Added tag 1.1.0 for changeset 99b7d12e5a75
 
 :commit:
-    `9c9a269 <https://github.com/Juris-M/zotero/commit/9c9a26965eb9370369fc4f972157134fb24ef6bc>`_
+    `9c9a269 <https://github.com/Juris-M/citeproc-js/commit/9c9a26965eb9370369fc4f972157134fb24ef6bc>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Added tag 1.1.0 for changeset 99b7d12e5a75
 Bump minor version
 
 :commit:
-    `00deb90 <https://github.com/Juris-M/zotero/commit/00deb902351063ee29a4369bb1365d651356012b>`_
+    `00deb90 <https://github.com/Juris-M/citeproc-js/commit/00deb902351063ee29a4369bb1365d651356012b>`_
 :author:
     Frank Bennett
 :date:

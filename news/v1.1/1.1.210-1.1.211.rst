@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.211
 
 :commit:
-    `c93166f <https://github.com/Juris-M/zotero/commit/c93166f598470ea8e5c4bcdf66ec40f9c56e0d2a>`_
+    `c93166f <https://github.com/Juris-M/citeproc-js/commit/c93166f598470ea8e5c4bcdf66ec40f9c56e0d2a>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.211
 Update processor images
 
 :commit:
-    `d5962f9 <https://github.com/Juris-M/zotero/commit/d5962f99cd002dc803b9bdeecda37ba4270dc8b8>`_
+    `d5962f9 <https://github.com/Juris-M/citeproc-js/commit/d5962f99cd002dc803b9bdeecda37ba4270dc8b8>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Update processor images
 Update standard tests
 
 :commit:
-    `3dd9d5d <https://github.com/Juris-M/zotero/commit/3dd9d5d5a05eba64d84f961b232939f86fa548e1>`_
+    `3dd9d5d <https://github.com/Juris-M/citeproc-js/commit/3dd9d5d5a05eba64d84f961b232939f86fa548e1>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Update standard tests
 Update standard tests
 
 :commit:
-    `1e18f4c <https://github.com/Juris-M/zotero/commit/1e18f4ccd7535b0b9c8f49cdb16d845919bc84c1>`_
+    `1e18f4c <https://github.com/Juris-M/citeproc-js/commit/1e18f4ccd7535b0b9c8f49cdb16d845919bc84c1>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Update standard tests
 Update docs
 
 :commit:
-    `f95b836 <https://github.com/Juris-M/zotero/commit/f95b836d1e84890dd80ebd484674dc7a15a0ed8f>`_
+    `f95b836 <https://github.com/Juris-M/citeproc-js/commit/f95b836d1e84890dd80ebd484674dc7a15a0ed8f>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Update docs
 In test, fix result string
 
 :commit:
-    `ea92745 <https://github.com/Juris-M/zotero/commit/ea927450df4d28686be43a2f86d5a49ba2fc11c7>`_
+    `ea92745 <https://github.com/Juris-M/citeproc-js/commit/ea927450df4d28686be43a2f86d5a49ba2fc11c7>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ In test, fix result string
 In test, set explicit form=long on cs:label
 
 :commit:
-    `45f150e <https://github.com/Juris-M/zotero/commit/45f150e62a064e83501941c0d2493ffbea005fd8>`_
+    `45f150e <https://github.com/Juris-M/citeproc-js/commit/45f150e62a064e83501941c0d2493ffbea005fd8>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ In test, set explicit form=long on cs:label
 Add plain, asciidoc, and xslfo output options for test script
 
 :commit:
-    `2c2eb3e <https://github.com/Juris-M/zotero/commit/2c2eb3e7db94a26d2d15b40edf34a28d4ab4ffae>`_
+    `2c2eb3e <https://github.com/Juris-M/citeproc-js/commit/2c2eb3e7db94a26d2d15b40edf34a28d4ab4ffae>`_
 :author:
     Frank Bennett
 :date:
@@ -106,7 +106,7 @@ Add plain, asciidoc, and xslfo output options for test script
 Set page-range-delimiter on ranged numbers with trailing alpha chars
 
 :commit:
-    `c469311 <https://github.com/Juris-M/zotero/commit/c4693114e3ad2057ac9d9ab338b3764637bcfc76>`_
+    `c469311 <https://github.com/Juris-M/citeproc-js/commit/c4693114e3ad2057ac9d9ab338b3764637bcfc76>`_
 :author:
     Frank Bennett
 :date:
@@ -118,7 +118,7 @@ Set page-range-delimiter on ranged numbers with trailing alpha chars
 Reset position info when processing full cs:names objects
 
 :commit:
-    `717fb26 <https://github.com/Juris-M/zotero/commit/717fb26deb0cdd6c476f23eae157c3cd8db3464f>`_
+    `717fb26 <https://github.com/Juris-M/citeproc-js/commit/717fb26deb0cdd6c476f23eae157c3cd8db3464f>`_
 :author:
     Frank Bennett
 :date:
@@ -130,7 +130,7 @@ Reset position info when processing full cs:names objects
 Fix bug in wrapped DOI/URL, properly recognize container-title-short
 
 :commit:
-    `c2c6583 <https://github.com/Juris-M/zotero/commit/c2c6583b70a4610299010bb955a0156514881c6d>`_
+    `c2c6583 <https://github.com/Juris-M/citeproc-js/commit/c2c6583b70a4610299010bb955a0156514881c6d>`_
 :author:
     Frank Bennett
 :date:
@@ -142,7 +142,7 @@ Fix bug in wrapped DOI/URL, properly recognize container-title-short
 Default to form=long on explicit label nodes
 
 :commit:
-    `780c86e <https://github.com/Juris-M/zotero/commit/780c86e0ba0c62882ebf85fa35b4a5da66f665c5>`_
+    `780c86e <https://github.com/Juris-M/citeproc-js/commit/780c86e0ba0c62882ebf85fa35b4a5da66f665c5>`_
 :author:
     Frank Bennett
 :date:
@@ -154,7 +154,7 @@ Default to form=long on explicit label nodes
 Add list of CREATORS, reclassify some abbrevs
 
 :commit:
-    `e849a13 <https://github.com/Juris-M/zotero/commit/e849a13edfd152716062857bd6cec8ba53b0bbae>`_
+    `e849a13 <https://github.com/Juris-M/citeproc-js/commit/e849a13edfd152716062857bd6cec8ba53b0bbae>`_
 :author:
     Frank Bennett
 :date:
@@ -166,7 +166,7 @@ Add list of CREATORS, reclassify some abbrevs
 Fix handling of suffix on DOI renderings without a protocol prefix
 
 :commit:
-    `31f2d2e <https://github.com/Juris-M/zotero/commit/31f2d2e7d011aade88c4a9ce4d2025a2bb5b455c>`_
+    `31f2d2e <https://github.com/Juris-M/citeproc-js/commit/31f2d2e7d011aade88c4a9ce4d2025a2bb5b455c>`_
 :author:
     Frank Bennett
 :date:
@@ -178,7 +178,7 @@ Fix handling of suffix on DOI renderings without a protocol prefix
 Merge branch 'additional-formats' of https://github.com/michel-kraemer/citeproc-js into michel-kraemer-additional-formats
 
 :commit:
-    `b374f2a <https://github.com/Juris-M/zotero/commit/b374f2a32136013f4c59bf33236e24f3f8dd591f>`_
+    `b374f2a <https://github.com/Juris-M/citeproc-js/commit/b374f2a32136013f4c59bf33236e24f3f8dd591f>`_
 :author:
     Frank Bennett
 :date:
@@ -190,7 +190,7 @@ Merge branch 'additional-formats' of https://github.com/michel-kraemer/citeproc-
 Implicit nocase for sub, sub and sc tags
 
 :commit:
-    `30ceaf5 <https://github.com/Juris-M/zotero/commit/30ceaf50a0ef86517a9a8cd46362e450133c7f91>`_
+    `30ceaf5 <https://github.com/Juris-M/citeproc-js/commit/30ceaf50a0ef86517a9a8cd46362e450133c7f91>`_
 :author:
     Frank Bennett
 :date:
@@ -202,7 +202,7 @@ Implicit nocase for sub, sub and sc tags
 (Re)capitalize only stop-list words in last position
 
 :commit:
-    `88f672e <https://github.com/Juris-M/zotero/commit/88f672e595c7c93f26b3fcacd300cb406e6772a1>`_
+    `88f672e <https://github.com/Juris-M/citeproc-js/commit/88f672e595c7c93f26b3fcacd300cb406e6772a1>`_
 :author:
     Frank Bennett
 :date:
@@ -214,7 +214,7 @@ Implicit nocase for sub, sub and sc tags
 Bump version, update CHANGES, bundle as 1.1.210
 
 :commit:
-    `5d24189 <https://github.com/Juris-M/zotero/commit/5d241893f957e471970782c594a38f0ef7d1fbb3>`_
+    `5d24189 <https://github.com/Juris-M/citeproc-js/commit/5d241893f957e471970782c594a38f0ef7d1fbb3>`_
 :author:
     Frank Bennett
 :date:

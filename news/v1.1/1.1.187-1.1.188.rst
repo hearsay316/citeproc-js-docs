@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.188
 
 :commit:
-    `689af05 <https://github.com/Juris-M/zotero/commit/689af052b14dbc55ba8981c76c671c2baaf5782c>`_
+    `689af05 <https://github.com/Juris-M/citeproc-js/commit/689af052b14dbc55ba8981c76c671c2baaf5782c>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.188
 Be a little smarter with embedded plurals
 
 :commit:
-    `c51c9c9 <https://github.com/Juris-M/zotero/commit/c51c9c93e3930ce5b29f3978677e75acececfd17>`_
+    `c51c9c9 <https://github.com/Juris-M/citeproc-js/commit/c51c9c93e3930ce5b29f3978677e75acececfd17>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Be a little smarter with embedded plurals
 Make a test a little harder
 
 :commit:
-    `7353c78 <https://github.com/Juris-M/zotero/commit/7353c78c8160a6774efb86263aa81e9a0892fa51>`_
+    `7353c78 <https://github.com/Juris-M/citeproc-js/commit/7353c78c8160a6774efb86263aa81e9a0892fa51>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Make a test a little harder
 Bump version, update CHANGES, bundle as 1.1.187
 
 :commit:
-    `f15e35a <https://github.com/Juris-M/zotero/commit/f15e35a893c965055ff9e0051baf6bb299138d9c>`_
+    `f15e35a <https://github.com/Juris-M/citeproc-js/commit/f15e35a893c965055ff9e0051baf6bb299138d9c>`_
 :author:
     Frank Bennett
 :date:

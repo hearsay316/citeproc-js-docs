@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.149
 
 :commit:
-    `2720269 <https://github.com/Juris-M/zotero/commit/2720269fdd5ebae24f47856d4ec5f19a938d9788>`_
+    `2720269 <https://github.com/Juris-M/citeproc-js/commit/2720269fdd5ebae24f47856d4ec5f19a938d9788>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.149
 Recognize small-text span markup
 
 :commit:
-    `001bff5 <https://github.com/Juris-M/zotero/commit/001bff53f6ef4679aaa2bce2ce50111fe57256b9>`_
+    `001bff5 <https://github.com/Juris-M/citeproc-js/commit/001bff53f6ef4679aaa2bce2ce50111fe57256b9>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Recognize small-text span markup
 Bump version, update CHANGES, bundle as 1.1.148
 
 :commit:
-    `ab147e2 <https://github.com/Juris-M/zotero/commit/ab147e2fa29c18c81a35ec007cbb2849c83e5578>`_
+    `ab147e2 <https://github.com/Juris-M/citeproc-js/commit/ab147e2fa29c18c81a35ec007cbb2849c83e5578>`_
 :author:
     fbennett
 :date:

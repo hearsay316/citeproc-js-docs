@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.186
 
 :commit:
-    `dbda9de <https://github.com/Juris-M/zotero/commit/dbda9de4b8ee4d22ebf3761ceaa7082602dab399>`_
+    `dbda9de <https://github.com/Juris-M/citeproc-js/commit/dbda9de4b8ee4d22ebf3761ceaa7082602dab399>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.186
 Update tests
 
 :commit:
-    `0630fba <https://github.com/Juris-M/zotero/commit/0630fba844a1cd018d98696353ef2a76f22b2827>`_
+    `0630fba <https://github.com/Juris-M/citeproc-js/commit/0630fba844a1cd018d98696353ef2a76f22b2827>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Update tests
 Reflect disambiguate steps in bibliography
 
 :commit:
-    `5edcffb <https://github.com/Juris-M/zotero/commit/5edcffb944b208e5740b217fa515619bfebb5f51>`_
+    `5edcffb <https://github.com/Juris-M/citeproc-js/commit/5edcffb944b208e5740b217fa515619bfebb5f51>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Reflect disambiguate steps in bibliography
 Bump version, update CHANGES, bundle as 1.1.185
 
 :commit:
-    `3c107a4 <https://github.com/Juris-M/zotero/commit/3c107a49ace2c0210cf0337c3217422d1843d878>`_
+    `3c107a4 <https://github.com/Juris-M/citeproc-js/commit/3c107a49ace2c0210cf0337c3217422d1843d878>`_
 :author:
     Frank Bennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `4fe672e <https://github.com/Juris-M/zotero/commit/4fe672efa0a0511d890f36c42100c6f95d97781b>`_
+    `4fe672e <https://github.com/Juris-M/citeproc-js/commit/4fe672efa0a0511d890f36c42100c6f95d97781b>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Add test of multiple layouts with second-field-align
 
 :commit:
-    `cf6c29c <https://github.com/Juris-M/zotero/commit/cf6c29cde4d87c0081acfd55ba699f7679d6c8b8>`_
+    `cf6c29c <https://github.com/Juris-M/citeproc-js/commit/cf6c29cde4d87c0081acfd55ba699f7679d6c8b8>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Add test of multiple layouts with second-field-align
 Fix cross-nesting bug in multiple layouts with second-field-align
 
 :commit:
-    `2d8a7a7 <https://github.com/Juris-M/zotero/commit/2d8a7a770b50fa46be378e4097907b2ca2639cda>`_
+    `2d8a7a7 <https://github.com/Juris-M/citeproc-js/commit/2d8a7a770b50fa46be378e4097907b2ca2639cda>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Fix cross-nesting bug in multiple layouts with second-field-align
 Add tracing names to closing levels and tags
 
 :commit:
-    `d38240d <https://github.com/Juris-M/zotero/commit/d38240de4bdba02a5aa417dc28b286113dca8307>`_
+    `d38240d <https://github.com/Juris-M/citeproc-js/commit/d38240de4bdba02a5aa417dc28b286113dca8307>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Add tracing names to closing levels and tags
 Added tag 1.1.32 for changeset 9b8c949d92a8
 
 :commit:
-    `b6ddb32 <https://github.com/Juris-M/zotero/commit/b6ddb32e4c34cda0d04e770191811b97fb750789>`_
+    `b6ddb32 <https://github.com/Juris-M/citeproc-js/commit/b6ddb32e4c34cda0d04e770191811b97fb750789>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Added tag 1.1.32 for changeset 9b8c949d92a8
 Bump version, update CHANGES, bundle
 
 :commit:
-    `8ca7994 <https://github.com/Juris-M/zotero/commit/8ca79940c1afc7178196a6506a657d7b21863414>`_
+    `8ca7994 <https://github.com/Juris-M/citeproc-js/commit/8ca79940c1afc7178196a6506a657d7b21863414>`_
 :author:
     Frank Bennett
 :date:

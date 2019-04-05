@@ -10,7 +10,7 @@
 Return boolean for hanging-indent, following CSL spec
 
 :commit:
-    `3e2286c <https://github.com/Juris-M/zotero/commit/3e2286cedbcbce937c7de37f9ad7e1ff6aafef2b>`_
+    `3e2286c <https://github.com/Juris-M/citeproc-js/commit/3e2286cedbcbce937c7de37f9ad7e1ff6aafef2b>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Return boolean for hanging-indent, following CSL spec
 Bump version for npm re-release
 
 :commit:
-    `7e8d0ae <https://github.com/Juris-M/zotero/commit/7e8d0ae2c885b6e366b39e4f449c2f82c85b75d2>`_
+    `7e8d0ae <https://github.com/Juris-M/citeproc-js/commit/7e8d0ae2c885b6e366b39e4f449c2f82c85b75d2>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Bump version for npm re-release
 Merge pull request #102 from hubgit/remove-dependency
 
 :commit:
-    `dd73b29 <https://github.com/Juris-M/zotero/commit/dd73b29aa7359680e7f4fb627303adb1cf8f1c6a>`_
+    `dd73b29 <https://github.com/Juris-M/citeproc-js/commit/dd73b29aa7359680e7f4fb627303adb1cf8f1c6a>`_
 :author:
     Frank Bennett
 :date:
@@ -47,7 +47,7 @@ Remove nyanplusreporter dependency
 Remove nyanplusreporter dependency
 
 :commit:
-    `f7ee6e8 <https://github.com/Juris-M/zotero/commit/f7ee6e80331fd17737816e14dd71332b028b470c>`_
+    `f7ee6e8 <https://github.com/Juris-M/citeproc-js/commit/f7ee6e80331fd17737816e14dd71332b028b470c>`_
 :author:
     Alf Eaton
 :date:
@@ -59,7 +59,7 @@ Remove nyanplusreporter dependency
 Bump version, update CHANGES, bundle as 1.1.234
 
 :commit:
-    `98ced40 <https://github.com/Juris-M/zotero/commit/98ced40508e4474273bc5676a7ab88d108ea073c>`_
+    `98ced40 <https://github.com/Juris-M/citeproc-js/commit/98ced40508e4474273bc5676a7ab88d108ea073c>`_
 :author:
     Frank Bennett
 :date:

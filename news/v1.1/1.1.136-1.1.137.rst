@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.137
 
 :commit:
-    `2d1bb8d <https://github.com/Juris-M/zotero/commit/2d1bb8dddf152f7c3e034dda3df3ec7e426939a3>`_
+    `2d1bb8d <https://github.com/Juris-M/citeproc-js/commit/2d1bb8dddf152f7c3e034dda3df3ec7e426939a3>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.137
 Updates for style modules and cheater hack
 
 :commit:
-    `da0e659 <https://github.com/Juris-M/zotero/commit/da0e65986bc1b875ce4af4e151a1e1028cc67f2a>`_
+    `da0e659 <https://github.com/Juris-M/citeproc-js/commit/da0e65986bc1b875ce4af4e151a1e1028cc67f2a>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Updates for style modules and cheater hack
 Bump version, update CHANGES, bundle as 1.1.136
 
 :commit:
-    `95697fa <https://github.com/Juris-M/zotero/commit/95697faedb267bfcaaa41c9a8557700b1f334119>`_
+    `95697fa <https://github.com/Juris-M/citeproc-js/commit/95697faedb267bfcaaa41c9a8557700b1f334119>`_
 :author:
     fbennett
 :date:

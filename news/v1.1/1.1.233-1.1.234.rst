@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.234
 
 :commit:
-    `98ced40 <https://github.com/Juris-M/zotero/commit/98ced40508e4474273bc5676a7ab88d108ea073c>`_
+    `98ced40 <https://github.com/Juris-M/citeproc-js/commit/98ced40508e4474273bc5676a7ab88d108ea073c>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.234
 Try title-short, container-title-short when parents have form='short'
 
 :commit:
-    `42f7d21 <https://github.com/Juris-M/zotero/commit/42f7d21ab4c2da4fbc1625ac35d8a5eee1c705fc>`_
+    `42f7d21 <https://github.com/Juris-M/citeproc-js/commit/42f7d21ab4c2da4fbc1625ac35d8a5eee1c705fc>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Try title-short, container-title-short when parents have form='short'
 Test of short-long-locale fallbacks with form='short'
 
 :commit:
-    `204b913 <https://github.com/Juris-M/zotero/commit/204b913b10cb9b5c001de99f511a11ced696cefd>`_
+    `204b913 <https://github.com/Juris-M/citeproc-js/commit/204b913b10cb9b5c001de99f511a11ced696cefd>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Test of short-long-locale fallbacks with form='short'
 Bump version, update CHANGES, bundle as 1.1.233
 
 :commit:
-    `84a82b9 <https://github.com/Juris-M/zotero/commit/84a82b9a00cf07c5221a42993dcde8e39a26a04c>`_
+    `84a82b9 <https://github.com/Juris-M/citeproc-js/commit/84a82b9a00cf07c5221a42993dcde8e39a26a04c>`_
 :author:
     Frank Bennett
 :date:

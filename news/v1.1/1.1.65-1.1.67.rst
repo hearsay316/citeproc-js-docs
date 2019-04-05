@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `1e1b201 <https://github.com/Juris-M/zotero/commit/1e1b2016e375ff7b7164f39461d9e4741e88de00>`_
+    `1e1b201 <https://github.com/Juris-M/citeproc-js/commit/1e1b2016e375ff7b7164f39461d9e4741e88de00>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Avoid crash when setting reverse-lookup wrappers
 
 :commit:
-    `beee148 <https://github.com/Juris-M/zotero/commit/beee1485bb337046cb4ca0f19af63740f81f106d>`_
+    `beee148 <https://github.com/Juris-M/citeproc-js/commit/beee1485bb337046cb4ca0f19af63740f81f106d>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Avoid crash when setting reverse-lookup wrappers
 Bump version, update CHANGES, bundle
 
 :commit:
-    `1f9cb6f <https://github.com/Juris-M/zotero/commit/1f9cb6ff6ceed02eec691a5dd9142570fe484f67>`_
+    `1f9cb6f <https://github.com/Juris-M/citeproc-js/commit/1f9cb6ff6ceed02eec691a5dd9142570fe484f67>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Bump version, update CHANGES, bundle
 Remove title-casing suppression from quotes, adjust single-quote parsing
 
 :commit:
-    `26c6946 <https://github.com/Juris-M/zotero/commit/26c6946184bf693876bc54b1b6999997d263cb4d>`_
+    `26c6946 <https://github.com/Juris-M/citeproc-js/commit/26c6946184bf693876bc54b1b6999997d263cb4d>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Remove title-casing suppression from quotes, adjust single-quote parsing
 Adjustments to title-case tests
 
 :commit:
-    `47dcab6 <https://github.com/Juris-M/zotero/commit/47dcab6de1ecbb81fe021d1abfc16970311e3888>`_
+    `47dcab6 <https://github.com/Juris-M/citeproc-js/commit/47dcab6de1ecbb81fe021d1abfc16970311e3888>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Adjustments to title-case tests
 Test of title-casing
 
 :commit:
-    `2234a19 <https://github.com/Juris-M/zotero/commit/2234a197f8ff6aa44873aaa7e3c28c356fed9bd2>`_
+    `2234a19 <https://github.com/Juris-M/citeproc-js/commit/2234a197f8ff6aa44873aaa7e3c28c356fed9bd2>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ Test of title-casing
 Add author-only and suppress-author tests
 
 :commit:
-    `13beab9 <https://github.com/Juris-M/zotero/commit/13beab90ee1ee85fc42c697f863dd1f341a9f7f9>`_
+    `13beab9 <https://github.com/Juris-M/citeproc-js/commit/13beab90ee1ee85fc42c697f863dd1f341a9f7f9>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ Add author-only and suppress-author tests
 Make title-casing Unicode-safe a little, and bundle
 
 :commit:
-    `ed865b9 <https://github.com/Juris-M/zotero/commit/ed865b963536a6da4164365afd0fb2dfa8a6d319>`_
+    `ed865b9 <https://github.com/Juris-M/citeproc-js/commit/ed865b963536a6da4164365afd0fb2dfa8a6d319>`_
 :author:
     Frank Bennett
 :date:
@@ -106,7 +106,7 @@ Make title-casing Unicode-safe a little, and bundle
 Bundle
 
 :commit:
-    `19c622f <https://github.com/Juris-M/zotero/commit/19c622f65af7f3d4a72edfa4e95802efa78d7904>`_
+    `19c622f <https://github.com/Juris-M/citeproc-js/commit/19c622f65af7f3d4a72edfa4e95802efa78d7904>`_
 :author:
     Frank Bennett
 :date:
@@ -118,7 +118,7 @@ Bundle
 Smarter handling of stop words following punctuation when title-casing
 
 :commit:
-    `9ee5f59 <https://github.com/Juris-M/zotero/commit/9ee5f59914ef4273aec5d25ad72e9933c057766c>`_
+    `9ee5f59 <https://github.com/Juris-M/citeproc-js/commit/9ee5f59914ef4273aec5d25ad72e9933c057766c>`_
 :author:
     Frank Bennett
 :date:
@@ -130,7 +130,7 @@ Smarter handling of stop words following punctuation when title-casing
 Try extra space as a hint of intervening text
 
 :commit:
-    `8543518 <https://github.com/Juris-M/zotero/commit/85435187adba6ccc6c818b5f120d58c2ea1e2861>`_
+    `8543518 <https://github.com/Juris-M/citeproc-js/commit/85435187adba6ccc6c818b5f120d58c2ea1e2861>`_
 :author:
     Frank Bennett
 :date:
@@ -142,7 +142,7 @@ Try extra space as a hint of intervening text
 Normalize spacing in string to be text-cased
 
 :commit:
-    `0751652 <https://github.com/Juris-M/zotero/commit/07516526d14310c58988fa661ef320a06477ddab>`_
+    `0751652 <https://github.com/Juris-M/citeproc-js/commit/07516526d14310c58988fa661ef320a06477ddab>`_
 :author:
     Frank Bennett
 :date:
@@ -154,7 +154,7 @@ Normalize spacing in string to be text-cased
 Bundle
 
 :commit:
-    `83ecf8c <https://github.com/Juris-M/zotero/commit/83ecf8c1e99c9e2a296d96fa68b399926d297707>`_
+    `83ecf8c <https://github.com/Juris-M/citeproc-js/commit/83ecf8c1e99c9e2a296d96fa68b399926d297707>`_
 :author:
     Frank Bennett
 :date:
@@ -166,7 +166,7 @@ Bundle
 Fix some problems with nested tag handling in title-case formatter
 
 :commit:
-    `da69e34 <https://github.com/Juris-M/zotero/commit/da69e34368a198456f3d394dca10b26249a6cc8d>`_
+    `da69e34 <https://github.com/Juris-M/citeproc-js/commit/da69e34368a198456f3d394dca10b26249a6cc8d>`_
 :author:
     Frank Bennett
 :date:
@@ -178,7 +178,7 @@ Fix some problems with nested tag handling in title-case formatter
 Tweaks to test to make it harder
 
 :commit:
-    `8073e4a <https://github.com/Juris-M/zotero/commit/8073e4ac90c201f16267b7d320743d5f805e5559>`_
+    `8073e4a <https://github.com/Juris-M/citeproc-js/commit/8073e4ac90c201f16267b7d320743d5f805e5559>`_
 :author:
     Frank Bennett
 :date:
@@ -190,7 +190,7 @@ Tweaks to test to make it harder
 Fix container-title-short so that it is preferred over journalAbbreviation
 
 :commit:
-    `2aa6bad <https://github.com/Juris-M/zotero/commit/2aa6bad73d927a5611e5843ec756863699c0f1f6>`_
+    `2aa6bad <https://github.com/Juris-M/citeproc-js/commit/2aa6bad73d927a5611e5843ec756863699c0f1f6>`_
 :author:
     Frank Bennett
 :date:
@@ -202,7 +202,7 @@ Fix container-title-short so that it is preferred over journalAbbreviation
 Bundle
 
 :commit:
-    `c7319cb <https://github.com/Juris-M/zotero/commit/c7319cb70e2f9837b9bf801845cb0873897db289>`_
+    `c7319cb <https://github.com/Juris-M/citeproc-js/commit/c7319cb70e2f9837b9bf801845cb0873897db289>`_
 :author:
     Frank Bennett
 :date:
@@ -214,7 +214,7 @@ Bundle
 Better title case formatting
 
 :commit:
-    `f3237d9 <https://github.com/Juris-M/zotero/commit/f3237d9ff557b1091f32c2e0f71aabdf726e549c>`_
+    `f3237d9 <https://github.com/Juris-M/citeproc-js/commit/f3237d9ff557b1091f32c2e0f71aabdf726e549c>`_
 :author:
     Frank Bennett
 :date:
@@ -226,7 +226,7 @@ Better title case formatting
 A more challenging test of title-case formatting
 
 :commit:
-    `962f1a7 <https://github.com/Juris-M/zotero/commit/962f1a79653d3b8670853bd1f68b0e03be79c0da>`_
+    `962f1a7 <https://github.com/Juris-M/citeproc-js/commit/962f1a79653d3b8670853bd1f68b0e03be79c0da>`_
 :author:
     Frank Bennett
 :date:
@@ -238,7 +238,7 @@ A more challenging test of title-case formatting
 Add note of regexpu transpiler source
 
 :commit:
-    `e200fac <https://github.com/Juris-M/zotero/commit/e200fac3167405db338d143e0f1907ba6f547174>`_
+    `e200fac <https://github.com/Juris-M/citeproc-js/commit/e200fac3167405db338d143e0f1907ba6f547174>`_
 :author:
     Frank Bennett
 :date:
@@ -250,7 +250,7 @@ Add note of regexpu transpiler source
 Added tag 1.1.65 for changeset 28ce0563427b
 
 :commit:
-    `ce13058 <https://github.com/Juris-M/zotero/commit/ce130588489dac11fbf7493e752461c5a627f790>`_
+    `ce13058 <https://github.com/Juris-M/citeproc-js/commit/ce130588489dac11fbf7493e752461c5a627f790>`_
 :author:
     Frank Bennett
 :date:
@@ -262,7 +262,7 @@ Added tag 1.1.65 for changeset 28ce0563427b
 Amend CHANGES
 
 :commit:
-    `dd3d7fe <https://github.com/Juris-M/zotero/commit/dd3d7fe53fe66a3d7b9f7c3ecc9826bd9d69fd71>`_
+    `dd3d7fe <https://github.com/Juris-M/citeproc-js/commit/dd3d7fe53fe66a3d7b9f7c3ecc9826bd9d69fd71>`_
 :author:
     Frank Bennett
 :date:

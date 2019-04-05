@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.122
 
 :commit:
-    `8397a7a <https://github.com/Juris-M/zotero/commit/8397a7a690bfb696aea074812fe8725c71993828>`_
+    `8397a7a <https://github.com/Juris-M/citeproc-js/commit/8397a7a690bfb696aea074812fe8725c71993828>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.122
 Restore jurisdiction suppression
 
 :commit:
-    `144b2e9 <https://github.com/Juris-M/zotero/commit/144b2e9a4f57984ef03890a200985985058b0c90>`_
+    `144b2e9 <https://github.com/Juris-M/citeproc-js/commit/144b2e9a4f57984ef03890a200985985058b0c90>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Restore jurisdiction suppression
 Bump version, update CHANGES, bundle as 1.1.121
 
 :commit:
-    `e94c0c3 <https://github.com/Juris-M/zotero/commit/e94c0c358a3e8a9bbc9561d5b8a3c26540b4f05b>`_
+    `e94c0c3 <https://github.com/Juris-M/citeproc-js/commit/e94c0c358a3e8a9bbc9561d5b8a3c26540b4f05b>`_
 :author:
     fbennett
 :date:

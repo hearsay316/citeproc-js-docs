@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.81
 
 :commit:
-    `57e8a2d <https://github.com/Juris-M/zotero/commit/57e8a2d8f739806d7dca1014aa11c3ddf986245f>`_
+    `57e8a2d <https://github.com/Juris-M/citeproc-js/commit/57e8a2d8f739806d7dca1014aa11c3ddf986245f>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.81
 Fixes to schema and modular macro handling
 
 :commit:
-    `9abdeba <https://github.com/Juris-M/zotero/commit/9abdebaef5ea40fb289d0385294db2cec8f8db4d>`_
+    `9abdeba <https://github.com/Juris-M/citeproc-js/commit/9abdebaef5ea40fb289d0385294db2cec8f8db4d>`_
 :author:
     fbennett
 :date:
@@ -52,7 +52,7 @@ Utility to print chars by their hex numbers
 Bump version, update CHANGES, bundle as 1.1.80
 
 :commit:
-    `096b5a8 <https://github.com/Juris-M/zotero/commit/096b5a82e9899975e270a544bc7d0faa9724efd1>`_
+    `096b5a8 <https://github.com/Juris-M/citeproc-js/commit/096b5a82e9899975e270a544bc7d0faa9724efd1>`_
 :author:
     fbennett
 :date:
@@ -64,7 +64,7 @@ Bump version, update CHANGES, bundle as 1.1.80
 Update standard test suite
 
 :commit:
-    `fe1ce8f <https://github.com/Juris-M/zotero/commit/fe1ce8f171f1affe46ed47f1b48657d021b8bf8e>`_
+    `fe1ce8f <https://github.com/Juris-M/citeproc-js/commit/fe1ce8f171f1affe46ed47f1b48657d021b8bf8e>`_
 :author:
     fbennett
 :date:
@@ -76,7 +76,7 @@ Update standard test suite
 Fix validation errors on test fixtures
 
 :commit:
-    `d26ff0c <https://github.com/Juris-M/zotero/commit/d26ff0c3636c80272d3b33a0af1e196bc8720c92>`_
+    `d26ff0c <https://github.com/Juris-M/citeproc-js/commit/d26ff0c3636c80272d3b33a0af1e196bc8720c92>`_
 :author:
     fbennett
 :date:
@@ -88,7 +88,7 @@ Fix validation errors on test fixtures
 Add fixtures migrated from official test suite
 
 :commit:
-    `aa8c760 <https://github.com/Juris-M/zotero/commit/aa8c76026a261631c0c6935307d572b7c016521f>`_
+    `aa8c760 <https://github.com/Juris-M/citeproc-js/commit/aa8c76026a261631c0c6935307d572b7c016521f>`_
 :author:
     fbennett
 :date:
@@ -100,7 +100,7 @@ Add fixtures migrated from official test suite
 Set A as delimiter between elements of name, spoofing keys
 
 :commit:
-    `b6237de <https://github.com/Juris-M/zotero/commit/b6237de598d1d888023da9519d01474c3237d7d8>`_
+    `b6237de <https://github.com/Juris-M/citeproc-js/commit/b6237de598d1d888023da9519d01474c3237d7d8>`_
 :author:
     fbennett
 :date:
@@ -112,7 +112,7 @@ Set A as delimiter between elements of name, spoofing keys
 Fix validation error it test
 
 :commit:
-    `3b0c4a4 <https://github.com/Juris-M/zotero/commit/3b0c4a4c84f41e2664aacc5c89fe2a1f04ffc9c2>`_
+    `3b0c4a4 <https://github.com/Juris-M/citeproc-js/commit/3b0c4a4c84f41e2664aacc5c89fe2a1f04ffc9c2>`_
 :author:
     fbennett
 :date:
@@ -124,7 +124,7 @@ Fix validation error it test
 Fix reject and require when label is contained in a nested macro
 
 :commit:
-    `67db07c <https://github.com/Juris-M/zotero/commit/67db07cb23d5cbfa9179f25eb93fb54ed888b46a>`_
+    `67db07c <https://github.com/Juris-M/citeproc-js/commit/67db07cb23d5cbfa9179f25eb93fb54ed888b46a>`_
 :author:
     fbennett
 :date:
@@ -136,7 +136,7 @@ Fix reject and require when label is contained in a nested macro
 Add test of reject with macro nesting
 
 :commit:
-    `474f23c <https://github.com/Juris-M/zotero/commit/474f23cb9875cee1a0e9e99c7bf1782c18542a0a>`_
+    `474f23c <https://github.com/Juris-M/citeproc-js/commit/474f23cb9875cee1a0e9e99c7bf1782c18542a0a>`_
 :author:
     fbennett
 :date:
@@ -148,7 +148,7 @@ Add test of reject with macro nesting
 Bump version, update CHANGES, bundle as 1.1.79
 
 :commit:
-    `73bbaeb <https://github.com/Juris-M/zotero/commit/73bbaebfc7ecc9ee1306b8a4864b7002503c6ec5>`_
+    `73bbaeb <https://github.com/Juris-M/citeproc-js/commit/73bbaebfc7ecc9ee1306b8a4864b7002503c6ec5>`_
 :author:
     fbennett
 :date:

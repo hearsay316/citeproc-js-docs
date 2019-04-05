@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.208
 
 :commit:
-    `ae666cd <https://github.com/Juris-M/zotero/commit/ae666cd1d83119f124bf465f20e5d8dcbe1cfd0b>`_
+    `ae666cd <https://github.com/Juris-M/citeproc-js/commit/ae666cd1d83119f124bf465f20e5d8dcbe1cfd0b>`_
 :author:
     Frank Bennett
 :date:
@@ -26,7 +26,7 @@ Bump version, update CHANGES, bundle as 1.1.208
 Bump version, update CHANGES, bundle as 1.1.207
 
 :commit:
-    `5ab40eb <https://github.com/Juris-M/zotero/commit/5ab40eb0eb66a61cfdea46b863f41e173ea343e6>`_
+    `5ab40eb <https://github.com/Juris-M/citeproc-js/commit/5ab40eb0eb66a61cfdea46b863f41e173ea343e6>`_
 :author:
     Frank Bennett
 :date:
@@ -38,7 +38,7 @@ Bump version, update CHANGES, bundle as 1.1.207
 Merge pull request #67 from DanielRuf/docs/use-markdown-format-for-readme
 
 :commit:
-    `ba04a9f <https://github.com/Juris-M/zotero/commit/ba04a9fd320d3eb6a538f90fed319cd66ebbe144>`_
+    `ba04a9f <https://github.com/Juris-M/citeproc-js/commit/ba04a9fd320d3eb6a538f90fed319cd66ebbe144>`_
 :author:
     Frank Bennett
 :date:
@@ -51,7 +51,7 @@ docs: use markdown format for the readme
 Bump version, update CHANGES, bundle as 1.1.206
 
 :commit:
-    `d2ca790 <https://github.com/Juris-M/zotero/commit/d2ca79088b97c87ccc51ae2d798d6c9c3238f840>`_
+    `d2ca790 <https://github.com/Juris-M/citeproc-js/commit/d2ca79088b97c87ccc51ae2d798d6c9c3238f840>`_
 :author:
     Frank Bennett
 :date:

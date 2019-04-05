@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.127
 
 :commit:
-    `73c8203 <https://github.com/Juris-M/zotero/commit/73c82034b8cb96cd5a33e3567cd97e02aebd0851>`_
+    `73c8203 <https://github.com/Juris-M/citeproc-js/commit/73c82034b8cb96cd5a33e3567cd97e02aebd0851>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.127
 Dereferencing
 
 :commit:
-    `2ffc466 <https://github.com/Juris-M/zotero/commit/2ffc4664ae2b71123ff4969cbecdac9531856309>`_
+    `2ffc466 <https://github.com/Juris-M/citeproc-js/commit/2ffc4664ae2b71123ff4969cbecdac9531856309>`_
 :author:
     fbennett
 :date:
@@ -43,7 +43,7 @@ Dereferencing
 Bump version, update CHANGES, bundle as 1.1.126
 
 :commit:
-    `4f799c3 <https://github.com/Juris-M/zotero/commit/4f799c3842fce0eb7e1efe3aed72a298b87b9e92>`_
+    `4f799c3 <https://github.com/Juris-M/citeproc-js/commit/4f799c3842fce0eb7e1efe3aed72a298b87b9e92>`_
 :author:
     fbennett
 :date:

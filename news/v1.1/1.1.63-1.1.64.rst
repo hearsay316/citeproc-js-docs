@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `965c9bc <https://github.com/Juris-M/zotero/commit/965c9bcabbf8216457799a4a1769039acea998dd>`_
+    `965c9bc <https://github.com/Juris-M/citeproc-js/commit/965c9bcabbf8216457799a4a1769039acea998dd>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Adapt code to revised date parse module
 
 :commit:
-    `094bef0 <https://github.com/Juris-M/zotero/commit/094bef0b530c35bdff7faf158cf62778d0d321ab>`_
+    `094bef0 <https://github.com/Juris-M/citeproc-js/commit/094bef0b530c35bdff7faf158cf62778d0d321ab>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Adapt code to revised date parse module
 Readability fixes for date parser module
 
 :commit:
-    `16652c3 <https://github.com/Juris-M/zotero/commit/16652c33d0a7a606228485995ae14a2b9b69f4d7>`_
+    `16652c3 <https://github.com/Juris-M/citeproc-js/commit/16652c33d0a7a606228485995ae14a2b9b69f4d7>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Readability fixes for date parser module
 Allow OSCOLA test to pass
 
 :commit:
-    `0aa1ce2 <https://github.com/Juris-M/zotero/commit/0aa1ce21916f02fbe06b68b10b675dd7853664a1>`_
+    `0aa1ce2 <https://github.com/Juris-M/citeproc-js/commit/0aa1ce21916f02fbe06b68b10b675dd7853664a1>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Allow OSCOLA test to pass
 Give up on LRM markers in right-to-left test (test framework keeps removing them from expect string somehow)
 
 :commit:
-    `c0f93b9 <https://github.com/Juris-M/zotero/commit/c0f93b94afddfa2053945927efd2ddd4693c0480>`_
+    `c0f93b9 <https://github.com/Juris-M/citeproc-js/commit/c0f93b94afddfa2053945927efd2ddd4693c0480>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Give up on LRM markers in right-to-left test (test framework keeps removing them
 Test of incomplete kanji date
 
 :commit:
-    `9b3dca3 <https://github.com/Juris-M/zotero/commit/9b3dca33b86e51ba269d7f16173751135c63810f>`_
+    `9b3dca3 <https://github.com/Juris-M/citeproc-js/commit/9b3dca33b86e51ba269d7f16173751135c63810f>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ Test of incomplete kanji date
 Test of editor as author (failed with JSON parser)
 
 :commit:
-    `11b736f <https://github.com/Juris-M/zotero/commit/11b736f1ea41c061a84572533f6385630671f1f1>`_
+    `11b736f <https://github.com/Juris-M/citeproc-js/commit/11b736f1ea41c061a84572533f6385630671f1f1>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ Test of editor as author (failed with JSON parser)
 Test of atomic affixes on number elements (currently fails)
 
 :commit:
-    `96fa8fc <https://github.com/Juris-M/zotero/commit/96fa8fcce59e95d7770f8d0b71fba7af696fd8d0>`_
+    `96fa8fc <https://github.com/Juris-M/citeproc-js/commit/96fa8fcce59e95d7770f8d0b71fba7af696fd8d0>`_
 :author:
     Frank Bennett
 :date:
@@ -106,7 +106,7 @@ Test of atomic affixes on number elements (currently fails)
 Test of title-case inside tags
 
 :commit:
-    `bd243c7 <https://github.com/Juris-M/zotero/commit/bd243c7a698973e042d065f46bcff425ca43678c>`_
+    `bd243c7 <https://github.com/Juris-M/citeproc-js/commit/bd243c7a698973e042d065f46bcff425ca43678c>`_
 :author:
     Frank Bennett
 :date:
@@ -118,7 +118,7 @@ Test of title-case inside tags
 Test of container subtitle capitalization
 
 :commit:
-    `3618e6c <https://github.com/Juris-M/zotero/commit/3618e6c47d0eda2c065ace250d84e8b1a774504f>`_
+    `3618e6c <https://github.com/Juris-M/citeproc-js/commit/3618e6c47d0eda2c065ace250d84e8b1a774504f>`_
 :author:
     Frank Bennett
 :date:
@@ -130,7 +130,7 @@ Test of container subtitle capitalization
 Use zero as delimiter between family and given name elements, to mimick key split
 
 :commit:
-    `5a16a6d <https://github.com/Juris-M/zotero/commit/5a16a6d409f1bf1688c0b80d507b5a802966603a>`_
+    `5a16a6d <https://github.com/Juris-M/citeproc-js/commit/5a16a6d409f1bf1688c0b80d507b5a802966603a>`_
 :author:
     Frank Bennett
 :date:
@@ -142,7 +142,7 @@ Use zero as delimiter between family and given name elements, to mimick key spli
 Fix extraneous-cs:name node bug in xmljson.js
 
 :commit:
-    `927d619 <https://github.com/Juris-M/zotero/commit/927d619a953305bbf7ce36226cf735a8ccaf701f>`_
+    `927d619 <https://github.com/Juris-M/citeproc-js/commit/927d619a953305bbf7ce36226cf735a8ccaf701f>`_
 :author:
     Frank Bennett
 :date:
@@ -154,7 +154,7 @@ Fix extraneous-cs:name node bug in xmljson.js
 Fix bad grouping in regexp
 
 :commit:
-    `8089127 <https://github.com/Juris-M/zotero/commit/80891274d7c70da70e515aa169d9e225a744b7d1>`_
+    `8089127 <https://github.com/Juris-M/citeproc-js/commit/80891274d7c70da70e515aa169d9e225a744b7d1>`_
 :author:
     Frank Bennett
 :date:
@@ -166,7 +166,7 @@ Fix bad grouping in regexp
 Added tag 1.1.63 for changeset c77001396114
 
 :commit:
-    `5d6d80f <https://github.com/Juris-M/zotero/commit/5d6d80f8b857207a62f72316f9567f8247754e53>`_
+    `5d6d80f <https://github.com/Juris-M/citeproc-js/commit/5d6d80f8b857207a62f72316f9567f8247754e53>`_
 :author:
     Frank Bennett
 :date:
@@ -178,7 +178,7 @@ Added tag 1.1.63 for changeset c77001396114
 Bump version, update CHANGES, bundle
 
 :commit:
-    `591c4ad <https://github.com/Juris-M/zotero/commit/591c4adb54f9edffee07abf50fe14e21110b11ed>`_
+    `591c4ad <https://github.com/Juris-M/citeproc-js/commit/591c4adb54f9edffee07abf50fe14e21110b11ed>`_
 :author:
     Frank Bennett
 :date:

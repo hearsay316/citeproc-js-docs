@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.209
 
 :commit:
-    `88dcacf <https://github.com/Juris-M/zotero/commit/88dcacfd810076f6b1b9dc682196db5e2c65a3a0>`_
+    `88dcacf <https://github.com/Juris-M/citeproc-js/commit/88dcacfd810076f6b1b9dc682196db5e2c65a3a0>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.209
 Insert to position in sorted registry reflist, rather than resorting
 
 :commit:
-    `cc909aa <https://github.com/Juris-M/zotero/commit/cc909aa422aabb5df12bbfae4ced83514245fde0>`_
+    `cc909aa <https://github.com/Juris-M/citeproc-js/commit/cc909aa422aabb5df12bbfae4ced83514245fde0>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Insert to position in sorted registry reflist, rather than resorting
 Update CSL-M schema
 
 :commit:
-    `71df4f6 <https://github.com/Juris-M/zotero/commit/71df4f644e1f01eabcac40b2222427671e4da51b>`_
+    `71df4f6 <https://github.com/Juris-M/citeproc-js/commit/71df4f644e1f01eabcac40b2222427671e4da51b>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Update CSL-M schema
 Bump version, update CHANGES, bundle as 1.1.208
 
 :commit:
-    `ae666cd <https://github.com/Juris-M/zotero/commit/ae666cd1d83119f124bf465f20e5d8dcbe1cfd0b>`_
+    `ae666cd <https://github.com/Juris-M/citeproc-js/commit/ae666cd1d83119f124bf465f20e5d8dcbe1cfd0b>`_
 :author:
     Frank Bennett
 :date:

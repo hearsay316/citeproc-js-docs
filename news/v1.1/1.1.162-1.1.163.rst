@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.163
 
 :commit:
-    `94f4118 <https://github.com/Juris-M/zotero/commit/94f41187a05072676b27068892b6ccba0697af37>`_
+    `94f4118 <https://github.com/Juris-M/citeproc-js/commit/94f41187a05072676b27068892b6ccba0697af37>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.163
 Update std tests again
 
 :commit:
-    `a477c2f <https://github.com/Juris-M/zotero/commit/a477c2f431823429f717301ba5016dba649cd45a>`_
+    `a477c2f <https://github.com/Juris-M/citeproc-js/commit/a477c2f431823429f717301ba5016dba649cd45a>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Update std tests again
 Update std tests
 
 :commit:
-    `4063d3d <https://github.com/Juris-M/zotero/commit/4063d3d39a4e2077bacc9f8a46f3e19eac00fde9>`_
+    `4063d3d <https://github.com/Juris-M/citeproc-js/commit/4063d3d39a4e2077bacc9f8a46f3e19eac00fde9>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Update std tests
 Treat endash same as hyphen
 
 :commit:
-    `394e8e4 <https://github.com/Juris-M/zotero/commit/394e8e43f96eb8d7652367dfc11a7ddf0a3dfc02>`_
+    `394e8e4 <https://github.com/Juris-M/citeproc-js/commit/394e8e43f96eb8d7652367dfc11a7ddf0a3dfc02>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Treat endash same as hyphen
 Bump version, update CHANGES, bundle as 1.1.162
 
 :commit:
-    `f33382a <https://github.com/Juris-M/zotero/commit/f33382a654dae00b66bcd81179ed0a3cb6bbb388>`_
+    `f33382a <https://github.com/Juris-M/citeproc-js/commit/f33382a654dae00b66bcd81179ed0a3cb6bbb388>`_
 :author:
     fbennett
 :date:

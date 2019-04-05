@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `9b77075 <https://github.com/Juris-M/zotero/commit/9b770755fc0163d74be0ab4d7d1ba36256fcdb5c>`_
+    `9b77075 <https://github.com/Juris-M/citeproc-js/commit/9b770755fc0163d74be0ab4d7d1ba36256fcdb5c>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Roll back two changes from previous commit: there was just one type.
 
 :commit:
-    `f4a55b7 <https://github.com/Juris-M/zotero/commit/f4a55b7cf4f4c463256eaee9fadbc8221ce8f1ce>`_
+    `f4a55b7 <https://github.com/Juris-M/citeproc-js/commit/f4a55b7cf4f4c463256eaee9fadbc8221ce8f1ce>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Roll back two changes from previous commit: there was just one type.
 Fix typos in three more particle specs
 
 :commit:
-    `87868ac <https://github.com/Juris-M/zotero/commit/87868ac0375d65d52da65166ac68b7db21b15a18>`_
+    `87868ac <https://github.com/Juris-M/citeproc-js/commit/87868ac0375d65d52da65166ac68b7db21b15a18>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Fix typos in three more particle specs
 Bump version, update CHANGES, bundle
 
 :commit:
-    `91853dd <https://github.com/Juris-M/zotero/commit/91853dda710b2ff93a28e5e46b982f236048317e>`_
+    `91853dd <https://github.com/Juris-M/citeproc-js/commit/91853dda710b2ff93a28e5e46b982f236048317e>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Bump version, update CHANGES, bundle
 Remove \line element
 
 :commit:
-    `c839a90 <https://github.com/Juris-M/zotero/commit/c839a902eef77a063544cdad1bb10a8d7bc86ea5>`_
+    `c839a90 <https://github.com/Juris-M/citeproc-js/commit/c839a902eef77a063544cdad1bb10a8d7bc86ea5>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Remove \line element
 Add tests of extreme edge case to attic
 
 :commit:
-    `6017940 <https://github.com/Juris-M/zotero/commit/6017940d93fb7002a221703726dde47ad73f2c7c>`_
+    `6017940 <https://github.com/Juris-M/citeproc-js/commit/6017940d93fb7002a221703726dde47ad73f2c7c>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ Add tests of extreme edge case to attic
 Bump version, update CHANGES, bundle
 
 :commit:
-    `9bb5afa <https://github.com/Juris-M/zotero/commit/9bb5afa027493569a6c8b8b28645b60196bddd87>`_
+    `9bb5afa <https://github.com/Juris-M/citeproc-js/commit/9bb5afa027493569a6c8b8b28645b60196bddd87>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ Bump version, update CHANGES, bundle
 Consolidate parsing of name particles and make it optional
 
 :commit:
-    `3c936a4 <https://github.com/Juris-M/zotero/commit/3c936a4e22f165749f2b06f2c562db6c14869083>`_
+    `3c936a4 <https://github.com/Juris-M/citeproc-js/commit/3c936a4e22f165749f2b06f2c562db6c14869083>`_
 :author:
     Frank Bennett
 :date:
@@ -106,7 +106,7 @@ Consolidate parsing of name particles and make it optional
 Bump version, update CHANGES, bundle
 
 :commit:
-    `4def574 <https://github.com/Juris-M/zotero/commit/4def574b4052118f8f738a6972dc39dddd5ad995>`_
+    `4def574 <https://github.com/Juris-M/citeproc-js/commit/4def574b4052118f8f738a6972dc39dddd5ad995>`_
 :author:
     Frank Bennett
 :date:
@@ -118,7 +118,7 @@ Bump version, update CHANGES, bundle
 Remove redundant entry in name particle struct
 
 :commit:
-    `ccbabfe <https://github.com/Juris-M/zotero/commit/ccbabfeaef00e8f5a847328be9362439de3c3a43>`_
+    `ccbabfe <https://github.com/Juris-M/citeproc-js/commit/ccbabfeaef00e8f5a847328be9362439de3c3a43>`_
 :author:
     Frank Bennett
 :date:
@@ -130,7 +130,7 @@ Remove redundant entry in name particle struct
 Suspend hyphenated name particle workaround
 
 :commit:
-    `25741e2 <https://github.com/Juris-M/zotero/commit/25741e20711281f86298de0ef4e24037cffedbc0>`_
+    `25741e2 <https://github.com/Juris-M/citeproc-js/commit/25741e20711281f86298de0ef4e24037cffedbc0>`_
 :author:
     Frank Bennett
 :date:
@@ -142,7 +142,7 @@ Suspend hyphenated name particle workaround
 Add a number of Arabic name particles
 
 :commit:
-    `08dc452 <https://github.com/Juris-M/zotero/commit/08dc4528206b04384bce2c6bb4f17250462306d6>`_
+    `08dc452 <https://github.com/Juris-M/citeproc-js/commit/08dc4528206b04384bce2c6bb4f17250462306d6>`_
 :author:
     Frank Bennett
 :date:
@@ -154,7 +154,7 @@ Add a number of Arabic name particles
 Use standard regexp forms for global matches
 
 :commit:
-    `cd71d07 <https://github.com/Juris-M/zotero/commit/cd71d07471834e9c46eef2a15d7500e0e4499be1>`_
+    `cd71d07 <https://github.com/Juris-M/citeproc-js/commit/cd71d07471834e9c46eef2a15d7500e0e4499be1>`_
 :author:
     Frank Bennett
 :date:
@@ -166,7 +166,7 @@ Use standard regexp forms for global matches
 Default force_jurisdiction to false
 
 :commit:
-    `3751c03 <https://github.com/Juris-M/zotero/commit/3751c03c77e4b4dd74198dd1c9cc67e9cedde978>`_
+    `3751c03 <https://github.com/Juris-M/citeproc-js/commit/3751c03c77e4b4dd74198dd1c9cc67e9cedde978>`_
 :author:
     Frank Bennett
 :date:
@@ -178,7 +178,7 @@ Default force_jurisdiction to false
 Add force_jurisdiction option, and implement as "us"
 
 :commit:
-    `604b6f1 <https://github.com/Juris-M/zotero/commit/604b6f110817f530bb80e2dee8d29cac645b731f>`_
+    `604b6f1 <https://github.com/Juris-M/citeproc-js/commit/604b6f110817f530bb80e2dee8d29cac645b731f>`_
 :author:
     Frank Bennett
 :date:
@@ -190,7 +190,7 @@ Add force_jurisdiction option, and implement as "us"
 Fix code-o in name particle assignment struct
 
 :commit:
-    `3e07aea <https://github.com/Juris-M/zotero/commit/3e07aea12622edae983f77356cb6fb10a4d2df2b>`_
+    `3e07aea <https://github.com/Juris-M/citeproc-js/commit/3e07aea12622edae983f77356cb6fb10a4d2df2b>`_
 :author:
     Frank Bennett
 :date:
@@ -202,7 +202,7 @@ Fix code-o in name particle assignment struct
 Added tag 1.1.39 for changeset a4ef141fa3b7
 
 :commit:
-    `476b00d <https://github.com/Juris-M/zotero/commit/476b00dbb63ae9392b193c498fc6962ed21fd1c7>`_
+    `476b00d <https://github.com/Juris-M/citeproc-js/commit/476b00dbb63ae9392b193c498fc6962ed21fd1c7>`_
 :author:
     Frank Bennett
 :date:
@@ -214,7 +214,7 @@ Added tag 1.1.39 for changeset a4ef141fa3b7
 Bump version, update CHANGES, bundle
 
 :commit:
-    `1df588b <https://github.com/Juris-M/zotero/commit/1df588bb4a924bc0a3b475270c698e2a0c4a0ec7>`_
+    `1df588b <https://github.com/Juris-M/citeproc-js/commit/1df588bb4a924bc0a3b475270c698e2a0c4a0ec7>`_
 :author:
     Frank Bennett
 :date:

@@ -10,7 +10,7 @@
 Option to set JS engine
 
 :commit:
-    `96f76e1 <https://github.com/Juris-M/zotero/commit/96f76e101dee3344a6803972d2ef9c6a464d46a2>`_
+    `96f76e1 <https://github.com/Juris-M/citeproc-js/commit/96f76e101dee3344a6803972d2ef9c6a464d46a2>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Option to set JS engine
 Added tag 1.1.71 for changeset 2cce3396ab43
 
 :commit:
-    `86cc91d <https://github.com/Juris-M/zotero/commit/86cc91d55f997d0879624b327af524b0ff31080c>`_
+    `86cc91d <https://github.com/Juris-M/citeproc-js/commit/86cc91d55f997d0879624b327af524b0ff31080c>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Added tag 1.1.71 for changeset 2cce3396ab43
 Add US-BB module for testing
 
 :commit:
-    `4468ada <https://github.com/Juris-M/zotero/commit/4468ada47d6d5f36ea6109429f3706a9210492e5>`_
+    `4468ada <https://github.com/Juris-M/citeproc-js/commit/4468ada47d6d5f36ea6109429f3706a9210492e5>`_
 :author:
     Frank Bennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.91
 
 :commit:
-    `d0cac40 <https://github.com/Juris-M/zotero/commit/d0cac4037f6bb89cd555c4c9636aab8438a7bb92>`_
+    `d0cac40 <https://github.com/Juris-M/citeproc-js/commit/d0cac4037f6bb89cd555c4c9636aab8438a7bb92>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.91
 Emit bibliography entries as strings, not as single-element array
 
 :commit:
-    `19b31fa <https://github.com/Juris-M/zotero/commit/19b31fa02f8b38f69c9c149d859bab6fc3babc16>`_
+    `19b31fa <https://github.com/Juris-M/citeproc-js/commit/19b31fa02f8b38f69c9c149d859bab6fc3babc16>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Emit bibliography entries as strings, not as single-element array
 Pull in fixed heading
 
 :commit:
-    `eae365b <https://github.com/Juris-M/zotero/commit/eae365b3303249938b39b68de6263e2ce0d848a4>`_
+    `eae365b <https://github.com/Juris-M/citeproc-js/commit/eae365b3303249938b39b68de6263e2ce0d848a4>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Pull in fixed heading
 Update docs
 
 :commit:
-    `17673fa <https://github.com/Juris-M/zotero/commit/17673fa2b7a624c39ae682bba23a0e5b0605b15d>`_
+    `17673fa <https://github.com/Juris-M/citeproc-js/commit/17673fa2b7a624c39ae682bba23a0e5b0605b15d>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Update docs
 Bump version, update CHANGES, bundle as 1.1.90
 
 :commit:
-    `69490f3 <https://github.com/Juris-M/zotero/commit/69490f389d3336302a15a784a208c8390a7d2652>`_
+    `69490f3 <https://github.com/Juris-M/citeproc-js/commit/69490f389d3336302a15a784a208c8390a7d2652>`_
 :author:
     fbennett
 :date:

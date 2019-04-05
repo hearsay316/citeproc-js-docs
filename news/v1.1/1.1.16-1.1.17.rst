@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `91c7c54 <https://github.com/Juris-M/zotero/commit/91c7c541e76b204dc7a5f1210433581da84eccbb>`_
+    `91c7c54 <https://github.com/Juris-M/citeproc-js/commit/91c7c541e76b204dc7a5f1210433581da84eccbb>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Add hr -> hr_HR fallback
 
 :commit:
-    `8236259 <https://github.com/Juris-M/zotero/commit/8236259cf18b1c89267554de5ebb98adfee9b7d6>`_
+    `8236259 <https://github.com/Juris-M/citeproc-js/commit/8236259cf18b1c89267554de5ebb98adfee9b7d6>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Add hr -> hr_HR fallback
 The correct fix to make juris-locator-label shy
 
 :commit:
-    `5ec44df <https://github.com/Juris-M/zotero/commit/5ec44df89e6fe91cbf125ca0e6172c52df199487>`_
+    `5ec44df <https://github.com/Juris-M/citeproc-js/commit/5ec44df89e6fe91cbf125ca0e6172c52df199487>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ The correct fix to make juris-locator-label shy
 Added tag 1.1.16 for changeset 98dd66479f85
 
 :commit:
-    `2d79af1 <https://github.com/Juris-M/zotero/commit/2d79af1210b8e967aa151e0682b8d4a575ac5576>`_
+    `2d79af1 <https://github.com/Juris-M/citeproc-js/commit/2d79af1210b8e967aa151e0682b8d4a575ac5576>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Added tag 1.1.16 for changeset 98dd66479f85
 Bump version, update CHANGES, bundle
 
 :commit:
-    `05311c7 <https://github.com/Juris-M/zotero/commit/05311c7ce615bb7864b79926c01a57f20d3b7ec7>`_
+    `05311c7 <https://github.com/Juris-M/citeproc-js/commit/05311c7ce615bb7864b79926c01a57f20d3b7ec7>`_
 :author:
     Frank Bennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.78
 
 :commit:
-    `2780216 <https://github.com/Juris-M/zotero/commit/2780216f4d451384609f29bd8930618c205457f6>`_
+    `2780216 <https://github.com/Juris-M/citeproc-js/commit/2780216f4d451384609f29bd8930618c205457f6>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.78
 Remove Oops test to attic, add tests for reject and require
 
 :commit:
-    `15b2c73 <https://github.com/Juris-M/zotero/commit/15b2c73506705759f11602bdfe640dc45ad8353c>`_
+    `15b2c73 <https://github.com/Juris-M/citeproc-js/commit/15b2c73506705759f11602bdfe640dc45ad8353c>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Remove Oops test to attic, add tests for reject and require
 Update docs
 
 :commit:
-    `6c83189 <https://github.com/Juris-M/zotero/commit/6c831898391562a6f1fb4956cce63b63892c196e>`_
+    `6c83189 <https://github.com/Juris-M/citeproc-js/commit/6c831898391562a6f1fb4956cce63b63892c196e>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Update docs
 Support require and reject conditions on cs:group
 
 :commit:
-    `a13f0b3 <https://github.com/Juris-M/zotero/commit/a13f0b34741d2295121ea52ebad6e02dfc4320a9>`_
+    `a13f0b3 <https://github.com/Juris-M/citeproc-js/commit/a13f0b34741d2295121ea52ebad6e02dfc4320a9>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Support require and reject conditions on cs:group
 Update CSL-M schema
 
 :commit:
-    `bd8486f <https://github.com/Juris-M/zotero/commit/bd8486f9eda6e7432f4461bc4fcb209fe0881182>`_
+    `bd8486f <https://github.com/Juris-M/citeproc-js/commit/bd8486f9eda6e7432f4461bc4fcb209fe0881182>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Update CSL-M schema
 Remove oops test
 
 :commit:
-    `21d2835 <https://github.com/Juris-M/zotero/commit/21d2835974a37dd83da7828233cac6a05853a3e4>`_
+    `21d2835 <https://github.com/Juris-M/citeproc-js/commit/21d2835974a37dd83da7828233cac6a05853a3e4>`_
 :author:
     fbennett
 :date:
@@ -82,7 +82,7 @@ Remove oops test
 Merge branch 'master' of github.com:Juris-M/citeproc-js
 
 :commit:
-    `5ac7fa8 <https://github.com/Juris-M/zotero/commit/5ac7fa8ac46fa2ae15cdbcd74e96d34be825f848>`_
+    `5ac7fa8 <https://github.com/Juris-M/citeproc-js/commit/5ac7fa8ac46fa2ae15cdbcd74e96d34be825f848>`_
 :author:
     fbennett
 :date:
@@ -94,7 +94,7 @@ Merge branch 'master' of github.com:Juris-M/citeproc-js
 Cleanup of group context tracking
 
 :commit:
-    `5741c15 <https://github.com/Juris-M/zotero/commit/5741c15b0ee09f325f41d743c850e8672464d195>`_
+    `5741c15 <https://github.com/Juris-M/citeproc-js/commit/5741c15b0ee09f325f41d743c850e8672464d195>`_
 :author:
     fbennett
 :date:
@@ -113,7 +113,7 @@ Cleanup of group context tracking
 Framework code for a require-label-type attribute
 
 :commit:
-    `ef028bb <https://github.com/Juris-M/zotero/commit/ef028bbeba00103418522192f7f846beb50933ed>`_
+    `ef028bb <https://github.com/Juris-M/citeproc-js/commit/ef028bbeba00103418522192f7f846beb50933ed>`_
 :author:
     Frank Bennett
 :date:
@@ -125,7 +125,7 @@ Framework code for a require-label-type attribute
 Bump version, update CHANGES, bundle as 1.1.77
 
 :commit:
-    `45eac6e <https://github.com/Juris-M/zotero/commit/45eac6e64259f8349014c7f4d6d71e660d14ff30>`_
+    `45eac6e <https://github.com/Juris-M/citeproc-js/commit/45eac6e64259f8349014c7f4d6d71e660d14ff30>`_
 :author:
     fbennett
 :date:
@@ -137,7 +137,7 @@ Bump version, update CHANGES, bundle as 1.1.77
 Amend label in test
 
 :commit:
-    `f304988 <https://github.com/Juris-M/zotero/commit/f3049888713a5b974324738846ae52ec8dab7b03>`_
+    `f304988 <https://github.com/Juris-M/citeproc-js/commit/f3049888713a5b974324738846ae52ec8dab7b03>`_
 :author:
     fbennett
 :date:
@@ -149,7 +149,7 @@ Amend label in test
 Update CSL-M schema
 
 :commit:
-    `ecedeee <https://github.com/Juris-M/zotero/commit/ecedeeebcedfe302a90ce2017a4a395f2b49b50c>`_
+    `ecedeee <https://github.com/Juris-M/citeproc-js/commit/ecedeeebcedfe302a90ce2017a4a395f2b49b50c>`_
 :author:
     fbennett
 :date:
@@ -161,7 +161,7 @@ Update CSL-M schema
 Mask new label form "static" from label-form changes
 
 :commit:
-    `604b412 <https://github.com/Juris-M/zotero/commit/604b41247ecfd7b652c4afaf589f6b37ec9c1366>`_
+    `604b412 <https://github.com/Juris-M/citeproc-js/commit/604b41247ecfd7b652c4afaf589f6b37ec9c1366>`_
 :author:
     fbennett
 :date:
@@ -173,7 +173,7 @@ Mask new label form "static" from label-form changes
 Add nojuris option to test.py
 
 :commit:
-    `9737573 <https://github.com/Juris-M/zotero/commit/9737573d07bdada27525c5f376d5878abe7586e6>`_
+    `9737573 <https://github.com/Juris-M/citeproc-js/commit/9737573d07bdada27525c5f376d5878abe7586e6>`_
 :author:
     fbennett
 :date:
@@ -185,7 +185,7 @@ Add nojuris option to test.py
 Update test suite
 
 :commit:
-    `9c47029 <https://github.com/Juris-M/zotero/commit/9c47029434a563996fe706c16b6b93f502ec3129>`_
+    `9c47029 <https://github.com/Juris-M/citeproc-js/commit/9c47029434a563996fe706c16b6b93f502ec3129>`_
 :author:
     fbennett
 :date:
@@ -197,7 +197,7 @@ Update test suite
 Update test suite
 
 :commit:
-    `ab63e1e <https://github.com/Juris-M/zotero/commit/ab63e1e9245fe5adb14471a9687d50b1d81b1cfa>`_
+    `ab63e1e <https://github.com/Juris-M/citeproc-js/commit/ab63e1e9245fe5adb14471a9687d50b1d81b1cfa>`_
 :author:
     fbennett
 :date:
@@ -209,7 +209,7 @@ Update test suite
 Update CSL-M schema
 
 :commit:
-    `411ecc6 <https://github.com/Juris-M/zotero/commit/411ecc6f1bafbd3620b5a14a0213da9999f25b08>`_
+    `411ecc6 <https://github.com/Juris-M/citeproc-js/commit/411ecc6f1bafbd3620b5a14a0213da9999f25b08>`_
 :author:
     fbennett
 :date:
@@ -221,7 +221,7 @@ Update CSL-M schema
 Bump version, update CHANGES, bundle as 1.1.76
 
 :commit:
-    `a1924e2 <https://github.com/Juris-M/zotero/commit/a1924e2adf9eea93e7c2026294e162a3344c57ac>`_
+    `a1924e2 <https://github.com/Juris-M/citeproc-js/commit/a1924e2adf9eea93e7c2026294e162a3344c57ac>`_
 :author:
     fbennett
 :date:

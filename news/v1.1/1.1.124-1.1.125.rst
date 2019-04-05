@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.125
 
 :commit:
-    `d7a9fd3 <https://github.com/Juris-M/zotero/commit/d7a9fd3f957c2b4bd2eaba2fbfa0d2b81ae7e1b1>`_
+    `d7a9fd3 <https://github.com/Juris-M/citeproc-js/commit/d7a9fd3f957c2b4bd2eaba2fbfa0d2b81ae7e1b1>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.125
 Add getLocaleNames() method
 
 :commit:
-    `8c27e13 <https://github.com/Juris-M/zotero/commit/8c27e137a80f2a62a52ede14c9d688931cca8fcb>`_
+    `8c27e13 <https://github.com/Juris-M/citeproc-js/commit/8c27e137a80f2a62a52ede14c9d688931cca8fcb>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Add getLocaleNames() method
 Comment out chatter
 
 :commit:
-    `c04dddc <https://github.com/Juris-M/zotero/commit/c04dddcbe5ff406b5a15d32282f3dadaceded49f>`_
+    `c04dddc <https://github.com/Juris-M/citeproc-js/commit/c04dddcbe5ff406b5a15d32282f3dadaceded49f>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Comment out chatter
 Bump version, update CHANGES, bundle as 1.1.124
 
 :commit:
-    `69f2194 <https://github.com/Juris-M/zotero/commit/69f219444a7a2598cc547f25a527e7f6dfd584e7>`_
+    `69f2194 <https://github.com/Juris-M/citeproc-js/commit/69f219444a7a2598cc547f25a527e7f6dfd584e7>`_
 :author:
     fbennett
 :date:

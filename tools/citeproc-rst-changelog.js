@@ -81,7 +81,7 @@ function getGitLog(from, to) {
 		"--date=format-local:%F %R (JST)",
 		"--date-order",
 		"--ancestry-path",
-		"--format=format:------%n%n%s%n%n:commit:%n    \`%h <https://github.com/Juris-M/zotero/commit/%H>\`_%n:author:%n    %an%n:date:%n    %ad%n%+b%n",
+		"--format=format:------%n%n%s%n%n:commit:%n    \`%h <https://github.com/Juris-M/citeproc-js/commit/%H>\`_%n:author:%n    %an%n:date:%n    %ad%n%+b%n",
 		from + "^1.." + to + "^0"
 	];
 	var res = spawnSync("git", args, {cwd: citeprocPath});

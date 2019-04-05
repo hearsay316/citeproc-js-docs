@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.195
 
 :commit:
-    `0887f02 <https://github.com/Juris-M/zotero/commit/0887f022b621419b91b4e1558889d7a3ddaa05fe>`_
+    `0887f02 <https://github.com/Juris-M/citeproc-js/commit/0887f022b621419b91b4e1558889d7a3ddaa05fe>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.195
 Address a deep bug in the handling of jurisdiction abbreviations
 
 :commit:
-    `70e6619 <https://github.com/Juris-M/zotero/commit/70e661966213d90b9622610bf89fcb28f3b39112>`_
+    `70e6619 <https://github.com/Juris-M/citeproc-js/commit/70e661966213d90b9622610bf89fcb28f3b39112>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Address a deep bug in the handling of jurisdiction abbreviations
 Bump version, update CHANGES, bundle as 1.1.194
 
 :commit:
-    `b0da67a <https://github.com/Juris-M/zotero/commit/b0da67aaf53c2e4fad82c18de47c1a54187ea49c>`_
+    `b0da67a <https://github.com/Juris-M/citeproc-js/commit/b0da67aaf53c2e4fad82c18de47c1a54187ea49c>`_
 :author:
     Frank Bennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `14ac706 <https://github.com/Juris-M/zotero/commit/14ac706997f96195b0faf3d553345bdceca3bba9>`_
+    `14ac706 <https://github.com/Juris-M/citeproc-js/commit/14ac706997f96195b0faf3d553345bdceca3bba9>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 More correct handling of juris-locator-label cs:group condition
 
 :commit:
-    `c707d6f <https://github.com/Juris-M/zotero/commit/c707d6f30bed5803f1d2c252a02738ad71e0f42e>`_
+    `c707d6f <https://github.com/Juris-M/citeproc-js/commit/c707d6f30bed5803f1d2c252a02738ad71e0f42e>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ More correct handling of juris-locator-label cs:group condition
 Added tag 1.1.19 for changeset e27802155280
 
 :commit:
-    `bedf08d <https://github.com/Juris-M/zotero/commit/bedf08d99f725cba46b5c70d1342fe5f6636fefb>`_
+    `bedf08d <https://github.com/Juris-M/citeproc-js/commit/bedf08d99f725cba46b5c70d1342fe5f6636fefb>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Added tag 1.1.19 for changeset e27802155280
 Bump version, update CHANGES.txt, bundle
 
 :commit:
-    `008e6dd <https://github.com/Juris-M/zotero/commit/008e6dde627bfd29c32c8da8621670fbfcb00ae5>`_
+    `008e6dd <https://github.com/Juris-M/citeproc-js/commit/008e6dde627bfd29c32c8da8621670fbfcb00ae5>`_
 :author:
     Frank Bennett
 :date:

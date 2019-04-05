@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.76
 
 :commit:
-    `a1924e2 <https://github.com/Juris-M/zotero/commit/a1924e2adf9eea93e7c2026294e162a3344c57ac>`_
+    `a1924e2 <https://github.com/Juris-M/citeproc-js/commit/a1924e2adf9eea93e7c2026294e162a3344c57ac>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.76
 Fix parallel cite test failure
 
 :commit:
-    `fe43377 <https://github.com/Juris-M/zotero/commit/fe433770d3c9f005606f65284186379390bd4630>`_
+    `fe43377 <https://github.com/Juris-M/citeproc-js/commit/fe433770d3c9f005606f65284186379390bd4630>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Fix parallel cite test failure
 Fix parallel detection error for French-style cases
 
 :commit:
-    `74da70d <https://github.com/Juris-M/zotero/commit/74da70d52e646680420c9b73a9b4d108836dd098>`_
+    `74da70d <https://github.com/Juris-M/citeproc-js/commit/74da70d52e646680420c9b73a9b4d108836dd098>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Fix parallel detection error for French-style cases
 Fix parallel detection error for French-style cases
 
 :commit:
-    `f91cd6b <https://github.com/Juris-M/zotero/commit/f91cd6bc23f5d0a704b4dc2b92264f2e8321ff4d>`_
+    `f91cd6b <https://github.com/Juris-M/citeproc-js/commit/f91cd6bc23f5d0a704b4dc2b92264f2e8321ff4d>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Fix parallel detection error for French-style cases
 Add a quick utility script to attic
 
 :commit:
-    `af91556 <https://github.com/Juris-M/zotero/commit/af915569056531a1c1efafa5f4169fb3f88f15a8>`_
+    `af91556 <https://github.com/Juris-M/citeproc-js/commit/af915569056531a1c1efafa5f4169fb3f88f15a8>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Add a quick utility script to attic
 Fix parallel detection error for French-style cases
 
 :commit:
-    `6565f68 <https://github.com/Juris-M/zotero/commit/6565f682b8adf0877b3e8d2af1cd0e57ae7b65e5>`_
+    `6565f68 <https://github.com/Juris-M/citeproc-js/commit/6565f682b8adf0877b3e8d2af1cd0e57ae7b65e5>`_
 :author:
     fbennett
 :date:
@@ -82,7 +82,7 @@ Fix parallel detection error for French-style cases
 Further validation fixes to test
 
 :commit:
-    `521324d <https://github.com/Juris-M/zotero/commit/521324d3e010d9f51fea35eacb5b56f31f9dd708>`_
+    `521324d <https://github.com/Juris-M/citeproc-js/commit/521324d3e010d9f51fea35eacb5b56f31f9dd708>`_
 :author:
     fbennett
 :date:
@@ -94,7 +94,7 @@ Further validation fixes to test
 Fix validation errors in three fixtures
 
 :commit:
-    `2344e26 <https://github.com/Juris-M/zotero/commit/2344e2613efd2b02ce983e02af327e61dbc9f627>`_
+    `2344e26 <https://github.com/Juris-M/citeproc-js/commit/2344e2613efd2b02ce983e02af327e61dbc9f627>`_
 :author:
     fbennett
 :date:
@@ -106,7 +106,7 @@ Fix validation errors in three fixtures
 Bump version, update CHANGES, bundle as 1.1.75
 
 :commit:
-    `2b2ba8c <https://github.com/Juris-M/zotero/commit/2b2ba8cca208484da8ffd67f91894ddced571b3a>`_
+    `2b2ba8c <https://github.com/Juris-M/citeproc-js/commit/2b2ba8cca208484da8ffd67f91894ddced571b3a>`_
 :author:
     fbennett
 :date:

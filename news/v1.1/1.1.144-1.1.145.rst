@@ -10,7 +10,7 @@
 Update locales
 
 :commit:
-    `1faaa0a <https://github.com/Juris-M/zotero/commit/1faaa0a0972a72213f772e02e577d02e398a3cfb>`_
+    `1faaa0a <https://github.com/Juris-M/citeproc-js/commit/1faaa0a0972a72213f772e02e577d02e398a3cfb>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Update locales
 Update std tests
 
 :commit:
-    `f10c760 <https://github.com/Juris-M/zotero/commit/f10c760d76983a527c829f6e2ca1baebfcb7417e>`_
+    `f10c760 <https://github.com/Juris-M/citeproc-js/commit/f10c760d76983a527c829f6e2ca1baebfcb7417e>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Update std tests
 Bump version, update CHANGES, bundle as 1.1.145
 
 :commit:
-    `e4f4c3e <https://github.com/Juris-M/zotero/commit/e4f4c3e86ffa10190b3b28ef7f462717a3d60f95>`_
+    `e4f4c3e <https://github.com/Juris-M/citeproc-js/commit/e4f4c3e86ffa10190b3b28ef7f462717a3d60f95>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Bump version, update CHANGES, bundle as 1.1.145
 Return empty without error for cs:text term missing from local and style
 
 :commit:
-    `1e24623 <https://github.com/Juris-M/zotero/commit/1e24623a327a82fb3f3b6bf4f7db75c438ef1e5d>`_
+    `1e24623 <https://github.com/Juris-M/citeproc-js/commit/1e24623a327a82fb3f3b6bf4f7db75c438ef1e5d>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Return empty without error for cs:text term missing from local and style
 Protect against missing categories in util_transform.js
 
 :commit:
-    `d64ba0e <https://github.com/Juris-M/zotero/commit/d64ba0e72a8c457883a2ee3d0831741fccdae23a>`_
+    `d64ba0e <https://github.com/Juris-M/citeproc-js/commit/d64ba0e72a8c457883a2ee3d0831741fccdae23a>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Protect against missing categories in util_transform.js
 Bump version, update CHANGES, bundle as 1.1.144
 
 :commit:
-    `e9d3f5a <https://github.com/Juris-M/zotero/commit/e9d3f5a5cd78c2e2d706d98b19f169a98de8ce2d>`_
+    `e9d3f5a <https://github.com/Juris-M/citeproc-js/commit/e9d3f5a5cd78c2e2d706d98b19f169a98de8ce2d>`_
 :author:
     fbennett
 :date:

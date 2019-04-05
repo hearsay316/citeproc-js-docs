@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `b77f0be <https://github.com/Juris-M/zotero/commit/b77f0be227c7f8e87fe9bcc14cab4b8ef10b18b9>`_
+    `b77f0be <https://github.com/Juris-M/citeproc-js/commit/b77f0be227c7f8e87fe9bcc14cab4b8ef10b18b9>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 New name for composite locators in modular code
 
 :commit:
-    `de4e136 <https://github.com/Juris-M/zotero/commit/de4e136784bc1853af06bfd34d2fb50899007f0c>`_
+    `de4e136 <https://github.com/Juris-M/citeproc-js/commit/de4e136784bc1853af06bfd34d2fb50899007f0c>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ New name for composite locators in modular code
 Added tag 1.1.12 for changeset 6f68f46ad6aa
 
 :commit:
-    `61cb14b <https://github.com/Juris-M/zotero/commit/61cb14b8395fba840ef57fd0164cf9246585a3f7>`_
+    `61cb14b <https://github.com/Juris-M/citeproc-js/commit/61cb14b8395fba840ef57fd0164cf9246585a3f7>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Added tag 1.1.12 for changeset 6f68f46ad6aa
 Bump version, update CHANGES, bundle
 
 :commit:
-    `a4271dc <https://github.com/Juris-M/zotero/commit/a4271dc0ea8b7acbb0f339677bac4f1cc0ebc8bc>`_
+    `a4271dc <https://github.com/Juris-M/citeproc-js/commit/a4271dc0ea8b7acbb0f339677bac4f1cc0ebc8bc>`_
 :author:
     Frank Bennett
 :date:

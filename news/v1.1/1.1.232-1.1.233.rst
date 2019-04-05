@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.233
 
 :commit:
-    `84a82b9 <https://github.com/Juris-M/zotero/commit/84a82b9a00cf07c5221a42993dcde8e39a26a04c>`_
+    `84a82b9 <https://github.com/Juris-M/citeproc-js/commit/84a82b9a00cf07c5221a42993dcde8e39a26a04c>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.233
 Properly restore short-form if the search for a variant on full-form field has failed
 
 :commit:
-    `0e20328 <https://github.com/Juris-M/zotero/commit/0e20328e0b15168ffb5db928b4d898b3314b9780>`_
+    `0e20328 <https://github.com/Juris-M/citeproc-js/commit/0e20328e0b15168ffb5db928b4d898b3314b9780>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Properly restore short-form if the search for a variant on full-form field has f
 A more thorough test of short-form fallback
 
 :commit:
-    `be0e6ff <https://github.com/Juris-M/zotero/commit/be0e6ffc78c374a4e948aaa232e3ceb5e9c0f72c>`_
+    `be0e6ff <https://github.com/Juris-M/citeproc-js/commit/be0e6ffc78c374a4e948aaa232e3ceb5e9c0f72c>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ A more thorough test of short-form fallback
 Bump version, update CHANGES, bundle as 1.1.232
 
 :commit:
-    `928936b <https://github.com/Juris-M/zotero/commit/928936b23eb4330632620a2b51e17b22aa4fd6f1>`_
+    `928936b <https://github.com/Juris-M/citeproc-js/commit/928936b23eb4330632620a2b51e17b22aa4fd6f1>`_
 :author:
     Frank Bennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.225
 
 :commit:
-    `658036a <https://github.com/Juris-M/zotero/commit/658036a401935b1227df39f9e86312c9b6c1d4a3>`_
+    `658036a <https://github.com/Juris-M/citeproc-js/commit/658036a401935b1227df39f9e86312c9b6c1d4a3>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.225
 Fix regexp for chopping star comments
 
 :commit:
-    `19a6276 <https://github.com/Juris-M/zotero/commit/19a627664c5ef56386578edf336d1dda0fb9873e>`_
+    `19a6276 <https://github.com/Juris-M/citeproc-js/commit/19a627664c5ef56386578edf336d1dda0fb9873e>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Fix regexp for chopping star comments
 Reverse AO/SA suppression on citation-number
 
 :commit:
-    `b2a41d2 <https://github.com/Juris-M/zotero/commit/b2a41d239e9ba05b77fffdc2464c4485f137ee59>`_
+    `b2a41d2 <https://github.com/Juris-M/citeproc-js/commit/b2a41d239e9ba05b77fffdc2464c4485f137ee59>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Reverse AO/SA suppression on citation-number
 Adjustments to AO/SA tests
 
 :commit:
-    `59a73f9 <https://github.com/Juris-M/zotero/commit/59a73f941be4be611599e15b4ad4a96e83456d2d>`_
+    `59a73f9 <https://github.com/Juris-M/citeproc-js/commit/59a73f941be4be611599e15b4ad4a96e83456d2d>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Adjustments to AO/SA tests
 Merge branch 'master' into intext-element-dev
 
 :commit:
-    `d29dbcd <https://github.com/Juris-M/zotero/commit/d29dbcd69ff3dad9014c35c97b251487967b6faa>`_
+    `d29dbcd <https://github.com/Juris-M/citeproc-js/commit/d29dbcd69ff3dad9014c35c97b251487967b6faa>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Merge branch 'master' into intext-element-dev
 Avoid error in runtests.sh triggered by processor code syntax error
 
 :commit:
-    `74015f4 <https://github.com/Juris-M/zotero/commit/74015f473839209c30d4ba936a111d570f395816>`_
+    `74015f4 <https://github.com/Juris-M/citeproc-js/commit/74015f473839209c30d4ba936a111d570f395816>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ Avoid error in runtests.sh triggered by processor code syntax error
 Tests and test adjustments for author-only/suppress-author
 
 :commit:
-    `bdd7173 <https://github.com/Juris-M/zotero/commit/bdd7173964edb81cd43be487911775497a77a4c8>`_
+    `bdd7173 <https://github.com/Juris-M/citeproc-js/commit/bdd7173964edb81cd43be487911775497a77a4c8>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ Tests and test adjustments for author-only/suppress-author
 Refinements to author-only/suppress-author
 
 :commit:
-    `f715c5f <https://github.com/Juris-M/zotero/commit/f715c5fd913be5387eeb7551767d40726460fe50>`_
+    `f715c5f <https://github.com/Juris-M/citeproc-js/commit/f715c5fd913be5387eeb7551767d40726460fe50>`_
 :author:
     Frank Bennett
 :date:
@@ -106,7 +106,7 @@ Refinements to author-only/suppress-author
 Better console logging for runtests.js
 
 :commit:
-    `630a773 <https://github.com/Juris-M/zotero/commit/630a7731cb58f832e7df7ce7fa7f4ec225deceb3>`_
+    `630a773 <https://github.com/Juris-M/citeproc-js/commit/630a7731cb58f832e7df7ce7fa7f4ec225deceb3>`_
 :author:
     Frank Bennett
 :date:
@@ -118,7 +118,7 @@ Better console logging for runtests.js
 Amend test fixture to require output
 
 :commit:
-    `57ed04e <https://github.com/Juris-M/zotero/commit/57ed04e6bc7c031e1176fc135d086a3af387905d>`_
+    `57ed04e <https://github.com/Juris-M/citeproc-js/commit/57ed04e6bc7c031e1176fc135d086a3af387905d>`_
 :author:
     Frank Bennett
 :date:
@@ -130,7 +130,7 @@ Amend test fixture to require output
 Correction to expected fixture result
 
 :commit:
-    `02233f1 <https://github.com/Juris-M/zotero/commit/02233f1d60e98198e1c8848966cff6982ed3e190>`_
+    `02233f1 <https://github.com/Juris-M/citeproc-js/commit/02233f1d60e98198e1c8848966cff6982ed3e190>`_
 :author:
     Frank Bennett
 :date:
@@ -142,7 +142,7 @@ Correction to expected fixture result
 Use a rough-guess probably_rendered_something flag to control author suppression
 
 :commit:
-    `3655069 <https://github.com/Juris-M/zotero/commit/3655069c2c55a13c52fb6421051566715ba478f0>`_
+    `3655069 <https://github.com/Juris-M/citeproc-js/commit/3655069c2c55a13c52fb6421051566715ba478f0>`_
 :author:
     Frank Bennett
 :date:
@@ -154,7 +154,7 @@ Use a rough-guess probably_rendered_something flag to control author suppression
 Update std tests
 
 :commit:
-    `8dfcfbe <https://github.com/Juris-M/zotero/commit/8dfcfbe0880f806bd2fa53283cb0f167182c1963>`_
+    `8dfcfbe <https://github.com/Juris-M/citeproc-js/commit/8dfcfbe0880f806bd2fa53283cb0f167182c1963>`_
 :author:
     Frank Bennett
 :date:
@@ -166,7 +166,7 @@ Update std tests
 Stick a working log function onto processor for testing
 
 :commit:
-    `15e8917 <https://github.com/Juris-M/zotero/commit/15e8917633ddce314c38b42e2461d11a298a5436>`_
+    `15e8917 <https://github.com/Juris-M/citeproc-js/commit/15e8917633ddce314c38b42e2461d11a298a5436>`_
 :author:
     Frank Bennett
 :date:
@@ -178,7 +178,7 @@ Stick a working log function onto processor for testing
 Move suppress-author fixtures from std to local
 
 :commit:
-    `887dbb3 <https://github.com/Juris-M/zotero/commit/887dbb31b0255cdfc0f6630124beb4ca6689d097>`_
+    `887dbb3 <https://github.com/Juris-M/citeproc-js/commit/887dbb31b0255cdfc0f6630124beb4ca6689d097>`_
 :author:
     Frank Bennett
 :date:
@@ -190,7 +190,7 @@ Move suppress-author fixtures from std to local
 Update std tests
 
 :commit:
-    `8299aae <https://github.com/Juris-M/zotero/commit/8299aae9c6410e5ae03edf7a72556ca81ec78a69>`_
+    `8299aae <https://github.com/Juris-M/citeproc-js/commit/8299aae9c6410e5ae03edf7a72556ca81ec78a69>`_
 :author:
     Frank Bennett
 :date:
@@ -202,7 +202,7 @@ Update std tests
 Bump version, update CHANGES, bundle as 1.1.224
 
 :commit:
-    `1b411d7 <https://github.com/Juris-M/zotero/commit/1b411d799bae6a84d67a0bcac0fbabcee249b87a>`_
+    `1b411d7 <https://github.com/Juris-M/citeproc-js/commit/1b411d799bae6a84d67a0bcac0fbabcee249b87a>`_
 :author:
     Frank Bennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `f331798 <https://github.com/Juris-M/zotero/commit/f331798ae32015319ffeb3eef1508a62dd41b511>`_
+    `f331798 <https://github.com/Juris-M/citeproc-js/commit/f331798ae32015319ffeb3eef1508a62dd41b511>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Force authority and committee to obj.literal when called from cs:name
 
 :commit:
-    `88a3cc0 <https://github.com/Juris-M/zotero/commit/88a3cc02a350d25189a0448e38f68f3af0605dac>`_
+    `88a3cc0 <https://github.com/Juris-M/citeproc-js/commit/88a3cc02a350d25189a0448e38f68f3af0605dac>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Force authority and committee to obj.literal when called from cs:name
 Added tag 1.1.33 for changeset 89086de649fd
 
 :commit:
-    `d41b4aa <https://github.com/Juris-M/zotero/commit/d41b4aa1c5c31d48c18d24ffc4baf51d34fc073f>`_
+    `d41b4aa <https://github.com/Juris-M/citeproc-js/commit/d41b4aa1c5c31d48c18d24ffc4baf51d34fc073f>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Added tag 1.1.33 for changeset 89086de649fd
 Bump version, update CHANGES, bundle
 
 :commit:
-    `4fe672e <https://github.com/Juris-M/zotero/commit/4fe672efa0a0511d890f36c42100c6f95d97781b>`_
+    `4fe672e <https://github.com/Juris-M/citeproc-js/commit/4fe672efa0a0511d890f36c42100c6f95d97781b>`_
 :author:
     Frank Bennett
 :date:

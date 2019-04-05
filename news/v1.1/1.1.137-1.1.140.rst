@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.140
 
 :commit:
-    `101c799 <https://github.com/Juris-M/zotero/commit/101c7991b102f9bf2340efd7826b724a99cdf414>`_
+    `101c799 <https://github.com/Juris-M/citeproc-js/commit/101c7991b102f9bf2340efd7826b724a99cdf414>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.140
 Update tests
 
 :commit:
-    `be60f08 <https://github.com/Juris-M/zotero/commit/be60f0846350ffda359d826ae1fd478b80dc1a13>`_
+    `be60f08 <https://github.com/Juris-M/citeproc-js/commit/be60f0846350ffda359d826ae1fd478b80dc1a13>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Update tests
 Fix subsequent-author-substitute for single-field names
 
 :commit:
-    `d82aa8c <https://github.com/Juris-M/zotero/commit/d82aa8cd3cc41a987062ede7753bb8c0b8ea6bdb>`_
+    `d82aa8c <https://github.com/Juris-M/citeproc-js/commit/d82aa8cd3cc41a987062ede7753bb8c0b8ea6bdb>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Fix subsequent-author-substitute for single-field names
 Fix result strings
 
 :commit:
-    `eb4ee13 <https://github.com/Juris-M/zotero/commit/eb4ee133053a0c58c093c79bc876bc34a1cc218b>`_
+    `eb4ee13 <https://github.com/Juris-M/citeproc-js/commit/eb4ee133053a0c58c093c79bc876bc34a1cc218b>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Fix result strings
 Update tests
 
 :commit:
-    `429b546 <https://github.com/Juris-M/zotero/commit/429b546dfc42b7b4ee83b9e9a9996f2447415b22>`_
+    `429b546 <https://github.com/Juris-M/citeproc-js/commit/429b546dfc42b7b4ee83b9e9a9996f2447415b22>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Update tests
 Add single-field data to tests
 
 :commit:
-    `73e36d4 <https://github.com/Juris-M/zotero/commit/73e36d43508aa49ea4cf94a4f717c14c066975fa>`_
+    `73e36d4 <https://github.com/Juris-M/citeproc-js/commit/73e36d43508aa49ea4cf94a4f717c14c066975fa>`_
 :author:
     fbennett
 :date:
@@ -82,7 +82,7 @@ Add single-field data to tests
 Update docs
 
 :commit:
-    `6504ce4 <https://github.com/Juris-M/zotero/commit/6504ce4886ce63dea67f4e1b44b6bb9ca6426937>`_
+    `6504ce4 <https://github.com/Juris-M/citeproc-js/commit/6504ce4886ce63dea67f4e1b44b6bb9ca6426937>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ Update docs
 Bump version, update CHANGES, bundle as 1.1.139
 
 :commit:
-    `6459343 <https://github.com/Juris-M/zotero/commit/64593433421d3b4a6e23631d5d6e068f6fb1e899>`_
+    `6459343 <https://github.com/Juris-M/citeproc-js/commit/64593433421d3b4a6e23631d5d6e068f6fb1e899>`_
 :author:
     fbennett
 :date:
@@ -106,7 +106,7 @@ Bump version, update CHANGES, bundle as 1.1.139
 Set a comment on some superfluous code
 
 :commit:
-    `9398000 <https://github.com/Juris-M/zotero/commit/9398000088ded0793805cd72a6c99038b39f32d0>`_
+    `9398000 <https://github.com/Juris-M/citeproc-js/commit/9398000088ded0793805cd72a6c99038b39f32d0>`_
 :author:
     fbennett
 :date:
@@ -118,7 +118,7 @@ Set a comment on some superfluous code
 Check in some alternative data and styles for the demo
 
 :commit:
-    `f1ae653 <https://github.com/Juris-M/zotero/commit/f1ae653af8b9c74b82813a111a669deffe6c5a49>`_
+    `f1ae653 <https://github.com/Juris-M/citeproc-js/commit/f1ae653af8b9c74b82813a111a669deffe6c5a49>`_
 :author:
     fbennett
 :date:
@@ -130,7 +130,7 @@ Check in some alternative data and styles for the demo
 Fix bib name disambiguation failure in some (most?) environments
 
 :commit:
-    `ffa12aa <https://github.com/Juris-M/zotero/commit/ffa12aa37f18a885401223e3d8cc663d8351a749>`_
+    `ffa12aa <https://github.com/Juris-M/citeproc-js/commit/ffa12aa37f18a885401223e3d8cc663d8351a749>`_
 :author:
     fbennett
 :date:
@@ -142,7 +142,7 @@ Fix bib name disambiguation failure in some (most?) environments
 Fix demo, use raw input.
 
 :commit:
-    `7f40696 <https://github.com/Juris-M/zotero/commit/7f40696f0190df420b659122719231679f0957ac>`_
+    `7f40696 <https://github.com/Juris-M/citeproc-js/commit/7f40696f0190df420b659122719231679f0957ac>`_
 :author:
     fbennett
 :date:
@@ -154,7 +154,7 @@ Fix demo, use raw input.
 Bump version, update CHANGES, bundle as 1.1.139
 
 :commit:
-    `123d1e3 <https://github.com/Juris-M/zotero/commit/123d1e3e9e936b2358516e8e14abbdc9ebe82cb4>`_
+    `123d1e3 <https://github.com/Juris-M/citeproc-js/commit/123d1e3e9e936b2358516e8e14abbdc9ebe82cb4>`_
 :author:
     fbennett
 :date:
@@ -166,7 +166,7 @@ Bump version, update CHANGES, bundle as 1.1.139
 Append non-numeric character to all generated citationIDs
 
 :commit:
-    `e5c6ae2 <https://github.com/Juris-M/zotero/commit/e5c6ae2d7c764516b48770c67298ecd2bfcbf66f>`_
+    `e5c6ae2 <https://github.com/Juris-M/citeproc-js/commit/e5c6ae2d7c764516b48770c67298ecd2bfcbf66f>`_
 :author:
     fbennett
 :date:
@@ -178,7 +178,7 @@ Append non-numeric character to all generated citationIDs
 Fix hyphenated-strings bug in numeric variables
 
 :commit:
-    `51bb1a3 <https://github.com/Juris-M/zotero/commit/51bb1a3856ddbf601e8fbedb6cb85dac7d3533d9>`_
+    `51bb1a3 <https://github.com/Juris-M/citeproc-js/commit/51bb1a3856ddbf601e8fbedb6cb85dac7d3533d9>`_
 :author:
     fbennett
 :date:
@@ -190,7 +190,7 @@ Fix hyphenated-strings bug in numeric variables
 Result string for bugreport fixture
 
 :commit:
-    `de1d23b <https://github.com/Juris-M/zotero/commit/de1d23b71514be2aa8a870fb2b787cfc1a9cb419>`_
+    `de1d23b <https://github.com/Juris-M/citeproc-js/commit/de1d23b71514be2aa8a870fb2b787cfc1a9cb419>`_
 :author:
     fbennett
 :date:
@@ -202,7 +202,7 @@ Result string for bugreport fixture
 Test of numeric hyphenated-strings bug
 
 :commit:
-    `16029c6 <https://github.com/Juris-M/zotero/commit/16029c6d3bab3e3f89d8dea09b77d65039cb2a35>`_
+    `16029c6 <https://github.com/Juris-M/citeproc-js/commit/16029c6d3bab3e3f89d8dea09b77d65039cb2a35>`_
 :author:
     fbennett
 :date:
@@ -214,7 +214,7 @@ Test of numeric hyphenated-strings bug
 Add a further test of disambiguation
 
 :commit:
-    `56860a0 <https://github.com/Juris-M/zotero/commit/56860a097b4febb625a4f8317213b91902336f19>`_
+    `56860a0 <https://github.com/Juris-M/citeproc-js/commit/56860a097b4febb625a4f8317213b91902336f19>`_
 :author:
     fbennett
 :date:
@@ -226,7 +226,7 @@ Add a further test of disambiguation
 Bump version, update CHANGES, bundle as 1.1.138
 
 :commit:
-    `6706c25 <https://github.com/Juris-M/zotero/commit/6706c2543dbee925eefafebc557b27552f90f55e>`_
+    `6706c25 <https://github.com/Juris-M/citeproc-js/commit/6706c2543dbee925eefafebc557b27552f90f55e>`_
 :author:
     fbennett
 :date:
@@ -238,7 +238,7 @@ Bump version, update CHANGES, bundle as 1.1.138
 Update docs
 
 :commit:
-    `1d0802c <https://github.com/Juris-M/zotero/commit/1d0802c913061c5a8f3b1d2b865f3befac46dfd8>`_
+    `1d0802c <https://github.com/Juris-M/citeproc-js/commit/1d0802c913061c5a8f3b1d2b865f3befac46dfd8>`_
 :author:
     fbennett
 :date:
@@ -250,7 +250,7 @@ Update docs
 Update std tests
 
 :commit:
-    `7c180a9 <https://github.com/Juris-M/zotero/commit/7c180a9e1407840c47c3034484d726f6eeeb5176>`_
+    `7c180a9 <https://github.com/Juris-M/citeproc-js/commit/7c180a9e1407840c47c3034484d726f6eeeb5176>`_
 :author:
     fbennett
 :date:
@@ -262,7 +262,7 @@ Update std tests
 Adjust tests to retention of leading zeros on numeric variables
 
 :commit:
-    `8aac3ed <https://github.com/Juris-M/zotero/commit/8aac3ed0c8ae87656517fed54427165fdd97a80a>`_
+    `8aac3ed <https://github.com/Juris-M/citeproc-js/commit/8aac3ed0c8ae87656517fed54427165fdd97a80a>`_
 :author:
     fbennett
 :date:
@@ -274,7 +274,7 @@ Adjust tests to retention of leading zeros on numeric variables
 Merge branch 'master' of github.com:Juris-M/citeproc-js
 
 :commit:
-    `c2aef6a <https://github.com/Juris-M/zotero/commit/c2aef6a3903a20fa2babcb34c387d18f79687579>`_
+    `c2aef6a <https://github.com/Juris-M/citeproc-js/commit/c2aef6a3903a20fa2babcb34c387d18f79687579>`_
 :author:
     fbennett
 :date:
@@ -286,7 +286,7 @@ Merge branch 'master' of github.com:Juris-M/citeproc-js
 Bump version, update CHANGES, bundle as 1.1.137
 
 :commit:
-    `2d1bb8d <https://github.com/Juris-M/zotero/commit/2d1bb8dddf152f7c3e034dda3df3ec7e426939a3>`_
+    `2d1bb8d <https://github.com/Juris-M/citeproc-js/commit/2d1bb8dddf152f7c3e034dda3df3ec7e426939a3>`_
 :author:
     fbennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `7497222 <https://github.com/Juris-M/zotero/commit/74972227b9d3c4785382b5c570e5feb95cee91c4>`_
+    `7497222 <https://github.com/Juris-M/citeproc-js/commit/74972227b9d3c4785382b5c570e5feb95cee91c4>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Allow only one label on a variable. Code still probably not robust to pre- and post- label placement on the same variable.
 
 :commit:
-    `ec2ed37 <https://github.com/Juris-M/zotero/commit/ec2ed373d166c5c310dc896d6bd0300258ad1d29>`_
+    `ec2ed37 <https://github.com/Juris-M/citeproc-js/commit/ec2ed373d166c5c310dc896d6bd0300258ad1d29>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Allow only one label on a variable. Code still probably not robust to pre- and p
 Remove treaty from modular types, add report
 
 :commit:
-    `96aa749 <https://github.com/Juris-M/zotero/commit/96aa7491da36c9fd855bfa730eab800dc5cb626d>`_
+    `96aa749 <https://github.com/Juris-M/citeproc-js/commit/96aa7491da36c9fd855bfa730eab800dc5cb626d>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Remove treaty from modular types, add report
 Added tag 1.1.8 for changeset 59fc8a74ee8d
 
 :commit:
-    `b8cab56 <https://github.com/Juris-M/zotero/commit/b8cab56362fb81b890ae2572d54ba9beb87b89be>`_
+    `b8cab56 <https://github.com/Juris-M/citeproc-js/commit/b8cab56362fb81b890ae2572d54ba9beb87b89be>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Added tag 1.1.8 for changeset 59fc8a74ee8d
 Bump version, update CHANGES, bundle
 
 :commit:
-    `f946177 <https://github.com/Juris-M/zotero/commit/f9461776ac2ba67ab0f96f528aa89e98b7877c02>`_
+    `f946177 <https://github.com/Juris-M/citeproc-js/commit/f9461776ac2ba67ab0f96f528aa89e98b7877c02>`_
 :author:
     Frank Bennett
 :date:

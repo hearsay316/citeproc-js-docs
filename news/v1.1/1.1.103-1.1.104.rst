@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.104
 
 :commit:
-    `39fdbf2 <https://github.com/Juris-M/zotero/commit/39fdbf29e80fe6059cc34f3a5ef61c35aee91085>`_
+    `39fdbf2 <https://github.com/Juris-M/citeproc-js/commit/39fdbf29e80fe6059cc34f3a5ef61c35aee91085>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.104
 Illustrative test of multi-layout style
 
 :commit:
-    `4b9e696 <https://github.com/Juris-M/zotero/commit/4b9e696c757d557fcea480748c948d0380544724>`_
+    `4b9e696 <https://github.com/Juris-M/citeproc-js/commit/4b9e696c757d557fcea480748c948d0380544724>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Illustrative test of multi-layout style
 Simple test of incremental ambiguous additions with APA style
 
 :commit:
-    `77f265f <https://github.com/Juris-M/zotero/commit/77f265fe121333b8a184d2988efdcc5536b350c0>`_
+    `77f265f <https://github.com/Juris-M/citeproc-js/commit/77f265fe121333b8a184d2988efdcc5536b350c0>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Simple test of incremental ambiguous additions with APA style
 Properly fix previous disambiguation issue
 
 :commit:
-    `2390c06 <https://github.com/Juris-M/zotero/commit/2390c066230143751ef987b46a066bead0acf778>`_
+    `2390c06 <https://github.com/Juris-M/citeproc-js/commit/2390c066230143751ef987b46a066bead0acf778>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Properly fix previous disambiguation issue
 Update std tests
 
 :commit:
-    `6617079 <https://github.com/Juris-M/zotero/commit/6617079108dc720f96a36fbd4ea6df5ff009444c>`_
+    `6617079 <https://github.com/Juris-M/citeproc-js/commit/6617079108dc720f96a36fbd4ea6df5ff009444c>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Update std tests
 Reverse 8669b9308d9341c2c6600064b8c59d22c7cfaf7b
 
 :commit:
-    `543cbde <https://github.com/Juris-M/zotero/commit/543cbde2b478632f59b48fc75883e48fff0d693b>`_
+    `543cbde <https://github.com/Juris-M/citeproc-js/commit/543cbde2b478632f59b48fc75883e48fff0d693b>`_
 :author:
     fbennett
 :date:
@@ -82,7 +82,7 @@ Reverse 8669b9308d9341c2c6600064b8c59d22c7cfaf7b
 Handle locator date and extra better
 
 :commit:
-    `98075eb <https://github.com/Juris-M/zotero/commit/98075ebd3648aca948d69b4eacad2d12eb1b20f6>`_
+    `98075eb <https://github.com/Juris-M/citeproc-js/commit/98075ebd3648aca948d69b4eacad2d12eb1b20f6>`_
 :author:
     fbennett
 :date:
@@ -94,7 +94,7 @@ Handle locator date and extra better
 Split institutions on semi-colon
 
 :commit:
-    `8c4fb1e <https://github.com/Juris-M/zotero/commit/8c4fb1e5ed000056e26af4747aac0311481751dc>`_
+    `8c4fb1e <https://github.com/Juris-M/citeproc-js/commit/8c4fb1e5ed000056e26af4747aac0311481751dc>`_
 :author:
     fbennett
 :date:
@@ -106,7 +106,7 @@ Split institutions on semi-colon
 Fix markup
 
 :commit:
-    `dbeb4df <https://github.com/Juris-M/zotero/commit/dbeb4df7b87fcd61a815b2299b0a52089c587de3>`_
+    `dbeb4df <https://github.com/Juris-M/citeproc-js/commit/dbeb4df7b87fcd61a815b2299b0a52089c587de3>`_
 :author:
     fbennett
 :date:

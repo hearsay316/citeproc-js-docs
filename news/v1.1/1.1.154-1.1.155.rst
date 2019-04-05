@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.155
 
 :commit:
-    `75b155a <https://github.com/Juris-M/zotero/commit/75b155a1d2d9e5d12237cda5224da2b235d0e23f>`_
+    `75b155a <https://github.com/Juris-M/citeproc-js/commit/75b155a1d2d9e5d12237cda5224da2b235d0e23f>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.155
 Remove authority from category map
 
 :commit:
-    `484d100 <https://github.com/Juris-M/zotero/commit/484d10087552ddf6e5335dfe12a4d025c101b865>`_
+    `484d100 <https://github.com/Juris-M/citeproc-js/commit/484d10087552ddf6e5335dfe12a4d025c101b865>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Remove authority from category map
 Force string authority to name shape
 
 :commit:
-    `0b21539 <https://github.com/Juris-M/zotero/commit/0b21539d3d769cfd944b4d6df79b8bd256ea8ee9>`_
+    `0b21539 <https://github.com/Juris-M/citeproc-js/commit/0b21539d3d769cfd944b4d6df79b8bd256ea8ee9>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Force string authority to name shape
 Bump version, update CHANGES, bundle as 1.1.154
 
 :commit:
-    `65a2a3b <https://github.com/Juris-M/zotero/commit/65a2a3bfb5e96a307a8583a2191261c8f4ac1170>`_
+    `65a2a3b <https://github.com/Juris-M/citeproc-js/commit/65a2a3bfb5e96a307a8583a2191261c8f4ac1170>`_
 :author:
     fbennett
 :date:

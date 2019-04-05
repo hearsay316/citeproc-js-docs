@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.157
 
 :commit:
-    `140370a <https://github.com/Juris-M/zotero/commit/140370afab3a3ff1a01f3d6860b72b1a70fee0b3>`_
+    `140370a <https://github.com/Juris-M/citeproc-js/commit/140370afab3a3ff1a01f3d6860b72b1a70fee0b3>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.157
 Essentially disable special handling of citation-number
 
 :commit:
-    `268aaf0 <https://github.com/Juris-M/zotero/commit/268aaf00daf804f8ce4f86c5c01be6c4b4b511c0>`_
+    `268aaf0 <https://github.com/Juris-M/citeproc-js/commit/268aaf00daf804f8ce4f86c5c01be6c4b4b511c0>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Essentially disable special handling of citation-number
 Update std tests
 
 :commit:
-    `9c838cc <https://github.com/Juris-M/zotero/commit/9c838cce3ebdbac2b0f0d44e82791c837cc3fb1e>`_
+    `9c838cc <https://github.com/Juris-M/citeproc-js/commit/9c838cce3ebdbac2b0f0d44e82791c837cc3fb1e>`_
 :author:
     fbennett
 :date:

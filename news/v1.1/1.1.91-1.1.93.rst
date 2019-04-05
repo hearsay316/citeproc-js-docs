@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.93
 
 :commit:
-    `bb7bf2f <https://github.com/Juris-M/zotero/commit/bb7bf2f69b47a49e0d42573092bbc120366b1ce2>`_
+    `bb7bf2f <https://github.com/Juris-M/citeproc-js/commit/bb7bf2f69b47a49e0d42573092bbc120366b1ce2>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.93
 Expose parseNoteFieldHacks() method.
 
 :commit:
-    `bc7e1da <https://github.com/Juris-M/zotero/commit/bc7e1da26bb30daeeb1798a35a09003bebd75909>`_
+    `bc7e1da <https://github.com/Juris-M/citeproc-js/commit/bc7e1da26bb30daeeb1798a35a09003bebd75909>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Expose parseNoteFieldHacks() method.
 Protect against possible crash condition
 
 :commit:
-    `2ac462d <https://github.com/Juris-M/zotero/commit/2ac462d2c0a65ea25953a29cf65209855f60217c>`_
+    `2ac462d <https://github.com/Juris-M/citeproc-js/commit/2ac462d2c0a65ea25953a29cf65209855f60217c>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Protect against possible crash condition
 Bump version, update CHANGES, bundle as 1.1.92
 
 :commit:
-    `9449839 <https://github.com/Juris-M/zotero/commit/944983907d02336c3c812e121b0023286f98d1f2>`_
+    `9449839 <https://github.com/Juris-M/citeproc-js/commit/944983907d02336c3c812e121b0023286f98d1f2>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Bump version, update CHANGES, bundle as 1.1.92
 Add pretitle macros. Thank you OSCOLA.
 
 :commit:
-    `4da1920 <https://github.com/Juris-M/zotero/commit/4da1920eeb94b571bf5274fbd84cb095c64e7083>`_
+    `4da1920 <https://github.com/Juris-M/citeproc-js/commit/4da1920eeb94b571bf5274fbd84cb095c64e7083>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Add pretitle macros. Thank you OSCOLA.
 Bump version, update CHANGES, bundle as 1.1.91
 
 :commit:
-    `d0cac40 <https://github.com/Juris-M/zotero/commit/d0cac4037f6bb89cd555c4c9636aab8438a7bb92>`_
+    `d0cac40 <https://github.com/Juris-M/citeproc-js/commit/d0cac4037f6bb89cd555c4c9636aab8438a7bb92>`_
 :author:
     fbennett
 :date:

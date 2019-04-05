@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.165
 
 :commit:
-    `8689ba6 <https://github.com/Juris-M/zotero/commit/8689ba67d7912437f8229923c54c5752bc7e742b>`_
+    `8689ba6 <https://github.com/Juris-M/citeproc-js/commit/8689ba67d7912437f8229923c54c5752bc7e742b>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.165
 Revert ffa12aa3, which broke bibliography name formatting instead of "fixing" it.
 
 :commit:
-    `96f5c6d <https://github.com/Juris-M/zotero/commit/96f5c6dc9daa8ee681d3c8d0ee3531095858362e>`_
+    `96f5c6d <https://github.com/Juris-M/citeproc-js/commit/96f5c6dc9daa8ee681d3c8d0ee3531095858362e>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Revert ffa12aa3, which broke bibliography name formatting instead of "fixing" it
 Update std tests
 
 :commit:
-    `9568cc8 <https://github.com/Juris-M/zotero/commit/9568cc8d7758114a18fa29b5f9563649ff941afc>`_
+    `9568cc8 <https://github.com/Juris-M/citeproc-js/commit/9568cc8d7758114a18fa29b5f9563649ff941afc>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Update std tests
 Bump version, update CHANGES, bundle as 1.1.164
 
 :commit:
-    `618661d <https://github.com/Juris-M/zotero/commit/618661d83e70b3340ab1ba1304d637d2f0270e50>`_
+    `618661d <https://github.com/Juris-M/citeproc-js/commit/618661d83e70b3340ab1ba1304d637d2f0270e50>`_
 :author:
     fbennett
 :date:

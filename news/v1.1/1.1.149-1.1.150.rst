@@ -10,7 +10,7 @@
 Add test of negative raw date
 
 :commit:
-    `3db36d4 <https://github.com/Juris-M/zotero/commit/3db36d46d3dbc6742790706a603db2e8a4ded127>`_
+    `3db36d4 <https://github.com/Juris-M/citeproc-js/commit/3db36d46d3dbc6742790706a603db2e8a4ded127>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Add test of negative raw date
 Update std tests
 
 :commit:
-    `35a16e4 <https://github.com/Juris-M/zotero/commit/35a16e4a96d450d936022dd63d773194ca980a70>`_
+    `35a16e4 <https://github.com/Juris-M/citeproc-js/commit/35a16e4a96d450d936022dd63d773194ca980a70>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Update std tests
 Bump version, update CHANGES, bundle as 1.1.150
 
 :commit:
-    `ca3c83c <https://github.com/Juris-M/zotero/commit/ca3c83c82bca78289280b21521e2794194d0d8f5>`_
+    `ca3c83c <https://github.com/Juris-M/citeproc-js/commit/ca3c83c82bca78289280b21521e2794194d0d8f5>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Bump version, update CHANGES, bundle as 1.1.150
 Amend test fixture
 
 :commit:
-    `a124e5e <https://github.com/Juris-M/zotero/commit/a124e5e32e17d3a31e6b57acf1941b3e875ef6b9>`_
+    `a124e5e <https://github.com/Juris-M/citeproc-js/commit/a124e5e32e17d3a31e6b57acf1941b3e875ef6b9>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Amend test fixture
 Recognize small and negative years in date parser (but for single year only)
 
 :commit:
-    `62dfec9 <https://github.com/Juris-M/zotero/commit/62dfec94a261aa94bef3755c0ffd432758f21f8f>`_
+    `62dfec9 <https://github.com/Juris-M/citeproc-js/commit/62dfec94a261aa94bef3755c0ffd432758f21f8f>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Recognize small and negative years in date parser (but for single year only)
 Fix spelling error in code
 
 :commit:
-    `e00594e <https://github.com/Juris-M/zotero/commit/e00594ed57a75d934b548a6e83ec5bd1750568c6>`_
+    `e00594e <https://github.com/Juris-M/citeproc-js/commit/e00594ed57a75d934b548a6e83ec5bd1750568c6>`_
 :author:
     fbennett
 :date:
@@ -82,7 +82,7 @@ Fix spelling error in code
 Set true (boolean) not 2 (int) as hangingindent param
 
 :commit:
-    `5cdc4b3 <https://github.com/Juris-M/zotero/commit/5cdc4b36b8019454cd1effc18b75c205043d8633>`_
+    `5cdc4b3 <https://github.com/Juris-M/citeproc-js/commit/5cdc4b36b8019454cd1effc18b75c205043d8633>`_
 :author:
     fbennett
 :date:
@@ -94,7 +94,7 @@ Set true (boolean) not 2 (int) as hangingindent param
 Correct documentation of appendCitationCluster()
 
 :commit:
-    `83e65f3 <https://github.com/Juris-M/zotero/commit/83e65f301795ac6b63e33855dca4d2b82267e90b>`_
+    `83e65f3 <https://github.com/Juris-M/citeproc-js/commit/83e65f301795ac6b63e33855dca4d2b82267e90b>`_
 :author:
     fbennett
 :date:
@@ -106,7 +106,7 @@ Correct documentation of appendCitationCluster()
 Bump version, update CHANGES, bundle as 1.1.149
 
 :commit:
-    `2720269 <https://github.com/Juris-M/zotero/commit/2720269fdd5ebae24f47856d4ec5f19a938d9788>`_
+    `2720269 <https://github.com/Juris-M/citeproc-js/commit/2720269fdd5ebae24f47856d4ec5f19a938d9788>`_
 :author:
     fbennett
 :date:

@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.202
 
 :commit:
-    `ad2cf14 <https://github.com/Juris-M/zotero/commit/ad2cf14b015dfe6c6dbb6feac89e7f891dcf327c>`_
+    `ad2cf14 <https://github.com/Juris-M/citeproc-js/commit/ad2cf14b015dfe6c6dbb6feac89e7f891dcf327c>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.202
 Convert codes to names even when getAbbreviation is unavailable
 
 :commit:
-    `e668f24 <https://github.com/Juris-M/zotero/commit/e668f244f48bb23e9d1595e7291283270038de62>`_
+    `e668f24 <https://github.com/Juris-M/citeproc-js/commit/e668f244f48bb23e9d1595e7291283270038de62>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Convert codes to names even when getAbbreviation is unavailable
 Update std tests
 
 :commit:
-    `65be97f <https://github.com/Juris-M/zotero/commit/65be97fe572f5317d0560454ed2b50f2f764fef5>`_
+    `65be97f <https://github.com/Juris-M/citeproc-js/commit/65be97fe572f5317d0560454ed2b50f2f764fef5>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Update std tests
 Bump version, update CHANGES, bundle as 1.1.201
 
 :commit:
-    `f9ff8c8 <https://github.com/Juris-M/zotero/commit/f9ff8c8532acc56d0421fbe639a9128208d32b93>`_
+    `f9ff8c8 <https://github.com/Juris-M/citeproc-js/commit/f9ff8c8532acc56d0421fbe639a9128208d32b93>`_
 :author:
     Frank Bennett
 :date:

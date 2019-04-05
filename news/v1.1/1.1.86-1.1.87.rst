@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.87
 
 :commit:
-    `ee2599c <https://github.com/Juris-M/zotero/commit/ee2599c5997b089390ac88dcb7e10d036b689ecd>`_
+    `ee2599c <https://github.com/Juris-M/citeproc-js/commit/ee2599c5997b089390ac88dcb7e10d036b689ecd>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.87
 Fix validation errors in fixture CSL
 
 :commit:
-    `743eff7 <https://github.com/Juris-M/zotero/commit/743eff7cd7f47514ba81416fd530ec91509a9b2c>`_
+    `743eff7 <https://github.com/Juris-M/citeproc-js/commit/743eff7cd7f47514ba81416fd530ec91509a9b2c>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Fix validation errors in fixture CSL
 Fix RTL nesting mismatch
 
 :commit:
-    `ca5ecfb <https://github.com/Juris-M/zotero/commit/ca5ecfb8027d465f689048183fbdbba8c1bc20af>`_
+    `ca5ecfb <https://github.com/Juris-M/citeproc-js/commit/ca5ecfb8027d465f689048183fbdbba8c1bc20af>`_
 :author:
     fbennett
 :date:
@@ -46,7 +46,7 @@ Fix RTL nesting mismatch
 Test to catch nesting mismatch triggered in RTL
 
 :commit:
-    `39799e3 <https://github.com/Juris-M/zotero/commit/39799e3e6033daed5d78264068f9093eeee78972>`_
+    `39799e3 <https://github.com/Juris-M/citeproc-js/commit/39799e3e6033daed5d78264068f9093eeee78972>`_
 :author:
     fbennett
 :date:
@@ -58,7 +58,7 @@ Test to catch nesting mismatch triggered in RTL
 Enable RTL support in tests
 
 :commit:
-    `0743926 <https://github.com/Juris-M/zotero/commit/07439265e07cea4735021680da5505c0ff10ccc3>`_
+    `0743926 <https://github.com/Juris-M/citeproc-js/commit/07439265e07cea4735021680da5505c0ff10ccc3>`_
 :author:
     fbennett
 :date:
@@ -70,7 +70,7 @@ Enable RTL support in tests
 Bump version, update CHANGES, bundle as 1.1.86
 
 :commit:
-    `19130bc <https://github.com/Juris-M/zotero/commit/19130bc81502bce427434261153793f9d5f8f92b>`_
+    `19130bc <https://github.com/Juris-M/citeproc-js/commit/19130bc81502bce427434261153793f9d5f8f92b>`_
 :author:
     fbennett
 :date:

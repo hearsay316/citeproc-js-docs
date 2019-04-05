@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle as 1.1.154
 
 :commit:
-    `65a2a3b <https://github.com/Juris-M/zotero/commit/65a2a3bfb5e96a307a8583a2191261c8f4ac1170>`_
+    `65a2a3b <https://github.com/Juris-M/citeproc-js/commit/65a2a3bfb5e96a307a8583a2191261c8f4ac1170>`_
 :author:
     fbennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle as 1.1.154
 Protect against missing abbreviation segments
 
 :commit:
-    `c02895d <https://github.com/Juris-M/zotero/commit/c02895d6c87ae1ad205773dc5fdb976ff832b5f2>`_
+    `c02895d <https://github.com/Juris-M/citeproc-js/commit/c02895d6c87ae1ad205773dc5fdb976ff832b5f2>`_
 :author:
     fbennett
 :date:
@@ -34,7 +34,7 @@ Protect against missing abbreviation segments
 Update std tests
 
 :commit:
-    `30c312f <https://github.com/Juris-M/zotero/commit/30c312fb3baba844c73cb8443a14a94934933987>`_
+    `30c312f <https://github.com/Juris-M/citeproc-js/commit/30c312fb3baba844c73cb8443a14a94934933987>`_
 :author:
     fbennett
 :date:

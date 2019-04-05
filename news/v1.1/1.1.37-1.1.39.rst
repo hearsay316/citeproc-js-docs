@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `1df588b <https://github.com/Juris-M/zotero/commit/1df588bb4a924bc0a3b475270c698e2a0c4a0ec7>`_
+    `1df588b <https://github.com/Juris-M/citeproc-js/commit/1df588bb4a924bc0a3b475270c698e2a0c4a0ec7>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Regexp to support previous checkin
 
 :commit:
-    `10343c1 <https://github.com/Juris-M/zotero/commit/10343c1aad4d6044091dce92f0fd402316ad53f9>`_
+    `10343c1 <https://github.com/Juris-M/citeproc-js/commit/10343c1aad4d6044091dce92f0fd402316ad53f9>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Regexp to support previous checkin
 Fix title case to work with Internet Explorer JS engine
 
 :commit:
-    `ff845d3 <https://github.com/Juris-M/zotero/commit/ff845d390ad73be478ecda89bbbe583d9b67fea6>`_
+    `ff845d3 <https://github.com/Juris-M/citeproc-js/commit/ff845d390ad73be478ecda89bbbe583d9b67fea6>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Fix title case to work with Internet Explorer JS engine
 Bump version, update CHANGES, bundle
 
 :commit:
-    `f80923f <https://github.com/Juris-M/zotero/commit/f80923f3cb52d667ac6762d48b925c1fa89c8a6d>`_
+    `f80923f <https://github.com/Juris-M/citeproc-js/commit/f80923f3cb52d667ac6762d48b925c1fa89c8a6d>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Bump version, update CHANGES, bundle
 Amend test fixture
 
 :commit:
-    `ce4cae1 <https://github.com/Juris-M/zotero/commit/ce4cae12ddadcfbde6d2fabe1058d419431b0283>`_
+    `ce4cae1 <https://github.com/Juris-M/citeproc-js/commit/ce4cae12ddadcfbde6d2fabe1058d419431b0283>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Amend test fixture
 Do not capitalize leading particles in the bibliography
 
 :commit:
-    `3c9296a <https://github.com/Juris-M/zotero/commit/3c9296a09c7bba1f55a0f8b56a89ce0e93b2a4b6>`_
+    `3c9296a <https://github.com/Juris-M/citeproc-js/commit/3c9296a09c7bba1f55a0f8b56a89ce0e93b2a4b6>`_
 :author:
     Frank Bennett
 :date:
@@ -82,7 +82,7 @@ Do not capitalize leading particles in the bibliography
 Added tag 1.1.37 for changeset b3633d33841d
 
 :commit:
-    `ae7288f <https://github.com/Juris-M/zotero/commit/ae7288f0d223bd9a50430a73d0c7deacbe1d7ba8>`_
+    `ae7288f <https://github.com/Juris-M/citeproc-js/commit/ae7288f0d223bd9a50430a73d0c7deacbe1d7ba8>`_
 :author:
     Frank Bennett
 :date:
@@ -94,7 +94,7 @@ Added tag 1.1.37 for changeset b3633d33841d
 Bump version, update CHANGES, bundle
 
 :commit:
-    `8d6823f <https://github.com/Juris-M/zotero/commit/8d6823fafeab76e89b45b9fb29321d713d675e5b>`_
+    `8d6823f <https://github.com/Juris-M/citeproc-js/commit/8d6823fafeab76e89b45b9fb29321d713d675e5b>`_
 :author:
     Frank Bennett
 :date:

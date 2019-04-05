@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `0d286af <https://github.com/Juris-M/zotero/commit/0d286affda07563c816583433ce8a921f17a5b7f>`_
+    `0d286af <https://github.com/Juris-M/citeproc-js/commit/0d286affda07563c816583433ce8a921f17a5b7f>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Add a modules test fixture
 
 :commit:
-    `64bb398 <https://github.com/Juris-M/zotero/commit/64bb39865eb613750e52c608a19e74978a29e4d5>`_
+    `64bb398 <https://github.com/Juris-M/citeproc-js/commit/64bb39865eb613750e52c608a19e74978a29e4d5>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Add a modules test fixture
 Add some name particles
 
 :commit:
-    `5733319 <https://github.com/Juris-M/zotero/commit/573331990f8cd8f839fee6788c780903f1a7cfcd>`_
+    `5733319 <https://github.com/Juris-M/citeproc-js/commit/573331990f8cd8f839fee6788c780903f1a7cfcd>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Add some name particles
 Fix spacing issue on leading apostrophes
 
 :commit:
-    `d4bc095 <https://github.com/Juris-M/zotero/commit/d4bc095c5840db1f3cd924b5177278336888773b>`_
+    `d4bc095 <https://github.com/Juris-M/citeproc-js/commit/d4bc095c5840db1f3cd924b5177278336888773b>`_
 :author:
     Frank Bennett
 :date:
@@ -58,7 +58,7 @@ Fix spacing issue on leading apostrophes
 Fix attribute name in test fixture
 
 :commit:
-    `edf4c79 <https://github.com/Juris-M/zotero/commit/edf4c79ac0d0ce3da7bf9e22ec63ecadff362ee2>`_
+    `edf4c79 <https://github.com/Juris-M/citeproc-js/commit/edf4c79ac0d0ce3da7bf9e22ec63ecadff362ee2>`_
 :author:
     Frank Bennett
 :date:
@@ -70,7 +70,7 @@ Fix attribute name in test fixture
 Merged in fcheslack/citeproc-js/fcheslack/test-for-falsy-terminator-before-first-u-1426621621295 (pull request #3)
 
 :commit:
-    `b053b93 <https://github.com/Juris-M/zotero/commit/b053b93cecbf8e3717712560b248a59b9ab698f5>`_
+    `b053b93 <https://github.com/Juris-M/citeproc-js/commit/b053b93cecbf8e3717712560b248a59b9ab698f5>`_
 :author:
     Frank Bennett
 :date:
@@ -84,7 +84,7 @@ test for falsy terminator before first use.
 test for falsy terminator before first use.
 
 :commit:
-    `320f8c3 <https://github.com/Juris-M/zotero/commit/320f8c3e2e45f4a71e5c92eb00e7b8c0fd613c9d>`_
+    `320f8c3 <https://github.com/Juris-M/citeproc-js/commit/320f8c3e2e45f4a71e5c92eb00e7b8c0fd613c9d>`_
 :author:
     fcheslack
 :date:
@@ -96,7 +96,7 @@ test for falsy terminator before first use.
 Added tag 1.1.4 for changeset 05df2a652261
 
 :commit:
-    `ef2ce9b <https://github.com/Juris-M/zotero/commit/ef2ce9b0fc359f3ac5fb3751759566000c3b08a6>`_
+    `ef2ce9b <https://github.com/Juris-M/citeproc-js/commit/ef2ce9b0fc359f3ac5fb3751759566000c3b08a6>`_
 :author:
     Frank Bennett
 :date:
@@ -108,7 +108,7 @@ Added tag 1.1.4 for changeset 05df2a652261
 Bump version, bundle
 
 :commit:
-    `99e3f87 <https://github.com/Juris-M/zotero/commit/99e3f8771a01fe42e02f0554c2c59da08f64ec2c>`_
+    `99e3f87 <https://github.com/Juris-M/citeproc-js/commit/99e3f8771a01fe42e02f0554c2c59da08f64ec2c>`_
 :author:
     Frank Bennett
 :date:

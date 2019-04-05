@@ -10,7 +10,7 @@
 Bump version, update CHANGES, bundle
 
 :commit:
-    `5558464 <https://github.com/Juris-M/zotero/commit/55584640aabcd74f112d5564f3144bff83fba4d4>`_
+    `5558464 <https://github.com/Juris-M/citeproc-js/commit/55584640aabcd74f112d5564f3144bff83fba4d4>`_
 :author:
     Frank Bennett
 :date:
@@ -22,7 +22,7 @@ Bump version, update CHANGES, bundle
 Bugfix
 
 :commit:
-    `1cc21cb <https://github.com/Juris-M/zotero/commit/1cc21cba9ea81d35dfd53f63a016766e4265872a>`_
+    `1cc21cb <https://github.com/Juris-M/citeproc-js/commit/1cc21cba9ea81d35dfd53f63a016766e4265872a>`_
 :author:
     Frank Bennett
 :date:
@@ -34,7 +34,7 @@ Bugfix
 Added tag 1.1.57 for changeset 423a06444de2
 
 :commit:
-    `8ff8309 <https://github.com/Juris-M/zotero/commit/8ff830934f8d19360b8f81dc04a89bf0c37196ac>`_
+    `8ff8309 <https://github.com/Juris-M/citeproc-js/commit/8ff830934f8d19360b8f81dc04a89bf0c37196ac>`_
 :author:
     Frank Bennett
 :date:
@@ -46,7 +46,7 @@ Added tag 1.1.57 for changeset 423a06444de2
 Bump version, update CHANGES, bundle
 
 :commit:
-    `030602f <https://github.com/Juris-M/zotero/commit/030602f9861591e8e2d70d99361defef1f2b50ea>`_
+    `030602f <https://github.com/Juris-M/citeproc-js/commit/030602f9861591e8e2d70d99361defef1f2b50ea>`_
 :author:
     Frank Bennett
 :date:
