@@ -182,9 +182,11 @@ have already been registered in the processor might look like this:
        properties: {
            noteIndex: 3
        },
-       citationItems: {
-           id: 'Item-X' // A work by Richard Snoakes
-       }
+       citationItems: [
+            {
+                id: 'Item-X' // A work by Richard Snoakes
+            }
+        ]
    }
    var citationsPre = [ ["citation-quaTheb4", 1], ["citation-mileiK4k", 2] ];
    var citationsPost = [ ["citation-adaNgoh1", 4] ];
@@ -218,7 +220,7 @@ control the output mode.
 
 .. code-block:: javascript
 
-    var result = citeproc..processCitationCluster(citation, citationsPre, citationsPost, format);
+    var result = citeproc.previewCitationCluster(citation, citationsPre, citationsPost, format);
 
 **citation**
     *See ``processCitationCluster()`` above.*
