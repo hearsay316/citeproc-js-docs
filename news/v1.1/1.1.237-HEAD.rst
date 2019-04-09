@@ -7,22 +7,34 @@
 
 ------
 
-Add reverse lookup example
+Bump version, update CHANGES, bundle as 1.1.238
 
 :commit:
-    `b1cb9c1 <https://github.com/Juris-M/citeproc-js/commit/b1cb9c183ba5d719784667c06df1bf85a031985d>`_
+    `5351017 <https://github.com/Juris-M/citeproc-js/commit/5351017c7a21ea40b70ea7787e901bffc1a7b092>`_
 :author:
     Frank Bennett
 :date:
-    2019-04-09 20:47 (JST)
+    2019-04-10 07:07 (JST)
 
 
 ------
 
-Check sanity of noteIndex input
+Update std tests
 
 :commit:
-    `88dd059 <https://github.com/Juris-M/citeproc-js/commit/88dd0592509b3f18d81f72ad6a7ed4dde8dd9fe1>`_
+    `e00d88f <https://github.com/Juris-M/citeproc-js/commit/e00d88f37a26f17b75225746b948672d864dc410>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-10 06:58 (JST)
+
+
+------
+
+Check sanity of declared citation context
+
+:commit:
+    `81f72a9 <https://github.com/Juris-M/citeproc-js/commit/81f72a947ac64f96d19f8216e44be6fb93e844e4>`_
 :author:
     Frank Bennett
 :date:
@@ -31,10 +43,22 @@ Check sanity of noteIndex input
 
 ------
 
-Fix
+Add reverse lookup example
 
 :commit:
-    `34e82f3 <https://github.com/Juris-M/citeproc-js/commit/34e82f3ecb77d25da94f7edac26120d014794d31>`_
+    `79443d7 <https://github.com/Juris-M/citeproc-js/commit/79443d7e36ddb48ddd1ddde7234601a0fff7b6a6>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-09 20:47 (JST)
+
+
+------
+
+Remove csl_reverse_lookup_support from test fiddle
+
+:commit:
+    `2ec6e25 <https://github.com/Juris-M/citeproc-js/commit/2ec6e25f58d8137dfb7dd2306cf3166303522ac3>`_
 :author:
     Frank Bennett
 :date:
