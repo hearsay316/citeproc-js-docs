@@ -9,7 +9,9 @@ Citeproc-js changes for v1.1
 .. toctree::
    :maxdepth: 1
 
-   1.1.234-HEAD.rst
+   1.1.237-HEAD.rst
+   1.1.236-1.1.237.rst
+   1.1.234-1.1.236.rst
    1.1.233-1.1.234.rst
    1.1.232-1.1.233.rst
    1.1.229-1.1.232.rst

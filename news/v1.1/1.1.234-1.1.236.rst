@@ -1,0 +1,149 @@
+========================================================
+1.1.234-1.1.236
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.236
+
+:commit:
+    `d411663 <https://github.com/Juris-M/citeproc-js/commit/d411663445e0e5dbd60db61a05d21ae2c935c15f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-07 15:46 (JST)
+
+
+------
+
+Fix bugs in preview mode
+
+:commit:
+    `89cca6c <https://github.com/Juris-M/citeproc-js/commit/89cca6c11a56b4053d74a409d174d1d372b0f192>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-07 15:42 (JST)
+
+
+
+* Inclusion of current citationID in previously-known citation list
+  was a potential crash condition.
+
+
+* Running preview with citationID on the previewed citation could
+  return ibid erroneously, if the citationID already existed in
+  the registry.
+
+
+------
+
+Update schemata
+
+:commit:
+    `5b10e9e <https://github.com/Juris-M/citeproc-js/commit/5b10e9e5f2080f71e9df81a86f41cb56447fd77d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-07 15:41 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `df18afb <https://github.com/Juris-M/citeproc-js/commit/df18afb0f75130ad19bfcd27957d818e6ff26ec1>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-07 15:41 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `7fc23d9 <https://github.com/Juris-M/citeproc-js/commit/7fc23d964e35a6d46a7598bf5dd6e73005cf8b7f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-07 15:41 (JST)
+
+
+------
+
+Set circa as a boolean, per specification
+
+:commit:
+    `aaa9df1 <https://github.com/Juris-M/citeproc-js/commit/aaa9df132ba893bd1a696fc2440a9a2134a4086b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-07 15:40 (JST)
+
+
+------
+
+Return boolean for hanging-indent, following CSL spec
+
+:commit:
+    `3e2286c <https://github.com/Juris-M/citeproc-js/commit/3e2286cedbcbce937c7de37f9ad7e1ff6aafef2b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-05 06:48 (JST)
+
+
+------
+
+Bump version for npm re-release
+
+:commit:
+    `7e8d0ae <https://github.com/Juris-M/citeproc-js/commit/7e8d0ae2c885b6e366b39e4f449c2f82c85b75d2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-05 06:49 (JST)
+
+
+------
+
+Merge pull request #102 from hubgit/remove-dependency
+
+:commit:
+    `dd73b29 <https://github.com/Juris-M/citeproc-js/commit/dd73b29aa7359680e7f4fb627303adb1cf8f1c6a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-05 06:34 (JST)
+
+Remove nyanplusreporter dependency
+
+------
+
+Remove nyanplusreporter dependency
+
+:commit:
+    `f7ee6e8 <https://github.com/Juris-M/citeproc-js/commit/f7ee6e80331fd17737816e14dd71332b028b470c>`_
+:author:
+    Alf Eaton
+:date:
+    2019-04-05 04:58 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.234
+
+:commit:
+    `98ced40 <https://github.com/Juris-M/citeproc-js/commit/98ced40508e4474273bc5676a7ab88d108ea073c>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-04 13:10 (JST)
+

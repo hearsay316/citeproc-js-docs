@@ -1,0 +1,54 @@
+========================================================
+1.1.237-HEAD
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Add reverse lookup example
+
+:commit:
+    `b1cb9c1 <https://github.com/Juris-M/citeproc-js/commit/b1cb9c183ba5d719784667c06df1bf85a031985d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-09 20:47 (JST)
+
+
+------
+
+Check sanity of noteIndex input
+
+:commit:
+    `88dd059 <https://github.com/Juris-M/citeproc-js/commit/88dd0592509b3f18d81f72ad6a7ed4dde8dd9fe1>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-09 17:39 (JST)
+
+
+------
+
+Fix
+
+:commit:
+    `34e82f3 <https://github.com/Juris-M/citeproc-js/commit/34e82f3ecb77d25da94f7edac26120d014794d31>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-09 17:35 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.237
+
+:commit:
+    `50a2db1 <https://github.com/Juris-M/citeproc-js/commit/50a2db1dea9aad4d616f25d5d1470b37c0d49f8b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-08 04:53 (JST)
+
