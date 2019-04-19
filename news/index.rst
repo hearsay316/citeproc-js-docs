@@ -11,6 +11,7 @@ Changes
    :hidden:
    
    v1.1/index.rst
+   v1.2/index.rst
 
 
 ``citeproc-js`` originated as a volunteer contribution to Zotero

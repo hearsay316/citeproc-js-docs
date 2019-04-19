@@ -1,9 +1,21 @@
 ========================================================
-1.1.237-HEAD
+1.1.237-1.1.238
 ========================================================
 
 .. include:: ../../substitutions.txt
 |CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Update docs
+
+:commit:
+    `012ef86 <https://github.com/Juris-M/citeproc-js/commit/012ef8682542138cfb648e7c3744924587d5a1ff>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-10 07:08 (JST)
+
 
 ------
 

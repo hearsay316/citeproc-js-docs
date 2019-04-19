@@ -20,8 +20,8 @@ function getPairs(tags) {
 	for (var tag of tags) {
         skip = false;
 		var mytag = tag.replace(/^v/, "");
-		var firstchar = mytag.slice(0, 1);
-		if (firstchar !== "1") {
+		var startswith = mytag.slice(0, 4);
+		if (["1.1.", "1.2."].indexOf(startswith) === -1) {
 			continue;
 		}
 		var splt = tag.split(".");
@@ -35,7 +35,7 @@ function getPairs(tags) {
         if (skip) {
             continue;
         }
-        if (splt[1] !== 1) {
+        if ([1, 2].indexOf(splt[1]) === -1) {
             continue
         }
 		while (splt.length < 3) {
@@ -92,7 +92,7 @@ function getGitLog(from, to) {
 
 function setIndexHeader(version) {
 	return "========================\n"
-		+ "Citeproc-js changes for v" + version + ".1\n"
+		+ "Citeproc-js changes for v1." + version + "\n"
 		+ "========================\n"
 		+ "\n"
 		+ ".. include:: ../../substitutions.txt\n"
@@ -121,11 +121,14 @@ function run () {
     var pairs = getPairs(tags);
     var logIdx = {};
     logIdx["1"] = setIndexHeader("1");
+    logIdx["2"] = setIndexHeader("2");
     for (var pair of pairs) {
         var logname = pair.join("-");
-        var version = logname.replace(/v?([1]).*/, "$1");
+        var version = logname.replace(/v?1\.([12])\..*/, "$1");
         if (version === "1") {
             outdir="../docs/news/v1.1"
+        } else if (version === "2") {
+            outdir="../docs/news/v1.2"
         } else {
             console.log("Boom "+version);
             process.exit();
@@ -133,11 +136,13 @@ function run () {
         logIdx[version] += "   " + logname + ".rst\n";
         var logTxt = setVersionChangesHeader(logname);
         logTxt += getGitLog(pair[0], pair[1]);
-        var outFile = path.join(docsPath, "news", "v" + version + ".1", logname + ".rst");
+        var outFile = path.join(docsPath, "news", "v1." + version, logname + ".rst");
         fs.writeFileSync(outFile, logTxt);
     }
     var outFile =  path.join(docsPath, "news", "v1.1", "index.rst");
     fs.writeFileSync(outFile, logIdx["1"]);
+    var outFile =  path.join(docsPath, "news", "v1.2", "index.rst");
+    fs.writeFileSync(outFile, logIdx["2"]);
 }
 
 run();

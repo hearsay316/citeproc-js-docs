@@ -1,0 +1,66 @@
+========================================================
+1.1.240-1.1.241
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.241
+
+:commit:
+    `f6ea4bf <https://github.com/Juris-M/citeproc-js/commit/f6ea4bf622c149ad8ed0dbe9ee10fbbfaaf7864d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-16 09:16 (JST)
+
+
+------
+
+Fix order of nodes in test fixture CSL
+
+:commit:
+    `adb78b7 <https://github.com/Juris-M/citeproc-js/commit/adb78b75a5726c4985d0dcd92835b556ce5c1174>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-16 09:14 (JST)
+
+
+------
+
+Do not crash when @is-numeric is called in bibliography
+
+:commit:
+    `22ee4e8 <https://github.com/Juris-M/citeproc-js/commit/22ee4e8d426f090e2c621759470c5e59996a77dd>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-16 08:51 (JST)
+
+
+------
+
+Test of @is-numeric on locator in bibliography
+
+:commit:
+    `053f0b5 <https://github.com/Juris-M/citeproc-js/commit/053f0b57b812b444cf87be5e5f26ab6d607bf88d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-16 08:50 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.240
+
+:commit:
+    `d515515 <https://github.com/Juris-M/citeproc-js/commit/d5155155e276ec67aa5f201d8ca41b1ae5384686>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-16 06:07 (JST)
+

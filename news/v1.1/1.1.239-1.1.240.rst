@@ -1,0 +1,42 @@
+========================================================
+1.1.239-1.1.240
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.240
+
+:commit:
+    `d515515 <https://github.com/Juris-M/citeproc-js/commit/d5155155e276ec67aa5f201d8ca41b1ae5384686>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-16 06:07 (JST)
+
+
+------
+
+Protect against undefined citation object key "properties"
+
+:commit:
+    `fb66818 <https://github.com/Juris-M/citeproc-js/commit/fb668187fe2271c0d06d27bcf8865dbe733f9ea6>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-16 06:03 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.239
+
+:commit:
+    `985bd5d <https://github.com/Juris-M/citeproc-js/commit/985bd5d7b4b2d1bfeaed52b141f0be93339efc07>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-14 06:31 (JST)
+

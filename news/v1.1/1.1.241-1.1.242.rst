@@ -1,0 +1,105 @@
+========================================================
+1.1.241-1.1.242
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.242
+
+:commit:
+    `45d18d5 <https://github.com/Juris-M/citeproc-js/commit/45d18d514ae422d628925955ab8baa86fb068d77>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 08:42 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `fcadb0c <https://github.com/Juris-M/citeproc-js/commit/fcadb0c4ba13296fa55c776d8face0bf47eaf329>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 08:11 (JST)
+
+
+------
+
+Non-standard date fixtures moved from std suite
+
+:commit:
+    `92bb905 <https://github.com/Juris-M/citeproc-js/commit/92bb905c365259d56d3870618d5cee060d3be204>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 08:10 (JST)
+
+
+------
+
+Favor pre-parsed data over raw date string
+
+:commit:
+    `d29d752 <https://github.com/Juris-M/citeproc-js/commit/d29d752e9334294dabf99312c31d3d860a0f4efe>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 08:09 (JST)
+
+
+------
+
+Fix citation-number sorts via variable or macro
+
+:commit:
+    `80c14d1 <https://github.com/Juris-M/citeproc-js/commit/80c14d1c3581585b37a4bee97faee5038f712dda>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-16 15:43 (JST)
+
+
+
+* Calling citation-number from cs:key as a macro or as a variable has
+  the same effect.
+
+
+* citation-number with sort="descending" as primary key on cs:bibliography reverses the order
+  of items, from order-cited to reverse-of-order-cited. Citation numbers in this case
+  reflect citation order, and so run from high to low in the bibliography.
+
+
+* citation-number as secondary key on cs:bibliography sets the order of
+  numbering.  Whether ascending or descending, citation number assignments are
+  aligned in citations and bibliography.
+
+
+------
+
+Comment in node_group
+
+:commit:
+    `9908070 <https://github.com/Juris-M/citeproc-js/commit/99080704ce867dbf84f7e9c0982e91a500e3ff05>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-16 21:38 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.241
+
+:commit:
+    `f6ea4bf <https://github.com/Juris-M/citeproc-js/commit/f6ea4bf622c149ad8ed0dbe9ee10fbbfaaf7864d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-16 09:16 (JST)
+

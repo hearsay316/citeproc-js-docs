@@ -1,0 +1,90 @@
+========================================================
+1.1.242-1.2.1
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump minor version, update CHANGES, bundle as 1.2.1
+
+:commit:
+    `9111953 <https://github.com/Juris-M/citeproc-js/commit/9111953a18ec32ca4f6b2d8a3738c2c8b0ca9e37>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 13:05 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `7936478 <https://github.com/Juris-M/citeproc-js/commit/7936478f17697bee6b9bb50f0129874b9be84785>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 13:04 (JST)
+
+
+------
+
+Align disambig priorities with spec by default
+
+:commit:
+    `379f284 <https://github.com/Juris-M/citeproc-js/commit/379f2845641cb2764b9b78d345ee56142ad38cdb>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 12:53 (JST)
+
+
+------
+
+Better option name for citeproc-js-style disambig priorities
+
+:commit:
+    `d974bf1 <https://github.com/Juris-M/citeproc-js/commit/d974bf1415981a72419d549ff3fe5b1aface5c2e>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 12:52 (JST)
+
+
+------
+
+A warm welcome to fixtures removed from the standard suite
+
+:commit:
+    `483fce2 <https://github.com/Juris-M/citeproc-js/commit/483fce2911c45a54710d1f659347fdf9429473ff>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 10:34 (JST)
+
+
+------
+
+Move citation-number secondary descending tests from std suite
+
+:commit:
+    `8cf1da0 <https://github.com/Juris-M/citeproc-js/commit/8cf1da0a3d33011f5542683f02500983239ce0e1>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 09:05 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.242
+
+:commit:
+    `45d18d5 <https://github.com/Juris-M/citeproc-js/commit/45d18d514ae422d628925955ab8baa86fb068d77>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 08:42 (JST)
+
