@@ -1,5 +1,5 @@
 ========================
-Citeproc-js changes for v2.1
+Citeproc-js changes for v1.2
 ========================
 
 .. include:: ../../substitutions.txt
