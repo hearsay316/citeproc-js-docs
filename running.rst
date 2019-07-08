@@ -354,6 +354,23 @@ __ http://citationstyles.org/downloads/specification.html#bibliography-specific-
 Dirty Tricks
 ------------
 
+!!!!!!!!!!!!!
+Debug logging
+!!!!!!!!!!!!!
+
+Errors and warnings are issued by the functions ``CSL.error`` and ``CSL.debug``
+respectively, both of which take a single string as argument. The former
+throws an error. The latter reports the string to ``console.log`` if available,
+otherwise ``dump`` is used. The functions can be redefined to use any reporting
+mechanism you like. For example:
+
+.. code-block:: javascript
+
+   CSL.debug = function(str) {
+     MyApp.log(str);
+   }
+
+
 !!!!!!!!!!!!!!!!!!!!!!
 Special citation forms
 !!!!!!!!!!!!!!!!!!!!!!
