@@ -572,27 +572,6 @@ which a ``treaty`` was made available for signing.
    </group>
 
 
-=======================
-``dummy`` |(extension)|
-=======================
-
-The ``dummy`` name variable is always empty. Use it to force *all*
-name variables called through a ``cs:names`` node to render through
-``cs:substitute``, and so suppress whichever is chosen for rendering
-to be suppressed through the remainder of the current cite.
-
-.. sourcecode:: xml
-
-   <names variable="dummy">
-     <name/>
-     <label/>
-     <substitute>
-       <names variable="author"/>
-       <names variable="editor"/>
-     </substitute>
-   </names>
-
-
 =============================
 ``hereinafter`` |(extension)|
 =============================
@@ -814,33 +793,6 @@ The ``exclude-types`` option is available on the ``cs:bibliography``
 element. Use it to specify a list of item types that are to be
 excluded from the bibliography.
 
-=====================================
-``exclude-with-fields`` |(extension)|
-=====================================
-
-The ``exclude-with-fields`` option is available on the ``cs:bibliography``
-element. Use it to specify a list of fields to be excluded from the
-bibliography if they contain a value.
-
-=====================================
-``default-locale-sort`` |(extension)|
-=====================================
-
-Use the ``default-locale-sort`` attribute on the ``cs:style`` node to specify
-the language collation to govern sorting behaviour. The sort locale has no effect
-on the language of standard terms and labels.
-
-.. sourcecode:: xml
-
-   <style xmlns="http://purl.org/net/xbiblio/csl" 
-          class="note" version="1.1mlz1"
-          default-locale="en-US"
-          default-locale-sort="zh-TW">
-
-
-If this attribute is *not* set, the sort locale is aligned with the default locale
-of the style or processor instance.
-
 ====================================
 ``form="imperial"`` |(modification)|
 ====================================
@@ -961,30 +913,6 @@ and
    <text variable="title" leading-noise-words="demote"/>
 
 
-==============================
-``match="nand"`` |(extension)|
-==============================
-
-With the ``nand`` argument to the ``match`` attribute, a node test is true
-if at least one of the tests it invokes is false.
-
-.. sourcecode:: xml
-
-   <choose>
-     <if variable="volume issue" match="nand">
-       <text macro="volume-issue-mac"/>
-     </if>
-   </choose>
-
-=======================================
-``name-as-reverse-order`` |(extension)|
-=======================================
-
-This is the counterpart of ``name-as-sort-order``, available on ``cs:style-options``
-only. Its operation is identical to its counterpart, but has the opposite effect
-of forcing reverse-order rendering of all names bearing the specified language
-tags. The ``name-as-sort-order`` attribute is described immediately below.
-
 ====================================
 ``name-as-sort-order`` |(extension)|
 ====================================
@@ -1031,12 +959,6 @@ when rendering the name concerned.
 
 The example above suppresses ``form="short"`` on names tagged as
 Hungarian, Korean, Japanese, Myanmar, Vietnamese, or Chinese.
-
-======================
-``oops`` |(extension)|
-======================
-
-This attribute is deprecated. Use ``is-parallel`` instead.
 
 ============================================
 ``prefix`` and ``suffix`` |(modification)|
@@ -1476,48 +1398,6 @@ The ``cs:label`` element in this example will render the localised term
 for the label set in the ``page`` field (e.g. "``para. 3``" will render
 in English as "|para| 3").
 
-==================================
-``subjurisdictions`` |(extension)|
-==================================
-
-The CSL-m ``jurisdiction`` variable contains a juridiction specifier
-divided into subfields, with a colon as the subfield delimiter.
-
-The ``subjurisdictions`` test attribute takes an integer as
-argument. It returns true if the ``jurisdiction`` field on the item
-contains a value with at least the specified number of
-subjurisdictions.
-
-.. sourcecode:: xml
-
-   <choose>
-     <if subjurisdictions="2">
-       <text variable="jurisdiction" form="short"/>
-     </if>
-   </choose>
-
-The example above will render the value of the ``jurisdiction`` field,
-"abbreviated" according the any mapping set for the style in the
-Abbreviation Filter. In the example, a value of ``us`` or ``us;ca``
-will return false, while a value of ``us;federal;ny`` will return
-true.
-
-%%%%%
-Terms
-%%%%%
-
-=============================
-``unpublished`` |(extension)|
-=============================
-
-The ``unpublished`` localised term is available for use
-by CSL-m styles.
-
-.. sourcecode:: xml
-
-   <text term="unpublished"/>
-
-
 %%%%%%%%%%%%%
 Locator Terms
 %%%%%%%%%%%%%
@@ -1551,3 +1431,154 @@ In addition to the extended terms (``article``, ``rule``, and
 ``title``), CSL-m styles automatically set the special alternative
 terms ``Chapter`` and ``Section`` when rendering the corresponding
 terms in the context of the first item in a parallel reference.
+
+%%%%%%%%%%%%%%%%%%%%%%%
+Decommissioned features
+%%%%%%%%%%%%%%%%%%%%%%%
+
+The features below were formerly documented here, but no longer exist.
+The reason for withdrawal is given in /italics/ at the top of each entry.
+
+=======================
+``dummy`` |(extension)|
+=======================
+
+- *Although easy to implement, this is a workaround. It will be seldom
+  used, and the more so because the purpose of
+  the special variable is not apparent on the surface. If something like
+  this were to be implemented, it should be done by adding an attribute
+  to* ``cs:names``.
+
+The ``dummy`` name variable is always empty. Use it to force *all*
+name variables called through a ``cs:names`` node to render through
+``cs:substitute``, and so suppress whichever is chosen for rendering
+to be suppressed through the remainder of the current cite.
+
+.. sourcecode:: xml
+
+   <names variable="dummy">
+     <name/>
+     <label/>
+     <substitute>
+       <names variable="author"/>
+       <names variable="editor"/>
+     </substitute>
+   </names>
+
+
+=====================================
+``exclude-with-fields`` |(extension)|
+=====================================
+
+- *This is a hack that would encourage users to reserve an
+  ``unused field'' (of which there really are none) for the
+  purpose of excluding things from the bibliography. It needs
+  to go.*
+
+The ``exclude-with-fields`` option is available on the ``cs:bibliography``
+element. Use it to specify a list of fields to be excluded from the
+bibliography if they contain a value.
+
+======================
+``oops`` |(extension)|
+======================
+
+- *From the name alone...yeah.*
+
+This attribute is deprecated. Use ``is-parallel`` instead.
+
+==============================
+``match="nand"`` |(extension)|
+==============================
+
+- *While this does add another string to the conditional bow, no style
+  has yet found a need for it, and I always struggle a bit to remember
+  what it does (admittedly my training in logic was probably lacking,
+  so that's the weaker of the two reasons for setting it aside, at least
+  for the present).*
+
+With the ``nand`` argument to the ``match`` attribute, a node test is true
+if at least one of the tests it invokes is false.
+
+.. sourcecode:: xml
+
+   <choose>
+     <if variable="volume issue" match="nand">
+       <text macro="volume-issue-mac"/>
+     </if>
+   </choose>
+
+=======================================
+``name-as-reverse-order`` |(extension)|
+=======================================
+
+- *Can't think of a use case for this.*
+
+This is the counterpart of ``name-as-sort-order``, available on ``cs:style-options``
+only. Its operation is identical to its counterpart, but has the opposite effect
+of forcing reverse-order rendering of all names bearing the specified language
+tags. The ``name-as-sort-order`` attribute is described immediately below.
+
+=====================================
+``default-locale-sort`` |(extension)|
+=====================================
+
+- *It's not clear when this would be necessary.*
+
+Use the ``default-locale-sort`` attribute on the ``cs:style`` node to specify
+the language collation to govern sorting behaviour. The sort locale has no effect
+on the language of standard terms and labels.
+
+.. sourcecode:: xml
+
+   <style xmlns="http://purl.org/net/xbiblio/csl" 
+          class="note" version="1.1mlz1"
+          default-locale="en-US"
+          default-locale-sort="zh-TW">
+
+
+If this attribute is *not* set, the sort locale is aligned with the default locale
+of the style or processor instance.
+
+=============================
+``unpublished`` |(extension)|
+=============================
+
+- *We can get by with* ``<text value="published"/>`` *for now.*
+
+The ``unpublished`` localised term is available for use
+by CSL-m styles.
+
+.. sourcecode:: xml
+
+   <text term="unpublished"/>
+
+
+==================================
+``subjurisdictions`` |(extension)|
+==================================
+
+- *With the implementation of style modules, this has become unnecessary.*
+
+The CSL-m ``jurisdiction`` variable contains a juridiction specifier
+divided into subfields, with a colon as the subfield delimiter.
+
+The ``subjurisdictions`` test attribute takes an integer as
+argument. It returns true if the ``jurisdiction`` field on the item
+contains a value with at least the specified number of
+subjurisdictions.
+
+.. sourcecode:: xml
+
+   <choose>
+     <if subjurisdictions="2">
+       <text variable="jurisdiction" form="short"/>
+     </if>
+   </choose>
+
+The example above will render the value of the ``jurisdiction`` field,
+"abbreviated" according the any mapping set for the style in the
+Abbreviation Filter. In the example, a value of ``us`` or ``us;ca``
+will return false, while a value of ``us;federal;ny`` will return
+true.
+
