@@ -1,4 +1,4 @@
-########################
+q########################
 CSL-M: extensions to CSL
 ########################
 
@@ -155,6 +155,20 @@ a DVD release of "The Wizard of Oz" should be set to ``motion_picture``.
 Elements
 %%%%%%%%
 
+============================
+``law-module`` |(extension)|
+============================
+
+The ``cs:law-module`` element can be set within a Jurism style module, as
+the last child of its ``cs:info`` element. The element takes one mandatory
+attribute, ``types``, with a space-delimited list of legal item types as
+its value:
+
+.. sourcecode:: xml
+
+   <law-module types="legislation report legal_case hearing"/>
+
+                
 ================================
 ``cs:alternative`` |(extension)|
 ================================
@@ -557,6 +571,48 @@ variable. It is rendered with a ``cs:names`` element.
 The use of ``suppress-min="0"`` in this example is documented below
 under `suppress-min (extension)`_.
 
+===========================
+``commenter`` |(extension)|
+===========================
+
+The ``commenter`` variable is handled as a name.
+
+===========================
+``contributor`` |(extension)|
+===========================
+
+The ``contributor`` variable is handled as a name.
+
+===========================
+``committee`` |(extension)|
+===========================
+
+The ``committee`` variable is handled as a string.
+
+===============================
+``document-name`` |(extension)|
+===============================
+
+The ``document-name`` variable is available on the ``legal_case`` type,
+and it used for the title of documents filed in court in the context of a given
+case. It is handled as a string.
+
+===============================
+``language-name`` |(extension)|
+===============================
+
+The ISO (or BCP 47) language code of the resource. The value is set to the
+target of a vector symbol (``>`` or ``<``) in the ``language`` field,
+and is otherwise undefined.
+
+========================================
+``language-name-original`` |(extension)|
+========================================
+
+The ISO (or BCP 47) language code of the resource. The value is set to the
+source of a vector symbol (``>`` or ``<``) in the ``language`` field,
+and is otherwise undefined.
+
 ================================
 ``available-date`` |(extension)|
 ================================
@@ -714,6 +770,25 @@ that it be rendered with ``cs:number``.
      </else>
    </choose>
 
+==========================
+``division`` |(extension)|
+==========================
+
+The ``division`` variable is available on items of the ``legal_case``
+type. it is used to add minor subdivisions of a court that are not
+captured by jurisdiction/court identifiers and their associated
+abbreviations.
+
+==============================
+``gazette-flag`` |(extension)|
+==============================
+
+The ``gazette-flag`` variable is available on the ``statute`` and
+``regulation`` types. It functions as a boolean, and should not be
+rendered. Set it with a value to indicate that the record refers to
+a statute and published in an official gazette (rather than a
+codified version of the same law).
+
 ==============================
 ``volume-title`` |(extension)|
 ==============================
@@ -759,6 +834,23 @@ See ``alt-translator`` above.
 %%%%%%%%%%
 Attributes
 %%%%%%%%%%
+
+=================================
+``form="imperial"`` |(extension)|
+=================================
+
+On the ``cs:date`` element, this form option renders the date in
+Japanese Imperial form. Only dates of the modern era (明治 to 令和) are supported.
+
+=========================================
+``jurisdiction-preference`` |(extension)|
+=========================================
+
+On a ``cs:style-options`` element under ``cs:local``, the value of this attribute
+is a space-delimited list of jurisdiction variant extensions, from highest to lowest
+priority. Where available, a specified variant is applied when selecting style modules
+and associated abbreviation sets.
+
 
 ===============================
 ``require-match`` |(extension)|
@@ -832,44 +924,114 @@ of Citation*.
 ``is-parallel`` |(extension)|
 =============================
 
-Set on a ``cs:group`` node, the ``is-parallel`` attribute includes
-or suppresses the content of the group node depending on whether it
-is rendered in a trailing parallel cite. Four values are recognised
-on the attribute:
+Set on a ``cs:group`` node, the ``is-parallel`` attribute includes or
+suppresses the content of the group node when it is
+rendered in a parallel cite. Parallel cites are those which \(a) have
+a ``seeAlso`` array in their CSL-M JSON item input, and (b) the
+``seeAlso`` array includes the ID of an item immediately before or
+after the cited item. Two values are recognised on the attribute:
 
-``false``
-    Renders when the cite is not one of a series of
-    parallel cites.
+``first``
+    The group is rendered by default. In the parallel-cite context,
+    the group is rendered only if the cite is the first of the
+    parallel series.
 
-``true``
-    Renders when the cite is one of several cites in a parallel
-    series.
+``last``
+    The group is rendered by default. In the parallel-cite context,
+    the group is rendered only if the cite is the last of the
+    parallel series.
 
-``master``
-    Renders when the cite is one of several in a parallel series,
-    and is the first cite in the series.
 
-``servant``
-    Renders when the cite is one of several in a parallel series,
-    and is *not* the first in the series.
 
+===========================
+``no-repeat`` |(extension)|
+===========================
+
+Set on a ``cs:group`` node, the ``no-repeat`` attribute includes or
+suppresses the content of the group node when it is
+rendered in a parallel cite. Parallel cites are those which \(a) have
+a ``seeAlso`` array in their CSL-M JSON item input, and (b) the
+``seeAlso`` array includes the ID of an item immediately before or
+after the cited item. The value of the ``no-repeat`` attribute
+is a space-delimited list of CSL-M variable names. When the value
+of a listed variable is identical in the current and the immediately
+preceding parallel cite, the group is not rendered.
+
+
+========================================
+``require`` and ``reject`` |(extension)|
+========================================
+
+Attributes of ``cs:group`` for use in conditional rendering of
+locators. Both attributes take one of three arguments, each
+representing a set of pre-bundled tests. ``require`` renders the group
+only if the tests return ``true``; ``reject`` renders the group only
+if the tests return ``false``. The bundled tests differ in kind from
+ordinary ``cs:choose`` conditions, in that they examine field
+content. A ``cs:label`` variable, or ``cs:text`` value or term is
+ordinarily the first rendering element within the group. Other
+elements may follow, as in the following example:
 
 .. sourcecode:: xml
 
    <group delimiter=" ">
-     <text font-style="italic" value="supra"/>
-     <text value="note"/>
-     <text variable="first-reference-note-number"/>
+     <group delimiter=", ">
+       <text variable="container-title"/>
+       <group delimiter=" " require="comma-safe">
+         <choose>
+           <if locator="page" match="none">
+             <label variable="locator"/>
+           </if>
+         </choose>
+         <number variable="locator"/>
+       </group>
+     </group>
+     <group delimiter=" " reject="comma-safe">
+       <choose>
+         <if locator="page" match="none">
+           <label variable="locator"/>
+         </if>
+       </choose>
+       <number variable="locator"/>
+     </group>
    </group>
-   <group delimiter=" " is-parallel="false">
-     <text value="at"/>
-     <number variable="page-first"/>
-   </group>
-   <group delimiter=" " is-parallel="true">
-     <number variable="volume"/>
-     <text variable="container-title"/>
-     <number variable="page-first"/>
-   </group>
+
+(Note that, for purposes of evaluation, the leading term used is the
+actual rendered field value, which may differ from the value of
+``locator-label`` set on item input, if a leading term shortcode is
+set in the ``locator`` field.)
+
+The predefined conditions are as follows:
+   
+``comma-safe``
+   
+    True (for ``require``) if:
+        1. The ``term text'' (a ``cs:label`` variable, or a ``cs:text`` value or term) is empty
+           (or not present) *and* the immediately preceding rendered
+           element ended in a number; or
+        2. The ``term text'' is a ``cs:label`` variable with a value, and begins with a ``romanesque''
+           character.
+        
+    False (for ``require``) if:
+        1. The ``term text'' is
+           empty *and* the immediately preceding rendered element did
+           *not* end in a number; or
+        2. The ``term text'' is a non-falsey ``cs:text`` value or term; or
+        3. The ``term text`` is a ``cs:label`` variable that does *not* start with
+           a ``romanesque`` character.
+        
+``empty-label``
+              
+    True (for ``require``) if:
+        1. The ``term text`` is empty.
+    
+``empty-label-no-decor``
+                 
+       True (for ``require``) if:
+          1. The ``term text`` is empty *or* the ``term text`` contains a placeholder
+             (``%s``) as a term with ``form="static"``.
+
+
 
 ============================
 ``label-form`` |(extension)|
@@ -1194,6 +1356,23 @@ separate from that applied to page ranges.
 %%%%%%%%%%
 Conditions
 %%%%%%%%%%
+
+================================================================
+``disambiguate="check-ambiguity-and-backrefence"`` |(extension)|
+================================================================
+
+An alternate to ``disambiguate="true"`` that includes the actual value of
+``first-reference-note-number`` (rather than a uniform slug) when evaluating
+the condition. This will add the conditional text only when necessary
+to disambiguate cites that are ambiguous within a single note.
+
+=====================================
+``position="far-note"`` |(extension)|
+=====================================
+
+The counterpart to ``position="near-note"`` that evaluates ``true`` if the
+cite is more than ``near-note-distance`` from the last preceding reference
+to the item.
 
 =========================
 ``context`` |(extension)|
