@@ -1,0 +1,42 @@
+========================================================
+1.2.3-1.2.4
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.4
+
+:commit:
+    `90614d6 <https://github.com/Juris-M/citeproc-js/commit/90614d68e3b3e2dc657887551578f7bb49a96cec>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-23 17:44 (JST)
+
+
+------
+
+Fix bug in grouped sorting with cs:intext
+
+:commit:
+    `01eda3b <https://github.com/Juris-M/citeproc-js/commit/01eda3bb112a3e7ca247872dae7f646e41d3983e>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-23 17:42 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.3
+
+:commit:
+    `57dbabb <https://github.com/Juris-M/citeproc-js/commit/57dbabb7fae7e21c3abd0f9c5e3b78316dc0be82>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-23 14:55 (JST)
+

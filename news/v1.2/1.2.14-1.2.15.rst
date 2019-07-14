@@ -1,0 +1,102 @@
+========================================================
+1.2.14-1.2.15
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version update CHANGES, bundle as 1.2.15
+
+:commit:
+    `9a9efe9 <https://github.com/Juris-M/citeproc-js/commit/9a9efe9d8cdc1d101cd1486e125c69fdbeb55250>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-11 08:11 (JST)
+
+
+------
+
+Update csl schemata
+
+:commit:
+    `c27e4fa <https://github.com/Juris-M/citeproc-js/commit/c27e4fa7a9cbe46fb800a33f4e6a514b31ef2747>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-11 08:07 (JST)
+
+
+------
+
+Remove decommissioned attributes
+
+:commit:
+    `004e350 <https://github.com/Juris-M/citeproc-js/commit/004e35094a7bcbe730b398c07e39722c29e7e11f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-11 08:05 (JST)
+
+
+------
+
+Allow use of no-repeat and is-parallel on the same group element
+
+:commit:
+    `1343f1f <https://github.com/Juris-M/citeproc-js/commit/1343f1fd054c5682e709236557eb86261eb1a02c>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-11 08:05 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `68ff315 <https://github.com/Juris-M/citeproc-js/commit/68ff31552b35643d595386384de979a53d9056b4>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-11 08:04 (JST)
+
+
+------
+
+Remove decommissioned attributes from tests
+
+:commit:
+    `06bdbe1 <https://github.com/Juris-M/citeproc-js/commit/06bdbe1fdd50a2d2ffd880f1bb413861d03dfcae>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-11 08:04 (JST)
+
+
+------
+
+Fix test
+
+:commit:
+    `224a9e5 <https://github.com/Juris-M/citeproc-js/commit/224a9e5f9e1d5d9ad96c72955697aa8f868b59dc>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-11 06:29 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.14
+
+:commit:
+    `6291ad0 <https://github.com/Juris-M/citeproc-js/commit/6291ad073905dc24cba1cced73d45c2db0c0c1f2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-10 13:53 (JST)
+
