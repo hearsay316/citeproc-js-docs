@@ -944,19 +944,13 @@ after the cited item. Two values are recognised on the attribute:
 
 
 ===========================
-``no-repeat`` |(extension)|
+``changes-in` |(extension)|
 ===========================
 
-Set on a ``cs:group`` node, the ``no-repeat`` attribute includes or
-suppresses the content of the group node when it is
-rendered in a parallel cite. Parallel cites are those which \(a) have
-a ``seeAlso`` array in their CSL-M JSON item input, and (b) the
-``seeAlso`` array includes the ID of an item immediately before or
-after the cited item. The value of the ``no-repeat`` attribute
-is a space-delimited list of CSL-M variable names. When the value
-of a listed variable is identical in the current and the immediately
-preceding parallel cite, the group is not rendered.
-
+Set on a ``cs:group`` node together with ``is-parallel``, the
+``changes-in`` attribute overrides the effect of ``is-parallel`` if
+there is a change from the previous parallel cite in one or more of
+the variables set in its argument.
 
 ========================================
 ``require`` and ``reject`` |(extension)|
