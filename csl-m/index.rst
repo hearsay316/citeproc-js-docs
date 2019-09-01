@@ -952,6 +952,23 @@ Set on a ``cs:group`` node together with ``is-parallel``, the
 there is a change from the previous parallel cite in one or more of
 the variables set in its argument.
 
+==========================
+``no-repeat` |(extension)|
+==========================
+
+Set on a ``cs:group``, the ``no-repeat`` blocks rendering of the group
+if the variables given in its argument are all identical to the preceding
+cite.
+
+============================================
+``parallel-delimiter-override` |(extension)|
+============================================
+
+When used with the ``is-parallel`` or ``no-repeat`` attributes,
+``parallel-delimiter-override`` replaces the layout delimiter joining
+the cite from which output is blocked with its predecessor.
+
+
 ========================================
 ``require`` and ``reject`` |(extension)|
 ========================================
