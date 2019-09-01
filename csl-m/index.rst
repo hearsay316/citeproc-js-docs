@@ -920,19 +920,24 @@ of Citation*.
 
    <text variable="title" form="short"/>
 
-=============================
+============================================
+Parallel citation and suppressing repetition
+============================================
+   
+-----------------------------
 ``is-parallel`` |(extension)|
-=============================
+-----------------------------
 
 Set on a ``cs:group`` node, the ``is-parallel`` attribute includes or
-suppresses the content of the group node when it is
-rendered in a parallel cite. Parallel cites are those which \(a) have
-a ``seeAlso`` array in their CSL-M JSON item input, and (b) the
-``seeAlso`` array includes the ID of an item immediately before or
-after the cited item. Two values are recognised on the attribute:
+suppresses the content of the entire group node depending on its
+position in a parallel citation. Items form a parallel citation when:
+\(a) they are immediately adjacent \(b) they carry a recognized list
+of related item IDs in their input data, and \(c) the list of related
+IDs includes the ID of an item immediately before or after the cited
+item. Two values are recognised on the attribute:
 
 ``first``
-    The group is rendered by default. In the parallel-cite context,
+    The group is rendered by default. In parallel-citation context,
     the group is rendered only if the cite is the first of the
     parallel series.
 
@@ -941,32 +946,35 @@ after the cited item. Two values are recognised on the attribute:
     the group is rendered only if the cite is the last of the
     parallel series.
 
+----------------------------
+``changes-in`` |(extension)|
+----------------------------
 
+The ``changes-in`` attribute is valid on ``cs:group`` elements.  It
+takes effect only when used with ``is-parallel``. Its argument a list
+of variable names. Its effect is to override the effect of
+``is-parallel``, if there is a change from the previous parallel cite
+in one or more of the variables set in its argument.
 
-===========================
-``changes-in` |(extension)|
-===========================
+---------------------------
+``no-repeat`` |(extension)|
+---------------------------
 
-Set on a ``cs:group`` node together with ``is-parallel``, the
-``changes-in`` attribute overrides the effect of ``is-parallel`` if
-there is a change from the previous parallel cite in one or more of
-the variables set in its argument.
+The ``no-repeat`` attribute is valid on ``cs:group`` elements. It does
+not depend on the ``is-parallel`` attribute, and takes effect on an
+ordinary series of cites in a citation. The attribute blocks rendering
+of the group if the variables given in its argument all have the same
+value as in the preceding cite.
 
-==========================
-``no-repeat` |(extension)|
-==========================
-
-Set on a ``cs:group``, the ``no-repeat`` blocks rendering of the group
-if the variables given in its argument are all identical to the preceding
-cite.
-
-============================================
-``parallel-delimiter-override` |(extension)|
-============================================
+---------------------------------------------
+``parallel-delimiter-override`` |(extension)|
+---------------------------------------------
 
 When used with the ``is-parallel`` or ``no-repeat`` attributes,
 ``parallel-delimiter-override`` replaces the layout delimiter joining
-the cite from which output is blocked with its predecessor.
+parallel sibling cites, or cites for which ``no-repeat`` suppresses
+output. When set of one element with the ``is-parallel`` attribute,
+the layout delimiter will be overridden for all members of the series.
 
 
 ========================================
