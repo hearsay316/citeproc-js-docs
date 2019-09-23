@@ -830,6 +830,39 @@ See ``alt-translator`` above.
 See ``alt-translator`` above.
 
 
+=============================
+``court-class`` |(extension)|
+=============================
+
+``court-class`` is a virtual variable enabled by setting a ``court-class``
+element in the locale (typically the default locale) of the style. The
+locale declaration looks like this:
+
+.. sourcecode:: xml
+
+   <locale>
+     <court-class name="admin" country="fi" courts="hao kho"/>
+   </locale>
+
+
+In the declaration, ``name`` is the name assigned to the courts class.
+This value will be output as the ``court-class`` variable, which may be used
+as a sort key. ``country`` is the first element of the jurisdiction value
+set on the item, if any. For example, the country value for the jurisdiction
+``fi:helsinki`` will be ``fi``. The ``courts`` attribute is a space-delimited
+list of court IDs assigned by the Legal Resource Registry.
+
+With a ``court class`` locale declaration in place, the ``court-class``
+variable can be called in the usual way:
+
+.. sourcecode:: xml
+
+   <text variable="court-class"/>
+
+If the ``jurisdiction`` and ``authority`` values on the item (from which
+the match values for ``country`` and ``courts`` are derived) produces no
+match, an empty string is output.
+
 
 %%%%%%%%%%
 Attributes
