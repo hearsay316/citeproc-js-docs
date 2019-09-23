@@ -197,6 +197,41 @@ to ``cs:alternative`` with alternative item content. Variables
 for rendering via ``cs:alternative-text`` are set with an ``alt-``
 prefix.
 
+================================
+``cs:court-class`` |(extension)|
+================================
+
+One or more ``cs:court-class`` elements may be set as children of a
+locale declaration:
+
+.. sourcecode:: xml
+
+   <locale>
+     <court-class name="admin" country="fi" courts="hao kho"/>
+   </locale>
+
+
+The ``name`` attribute is the name assigned to the courts class, and
+is output as the ``court-class`` variable on ``cs:text`` and
+``cs:key`` elements (see `court-class (extension)`_). It is also used
+as the match value for the ``court-class`` condition (see `court-class
+[condition] (extension)`_).
+
+
+The ``country`` attribute in the example above is the first element of
+the jurisdiction value set on the item, if any. For example, the
+country value for the jurisdiction ``fi:helsinki`` will be ``fi``.
+
+The ``courts`` attribute is a space-delimited list of court IDs
+assigned by the Legal Resource Registry.
+
+The class name is assigned to an item when the ``country`` value
+and one of the IDs in ``courts`` matches the ``jurisdiction`` and
+``authority`` values on the item.
+
+If set in a style module, the ``court-class`` locale element will
+be loaded automatically into the calling style.
+
 ===============================
 ``cs:conditions`` |(extension)|
 ===============================
@@ -425,10 +460,7 @@ Attribute: ``institution-parts``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
 The components of organization names are normally rendered in their
-long form only.  When the `Zotero Abbreviations Gadget`__ is used
-with Zotero, abbreviated forms for these names may be available
-to the processor.
-
+long form only. 
 To use the short form, or combinations of the long and short form, an
 ``institution-parts`` attribute is available on ``cs:institution``.
 The attribute accepts values of ``long``, ``short``, ``short-long``
@@ -437,8 +469,6 @@ and ``long-short``.  This attribute would be used to produce examples
 ``long-short`` respectively.  A value of ``short`` behaves in the same
 way as ``form="short"`` in other contexts in CSL, using the short form
 if it is available, and falling back to the long form otherwise.
-
-__ http://onezotero.org/tools/
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Element: ``cs:institution-part``
@@ -835,33 +865,15 @@ See ``alt-translator`` above.
 =============================
 
 ``court-class`` is a virtual variable enabled by setting a ``court-class``
-element in the locale (typically the default locale) of the style. The
-locale declaration looks like this:
+element in the locale (typically the default locale) of the style.
+If the ``jurisdiction`` and ``authority`` values on the item match values
+set on the locale declaration, the name of the class is output. Non-matching
+items output an empty string.
 
-.. sourcecode:: xml
+For information on the locale declaration, see `cs:court-class (extension)`_ above.
+See also `court-class [condition] (extension)`_ for information on the related
+test attribute.
 
-   <locale>
-     <court-class name="admin" country="fi" courts="hao kho"/>
-   </locale>
-
-
-In the declaration, ``name`` is the name assigned to the courts class.
-This value will be output as the ``court-class`` variable, which may be used
-as a sort key. ``country`` is the first element of the jurisdiction value
-set on the item, if any. For example, the country value for the jurisdiction
-``fi:helsinki`` will be ``fi``. The ``courts`` attribute is a space-delimited
-list of court IDs assigned by the Legal Resource Registry.
-
-With a ``court class`` locale declaration in place, the ``court-class``
-variable can be called in the usual way:
-
-.. sourcecode:: xml
-
-   <text variable="court-class"/>
-
-If the ``jurisdiction`` and ``authority`` values on the item (from which
-the match values for ``country`` and ``courts`` are derived) produces no
-match, an empty string is output.
 
 
 %%%%%%%%%%
@@ -1628,6 +1640,15 @@ their corresponding CSL-m label values.
 The ``cs:label`` element in this example will render the localised term
 for the label set in the ``page`` field (e.g. "``para. 3``" will render
 in English as "|para| 3").
+
+=========================================
+``court-class`` [condition] |(extension)|
+=========================================
+
+The ``court-class`` condition takes a single court class name as
+argument. (See `cs:court-class (extension)`_ for information on the
+assignment of court class names).
+
 
 %%%%%%%%%%%%%
 Locator Terms
