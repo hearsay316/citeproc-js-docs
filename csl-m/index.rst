@@ -229,8 +229,21 @@ The class name is assigned to an item when the ``country`` value
 and one of the IDs in ``courts`` matches the ``jurisdiction`` and
 ``authority`` values on the item.
 
-If set in a style module, the ``court-class`` locale element will
-be loaded automatically into the calling style.
+As noted above, the name assigned to a set of courts by the
+``court-class`` element serves two roles:
+
+*  **key role:** It provides a value for an eponymous variable on the
+   ``cs:key`` element for use in sorting.
+*  **condition role:** It is used by an eponymous test attribute to
+   check whether the current item is or is not a member of one or more
+   classes.
+   
+When set in a style module, the setting applies to the *key role*
+only. When set in the calling style, the setting applies to the
+*condition role* only. The two settings are independent, but confusion
+is unlikely because ``court-class`` conditions are used almost
+exclusively in style modules (and the same style module, at that); and
+``court-class`` sort keys are used only in the calling style.
 
 ===============================
 ``cs:conditions`` |(extension)|
