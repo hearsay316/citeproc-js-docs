@@ -224,7 +224,7 @@ provide only pinpoint, descriptive, and text-suppression fields:
    {
        id:"item1",
        locator: 123,
-       label: page,
+       label: "page",
        prefix: "See ",
        suffix: " (arguing that X is Y)"
    }
