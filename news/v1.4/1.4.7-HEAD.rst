@@ -1,0 +1,114 @@
+========================================================
+1.4.7-HEAD
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.9
+
+:commit:
+    `a3bd3e5 <https://github.com/Juris-M/citeproc-js/commit/a3bd3e5c0698e5db62aade3c27361fe1424bd01f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 15:21 (JST)
+
+
+------
+
+npm audit fixes for demo
+
+:commit:
+    `584daf3 <https://github.com/Juris-M/citeproc-js/commit/584daf3b9eeb956ac4304195fde5ad205010bb32>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 15:19 (JST)
+
+
+------
+
+Implement parallel-delimiter-override-on-suppress
+
+:commit:
+    `fdfdea7 <https://github.com/Juris-M/citeproc-js/commit/fdfdea79a1633d1c0a3cc79d8418772b4d6317f0>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 15:15 (JST)
+
+
+------
+
+Update tests for parallel-delimiter-override-on-suppress
+
+:commit:
+    `4b934c6 <https://github.com/Juris-M/citeproc-js/commit/4b934c6cc2537a96f98052adc0ca6132c2c15e79>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 15:12 (JST)
+
+
+------
+
+Update schemata
+
+:commit:
+    `cafe314 <https://github.com/Juris-M/citeproc-js/commit/cafe3145cf7f4bce6f177045bf81538c3ac21fdf>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 15:11 (JST)
+
+
+------
+
+Update modules and style tests
+
+:commit:
+    `ce1b672 <https://github.com/Juris-M/citeproc-js/commit/ce1b67237528bf562e64c967327bfd77395b32c6>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 11:05 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.8
+
+:commit:
+    `725133e <https://github.com/Juris-M/citeproc-js/commit/725133e02d7c35ddd94fdfab2784490ffd2ac47a>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 06:34 (JST)
+
+
+------
+
+Use page label with page-first variable without leaving short-code in place
+
+:commit:
+    `b7d8fb8 <https://github.com/Juris-M/citeproc-js/commit/b7d8fb805171f6d812ac4ec66322d29d92bf3e74>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 06:34 (JST)
+
+
+------
+
+Bump version, update CHANGES, bump version to 1.4.7
+
+:commit:
+    `7310d84 <https://github.com/Juris-M/citeproc-js/commit/7310d8400166221dd3e6d24767938aff283f7f32>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 21:48 (JST)
+

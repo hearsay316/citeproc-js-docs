@@ -1,0 +1,54 @@
+========================================================
+1.3.17-1.3.18
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Update schema
+
+:commit:
+    `6cba581 <https://github.com/Juris-M/citeproc-js/commit/6cba581ba146dde07f023f711bdffce83736a76f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 17:06 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.18
+
+:commit:
+    `ee7b952 <https://github.com/Juris-M/citeproc-js/commit/ee7b9528e13891c94c69b43574a5780c28fdc1cd>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 17:05 (JST)
+
+
+------
+
+Add fld. as a short-code label
+
+:commit:
+    `3e84c76 <https://github.com/Juris-M/citeproc-js/commit/3e84c763d7db15983cd802e193fc34c60fbf8325>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 17:05 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.17
+
+:commit:
+    `77ae855 <https://github.com/Juris-M/citeproc-js/commit/77ae855e6400f6a31f50406c66237b3e01512db4>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 20:03 (JST)
+

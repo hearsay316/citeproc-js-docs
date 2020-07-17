@@ -1,0 +1,210 @@
+========================================================
+1.2.22-1.2.24
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.24
+
+:commit:
+    `c0d4556 <https://github.com/Juris-M/citeproc-js/commit/c0d45560e79aa93148935c18320b3118c7f6f8d3>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-01 22:28 (JST)
+
+
+------
+
+Add reporting instructions to README
+
+:commit:
+    `07f62c6 <https://github.com/Juris-M/citeproc-js/commit/07f62c62cbebd2f57bbb52c80f483ca316b83eb1>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-01 22:13 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `bdebd39 <https://github.com/Juris-M/citeproc-js/commit/bdebd39f2d5622a10b8eb780f0ad9f972d295073>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-01 22:12 (JST)
+
+
+------
+
+Implement new parallel attributes
+
+:commit:
+    `49e7db6 <https://github.com/Juris-M/citeproc-js/commit/49e7db6ac426b1cbe83a8f4fe9ab3f7cac9214cf>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-01 22:11 (JST)
+
+
+------
+
+Amend fixtures to reflect new parallel attributes
+
+:commit:
+    `0d826c8 <https://github.com/Juris-M/citeproc-js/commit/0d826c8b651cd5a0cbc49cf8b8c3f3c6e030e0ae>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-01 22:10 (JST)
+
+
+------
+
+Update tests to reflect attribute changes
+
+:commit:
+    `ef3f663 <https://github.com/Juris-M/citeproc-js/commit/ef3f6631e1c4cab3e4abb597cb9622411fd69a17>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-01 10:13 (JST)
+
+
+------
+
+Support no-repeat attribute on cs:group
+
+:commit:
+    `5809c19 <https://github.com/Juris-M/citeproc-js/commit/5809c197e5676d14010077eff2c5c1b31913e376>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-01 10:13 (JST)
+
+
+------
+
+Update schemata
+
+:commit:
+    `a42cb6c <https://github.com/Juris-M/citeproc-js/commit/a42cb6cb836a927ca27c791b27dbfe6855c36841>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-01 10:09 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `bb62a9b <https://github.com/Juris-M/citeproc-js/commit/bb62a9bf9457a52fa0c80fbea8f1caab28b428a5>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-31 20:47 (JST)
+
+
+------
+
+Change attribute name no-repeat to changes-in, in tests
+
+:commit:
+    `9e85cf9 <https://github.com/Juris-M/citeproc-js/commit/9e85cf90a02223463a43d54769717f79731cf7d9>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-31 20:38 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.23
+
+:commit:
+    `caef809 <https://github.com/Juris-M/citeproc-js/commit/caef8090fb485bfd1ff905a15d21cc54f168cd17>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-30 07:01 (JST)
+
+
+------
+
+Preprocess style module code on import
+
+:commit:
+    `9ca0463 <https://github.com/Juris-M/citeproc-js/commit/9ca04636467231e66554919682151785872a8afd>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-30 02:57 (JST)
+
+
+------
+
+Add commenter as a name variable
+
+:commit:
+    `f3e6196 <https://github.com/Juris-M/citeproc-js/commit/f3e619646c969cae68f10b134cbddc95da3dcd61>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-30 02:56 (JST)
+
+
+------
+
+Merge branch 'master' of github.com:Juris-M/citeproc-js
+
+:commit:
+    `e1cf64d <https://github.com/Juris-M/citeproc-js/commit/e1cf64d535177951c16967297683aa47e77adc70>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-28 08:03 (JST)
+
+
+------
+
+Add test of multiline HTML comments
+
+:commit:
+    `ab93245 <https://github.com/Juris-M/citeproc-js/commit/ab93245d56231b491b92b01c0295c6736d6e1e12>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-28 08:02 (JST)
+
+
+------
+
+Create FUNDING.yml
+
+:commit:
+    `b0c6a9f <https://github.com/Juris-M/citeproc-js/commit/b0c6a9fe6ebddc7e3e92e53738d93ee818527d3f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-25 15:44 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.22
+
+:commit:
+    `1830354 <https://github.com/Juris-M/citeproc-js/commit/18303547eeb885c1727add674f365c56258bf419>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-24 19:43 (JST)
+

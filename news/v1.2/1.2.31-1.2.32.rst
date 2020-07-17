@@ -1,0 +1,78 @@
+========================================================
+1.2.31-1.2.32
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.32
+
+:commit:
+    `03f5c5f <https://github.com/Juris-M/citeproc-js/commit/03f5c5fbf5241471e34a048acba765210d93abb7>`_
+:author:
+    Frank Bennett
+:date:
+    2020-03-08 17:44 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `0eb0aa7 <https://github.com/Juris-M/citeproc-js/commit/0eb0aa7863dabd4677df65f386cf110d4ac5c01f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-03-08 17:41 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `71769d6 <https://github.com/Juris-M/citeproc-js/commit/71769d6a1a9e5491b23e885dbdf0f2830c3ae7e0>`_
+:author:
+    Frank Bennett
+:date:
+    2020-03-08 17:39 (JST)
+
+
+------
+
+Fix crash bug on single quotes inside tags
+
+:commit:
+    `5b3d244 <https://github.com/Juris-M/citeproc-js/commit/5b3d244bc77ac04e779c77803fd9c4bb71380e8a>`_
+:author:
+    Frank Bennett
+:date:
+    2020-03-08 15:37 (JST)
+
+
+------
+
+Protect against a crash condition,
+
+:commit:
+    `3dfa99d <https://github.com/Juris-M/citeproc-js/commit/3dfa99d63d91e8e4b072b1fcc2c66fb1bfe783e0>`_
+:author:
+    Frank Bennett
+:date:
+    2020-03-08 15:35 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.31
+
+:commit:
+    `3389e9b <https://github.com/Juris-M/citeproc-js/commit/3389e9b23a1873c1bb0af16eef7533aefd669701>`_
+:author:
+    Frank Bennett
+:date:
+    2020-01-16 18:11 (JST)
+

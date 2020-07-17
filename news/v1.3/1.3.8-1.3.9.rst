@@ -1,0 +1,102 @@
+========================================================
+1.3.8-1.3.9
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.9
+
+:commit:
+    `b58110e <https://github.com/Juris-M/citeproc-js/commit/b58110e403e7defd29e90efb5ab3c1f5bbdf2d2f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:58 (JST)
+
+
+------
+
+Update juris modules
+
+:commit:
+    `1e346bf <https://github.com/Juris-M/citeproc-js/commit/1e346bfec9e1b3e811483cd87dbb4e9655be70bf>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:56 (JST)
+
+
+------
+
+Add admin-flag field, allow dummy creator
+
+:commit:
+    `0e33aed <https://github.com/Juris-M/citeproc-js/commit/0e33aedd6122421043111cb794066ab2dd9d8fd8>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:54 (JST)
+
+
+------
+
+Fix subjurisdiction inheritance, enable inheritance of locator macro
+
+:commit:
+    `4e71bc3 <https://github.com/Juris-M/citeproc-js/commit/4e71bc3bb3bf31ed2cd9440063bdde12cec4cc2b>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:44 (JST)
+
+
+------
+
+Align tests with expected country code input
+
+:commit:
+    `b1b4353 <https://github.com/Juris-M/citeproc-js/commit/b1b4353fd7a6130ddae50f6f970e4f146ddc3ec1>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:42 (JST)
+
+
+------
+
+Reset stop-last after each name var rendering
+
+:commit:
+    `510f691 <https://github.com/Juris-M/citeproc-js/commit/510f691d9064fa28bdabffd4944f0984788fa228>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:42 (JST)
+
+
+------
+
+Fix decoding of country names
+
+:commit:
+    `cdaac8c <https://github.com/Juris-M/citeproc-js/commit/cdaac8c52d8443db794e838b76c0922729058ed9>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:40 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.8
+
+:commit:
+    `22f0681 <https://github.com/Juris-M/citeproc-js/commit/22f0681f23b27ac6a59171026f83473f4c1d91ef>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-08 09:50 (JST)
+

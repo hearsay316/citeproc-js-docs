@@ -1,0 +1,1506 @@
+========================================================
+1.2.36-HEAD
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.9
+
+:commit:
+    `a3bd3e5 <https://github.com/Juris-M/citeproc-js/commit/a3bd3e5c0698e5db62aade3c27361fe1424bd01f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 15:21 (JST)
+
+
+------
+
+npm audit fixes for demo
+
+:commit:
+    `584daf3 <https://github.com/Juris-M/citeproc-js/commit/584daf3b9eeb956ac4304195fde5ad205010bb32>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 15:19 (JST)
+
+
+------
+
+Implement parallel-delimiter-override-on-suppress
+
+:commit:
+    `fdfdea7 <https://github.com/Juris-M/citeproc-js/commit/fdfdea79a1633d1c0a3cc79d8418772b4d6317f0>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 15:15 (JST)
+
+
+------
+
+Update tests for parallel-delimiter-override-on-suppress
+
+:commit:
+    `4b934c6 <https://github.com/Juris-M/citeproc-js/commit/4b934c6cc2537a96f98052adc0ca6132c2c15e79>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 15:12 (JST)
+
+
+------
+
+Update schemata
+
+:commit:
+    `cafe314 <https://github.com/Juris-M/citeproc-js/commit/cafe3145cf7f4bce6f177045bf81538c3ac21fdf>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 15:11 (JST)
+
+
+------
+
+Update modules and style tests
+
+:commit:
+    `ce1b672 <https://github.com/Juris-M/citeproc-js/commit/ce1b67237528bf562e64c967327bfd77395b32c6>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 11:05 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.8
+
+:commit:
+    `725133e <https://github.com/Juris-M/citeproc-js/commit/725133e02d7c35ddd94fdfab2784490ffd2ac47a>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 06:34 (JST)
+
+
+------
+
+Use page label with page-first variable without leaving short-code in place
+
+:commit:
+    `b7d8fb8 <https://github.com/Juris-M/citeproc-js/commit/b7d8fb805171f6d812ac4ec66322d29d92bf3e74>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-17 06:34 (JST)
+
+
+------
+
+Bump version, update CHANGES, bump version to 1.4.7
+
+:commit:
+    `7310d84 <https://github.com/Juris-M/citeproc-js/commit/7310d8400166221dd3e6d24767938aff283f7f32>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 21:48 (JST)
+
+
+------
+
+Test of locale-specific text-casing
+
+:commit:
+    `5bf4149 <https://github.com/Juris-M/citeproc-js/commit/5bf414997ce5d42c5833aaff4dcfa977ec2c60a6>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 21:47 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `5f86155 <https://github.com/Juris-M/citeproc-js/commit/5f86155dfbb5474bdc784ea0e48b51aef6cbe5bc>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 21:46 (JST)
+
+
+------
+
+Support locale-specific text casing
+
+:commit:
+    `517694d <https://github.com/Juris-M/citeproc-js/commit/517694d0677471a787cf360e6035ea0407a6d29c>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 21:42 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `6ad3dda <https://github.com/Juris-M/citeproc-js/commit/6ad3dda00dc0f95ae5f864a330caa52df1ca58b1>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 21:39 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `5e0bfde <https://github.com/Juris-M/citeproc-js/commit/5e0bfde5865f6ba27f2313f4e58371b8f5028618>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 06:52 (JST)
+
+
+------
+
+Update modules
+
+:commit:
+    `de9ce56 <https://github.com/Juris-M/citeproc-js/commit/de9ce562af6993bb36be57087abbea40865dcab0>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 06:48 (JST)
+
+
+------
+
+Update style fixtures
+
+:commit:
+    `46de628 <https://github.com/Juris-M/citeproc-js/commit/46de628abcab5d1e1a26dd4b0afe9d87ac312f0a>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 06:47 (JST)
+
+
+------
+
+Fix bug rendering text via cs:substitute with partial-each rule
+
+:commit:
+    `04d8319 <https://github.com/Juris-M/citeproc-js/commit/04d83190a960a705b3dcc935f1a74fe7856fee1c>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 06:44 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.6
+
+:commit:
+    `37eecc6 <https://github.com/Juris-M/citeproc-js/commit/37eecc66a19e5d65bef7d4e7e33760a9211f5963>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-02 05:29 (JST)
+
+
+------
+
+Add test of locator suppression with author-only
+
+:commit:
+    `112d714 <https://github.com/Juris-M/citeproc-js/commit/112d714a92f77f41130b593ecdb30b2a5724d49f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-02 05:28 (JST)
+
+
+------
+
+Update style fixtures
+
+:commit:
+    `6eb3878 <https://github.com/Juris-M/citeproc-js/commit/6eb3878bfa0a73e68441113d238c1a8133a51564>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-02 05:26 (JST)
+
+
+------
+
+Suppress locator if author-only
+
+:commit:
+    `b2dde8f <https://github.com/Juris-M/citeproc-js/commit/b2dde8f317ee964a6c303c5480847b54e5d1b55c>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-02 05:24 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.5
+
+:commit:
+    `120ee8f <https://github.com/Juris-M/citeproc-js/commit/120ee8f0ab25b1f9bd42d6599b393db1d4521097>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-28 09:03 (JST)
+
+
+------
+
+Update std test fixtures
+
+:commit:
+    `76e31f3 <https://github.com/Juris-M/citeproc-js/commit/76e31f36445647c81ef21bb9dc44932a43876db6>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-28 09:02 (JST)
+
+
+------
+
+Apply limit-day-ordinals-to-day-1 to elements of a range
+
+:commit:
+    `6465bc0 <https://github.com/Juris-M/citeproc-js/commit/6465bc05b0f9c56aab6c241ed9ae733d2f6348cf>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-28 08:59 (JST)
+
+
+------
+
+Update submodules
+
+:commit:
+    `752db9f <https://github.com/Juris-M/citeproc-js/commit/752db9f78ef9761936f919abc8880b71c6bec3a9>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-19 14:22 (JST)
+
+
+------
+
+Update styles
+
+:commit:
+    `84eacc7 <https://github.com/Juris-M/citeproc-js/commit/84eacc767b106edad3a157a62ba4428c2810bf55>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-18 23:47 (JST)
+
+
+------
+
+Update modules
+
+:commit:
+    `e0905d7 <https://github.com/Juris-M/citeproc-js/commit/e0905d723eb2f69bd3313fc48fc159134d0eb97d>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-18 23:45 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.4
+
+:commit:
+    `1930ce9 <https://github.com/Juris-M/citeproc-js/commit/1930ce910acb334e26d6d09832baa3e4f7832e4c>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 21:04 (JST)
+
+
+------
+
+Yet more bugfixes for placeholder labels
+
+:commit:
+    `cb704a2 <https://github.com/Juris-M/citeproc-js/commit/cb704a2741ecf353a5036c5bff4b3d4da8498676>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 21:02 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.3
+
+:commit:
+    `0ad18f4 <https://github.com/Juris-M/citeproc-js/commit/0ad18f4ef9b8345facde71ca2baa0a8d49e2d5e9>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 06:52 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `90228a3 <https://github.com/Juris-M/citeproc-js/commit/90228a3c31202472d1ded0d8c55455736c8d10b7>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 06:51 (JST)
+
+
+------
+
+Update to modules
+
+:commit:
+    `32c82c3 <https://github.com/Juris-M/citeproc-js/commit/32c82c324c745c83772378011b4432efeabf641d>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 06:49 (JST)
+
+
+------
+
+Limit parallel-last-to-first to specified variables
+
+:commit:
+    `bf6ebe8 <https://github.com/Juris-M/citeproc-js/commit/bf6ebe800555f25f90f56596ce820131f57f47c2>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 06:25 (JST)
+
+
+------
+
+Update schemata
+
+:commit:
+    `a45854a <https://github.com/Juris-M/citeproc-js/commit/a45854ae51d98f9c0987f1ae050c2e61e5ba4f9f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 06:16 (JST)
+
+
+------
+
+Tests of selective parallel-last-to-first
+
+:commit:
+    `9029935 <https://github.com/Juris-M/citeproc-js/commit/9029935c7a66f6d541ca964b9ca6f2a750315b77>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 06:10 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.2
+
+:commit:
+    `64717f4 <https://github.com/Juris-M/citeproc-js/commit/64717f47cf607ce1b39910e53baed2366586d2c4>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-16 12:56 (JST)
+
+
+------
+
+Add some tests of short-form and parallels
+
+:commit:
+    `8722dd7 <https://github.com/Juris-M/citeproc-js/commit/8722dd7a3980769d8a10f01ca5bfce5282d30252>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-16 12:55 (JST)
+
+
+------
+
+Attempt title-short if form="short" of title fails
+
+:commit:
+    `c8cdf0a <https://github.com/Juris-M/citeproc-js/commit/c8cdf0ac67c934ce9cf872cbb1abd122be56f324>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-16 12:25 (JST)
+
+
+------
+
+Update styles
+
+:commit:
+    `8fa0ecc <https://github.com/Juris-M/citeproc-js/commit/8fa0ecc3b7eda07de08c7a1eda4e5af1ef9cb8bb>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-13 18:07 (JST)
+
+
+------
+
+Remove stale file tests zip
+
+:commit:
+    `7086739 <https://github.com/Juris-M/citeproc-js/commit/70867393d00c32c95f9820320ae24514f1a71ed3>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-09 09:49 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `437512e <https://github.com/Juris-M/citeproc-js/commit/437512ee2c1d43f36e55333ce938e465c8e7dda7>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-09 09:48 (JST)
+
+
+------
+
+Update modules
+
+:commit:
+    `275d328 <https://github.com/Juris-M/citeproc-js/commit/275d328dec3a3fcd14438d0464ace797cbc6a763>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-09 09:44 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.1
+
+:commit:
+    `3e29222 <https://github.com/Juris-M/citeproc-js/commit/3e29222ef5392892dde636edf26de53648ffc8a0>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-08 15:00 (JST)
+
+
+------
+
+Require exact any-match in @jurisdiction condition
+
+:commit:
+    `363d8de <https://github.com/Juris-M/citeproc-js/commit/363d8de8e7781ac836fea92bd140c10c209913ff>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-08 14:59 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.24
+
+:commit:
+    `7191881 <https://github.com/Juris-M/citeproc-js/commit/7191881e123dff2d7a5a237cd912c27bcfaa8ce7>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-08 14:17 (JST)
+
+
+------
+
+Update modules
+
+:commit:
+    `56a8568 <https://github.com/Juris-M/citeproc-js/commit/56a85689d66280fdafb393acb00fa57d64c14b0f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-08 13:38 (JST)
+
+
+------
+
+Update CSL schemata
+
+:commit:
+    `c61e432 <https://github.com/Juris-M/citeproc-js/commit/c61e4323c581be16fe07c98501fcddfce0cd3065>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-08 13:37 (JST)
+
+
+------
+
+Implement parallel-last-override attribute, some code tidying
+
+:commit:
+    `1fb207c <https://github.com/Juris-M/citeproc-js/commit/1fb207c58d1060d4f3c9c58c1a41c23e49505b26>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-08 13:35 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.23
+
+:commit:
+    `d67b261 <https://github.com/Juris-M/citeproc-js/commit/d67b26126be2a77ccc09c7065602141b348a3ea1>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-07 06:36 (JST)
+
+
+------
+
+Tests for had-subunit and parallel-last-to-first
+
+:commit:
+    `6d6f298 <https://github.com/Juris-M/citeproc-js/commit/6d6f29856c0edd99fbc16b9e8ec301a43f7bf4df>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-07 06:21 (JST)
+
+
+------
+
+Update schemata
+
+:commit:
+    `1497439 <https://github.com/Juris-M/citeproc-js/commit/1497439e4f8e30f047838be2ab9029b9a551e6ba>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-07 06:20 (JST)
+
+
+------
+
+Add has-subunit test and parallel-last-to-first attributes
+
+:commit:
+    `6829bc2 <https://github.com/Juris-M/citeproc-js/commit/6829bc2b4caf6fb05607a401b7aeaba63ce07d1a>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-07 06:20 (JST)
+
+
+------
+
+Test of ampersand with no adjacent spaces
+
+:commit:
+    `0ef5077 <https://github.com/Juris-M/citeproc-js/commit/0ef50770a7322d1c2237232ee12481226bc0284b>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-30 17:47 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.22
+
+:commit:
+    `d75adde <https://github.com/Juris-M/citeproc-js/commit/d75adde13fc303c1a883e7f58db39b578be438dd>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-30 17:46 (JST)
+
+
+------
+
+Allow ampersand without adjacent space against letters in numeric fields
+
+:commit:
+    `ea4b7f0 <https://github.com/Juris-M/citeproc-js/commit/ea4b7f015908b16e31221485efcf3a56d7b104a8>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-30 17:46 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.21
+
+:commit:
+    `6f75537 <https://github.com/Juris-M/citeproc-js/commit/6f75537ea874d4aaf973e700b7876d474ed2bea9>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 13:51 (JST)
+
+
+------
+
+Update std test fixtures
+
+:commit:
+    `938c7ad <https://github.com/Juris-M/citeproc-js/commit/938c7ad4b2c9a3968c8f9d944f65e9c76974d8bc>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 13:50 (JST)
+
+
+------
+
+Update schemata
+
+:commit:
+    `ad60070 <https://github.com/Juris-M/citeproc-js/commit/ad60070c283ad4bd846d7d106889b7223eccb9eb>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 13:49 (JST)
+
+
+------
+
+Receive tests from std that assume implicit addition of leading/trailing space on cite affixes
+
+:commit:
+    `9340bc3 <https://github.com/Juris-M/citeproc-js/commit/9340bc3ac3c9d27a02ffea4b54ddf503b867b449>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 13:38 (JST)
+
+
+------
+
+Update std test fixtures
+
+:commit:
+    `b9f58a4 <https://github.com/Juris-M/citeproc-js/commit/b9f58a49749b50646cf9e888fe3150aac8763280>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 11:07 (JST)
+
+
+------
+
+Add files removed from std CSL fixtures repository
+
+:commit:
+    `882450f <https://github.com/Juris-M/citeproc-js/commit/882450fda6a24f990656b3b47c21327cd5e577c2>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 11:07 (JST)
+
+
+------
+
+Add "substring" numeric attribute specifically for US patent references
+
+:commit:
+    `25482bf <https://github.com/Juris-M/citeproc-js/commit/25482bf7e9eadc2a4c1f7373e40ffb80c0acffb7>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 09:34 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.20
+
+:commit:
+    `646e0a6 <https://github.com/Juris-M/citeproc-js/commit/646e0a61e454ce95fad0a1ebf1a8fe29dd47c63f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 21:26 (JST)
+
+
+------
+
+Add missed element of previous parallels fix
+
+:commit:
+    `9247f48 <https://github.com/Juris-M/citeproc-js/commit/9247f48a67808ccba622d8225a53d3ce1aa68067>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 20:57 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.19
+
+:commit:
+    `185db18 <https://github.com/Juris-M/citeproc-js/commit/185db18d0cbc69dd0fca43d96ef42149fc76e349>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 20:44 (JST)
+
+
+------
+
+Fix bug in parallel cites triggered by disambiguate="true"
+
+:commit:
+    `a676070 <https://github.com/Juris-M/citeproc-js/commit/a6760703f65a3721fc362e8a929d2ce1eb3b970d>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 20:39 (JST)
+
+
+------
+
+Update schema
+
+:commit:
+    `6cba581 <https://github.com/Juris-M/citeproc-js/commit/6cba581ba146dde07f023f711bdffce83736a76f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 17:06 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.18
+
+:commit:
+    `ee7b952 <https://github.com/Juris-M/citeproc-js/commit/ee7b9528e13891c94c69b43574a5780c28fdc1cd>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 17:05 (JST)
+
+
+------
+
+Add fld. as a short-code label
+
+:commit:
+    `3e84c76 <https://github.com/Juris-M/citeproc-js/commit/3e84c763d7db15983cd802e193fc34c60fbf8325>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 17:05 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.17
+
+:commit:
+    `77ae855 <https://github.com/Juris-M/citeproc-js/commit/77ae855e6400f6a31f50406c66237b3e01512db4>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 20:03 (JST)
+
+
+------
+
+Update style modules
+
+:commit:
+    `4c1378f <https://github.com/Juris-M/citeproc-js/commit/4c1378ff9aa84f45dc1078996aaa7e34337e7d61>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 20:02 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `329102b <https://github.com/Juris-M/citeproc-js/commit/329102b563c4fda4fe60c1f8149c3051965c0fcc>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 19:59 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `2549bf8 <https://github.com/Juris-M/citeproc-js/commit/2549bf83760558457ae04678d6030b68bafeea86>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 19:57 (JST)
+
+
+------
+
+Process leading short-code labels on the page variable as for locator
+
+:commit:
+    `1dd968a <https://github.com/Juris-M/citeproc-js/commit/1dd968ae0c50d58e0a22d21db6bce69d0908997f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 19:49 (JST)
+
+
+------
+
+Adjustments to leading embedded-label tests
+
+:commit:
+    `c94e512 <https://github.com/Juris-M/citeproc-js/commit/c94e512f38dccebe7cf8079d0576bebfd744f61b>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 19:48 (JST)
+
+
+------
+
+Bump npm version
+
+:commit:
+    `3083e82 <https://github.com/Juris-M/citeproc-js/commit/3083e828598469c135c96ecd6a8498e5883e4839>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-25 22:39 (JST)
+
+
+------
+
+Update schemata
+
+:commit:
+    `31b40fa <https://github.com/Juris-M/citeproc-js/commit/31b40fa1fc0f3f1b92275da6cbf64ebb736af7b2>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-25 22:28 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.16
+
+:commit:
+    `62bd2af <https://github.com/Juris-M/citeproc-js/commit/62bd2af3566af14f832feefe646b6077d0e23105>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-25 22:27 (JST)
+
+
+------
+
+Fix typos
+
+:commit:
+    `f7b9680 <https://github.com/Juris-M/citeproc-js/commit/f7b96802daf09bbcd1b4fb2faac2c0aec5742e41>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-25 22:27 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.15
+
+:commit:
+    `e822afa <https://github.com/Juris-M/citeproc-js/commit/e822afa821d1b97cabffa9eab92d197703f8f5d6>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-25 22:02 (JST)
+
+
+------
+
+Extend suppression of collection-title/issued suppression to legislation, fix label bugs
+
+:commit:
+    `797d95e <https://github.com/Juris-M/citeproc-js/commit/797d95e60a1fa97feae134129461d970bbd5999b>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-25 21:43 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.14
+
+:commit:
+    `30d4caf <https://github.com/Juris-M/citeproc-js/commit/30d4cafb676f50c0784bb1cfcb4001ca51d5bfdb>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-24 20:18 (JST)
+
+
+------
+
+Extend shorthand labels to cover all of IndigoBook T13
+
+:commit:
+    `52700df <https://github.com/Juris-M/citeproc-js/commit/52700df5f65ff87457cff005e2e117a4c4ea0f5f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-24 20:17 (JST)
+
+
+------
+
+Updaate style tests
+
+:commit:
+    `0538f09 <https://github.com/Juris-M/citeproc-js/commit/0538f09b2e9667a60c751fcad0a8aead335b0f18>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-24 07:59 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `841b1eb <https://github.com/Juris-M/citeproc-js/commit/841b1eb8fecff1ba624d94a91d243a13a806c075>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-24 07:52 (JST)
+
+
+------
+
+Bump npm version
+
+:commit:
+    `3bc8eb5 <https://github.com/Juris-M/citeproc-js/commit/3bc8eb580168792213b3ee02b54979041f19d077>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-22 20:28 (JST)
+
+
+------
+
+Fix coding typo
+
+:commit:
+    `cf1599d <https://github.com/Juris-M/citeproc-js/commit/cf1599d0a06a649a1fd7cb67026d6281d8e33282>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-22 20:27 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.12
+
+:commit:
+    `92aba1d <https://github.com/Juris-M/citeproc-js/commit/92aba1d5b9b0ccdb81430f32180ded6072cede70>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-22 19:54 (JST)
+
+
+------
+
+Change new option to require-comma-on-symbol
+
+:commit:
+    `70d1e59 <https://github.com/Juris-M/citeproc-js/commit/70d1e59cf5c41ecd2ac3b639a80295635dd54d32>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-22 19:52 (JST)
+
+
+------
+
+Add style attribute require-comma-on-symbol-after-number
+
+:commit:
+    `dc48954 <https://github.com/Juris-M/citeproc-js/commit/dc48954519d669db378b7f7aebe1ae3d7a1bb33a>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-22 18:52 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.10
+
+:commit:
+    `812fbb4 <https://github.com/Juris-M/citeproc-js/commit/812fbb4a66cf787caa3ab66d8ab7c5e9c4a55a85>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-19 07:46 (JST)
+
+
+------
+
+Test of slash-delimited numeric strings with is-numeric
+
+:commit:
+    `732645a <https://github.com/Juris-M/citeproc-js/commit/732645ae848ae061bbeab4b7025e19035b6a64f5>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-19 07:45 (JST)
+
+
+------
+
+Test of jurisdiction abbreviations
+
+:commit:
+    `6c838caf <https://github.com/Juris-M/citeproc-js/commit/6c838caf7524925e8fdfbe47bf6cc31f35e2d42f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-19 07:45 (JST)
+
+
+------
+
+Return is-numeric true for slash-delimited numeric strings
+
+:commit:
+    `215363e <https://github.com/Juris-M/citeproc-js/commit/215363e2c56662c6b7737be5b31b0a3fad066bc0>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-19 07:43 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.9
+
+:commit:
+    `b58110e <https://github.com/Juris-M/citeproc-js/commit/b58110e403e7defd29e90efb5ab3c1f5bbdf2d2f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:58 (JST)
+
+
+------
+
+Update juris modules
+
+:commit:
+    `1e346bf <https://github.com/Juris-M/citeproc-js/commit/1e346bfec9e1b3e811483cd87dbb4e9655be70bf>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:56 (JST)
+
+
+------
+
+Add admin-flag field, allow dummy creator
+
+:commit:
+    `0e33aed <https://github.com/Juris-M/citeproc-js/commit/0e33aedd6122421043111cb794066ab2dd9d8fd8>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:54 (JST)
+
+
+------
+
+Fix subjurisdiction inheritance, enable inheritance of locator macro
+
+:commit:
+    `4e71bc3 <https://github.com/Juris-M/citeproc-js/commit/4e71bc3bb3bf31ed2cd9440063bdde12cec4cc2b>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:44 (JST)
+
+
+------
+
+Align tests with expected country code input
+
+:commit:
+    `b1b4353 <https://github.com/Juris-M/citeproc-js/commit/b1b4353fd7a6130ddae50f6f970e4f146ddc3ec1>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:42 (JST)
+
+
+------
+
+Reset stop-last after each name var rendering
+
+:commit:
+    `510f691 <https://github.com/Juris-M/citeproc-js/commit/510f691d9064fa28bdabffd4944f0984788fa228>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:42 (JST)
+
+
+------
+
+Fix decoding of country names
+
+:commit:
+    `cdaac8c <https://github.com/Juris-M/citeproc-js/commit/cdaac8c52d8443db794e838b76c0922729058ed9>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:40 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.8
+
+:commit:
+    `22f0681 <https://github.com/Juris-M/citeproc-js/commit/22f0681f23b27ac6a59171026f83473f4c1d91ef>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-08 09:50 (JST)
+
+
+------
+
+Normalize jurisdiction codes to enable conversion in abbrevs filter
+
+:commit:
+    `b0b4512 <https://github.com/Juris-M/citeproc-js/commit/b0b4512ec18e3637eacea5c65a5d8321af7c3ae2>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-08 09:46 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.7
+
+:commit:
+    `5bbf98b <https://github.com/Juris-M/citeproc-js/commit/5bbf98b9ed534d778d72e8f8257894b580feee90>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 13:56 (JST)
+
+
+------
+
+Finish fix of inline locator labels
+
+:commit:
+    `f8df6cf <https://github.com/Juris-M/citeproc-js/commit/f8df6cfa904426b22f8e2fd70a539fd365b96639>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 13:55 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.6
+
+:commit:
+    `c2e26e7 <https://github.com/Juris-M/citeproc-js/commit/c2e26e701ac24cb11ec82640b8bb5339b6f7d27e>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 13:39 (JST)
+
+
+------
+
+Fix bug in inline locator label markup
+
+:commit:
+    `c531bd3 <https://github.com/Juris-M/citeproc-js/commit/c531bd30440d272c16fdb68481eb6006abdc1c57>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 13:38 (JST)
+
+
+------
+
+Bump npm version
+
+:commit:
+    `c21524d <https://github.com/Juris-M/citeproc-js/commit/c21524dd19e213e91c082613b9503633a3fded1e>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 08:57 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.5
+
+:commit:
+    `1e1ce52 <https://github.com/Juris-M/citeproc-js/commit/1e1ce526ef49af18a5e74621c0b321dace7963b8>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 08:56 (JST)
+
+
+------
+
+Use title-short for parallel title match
+
+:commit:
+    `528425d <https://github.com/Juris-M/citeproc-js/commit/528425da42b0cd54aa1de8e29d17dac0cdc75ef2>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 08:31 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.4
+
+:commit:
+    `dbf02a2 <https://github.com/Juris-M/citeproc-js/commit/dbf02a2728656f0117b596b01cfaceb5d2859e15>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 08:23 (JST)
+
+
+------
+
+Fix date parsing bug
+
+:commit:
+    `3edf77d <https://github.com/Juris-M/citeproc-js/commit/3edf77d48bf8cef2fe571524e652a7ffcbaec23c>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 08:22 (JST)
+
+
+------
+
+Bump version, update CHANGES,  bundle as 1.3.3
+
+:commit:
+    `9230443 <https://github.com/Juris-M/citeproc-js/commit/923044304a5de2657bee1bfab18a1952d4e45643>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-26 10:30 (JST)
+
+
+------
+
+Render strings with a | character as comma-separated numeric plural
+
+:commit:
+    `cbb0a4d <https://github.com/Juris-M/citeproc-js/commit/cbb0a4d2eeebea4f36c235ccd49f9041dbc8adf1>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-26 10:30 (JST)
+
+
+------
+
+Update demo modules
+
+:commit:
+    `356be2c <https://github.com/Juris-M/citeproc-js/commit/356be2cee31d350aa3393e2cc58eaa83e8bdce53>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-26 08:31 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.2
+
+:commit:
+    `0e7679b <https://github.com/Juris-M/citeproc-js/commit/0e7679bbd86a8a64b23c427f33f6bc224f72b8dc>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-26 08:26 (JST)
+
+
+------
+
+Add some constraints on cross-cite abbreviation
+
+:commit:
+    `e49c293 <https://github.com/Juris-M/citeproc-js/commit/e49c2936d5f63429b26f759c7296beb0664bd540>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-26 08:22 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `fda7046 <https://github.com/Juris-M/citeproc-js/commit/fda70464bc32bf39bbfd014bf7706903ef3889a3>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:32 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.1
+
+:commit:
+    `310e153 <https://github.com/Juris-M/citeproc-js/commit/310e153ed46cb8d31511f02c88b24b82049815b0>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:30 (JST)
+
+
+------
+
+Implement parallel-first/parallel-last attributes
+
+:commit:
+    `e43798f <https://github.com/Juris-M/citeproc-js/commit/e43798fc94b839646e08907f0f9eb3e657399ee4>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:28 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `4d575fc <https://github.com/Juris-M/citeproc-js/commit/4d575fc8cc881d47edccd96910a810dac44f25d8>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:28 (JST)
+
+
+------
+
+Update schemata
+
+:commit:
+    `85ed24d <https://github.com/Juris-M/citeproc-js/commit/85ed24d1a23c38b86ac6057a61b23e9c9399a8ad>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:24 (JST)
+
+
+------
+
+Update juris modules
+
+:commit:
+    `58acdd4 <https://github.com/Juris-M/citeproc-js/commit/58acdd49b65132418cc0441fddc845e7e676f645>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:20 (JST)
+
+
+------
+
+Adapt local test fixtures to new parallel-first parallel-last attributes
+
+:commit:
+    `50b4a90 <https://github.com/Juris-M/citeproc-js/commit/50b4a901f06239d0e634899457aa1c459304e3fe>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 21:53 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.36
+
+:commit:
+    `a0e530f <https://github.com/Juris-M/citeproc-js/commit/a0e530f0b7771367464e5df92e77b1e46c8c1767>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-23 15:32 (JST)
+

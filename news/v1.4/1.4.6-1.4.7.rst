@@ -1,0 +1,126 @@
+========================================================
+1.4.6-1.4.7
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bump version to 1.4.7
+
+:commit:
+    `7310d84 <https://github.com/Juris-M/citeproc-js/commit/7310d8400166221dd3e6d24767938aff283f7f32>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 21:48 (JST)
+
+
+------
+
+Test of locale-specific text-casing
+
+:commit:
+    `5bf4149 <https://github.com/Juris-M/citeproc-js/commit/5bf414997ce5d42c5833aaff4dcfa977ec2c60a6>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 21:47 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `5f86155 <https://github.com/Juris-M/citeproc-js/commit/5f86155dfbb5474bdc784ea0e48b51aef6cbe5bc>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 21:46 (JST)
+
+
+------
+
+Support locale-specific text casing
+
+:commit:
+    `517694d <https://github.com/Juris-M/citeproc-js/commit/517694d0677471a787cf360e6035ea0407a6d29c>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 21:42 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `6ad3dda <https://github.com/Juris-M/citeproc-js/commit/6ad3dda00dc0f95ae5f864a330caa52df1ca58b1>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 21:39 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `5e0bfde <https://github.com/Juris-M/citeproc-js/commit/5e0bfde5865f6ba27f2313f4e58371b8f5028618>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 06:52 (JST)
+
+
+------
+
+Update modules
+
+:commit:
+    `de9ce56 <https://github.com/Juris-M/citeproc-js/commit/de9ce562af6993bb36be57087abbea40865dcab0>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 06:48 (JST)
+
+
+------
+
+Update style fixtures
+
+:commit:
+    `46de628 <https://github.com/Juris-M/citeproc-js/commit/46de628abcab5d1e1a26dd4b0afe9d87ac312f0a>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 06:47 (JST)
+
+
+------
+
+Fix bug rendering text via cs:substitute with partial-each rule
+
+:commit:
+    `04d8319 <https://github.com/Juris-M/citeproc-js/commit/04d83190a960a705b3dcc935f1a74fe7856fee1c>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-14 06:44 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.6
+
+:commit:
+    `37eecc6 <https://github.com/Juris-M/citeproc-js/commit/37eecc66a19e5d65bef7d4e7e33760a9211f5963>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-02 05:29 (JST)
+

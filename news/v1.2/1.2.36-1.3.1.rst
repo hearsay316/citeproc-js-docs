@@ -1,0 +1,102 @@
+========================================================
+1.2.36-1.3.1
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Update style tests
+
+:commit:
+    `fda7046 <https://github.com/Juris-M/citeproc-js/commit/fda70464bc32bf39bbfd014bf7706903ef3889a3>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:32 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.1
+
+:commit:
+    `310e153 <https://github.com/Juris-M/citeproc-js/commit/310e153ed46cb8d31511f02c88b24b82049815b0>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:30 (JST)
+
+
+------
+
+Implement parallel-first/parallel-last attributes
+
+:commit:
+    `e43798f <https://github.com/Juris-M/citeproc-js/commit/e43798fc94b839646e08907f0f9eb3e657399ee4>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:28 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `4d575fc <https://github.com/Juris-M/citeproc-js/commit/4d575fc8cc881d47edccd96910a810dac44f25d8>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:28 (JST)
+
+
+------
+
+Update schemata
+
+:commit:
+    `85ed24d <https://github.com/Juris-M/citeproc-js/commit/85ed24d1a23c38b86ac6057a61b23e9c9399a8ad>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:24 (JST)
+
+
+------
+
+Update juris modules
+
+:commit:
+    `58acdd4 <https://github.com/Juris-M/citeproc-js/commit/58acdd49b65132418cc0441fddc845e7e676f645>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:20 (JST)
+
+
+------
+
+Adapt local test fixtures to new parallel-first parallel-last attributes
+
+:commit:
+    `50b4a90 <https://github.com/Juris-M/citeproc-js/commit/50b4a901f06239d0e634899457aa1c459304e3fe>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 21:53 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.36
+
+:commit:
+    `a0e530f <https://github.com/Juris-M/citeproc-js/commit/a0e530f0b7771367464e5df92e77b1e46c8c1767>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-23 15:32 (JST)
+

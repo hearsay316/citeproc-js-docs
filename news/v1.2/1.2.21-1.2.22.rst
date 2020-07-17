@@ -1,0 +1,116 @@
+========================================================
+1.2.21-1.2.22
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.22
+
+:commit:
+    `1830354 <https://github.com/Juris-M/citeproc-js/commit/18303547eeb885c1727add674f365c56258bf419>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-24 19:43 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `3dfe3dc <https://github.com/Juris-M/citeproc-js/commit/3dfe3dcbfaca7ed48ac8bcb07d3ca4892d1d3301>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-24 19:40 (JST)
+
+
+------
+
+Revert "Amendment to test"
+
+:commit:
+    `237dcc0 <https://github.com/Juris-M/citeproc-js/commit/237dcc071f745931331260b1ad1ecf6399a72ebd>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-24 19:39 (JST)
+
+This reverts commit c3aa39a848e0e06762a11d466ecc4636b014957b.
+
+
+------
+
+Update standard fixtures
+
+:commit:
+    `07fbe84 <https://github.com/Juris-M/citeproc-js/commit/07fbe848e39962301d5f6c23984b6b52d78da6be>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-24 19:34 (JST)
+
+
+------
+
+Update style fixtures
+
+:commit:
+    `7252173 <https://github.com/Juris-M/citeproc-js/commit/7252173f949939381d1a85a14b318bb7aaba851b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-24 19:33 (JST)
+
+
+------
+
+Amendment to test
+
+:commit:
+    `c3aa39a <https://github.com/Juris-M/citeproc-js/commit/c3aa39a848e0e06762a11d466ecc4636b014957b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-24 19:30 (JST)
+
+
+------
+
+Two additional tests
+
+:commit:
+    `02e270d <https://github.com/Juris-M/citeproc-js/commit/02e270d7a78325092c1b5acf09ac66b72c3a9491>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-24 19:18 (JST)
+
+
+------
+
+Create parallel blobs array at instantiation
+
+:commit:
+    `79cd149 <https://github.com/Juris-M/citeproc-js/commit/79cd14975fc153651339da8f6c18c00802fd9d1f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-08-24 19:16 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.21
+
+:commit:
+    `67d6c60 <https://github.com/Juris-M/citeproc-js/commit/67d6c6003e00259dc9192dd8f6f81fd91745293a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-31 08:31 (JST)
+

@@ -1,0 +1,78 @@
+========================================================
+1.2.34-1.2.35
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Add missing bundles
+
+:commit:
+    `a0d4d48 <https://github.com/Juris-M/citeproc-js/commit/a0d4d48701271c4660b45ac79794d40d5710fcda>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-22 09:38 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.35
+
+:commit:
+    `6d223a8 <https://github.com/Juris-M/citeproc-js/commit/6d223a8e2ab63ed8180c6d922274a66eb31616cd>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-22 09:37 (JST)
+
+
+------
+
+Improvements to numeric handling
+
+:commit:
+    `bef5c37 <https://github.com/Juris-M/citeproc-js/commit/bef5c3771c31ccc032a56f0fe22c7a1252b099c3>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-22 09:32 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `45d8730 <https://github.com/Juris-M/citeproc-js/commit/45d8730e5b59f5696125b01324a6e2f63a8718fc>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-22 06:40 (JST)
+
+
+------
+
+Bump NPM version
+
+:commit:
+    `22d6c78 <https://github.com/Juris-M/citeproc-js/commit/22d6c78f8114688eaf84fef70d5b6d90d6c9c7fd>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-13 16:01 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.34
+
+:commit:
+    `0e85d55 <https://github.com/Juris-M/citeproc-js/commit/0e85d55598d90101bde1718dbcacf087b20520a3>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-13 15:59 (JST)
+

@@ -1,0 +1,66 @@
+========================================================
+1.2.30-1.2.31
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.31
+
+:commit:
+    `3389e9b <https://github.com/Juris-M/citeproc-js/commit/3389e9b23a1873c1bb0af16eef7533aefd669701>`_
+:author:
+    Frank Bennett
+:date:
+    2020-01-16 18:11 (JST)
+
+
+------
+
+Tests for two failure conditions
+
+:commit:
+    `a00ae1b <https://github.com/Juris-M/citeproc-js/commit/a00ae1be4af2502a423405399141dbea93395eaa>`_
+:author:
+    Frank Bennett
+:date:
+    2020-01-16 18:11 (JST)
+
+
+------
+
+Tweaks to is-numeric test, treat -main and -sub vars as multi
+
+:commit:
+    `5a080f7 <https://github.com/Juris-M/citeproc-js/commit/5a080f7ae06d41109bb99d52a29f519eec6ce04d>`_
+:author:
+    Frank Bennett
+:date:
+    2020-01-16 18:08 (JST)
+
+
+------
+
+Do not treat locator-extra as a number is-numeric test
+
+:commit:
+    `0a2beb4 <https://github.com/Juris-M/citeproc-js/commit/0a2beb480723e23d200aa92d6e8f8a5e026aae4d>`_
+:author:
+    Frank Bennett
+:date:
+    2020-01-16 17:55 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.30
+
+:commit:
+    `1aa49dd <https://github.com/Juris-M/citeproc-js/commit/1aa49dd2ab9a1c85d3060073780d65c86754a438>`_
+:author:
+    Frank Bennett
+:date:
+    2019-12-18 20:19 (JST)
+

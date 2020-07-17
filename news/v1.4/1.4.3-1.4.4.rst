@@ -1,0 +1,42 @@
+========================================================
+1.4.3-1.4.4
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.4
+
+:commit:
+    `1930ce9 <https://github.com/Juris-M/citeproc-js/commit/1930ce910acb334e26d6d09832baa3e4f7832e4c>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 21:04 (JST)
+
+
+------
+
+Yet more bugfixes for placeholder labels
+
+:commit:
+    `cb704a2 <https://github.com/Juris-M/citeproc-js/commit/cb704a2741ecf353a5036c5bff4b3d4da8498676>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 21:02 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.3
+
+:commit:
+    `0ad18f4 <https://github.com/Juris-M/citeproc-js/commit/0ad18f4ef9b8345facde71ca2baa0a8d49e2d5e9>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 06:52 (JST)
+

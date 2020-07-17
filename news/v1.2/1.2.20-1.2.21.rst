@@ -1,0 +1,42 @@
+========================================================
+1.2.20-1.2.21
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.21
+
+:commit:
+    `67d6c60 <https://github.com/Juris-M/citeproc-js/commit/67d6c6003e00259dc9192dd8f6f81fd91745293a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-31 08:31 (JST)
+
+
+------
+
+Block implicit short title on numeric "main" title
+
+:commit:
+    `51fc093 <https://github.com/Juris-M/citeproc-js/commit/51fc093631b7443aa182e866246ac0a1a6b257d2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-31 08:29 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.20
+
+:commit:
+    `f6fce9e <https://github.com/Juris-M/citeproc-js/commit/f6fce9ee45cc66a3fcbffd06d01dad93a0709f44>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-22 08:04 (JST)
+

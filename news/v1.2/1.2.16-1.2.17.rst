@@ -1,0 +1,54 @@
+========================================================
+1.2.16-1.2.17
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.17
+
+:commit:
+    `f13ccf7 <https://github.com/Juris-M/citeproc-js/commit/f13ccf7b2e14c4b6665138a4f9820f9780965160>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-16 14:32 (JST)
+
+
+------
+
+Allow passthrough of irrational ranges with page-range-format="minimal"
+
+:commit:
+    `8139c07 <https://github.com/Juris-M/citeproc-js/commit/8139c07d91ddd459ddf93263189bb15d3fd6a03e>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-16 14:25 (JST)
+
+
+------
+
+Update README with a note on how the processor is built
+
+:commit:
+    `98a9b8d <https://github.com/Juris-M/citeproc-js/commit/98a9b8d9ec2098f078c82ccaaabe6ba9f771cc1c>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-16 10:43 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `d5e994e <https://github.com/Juris-M/citeproc-js/commit/d5e994e015dc48211ae33f3a974673eae503b4f2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-14 23:38 (JST)
+
