@@ -1083,17 +1083,17 @@ The predefined conditions are as follows:
 ``comma-safe``
    
     True (for ``require``) if:
-        1. The ``term text'' (a ``cs:label`` variable, or a ``cs:text`` value or term) is empty
+        1. The ``term text`` (a ``cs:label`` variable, or a ``cs:text`` value or term) is empty
            (or not present) *and* the immediately preceding rendered
            element ended in a number; or
-        2. The ``term text'' is a ``cs:label`` variable with a value, and begins with a ``romanesque''
+        2. The ``term text`` is a ``cs:label`` variable with a value, and begins with a ``romanesque``
            character.
         
     False (for ``require``) if:
-        1. The ``term text'' is
+        1. The ``term text`` is
            empty *and* the immediately preceding rendered element did
            *not* end in a number; or
-        2. The ``term text'' is a non-falsey ``cs:text`` value or term; or
+        2. The ``term text`` is a non-falsey ``cs:text`` value or term; or
         3. The ``term text`` is a ``cs:label`` variable that does *not* start with
            a ``romanesque`` character.
         
