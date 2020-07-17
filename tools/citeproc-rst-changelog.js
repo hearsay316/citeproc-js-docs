@@ -21,7 +21,7 @@ function getPairs(tags) {
         skip = false;
 		var mytag = tag.replace(/^v/, "");
 		var startswith = mytag.slice(0, 4);
-		if (["1.1.", "1.2."].indexOf(startswith) === -1) {
+		if (["1.1.", "1.2.", "1.3.", "1.4."].indexOf(startswith) === -1) {
 			continue;
 		}
 		var splt = tag.split(".");
@@ -35,7 +35,7 @@ function getPairs(tags) {
         if (skip) {
             continue;
         }
-        if ([1, 2].indexOf(splt[1]) === -1) {
+        if ([1, 2, 3, 4].indexOf(splt[1]) === -1) {
             continue
         }
 		while (splt.length < 3) {
@@ -122,13 +122,19 @@ function run () {
     var logIdx = {};
     logIdx["1"] = setIndexHeader("1");
     logIdx["2"] = setIndexHeader("2");
+    logIdx["3"] = setIndexHeader("3");
+    logIdx["4"] = setIndexHeader("4");
     for (var pair of pairs) {
         var logname = pair.join("-");
-        var version = logname.replace(/v?1\.([12])\..*/, "$1");
+        var version = logname.replace(/v?1\.([1234])\..*/, "$1");
         if (version === "1") {
             outdir="../docs/news/v1.1"
         } else if (version === "2") {
             outdir="../docs/news/v1.2"
+        } else if (version === "3") {
+            outdir="../docs/news/v1.3"
+        } else if (version === "4") {
+            outdir="../docs/news/v1.4"
         } else {
             console.log("Boom "+version);
             process.exit();
@@ -143,6 +149,10 @@ function run () {
     fs.writeFileSync(outFile, logIdx["1"]);
     var outFile =  path.join(docsPath, "news", "v1.2", "index.rst");
     fs.writeFileSync(outFile, logIdx["2"]);
+    var outFile =  path.join(docsPath, "news", "v1.3", "index.rst");
+    fs.writeFileSync(outFile, logIdx["3"]);
+    var outFile =  path.join(docsPath, "news", "v1.4", "index.rst");
+    fs.writeFileSync(outFile, logIdx["4"]);
 }
 
 run();

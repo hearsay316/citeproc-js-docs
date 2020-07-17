@@ -7,6 +7,18 @@
 
 ------
 
+Update docs
+
+:commit:
+    `d5e994e <https://github.com/Juris-M/citeproc-js/commit/d5e994e015dc48211ae33f3a974673eae503b4f2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-14 23:38 (JST)
+
+
+------
+
 Bump version, update CHANGES, bundle as 1.2.16
 
 :commit:
