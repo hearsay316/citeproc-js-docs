@@ -52,51 +52,64 @@ Enter the directory and set up the test framework::
 
     cd citeproc-js
     npm install
+    npm link
 
 You can now run the test script::
       
-    node ./tests/runtests.js
+    cslrun
 
 When run without options, or with the ``-h`` option, the script returns a help text::
 
-    Usage: runtests.js <-s testName|-g groupName|-a|-l> [-S styleName|-w cslFilePath|-C cslJsonFilePath]
+Usage: cslrun <-s testName|-g groupName|-a|-l> [-S styleName|-w cslFilePath|-C cslJsonFilePath]
+
+  Testing options (exactly one MUST be used):
       -s testName, --single=testName
           Run a single local or standard test fixture.
       -g groupName, --group=groupName
           Run a group of tests with the specified prefix.
       -a, --all
           Run all tests.
-      Option for use with -s, -g, or -a:
-          -c, --cranky
-              Validate CSL in selected fixtures
-          -b, --black-and-white
-              Disable color output
-          -r, --reporter
-              Set the report style. Default is "landing."
-              Valid options are: spec, spectrum, nyan, dot, min
-              and progress.
-      Options for style development with -s, -g, or -a:
-          -S, --style
-              Style name (without spaces). Without -C, requires -w.
-          -w, --watch
-              Path to CSL source file watch for changes, relative to
-              repository root. Without -C, requires -S.
-          Option for use with -s, -g, or -a with -S and -w:
-              -k, --key-query
-                  When tests fail, stop processing and ask whether to
-                  adopt the processor output as the RESULT. Useful for
-                  rapidly back-fitting tests to existing styles.
-          Option for use with -S:
-              -C, --compose-tests
-                  Path to CSL JSON file containing item data, relative
-                  to repository root. Requires also -S. Creates draft
-                  test fixtures in -S style test directory. Existing
-                  files will be overwritten: be sure to rename files
-                  after generating draft fixtures.
-      Option for use on its own, or with -S  
-              -l, --list
-                  List available groups and styles.
-
+  Options for style development:
+      -w, --watch
+          Path to CSL source file watch for changes, relative to
+          repository root.
+      -U, --update
+          Update style tests from collection in JM Style Samples.
+      -k, --key-query (used with -w)
+          When tests fail, stop processing and ask whether to
+          adopt the processor output as the RESULT. Useful for
+          rapidly generating tests for existing styles.
+      -A, --abbreviations
+          Path to abbreviation files, such as a clone of jurism-abbreviations:
+            https://github.com/Juris-M/jurism-abbreviations
+      -S, --style
+          Override name of test set. (Allows use of tests not
+          orginally composed for the CSL file designated by -w)
+      -C, --compose-tests
+          (Discontinued. Open a collection in JM Style Tests and
+          use the -U option instead.)
+  Miscellaneous options:
+      -F, --final
+          Use the published-items library (default)
+      -D, --draft
+          Use the submissions library
+      -c, --cranky
+          Validate CSL in selected fixtures instead of running
+          tests.
+      -O, --once
+          Use with the -w option. Exits immediately after running tests.
+      -N, --novalidation
+          Do not validate before running tests.
+      -b, --black-and-white
+          Disable color output
+      -r, --reporter
+          Set the report style. Default is "landing."
+          Built-in options are: spec, dot, min, progress.
+          If installed via npm, nyanplusreporter (as "nyan")
+          and mocha-spectrum-reporter (as "spectrum") are also
+          available.
+      -l, --list
+          List available groups and styles.
 
 Run the script with the ``-a`` option to run all tests, or select a
 specific test or a group of tests with the ``-s`` or ``g`` options
@@ -108,13 +121,13 @@ option. Individual tests are located in two directories:
 
 To specify an individual test, use its base filename::
 
-    ``node tests/runtests.js -s sort_LatinUnicode``
+    ``cslrun -s sort_LatinUnicode``
 
 For extra fun, draft an advance letter of apology to nearby friends,
 relations and colleagues, turn up your speaker volume, and run
 the full test suite with the Nyan Plus Reporter option::
 
-    node ./tests/runtests.js -a -r nyan
+    cslrun -a -r nyan
 
 .. image:: _static/images/nyan.png
     
@@ -122,7 +135,7 @@ the full test suite with the Nyan Plus Reporter option::
 Watch mode tutorial
 -------------------
 
-The ``runtests.js`` script supports a simple but powerful “watch” mode
+The ``cslrun`` script supports a simple but powerful “watch” mode
 for use in style development. In the scenario below, we will prepare
 tests for the Journal Irreproducible Results (JIR). The journal
 `exists <http://www.jir.com/>`_, but as there is no CSL style for it
@@ -150,12 +163,12 @@ I will do two things in preparation for work on the JIR style:
   testing the style, and export the full set of items
   to a file, in CSL JSON format.
 
-I am now ready to begin working with the ``runtests.js`` script.
+I am now ready to begin working with the ``cslrun`` script.
 The first step is to generate ``citeproc`` test fixtures for
-each of the exported library items. ``runtests.js`` can do
+each of the exported library items. ``cslrun`` can do
 this for me, with options like the following::
 
-  node ./tests/runtests.js \
+  cslrun \
        -C path/to/exported-items.json \
        -S journal-of-irreproducible-results
   
@@ -163,7 +176,7 @@ I now have a set of boilerplate tests that will fail miserably,
 but those that pass can be quickly converted to passing
 tests, using the ``-k`` option like this::
 
-  node ./tests/runtests.js \
+  cslrun \
        -S journal-of-irreproducible-results \
        -w ../somepath/journal-of-irreproducible-results.csl \
        -a \
@@ -197,7 +210,7 @@ to watch the style file when I am making changes to it. The command
 for that is the same as for rapid “editing” of the fixtures, but
 without the ``-k`` option.::
   
-  node ./tests/runtests.js \
+  node cslrun \
        -S journal-of-irreproducible-results \
        -w ../somepath/journal-of-irreproducible-results.csl \
        -a
