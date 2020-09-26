@@ -119,9 +119,9 @@ variable (**Legis. Body** in MLZ).
      </if>
    </choose>
    
-================================
-``legal-commentary`` (extension)
-================================
+==================================
+``legal-commentary`` |(extension)|
+==================================
 
 The ``legal-commentary`` type carries the same fields as
 ``chapter``, but as a separate type, it enables separate
@@ -626,13 +626,13 @@ under `suppress-min (extension)`_.
 ``commenter`` |(extension)|
 ===========================
 
-The ``commenter`` variable is handled as a name.
+The ``commenter`` variable is available as a name.
 
 ===========================
 ``contributor`` |(extension)|
 ===========================
 
-The ``contributor`` variable is handled as a name.
+The ``contributor`` variable is available as a name.
 
 ===========================
 ``committee`` |(extension)|
@@ -647,6 +647,20 @@ The ``committee`` variable is handled as a string.
 The ``document-name`` variable is available on the ``legal_case`` type,
 and it used for the title of documents filed in court in the context of a given
 case. It is handled as a string.
+
+=======================================================
+``first-container-reference-note-number`` |(extension)|
+=======================================================
+
+The ``first-container-reference-note-number`` has a value only on
+items for which tracking has been enable via the ``track-container-items``
+attribute on ``cs:style`` or implicitly by the ``consolidate-containers``
+attribute on ``cs:bibliography``. Its value is the first note number
+citing to the same container as the current item.
+
+Note that if the container is cited explicitly (as ``title``, not as
+``container-title``), this variable will not point at that item,
+but at the first matching item of the same type.
 
 ===============================
 ``language-name`` |(extension)|
@@ -901,9 +915,9 @@ test attribute.
 Attributes
 %%%%%%%%%%
 
-=====================================
-``track-container-items`` (extension)
-=====================================
+=======================================
+``track-container-items`` |(extension)|
+=======================================
 
 The ``track-container-items`` attribute can be set on ``cs:style``, and
 takes a list of item types as argument. For the designated item types,
@@ -914,18 +928,18 @@ The ``consolidate-containers`` attribute on ``cs:bibliography``
 implicitly sets tracking as well, and the tracking list set by the two is
 cumulative.
 
-======================================
-``consolidate-containers`` (extension)
-======================================
+========================================
+``consolidate-containers`` |(extension)|
+========================================
 
 The ``consolidate-containers`` attribute can be set on ``cs:bibliography``, and
 takes a list of item types as argument. For the designated item types, it
 implicitly invokes ``track-container-types``, and renders only a single item
 in the bibliography for each container in the input.
 
-==================================================
-``disable-duplicate-year-suppression`` (extension)
-==================================================
+====================================================
+``disable-duplicate-year-suppression`` |(extension)|
+====================================================
 
 By default, when the numeric value of ``collection-title`` exactly matches
 a subsequent rendering of ``issued`` with ``date-parts="year"``, the latter
@@ -1493,9 +1507,9 @@ The counterpart to ``position="near-note"`` that evaluates ``true`` if the
 cite is more than ``near-note-distance`` from the last preceding reference
 to the item.
 
-====================================
-``container-item-count`` (extension)
-====================================
+======================================
+``container-item-count`` |(extension)|
+======================================
 
 The ``container-item-count`` condition takes a single integer as argument
 (typically ``1``). It is meaningful only in the context of ``cs:bibliography``.
@@ -1505,9 +1519,9 @@ on ``cs:style``, or implicitly by the ``consolidate-containers`` attribute on
 the container (whether consolidated in the bibliography or not) exactly equals
 the value of the argument.
 
-=================================
-``strict-subsequent`` (extension)
-=================================
+===================================
+``strict-subsequent`` |(extension)|
+===================================
 
 The ``strict-subsequent`` condition takes a single argument of ``true``,
 and defaults to ``false``. It is meaningful only in the context of ``cs:citation``
