@@ -920,10 +920,9 @@ Attributes
 =======================================
 
 The ``track-container-items`` attribute can be set on ``cs:style``, and
-takes a list of item types as argument. For the designated item types,
-the ``subsequent`` condition will behave as described under the ``strict-subseqent``
-condition, and a count of items within containers of the designated item type
-will be available for use by the ``container-item-count`` condition.
+takes a list of item types as argument. A count of items within containers
+of the designated item type will be available for use by the
+``container-item-count`` condition.
 The ``consolidate-containers`` attribute on ``cs:bibliography``
 implicitly sets tracking as well, and the tracking list set by the two is
 cumulative.
@@ -1507,6 +1506,17 @@ The counterpart to ``position="near-note"`` that evaluates ``true`` if the
 cite is more than ``near-note-distance`` from the last preceding reference
 to the item.
 
+=================================================
+``position="container-subsequent"`` |(extension)|
+=================================================
+
+The ``container-subsequent`` argument to the ``position`` test
+may be invoked after at test for ``subsequent``. It evaluates
+``true`` for item types enabled for tracking via the ``track-container-items`` attribute
+on ``cs:style``, or implicitly by the ``consolidate-containers`` attribute on
+``cs:bibliography``, where the cited item, even if a first reference to
+the specific item, is in the same container as a previously cited item.
+
 ======================================
 ``container-item-count`` |(extension)|
 ======================================
@@ -1518,20 +1528,6 @@ on ``cs:style``, or implicitly by the ``consolidate-containers`` attribute on
 ``cs:bibliography``, the condition is ``true`` if the number of items matching
 the container (whether consolidated in the bibliography or not) exactly equals
 the value of the argument.
-
-===================================
-``strict-subsequent`` |(extension)|
-===================================
-
-The ``strict-subsequent`` condition takes a single argument of ``true``,
-and defaults to ``false``. It is meaningful only in the context of ``cs:citation``
-with the context of a ``subsequent`` condition, and takes effect only for item types
-enabled for tracking via the ``track-container-items`` attribute on ``cs:style``,
-or implicitly by the ``consolidate-containers`` attribute on ``cs:bibliography``.
-For such items, the ``subsequent`` test is ``true`` for items subsequent to
-the last item *sharing the same container*. The ``strict-subsequent`` test
-permits special rendering for items that are subsequent to a specific item
-(such as a specific chapter of a book cited previously).
 
 =========================
 ``context`` |(extension)|
