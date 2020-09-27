@@ -653,7 +653,7 @@ case. It is handled as a string.
 =======================================================
 
 The ``first-container-reference-note-number`` has a value only on
-items for which tracking has been enable via the ``track-container-items``
+items for which tracking has been enable via the ``track-containers``
 attribute on ``cs:style`` or implicitly by the ``consolidate-containers``
 attribute on ``cs:bibliography``. Its value is the first note number
 citing to the same container as the current item.
@@ -915,14 +915,14 @@ test attribute.
 Attributes
 %%%%%%%%%%
 
-=======================================
-``track-container-items`` |(extension)|
-=======================================
+==================================
+``track-containers`` |(extension)|
+==================================
 
-The ``track-container-items`` attribute can be set on ``cs:style``, and
+The ``track-containers`` attribute can be set on ``cs:style``, and
 takes a list of item types as argument. A count of items within containers
 of the designated item type will be available for use by the
-``container-item-count`` condition.
+``container-multiple`` condition.
 The ``consolidate-containers`` attribute on ``cs:bibliography``
 implicitly sets tracking as well, and the tracking list set by the two is
 cumulative.
@@ -933,7 +933,7 @@ cumulative.
 
 The ``consolidate-containers`` attribute can be set on ``cs:bibliography``, and
 takes a list of item types as argument. For the designated item types, it
-implicitly invokes ``track-container-types``, and renders only a single item
+implicitly invokes ``track-containers``, and renders only a single item
 in the bibliography for each container in the input.
 
 ====================================================
@@ -1512,31 +1512,31 @@ to the item.
 
 The ``container-subsequent`` argument to the ``position`` test
 may be invoked after a test for ``subsequent``. It evaluates
-``true`` for item types enabled for tracking via the ``track-container-items`` attribute
+``true`` for item types enabled for tracking via the ``track-containers`` attribute
 on ``cs:style``, or implicitly by the ``consolidate-containers`` attribute on
 ``cs:bibliography``, where the cited item, even if a first reference to
 the specific item, is in the same container as a previously cited item.
 
-======================================
-``container-item-multiple`` |(extension)|
-======================================
+====================================
+``container-multiple`` |(extension)|
+====================================
 
-The ``container-item-multiple`` condition takes ``true`` or ``false`` as argument
+The ``container-multiple`` condition takes ``true`` or ``false`` as argument
 (typically ``true``). It is meaningful only in the context of ``cs:bibliography``.
-For item types enabled for tracking via the ``track-container-items`` attribute
+For item types enabled for tracking via the ``track-containers`` attribute
 on ``cs:style``, or implicitly by the ``consolidate-containers`` attribute on
 ``cs:bibliography``, at test with ``true`` evaluates ``true`` if more than one item matches
 the container (whether consolidated in the bibliography or not).
 
-======================================================
-``container-subsequent-in-bibliography`` |(extension)|
-======================================================
+======================================
+``container-subsequent`` |(extension)|
+======================================
 
 In the context of ``cs:bibliography``, the
-``container-subsequent-in-bibliography`` test with argument ``true``
+``container-subsequent`` test with argument ``true``
 evaluates true if the item if the entry is preceded by another from
 the same container. It is meaningful only for item types enabled for
-tracking via the ``track-container-items`` attribute on ``cs:style``,
+tracking via the ``track-containers`` attribute on ``cs:style``,
 or implicitly by the ``consolidate-containers`` attribute on
 ``cs:bibliography``
 
