@@ -120,10 +120,10 @@ variable (**Legis. Body** in MLZ).
    </choose>
    
 ==================================
-``legal-commentary`` |(extension)|
+``legal_commentary`` |(extension)|
 ==================================
 
-The ``legal-commentary`` type carries the same fields as
+The ``legal_commentary`` type carries the same fields as
 ``chapter``, but as a separate type, it enables separate
 control via the ``consolidate-containers`` attribute, q.v.
 
