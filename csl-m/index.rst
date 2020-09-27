@@ -1511,7 +1511,7 @@ to the item.
 =================================================
 
 The ``container-subsequent`` argument to the ``position`` test
-may be invoked after at test for ``subsequent``. It evaluates
+may be invoked after a test for ``subsequent``. It evaluates
 ``true`` for item types enabled for tracking via the ``track-container-items`` attribute
 on ``cs:style``, or implicitly by the ``consolidate-containers`` attribute on
 ``cs:bibliography``, where the cited item, even if a first reference to
@@ -1528,6 +1528,18 @@ on ``cs:style``, or implicitly by the ``consolidate-containers`` attribute on
 ``cs:bibliography``, the condition is ``true`` if the number of items matching
 the container (whether consolidated in the bibliography or not) exactly equals
 the value of the argument.
+
+======================================================
+``container-subsequent-in-bibliography`` |(extension)|
+======================================================
+
+In the context of ``cs:bibliography``, the
+``container-subsequent-in-bibliography`` test with argument ``true``
+evaluates true if the item if the entry is preceded by another from
+the same container. It is meaningful only for item types enabled for
+tracking via the ``track-container-items`` attribute on ``cs:style``,
+or implicitly by the ``consolidate-containers`` attribute on
+``cs:bibliography``
 
 =========================
 ``context`` |(extension)|
