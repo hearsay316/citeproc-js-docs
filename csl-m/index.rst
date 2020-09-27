@@ -1518,16 +1518,15 @@ on ``cs:style``, or implicitly by the ``consolidate-containers`` attribute on
 the specific item, is in the same container as a previously cited item.
 
 ======================================
-``container-item-count`` |(extension)|
+``container-item-multiple`` |(extension)|
 ======================================
 
-The ``container-item-count`` condition takes a single integer as argument
-(typically ``1``). It is meaningful only in the context of ``cs:bibliography``.
+The ``container-item-multiple`` condition takes ``true`` or ``false`` as argument
+(typically ``true``). It is meaningful only in the context of ``cs:bibliography``.
 For item types enabled for tracking via the ``track-container-items`` attribute
 on ``cs:style``, or implicitly by the ``consolidate-containers`` attribute on
-``cs:bibliography``, the condition is ``true`` if the number of items matching
-the container (whether consolidated in the bibliography or not) exactly equals
-the value of the argument.
+``cs:bibliography``, at test with ``true`` evaluates ``true`` if more than one item matches
+the container (whether consolidated in the bibliography or not).
 
 ======================================================
 ``container-subsequent-in-bibliography`` |(extension)|
