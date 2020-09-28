@@ -76,31 +76,6 @@ but not of course within it.
      </if>
    </choose>
 
-
-
-=========================
-``gazette`` |(extension)|
-=========================
-
-Use the ``gazette`` type for instruments published through an official
-gazette. Typical use cases would be cites to amending acts, to the initial
-version of legislation, or to orders and other instruments that are not
-available from other official sources. For consolidated acts or codified
-statutes or regulations, use the ``legislation`` (MLZ **Statute**) or
-``regulation`` (MLZ **Regulation**) types instead.
-
-.. sourcecode:: xml
-
-   <choose>
-     <if type="gazette">
-        <text macro="gazette-mac"/>
-     </if>
-   </choose>
-
-The format of gazette citations may vary among jurisdictions. Test the
-``jurisdiction`` variable (see below) to discriminate between citation
-forms.
-
 =========================
 ``hearing`` |(extension)|
 =========================
@@ -1766,15 +1741,15 @@ Label              Abbreviation            Label              Abbreviation
 ``article``        ``art.``                ``paragraph``      ``para.``
 ``book``           ``bk.``                 ``subparagraph``   ``subpara.``
 ``chapter``        ``ch.``                 ``part``           ``pt.``            
-``subchapter``     ``subch.``              ``rule``           ``r.``             
-``column``         ``col.``                ``section``        ``sec.``           
-``figure``         ``fig.``                ``subsection``     ``subsec.``        
-``folio``          ``fol.``                ``sub-verbo``      ``sv.`` 
-``line``           ``l.``                  ``schedule``       ``sch.``           
-``note``           ``n.``                  ``title``          ``tit.``           
-``issue``          ``no.``                 ``verse``          ``vrs.``           
-``opus``           ``op.``                 ``volume``         ``vol.``
-``page``           ``p.`` or ``pp.``       
+``subchapter``     ``subch.``              ``randnummer``     ``rn.``
+``column``         ``col.``                ``rule``           ``r.``             
+``figure``         ``fig.``                ``section``        ``sec.``           
+``folio``          ``fol.``                ``subsection``     ``subsec.``   
+``line``           ``l.``                  ``sub-verbo``      ``sv.``            
+``note``           ``n.``                  ``schedule``       ``sch.``           
+``issue``          ``no.``                 ``title``          ``tit.``           
+``opus``           ``op.``                 ``verse``          ``vrs.``
+``page``           ``p.`` or ``pp.``       ``volume``         ``vol.``
 =================  =================       =================  ==============       
 
 .. raw:: html
@@ -1790,8 +1765,35 @@ terms in the context of the first item in a parallel reference.
 Decommissioned features
 %%%%%%%%%%%%%%%%%%%%%%%
 
-The features below were formerly documented here, but no longer exist.
-The reason for withdrawal is given in /italics/ at the top of each entry.
+The features below were formerly documented here, but no longer exist
+or have been deprecated. The reason for withdrawal is given in
+/italics/ at the top of each entry.
+
+=========================
+``gazette`` |(extension)|
+=========================
+
+- *This type is deprecated. Use the ``legislation`` type instead, with
+  a value set in the ``gazette-flag`` variable.*
+
+Use the ``gazette`` type for instruments published through an official
+gazette. Typical use cases would be cites to amending acts, to the initial
+version of legislation, or to orders and other instruments that are not
+available from other official sources. For consolidated acts or codified
+statutes or regulations, use the ``legislation`` (MLZ **Statute**) or
+``regulation`` (MLZ **Regulation**) types instead.
+
+.. sourcecode:: xml
+
+   <choose>
+     <if type="gazette">
+        <text macro="gazette-mac"/>
+     </if>
+   </choose>
+
+The format of gazette citations may vary among jurisdictions. Test the
+``jurisdiction`` variable (see below) to discriminate between citation
+forms.
 
 =======================
 ``dummy`` |(extension)|
@@ -1801,7 +1803,7 @@ The reason for withdrawal is given in /italics/ at the top of each entry.
   used, and the more so because the purpose of
   the special variable is not apparent on the surface. If something like
   this were to be implemented, it should be done by adding an attribute
-  to* ``cs:names``.
+  to* ``cs:names``. *It is deprecated in* ``citeproc-js``.
 
 The ``dummy`` name variable is always empty. Use it to force *all*
 name variables called through a ``cs:names`` node to render through
