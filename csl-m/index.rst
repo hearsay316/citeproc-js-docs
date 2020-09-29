@@ -1110,34 +1110,37 @@ set in the ``locator`` field.)
 
 The predefined conditions are as follows:
    
-``comma-safe``
-   
-    True (for ``require``) if:
-        1. The ``term text`` (a ``cs:label`` variable, or a ``cs:text`` value or term) is empty
-           (or not present) *and* the immediately preceding rendered
-           element ended in a number; or
-        2. The ``term text`` is a ``cs:label`` variable with a value, and begins with a ``romanesque``
-           character.
-        
-    False (for ``require``) if:
-        1. The ``term text`` is
-           empty *and* the immediately preceding rendered element did
-           *not* end in a number; or
-        2. The ``term text`` is a non-falsey ``cs:text`` value or term; or
-        3. The ``term text`` is a ``cs:label`` variable that does *not* start with
-           a ``romanesque`` character.
-        
-``empty-label``
-              
-    True (for ``require``) if:
-        1. The ``term text`` is empty.
-    
-``empty-label-no-decor``
-                 
-       True (for ``require``) if:
-          1. The ``term text`` is empty *or* the ``term text`` contains a placeholder
-             (``%s``) as a term with ``form="static"``.
+``comma-safe``: evaluates ``true`` for ``require`` under the following conditions:
 
+    1. when the group is immediately preceded by a number (taking suffixes
+       and ``vertical-align`` styling into account) *and*
+    
+      1. the group does not set a localized term *and* the group does not
+         begin with a literal value set with ``cs:text``, *or*
+      2. the group begins with a "romanesque" localized term, *or*
+      3. the ``require-comma-on-symbol`` locale attribute is set to
+         ``always`` or ``after-number`` *or*
+    
+    2. when the group is immediately preceded by a non-number (taking affixes
+       and ``vertical-align`` styling into account) *and*
+    
+       1. the group begins with a "romanesque" localized term, *or*
+       2. the ``require-comma-on-symbol`` locale attribute is set to ``always``.
+        
+``comma-safe-numbers-only``: evaluates ``true`` for ``require`` under the following conditions:
+
+    1. when the group is immediately preceded by a number (taking suffixes
+       and ``vertical-align`` styling into account) *and*
+
+      1. the group does not set a localized term *and* the group does not
+         begin with a literal value set with ``cs:text``, *or*
+      2. the group begins with a "romanesque" localized term, *or*
+      3. the ``require-comma-on-symbol`` locale attribute is set to
+         ``always`` or ``after-number`` *or*
+
+       
+(Note: The ``empty-label``  and ``empty-label-no-decor`` tests previously documented
+here are deprecated.)
 
 
 ============================
