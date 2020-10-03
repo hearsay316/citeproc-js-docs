@@ -1011,58 +1011,71 @@ of Citation*.
 ============================================
 Parallel citation and suppressing repetition
 ============================================
-   
------------------------------
-``is-parallel`` |(extension)|
------------------------------
 
-Set on a ``cs:group`` node, the ``is-parallel`` attribute includes or
-suppresses the content of the entire group node depending on its
-position in a parallel citation. Items form a parallel citation when:
-\(a) they are immediately adjacent \(b) they carry a recognized list
-of related item IDs in their input data, and \(c) the list of related
-IDs includes the ID of an item immediately before or after the cited
-item. Two values are recognised on the attribute:
+--------------------------------
+``parallel-first`` |(extension)|
+--------------------------------
 
-``first``
-    The group is rendered by default. In parallel-citation context,
-    the group is rendered only if the cite is the first of the
-    parallel series.
+The ``parallel-first`` attribute on ``cs:group`` takes a list of variables
+as argument, and takes effect only on a consecutive series of cites
+within a citation that a members of a related group, where group membership
+is determined from a list of IDs on the first cite in each series.
 
-``last``
-    The group is rendered by default. In the parallel-cite context,
-    the group is rendered only if the cite is the last of the
-    parallel series.
+The effect of ``parallel-first`` is to suppress the group if the
+values of *all* of the listed variables match those in the immediately
+preceding cite.
 
-----------------------------
-``changes-in`` |(extension)|
-----------------------------
+--------------------------------
+``parallel-last`` |(extension)|
+--------------------------------
 
-The ``changes-in`` attribute is valid on ``cs:group`` elements.  It
-takes effect only when used with ``is-parallel``. Its argument a list
-of variable names. Its effect is to override the effect of
-``is-parallel``, if there is a change from the previous parallel cite
-in one or more of the variables set in its argument.
+Like its counterpart above, the ``parallel-last`` attribute on
+``cs:group`` takes a list of variables as argument, and takes effect
+only on a consecutive series of cites within a citation that a members
+of a related group, where group membership is determined from a list
+of IDs on the first cite in each series.
+
+The effect of ``parallel-last`` is to suppress the group if the
+values of *all* of the listed variables match those in the immediately
+following cite.
+
+------------------------------------
+parallel-last-to-first |(extension)|
+------------------------------------
+
+The ``parallel-last-to-first`` attribute on ``cs:group`` takes a list
+of variables as argument. It changes the handling of the listed
+variables in *following* cites in a related series from
+``parallel-last`` to ``parallel-first``. 
 
 ---------------------------
 ``no-repeat`` |(extension)|
 ---------------------------
 
-The ``no-repeat`` attribute is valid on ``cs:group`` elements. It does
-not depend on the ``is-parallel`` attribute, and takes effect on an
-ordinary series of cites in a citation. The attribute blocks rendering
+The ``no-repeat`` attribute is valid on ``cs:group`` elements, and takes a list
+of variable names as argument. The attribute blocks rendering
 of the group if the variables given in its argument all have the same
-value as in the preceding cite.
+value as in the preceding cite. It takes effect only when the current
+cite is *not* a member of a related series.
 
 ---------------------------------------------
 ``parallel-delimiter-override`` |(extension)|
 ---------------------------------------------
 
-When used with the ``is-parallel`` or ``no-repeat`` attributes,
+When used with the ``parallel-first``, ``parallel-last``, or ``no-repeat`` attributes,
 ``parallel-delimiter-override`` replaces the layout delimiter joining
-parallel sibling cites, or cites for which ``no-repeat`` suppresses
-output. When set of one element with the ``is-parallel`` attribute,
-the layout delimiter will be overridden for all members of the series.
+all members of a related series, or cites for which ``no-repeat`` suppresses
+output.
+
+---------------------------------------------------------
+``parallel-delimiter-override-on-suppress`` |(extension)|
+---------------------------------------------------------
+
+When used with the ``parallel-first``, ``parallel-last``, or
+``no-repeat`` attributes, ``parallel-delimiter-override-on-suppress``
+replaces the layout delimiter joining parallel sibling cites for which
+the group is suppressed, and cites for which ``no-repeat`` suppresses
+output.
 
 
 ========================================
@@ -1103,40 +1116,47 @@ elements may follow, as in the following example:
      </group>
    </group>
 
-(Note that, for purposes of evaluation, the leading term used is the
-actual rendered field value, which may differ from the value of
-``locator-label`` set on item input, if a leading term shortcode is
-set in the ``locator`` field.)
+(Note that if a leading term shortcode is set in the ``locator``
+field, the leading term evaluated will be that set by the short-code,
+not the ``locator-label`` set on item input, .)
 
 The predefined conditions are as follows:
    
-``comma-safe``: evaluates ``true`` for ``require`` under the following conditions:
+``comma-safe``: evaluates ``true`` for ``require`` when *either* of
+the following two conditions is satisfied:
 
     1. when the group is immediately preceded by a number (taking suffixes
        and ``vertical-align`` styling into account) *and*
     
-      1. the group does not set a localized term *and* the group does not
-         begin with a literal value set with ``cs:text``, *or*
-      2. the group begins with a "romanesque" localized term, *or*
-      3. the ``require-comma-on-symbol`` locale attribute is set to
-         ``always`` or ``after-number`` *or*
+       1. **cs:text value:** the group begins with a literal string label
+          set with ``cs:text``; *or*
+       2. **no label:** the group does not render a localized term at all; *or*
+       2. **latin label:** the group begins with a "romanesque"
+          localized term (i.e. not a symbol); *or*
+       3. **force on symbol:** the ``require-comma-on-symbol`` locale attribute is set to
+          ``always`` or ``after-number``
     
     2. when the group is immediately preceded by a non-number (taking affixes
        and ``vertical-align`` styling into account) *and*
     
-       1. the group begins with a "romanesque" localized term, *or*
+       1. the group begins with a "romanesque" localized term; *or*
        2. the ``require-comma-on-symbol`` locale attribute is set to ``always``.
-        
-``comma-safe-numbers-only``: evaluates ``true`` for ``require`` under the following conditions:
+
+``comma-safe-numbers-only``: evaluates ``true`` for ``require`` under any of the following conditions:
 
     1. when the group is immediately preceded by a number (taking suffixes
-       and ``vertical-align`` styling into account) *and*
-
-      1. the group does not set a localized term *and* the group does not
-         begin with a literal value set with ``cs:text``, *or*
-      2. the group begins with a "romanesque" localized term, *or*
-      3. the ``require-comma-on-symbol`` locale attribute is set to
-         ``always`` or ``after-number`` *or*
+    and ``vertical-align`` styling into account); *and either*:
+       1. the group itself renders a number with no term label
+          (neither as a localized term nor as a ``cs:text`` literal
+          string); *or*
+       2. the group renders a number with a localized term label expressed as a symbol,
+          and the style attribute ``require-comma-on-symbol`` is set to
+          ``always`` or ``after-number``.
+    2. when the group is immediately preceded by a non-number (taking suffixes
+       and ``vertical-align`` styling into account); *and*:
+       1. the group renders a localized term label expressed as a symbol,
+          and the style attribute ``require-comma-on-symbol`` is set to
+          ``always``.
 
        
 (Note: The ``empty-label``  and ``empty-label-no-decor`` tests previously documented
