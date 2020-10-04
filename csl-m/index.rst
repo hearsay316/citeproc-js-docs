@@ -153,34 +153,6 @@ its value:
 
                 
 ================================
-``cs:alternative`` |(extension)|
-================================
-
-Use ``cs:alternative`` to add supplementary reference information to a
-cited item, such as a translation or reprint. Elements within the
-scope of ``cs:alternative`` are rendered only when the value of
-``language`` contains two valid ISO language codes joined by ``<`` or
-``>`` (to indicate the direction of translation). The two language
-codes may be identical.
-
-In a multi-layout style, elements within the scope of
-``cs:alternative`` are rendered in the primary locale associated with
-the target language code. Thus, if the input item has a ``language``
-value of ``en>zh``, and a multi-layout style has a layout with
-``locale="ja zh"``, elements within the scope of ``cs:alternative``
-will be rendered in the Japanese locale, with Japanese term
-definitions.
-
-=====================================
-``cs:alternative-text`` |(extension)|
-=====================================
-
-Use the ``cs:alternative-text`` element to rerun the layout applied
-to ``cs:alternative`` with alternative item content. Variables
-for rendering via ``cs:alternative-text`` are set with an ``alt-``
-prefix.
-
-================================
 ``cs:court-class`` |(extension)|
 ================================
 
@@ -265,112 +237,16 @@ in addition to "all", "any", and "none".
      </if>
    </choose>
    
+============================================
+``cs:institution`` and friends |(extension)|
+============================================
 
-
-================================
-``cs:institution`` |(extension)|
-================================
-
-Institutional names are fundamentally different in structure from
-personal names. CSL provides quite robust support for the presentation
-and sorting of personal names, but in CSL 1.0.1, institutional names
-have just one fixed form, and are otherwise treated the same as
-personal names in a list of creators.
-
-Some publishing environments require greater flexibility.  Institution
-names can consist of multiple subunits. Individuals may be credited
-together with the institution to which they belong. Unaffiliated
-personal authors may be cited together with an institution or with
-individuals affiliated with it.  Some examples:
-
-1. Research & Pub. Policy Dep't, Nat'l Urban League
-2. United Nations - ECLAC
-3. ECLAC (Economic Commission for Latin America and the Carribean)
-4. Canadian Conservation Institute (CCI)
-5. Nolan J. Malone and others, U.S. Bureau of the Census
-6. World Trade Organization and World Health Organization
-7. Smith with Jones, Bureau of Sloth, Ministry of Fear
-8. Doe et al. with Roe et al., Ministry of Fear & Noakes, Ministry of Destruction
-
-Examples 3 and 4 render both the full form and the acronym of a single
-institution name, with arbitrary ordering of the two name parts.
-Example 1 begins with the smallest subunit in a list of related
-institutions, and example 2 does the opposite.  Examples 1 and 2 are
-pure organizations, while example 5 is a mix of personal and
-institutional names.  Examples 1, 2, 3 and 4 would be entered as
-literal strings currently, which has obvious drawbacks.  Example 5
-would require that the authorship information be spread across two
-variables, although all parties listed are equally authors of the
-resource.  Example 6 can be produced in CSL 0.8, but examples 7 and 8
-cannot.
-
-The MLZ extensions to CSL 1.0.1 provide a cs:institution element, which
-can be used to produce any of the above forms, without interfering
-with the formatting of ordinary personal names. The extension is
-always enabled in |citeproc-js|, but the application calling
-|citeproc-js| (i.e. Zotero) must specially flag institutional names
-for it to take effect. MLZ provides this flag, while the official
-Zotero client does not. For this reason, this extension only works
-with the multilingual client at present.
-
------------------
-Entry conventions
------------------
-
-In multilingual Zotero, names entered in two-field mode are personal,
-and those entered in single-field mode are treated as
-organizations. Names should be entered in the order in which they
-should appear in citations, with one (extremely rare) exception: when
-an unaffiliated author is included in a list of names that includes
-one or more institutions, the name of the unaffiliated author(s)
-should come *after* that of the last institution in the list.
-
-Subunits of an organizational name should be separated with a
-field separator character ``|``.
-
-
-^^^^^^^^^^^^^^^^^^
-Affiliated authors
-^^^^^^^^^^^^^^^^^^
-
-Single or multiple personal Names that are co-authors with an
-organization would be entered above the relevant organization name.
-
-
-.. image:: ../_static/images/affiliated-authors.png
-
-In a very simple style, the sample above might be rendered as: *Clarke,
-Ministry of Fear and Smith & Brown, Large Corporation*.
-
-^^^^^^^^^^^^^^^^^^^^
-Unaffiliated authors
-^^^^^^^^^^^^^^^^^^^^
-
-Authors with no affiliation would be listed after any organizational
-names:
-
-.. image:: ../_static/images/unaffiliated-authors.png
-
-
-In a very simple style, the sample above might be rendered as: *Doe &
-Roe with Clarke, Ministry of Fear and Smith & Brown, Large Corporation*
-(note the reverse ordering in this case, with the names at the end
-placed at the front of the rendered list of names). 
-
-The structure of mixed personal and organizational names can thus be
-expressed in the current Zotero UI. We now turn to the extended
-CSL syntax used to control the appearance of such names.
-
--------------
-CSL Extension
--------------
-
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 Element: ``cs:institution``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 A ``cs:institution`` element can be placed immediately after the
-``cs:name`` element to control the formatting of organization
+``cs:name`` element to control the formatting of institution
 names. 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -380,12 +256,12 @@ Attributes: ``delimiter`` and ``and``
 The value of the ``delimiter`` attribute on ``cs:institution``
 is used in the following locations:
 
-* between organization names;
-* between the subunits of an organization;
+* between institution names;
+* between the subunits of an institution;
 * between affiliated authors and their institution.
 
 The ``and`` attribute on ``cs:institution``, if any, is used for the
-final join between two or more author/organization units.
+final join between two or more author/institution units.
 
 A simple use of ``cs:institution`` might read as follows:
 
@@ -406,12 +282,12 @@ Attributes: ``use-first``, ``substitute-use-first`` and ``use-last``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To control the omission of names from the middle of the list of
-organizational subunits, either of ``use-first`` or
+institutional subunits, either of ``use-first`` or
 ``substitute-use-first`` may be used to pick names from the front of
 the list. The ``use-last`` attribute picks names from the end.  The
 ``substitute-use-first`` attribute includes the leading (smallest)
 subunit if and only if no personal names are associated with the
-organization.
+institution.
 
 The following CSL code would format both example 1 and example 5 from
 the list of samples at the top of this section:
@@ -435,8 +311,8 @@ the list of samples at the top of this section:
 Attribute: ``reverse-order``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By convention, organizational names are rendered in "big endian"
-order, from the smallest to the largest organizational unit.  To
+By convention, institutional names are rendered in "big endian"
+order, from the smallest to the largest institutional unit.  To
 provide for cases such as example 2 in the list of samples, a
 ``reverse-order`` attribute can be applied on ``cs:institution``:
 
@@ -455,14 +331,12 @@ provide for cases such as example 2 in the list of samples, a
 Attribute: ``institution-parts``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
-The components of organization names are normally rendered in their
+The components of  names are normally rendered in their
 long form only. 
 To use the short form, or combinations of the long and short form, an
 ``institution-parts`` attribute is available on ``cs:institution``.
 The attribute accepts values of ``long``, ``short``, ``short-long``
-and ``long-short``.  This attribute would be used to produce examples
-3 and 4 in the list of samples, with values of ``short-long`` and
-``long-short`` respectively.  A value of ``short`` behaves in the same
+and ``long-short``. A value of ``short`` behaves in the same
 way as ``form="short"`` in other contexts in CSL, using the short form
 if it is available, and falling back to the long form otherwise.
 
@@ -471,7 +345,7 @@ Element: ``cs:institution-part``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 One or more cs:institution-part elements can be used to control the
-formatting of long and short forms of organization names.  Like
+formatting of long and short forms of institution names.  Like
 ``cs:name-part``, these elements are unordered, and affect only the
 formatting of the target name element, specified (as on ``cs:name-part``)
 with a required ``name`` attribute.
@@ -483,7 +357,7 @@ Attribute: ``if-short``
 In example 3, the parentheses should be included only if a short form
 of the institution name is available.  The ``if-short`` attribute,
 available on ``cs:institution-part`` only when applied to the long
-form of an organization name, makes the formatting in the element
+form of an institution name, makes the formatting in the element
 conditional on the availability of a short form of the name.  The
 following CSL would render example 3 in the list of samples:
 
@@ -494,40 +368,6 @@ following CSL would render example 3 in the list of samples:
         <institution institution-parts="short-long">
             <institution-part name="long" if-short="true" prefix=" (" suffix=")"/>
         </institution>
-    </names>
-
-^^^^^^^^^^^^^^^^^^^^
-Element: ``cs:with``
-^^^^^^^^^^^^^^^^^^^^
-
-In rendered output, unaffiliated personal names are joined to a
-following organizational name using an implicit localizable term
-``with``.  Styling of this term is permitted through an optional
-``cs:with`` element, placed immediately above ``cs:institution``:
-
-.. sourcecode:: xml
-
-    <names variable="author">
-        <name/>
-        <with font-style="italic" prefix=" " suffix=" "/>
-        <institution institution-parts="short-long">
-            <institution-part name="long" if-short="true" prefix=" (" suffix=")"/>
-        </institution>
-    </names>
-
-^^^^^^^^^^^^^^^^^^^^
-Simple style example
-^^^^^^^^^^^^^^^^^^^^
-
-
-The simple style used in the illustrated examples in the `Entry conventions`_ section
-above would look like this in CSL:
-
-.. sourcecode:: xml
-
-    <names variable="author">
-        <name form="short" and="symbol" delimiter=", "/>
-        <institution use-last="1" and="text" delimiter=", "/>
     </names>
 
 
@@ -614,6 +454,13 @@ The ``contributor`` variable is available as a name.
 ===========================
 
 The ``committee`` variable is handled as a string.
+
+=========================
+``country`` |(extension)|
+=========================
+
+The ``country`` variable is a virtual variable, not included in input,
+that is set as the first colon-delimited element of ``jurisdiction``.
 
 ===============================
 ``document-name`` |(extension)|
@@ -841,34 +688,6 @@ a publisher's series, described  by ``collection-title``).
 .. sourcecode:: xml
 
    <text variable="volume-title"/>
-
-================================
-``alt-translator`` |(extension)|
-================================
-
-While any variable can be set with an ``alt-`` prefix for rendering in
-``cs:alternative-text``, a few variables are recognized as
-``first-class`` variable names that can be referenced directly
-in the style, for testing purposes.
-
-===========================
-``alt-title`` |(extension)|
-===========================
-
-See ``alt-translator`` above.
-
-=====================================
-``alt-container-title`` |(extension)|
-=====================================
-
-See ``alt-translator`` above.
-
-============================
-``alt-issued`` |(extension)|
-============================
-
-See ``alt-translator`` above.
-
 
 =============================
 ``court-class`` |(extension)|
@@ -1543,7 +1362,7 @@ or implicitly by the ``consolidate-containers`` attribute on
 =========================
 
 The ``context`` test attribute takes exactly one of the arguments
-``bibliography``, ``citation``, or ``alternative``. It does exactly
+``bibliography``, or ``citation``. It does exactly
 what its name and value suggest, returning true when the condition is
 executed in the relevant context. This test is useful where complex
 logic is needed to compose a particular element, which changes only
@@ -1638,78 +1457,16 @@ variable given as argument has only a year (and no day, month or season).
      </if>
    </choose>
 
+=========================
+``country`` |(extension)|
+=========================
 
+The ``country`` condition takes a list of top-level `Legal Resource
+Registry`_ country/institution codes as argument. The condition is
+true if the item has a ``country`` value that matches a code in the list.
 
-==============================
-``jurisdiction`` |(extension)|
-==============================
+.. _`Legal Resource Registry`: https://github.com/juris-m/legal-resource-registry
 
-When citing primary legal resources, the form of citation is often
-fixed, for ease of reference, by the issuing 
-jurisdiction\ |mdash|\  "jurisdiction" referring in this case to
-international rule-making bodies as well as national governments.
-CSL 1.0.1 provides a ``jurisdiction`` variable, but it cannot be used
-because Zotero does not currently have a corresponding field.
-
-The particular requirement for this variable is that it be tested in a
-``cs:if`` and ``cs:else-if`` condition, so that citations can be
-varied according to the issuing jurisdiction. Testing of field content
-is contrary to the design of CSL, so the approach of the MLZ extended
-CSL schema is strictly circumscribed to address this particular need,
-without opening a door to uncontrolled general testing of field
-content.
-
-The solution is in two parts, described below.
-
-----------------------------
-Jurisdiction constraint list
-----------------------------
-
-The CSL schema has been extended
-in accordance with the proposed `URN:LEX`_ standard for a uniform
-resource namespace for sources of law. This standard provides a
-concept of "jurisdiction" that suits the requirements of legal
-citation, including both national jurisdictions and international
-rule-making bodies. Following `URN:LEX`_, the schema has been extended
-with an explicit list of the national jurisdictions of the world, plus
-selected rule-making international organizations designated by their
-permanent domain name. The former are drawn from `ISO 3166 Alpha-2`_.
-The latter do not yet have official sanction, as `URN:LEX`_ is still
-at the proposal stage, but the list in the schema extension is
-conservative, including only a few of the most stable (and widely
-cited) organizations.
-
-.. _`URN:LEX`: http://tools.ietf.org/html/draft-spinosa-urn-lex-03
-
-.. _`ISO 3166 Alpha-2`: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-
-
----------------
-Controlled list
----------------
-
-The list of acceptable jurisdictions codes is coupled with an
-extension of the ``cs:if`` and ``cs:else-if`` elements, providing a
-``jurisdiction`` test attribute. In styles, the value set on the
-attribute *must* be present in the list of acceptable jurisdiction
-values. A style that uses other values is invalid.
-
-When the ``jurisdiction`` test attribute is used, its value is
-compared with the value of the ``jurisdiction`` variable on the item
-being processed. If the values match, the test returns true, otherwise
-false. Matching is done at the granularity of the argument provided
-in the test.
-
-.. sourcecode:: xml
-
-   <choose>
-     <if jurisdiction="us">
-       <text macro="us-mac"/>
-     </if>
-   </choose>
-
-The test above will be true for items with a ``jurisdiction`` value of
-``jp`` or ``de``, and false for values of ``us``, ``us;federal;oh`` or ``us;ny``.
 
 ========================
 ``locale`` |(extension)|
@@ -1784,13 +1541,273 @@ In addition to the extended terms (``article``, ``rule``, and
 terms ``Chapter`` and ``Section`` when rendering the corresponding
 terms in the context of the first item in a parallel reference.
 
-%%%%%%%%%%%%%%%%%%%%%%%
-Decommissioned features
-%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Deprecated and Decommissioned features
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The features below were formerly documented here, but no longer exist
 or have been deprecated. The reason for withdrawal is given in
 /italics/ at the top of each entry.
+
+==============================
+``jurisdiction`` |(extension)|
+==============================
+
+*In CSL-M, special formatting applicable to a specific subjurisdiction
+should be cast in a jurisdiction style module. Testing for specific
+subjurisdictions should not be necessary, apart from tests for
+top-level jurisdictions, covered by the ``country`` condition.*
+
+When citing primary legal resources, the form of citation is often
+fixed, for ease of reference, by the issuing 
+jurisdiction\ |mdash|\  "jurisdiction" referring in this case to
+international rule-making bodies as well as national governments.
+CSL 1.0.1 provides a ``jurisdiction`` variable, but it cannot be used
+because Zotero does not currently have a corresponding field.
+
+The particular requirement for this variable is that it be tested in a
+``cs:if`` and ``cs:else-if`` condition, so that citations can be
+varied according to the issuing jurisdiction. Testing of field content
+is contrary to the design of CSL, so the approach of the MLZ extended
+CSL schema is strictly circumscribed to address this particular need,
+without opening a door to uncontrolled general testing of field
+content.
+
+The solution is in two parts, described below.
+
+----------------------------
+Jurisdiction constraint list
+----------------------------
+
+The CSL schema has been extended
+in accordance with the proposed `URN:LEX`_ standard for a uniform
+resource namespace for sources of law. This standard provides a
+concept of "jurisdiction" that suits the requirements of legal
+citation, including both national jurisdictions and international
+rule-making bodies. Following `URN:LEX`_, the schema has been extended
+with an explicit list of the national jurisdictions of the world, plus
+selected rule-making international organizations designated by their
+permanent domain name. The former are drawn from `ISO 3166 Alpha-2`_.
+The latter do not yet have official sanction, as `URN:LEX`_ is still
+at the proposal stage, but the list in the schema extension is
+conservative, including only a few of the most stable (and widely
+cited) organizations.
+
+.. _`URN:LEX`: http://tools.ietf.org/html/draft-spinosa-urn-lex-03
+
+.. _`ISO 3166 Alpha-2`: http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+
+
+---------------
+Controlled list
+---------------
+
+The list of acceptable jurisdictions codes is coupled with an
+extension of the ``cs:if`` and ``cs:else-if`` elements, providing a
+``jurisdiction`` test attribute. In styles, the value set on the
+attribute *must* be present in the list of acceptable jurisdiction
+values. A style that uses other values is invalid.
+
+When the ``jurisdiction`` test attribute is used, its value is
+compared with the value of the ``jurisdiction`` variable on the item
+being processed. If the values match, the test returns true, otherwise
+false. Matching is done at the granularity of the argument provided
+in the test.
+
+.. sourcecode:: xml
+
+   <choose>
+     <if jurisdiction="us">
+       <text macro="us-mac"/>
+     </if>
+   </choose>
+
+The test above will be true for items with a ``jurisdiction`` value of
+``jp`` or ``de``, and false for values of ``us``, ``us;federal;oh`` or ``us;ny``.
+
+================================
+``cs:institution`` |(extension)|
+================================
+
+*These complex grouping features of ``cs:institution`` are disabled in ``citeproc-js``,
+and the code that was used to implement them will be removed in due course.*
+
+Institutional names are fundamentally different in structure from
+personal names. CSL provides quite robust support for the presentation
+and sorting of personal names, but in CSL 1.0.1, institutional names
+have just one fixed form, and are otherwise treated the same as
+personal names in a list of creators.
+
+Some publishing environments require greater flexibility.  Institution
+names can consist of multiple subunits. Individuals may be credited
+together with the institution to which they belong. Unaffiliated
+personal authors may be cited together with an institution or with
+individuals affiliated with it.  Some examples:
+
+1. Research & Pub. Policy Dep't, Nat'l Urban League
+2. United Nations - ECLAC
+3. ECLAC (Economic Commission for Latin America and the Carribean)
+4. Canadian Conservation Institute (CCI)
+5. Nolan J. Malone and others, U.S. Bureau of the Census
+6. World Trade Organization and World Health Organization
+7. Smith with Jones, Bureau of Sloth, Ministry of Fear
+8. Doe et al. with Roe et al., Ministry of Fear & Noakes, Ministry of Destruction
+
+Examples 3 and 4 render both the full form and the acronym of a single
+institution name, with arbitrary ordering of the two name parts.
+Example 1 begins with the smallest subunit in a list of related
+institutions, and example 2 does the opposite.  Examples 1 and 2 are
+pure organizations, while example 5 is a mix of personal and
+institutional names.  Examples 1, 2, 3 and 4 would be entered as
+literal strings currently, which has obvious drawbacks.  Example 5
+would require that the authorship information be spread across two
+variables, although all parties listed are equally authors of the
+resource.  Example 6 can be produced in CSL 0.8, but examples 7 and 8
+cannot.
+
+The MLZ extensions to CSL 1.0.1 provide a cs:institution element, which
+can be used to produce any of the above forms, without interfering
+with the formatting of ordinary personal names. The extension is
+always enabled in |citeproc-js|, but the application calling
+|citeproc-js| (i.e. Zotero) must specially flag institutional names
+for it to take effect. MLZ provides this flag, while the official
+Zotero client does not. For this reason, this extension only works
+with the multilingual client at present.
+
+-----------------
+Entry conventions
+-----------------
+
+In multilingual Zotero, names entered in two-field mode are personal,
+and those entered in single-field mode are treated as
+organizations. Names should be entered in the order in which they
+should appear in citations, with one (extremely rare) exception: when
+an unaffiliated author is included in a list of names that includes
+one or more institutions, the name of the unaffiliated author(s)
+should come *after* that of the last institution in the list.
+
+Subunits of an organizational name should be separated with a
+field separator character ``|``.
+
+
+^^^^^^^^^^^^^^^^^^
+Affiliated authors
+^^^^^^^^^^^^^^^^^^
+
+Single or multiple personal Names that are co-authors with an
+organization would be entered above the relevant organization name.
+
+
+.. image:: ../_static/images/affiliated-authors.png
+
+In a very simple style, the sample above might be rendered as: *Clarke,
+Ministry of Fear and Smith & Brown, Large Corporation*.
+
+^^^^^^^^^^^^^^^^^^^^
+Unaffiliated authors
+^^^^^^^^^^^^^^^^^^^^
+
+Authors with no affiliation would be listed after any organizational
+names:
+
+.. image:: ../_static/images/unaffiliated-authors.png
+
+
+In a very simple style, the sample above might be rendered as: *Doe &
+Roe with Clarke, Ministry of Fear and Smith & Brown, Large Corporation*
+(note the reverse ordering in this case, with the names at the end
+placed at the front of the rendered list of names). 
+
+The structure of mixed personal and organizational names can thus be
+expressed in the current Zotero UI. We now turn to the extended
+CSL syntax used to control the appearance of such names.
+
+--------------------
+Element: ``cs:with``
+--------------------
+
+In rendered output, unaffiliated personal names are joined to a
+following organizational name using an implicit localizable term
+``with``.  Styling of this term is permitted through an optional
+``cs:with`` element, placed immediately above ``cs:institution``:
+
+.. sourcecode:: xml
+
+    <names variable="author">
+        <name/>
+        <with font-style="italic" prefix=" " suffix=" "/>
+        <institution institution-parts="short-long">
+            <institution-part name="long" if-short="true" prefix=" (" suffix=")"/>
+        </institution>
+    </names>
+
+==============================
+``cs:alternative`` and friends
+==============================
+
+*This set of elements and variables was designed to express
+citations composed of multiple cites in separate languages,
+such as a translation and an original. Parallel citations managed
+with ``parallel-first`` and ``parallel-last`` promise a solution
+more readable in the CSL that would not require awkward special
+variables in item data.*
+
+
+--------------------------------
+``cs:alternative`` |(extension)|
+--------------------------------
+
+Use ``cs:alternative`` to add supplementary reference information to a
+cited item, such as a translation or reprint. Elements within the
+scope of ``cs:alternative`` are rendered only when the value of
+``language`` contains two valid ISO language codes joined by ``<`` or
+``>`` (to indicate the direction of translation). The two language
+codes may be identical.
+
+In a multi-layout style, elements within the scope of
+``cs:alternative`` are rendered in the primary locale associated with
+the target language code. Thus, if the input item has a ``language``
+value of ``en>zh``, and a multi-layout style has a layout with
+``locale="ja zh"``, elements within the scope of ``cs:alternative``
+will be rendered in the Japanese locale, with Japanese term
+definitions.
+
+-------------------------------------
+``cs:alternative-text`` |(extension)|
+-------------------------------------
+
+Use the ``cs:alternative-text`` element to rerun the layout applied
+to ``cs:alternative`` with alternative item content. Variables
+for rendering via ``cs:alternative-text`` are set with an ``alt-``
+prefix.
+
+--------------------------------
+``alt-translator`` |(extension)|
+--------------------------------
+
+While any variable can be set with an ``alt-`` prefix for rendering in
+``cs:alternative-text``, a few variables are recognized as
+``first-class`` variable names that can be referenced directly
+in the style, for testing purposes.
+
+---------------------------
+``alt-title`` |(extension)|
+---------------------------
+
+See ``alt-translator`` above.
+
+-------------------------------------
+``alt-container-title`` |(extension)|
+-------------------------------------
+
+See ``alt-translator`` above.
+
+----------------------------
+``alt-issued`` |(extension)|
+----------------------------
+
+See ``alt-translator`` above.
+
 
 =========================
 ``gazette`` |(extension)|
