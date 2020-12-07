@@ -1306,6 +1306,16 @@ separate from that applied to page ranges.
 Conditions
 %%%%%%%%%%
 
+===========================
+``is-multiple`` (extension)
+===========================
+
+The ``is-multiple`` attribute takes a single variable as argument.
+The test is true if the variable has a value and contains at least one space,
+and otherwise false. (This is useful for setting labels on case docket numbers,
+which will contain space if multiple cases have been joined in a single
+judgment.)
+
 ================================================================
 ``disambiguate="check-ambiguity-and-backrefence"`` |(extension)|
 ================================================================
