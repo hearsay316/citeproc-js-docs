@@ -1,0 +1,78 @@
+========================================================
+1.2.10-1.2.11
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.11
+
+:commit:
+    `47effcd <https://github.com/Juris-M/citeproc-js/commit/47effcd6498de0142cea4c8cca3f4305ce2acf43>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-23 12:46 (JST)
+
+
+------
+
+Add patent as a juris type
+
+:commit:
+    `8dc22f7 <https://github.com/Juris-M/citeproc-js/commit/8dc22f71a00cd42b5921cdf9860a2d0e34f2a6c5>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-23 07:37 (JST)
+
+
+------
+
+Set space after de' when used as dropping particle
+
+:commit:
+    `f6df4d6 <https://github.com/Juris-M/citeproc-js/commit/f6df4d6a28ecdebbf83c957a7512d7b439ed185d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-23 07:37 (JST)
+
+
+------
+
+Fix typos in a couple of tests
+
+:commit:
+    `f11c23e <https://github.com/Juris-M/citeproc-js/commit/f11c23e5a9eb7496f50ad18e866041ffa24c1bac>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-23 07:36 (JST)
+
+
+------
+
+Amend descriptive texts
+
+:commit:
+    `4305891 <https://github.com/Juris-M/citeproc-js/commit/4305891a777534ad9b73716b3d2b23b7b6c05d5a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-20 22:01 (JST)
+
+
+------
+
+Bump version, update CHANGES, release as 1.2.10
+
+:commit:
+    `1ea011b <https://github.com/Juris-M/citeproc-js/commit/1ea011b22c764aa85aae2539f42b29d7a88e0759>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-20 21:36 (JST)
+

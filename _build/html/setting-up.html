@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting started &mdash; citeproc-js 1.1.73 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/screen.css?v=425850a2" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=93912719"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/global.js?v=537b13e9"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Running the Processor" href="running.html" />
+    <link rel="prev" title="Demo: Editor" href="editor.html" /> 
+ 
+
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            citeproc-js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news/index.html">Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demos.html">Demos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#system-requirements">System requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fetch-the-sources-and-install-development-dependencies">Fetch the sources and install development dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#watch-mode-tutorial">Watch mode tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">Running the Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csl-json/markup.html">CSL-JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sys-extensions.html">Extended <code class="docutils literal notranslate"><span class="pre">sys</span></code> functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csl-m/index.html">CSL-M: extensions to CSL</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">citeproc-js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Getting started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/setting-up.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h1>
+<p><img alt="CCBYSA" src="_images/cc-by-sa-80x15.png" /> <a class="reference external" href="https://twitter.com/fgbjr">Frank Bennett</a></p>
+<hr class="docutils" />
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The Citation Style Language (CSL) is a powerful machine-readable
+schema for describing citation formats. The <span style="background:#cccccc;border-radius:0.5em;padding-left:0.25em;padding-right:0.25em;font-weight:bold;font-family:'Courier New', Courier, monospace">citeproc-js</span> processor is
+a JavaScript implementation of CSL, with extended features to support
+legal styles and multilingual citations. This chapter explains how to
+obtain the processor sources and test the installation.</p>
+</section>
+<section id="system-requirements">
+<h2>System requirements<a class="headerlink" href="#system-requirements" title="Link to this heading"></a></h2>
+<p>The items below are required to download and test the processor.
+In deployment environments, only JavaScript is required.</p>
+<blockquote>
+<div><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">git</span></code></dt><dd><p>Needed to fetch a clone of the <code class="docutils literal notranslate"><span class="pre">citeproc-js</span></code> repository on GitHub.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">node.js</span></code></dt><dd><p>Any recent-ish version should work. Version 7 is used for automated testing.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mocha</span></code></dt><dd><p>Install Mocha globally with <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">--global</span> <span class="pre">mocha</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">java</span></code></dt><dd><p>This is used to perform schema validation. Browser extension is not
+required, a basic command-line install is all you need.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="fetch-the-sources-and-install-development-dependencies">
+<h2>Fetch the sources and install development dependencies<a class="headerlink" href="#fetch-the-sources-and-install-development-dependencies" title="Link to this heading"></a></h2>
+<p>Use this incantation at the command line to fetch the source code of
+the processor and its dependencies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">recursive</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">Juris</span><span class="o">-</span><span class="n">M</span><span class="o">/</span><span class="n">citeproc</span><span class="o">-</span><span class="n">js</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>If you forget the <code class="docutils literal notranslate"><span class="pre">--recursive</span></code> option, you can follow up by
+fetching the submodules with this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">submodule</span> <span class="n">update</span> <span class="o">--</span><span class="n">init</span> <span class="o">--</span><span class="n">remote</span>
+</pre></div>
+</div>
+<p>Enter the directory and set up the test framework:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">citeproc</span><span class="o">-</span><span class="n">js</span>
+<span class="n">npm</span> <span class="n">install</span>
+<span class="n">npm</span> <span class="n">link</span>
+</pre></div>
+</div>
+<p>You can now run the test script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cslrun</span>
+</pre></div>
+</div>
+<p>When run without options, or with the <code class="docutils literal notranslate"><span class="pre">-h</span></code> option, the script returns a help text:</p>
+<p>Usage: cslrun &lt;-s testName|-g groupName|-a|-l&gt; [-S styleName|-w cslFilePath|-C cslJsonFilePath]</p>
+<blockquote>
+<div><dl>
+<dt>Testing options (exactly one MUST be used):</dt><dd><dl class="option-list">
+<dt><kbd><span class="option">-s <var>testName</var></span>, <span class="option">--single=<var>testName</var></span></kbd></dt>
+<dd><p>Run a single local or standard test fixture.</p>
+</dd>
+<dt><kbd><span class="option">-g <var>groupName</var></span>, <span class="option">--group=<var>groupName</var></span></kbd></dt>
+<dd><p>Run a group of tests with the specified prefix.</p>
+</dd>
+<dt><kbd><span class="option">-a</span>, <span class="option">--all</span></kbd></dt>
+<dd><p>Run all tests.</p>
+</dd>
+</dl>
+</dd>
+<dt>Options for style development:</dt><dd><dl class="option-list">
+<dt><kbd><span class="option">-w</span>, <span class="option">--watch</span></kbd></dt>
+<dd><p>Path to CSL source file watch for changes, relative to
+repository root.</p>
+</dd>
+<dt><kbd><span class="option">-U</span>, <span class="option">--update</span></kbd></dt>
+<dd><p>Update style tests from collection in JM Style Samples.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>-k, –key-query (used with -w)</dt><dd><p>When tests fail, stop processing and ask whether to
+adopt the processor output as the RESULT. Useful for
+rapidly generating tests for existing styles.</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">-A</span>, <span class="option">--abbreviations</span></kbd></dt>
+<dd><dl class="simple">
+<dt>Path to abbreviation files, such as a clone of jurism-abbreviations:</dt><dd><p><a class="reference external" href="https://github.com/Juris-M/jurism-abbreviations">https://github.com/Juris-M/jurism-abbreviations</a></p>
+</dd>
+</dl>
+</dd>
+<dt><kbd><span class="option">-S</span>, <span class="option">--style</span></kbd></dt>
+<dd><p>Override name of test set. (Allows use of tests not
+orginally composed for the CSL file designated by -w)</p>
+</dd>
+<dt><kbd><span class="option">-C</span>, <span class="option">--compose-tests</span></kbd></dt>
+<dd><p>(Discontinued. Open a collection in JM Style Tests and
+use the -U option instead.)</p>
+</dd>
+</dl>
+</dd>
+<dt>Miscellaneous options:</dt><dd><dl class="option-list">
+<dt><kbd><span class="option">-F</span>, <span class="option">--final</span></kbd></dt>
+<dd><p>Use the published-items library (default)</p>
+</dd>
+<dt><kbd><span class="option">-D</span>, <span class="option">--draft</span></kbd></dt>
+<dd><p>Use the submissions library</p>
+</dd>
+<dt><kbd><span class="option">-c</span>, <span class="option">--cranky</span></kbd></dt>
+<dd><p>Validate CSL in selected fixtures instead of running
+tests.</p>
+</dd>
+<dt><kbd><span class="option">-O</span>, <span class="option">--once</span></kbd></dt>
+<dd><p>Use with the -w option. Exits immediately after running tests.</p>
+</dd>
+<dt><kbd><span class="option">-N</span>, <span class="option">--novalidation</span></kbd></dt>
+<dd><p>Do not validate before running tests.</p>
+</dd>
+<dt><kbd><span class="option">-b</span>, <span class="option">--black-and-white</span></kbd></dt>
+<dd><p>Disable color output</p>
+</dd>
+<dt><kbd><span class="option">-r</span>, <span class="option">--reporter</span></kbd></dt>
+<dd><p>Set the report style. Default is “landing.”
+Built-in options are: spec, dot, min, progress.
+If installed via npm, nyanplusreporter (as “nyan”)
+and mocha-spectrum-reporter (as “spectrum”) are also
+available.</p>
+</dd>
+<dt><kbd><span class="option">-l</span>, <span class="option">--list</span></kbd></dt>
+<dd><p>List available groups and styles.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<p>Run the script with the <code class="docutils literal notranslate"><span class="pre">-a</span></code> option to run all tests, or select a
+specific test or a group of tests with the <code class="docutils literal notranslate"><span class="pre">-s</span></code> or <code class="docutils literal notranslate"><span class="pre">g</span></code> options
+respectively. A list of groups can be viewed with the <code class="docutils literal notranslate"><span class="pre">-l</span></code>
+option. Individual tests are located in two directories:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tests/fixtures/local</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tests/fixtures/std/processor-tests/humans</span></code></p></li>
+</ul>
+<p>To specify an individual test, use its base filename:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``cslrun -s sort_LatinUnicode``
+</pre></div>
+</div>
+<p>For extra fun, draft an advance letter of apology to nearby friends,
+relations and colleagues, turn up your speaker volume, and run
+the full test suite with the Nyan Plus Reporter option:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cslrun</span> <span class="o">-</span><span class="n">a</span> <span class="o">-</span><span class="n">r</span> <span class="n">nyan</span>
+</pre></div>
+</div>
+<img alt="_images/nyan.png" src="_images/nyan.png" />
+</section>
+<section id="watch-mode-tutorial">
+<h2>Watch mode tutorial<a class="headerlink" href="#watch-mode-tutorial" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">cslrun</span></code> script supports a simple but powerful “watch” mode
+for use in style development. In the scenario below, we will prepare
+tests for the Journal Irreproducible Results (JIR). The journal
+<a class="reference external" href="http://www.jir.com/">exists</a>, but as there is no CSL style for it
+in the CSL Repository, our tutorial will be largely devoid of
+screenshots. The steps, however, can be applied to any style that
+actually does exist.</p>
+<p>I’ll begin by forking the <code class="docutils literal notranslate"><span class="pre">citeproc-js</span></code> GitHub repository. This
+will make it easy to fold my tests back into the main project …</p>
+<img alt="_images/fork.png" src="_images/fork.png" />
+<p>… and then I will clone a local copy of my forked <code class="docutils literal notranslate"><span class="pre">citeproc-js</span></code>
+repository (not the Juris-M original):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">recursive</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">fbennett</span><span class="o">/</span><span class="n">citeproc</span><span class="o">-</span><span class="n">js</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>I will do two things in preparation for work on the JIR style:</p>
+<ul class="simple">
+<li><p>Prepare a rough copy of the style (if it resembles another
+style, I might just fetch a copy of that, and change its
+title and ID);</p></li>
+<li><p>Prepare a small collection of items in Zotero for use in
+testing the style, and export the full set of items
+to a file, in CSL JSON format.</p></li>
+</ul>
+<p>I am now ready to begin working with the <code class="docutils literal notranslate"><span class="pre">cslrun</span></code> script.
+The first step is to generate <code class="docutils literal notranslate"><span class="pre">citeproc</span></code> test fixtures for
+each of the exported library items. <code class="docutils literal notranslate"><span class="pre">cslrun</span></code> can do
+this for me, with options like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cslrun</span> \
+     <span class="o">-</span><span class="n">C</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">exported</span><span class="o">-</span><span class="n">items</span><span class="o">.</span><span class="n">json</span> \
+     <span class="o">-</span><span class="n">S</span> <span class="n">journal</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">irreproducible</span><span class="o">-</span><span class="n">results</span>
+</pre></div>
+</div>
+<p>I now have a set of boilerplate tests that will fail miserably,
+but those that pass can be quickly converted to passing
+tests, using the <code class="docutils literal notranslate"><span class="pre">-k</span></code> option like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cslrun</span> \
+     <span class="o">-</span><span class="n">S</span> <span class="n">journal</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">irreproducible</span><span class="o">-</span><span class="n">results</span> \
+     <span class="o">-</span><span class="n">w</span> <span class="o">../</span><span class="n">somepath</span><span class="o">/</span><span class="n">journal</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">irreproducible</span><span class="o">-</span><span class="n">results</span><span class="o">.</span><span class="n">csl</span> \
+     <span class="o">-</span><span class="n">a</span> \
+     <span class="o">-</span><span class="n">k</span>
+</pre></div>
+</div>
+<p>The output will look something like this:</p>
+<img alt="_images/style-fail.png" src="_images/style-fail.png" />
+<p>If I respond to the prompt with <code class="docutils literal notranslate"><span class="pre">Y</span></code>, the output of the style
+will be adopted as the RESULT of the test fixture. If I respond
+with <code class="docutils literal notranslate"><span class="pre">N</span></code>, the fixture will be skipped, and the next test will
+be shown, until the test set is exhausted.</p>
+<p>The test fixtures are located in plain text files in a <code class="docutils literal notranslate"><span class="pre">styletests</span></code>
+subdirectory, where they can be edited directly:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">tests</span><span class="o">/</span><span class="n">styletests</span><span class="o">/</span><span class="n">journal</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">irreproducible</span><span class="o">-</span><span class="n">results</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">-C</span></code> option that generates the boilerplate is destructive—it
+will overwrite existing files—so be sure to rename the files after
+populating the directory. In test fixture filenames, the underscore
+(<code class="docutils literal notranslate"><span class="pre">_</span></code>) is required. The first portion of the name is the group to
+which the test belongs. You will notice that, unlike the fixtures used
+to test the processor, style fixtures do not contain a <code class="docutils literal notranslate"><span class="pre">CSL</span></code>
+section, for the obvious reason that the CSL code of the target style
+is always used.</p>
+<p>Once I have prepared a full set of passing tests, I can set the script
+to watch the style file when I am making changes to it. The command
+for that is the same as for rapid “editing” of the fixtures, but
+without the <code class="docutils literal notranslate"><span class="pre">-k</span></code> option.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">node</span> <span class="n">cslrun</span> \
+     <span class="o">-</span><span class="n">S</span> <span class="n">journal</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">irreproducible</span><span class="o">-</span><span class="n">results</span> \
+     <span class="o">-</span><span class="n">w</span> <span class="o">../</span><span class="n">somepath</span><span class="o">/</span><span class="n">journal</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">irreproducible</span><span class="o">-</span><span class="n">results</span><span class="o">.</span><span class="n">csl</span> \
+     <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<p>Each time I save the CSL file, the style code will be validated
+before tests are run. Validation failures look like this:</p>
+<img alt="_images/validation-fail.png" src="_images/validation-fail.png" />
+<p>When I am happy with my tests, I can check them in to my local
+<code class="docutils literal notranslate"><span class="pre">git</span></code>, push them to my GitHub repository, and file a pull request
+to the <code class="docutils literal notranslate"><span class="pre">Juris-M/citeproc-js</span></code> master for general use by others
+editing the style.</p>
+<p>Done.</p>
+<hr class="docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<p>CSL-M is set of private extensions to official CSL used by the
+<a class="reference external" href="https://juris-m.github.io">Jurism</a> reference manager, a
+variant of Zotero.</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="editor.html" class="btn btn-neutral float-left" title="Demo: Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="running.html" class="btn btn-neutral float-right" title="Running the Processor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016, Frank Bennett.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+========================================================
+1.1.142-1.1.143
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.143
+
+:commit:
+    `5e5d5f5 <https://github.com/Juris-M/citeproc-js/commit/5e5d5f5c8cd876ac5e22163c0ecb30c8fea90bc6>`_
+:author:
+    fbennett
+:date:
+    2016-12-23 17:03 (JST)
+
+
+------
+
+Use mapping object to remap in CSL.Transform
+
+:commit:
+    `ddfec75 <https://github.com/Juris-M/citeproc-js/commit/ddfec75965b54d45be64c54853ecaab521c82033>`_
+:author:
+    fbennett
+:date:
+    2016-12-23 16:56 (JST)
+
+
+------
+
+Use map object for category remaps
+
+:commit:
+    `a3828df <https://github.com/Juris-M/citeproc-js/commit/a3828df755b7c46458109dfabdaa98ade354d852>`_
+:author:
+    fbennett
+:date:
+    2016-12-23 15:04 (JST)
+
+
+------
+
+Use parsing module to set number of date-part nodes
+
+:commit:
+    `3c2d3b2 <https://github.com/Juris-M/citeproc-js/commit/3c2d3b2de1a038d0ac22db77b30491cc17395633>`_
+:author:
+    fbennett
+:date:
+    2016-12-23 15:03 (JST)
+
+
+------
+
+Fix bug in old xmle4x.js parsing module
+
+:commit:
+    `8d728c4 <https://github.com/Juris-M/citeproc-js/commit/8d728c4d1556b0453259201258483246289f50a3>`_
+:author:
+    fbennett
+:date:
+    2016-12-23 15:02 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.142
+
+:commit:
+    `78002ed <https://github.com/Juris-M/citeproc-js/commit/78002edc0c04df1ce8b3fbc41b8c2e1ab5ddf000>`_
+:author:
+    fbennett
+:date:
+    2016-11-19 21:51 (JST)
+

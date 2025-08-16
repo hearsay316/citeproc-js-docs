@@ -1,0 +1,42 @@
+========================================================
+1.3.5-1.3.6
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.6
+
+:commit:
+    `c2e26e7 <https://github.com/Juris-M/citeproc-js/commit/c2e26e701ac24cb11ec82640b8bb5339b6f7d27e>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 13:39 (JST)
+
+
+------
+
+Fix bug in inline locator label markup
+
+:commit:
+    `c531bd3 <https://github.com/Juris-M/citeproc-js/commit/c531bd30440d272c16fdb68481eb6006abdc1c57>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 13:38 (JST)
+
+
+------
+
+Bump npm version
+
+:commit:
+    `c21524d <https://github.com/Juris-M/citeproc-js/commit/c21524dd19e213e91c082613b9503633a3fded1e>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 08:57 (JST)
+

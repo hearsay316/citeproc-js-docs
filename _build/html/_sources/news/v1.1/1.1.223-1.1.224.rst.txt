@@ -1,0 +1,126 @@
+========================================================
+1.1.223-1.1.224
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.224
+
+:commit:
+    `1b411d7 <https://github.com/Juris-M/citeproc-js/commit/1b411d799bae6a84d67a0bcac0fbabcee249b87a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-23 01:27 (JST)
+
+
+------
+
+Set styling on ranged numbers as a unit
+
+:commit:
+    `4255673 <https://github.com/Juris-M/citeproc-js/commit/425567388fe5beeec132f42f55945a608e4f10b3>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-23 01:25 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `00e0731 <https://github.com/Juris-M/citeproc-js/commit/00e07310a930c71cd27216aba4cc1c88e8a00d35>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-23 01:24 (JST)
+
+
+------
+
+Merge LaTeX output draft format by @egonw
+
+:commit:
+    `169fbbd <https://github.com/Juris-M/citeproc-js/commit/169fbbd3006a07025b85bde67fa470d2b0b0ac66>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-23 01:22 (JST)
+
+
+------
+
+Shorted keystroke timeout to avoid blocking, strip output
+
+:commit:
+    `4322bdb <https://github.com/Juris-M/citeproc-js/commit/4322bdb851a9bc9e652a79b11fd20c46d6990e47>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-22 19:14 (JST)
+
+
+------
+
+Refresh objects
+
+:commit:
+    `cd5918d <https://github.com/Juris-M/citeproc-js/commit/cd5918dcf63a566f4b808f9f1f2739acad129f6a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-21 22:40 (JST)
+
+
+------
+
+Small README edits
+
+:commit:
+    `6c2eee4 <https://github.com/Juris-M/citeproc-js/commit/6c2eee442601f9f4045c928a51091e7e791c6ba8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-21 22:39 (JST)
+
+
+------
+
+Housecleaning
+
+:commit:
+    `c716569 <https://github.com/Juris-M/citeproc-js/commit/c71656964a67198a73a88f74accff3242e334325>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-21 22:39 (JST)
+
+
+------
+
+Remove legacy code
+
+:commit:
+    `8eb7971 <https://github.com/Juris-M/citeproc-js/commit/8eb79719a42959878d8d254138d7f10e50500b1a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-21 18:42 (JST)
+
+
+------
+
+Bump version, update CHANGES.txt, bundle as 1.1.223
+
+:commit:
+    `67601f2 <https://github.com/Juris-M/citeproc-js/commit/67601f2f7c55d94f0eea783e940ac804092574e8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-21 17:16 (JST)
+

@@ -1,0 +1,138 @@
+========================================================
+1.1.101-1.1.102
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.102
+
+:commit:
+    `3453852 <https://github.com/Juris-M/citeproc-js/commit/3453852df31df0c7494eeada029bddabf4610531>`_
+:author:
+    fbennett
+:date:
+    2016-05-05 17:12 (JST)
+
+
+------
+
+Pass citationID of the current cite also. Yeesh.
+
+:commit:
+    `a79854f <https://github.com/Juris-M/citeproc-js/commit/a79854f433cdb162209147506e27b744741b93a6>`_
+:author:
+    fbennett
+:date:
+    2016-05-05 15:23 (JST)
+
+
+------
+
+Update locales
+
+:commit:
+    `d243861 <https://github.com/Juris-M/citeproc-js/commit/d243861ac7ef4fc219a67fd24a03395d5b65e289>`_
+:author:
+    fbennett
+:date:
+    2016-05-05 12:28 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `648377a <https://github.com/Juris-M/citeproc-js/commit/648377a4fc8978f53ed0a1d225d76ed9f29c8b49>`_
+:author:
+    fbennett
+:date:
+    2016-05-05 12:28 (JST)
+
+
+------
+
+Update CSL schema
+
+:commit:
+    `430b8ef <https://github.com/Juris-M/citeproc-js/commit/430b8efc26f43b93a52fc41899e8f952df89c6ef>`_
+:author:
+    fbennett
+:date:
+    2016-05-05 12:28 (JST)
+
+
+------
+
+Include citationID in citation update return arrays
+
+:commit:
+    `f9dfb9e <https://github.com/Juris-M/citeproc-js/commit/f9dfb9e52f740fe6d34b7eb78edb9c11d7690f76>`_
+:author:
+    fbennett
+:date:
+    2016-05-05 12:27 (JST)
+
+
+------
+
+Properly normalize locale strings
+
+:commit:
+    `0d15cf7 <https://github.com/Juris-M/citeproc-js/commit/0d15cf7852a41683742836e3a9d36bd45d7b44be>`_
+:author:
+    fbennett
+:date:
+    2016-05-05 12:26 (JST)
+
+
+------
+
+Disable chatter
+
+:commit:
+    `3b783ad <https://github.com/Juris-M/citeproc-js/commit/3b783ad80fcbfd7138cdd0e4b7484d8311a6791b>`_
+:author:
+    fbennett
+:date:
+    2016-05-05 12:26 (JST)
+
+
+------
+
+Remove useless chatter
+
+:commit:
+    `0d43695 <https://github.com/Juris-M/citeproc-js/commit/0d43695e307d5812e852020a528864993323c65e>`_
+:author:
+    fbennett
+:date:
+    2016-05-05 12:25 (JST)
+
+
+------
+
+Fix validation errors in tests (oops has been removed from CSL-M)
+
+:commit:
+    `87123b3 <https://github.com/Juris-M/citeproc-js/commit/87123b3554b3c5685d1730194b38805d6b399148>`_
+:author:
+    fbennett
+:date:
+    2016-05-05 12:23 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.101
+
+:commit:
+    `86a737f <https://github.com/Juris-M/citeproc-js/commit/86a737faaf089c0cf9e853f804b76364e4e9bad8>`_
+:author:
+    fbennett
+:date:
+    2016-04-25 08:32 (JST)
+

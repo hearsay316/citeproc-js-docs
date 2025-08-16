@@ -1,0 +1,42 @@
+========================================================
+1.3.3-1.3.4
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.4
+
+:commit:
+    `dbf02a2 <https://github.com/Juris-M/citeproc-js/commit/dbf02a2728656f0117b596b01cfaceb5d2859e15>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 08:23 (JST)
+
+
+------
+
+Fix date parsing bug
+
+:commit:
+    `3edf77d <https://github.com/Juris-M/citeproc-js/commit/3edf77d48bf8cef2fe571524e652a7ffcbaec23c>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-27 08:22 (JST)
+
+
+------
+
+Bump version, update CHANGES,  bundle as 1.3.3
+
+:commit:
+    `9230443 <https://github.com/Juris-M/citeproc-js/commit/923044304a5de2657bee1bfab18a1952d4e45643>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-26 10:30 (JST)
+

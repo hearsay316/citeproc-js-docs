@@ -1,0 +1,54 @@
+========================================================
+1.1.12-1.1.13
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `b77f0be <https://github.com/Juris-M/citeproc-js/commit/b77f0be227c7f8e87fe9bcc14cab4b8ef10b18b9>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-03 17:04 (JST)
+
+
+------
+
+New name for composite locators in modular code
+
+:commit:
+    `de4e136 <https://github.com/Juris-M/citeproc-js/commit/de4e136784bc1853af06bfd34d2fb50899007f0c>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-03 16:59 (JST)
+
+
+------
+
+Added tag 1.1.12 for changeset 6f68f46ad6aa
+
+:commit:
+    `61cb14b <https://github.com/Juris-M/citeproc-js/commit/61cb14b8395fba840ef57fd0164cf9246585a3f7>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-25 10:38 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `a4271dc <https://github.com/Juris-M/citeproc-js/commit/a4271dc0ea8b7acbb0f339677bac4f1cc0ebc8bc>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-25 10:38 (JST)
+

@@ -1,0 +1,78 @@
+========================================================
+1.1.93-1.1.95
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.95
+
+:commit:
+    `3f379ad <https://github.com/Juris-M/citeproc-js/commit/3f379adff97afa842abea092d016cb83b8f12df8>`_
+:author:
+    fbennett
+:date:
+    2016-04-15 22:05 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `7c43512 <https://github.com/Juris-M/citeproc-js/commit/7c4351265c440d029d0ac87d8a96ee6b199a30fc>`_
+:author:
+    fbennett
+:date:
+    2016-04-15 22:04 (JST)
+
+
+------
+
+Trim numeric field values before parsing
+
+:commit:
+    `68807d3 <https://github.com/Juris-M/citeproc-js/commit/68807d3385c9abd4c9e5f3d386f8ff7f5d122903>`_
+:author:
+    fbennett
+:date:
+    2016-04-15 21:59 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.94
+
+:commit:
+    `aac0791 <https://github.com/Juris-M/citeproc-js/commit/aac0791ff35ee1e6f4fb32dde80adc95460f614a>`_
+:author:
+    fbennett
+:date:
+    2016-04-15 09:48 (JST)
+
+
+------
+
+Extend parseNoteFieldHacks to accept hash object of valid fields
+
+:commit:
+    `4112818 <https://github.com/Juris-M/citeproc-js/commit/41128184106ea61e1e73103df8adc1902fc37fae>`_
+:author:
+    fbennett
+:date:
+    2016-04-15 09:46 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.93
+
+:commit:
+    `bb7bf2f <https://github.com/Juris-M/citeproc-js/commit/bb7bf2f69b47a49e0d42573092bbc120366b1ce2>`_
+:author:
+    fbennett
+:date:
+    2016-04-14 10:45 (JST)
+

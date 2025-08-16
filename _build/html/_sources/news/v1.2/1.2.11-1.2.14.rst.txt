@@ -1,0 +1,174 @@
+========================================================
+1.2.11-1.2.14
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.14
+
+:commit:
+    `6291ad0 <https://github.com/Juris-M/citeproc-js/commit/6291ad073905dc24cba1cced73d45c2db0c0c1f2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-10 13:53 (JST)
+
+
+------
+
+Block ibid when locator-extra differs
+
+:commit:
+    `5b6a5d3 <https://github.com/Juris-M/citeproc-js/commit/5b6a5d3db93056d788195bb996aaa5b4da19d8b2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-10 08:59 (JST)
+
+
+------
+
+Merge branch 'master' of github.com:Juris-M/citeproc-js
+
+:commit:
+    `0935238 <https://github.com/Juris-M/citeproc-js/commit/0935238d1eee88edb9ea3b3e59a00a4bdf46c5f6>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-09 08:37 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.13
+
+:commit:
+    `b89ef27 <https://github.com/Juris-M/citeproc-js/commit/b89ef277465e37cc7d21f6f02d0e01d94baa6fa4>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-09 08:36 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `5faf455 <https://github.com/Juris-M/citeproc-js/commit/5faf45597e278b7ada89574abf58c9a5ad0bf033>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-09 08:19 (JST)
+
+
+------
+
+Add test of substitute conditions
+
+:commit:
+    `4895165 <https://github.com/Juris-M/citeproc-js/commit/48951658f787891d5dbb5601fd9548eaf579a643>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-09 08:06 (JST)
+
+
+------
+
+Update style modules
+
+:commit:
+    `8661286 <https://github.com/Juris-M/citeproc-js/commit/86612864a30121eeac277a04c603f407b7ba6c80>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-09 08:05 (JST)
+
+
+------
+
+Use CSL.error and CSL.debug everywhere
+
+:commit:
+    `3e9f73f <https://github.com/Juris-M/citeproc-js/commit/3e9f73fb5dac1aa8065956af31120c42694bbec2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-09 07:59 (JST)
+
+
+------
+
+Fix locale condition
+
+:commit:
+    `257e23a <https://github.com/Juris-M/citeproc-js/commit/257e23a6e12373e809b34b0281ab54d491585fcf>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-07 06:15 (JST)
+
+
+------
+
+Further test of locale conditions
+
+:commit:
+    `1e30f03 <https://github.com/Juris-M/citeproc-js/commit/1e30f03b888469412eab96554a75d238390b92ad>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-07 08:16 (JST)
+
+
+------
+
+Test of locale condition
+
+:commit:
+    `6cf57fd <https://github.com/Juris-M/citeproc-js/commit/6cf57fda2064341496caadf3157e198858dfbbd6>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-07 06:15 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.12
+
+:commit:
+    `42f1a05 <https://github.com/Juris-M/citeproc-js/commit/42f1a05c0c7664f4f2683a6b581988f55cbf5e1d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-26 06:40 (JST)
+
+
+------
+
+Revised parallel citation support
+
+:commit:
+    `e06fe63 <https://github.com/Juris-M/citeproc-js/commit/e06fe63a95af48862f37c66b2fbbf41e90c7dc23>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-25 17:39 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.11
+
+:commit:
+    `47effcd <https://github.com/Juris-M/citeproc-js/commit/47effcd6498de0142cea4c8cca3f4305ce2acf43>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-23 12:46 (JST)
+

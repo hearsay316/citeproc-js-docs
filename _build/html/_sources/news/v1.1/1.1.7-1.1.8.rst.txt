@@ -1,0 +1,54 @@
+========================================================
+1.1.7-1.1.8
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `f946177 <https://github.com/Juris-M/citeproc-js/commit/f9461776ac2ba67ab0f96f528aa89e98b7877c02>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-15 23:26 (JST)
+
+
+------
+
+Add support for law-module (renamed to track schema revision)
+
+:commit:
+    `4ec58d2 <https://github.com/Juris-M/citeproc-js/commit/4ec58d299bb2b141c61685ece880bf6978f70b2f>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-15 23:13 (JST)
+
+
+------
+
+Added tag 1.1.7 for changeset 6deae113baed
+
+:commit:
+    `bf302d9 <https://github.com/Juris-M/citeproc-js/commit/bf302d9d2e2f35da6f6c905285b8961303d30246>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-09 09:28 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `b527560 <https://github.com/Juris-M/citeproc-js/commit/b5275608be97c91a130138b4fa8bee18e6e975b7>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-09 09:27 (JST)
+

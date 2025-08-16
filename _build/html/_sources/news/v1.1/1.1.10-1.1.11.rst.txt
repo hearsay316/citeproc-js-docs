@@ -1,0 +1,54 @@
+========================================================
+1.1.10-1.1.11
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `c047ded <https://github.com/Juris-M/citeproc-js/commit/c047dedd7d68c9daf4ba56512fd9df6f8a8a3078>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-25 07:36 (JST)
+
+
+------
+
+Fixes for locator parsing and embedded labels on number var
+
+:commit:
+    `c04d9d1 <https://github.com/Juris-M/citeproc-js/commit/c04d9d153e69d1442efdf46f1d46c46b525b7f88>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-25 07:36 (JST)
+
+
+------
+
+Added tag 1.1.10 for changeset 95cee7c9ba20
+
+:commit:
+    `d620b2a <https://github.com/Juris-M/citeproc-js/commit/d620b2a6d9ba09787547664442e8b414b85c2263>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-20 19:20 (JST)
+
+
+------
+
+Fix conditional test of label embedded in "number" variable
+
+:commit:
+    `f1b027e <https://github.com/Juris-M/citeproc-js/commit/f1b027e86b0fc11857e8e722d5e3514c9b7a2b05>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-20 19:19 (JST)
+

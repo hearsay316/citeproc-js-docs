@@ -1,0 +1,90 @@
+========================================================
+1.2.32-1.2.34
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.34
+
+:commit:
+    `0e85d55 <https://github.com/Juris-M/citeproc-js/commit/0e85d55598d90101bde1718dbcacf087b20520a3>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-13 15:59 (JST)
+
+
+------
+
+Implement use-first on names shortened with institution-parts="short"
+
+:commit:
+    `642a282 <https://github.com/Juris-M/citeproc-js/commit/642a28239d2b8df8f0195025c03c333b40179100>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-13 15:55 (JST)
+
+
+------
+
+Update to docs
+
+:commit:
+    `ff218b8 <https://github.com/Juris-M/citeproc-js/commit/ff218b87fb2afdcfec1503d4b6008443599407d3>`_
+:author:
+    Frank Bennett
+:date:
+    2020-03-26 11:41 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.33
+
+:commit:
+    `1f87b7b <https://github.com/Juris-M/citeproc-js/commit/1f87b7b06d1b2d9a11f20647b6332246b8bb249d>`_
+:author:
+    Frank Bennett
+:date:
+    2020-03-10 20:51 (JST)
+
+
+------
+
+Update std fixtures
+
+:commit:
+    `9ff6f6c <https://github.com/Juris-M/citeproc-js/commit/9ff6f6cfd2d1593d726243eb49e7490bf86bd5ad>`_
+:author:
+    Frank Bennett
+:date:
+    2020-03-10 20:50 (JST)
+
+
+------
+
+Fix subsequent-author-substitute for cs:text rendered via cs:substitute
+
+:commit:
+    `010bd7a <https://github.com/Juris-M/citeproc-js/commit/010bd7a9fa37cbb4abbc2ef1ea4475d572de01a6>`_
+:author:
+    Frank Bennett
+:date:
+    2020-03-10 20:48 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.32
+
+:commit:
+    `03f5c5f <https://github.com/Juris-M/citeproc-js/commit/03f5c5fbf5241471e34a048acba765210d93abb7>`_
+:author:
+    Frank Bennett
+:date:
+    2020-03-08 17:44 (JST)
+

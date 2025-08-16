@@ -1,0 +1,54 @@
+========================================================
+1.3.1-1.3.2
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Update demo modules
+
+:commit:
+    `356be2c <https://github.com/Juris-M/citeproc-js/commit/356be2cee31d350aa3393e2cc58eaa83e8bdce53>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-26 08:31 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.2
+
+:commit:
+    `0e7679b <https://github.com/Juris-M/citeproc-js/commit/0e7679bbd86a8a64b23c427f33f6bc224f72b8dc>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-26 08:26 (JST)
+
+
+------
+
+Add some constraints on cross-cite abbreviation
+
+:commit:
+    `e49c293 <https://github.com/Juris-M/citeproc-js/commit/e49c2936d5f63429b26f759c7296beb0664bd540>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-26 08:22 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `fda7046 <https://github.com/Juris-M/citeproc-js/commit/fda70464bc32bf39bbfd014bf7706903ef3889a3>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-25 22:32 (JST)
+

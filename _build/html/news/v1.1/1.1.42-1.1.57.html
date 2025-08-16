@@ -1,0 +1,870 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.1.42-1.1.57 &mdash; citeproc-js 1.1.73 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/screen.css?v=425850a2" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=93912719"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/global.js?v=537b13e9"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.1.39-1.1.42" href="1.1.39-1.1.42.html" />
+    <link rel="prev" title="1.1.57-1.1.58" href="1.1.57-1.1.58.html" /> 
+ 
+
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            citeproc-js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Changes</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Citeproc-js changes for v1.1</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="1.1.242-1.2.1.html">1.1.242-1.2.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.241-1.1.242.html">1.1.241-1.1.242</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.240-1.1.241.html">1.1.240-1.1.241</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.239-1.1.240.html">1.1.239-1.1.240</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.238-1.1.239.html">1.1.238-1.1.239</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.237-1.1.238.html">1.1.237-1.1.238</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.236-1.1.237.html">1.1.236-1.1.237</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.234-1.1.236.html">1.1.234-1.1.236</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.233-1.1.234.html">1.1.233-1.1.234</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.232-1.1.233.html">1.1.232-1.1.233</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.229-1.1.232.html">1.1.229-1.1.232</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.228-1.1.229.html">1.1.228-1.1.229</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.227-1.1.228.html">1.1.227-1.1.228</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.226-1.1.227.html">1.1.226-1.1.227</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.225-1.1.226.html">1.1.225-1.1.226</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.224-1.1.225.html">1.1.224-1.1.225</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.223-1.1.224.html">1.1.223-1.1.224</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.222-1.1.223.html">1.1.222-1.1.223</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.220-1.1.222.html">1.1.220-1.1.222</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.219-1.1.220.html">1.1.219-1.1.220</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.217-1.1.219.html">1.1.217-1.1.219</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.216-1.1.217.html">1.1.216-1.1.217</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.215-1.1.216.html">1.1.215-1.1.216</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.214-1.1.215.html">1.1.214-1.1.215</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.213-1.1.214.html">1.1.213-1.1.214</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.212-1.1.213.html">1.1.212-1.1.213</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.211-1.1.212.html">1.1.211-1.1.212</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.210-1.1.211.html">1.1.210-1.1.211</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.209-1.1.210.html">1.1.209-1.1.210</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.208-1.1.209.html">1.1.208-1.1.209</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.206-1.1.208.html">1.1.206-1.1.208</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.205-1.1.206.html">1.1.205-1.1.206</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.204-1.1.205.html">1.1.204-1.1.205</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.203-1.1.204.html">1.1.203-1.1.204</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.202-1.1.203.html">1.1.202-1.1.203</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.201-1.1.202.html">1.1.201-1.1.202</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.199-1.1.201.html">1.1.199-1.1.201</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.198-1.1.199.html">1.1.198-1.1.199</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.197-1.1.198.html">1.1.197-1.1.198</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.196-1.1.197.html">1.1.196-1.1.197</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.195-1.1.196.html">1.1.195-1.1.196</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.194-1.1.195.html">1.1.194-1.1.195</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.193-1.1.194.html">1.1.193-1.1.194</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.191-1.1.193.html">1.1.191-1.1.193</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.190-1.1.191.html">1.1.190-1.1.191</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.188-1.1.190.html">1.1.188-1.1.190</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.187-1.1.188.html">1.1.187-1.1.188</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.186-1.1.187.html">1.1.186-1.1.187</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.185-1.1.186.html">1.1.185-1.1.186</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.184-1.1.185.html">1.1.184-1.1.185</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.183-1.1.184.html">1.1.183-1.1.184</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.182-1.1.183.html">1.1.182-1.1.183</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.181-1.1.182.html">1.1.181-1.1.182</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.180-1.1.181.html">1.1.180-1.1.181</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.179-1.1.180.html">1.1.179-1.1.180</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.178-1.1.179.html">1.1.178-1.1.179</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.177-1.1.178.html">1.1.177-1.1.178</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.174-1.1.177.html">1.1.174-1.1.177</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.173-1.1.174.html">1.1.173-1.1.174</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.172-1.1.173.html">1.1.172-1.1.173</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.170-1.1.172.html">1.1.170-1.1.172</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.169-1.1.170.html">1.1.169-1.1.170</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.167-1.1.169.html">1.1.167-1.1.169</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.165-1.1.167.html">1.1.165-1.1.167</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.164-1.1.165.html">1.1.164-1.1.165</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.163-1.1.164.html">1.1.163-1.1.164</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.162-1.1.163.html">1.1.162-1.1.163</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.157-1.1.162.html">1.1.157-1.1.162</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.156-1.1.157.html">1.1.156-1.1.157</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.155-1.1.156.html">1.1.155-1.1.156</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.154-1.1.155.html">1.1.154-1.1.155</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.153-1.1.154.html">1.1.153-1.1.154</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.150-1.1.153.html">1.1.150-1.1.153</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.149-1.1.150.html">1.1.149-1.1.150</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.148-1.1.149.html">1.1.148-1.1.149</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.146-1.1.148.html">1.1.146-1.1.148</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.145-1.1.146.html">1.1.145-1.1.146</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.144-1.1.145.html">1.1.144-1.1.145</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.143-1.1.144.html">1.1.143-1.1.144</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.142-1.1.143.html">1.1.142-1.1.143</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.141-1.1.142.html">1.1.141-1.1.142</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.140-1.1.141.html">1.1.140-1.1.141</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.137-1.1.140.html">1.1.137-1.1.140</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.136-1.1.137.html">1.1.136-1.1.137</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.135-1.1.136.html">1.1.135-1.1.136</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.134-1.1.135.html">1.1.134-1.1.135</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.133-1.1.134.html">1.1.133-1.1.134</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.132-1.1.133.html">1.1.132-1.1.133</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.131-1.1.132.html">1.1.131-1.1.132</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.130-1.1.131.html">1.1.130-1.1.131</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.129-1.1.130.html">1.1.129-1.1.130</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.128-1.1.129.html">1.1.128-1.1.129</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.127-1.1.128.html">1.1.127-1.1.128</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.126-1.1.127.html">1.1.126-1.1.127</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.125-1.1.126.html">1.1.125-1.1.126</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.124-1.1.125.html">1.1.124-1.1.125</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.122-1.1.124.html">1.1.122-1.1.124</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.121-1.1.122.html">1.1.121-1.1.122</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.120-1.1.121.html">1.1.120-1.1.121</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.119-1.1.120.html">1.1.119-1.1.120</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.118-1.1.119.html">1.1.118-1.1.119</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.117-1.1.118.html">1.1.117-1.1.118</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.116-1.1.117.html">1.1.116-1.1.117</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.115-1.1.116.html">1.1.115-1.1.116</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.114-1.1.115.html">1.1.114-1.1.115</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.113-1.1.114.html">1.1.113-1.1.114</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.112-1.1.113.html">1.1.112-1.1.113</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.108-1.1.112.html">1.1.108-1.1.112</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.107-1.1.108.html">1.1.107-1.1.108</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.106-1.1.107.html">1.1.106-1.1.107</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.105-1.1.106.html">1.1.105-1.1.106</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.104-1.1.105.html">1.1.104-1.1.105</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.103-1.1.104.html">1.1.103-1.1.104</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.102-1.1.103.html">1.1.102-1.1.103</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.101-1.1.102.html">1.1.101-1.1.102</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.100-1.1.101.html">1.1.100-1.1.101</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.99-1.1.100.html">1.1.99-1.1.100</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.98-1.1.99.html">1.1.98-1.1.99</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.96-1.1.98.html">1.1.96-1.1.98</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.95-1.1.96.html">1.1.95-1.1.96</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.93-1.1.95.html">1.1.93-1.1.95</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.91-1.1.93.html">1.1.91-1.1.93</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.90-1.1.91.html">1.1.90-1.1.91</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.89-1.1.90.html">1.1.89-1.1.90</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.88-1.1.89.html">1.1.88-1.1.89</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.87-1.1.88.html">1.1.87-1.1.88</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.86-1.1.87.html">1.1.86-1.1.87</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.85-1.1.86.html">1.1.85-1.1.86</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.84-1.1.85.html">1.1.84-1.1.85</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.83-1.1.84.html">1.1.83-1.1.84</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.82-1.1.83.html">1.1.82-1.1.83</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.81-1.1.82.html">1.1.81-1.1.82</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.79-1.1.81.html">1.1.79-1.1.81</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.78-1.1.79.html">1.1.78-1.1.79</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.76-1.1.78.html">1.1.76-1.1.78</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.75-1.1.76.html">1.1.75-1.1.76</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.74-1.1.75.html">1.1.74-1.1.75</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.72-1.1.74.html">1.1.72-1.1.74</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.71-1.1.72.html">1.1.71-1.1.72</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.67-1.1.71.html">1.1.67-1.1.71</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.65-1.1.67.html">1.1.65-1.1.67</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.64-1.1.65.html">1.1.64-1.1.65</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.63-1.1.64.html">1.1.63-1.1.64</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.61-1.1.63.html">1.1.61-1.1.63</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.58-1.1.61.html">1.1.58-1.1.61</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.57-1.1.58.html">1.1.57-1.1.58</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.1.42-1.1.57</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.39-1.1.42.html">1.1.39-1.1.42</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.37-1.1.39.html">1.1.37-1.1.39</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.36-1.1.37.html">1.1.36-1.1.37</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.35-1.1.36.html">1.1.35-1.1.36</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.34-1.1.35.html">1.1.34-1.1.35</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.33-1.1.34.html">1.1.33-1.1.34</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.32-1.1.33.html">1.1.32-1.1.33</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.31-1.1.32.html">1.1.31-1.1.32</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.28-1.1.31.html">1.1.28-1.1.31</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.25-1.1.28.html">1.1.25-1.1.28</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.24-1.1.25.html">1.1.24-1.1.25</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.23-1.1.24.html">1.1.23-1.1.24</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.22-1.1.23.html">1.1.22-1.1.23</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.21-1.1.22.html">1.1.21-1.1.22</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.20-1.1.21.html">1.1.20-1.1.21</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.19-1.1.20.html">1.1.19-1.1.20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.18-1.1.19.html">1.1.18-1.1.19</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.17-1.1.18.html">1.1.17-1.1.18</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.16-1.1.17.html">1.1.16-1.1.17</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.15-1.1.16.html">1.1.15-1.1.16</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.14-1.1.15.html">1.1.14-1.1.15</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.13-1.1.14.html">1.1.13-1.1.14</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.12-1.1.13.html">1.1.12-1.1.13</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.11-1.1.12.html">1.1.11-1.1.12</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.10-1.1.11.html">1.1.10-1.1.11</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.9-1.1.10.html">1.1.9-1.1.10</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.8-1.1.9.html">1.1.8-1.1.9</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.7-1.1.8.html">1.1.7-1.1.8</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.5-1.1.7.html">1.1.5-1.1.7</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.4-1.1.5.html">1.1.4-1.1.5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.2-1.1.4.html">1.1.2-1.1.4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.1-1.1.2.html">1.1.1-1.1.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.1.0-1.1.1.html">1.1.0-1.1.1</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../v1.2/index.html">Citeproc-js changes for v1.2</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../demos.html">Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setting-up.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../running.html">Running the Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csl-json/markup.html">CSL-JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sys-extensions.html">Extended <code class="docutils literal notranslate"><span class="pre">sys</span></code> functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csl-m/index.html">CSL-M: extensions to CSL</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">citeproc-js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Changes</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Citeproc-js changes for v1.1</a></li>
+      <li class="breadcrumb-item active">1.1.42-1.1.57</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/news/v1.1/1.1.42-1.1.57.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>1.1.42-1.1.57<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="CCBYSA" src="../../_images/cc-by-sa-80x154.png" /></a> Frank Bennett &lt;<a class="reference external" href="https://twitter.com/fgbjr">https://twitter.com/fgbjr</a>&gt;_</p>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/030602f9861591e8e2d70d99361defef1f2b50ea">030602f</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-21 07:45 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Test fixture moved from main</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/f59b85a8505d53b7a6f7a4898fa731ff947363fa">f59b85a</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-21 07:43 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Memo scraper and source used for Dutch particles</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/f289ae25c254781ce8f15a78c62f049a80f5567e">f289ae2</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-21 07:43 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Simplify particle parsing, provide particles list separately</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/23b8b910e5ef6e36210acdf4527ec02c94054fe4">23b8b91</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-21 07:21 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Do not add redundant spaces when splicing particles</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/5a3351500161a851fdda29ed2b7c4130087deb96">5a33515</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-21 07:17 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/22d4b896a8e3aa5168bb7683b98469f1369946c2">22d4b89</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-12 17:32 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix bug in cite-group-delimiter</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/f3308f489cf0fbab913464a565b6b7f3b08a846a">f3308f4</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-12 17:32 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix particle shorthand, take 2</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/ebe449e7305afaceaaaa0665f503e346be221cf0">ebe449e</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-11 05:46 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Shorthand used in last corrections</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/070404ae610c8c7706274a55046060f41bc8355d">070404a</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-11 05:41 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Particle corrections</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/87177c3ac7e5b511397c7fa25ebd498b1a49d22d">87177c3</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-11 05:39 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/b149f6d244b24de9faa0ee342010570710639dd0">b149f6d</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-10 23:55 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Add full set of known Dutch particles, merge duplicates</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/bbacc0c5dd328c8396d18e98db8eb408e515e5cd">bbacc0c</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-10 23:54 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix variable typo</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/7bdc351059661b7a3aa2fd05069957bffa99141f">7bdc351</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-08 22:39 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/f75178a7c0cc3ca9a5cc7cb3e8221fcf91ee22ce">f75178a</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-08 22:35 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Reformat particle list</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/03732f9b2588f47955acfa596c333d014461a654">03732f9</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-08 22:35 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/4f78a06738d9b12716cf62f42c5a4b0c12af4d2e">4f78a06</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-07 10:11 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix some Italian name particles</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/3d35badcb3559e8ac4cce9a552370301d09b3003">3d35bad</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-07 10:10 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Add a particle, fill out case-insensitive code</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/972fc9021afe9d5943a7121f0bb85d0dbfc0c3b9">972fc90</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-01 21:09 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Use https for git subrepo</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/b50fce13544ec448fba7186296c272f7e23b0f84">b50fce1</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-01 08:20 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Particle parsing adjustment to test</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/3b65a443a74a85e937141db652b200c73917cdd7">3b65a44</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-01 08:13 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Restore case sensitivity, fix Dutch particle classifications</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/d5868a8d6d615cf1d07dfe59a053894aeda119b1">d5868a8</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-09-01 06:21 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/03e2da7d170b2523567f321a04fcaf0339cc3951">03e2da7</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-08-13 09:08 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Drop unused function, fix typo</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/508e94d499b255253684657e2b2c3c9b18f8e818">508e94d</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-08-13 09:06 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix bugs in displayed jurisdiction names</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/50cad0f0eae5761be81bfe6e0d98e1fed963c15f">50cad0f</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-08-13 08:56 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/4d8abab4e4521f6ec25bf9bd890a47d1da98e3b6">4d8abab</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-08-09 19:37 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Always display human form of jurisdiction</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/012bbcb578863597ae296478614a7dbbbc8a4e79">012bbcb</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-08-09 19:33 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Simplify suppressed jurisdiction support. Includes change to API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/4ec79f2316d243eaea6761696d50032daa3c39bb">4ec79f2</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-08-09 16:59 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/74e9c0615d7f541b6fce199176638744008f6689">74e9c06</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-31 08:48 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix bugs in punctuation swapping and migration</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/f513579ee16806f7be920e6254dac26dc2805eb0">f513579</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-31 08:48 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix error in test result</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/30a2d91143faa1fa933e70fb488a8fa6d4b9d648">30a2d91</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-31 08:47 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Avoid crash on first-entry data with styles using first-reference-note-number</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/ac297d86da6685b53def2dd26eb9c68dd8a77449">ac297d8</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-30 19:29 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/a25d44dba9256c15a36c4223d7f2c0126f7f5cc0">a25d44d</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-28 21:01 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix flipflop parse crash on multiple U+2018 followed by straight single quote</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/1622f84f3458db0bc921c2317acb7939f0b8cece">1622f84</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-28 20:56 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix test</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/751a55677a0ff232deff3dd656b56ce457b6fc3a">751a556</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-28 20:55 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Remove unneeded getHumanForm() remapping</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/172f7104f6c78a8994adaa24b91d7a6e3c10e54d">172f710</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-28 20:49 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix for flipflop string normalizer</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/95ce32cf1ab3a9b1bc67df5ecd257f6afba6728c">95ce32c</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-28 17:39 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Text of many left-single-quote characters</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/fc0d71260eda9c6ebe87414607a00136b862e149">fc0d712</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-28 17:38 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Normalize left-single-quotes to avoid processor crash</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/d48e521e85656a1d81cfd3b53ae3c2b0334a67cc">d48e521</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-28 16:28 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/aec6aea24a5685377a21b29b221a155ff9d46df0">aec6aea</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-26 20:11 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix some particle category assignments, and make algo case-indifferent for now.</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/66806707c03c8c84795b645cfefdc507c3302f10">6680670</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-26 19:52 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Assume a smarter suppressJurisdiction() function</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/0ace0122f4478b087e96a974acf6c9207c0b9407">0ace012</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-26 19:51 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Added tag 1.1.42 for changeset bb7a9abc5f96</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/358fad894d7c0482f9ffaf2f1449a460ef18fb40">358fad8</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-22 07:39 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/9b770755fc0163d74be0ab4d7d1ba36256fcdb5c">9b77075</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2015-07-22 07:38 (JST)</p>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="1.1.57-1.1.58.html" class="btn btn-neutral float-left" title="1.1.57-1.1.58" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1.1.39-1.1.42.html" class="btn btn-neutral float-right" title="1.1.39-1.1.42" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016, Frank Bennett.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

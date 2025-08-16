@@ -1,0 +1,539 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSL-JSON &mdash; citeproc-js 1.1.73 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/screen.css?v=425850a2" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=93912719"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/js/global.js?v=537b13e9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Extended sys functions" href="../sys-extensions.html" />
+    <link rel="prev" title="Running the Processor" href="../running.html" /> 
+ 
+
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            citeproc-js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../news/index.html">Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../demos.html">Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../setting-up.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running.html">Running the Processor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CSL-JSON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#items">Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#field-types">Field Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id-field"><code class="docutils literal notranslate"><span class="pre">id</span></code> Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-field"><em>Type</em> Field</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ordinary-fields">Ordinary Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#name-fields">Name Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#date-fields">Date Fields</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#citations">Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cite-items">Cite-Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#html-like-formatting-tags">HTML-Like Formatting Tags</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cheater-syntax-for-odd-fields">“Cheater Syntax” for Odd Fields</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#braced-entry">Braced-entry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#line-entry">Line-entry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#handling-of-entries">Handling of entries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#value-formats">Value formats</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sys-extensions.html">Extended <code class="docutils literal notranslate"><span class="pre">sys</span></code> functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../csl-m/index.html">CSL-M: extensions to CSL</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">citeproc-js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CSL-JSON</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/csl-json/markup.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="csl-json">
+<h1>CSL-JSON<a class="headerlink" href="#csl-json" title="Link to this heading"></a></h1>
+<p><img alt="CCBYSA" src="../_images/cc-by-sa-80x151.png" /> <a class="reference external" href="https://twitter.com/fgbjr">Frank Bennett</a></p>
+<hr class="docutils" />
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>Citation data is added to the instantiated processor in JSON format, using
+one of three structures:</p>
+<dl>
+<dt><strong>Items</strong></dt><dd><p>Each item carries the details of a single unique bibliographic resource.</p>
+<p>Items are retrieved by the processor implicitly using its
+<code class="docutils literal notranslate"><span class="pre">retrieveItem()</span></code> method, based on a unique <code class="docutils literal notranslate"><span class="pre">id</span></code>.</p>
+</dd>
+<dt><strong>Citations</strong></dt><dd><p>Each citation carries the details of a single in-document cluster
+of one or more items, with pinpoint details specified by
+an array of cite-items.</p>
+<p>Citations are submitted to the processor using the <code class="docutils literal notranslate"><span class="pre">processCitationCluster()</span></code>
+or <code class="docutils literal notranslate"><span class="pre">previewCitationCluster()</span></code> methods.</p>
+</dd>
+<dt><strong>Cite-items</strong></dt><dd><p>Each cite-item carries the pinpoint details of a specific
+reference to a bibliographic resource described by an item.</p>
+<p>Cite-items are either submitted to the processor as part of a
+citation, or as the primary input to the <code class="docutils literal notranslate"><span class="pre">makeCitationCluster()</span></code> method.</p>
+</dd>
+</dl>
+<p>The structure of these objects is described below.</p>
+</section>
+<section id="items">
+<h2>Items<a class="headerlink" href="#items" title="Link to this heading"></a></h2>
+<p>Encoding citation data items in properly formatted CSL-JSON is essential to getting correct results from the CSL Processor. Each citation item is composed of fields of various types. Multiple citation items can be packaged into a container, which allows related citations to be treated as a unit of citations.</p>
+<section id="field-types">
+<h3>Field Types<a class="headerlink" href="#field-types" title="Link to this heading"></a></h3>
+<section id="id-field">
+<h4><code class="docutils literal notranslate"><span class="pre">id</span></code> Field<a class="headerlink" href="#id-field" title="Link to this heading"></a></h4>
+<p><strong>Required.</strong> The <em>id</em> field is a simple field containing any string or numeric value. The value of the ID field must uniquely identify the item, as this field is used to retrieve items by their ID value.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="s2">&quot;unique_string-1219205&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="type-field">
+<h4><em>Type</em> Field<a class="headerlink" href="#type-field" title="Link to this heading"></a></h4>
+<p><strong>Required.</strong> The <em>type</em> field is a simple field containing a string value. CSL-JSON constrains the possible for values of the <em>type</em> field to a limited set of possible values (<em>e.g.</em>, “book” or “article”). The type must be a valid CSL type under the schema of the installed style. See the schemata of <a class="reference external" href="https://github.com/citation-style-language/schema/blob/master/csl-types.rnc">CSL</a> and <a class="reference external" href="https://github.com/Juris-M/schema/blob/master/csl-mlz.rnc#L763">CSL-M</a> for their respective lists of valid types.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="s2">&quot;unique_string-1219205&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;book&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="ordinary-fields">
+<h4>Ordinary Fields<a class="headerlink" href="#ordinary-fields" title="Link to this heading"></a></h4>
+<p>An ordinary field type is a simple field containing a string or numeric value. In ordinary fields, the processor recognizes a limited set of HTML-like tags for visual formatting. (See <a class="reference internal" href="#html-like-formatting-tags">HTML-Like Formatting Tags</a>) below. One common ordinary field is <em>title</em> which identifies the title of the citation item. The fields that a citation may have is determined by the item type (see previous). Unrecognized fields will be simply ignored by the CSL processor. For the fields available on each item type, see the <a class="reference external" href="http://aurimasv.github.io/z2csl/typeMap.xml">listing for CSL</a> provided by Aurimas Vinckevicius, and <a class="reference external" href="http://fbennett.github.io/z2csl/">that for CSL-M</a> provided by yours truly.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="s2">&quot;unique_string-1219205&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="s2">&quot;book&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;title&quot;</span><span class="o">:</span><span class="s2">&quot;Book Title&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="s2">&quot;arbitraryField&quot;</span><span class="o">:</span><span class="s2">&quot;An example arbitrary field with arbitrary data. This field will be ignored by the CSL Processor.&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="name-fields">
+<h4>Name Fields<a class="headerlink" href="#name-fields" title="Link to this heading"></a></h4>
+<p>A name field is a complex field that lists persons as authors, contributors, or creators, etc. The field is an array of objects, with each object containing information about one person. Name fields should generally have two properties: “family”, and “given”. The “family” property represents the familial name that a person inherits. The “given” property represents the name a person has been given.</p>
+<p>The CSL-JSON allows some flexibility about how parts of a person’s name are encoded. For instance, family name affixes such as “van” and “de las” can be encoded as part the family name in the “family” property. Likewise, suffixes such as titles, generational designations, credentials, and honors can be encoded as part of the given name. Generational designations (like “Jr” or “IV”) immediately follow the given name without a comma. All other suffixes should follow next, with each suffix preceeded by a comma.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;author&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">             </span><span class="s2">&quot;family&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;de las Casas&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;given&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bartolomé&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">             </span><span class="s2">&quot;family&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;King&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;given&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Rev. Martin Luther Jr., Ph.D.&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>In the previous example, lowercase elements before the family name are treated as “non-dropping” particles, and lowercase elements following the given name as “dropping” particles. However, these special name parts could also be encoded in discrete properties.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;author&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">             </span><span class="s2">&quot;family&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Casas&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;given&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bartolomé&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;non-dropping-particle&quot;</span><span class="o">:</span><span class="s2">&quot;de las&quot;</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">             </span><span class="s2">&quot;family&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;King&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;given&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Martin Luther&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;suffix&quot;</span><span class="o">:</span><span class="s2">&quot;Jr., Ph.D.&quot;</span><span class="p">,</span>
+<span class="w">             </span><span class="s2">&quot;dropping-particle&quot;</span><span class="o">:</span><span class="s2">&quot;Rev.&quot;</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Some personal names are represented by a single field (e.g. mononyms such as “Prince” or “Plato”). In such cases, the name can be delivered as a lone family element. Institutional names may be delivered in the same way, but it is preferred to set them instead as a literal element:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;author&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">             </span><span class="s2">&quot;family&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Socrates&quot;</span><span class="p">,</span>
+<span class="w">     </span><span class="p">},</span>
+<span class="w">     </span><span class="p">{</span>
+<span class="w">             </span><span class="s2">&quot;literal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;International Business Machines&quot;</span>
+<span class="w">     </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="date-fields">
+<h4>Date Fields<a class="headerlink" href="#date-fields" title="Link to this heading"></a></h4>
+<p>A date field is a complex field that expresses a date or a range of dates. An example date field in CSL is <em>issued</em>, which identifies the date an item was issued or published. Date fields can be expressed in two different formats. The first format is an array format (note the double-nesting of the array). To express a date range in this format, the ending date would be set as a second array.</p>
+<p><em>Array Format</em></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;accessed&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;date-parts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="w"> </span><span class="mf">2005</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="w"> </span><span class="p">]]</span>
+<span class="p">},</span>
+<span class="s2">&quot;issued&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;date-parts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[[</span><span class="w"> </span><span class="mf">2000</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">15</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mf">2000</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">17</span><span class="p">]]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The second date format is a raw string. The recommended encoding is a string that represents the date in a numberic year-month-day format. However, the date parser in citeproc-js will correctly interpret a wide variety of sensible date conventions.</p>
+<p><em>Raw Format</em></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;accessed&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;raw&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2005-4-12&quot;</span>
+<span class="p">},</span>
+<span class="s2">&quot;issued&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="s2">&quot;raw&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2000-3-15/2000-3-17&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="citations">
+<h2>Citations<a class="headerlink" href="#citations" title="Link to this heading"></a></h2>
+<p>A minimal citation data object, used as input by both the <code class="docutils literal notranslate"><span class="pre">processCitationCluster()</span></code>
+and <code class="docutils literal notranslate"><span class="pre">appendCitationCluster()</span></code> command, has the following form:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;citationItems&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ITEM-1&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">],</span>
+<span class="w">   </span><span class="s2">&quot;properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;noteIndex&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">citationItems</span></code> array is a list of one or more cite-items, as described
+in the next section.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">properties</span></code> portion of a citation, the <code class="docutils literal notranslate"><span class="pre">noteIndex</span></code>
+value indicates the footnote number in which the citation is located
+within the document.  Citations within the main text of the document
+have a <code class="docutils literal notranslate"><span class="pre">noteIndex</span></code> of zero.</p>
+<p>The processor will add a number of data items to a citation
+during processing.  Values added at the top level of the citation
+structure include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">citationID</span></code>: A unique ID assigned to the citation, for
+internal use by the processor.  This ID may be assigned by the
+calling application, but it must uniquely identify the citation,
+and it must not be changed during processing or during an
+editing session.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sortedItems</span></code>: This is an array of citation objects and accompanying
+bibliographic data objects, sorted as required by the configured
+style.  Calling applications should not need to access the data
+in this array directly.</p></li>
+</ul>
+</section>
+<section id="cite-items">
+<h2>Cite-Items<a class="headerlink" href="#cite-items" title="Link to this heading"></a></h2>
+<p>Cite-items describe a specific reference to a bibliographic item.
+The fields that a cite-item may contain depend on its context.
+In a citation, cite-items listed as part of the <code class="docutils literal notranslate"><span class="pre">citationItems</span></code> array
+provide only pinpoint, descriptive, and text-suppression fields:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="s2">&quot;item1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">locator</span><span class="o">:</span><span class="w"> </span><span class="mf">123</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;page&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">prefix</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;See &quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">suffix</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot; (arguing that X is Y)&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">id</span></code> field is required. The following additional fields
+may be included on a cite-item:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">locator</span></code>: a string identifying a page number or other pinpoint
+location or range within the resource;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code>: a label type, indicating whether the locator is to a
+page, a chapter, or other subdivision of the target resource.  Valid
+labels are defined in the <a class="reference external" href="http://docs.citationstyles.org/en/stable/specification.html">CSL specification</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">suppress-author</span></code>: if true, author names will not be included in the
+citation output for this cite;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">author-only</span></code>: if true, only the author name will be included
+in the citation output for this cite – this optional parameter
+provides a means for certain demanding styles that require the
+processor output to be divided between the main text and a footnote.
+(See the section <a class="reference external" href="../running.html#partial-suppression-of-citation-content">Partial suppression of citation content</a>
+under <a class="reference external" href="../running.html#dirty-tricks">Running the Processor :: Dirty Tricks</a> for more details.)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code>: a string to print before this cite item;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">suffix</span></code>: a string to print after this cite item.</p></li>
+</ul>
+<p>When used in the array argument to <code class="docutils literal notranslate"><span class="pre">makeCitationCluster()</span></code>, cite-items
+may include additional parameters that affect the styled format
+of the individual cite-items:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">position</span></code>: an integer flag that indicates whether the cite item
+should be rendered as a first reference, an immediately-following
+reference (i.e. <em>ibid</em>), an immediately-following reference with locator
+information, or a subsequent reference.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">near-note</span></code>: a boolean flag indicating whether another reference
+to this resource can be found within a specific number of notes,
+counting back from the current position.  What is “near” in
+this sense is style-dependent.</p></li>
+</ul>
+</section>
+<section id="html-like-formatting-tags">
+<h2>HTML-Like Formatting Tags<a class="headerlink" href="#html-like-formatting-tags" title="Link to this heading"></a></h2>
+<p>Several tags are recognized in CSL-JSON input. While they are set in
+an HTML-like syntax for convenience of processing, that mimicry does
+not imply general support for HTML markup in the processor: tags that
+do not fit the patterns described below are treated as raw text, and
+will be escaped and rendered verbatim in output.</p>
+<p>Note that tags must be JSON-encoded in the input object:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">italic</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">text</span><span class="o">.</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>&lt;i&gt;italics&lt;/i&gt;</strong></dt><dd><p>Set the enclosed text in <em>italic</em> style. This tag will “flip-flop,”
+setting the text in roman type if the style applies italic style
+to the field.</p>
+</dd>
+<dt><strong>&lt;b&gt;bold&lt;/b&gt;</strong></dt><dd><p>Set the enclosed text in <strong>boldface</strong> type. This tag will “flip-flop,”
+setting the text in roman type if the style applies boldface type
+to the field.</p>
+</dd>
+<dt><strong>&lt;span style=”font-variant: small-caps;”&gt;small-caps&lt;/span&gt;</strong></dt><dd><p>Set the enclosed text in <span style="font-variant: small-caps;">small caps</span>. This tag will “flip-flop,”
+setting the text in roman type if the style applies small-caps
+to the field.</p>
+</dd>
+<dt><strong>&lt;sup&gt;superscript&lt;/sup&gt;</strong></dt><dd><p>Set the enclosed text in <sup>superscript</sup> form.</p>
+</dd>
+<dt><strong>&lt;sub&gt;subscript&lt;/sub&gt;</strong></dt><dd><p>Set the enclosed text in <sub>subscript</sub> form.</p>
+</dd>
+<dt><strong>&lt;span class=”nocase”&gt;nocase&lt;/span&gt;</strong></dt><dd><p>Suppress case-changes that would otherwise be applied to the
+enclosed text by the style.</p>
+</dd>
+</dl>
+</section>
+<section id="cheater-syntax-for-odd-fields">
+<h2>“Cheater Syntax” for Odd Fields<a class="headerlink" href="#cheater-syntax-for-odd-fields" title="Link to this heading"></a></h2>
+<p>The CSL variables needed to render a particular citation may not be
+available directly in the data structures of a calling application.
+For those situations, the processor can recognize supplementary values
+entered into the <code class="docutils literal notranslate"><span class="pre">note</span></code> field of a CSL item. The facility is
+available when the processor is run with the <code class="docutils literal notranslate"><span class="pre">field_hack</span></code> option
+(default is <code class="docutils literal notranslate"><span class="pre">true</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">citeproc</span><span class="o">.</span><span class="n">opt</span><span class="o">.</span><span class="n">development_extensions</span><span class="o">.</span><span class="n">field_hack</span> <span class="o">=</span> <span class="n">true</span>
+</pre></div>
+</div>
+<p>This method of data entry is intended as a temporary workaround to
+avoid blocking issues in user projects; it is not supported by all CSL
+processors, and does not form part of the CSL standard.</p>
+<p>Two forms of “cheater syntax” are recognized in the CSL <code class="docutils literal notranslate"><span class="pre">note</span></code> field.
+When <code class="docutils literal notranslate"><span class="pre">field_hack</span></code> is enabled, the processor will recognize both,
+and the two forms may be mixed within the field.</p>
+<div class="admonition tip" id="variable-names-tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Variable Names</strong></p>
+<p>In the braced-entry and line-entry descriptions below, a
+recognized <code class="docutils literal notranslate"><span class="pre">&lt;variable_name&gt;</span></code> is one which consists of:</p>
+<ul class="simple">
+<li><p>Uppercase roman characters <em>only</em> (i.e. <code class="docutils literal notranslate"><span class="pre">[A-Z]+</span></code>); or</p></li>
+<li><p>Lowercase roman characters, hyphens, or underscores <em>only</em> (i.e. <code class="docutils literal notranslate"><span class="pre">[-_a-z]+</span></code>).</p></li>
+</ul>
+</div>
+<section id="braced-entry">
+<h3>Braced-entry<a class="headerlink" href="#braced-entry" title="Link to this heading"></a></h3>
+<p>Awkward to type, ugly to read and fragile, the braced-entry syntax has
+been recognized by the processor for several years, and a significant
+proportion of entries in circulation rely on it. The general markup
+pattern for a single variable looks like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{:</span><span class="o">&lt;</span><span class="n">variable_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>A recognized <code class="docutils literal notranslate"><span class="pre">&lt;variable_name&gt;</span></code> must appear be between the colons
+(see <a class="reference internal" href="#variable-names-tip"><span class="std std-ref">Tip: Variable Names</span></a> above).  Arbitrary
+text, including spaces but excluding newlines, is permitted after the
+second colon (leading and trailing space will be trimmed from the
+variable value). There is no means of escaping a closing brace.</p>
+</section>
+<section id="line-entry">
+<h3>Line-entry<a class="headerlink" href="#line-entry" title="Link to this heading"></a></h3>
+<p>Full support for the line-entry format debuted with <code class="docutils literal notranslate"><span class="pre">citeproc-js</span></code>
+version <code class="docutils literal notranslate"><span class="pre">1.1.135</span></code>, in belated response to repeated suggestions on
+the Zotero forums. The general markup for inline syntax looks like
+this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">variable_name</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The line must begin with a recognized <code class="docutils literal notranslate"><span class="pre">&lt;variable_name&gt;</span></code> punctuated
+with a colon (see <a class="reference internal" href="#variable-names-tip"><span class="std std-ref">Tip: Variable Names</span></a>
+above). Arbitrary text, including spaces, is permitted to the end of
+the line (leading and trailing space will be trimmed from the variable
+value).</p>
+</section>
+<section id="handling-of-entries">
+<h3>Handling of entries<a class="headerlink" href="#handling-of-entries" title="Link to this heading"></a></h3>
+<p>Conforming braced-entries and line-entries must occur at the top of
+the <code class="docutils literal notranslate"><span class="pre">note</span></code> field. The set of entries may begin on the first <em>or</em> the
+second line of the field: parsing stops when the parser encounters a
+non-empty line <em>after the first</em> that does not fit the descriptions
+above.  Parsed entries are removed from the <code class="docutils literal notranslate"><span class="pre">note</span></code> field before onward
+processing.</p>
+<p>Multiple entries are recognized. In the case of name variables (see
+below), entries are cumulative; for other variables, the last entry
+encountered wins (but see the cautionary notes on the override of
+existing item data, below).</p>
+</section>
+<section id="value-formats">
+<h3>Value formats<a class="headerlink" href="#value-formats" title="Link to this heading"></a></h3>
+<p>Variables that can be set with the “cheater syntax” are of four types:
+<em>date</em>, <em>name</em>, <em>type</em>, and <em>ordinary</em></p>
+<dl>
+<dt><strong>Date variables</strong></dt><dd><p>Date variables should be entered in ISO year-month-day syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">original</span><span class="o">-</span><span class="n">date</span><span class="p">:</span> <span class="mi">2001</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">31</span>
+</pre></div>
+</div>
+<p>The processor’s internal date parsing function, applied to the
+date content, recognizes date ranges as well:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">original</span><span class="o">-</span><span class="n">date</span><span class="p">:</span> <span class="mi">2001</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">15</span><span class="o">/</span><span class="mi">2001</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">31</span>
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>Overrides (date variables)</strong></p>
+<p>By default, date variables entered in “cheater syntax” will override
+an existing value in the item. This is permitted because the processor’s
+internal parser may offer better recognition of date forms (such as ranges)
+than that of the calling application. Date value override may be disabled
+by setting the relevant toggle to <code class="docutils literal notranslate"><span class="pre">false</span></code> after processor instantiation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">citeproc</span><span class="o">.</span><span class="n">opt</span><span class="o">.</span><span class="n">development_extensions</span><span class="o">.</span><span class="n">allow_field_hack_date_override</span> <span class="o">=</span> <span class="n">false</span>
+</pre></div>
+</div>
+</div>
+</dd>
+<dt><strong>Name variables</strong></dt><dd><p>Name variables come in two flavors: single-field names and two-field names.
+Personal names are ordinarily of the two-field flavor. Fields are separated
+by <em>double</em> field-separator characters (<code class="docutils literal notranslate"><span class="pre">||</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">editor</span><span class="p">:</span> <span class="n">Thompson</span> <span class="o">||</span> <span class="n">Hunter</span> <span class="n">S</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Single-field names may represent institutions, and these may be
+composed of several sub-units separated by a <em>single</em> field-separator
+character (<code class="docutils literal notranslate"><span class="pre">|</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">author</span><span class="p">:</span> <span class="n">Prince</span>
+<span class="n">author</span><span class="p">:</span> <span class="n">National</span> <span class="n">Weather</span> <span class="n">Service</span><span class="o">|</span><span class="n">Office</span> <span class="n">of</span> <span class="n">International</span> <span class="n">Affairs</span>
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>Overrides (name variables)</strong></p>
+<p>Unlike the other variable types, entries for name variables are cumulative;
+however, name entries in “cheater syntax” will not override an existing
+creator of the same CSL category.</p>
+</div>
+</dd>
+<dt><strong>Item type</strong></dt><dd><p>The item type may also be set with either syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">:</span> <span class="n">dataset</span>
+</pre></div>
+</div>
+<p>Note, however, that when a type not recognized by the target style
+is set in this way, the item will be processed as an untyped item
+(sometimes described as a generic type such as “Document” in calling
+applications).</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>Overrides (item type)</strong></p>
+<p>An item type value set in “cheater syntax” always overrides the
+existing item type.</p>
+</div>
+</dd>
+<dt><strong>Ordinary variables</strong></dt><dd><p>Entries other than those above are assumed to be ordinary variables.
+these are set literally on the item, with no pre-processing.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p><strong>Overrides (ordinary variables)</strong></p>
+<p>Ordinary variables set in “cheater syntax” will not override
+an existing value for the same variable.</p>
+</div>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../running.html" class="btn btn-neutral float-left" title="Running the Processor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../sys-extensions.html" class="btn btn-neutral float-right" title="Extended sys functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016, Frank Bennett.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

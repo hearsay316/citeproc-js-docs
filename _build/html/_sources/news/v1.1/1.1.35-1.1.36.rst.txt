@@ -1,0 +1,54 @@
+========================================================
+1.1.35-1.1.36
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `f8dcedd <https://github.com/Juris-M/citeproc-js/commit/f8dcedd75d11792ed45ea958ee4d336e7778d447>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-29 21:15 (JST)
+
+
+------
+
+Fix root of institution bug
+
+:commit:
+    `880b5a7 <https://github.com/Juris-M/citeproc-js/commit/880b5a7f07297cf935d7e5c5ed3d70c2b05cb8a5>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-29 21:14 (JST)
+
+
+------
+
+Added tag 1.1.35 for changeset 54bae234f3d1
+
+:commit:
+    `a09fc00 <https://github.com/Juris-M/citeproc-js/commit/a09fc007fb80c8156446588ad3f94d5cb4b2baa5>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-29 05:36 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `a6642af <https://github.com/Juris-M/citeproc-js/commit/a6642af5805b5057d2070b8a58526ce46639fb52>`_
+:author:
+    Frank Bennett
+:date:
+    2015-06-29 05:36 (JST)
+

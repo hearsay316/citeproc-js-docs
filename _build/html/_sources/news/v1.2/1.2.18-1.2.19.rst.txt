@@ -1,0 +1,66 @@
+========================================================
+1.2.18-1.2.19
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.19
+
+:commit:
+    `1f0d230 <https://github.com/Juris-M/citeproc-js/commit/1f0d2308a325eb0216c514c568b426861333cd43>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-21 15:43 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `8d20f3f <https://github.com/Juris-M/citeproc-js/commit/8d20f3f1e81dad8e591199f1e6bea60db0f5d2a0>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-21 15:34 (JST)
+
+
+------
+
+Update style modules
+
+:commit:
+    `0f4c91c <https://github.com/Juris-M/citeproc-js/commit/0f4c91c4ebbca91454c5002c5f1c51279f9b9e12>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-21 15:33 (JST)
+
+
+------
+
+Do not print secondary or tertiary abbrevs that match primary
+
+:commit:
+    `8ee6bec <https://github.com/Juris-M/citeproc-js/commit/8ee6becfa4d627cb13e7b0fc9c0247f6751430ed>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-21 15:32 (JST)
+
+
+------
+
+Add sys option for casing alignment
+
+:commit:
+    `a7973df <https://github.com/Juris-M/citeproc-js/commit/a7973df16ee390e32445f730976c77f854c51362>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-20 12:49 (JST)
+

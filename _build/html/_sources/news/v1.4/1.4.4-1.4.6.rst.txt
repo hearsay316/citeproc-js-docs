@@ -1,0 +1,138 @@
+========================================================
+1.4.4-1.4.6
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.6
+
+:commit:
+    `37eecc6 <https://github.com/Juris-M/citeproc-js/commit/37eecc66a19e5d65bef7d4e7e33760a9211f5963>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-02 05:29 (JST)
+
+
+------
+
+Add test of locator suppression with author-only
+
+:commit:
+    `112d714 <https://github.com/Juris-M/citeproc-js/commit/112d714a92f77f41130b593ecdb30b2a5724d49f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-02 05:28 (JST)
+
+
+------
+
+Update style fixtures
+
+:commit:
+    `6eb3878 <https://github.com/Juris-M/citeproc-js/commit/6eb3878bfa0a73e68441113d238c1a8133a51564>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-02 05:26 (JST)
+
+
+------
+
+Suppress locator if author-only
+
+:commit:
+    `b2dde8f <https://github.com/Juris-M/citeproc-js/commit/b2dde8f317ee964a6c303c5480847b54e5d1b55c>`_
+:author:
+    Frank Bennett
+:date:
+    2020-07-02 05:24 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.5
+
+:commit:
+    `120ee8f <https://github.com/Juris-M/citeproc-js/commit/120ee8f0ab25b1f9bd42d6599b393db1d4521097>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-28 09:03 (JST)
+
+
+------
+
+Update std test fixtures
+
+:commit:
+    `76e31f3 <https://github.com/Juris-M/citeproc-js/commit/76e31f36445647c81ef21bb9dc44932a43876db6>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-28 09:02 (JST)
+
+
+------
+
+Apply limit-day-ordinals-to-day-1 to elements of a range
+
+:commit:
+    `6465bc0 <https://github.com/Juris-M/citeproc-js/commit/6465bc05b0f9c56aab6c241ed9ae733d2f6348cf>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-28 08:59 (JST)
+
+
+------
+
+Update submodules
+
+:commit:
+    `752db9f <https://github.com/Juris-M/citeproc-js/commit/752db9f78ef9761936f919abc8880b71c6bec3a9>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-19 14:22 (JST)
+
+
+------
+
+Update styles
+
+:commit:
+    `84eacc7 <https://github.com/Juris-M/citeproc-js/commit/84eacc767b106edad3a157a62ba4428c2810bf55>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-18 23:47 (JST)
+
+
+------
+
+Update modules
+
+:commit:
+    `e0905d7 <https://github.com/Juris-M/citeproc-js/commit/e0905d723eb2f69bd3313fc48fc159134d0eb97d>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-18 23:45 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.4.4
+
+:commit:
+    `1930ce9 <https://github.com/Juris-M/citeproc-js/commit/1930ce910acb334e26d6d09832baa3e4f7832e4c>`_
+:author:
+    Frank Bennett
+:date:
+    2020-06-17 21:04 (JST)
+

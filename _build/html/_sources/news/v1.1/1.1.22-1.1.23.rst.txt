@@ -1,0 +1,54 @@
+========================================================
+1.1.22-1.1.23
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `5c2cf02 <https://github.com/Juris-M/citeproc-js/commit/5c2cf027cdf20658085cce61c11b63ec36d8a356>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-25 22:18 (JST)
+
+
+------
+
+Initialize US jurisdiction if necessary when falling back
+
+:commit:
+    `a01c048 <https://github.com/Juris-M/citeproc-js/commit/a01c0480be380917cbe8e44c02dcf199ae4dfff9>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-25 22:13 (JST)
+
+
+------
+
+Added tag 1.1.22 for changeset b5a44779a535
+
+:commit:
+    `b91a9d3 <https://github.com/Juris-M/citeproc-js/commit/b91a9d35ea0cd50c5f2d64deaedf64d55c842c21>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-25 16:37 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `44ae031 <https://github.com/Juris-M/citeproc-js/commit/44ae03184cf0518e0e42d053ecd6397c5ae2fd3b>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-25 16:37 (JST)
+

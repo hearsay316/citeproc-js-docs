@@ -1,0 +1,54 @@
+========================================================
+1.2.29-1.2.30
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.30
+
+:commit:
+    `1aa49dd <https://github.com/Juris-M/citeproc-js/commit/1aa49dd2ab9a1c85d3060073780d65c86754a438>`_
+:author:
+    Frank Bennett
+:date:
+    2019-12-18 20:19 (JST)
+
+
+------
+
+Avoid crashing on citations with no items
+
+:commit:
+    `978981a <https://github.com/Juris-M/citeproc-js/commit/978981a78976fe5230fbda860e852dc0a1962e7e>`_
+:author:
+    Frank Bennett
+:date:
+    2019-12-18 19:48 (JST)
+
+
+------
+
+Bump npm version
+
+:commit:
+    `d60a0d5 <https://github.com/Juris-M/citeproc-js/commit/d60a0d5bd04a7f5fd4a02db29a8169ed17eb93bc>`_
+:author:
+    Frank Bennett
+:date:
+    2019-12-08 13:39 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.29
+
+:commit:
+    `3814a0d <https://github.com/Juris-M/citeproc-js/commit/3814a0d741e4530cdf66cd5c531e0c8d53c693df>`_
+:author:
+    Frank Bennett
+:date:
+    2019-12-08 13:38 (JST)
+

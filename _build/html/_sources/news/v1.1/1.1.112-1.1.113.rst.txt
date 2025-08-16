@@ -1,0 +1,54 @@
+========================================================
+1.1.112-1.1.113
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.113
+
+:commit:
+    `2591758 <https://github.com/Juris-M/citeproc-js/commit/2591758001af6f5c99fad950fd715710bcc960fb>`_
+:author:
+    Frank Bennett
+:date:
+    2016-07-08 14:12 (JST)
+
+
+------
+
+Update csl-m, docs, locale
+
+:commit:
+    `979288f <https://github.com/Juris-M/citeproc-js/commit/979288fa40ebafe9eeb1fd643925341e01d6cd3c>`_
+:author:
+    Frank Bennett
+:date:
+    2016-07-08 14:09 (JST)
+
+
+------
+
+Missing argument
+
+:commit:
+    `9e61ff9 <https://github.com/Juris-M/citeproc-js/commit/9e61ff9cf420529620309d66d09f379eeb713bf7>`_
+:author:
+    Frank Bennett
+:date:
+    2016-07-08 14:04 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.112
+
+:commit:
+    `5127f6b <https://github.com/Juris-M/citeproc-js/commit/5127f6b2b76bbb654f4a5bba2e5e115b72afd22c>`_
+:author:
+    fbennett
+:date:
+    2016-07-07 15:29 (JST)
+

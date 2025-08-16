@@ -1,0 +1,138 @@
+========================================================
+1.3.20-1.3.22
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Test of ampersand with no adjacent spaces
+
+:commit:
+    `0ef5077 <https://github.com/Juris-M/citeproc-js/commit/0ef50770a7322d1c2237232ee12481226bc0284b>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-30 17:47 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.22
+
+:commit:
+    `d75adde <https://github.com/Juris-M/citeproc-js/commit/d75adde13fc303c1a883e7f58db39b578be438dd>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-30 17:46 (JST)
+
+
+------
+
+Allow ampersand without adjacent space against letters in numeric fields
+
+:commit:
+    `ea4b7f0 <https://github.com/Juris-M/citeproc-js/commit/ea4b7f015908b16e31221485efcf3a56d7b104a8>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-30 17:46 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.21
+
+:commit:
+    `6f75537 <https://github.com/Juris-M/citeproc-js/commit/6f75537ea874d4aaf973e700b7876d474ed2bea9>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 13:51 (JST)
+
+
+------
+
+Update std test fixtures
+
+:commit:
+    `938c7ad <https://github.com/Juris-M/citeproc-js/commit/938c7ad4b2c9a3968c8f9d944f65e9c76974d8bc>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 13:50 (JST)
+
+
+------
+
+Update schemata
+
+:commit:
+    `ad60070 <https://github.com/Juris-M/citeproc-js/commit/ad60070c283ad4bd846d7d106889b7223eccb9eb>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 13:49 (JST)
+
+
+------
+
+Receive tests from std that assume implicit addition of leading/trailing space on cite affixes
+
+:commit:
+    `9340bc3 <https://github.com/Juris-M/citeproc-js/commit/9340bc3ac3c9d27a02ffea4b54ddf503b867b449>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 13:38 (JST)
+
+
+------
+
+Update std test fixtures
+
+:commit:
+    `b9f58a4 <https://github.com/Juris-M/citeproc-js/commit/b9f58a49749b50646cf9e888fe3150aac8763280>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 11:07 (JST)
+
+
+------
+
+Add files removed from std CSL fixtures repository
+
+:commit:
+    `882450f <https://github.com/Juris-M/citeproc-js/commit/882450fda6a24f990656b3b47c21327cd5e577c2>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 11:07 (JST)
+
+
+------
+
+Add "substring" numeric attribute specifically for US patent references
+
+:commit:
+    `25482bf <https://github.com/Juris-M/citeproc-js/commit/25482bf7e9eadc2a4c1f7373e40ffb80c0acffb7>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-29 09:34 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.20
+
+:commit:
+    `646e0a6 <https://github.com/Juris-M/citeproc-js/commit/646e0a61e454ce95fad0a1ebf1a8fe29dd47c63f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 21:26 (JST)
+

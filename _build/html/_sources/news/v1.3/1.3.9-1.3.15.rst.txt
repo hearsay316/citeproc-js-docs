@@ -1,0 +1,198 @@
+========================================================
+1.3.9-1.3.15
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.15
+
+:commit:
+    `e822afa <https://github.com/Juris-M/citeproc-js/commit/e822afa821d1b97cabffa9eab92d197703f8f5d6>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-25 22:02 (JST)
+
+
+------
+
+Extend suppression of collection-title/issued suppression to legislation, fix label bugs
+
+:commit:
+    `797d95e <https://github.com/Juris-M/citeproc-js/commit/797d95e60a1fa97feae134129461d970bbd5999b>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-25 21:43 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.14
+
+:commit:
+    `30d4caf <https://github.com/Juris-M/citeproc-js/commit/30d4cafb676f50c0784bb1cfcb4001ca51d5bfdb>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-24 20:18 (JST)
+
+
+------
+
+Extend shorthand labels to cover all of IndigoBook T13
+
+:commit:
+    `52700df <https://github.com/Juris-M/citeproc-js/commit/52700df5f65ff87457cff005e2e117a4c4ea0f5f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-24 20:17 (JST)
+
+
+------
+
+Updaate style tests
+
+:commit:
+    `0538f09 <https://github.com/Juris-M/citeproc-js/commit/0538f09b2e9667a60c751fcad0a8aead335b0f18>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-24 07:59 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `841b1eb <https://github.com/Juris-M/citeproc-js/commit/841b1eb8fecff1ba624d94a91d243a13a806c075>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-24 07:52 (JST)
+
+
+------
+
+Bump npm version
+
+:commit:
+    `3bc8eb5 <https://github.com/Juris-M/citeproc-js/commit/3bc8eb580168792213b3ee02b54979041f19d077>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-22 20:28 (JST)
+
+
+------
+
+Fix coding typo
+
+:commit:
+    `cf1599d <https://github.com/Juris-M/citeproc-js/commit/cf1599d0a06a649a1fd7cb67026d6281d8e33282>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-22 20:27 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.12
+
+:commit:
+    `92aba1d <https://github.com/Juris-M/citeproc-js/commit/92aba1d5b9b0ccdb81430f32180ded6072cede70>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-22 19:54 (JST)
+
+
+------
+
+Change new option to require-comma-on-symbol
+
+:commit:
+    `70d1e59 <https://github.com/Juris-M/citeproc-js/commit/70d1e59cf5c41ecd2ac3b639a80295635dd54d32>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-22 19:52 (JST)
+
+
+------
+
+Add style attribute require-comma-on-symbol-after-number
+
+:commit:
+    `dc48954 <https://github.com/Juris-M/citeproc-js/commit/dc48954519d669db378b7f7aebe1ae3d7a1bb33a>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-22 18:52 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.10
+
+:commit:
+    `812fbb4 <https://github.com/Juris-M/citeproc-js/commit/812fbb4a66cf787caa3ab66d8ab7c5e9c4a55a85>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-19 07:46 (JST)
+
+
+------
+
+Test of slash-delimited numeric strings with is-numeric
+
+:commit:
+    `732645a <https://github.com/Juris-M/citeproc-js/commit/732645ae848ae061bbeab4b7025e19035b6a64f5>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-19 07:45 (JST)
+
+
+------
+
+Test of jurisdiction abbreviations
+
+:commit:
+    `6c838caf <https://github.com/Juris-M/citeproc-js/commit/6c838caf7524925e8fdfbe47bf6cc31f35e2d42f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-19 07:45 (JST)
+
+
+------
+
+Return is-numeric true for slash-delimited numeric strings
+
+:commit:
+    `215363e <https://github.com/Juris-M/citeproc-js/commit/215363e2c56662c6b7737be5b31b0a3fad066bc0>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-19 07:43 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.9
+
+:commit:
+    `b58110e <https://github.com/Juris-M/citeproc-js/commit/b58110e403e7defd29e90efb5ab3c1f5bbdf2d2f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-14 05:58 (JST)
+

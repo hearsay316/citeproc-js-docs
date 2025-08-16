@@ -1,0 +1,78 @@
+========================================================
+1.2.15-1.2.16
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Update docs
+
+:commit:
+    `d5e994e <https://github.com/Juris-M/citeproc-js/commit/d5e994e015dc48211ae33f3a974673eae503b4f2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-14 23:38 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.16
+
+:commit:
+    `b76f6ba <https://github.com/Juris-M/citeproc-js/commit/b76f6ba3cd2e16ac5250f96619af46189e3ac465>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-14 23:11 (JST)
+
+
+------
+
+Remove erroneous comment
+
+:commit:
+    `237ceec <https://github.com/Juris-M/citeproc-js/commit/237ceecf912d22318cedececa1a2663114df2dc5>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-14 12:56 (JST)
+
+
+------
+
+Bugfixes for require/reject group attributes
+
+:commit:
+    `448ead9 <https://github.com/Juris-M/citeproc-js/commit/448ead9648f2d9f5504e2b58960e7360388a35e7>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-14 13:00 (JST)
+
+
+------
+
+Bugfixes to require/reject attributes to cs:group.
+
+:commit:
+    `bb41bba <https://github.com/Juris-M/citeproc-js/commit/bb41bba8732d4e568631f25f6986753630a0daea>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-14 12:53 (JST)
+
+
+------
+
+Bump version update CHANGES, bundle as 1.2.15
+
+:commit:
+    `9a9efe9 <https://github.com/Juris-M/citeproc-js/commit/9a9efe9d8cdc1d101cd1486e125c69fdbeb55250>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-11 08:11 (JST)
+

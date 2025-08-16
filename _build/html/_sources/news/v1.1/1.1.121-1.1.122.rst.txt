@@ -1,0 +1,42 @@
+========================================================
+1.1.121-1.1.122
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.122
+
+:commit:
+    `8397a7a <https://github.com/Juris-M/citeproc-js/commit/8397a7a690bfb696aea074812fe8725c71993828>`_
+:author:
+    fbennett
+:date:
+    2016-09-08 09:35 (JST)
+
+
+------
+
+Restore jurisdiction suppression
+
+:commit:
+    `144b2e9 <https://github.com/Juris-M/citeproc-js/commit/144b2e9a4f57984ef03890a200985985058b0c90>`_
+:author:
+    fbennett
+:date:
+    2016-09-08 09:33 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.121
+
+:commit:
+    `e94c0c3 <https://github.com/Juris-M/citeproc-js/commit/e94c0c358a3e8a9bbc9561d5b8a3c26540b4f05b>`_
+:author:
+    fbennett
+:date:
+    2016-09-08 06:11 (JST)
+

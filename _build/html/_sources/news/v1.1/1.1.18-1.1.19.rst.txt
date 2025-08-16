@@ -1,0 +1,66 @@
+========================================================
+1.1.18-1.1.19
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES.txt, bundle
+
+:commit:
+    `008e6dd <https://github.com/Juris-M/citeproc-js/commit/008e6dde627bfd29c32c8da8621670fbfcb00ae5>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-21 10:29 (JST)
+
+
+------
+
+Fix bug in suppression of juris-locator-label macro in modular code
+
+:commit:
+    `c2cfa9e <https://github.com/Juris-M/citeproc-js/commit/c2cfa9efbff2966cf6e7512e29e729fbb4c2e05f>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-21 10:26 (JST)
+
+
+------
+
+Detect output from multiple variables
+
+:commit:
+    `1dcbe6b <https://github.com/Juris-M/citeproc-js/commit/1dcbe6b999d7cbeb34d72736fb858eea0b7df88a>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-21 10:25 (JST)
+
+
+------
+
+Added tag 1.1.18 for changeset a30d30f9a145
+
+:commit:
+    `ecbd223 <https://github.com/Juris-M/citeproc-js/commit/ecbd2239a3a7d516155f9177481c7d5c42baf4ba>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-20 07:04 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `0222de6 <https://github.com/Juris-M/citeproc-js/commit/0222de67ab5e196af60b08d4642b166395af51c8>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-20 07:04 (JST)
+

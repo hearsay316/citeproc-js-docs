@@ -1,0 +1,90 @@
+========================================================
+1.2.35-1.2.36
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.36
+
+:commit:
+    `a0e530f <https://github.com/Juris-M/citeproc-js/commit/a0e530f0b7771367464e5df92e77b1e46c8c1767>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-23 15:32 (JST)
+
+
+------
+
+Test of authority trimmer
+
+:commit:
+    `3b96561 <https://github.com/Juris-M/citeproc-js/commit/3b96561c1c18fd2e3d506e43f9d4b0248fa401fd>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-23 15:13 (JST)
+
+
+------
+
+Trim abbrevd authority based on abbrevd container-title markup
+
+:commit:
+    `49426cf <https://github.com/Juris-M/citeproc-js/commit/49426cfaf8436643e5aa0db4d7c0417b0c120b48>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-23 15:12 (JST)
+
+
+------
+
+Identical treatment of empty and custom labels for comma-safe purposes
+
+:commit:
+    `bdf3828 <https://github.com/Juris-M/citeproc-js/commit/bdf3828924fcc267d3c0ca6c82717dcf40ea8394>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-23 15:10 (JST)
+
+
+------
+
+Apply label-form to embedded labels
+
+:commit:
+    `7b0f19f <https://github.com/Juris-M/citeproc-js/commit/7b0f19f3c2ee3a33406c71985c6545982c2561de>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-22 11:20 (JST)
+
+
+------
+
+Small tweak to treat hyphenated escape-hyphenated numbers as plural
+
+:commit:
+    `a672f9c <https://github.com/Juris-M/citeproc-js/commit/a672f9c48c6c2af6b42c983bf5e560714c56d992>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-22 10:10 (JST)
+
+
+------
+
+Add missing bundles
+
+:commit:
+    `a0d4d48 <https://github.com/Juris-M/citeproc-js/commit/a0d4d48701271c4660b45ac79794d40d5710fcda>`_
+:author:
+    Frank Bennett
+:date:
+    2020-04-22 09:38 (JST)
+

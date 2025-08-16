@@ -1,0 +1,42 @@
+========================================================
+1.2.1-HEAD
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.2
+
+:commit:
+    `2d91671 <https://github.com/Juris-M/citeproc-js/commit/2d9167127fcb1268f4c7e5a04e34f2df779cc1a2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-20 21:34 (JST)
+
+
+------
+
+Implement uppercase_subtitles flag as sys option
+
+:commit:
+    `617a077 <https://github.com/Juris-M/citeproc-js/commit/617a07705be90396622569ee01043f1950264c6a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-20 21:31 (JST)
+
+
+------
+
+Bump minor version, update CHANGES, bundle as 1.2.1
+
+:commit:
+    `9111953 <https://github.com/Juris-M/citeproc-js/commit/9111953a18ec32ca4f6b2d8a3738c2c8b0ca9e37>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-19 13:05 (JST)
+

@@ -1,0 +1,138 @@
+========================================================
+1.2.27-1.2.29
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.29
+
+:commit:
+    `3814a0d <https://github.com/Juris-M/citeproc-js/commit/3814a0d741e4530cdf66cd5c531e0c8d53c693df>`_
+:author:
+    Frank Bennett
+:date:
+    2019-12-08 13:38 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `8f08b54 <https://github.com/Juris-M/citeproc-js/commit/8f08b546df368eec074c86945e9a3e4f47581c8a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-12-08 13:37 (JST)
+
+
+------
+
+Drop time from ISO date strings before parsing
+
+:commit:
+    `18c6f96 <https://github.com/Juris-M/citeproc-js/commit/18c6f965bc3c4500e8a9e417e15d02a769644acc>`_
+:author:
+    Frank Bennett
+:date:
+    2019-12-08 13:34 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.28
+
+:commit:
+    `3c17390 <https://github.com/Juris-M/citeproc-js/commit/3c1739086e98fc91ae08a6cfadb434cd52574695>`_
+:author:
+    Frank Bennett
+:date:
+    2019-11-13 13:15 (JST)
+
+
+------
+
+Test of sorting by court category
+
+:commit:
+    `328cb00 <https://github.com/Juris-M/citeproc-js/commit/328cb00456925070307534a68163281c29bf3392>`_
+:author:
+    Frank Bennett
+:date:
+    2019-11-13 13:07 (JST)
+
+
+------
+
+Avoid auto-split of titles on legal_case type
+
+:commit:
+    `9c2e046 <https://github.com/Juris-M/citeproc-js/commit/9c2e0466549a2a7d503422f470bc9c700d447726>`_
+:author:
+    Frank Bennett
+:date:
+    2019-11-13 13:06 (JST)
+
+
+------
+
+Update CSL schemata
+
+:commit:
+    `6d662de <https://github.com/Juris-M/citeproc-js/commit/6d662de9263c9c8f1d140ac952cdaa813af106dd>`_
+:author:
+    Frank Bennett
+:date:
+    2019-11-04 17:45 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `1b458a2 <https://github.com/Juris-M/citeproc-js/commit/1b458a2c226d4c6d8fb551b90ac6f234dfda3dbe>`_
+:author:
+    Frank Bennett
+:date:
+    2019-11-04 17:42 (JST)
+
+
+------
+
+Update style modules
+
+:commit:
+    `c4b97c8 <https://github.com/Juris-M/citeproc-js/commit/c4b97c84b379a6dc584d420b0b6e8daf0a41b86f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-11-04 17:39 (JST)
+
+
+------
+
+Update modules
+
+:commit:
+    `69d4595 <https://github.com/Juris-M/citeproc-js/commit/69d4595833b3aca25cabe53c6b67d16afc2ff7d2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-10-28 11:07 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.27
+
+:commit:
+    `3674b4a <https://github.com/Juris-M/citeproc-js/commit/3674b4ad553118c66ee21cc142fe2a64293f368d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-25 21:43 (JST)
+

@@ -1,0 +1,114 @@
+========================================================
+1.1.182-1.1.183
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.183
+
+:commit:
+    `9f7371a <https://github.com/Juris-M/citeproc-js/commit/9f7371a6992ad839dd77e854379e1ee8972a0dd5>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-15 14:06 (JST)
+
+
+------
+
+Update test fixtures
+
+:commit:
+    `7960ff0 <https://github.com/Juris-M/citeproc-js/commit/7960ff0463d88974d702e0c0037f2f1bb8512560>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-15 14:05 (JST)
+
+
+------
+
+Fix nesting footfault
+
+:commit:
+    `a02c9a4 <https://github.com/Juris-M/citeproc-js/commit/a02c9a42213e9660ac577ac383e3a33ad78e1e60>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-15 14:02 (JST)
+
+
+------
+
+Add a further test of DOI wrapping
+
+:commit:
+    `0e3b4f7 <https://github.com/Juris-M/citeproc-js/commit/0e3b4f7409c19c7c5120434431da62ce5b0bd35b>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-10 10:55 (JST)
+
+
+------
+
+Fix address of test fixture in CHANGES
+
+:commit:
+    `773bca2 <https://github.com/Juris-M/citeproc-js/commit/773bca2f9b3eb4fd3f2f87abf01481389bf24728>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-10 09:59 (JST)
+
+
+------
+
+Add test fixture for wrapped DOIs
+
+:commit:
+    `3df9a90 <https://github.com/Juris-M/citeproc-js/commit/3df9a908fe1ac05b424ab265ce08b58ed3a49479>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-10 09:57 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `2fbe943 <https://github.com/Juris-M/citeproc-js/commit/2fbe943e08502838631ac1c86fc6f81789b49868>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-10 09:55 (JST)
+
+
+------
+
+Fix a tiny regexp bug
+
+:commit:
+    `bbaff47 <https://github.com/Juris-M/citeproc-js/commit/bbaff4710f034797285a517b56f452c8540dcab1>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-10 09:45 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.182
+
+:commit:
+    `149f6c3 <https://github.com/Juris-M/citeproc-js/commit/149f6c3118bf29470edcb4a0585cf37d8ee28805>`_
+:author:
+    Frank Bennett
+:date:
+    2017-12-10 09:16 (JST)
+

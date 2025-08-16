@@ -1,0 +1,54 @@
+========================================================
+1.1.107-1.1.108
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.108
+
+:commit:
+    `0bbc3e1 <https://github.com/Juris-M/citeproc-js/commit/0bbc3e1a286447a5cf623db7d2056e4846a6c092>`_
+:author:
+    fbennett
+:date:
+    2016-06-15 06:00 (JST)
+
+
+------
+
+Show variants even when abbrev is used
+
+:commit:
+    `0736739 <https://github.com/Juris-M/citeproc-js/commit/07367394efb91014c57f6e0a06ad922f87500bd0>`_
+:author:
+    fbennett
+:date:
+    2016-06-15 05:56 (JST)
+
+
+------
+
+Remove old indexOf() def
+
+:commit:
+    `c85ce96 <https://github.com/Juris-M/citeproc-js/commit/c85ce96b332f11b1a4bbf8d99c09177472528024>`_
+:author:
+    fbennett
+:date:
+    2016-06-15 05:54 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.107
+
+:commit:
+    `dbb8594 <https://github.com/Juris-M/citeproc-js/commit/dbb85942335aa24649a1487e0e42838c9a02ffd8>`_
+:author:
+    fbennett
+:date:
+    2016-06-07 22:22 (JST)
+

@@ -1,0 +1,102 @@
+========================================================
+1.3.16-1.3.17
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.17
+
+:commit:
+    `77ae855 <https://github.com/Juris-M/citeproc-js/commit/77ae855e6400f6a31f50406c66237b3e01512db4>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 20:03 (JST)
+
+
+------
+
+Update style modules
+
+:commit:
+    `4c1378f <https://github.com/Juris-M/citeproc-js/commit/4c1378ff9aa84f45dc1078996aaa7e34337e7d61>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 20:02 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `329102b <https://github.com/Juris-M/citeproc-js/commit/329102b563c4fda4fe60c1f8149c3051965c0fcc>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 19:59 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `2549bf8 <https://github.com/Juris-M/citeproc-js/commit/2549bf83760558457ae04678d6030b68bafeea86>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 19:57 (JST)
+
+
+------
+
+Process leading short-code labels on the page variable as for locator
+
+:commit:
+    `1dd968a <https://github.com/Juris-M/citeproc-js/commit/1dd968ae0c50d58e0a22d21db6bce69d0908997f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 19:49 (JST)
+
+
+------
+
+Adjustments to leading embedded-label tests
+
+:commit:
+    `c94e512 <https://github.com/Juris-M/citeproc-js/commit/c94e512f38dccebe7cf8079d0576bebfd744f61b>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-27 19:48 (JST)
+
+
+------
+
+Bump npm version
+
+:commit:
+    `3083e82 <https://github.com/Juris-M/citeproc-js/commit/3083e828598469c135c96ecd6a8498e5883e4839>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-25 22:39 (JST)
+
+
+------
+
+Update schemata
+
+:commit:
+    `31b40fa <https://github.com/Juris-M/citeproc-js/commit/31b40fa1fc0f3f1b92275da6cbf64ebb736af7b2>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-25 22:28 (JST)
+

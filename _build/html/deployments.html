@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo: Standalone Bibliography &mdash; citeproc-js 1.1.73 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/screen.css?v=425850a2" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=93912719"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/global.js?v=537b13e9"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Demo: Dynamic Citations" href="dynamic-editing.html" />
+    <link rel="prev" title="Demos" href="demos.html" /> 
+ 
+ <script type="text/javascript" src="_static/js/citeproc.js"></script>
+ <script type="text/javascript">
+
+  // Library of Cornell Conservation Agriculture
+  var chosenLibraryItems = "https://api.zotero.org/groups/459003/items?format=csljson&limit=6&itemType=journalArticle";
+  // Chicago Manual of Style (Full Note)
+  var chosenStyleID = "chicago-fullnote-bibliography";
+
+  // Fetch citation data
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', chosenLibraryItems, false);
+  xhr.send(null);
+  var citationData = JSON.parse(xhr.responseText);
+
+  // Refactor citation data for keyed access
+  var citations = {};
+  var itemIDs = [];
+  for (var i=0,ilen=citationData.items.length;i<ilen;i++) {
+    var item = citationData.items[i];
+    if (!item.issued) continue;
+    if (item.URL) delete item.URL;
+    var id = item.id;
+    citations[id] = item;
+    itemIDs.push(id);
+  }
+
+  // Initialize a system object
+  citeprocSys = {
+    retrieveLocale: function (lang){
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://raw.githubusercontent.com/Juris-M/citeproc-js-docs/master/locales-' + lang + '.xml', false);
+      xhr.send(null);
+      return xhr.responseText;
+    },
+    retrieveItem: function(id){
+      return citations[id];
+    }
+  };
+
+  // Instantiate processor
+  function getProcessor(styleID) {
+    // Get the CSL style as a serialized string of XML
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://raw.githubusercontent.com/citation-style-language/styles/master/' + styleID + '.csl', false);
+    xhr.send(null);
+    var styleAsText = xhr.responseText;
+    var citeproc = new CSL.Engine(citeprocSys, styleAsText);
+    return citeproc;
+  };
+
+
+  // This runs at document ready, and renders the bibliography
+  function processorOutput() {
+    ret = '';
+    var citeproc = getProcessor(chosenStyleID);
+    citeproc.updateItems(itemIDs);
+    var bibResult = citeproc.makeBibliography();
+    return bibResult[1].join('\n');
+  }
+
+  function toggleCslDiv() {
+    var button = document.getElementById('csl-cites-button');
+    var target = document.getElementById("csl-inner-block");
+    var content = document.getElementById("csl-content-block");
+    if (target.classList.contains('csl-hide')) {
+      content.innerHTML = processorOutput();
+      target.classList.remove('csl-hide');
+      target.classList.remove('csl-show');
+      target.classList.add('csl-show');
+      button.innerHTML = "Hide citations";
+    } else {
+      target.classList.remove('csl-show');
+      target.classList.remove('csl-hide');
+      target.classList.add('csl-hide');
+      //content.innerHTML = '';
+      button.innerHTML = "Generate citations";
+    }
+  }
+
+  
+  </script>
+  
+
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            citeproc-js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news/index.html">Changes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="demos.html">Demos</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Demo: Standalone Bibliography</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my-amazing-bibliography">My Amazing Bibliography</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#style-and-data">Style and Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-rearrangement">Data rearrangement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-sys-object">The <code class="docutils literal notranslate"><span class="pre">sys</span></code> object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processor-instantiation">Processor instantiation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#putting-it-all-together">Putting it all together</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic-editing.html">Demo: Dynamic Citations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editor.html">Demo: Editor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setting-up.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">Running the Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csl-json/markup.html">CSL-JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sys-extensions.html">Extended <code class="docutils literal notranslate"><span class="pre">sys</span></code> functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csl-m/index.html">CSL-M: extensions to CSL</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">citeproc-js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="demos.html">Demos</a></li>
+      <li class="breadcrumb-item active">Demo: Standalone Bibliography</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/deployments.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="demo-standalone-bibliography">
+<h1>Demo: Standalone Bibliography<a class="headerlink" href="#demo-standalone-bibliography" title="Link to this heading"></a></h1>
+<p><img alt="CCBYSA" src="_images/cc-by-sa-80x15.png" /> <a class="reference external" href="https://twitter.com/fgbjr">Frank Bennett</a></p>
+<hr class="docutils" />
+<p>This page illustrates a simple deployment that renders a small
+bibliography. The original of this example was kindly provided by
+<a class="reference external" href="https://github.com/Klortho">Chris Maloney</a> back when <span style="background:#cccccc;border-radius:0.5em;padding-left:0.25em;padding-right:0.25em;font-weight:bold;font-family:'Courier New', Courier, monospace">citeproc-js</span>
+was hosted on BitBucket. I have modified it (very) slightly to
+illustrate the use of the Zotero API.</p>
+<section id="my-amazing-bibliography">
+<h2>My Amazing Bibliography<a class="headerlink" href="#my-amazing-bibliography" title="Link to this heading"></a></h2>
+<p><div id="csl-outer-block">
+  <div id="csl-inner-block" class="csl-hide">
+    <div id="csl-content-block"></div>
+  </div>
+</div>
+<button id="csl-cites-button" onclick="toggleCslDiv();">Generate citations</button></p>
+<p><button id="more" hidden="true">More ...</button></p>
+</section>
+<section id="style-and-data">
+<h2>Style and Data<a class="headerlink" href="#style-and-data" title="Link to this heading"></a></h2>
+<p>We’re going to need some data. The URL below will pull eight items
+from the public library “Pitt-Greensburg English Literature Capstone”
+via the Zotero API.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">chosenLibraryItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://api.zotero.org/groups/459003/items?format=csljson&amp;limit=8&amp;itemType=journalArticle&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>We’re also going to need a style. The slug below is the
+machine-readable name of Chicago Full Note (with bibliography). In
+this demo we’ll use it to fetch the style over the wire, but it
+could equally well be embedded in our “application,” so we just
+note its name here.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">chosenStyleID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;chicago-fullnote-bibliography&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>On page load, we fetch the citation data, and parse it into a
+JavaScript object.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">xhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">chosenLibraryItems</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+<span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">citationData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="data-rearrangement">
+<h2>Data rearrangement<a class="headerlink" href="#data-rearrangement" title="Link to this heading"></a></h2>
+<p>The Zotero API delivers citation objects in the CSL JSON format
+expected by the processor, but the objects need to be reorganized for
+keyed access. We also need an array of the keys. Here we store the
+keyed citations as <code class="docutils literal notranslate"><span class="pre">citations</span></code>, and the array of IDs as <code class="docutils literal notranslate"><span class="pre">itemIDs</span></code>.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">citations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">itemIDs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">i</span><span class="o">=</span><span class="mf">0</span><span class="p">,</span><span class="nx">ilen</span><span class="o">=</span><span class="nx">citationData</span><span class="p">.</span><span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;</span><span class="nx">ilen</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">citationData</span><span class="p">.</span><span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">item</span><span class="p">.</span><span class="nx">issued</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">URL</span><span class="p">)</span><span class="w"> </span><span class="ow">delete</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">URL</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">citations</span><span class="p">[</span><span class="nx">id</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">itemIDs</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="the-sys-object">
+<h2>The <code class="docutils literal notranslate"><span class="pre">sys</span></code> object<a class="headerlink" href="#the-sys-object" title="Link to this heading"></a></h2>
+<p>The processor needs two hook functions, one to acquire arbitrary
+locales (<code class="docutils literal notranslate"><span class="pre">retrieveLocale()</span></code>), and another to acquire items by key
+(<code class="docutils literal notranslate"><span class="pre">retrieveItem()</span></code>). Locales are identified by their RFC-5646 language
+and region. For this demo we’ll pull them from a remote repository,
+but the files would ordinarily be stored locally.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">citeprocSys</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">retrieveLocale</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">lang</span><span class="p">){</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">xhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;https://raw.githubusercontent.com/Juris-M/citeproc-js-docs/master/locales-&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">lang</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.xml&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">retrieveItem</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">id</span><span class="p">){</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">citations</span><span class="p">[</span><span class="nx">id</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="processor-instantiation">
+<h2>Processor instantiation<a class="headerlink" href="#processor-instantiation" title="Link to this heading"></a></h2>
+<p>We set up a function to instantiate the processor. In this code, we
+retrieve the style and locale as serialized XML because it is easy to
+do. If the objects were in DOM or E4X format, we could deliver that as
+well: the only constraint is that both need to be in the same form.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">getProcessor</span><span class="p">(</span><span class="nx">styleID</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">xhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">XMLHttpRequest</span><span class="p">();</span>
+<span class="w">  </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;https://raw.githubusercontent.com/citation-style-language/styles/master/&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">styleID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.csl&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">styleAsText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">citeproc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CSL</span><span class="p">.</span><span class="nx">Engine</span><span class="p">(</span><span class="nx">citeprocSys</span><span class="p">,</span><span class="w"> </span><span class="nx">styleAsText</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">citeproc</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="putting-it-all-together">
+<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Link to this heading"></a></h2>
+<p>To generate a bibliography, we grab the processor, set the item IDs on
+it, and request bibliography output. The result is a two-element array
+composed of a memo object and a list of rendered strings. Joining up
+the strings gives us the HTML for inclusion in the page.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">processorOutput</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">citeproc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getProcessor</span><span class="p">(</span><span class="nx">chosenStyleID</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">citeproc</span><span class="p">.</span><span class="nx">updateItems</span><span class="p">(</span><span class="nx">itemIDs</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">citeproc</span><span class="p">.</span><span class="nx">makeBibliography</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">[</span><span class="mf">1</span><span class="p">].</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="demos.html" class="btn btn-neutral float-left" title="Demos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dynamic-editing.html" class="btn btn-neutral float-right" title="Demo: Dynamic Citations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016, Frank Bennett.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+========================================================
+1.3.18-1.3.20
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.20
+
+:commit:
+    `646e0a6 <https://github.com/Juris-M/citeproc-js/commit/646e0a61e454ce95fad0a1ebf1a8fe29dd47c63f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 21:26 (JST)
+
+
+------
+
+Add missed element of previous parallels fix
+
+:commit:
+    `9247f48 <https://github.com/Juris-M/citeproc-js/commit/9247f48a67808ccba622d8225a53d3ce1aa68067>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 20:57 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.3.19
+
+:commit:
+    `185db18 <https://github.com/Juris-M/citeproc-js/commit/185db18d0cbc69dd0fca43d96ef42149fc76e349>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 20:44 (JST)
+
+
+------
+
+Fix bug in parallel cites triggered by disambiguate="true"
+
+:commit:
+    `a676070 <https://github.com/Juris-M/citeproc-js/commit/a6760703f65a3721fc362e8a929d2ce1eb3b970d>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 20:39 (JST)
+
+
+------
+
+Update schema
+
+:commit:
+    `6cba581 <https://github.com/Juris-M/citeproc-js/commit/6cba581ba146dde07f023f711bdffce83736a76f>`_
+:author:
+    Frank Bennett
+:date:
+    2020-05-28 17:06 (JST)
+

@@ -1,0 +1,42 @@
+========================================================
+1.1.153-1.1.154
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.154
+
+:commit:
+    `65a2a3b <https://github.com/Juris-M/citeproc-js/commit/65a2a3bfb5e96a307a8583a2191261c8f4ac1170>`_
+:author:
+    fbennett
+:date:
+    2017-02-11 16:12 (JST)
+
+
+------
+
+Protect against missing abbreviation segments
+
+:commit:
+    `c02895d <https://github.com/Juris-M/citeproc-js/commit/c02895d6c87ae1ad205773dc5fdb976ff832b5f2>`_
+:author:
+    fbennett
+:date:
+    2017-02-11 16:05 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `30c312f <https://github.com/Juris-M/citeproc-js/commit/30c312fb3baba844c73cb8443a14a94934933987>`_
+:author:
+    fbennett
+:date:
+    2017-02-11 11:31 (JST)
+

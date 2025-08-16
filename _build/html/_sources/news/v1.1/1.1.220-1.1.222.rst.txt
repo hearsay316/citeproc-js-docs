@@ -1,0 +1,691 @@
+========================================================
+1.1.220-1.1.222
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.222
+
+:commit:
+    `b51b934 <https://github.com/Juris-M/citeproc-js/commit/b51b934c98560cf1ea1afffa5758167fa1a13784>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-20 11:58 (JST)
+
+
+------
+
+Add a b/w option, use spiffy landing reporter, soften some language
+
+:commit:
+    `a3947c6 <https://github.com/Juris-M/citeproc-js/commit/a3947c66f60377dfebdc3c1ac11443c7c2b1c3bb>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-20 11:52 (JST)
+
+
+------
+
+Enable range-delimiter on cs:date-part
+
+:commit:
+    `404bb41 <https://github.com/Juris-M/citeproc-js/commit/404bb41d262072f33c6fb642133fcf8220dd1b9c>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-20 11:51 (JST)
+
+
+------
+
+Update standard tests
+
+:commit:
+    `708fb7e <https://github.com/Juris-M/citeproc-js/commit/708fb7e7dd9e39a3eddfdfd2d892197b3af50e57>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-20 11:50 (JST)
+
+
+------
+
+Handle CSL parse errors without crashing out
+
+:commit:
+    `31275cf <https://github.com/Juris-M/citeproc-js/commit/31275cfe06a6b1b901eeac0d67b932a750cc75a5>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-20 06:59 (JST)
+
+
+------
+
+Update juris modules
+
+:commit:
+    `f9a7073 <https://github.com/Juris-M/citeproc-js/commit/f9a707388f5e397cee8b820e933c7e758b9d02fb>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-20 06:57 (JST)
+
+
+------
+
+Non-fatal error for parsing glitches
+
+:commit:
+    `1a33b94 <https://github.com/Juris-M/citeproc-js/commit/1a33b94fcea7c81957ac8faa8005da21b1ed20ba>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-20 01:06 (JST)
+
+
+------
+
+Use chokidar for watching, enable watching multiple files
+
+:commit:
+    `89e7d5b <https://github.com/Juris-M/citeproc-js/commit/89e7d5b7e6b87885c82df4fe5e4f8e6ce4d03382>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-20 00:41 (JST)
+
+
+------
+
+Improve async error handling
+
+:commit:
+    `acd10e9 <https://github.com/Juris-M/citeproc-js/commit/acd10e97ca87cb44cf82e116fb5b3298d49c4c7a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 22:44 (JST)
+
+
+------
+
+Asyncify some syncified things
+
+:commit:
+    `beddefc <https://github.com/Juris-M/citeproc-js/commit/beddefca39bb3958e3f66676072929b0a732e489>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 21:06 (JST)
+
+
+------
+
+Updates to basic testing of style module behavior
+
+:commit:
+    `4a36662 <https://github.com/Juris-M/citeproc-js/commit/4a36662fad209d0f2c5cacf37788ddce576b58e2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 14:27 (JST)
+
+
+------
+
+Change path to style modules
+
+:commit:
+    `a3596fd <https://github.com/Juris-M/citeproc-js/commit/a3596fd60e0076275e599beb3ea4d11432384eca>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 14:26 (JST)
+
+
+------
+
+Update JM modules
+
+:commit:
+    `656ec19 <https://github.com/Juris-M/citeproc-js/commit/656ec19ddee80b78d30541c9ea518c56f4a34632>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 14:25 (JST)
+
+
+------
+
+Fix bugs affecting style that require -x-sort-en for testing
+
+:commit:
+    `a6e0491 <https://github.com/Juris-M/citeproc-js/commit/a6e0491ce88e4dfc117ba996bd5a4508098f888f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 13:42 (JST)
+
+
+------
+
+Move antarctic-science tests to styletests
+
+:commit:
+    `6dfd246 <https://github.com/Juris-M/citeproc-js/commit/6dfd24668c078b7b0b92240e7d7ead717ce9aeb4>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 12:18 (JST)
+
+
+------
+
+Barf a little more elegantly
+
+:commit:
+    `b7afb80 <https://github.com/Juris-M/citeproc-js/commit/b7afb8096f9eabe7674f4bc33d88c9ddbb32fe5c>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 12:08 (JST)
+
+
+------
+
+Fixes for validation mode in runtests.js
+
+:commit:
+    `ffbdcb9 <https://github.com/Juris-M/citeproc-js/commit/ffbdcb96cb9902cace389a3ecc6cad3456418249>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 11:40 (JST)
+
+
+------
+
+Remove unneeded file
+
+:commit:
+    `7549d44 <https://github.com/Juris-M/citeproc-js/commit/7549d44d76e6621b23ad43cb63c4dad212d528fa>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 11:39 (JST)
+
+
+------
+
+Update standard tests
+
+:commit:
+    `9f2a722 <https://github.com/Juris-M/citeproc-js/commit/9f2a722d13a238ef77aa50e80912c6507e4fb912>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 11:39 (JST)
+
+
+------
+
+Move style fixtures to styletests
+
+:commit:
+    `b8befa1 <https://github.com/Juris-M/citeproc-js/commit/b8befa18aec12da5c2a5f84f5faf4048372d4f28>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 11:38 (JST)
+
+
+------
+
+Move repo JSS style to attic. Can now use production style.
+
+:commit:
+    `79bc4e7 <https://github.com/Juris-M/citeproc-js/commit/79bc4e7c5216026848af78e01d8528445d0b00df>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 10:16 (JST)
+
+
+------
+
+Tweaks to README and script
+
+:commit:
+    `5d55840 <https://github.com/Juris-M/citeproc-js/commit/5d55840a99b915bc78ff1c3307168f967614cc77>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-19 09:25 (JST)
+
+
+------
+
+Proper quotation marks
+
+:commit:
+    `e2a2e96 <https://github.com/Juris-M/citeproc-js/commit/e2a2e965b62ba70129d218d4c62fbc083b4f78b3>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-18 23:20 (JST)
+
+
+------
+
+Mention the format of test fixture filenames
+
+:commit:
+    `612d7a9 <https://github.com/Juris-M/citeproc-js/commit/612d7a924d422614add6d55305184cea6dd30bce>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-18 23:16 (JST)
+
+
+------
+
+Remove some indenting
+
+:commit:
+    `dc6abbd <https://github.com/Juris-M/citeproc-js/commit/dc6abbd1d67d081769d4ce531e0c6fe9dd95e82b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-18 23:09 (JST)
+
+
+------
+
+Add git to requirements.
+
+:commit:
+    `bd6023d <https://github.com/Juris-M/citeproc-js/commit/bd6023d48624ada6a793bc453f18be8ff867cff3>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-18 23:08 (JST)
+
+
+------
+
+Add requirements and a warning about renaming boilerplate files.
+
+:commit:
+    `930d2f6 <https://github.com/Juris-M/citeproc-js/commit/930d2f618e5895d3e2c658ce61beb9a7c2671e75>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-18 23:07 (JST)
+
+
+------
+
+Remove instruction to create a subdirectory. It's automatic.
+
+:commit:
+    `1210a13 <https://github.com/Juris-M/citeproc-js/commit/1210a1393ab0b4cd7d3e3c2fc87279f276533028>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-18 22:17 (JST)
+
+
+------
+
+Fix markup typo
+
+:commit:
+    `1707754 <https://github.com/Juris-M/citeproc-js/commit/1707754d99559804838f763626d27d64f25f6070>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-18 22:13 (JST)
+
+
+------
+
+Merge branch 'master' of github.com:Juris-M/citeproc-js
+
+:commit:
+    `3019455 <https://github.com/Juris-M/citeproc-js/commit/3019455a82f4cc5474e4701a4c6522332a07f248>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-18 22:09 (JST)
+
+
+------
+
+Working watch mode for runtests.js
+
+:commit:
+    `d09bd0b <https://github.com/Juris-M/citeproc-js/commit/d09bd0b6b864c685793d7209c37835444b7a30e3>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-18 18:53 (JST)
+
+
+------
+
+Update README.rst
+
+:commit:
+    `2b8029a <https://github.com/Juris-M/citeproc-js/commit/2b8029a302b3ba8e0aa0224222c1e32612719f9a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-17 18:52 (JST)
+
+Grammar fix and remove some words.
+
+------
+
+Add a list-groups option to the test script
+
+:commit:
+    `5e9fb12 <https://github.com/Juris-M/citeproc-js/commit/5e9fb12bfa10fe9d7a669c41020deafd6754d4ad>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-17 17:58 (JST)
+
+
+------
+
+Tweaks to README
+
+:commit:
+    `aefa656 <https://github.com/Juris-M/citeproc-js/commit/aefa656ed73ca43c9fd87c03ed96789c9db9b465>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-17 16:15 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.221
+
+:commit:
+    `b6a8778 <https://github.com/Juris-M/citeproc-js/commit/b6a8778f17eed3037941e8e645567e8ec26989cc>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-17 16:01 (JST)
+
+
+------
+
+Remove -c, -v, and -q options for now.
+
+:commit:
+    `e05d823 <https://github.com/Juris-M/citeproc-js/commit/e05d82348e587475bc4955740c27414c8738e65d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-17 16:00 (JST)
+
+
+------
+
+Update standard tests
+
+:commit:
+    `3f9b1a5 <https://github.com/Juris-M/citeproc-js/commit/3f9b1a598abc14742a9659a459e6f413ec02dc05>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-17 15:19 (JST)
+
+
+------
+
+Housecleaning - New version of README - Remove dojo test framework - Commit CSL field descriptions to attic - Remove old test framework support files - Move modular law notes out of root - Move old manual to a less-disclosed location
+
+:commit:
+    `c928f7a <https://github.com/Juris-M/citeproc-js/commit/c928f7a2749c88818fd4a053a295806d44829e6d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-17 14:53 (JST)
+
+
+------
+
+Add status icon to GitHub README
+
+:commit:
+    `9c0f426 <https://github.com/Juris-M/citeproc-js/commit/9c0f42639128bae25307f248669c827ed32adcd3>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-17 11:20 (JST)
+
+
+------
+
+Commit to trigger test build
+
+:commit:
+    `d0fd010 <https://github.com/Juris-M/citeproc-js/commit/d0fd0103e06eeb5edb128557a7ceb5e6a29bd45f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-17 11:17 (JST)
+
+
+------
+
+Make mocha a dependency
+
+:commit:
+    `28408c6 <https://github.com/Juris-M/citeproc-js/commit/28408c6a46bc56ae3aa493689d75cf64f74f5592>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-17 11:05 (JST)
+
+
+------
+
+Create test directory as required, license on bundle
+
+:commit:
+    `b7fa715 <https://github.com/Juris-M/citeproc-js/commit/b7fa715ce831696a71c015873ea3dfbabcaafbbb>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-17 11:01 (JST)
+
+
+------
+
+Continuous integration - Rewrite of ./test.py for mocha as ./tests/runtests.js - Hook new test framework up to Travis CI
+
+:commit:
+    `6447d79 <https://github.com/Juris-M/citeproc-js/commit/6447d79922c5ffe81e7e237479d08711603d951f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-16 21:37 (JST)
+
+
+------
+
+Fix syntax in many test fixtures
+
+:commit:
+    `df93376 <https://github.com/Juris-M/citeproc-js/commit/df933768005c5fc272a675e8aac109a6da7fe208>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-16 21:33 (JST)
+
+
+------
+
+Update standard tests
+
+:commit:
+    `052398b <https://github.com/Juris-M/citeproc-js/commit/052398b13e0aedc64e88cf62567895d0594b00e9>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-16 21:34 (JST)
+
+
+------
+
+Fixtures for Japan Tourism Review, less result strings
+
+:commit:
+    `163bf15 <https://github.com/Juris-M/citeproc-js/commit/163bf15187d674dd9a7e0341893265d8b2187ced>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-15 10:00 (JST)
+
+
+------
+
+JSS style with year-suffix fixes
+
+:commit:
+    `d7b57d6 <https://github.com/Juris-M/citeproc-js/commit/d7b57d680d59d9845154da0d704afeccccf3b3d2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-15 07:33 (JST)
+
+
+------
+
+Fixtures testing year-suffix positions
+
+:commit:
+    `995b84b <https://github.com/Juris-M/citeproc-js/commit/995b84b3f7179e34c34420351633ba281d6a7814>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-15 07:33 (JST)
+
+
+------
+
+Add APA for testing
+
+:commit:
+    `099705f <https://github.com/Juris-M/citeproc-js/commit/099705ffb1c2725508be88b96653ebbe7a301696>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-14 14:48 (JST)
+
+
+------
+
+Removed DOI
+
+:commit:
+    `075bc5a <https://github.com/Juris-M/citeproc-js/commit/075bc5ae40dafc779ce0e1b5278e436da10eeab7>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-14 14:47 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `dcc5fb2 <https://github.com/Juris-M/citeproc-js/commit/dcc5fb26303178dc320492db6e6ea8beb4a5e03e>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-10 21:14 (JST)
+
+
+------
+
+Fix result string in test
+
+:commit:
+    `66d6e41 <https://github.com/Juris-M/citeproc-js/commit/66d6e41f7bb73f691df308dde2637347220ececc>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-09 19:24 (JST)
+
+
+------
+
+Update processor docs
+
+:commit:
+    `f123a5c <https://github.com/Juris-M/citeproc-js/commit/f123a5ca7ad5bbc9f3035472e9e8c8cf17af338a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-09 19:22 (JST)
+
+
+------
+
+Update CSL-M schema
+
+:commit:
+    `a26089f <https://github.com/Juris-M/citeproc-js/commit/a26089f0b86865c4faecde7e4be76fef56fe1181>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-09 19:21 (JST)
+
+
+------
+
+Add test of two-time disambiguation
+
+:commit:
+    `4c12d52 <https://github.com/Juris-M/citeproc-js/commit/4c12d529ff5278ad9aa3cb02b3812c522ea2bd35>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-09 19:03 (JST)
+
+
+------
+
+Validation edits to two test fixtures
+
+:commit:
+    `21ab718 <https://github.com/Juris-M/citeproc-js/commit/21ab7180464a3edde2494171f54be7ef5bd376d9>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-08 14:48 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.220
+
+:commit:
+    `f71c0ef <https://github.com/Juris-M/citeproc-js/commit/f71c0ef47f2fdf6f114e0044f8ea585d0bdc1049>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-08 09:04 (JST)
+

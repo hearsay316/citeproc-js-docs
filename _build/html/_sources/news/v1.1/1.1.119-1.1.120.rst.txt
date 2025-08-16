@@ -1,0 +1,67 @@
+========================================================
+1.1.119-1.1.120
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.120
+
+:commit:
+    `c6cbe40 <https://github.com/Juris-M/citeproc-js/commit/c6cbe40404fe4285dab04991fc471b6f92dc3a66>`_
+:author:
+    fbennett
+:date:
+    2016-09-07 19:32 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `fdee605 <https://github.com/Juris-M/citeproc-js/commit/fdee605b272ece88fdc884314e93d0e090dd6099>`_
+:author:
+    fbennett
+:date:
+    2016-09-07 19:23 (JST)
+
+
+------
+
+Fix subsequent-author-substitute
+
+:commit:
+    `7a27299 <https://github.com/Juris-M/citeproc-js/commit/7a2729979e34ed3ea7fd785dfea8c0db3979b55a>`_
+:author:
+    fbennett
+:date:
+    2016-09-07 19:15 (JST)
+
+The move to keyed macro storage (in 1.1.0, February 2015)
+broke subsequent-author-substitute for macros shared between
+cs:citation and cs:bibliography. Macros in cs:citation are
+build first at processor instantiation, so functions needed
+for this attribute were not installed on the rendering nodes,
+and the attribute lost its effect.
+
+This fix repairs subsequent-author-substitute only. A similar
+issue persists (I believe) for second-field-align. That would
+be much harder to address, but as the first-occurring "field"
+in that case can be more easily expressed without resorting to
+a macro, the bug has less impact there.
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.119
+
+:commit:
+    `9309e4b <https://github.com/Juris-M/citeproc-js/commit/9309e4b802edd236c81f7dff195e8f5057cc3979>`_
+:author:
+    fbennett
+:date:
+    2016-09-07 05:18 (JST)
+

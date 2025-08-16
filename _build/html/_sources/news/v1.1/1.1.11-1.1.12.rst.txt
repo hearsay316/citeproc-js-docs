@@ -1,0 +1,66 @@
+========================================================
+1.1.11-1.1.12
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `a4271dc <https://github.com/Juris-M/citeproc-js/commit/a4271dc0ea8b7acbb0f339677bac4f1cc0ebc8bc>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-25 10:38 (JST)
+
+
+------
+
+Lose legacy test fixture
+
+:commit:
+    `521ef65 <https://github.com/Juris-M/citeproc-js/commit/521ef65c185b55832bee76379beb551b87e5908d>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-25 10:38 (JST)
+
+
+------
+
+Fix bug in dynamic labels to non-locator vars, lose capped Chapter and Section, adjust tests
+
+:commit:
+    `69b84b1 <https://github.com/Juris-M/citeproc-js/commit/69b84b12f32e8b942d34a4d6607e00e3dbb8dcd4>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-25 10:37 (JST)
+
+
+------
+
+Added tag 1.1.11 for changeset a95154d292d8
+
+:commit:
+    `bc1fcf1 <https://github.com/Juris-M/citeproc-js/commit/bc1fcf1ef27a7d10cd793eb602da6b4f8c420ec3>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-25 07:36 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `c047ded <https://github.com/Juris-M/citeproc-js/commit/c047dedd7d68c9daf4ba56512fd9df6f8a8a3078>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-25 07:36 (JST)
+

@@ -1,0 +1,162 @@
+========================================================
+1.1.5-1.1.7
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `b527560 <https://github.com/Juris-M/citeproc-js/commit/b5275608be97c91a130138b4fa8bee18e6e975b7>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-09 09:27 (JST)
+
+
+------
+
+Properly add cs:name nodes in xmljson.js
+
+:commit:
+    `e961999 <https://github.com/Juris-M/citeproc-js/commit/e9619991dd03d90604c2e7ded602fe00ee07c1f4>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-09 09:27 (JST)
+
+
+------
+
+Flag attempted output with bare label
+
+:commit:
+    `62b44a2 <https://github.com/Juris-M/citeproc-js/commit/62b44a254eb41dbfb9dc025287c7961456d6504a>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-01 19:41 (JST)
+
+
+------
+
+Better logic for alternative-macro
+
+:commit:
+    `60829f4 <https://github.com/Juris-M/citeproc-js/commit/60829f449f225e864c9223995ad0ca126bad0b34>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-01 19:12 (JST)
+
+
+------
+
+Better test for alternative-macro
+
+:commit:
+    `687c429 <https://github.com/Juris-M/citeproc-js/commit/687c4297b54ba4e2637dfa6c5aaaa0718bdec42e>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-01 19:12 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `da154b0 <https://github.com/Juris-M/citeproc-js/commit/da154b088fa38c43d6154bd3bebd70c7f773af93>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-01 15:01 (JST)
+
+
+------
+
+Fix loss of decorations on juris macros
+
+:commit:
+    `dc86dfa <https://github.com/Juris-M/citeproc-js/commit/dc86dfa50f17bb869409cb02ffbed6459d6cff2e>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-01 14:49 (JST)
+
+
+------
+
+Adjust test fixture (we should not allow decorations in modules)
+
+:commit:
+    `584cbae <https://github.com/Juris-M/citeproc-js/commit/584cbae206d3045f8028b62fbcddfae5ae1891d1>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-01 14:47 (JST)
+
+
+------
+
+Ignore leading path on test fixture name
+
+:commit:
+    `3bc08b2 <https://github.com/Juris-M/citeproc-js/commit/3bc08b2806fe02b63de24ef6b237a9f30fb58117>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-01 14:44 (JST)
+
+
+------
+
+Limit text-case="title" to English chars
+
+:commit:
+    `4e84cc3 <https://github.com/Juris-M/citeproc-js/commit/4e84cc3439d1d39f98c0a47acb67be5a33e92617>`_
+:author:
+    Frank Bennett
+:date:
+    2015-04-01 11:16 (JST)
+
+
+------
+
+Do not crash on non-conforming macro name
+
+:commit:
+    `d11887d <https://github.com/Juris-M/citeproc-js/commit/d11887d2cb8e03242954eb04dda17ee72dba3313>`_
+:author:
+    Frank Bennett
+:date:
+    2015-03-20 08:22 (JST)
+
+
+------
+
+Added tag 1.1.5 for changeset ccb7adc0b194
+
+:commit:
+    `7d6e7e4 <https://github.com/Juris-M/citeproc-js/commit/7d6e7e45f30ae737597378918488a9e3512f1008>`_
+:author:
+    Frank Bennett
+:date:
+    2015-03-18 10:15 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `0d286af <https://github.com/Juris-M/citeproc-js/commit/0d286affda07563c816583433ce8a921f17a5b7f>`_
+:author:
+    Frank Bennett
+:date:
+    2015-03-18 10:15 (JST)
+

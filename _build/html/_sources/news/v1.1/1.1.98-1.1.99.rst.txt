@@ -1,0 +1,54 @@
+========================================================
+1.1.98-1.1.99
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.99
+
+:commit:
+    `8c20b02 <https://github.com/Juris-M/citeproc-js/commit/8c20b02156210a81f10f2c113660210972294954>`_
+:author:
+    fbennett
+:date:
+    2016-04-21 11:09 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `d4f1c6a <https://github.com/Juris-M/citeproc-js/commit/d4f1c6ab4be45d54777aa2fa7beb21b2fb7a3ab3>`_
+:author:
+    fbennett
+:date:
+    2016-04-21 11:08 (JST)
+
+
+------
+
+Fix pluralism of embedded labels
+
+:commit:
+    `fb028d9 <https://github.com/Juris-M/citeproc-js/commit/fb028d9e46f31669f18a026222dd121ee58a34d3>`_
+:author:
+    fbennett
+:date:
+    2016-04-21 11:04 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.98
+
+:commit:
+    `2176620 <https://github.com/Juris-M/citeproc-js/commit/21766202bec23fabbcb1a26ed9e11393afddbbd7>`_
+:author:
+    fbennett
+:date:
+    2016-04-17 09:49 (JST)
+

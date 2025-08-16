@@ -1,0 +1,54 @@
+========================================================
+1.1.104-1.1.105
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.105
+
+:commit:
+    `361b342 <https://github.com/Juris-M/citeproc-js/commit/361b342a77b2988ca7b119692022cece02a68579>`_
+:author:
+    fbennett
+:date:
+    2016-06-03 10:46 (JST)
+
+
+------
+
+Test of AGLC hacked section markers
+
+:commit:
+    `17b3c51 <https://github.com/Juris-M/citeproc-js/commit/17b3c5140c0efd01138891d22241c4037b3aae33>`_
+:author:
+    fbennett
+:date:
+    2016-06-03 10:45 (JST)
+
+
+------
+
+Permit en-dash on section and other numeric locator labels
+
+:commit:
+    `b1e5ed2 <https://github.com/Juris-M/citeproc-js/commit/b1e5ed27e1199f3ce4aef3ddec1c04271ba769c8>`_
+:author:
+    fbennett
+:date:
+    2016-06-03 10:44 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.104
+
+:commit:
+    `39fdbf2 <https://github.com/Juris-M/citeproc-js/commit/39fdbf29e80fe6059cc34f3a5ef61c35aee91085>`_
+:author:
+    fbennett
+:date:
+    2016-06-03 07:41 (JST)
+

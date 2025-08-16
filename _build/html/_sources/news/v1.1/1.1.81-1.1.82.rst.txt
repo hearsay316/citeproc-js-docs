@@ -1,0 +1,174 @@
+========================================================
+1.1.81-1.1.82
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.82
+
+:commit:
+    `029cb21 <https://github.com/Juris-M/citeproc-js/commit/029cb210885d479bbdc13d710cabb605bff1b118>`_
+:author:
+    fbennett
+:date:
+    2016-03-20 07:18 (JST)
+
+
+------
+
+Update test suite
+
+:commit:
+    `700f628 <https://github.com/Juris-M/citeproc-js/commit/700f6280dd25159d537e4d03a14a1b6f6313ce26>`_
+:author:
+    fbennett
+:date:
+    2016-03-20 07:01 (JST)
+
+
+------
+
+Use bare locale for ar
+
+:commit:
+    `a2bdad6 <https://github.com/Juris-M/citeproc-js/commit/a2bdad65aca351c691099cfe96879194a239267e>`_
+:author:
+    fbennett
+:date:
+    2016-03-20 06:59 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `286e81d <https://github.com/Juris-M/citeproc-js/commit/286e81de7fd12aa37e8cad951bc69f126e8d6dcf>`_
+:author:
+    fbennett
+:date:
+    2016-03-20 06:58 (JST)
+
+
+------
+
+Update locale
+
+:commit:
+    `9970ed6 <https://github.com/Juris-M/citeproc-js/commit/9970ed6ee24c007100653ea362e222006bd31755>`_
+:author:
+    fbennett
+:date:
+    2016-03-20 06:40 (JST)
+
+
+------
+
+Bundled processors with license
+
+:commit:
+    `25efb63 <https://github.com/Juris-M/citeproc-js/commit/25efb63b8f35f304bedadbd5abca132aa6d41c34>`_
+:author:
+    fbennett
+:date:
+    2016-03-19 12:50 (JST)
+
+
+------
+
+Always tack license text to top of bundled processor
+
+:commit:
+    `bea4164 <https://github.com/Juris-M/citeproc-js/commit/bea41641d68ad9b79cfa29d85cdcfebb3ba31cbf>`_
+:author:
+    fbennett
+:date:
+    2016-03-19 12:49 (JST)
+
+
+------
+
+Move one-off script to attic
+
+:commit:
+    `08b0cac <https://github.com/Juris-M/citeproc-js/commit/08b0cac8258402be09efacca91812ceb14db277b>`_
+:author:
+    fbennett
+:date:
+    2016-03-19 12:40 (JST)
+
+
+------
+
+Push CHANGES update for 1.1.81
+
+:commit:
+    `7497d9e <https://github.com/Juris-M/citeproc-js/commit/7497d9eb249e862d6e1d79c92b3a30a1932e7780>`_
+:author:
+    fbennett
+:date:
+    2016-03-16 19:18 (JST)
+
+
+------
+
+Update docs and locale
+
+:commit:
+    `1242d79 <https://github.com/Juris-M/citeproc-js/commit/1242d79f2b7b6b96f34b9ffc3f20c1e617c3ba71>`_
+:author:
+    fbennett
+:date:
+    2016-03-16 19:17 (JST)
+
+
+------
+
+Bump version number in bundled code. Oops.
+
+:commit:
+    `fab807a <https://github.com/Juris-M/citeproc-js/commit/fab807a758577fa02264552333bb36ae314dff3c>`_
+:author:
+    Frank Bennett
+:date:
+    2016-03-16 13:36 (JST)
+
+
+------
+
+Merge branch 'master' of https://github.com/Juris-M/citeproc-js
+
+:commit:
+    `d578659 <https://github.com/Juris-M/citeproc-js/commit/d578659dac8b7044b019ff6a7c80fb50fe945093>`_
+:author:
+    Frank Bennett
+:date:
+    2016-03-16 13:32 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.81
+
+:commit:
+    `57e8a2d <https://github.com/Juris-M/citeproc-js/commit/57e8a2d8f739806d7dca1014aa11c3ddf986245f>`_
+:author:
+    fbennett
+:date:
+    2016-03-16 13:31 (JST)
+
+
+------
+
+Update docs and locale
+
+:commit:
+    `0b1746c <https://github.com/Juris-M/citeproc-js/commit/0b1746c718cad9a28b6362bdd69ae494e89fe475>`_
+:author:
+    Frank Bennett
+:date:
+    2016-03-16 13:29 (JST)
+

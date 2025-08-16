@@ -1,0 +1,269 @@
+========================================================
+1.1.217-1.1.219
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as tag 1.1.219
+
+:commit:
+    `d9b984a <https://github.com/Juris-M/citeproc-js/commit/d9b984a7021729179aaaf8c7283496f66a9adb89>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-08 07:44 (JST)
+
+
+------
+
+Improvements to cs:names and its descendants
+
+:commit:
+    `573836e <https://github.com/Juris-M/citeproc-js/commit/573836e5ec40297ed3823552b00466505c1edd9b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-08 07:28 (JST)
+
+
+
+* Fix a bug that caused labels to be dropped where a variable rendered
+  via cs:substitute was later called as the primary variable, and
+  a separate variable was rendered via cs:substitute.
+
+
+
+* Fix a bug that caused labels to be lost on a singleton cs:names
+  that followed a start/end cs:names element inside cs:substitute.
+
+
+
+* Add support for require-match on cs:names.
+
+
+
+* Amend test fixtures where processor output in now correct.
+
+
+
+* Add a test for the require-match attribute.
+
+
+------
+
+Fix syntax error
+
+:commit:
+    `3589906 <https://github.com/Juris-M/citeproc-js/commit/358990654dd63441f03e8e044984cacee01ffcae>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-06 15:02 (JST)
+
+
+------
+
+By default, exclude classic type from non-numeric, non-trigraph bibliographies
+
+:commit:
+    `9bd0e3f <https://github.com/Juris-M/citeproc-js/commit/9bd0e3f2cc5fe9a9520d29420d027304ac2259a0>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-05 11:34 (JST)
+
+
+------
+
+Test of exclusion of classic type from bibs as appropriate
+
+:commit:
+    `7e611c6 <https://github.com/Juris-M/citeproc-js/commit/7e611c6b4c17755b877bbc0b3067bd69bb38c273>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-05 11:33 (JST)
+
+
+------
+
+Use numeric form of year in JSS citations
+
+:commit:
+    `2cb97ff <https://github.com/Juris-M/citeproc-js/commit/2cb97ffeb2a6950087a4e32d73ecda3d2537b0df>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-02 19:47 (JST)
+
+
+------
+
+Use numeric form of year in JSS citations
+
+:commit:
+    `949f8ec <https://github.com/Juris-M/citeproc-js/commit/949f8ecf3081f4c8c09646e2e3cc88169f1f7919>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-02 19:45 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.218
+
+:commit:
+    `71edeb3 <https://github.com/Juris-M/citeproc-js/commit/71edeb3342b305ce2946b15bfac002029e7fe70a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-01 11:44 (JST)
+
+
+------
+
+Treat alt-issued and alt-event-date as first-class date variables. Fixes nesting error.
+
+:commit:
+    `4205b27 <https://github.com/Juris-M/citeproc-js/commit/4205b27edaf6ca4a2a67c795e5be7b8a44cb9ef2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-01 11:36 (JST)
+
+
+------
+
+Add commented code to print.js. For debugging nesting errors
+
+:commit:
+    `9350a66 <https://github.com/Juris-M/citeproc-js/commit/9350a66609a52d71428fd3caba9ce057acf9c4b8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-01 11:32 (JST)
+
+
+------
+
+Align citation and bibliography dates in JSS style
+
+:commit:
+    `167f554 <https://github.com/Juris-M/citeproc-js/commit/167f5546251aa9dd26b380000de953b970a0687a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-27 18:15 (JST)
+
+
+------
+
+Align citation and bibliography dates
+
+:commit:
+    `d05850b <https://github.com/Juris-M/citeproc-js/commit/d05850b7ae1809dcfd900d0fec2c2cfc96cc8ad0>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-27 18:15 (JST)
+
+
+------
+
+Add thesis and paper-conference support to JSS style
+
+:commit:
+    `b936234 <https://github.com/Juris-M/citeproc-js/commit/b9362342904bbc078283e0a02de090484faa4ffe>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-27 10:03 (JST)
+
+
+------
+
+Rename JSS tests, add tests of thesis and paper-conference
+
+:commit:
+    `c54f02a <https://github.com/Juris-M/citeproc-js/commit/c54f02a650eb96ef1b2c9b893e06476785510ee5>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-27 10:03 (JST)
+
+
+------
+
+Add contributor line to JSS style
+
+:commit:
+    `12a46f1 <https://github.com/Juris-M/citeproc-js/commit/12a46f14eebb2aa16b9a24446c00be8ee2ae84e8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-26 22:35 (JST)
+
+
+------
+
+Update CSL-M schema
+
+:commit:
+    `9ae26be <https://github.com/Juris-M/citeproc-js/commit/9ae26be9581abb09e6ce78a2876f906f778040e5>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-26 22:10 (JST)
+
+
+------
+
+Update standard styles
+
+:commit:
+    `010c95b <https://github.com/Juris-M/citeproc-js/commit/010c95ba19fec6e5cd79fd6fcfbd8cbdea72204f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-26 22:10 (JST)
+
+
+------
+
+Validation fixes to test fixture CSL
+
+:commit:
+    `cf35a68 <https://github.com/Juris-M/citeproc-js/commit/cf35a6819de968ec97c2b46ca479e4df7b4cd284>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-26 22:10 (JST)
+
+
+------
+
+Fix syntax errors in JSS style
+
+:commit:
+    `86771fd <https://github.com/Juris-M/citeproc-js/commit/86771fdd617a05839409352dd1aeb49e9549052b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-26 18:02 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.217
+
+:commit:
+    `4a88592 <https://github.com/Juris-M/citeproc-js/commit/4a88592b859f51b8662eff1b0994740dda3c550b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-02-26 17:37 (JST)
+

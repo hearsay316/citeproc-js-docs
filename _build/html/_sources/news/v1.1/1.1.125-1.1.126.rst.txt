@@ -1,0 +1,90 @@
+========================================================
+1.1.125-1.1.126
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.126
+
+:commit:
+    `4f799c3 <https://github.com/Juris-M/citeproc-js/commit/4f799c3842fce0eb7e1efe3aed72a298b87b9e92>`_
+:author:
+    fbennett
+:date:
+    2016-09-13 09:08 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `720e4d6 <https://github.com/Juris-M/citeproc-js/commit/720e4d6e09735006911ec388bb5b2b4ce71502da>`_
+:author:
+    fbennett
+:date:
+    2016-09-13 08:54 (JST)
+
+
+------
+
+Change CSL code used in test
+
+:commit:
+    `d034c30 <https://github.com/Juris-M/citeproc-js/commit/d034c30502a5e4e79e669e0a49a27b1dedbcb7d8>`_
+:author:
+    fbennett
+:date:
+    2016-09-13 08:51 (JST)
+
+
+------
+
+Fix bug affecting numeric styles
+
+:commit:
+    `05ea057 <https://github.com/Juris-M/citeproc-js/commit/05ea0574a7794285d0507f4191c88891a2b81ea4>`_
+:author:
+    fbennett
+:date:
+    2016-09-13 08:49 (JST)
+
+
+------
+
+Test w/bibliography, no group, and w/subsequent-author-substitute
+
+:commit:
+    `8e1cfb2 <https://github.com/Juris-M/citeproc-js/commit/8e1cfb24653181c51e8ede8bf1cdd60b359fda48>`_
+:author:
+    fbennett
+:date:
+    2016-09-13 07:52 (JST)
+
+
+------
+
+Add fixture to test items with no author
+
+:commit:
+    `5c99116 <https://github.com/Juris-M/citeproc-js/commit/5c9911684583685272f11e039603a143467ab3eb>`_
+:author:
+    fbennett
+:date:
+    2016-09-13 07:22 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.125
+
+:commit:
+    `d7a9fd3 <https://github.com/Juris-M/citeproc-js/commit/d7a9fd3f957c2b4bd2eaba2fbfa0d2b81ae7e1b1>`_
+:author:
+    fbennett
+:date:
+    2016-09-11 12:14 (JST)
+

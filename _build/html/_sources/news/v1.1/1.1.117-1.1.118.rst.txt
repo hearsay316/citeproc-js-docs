@@ -1,0 +1,42 @@
+========================================================
+1.1.117-1.1.118
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.118
+
+:commit:
+    `eb7f471 <https://github.com/Juris-M/citeproc-js/commit/eb7f47132166b2bc27fe1453cb9a7d2b70a4797a>`_
+:author:
+    Frank Bennett
+:date:
+    2016-09-06 16:21 (JST)
+
+
+------
+
+Never render secondary or tertiary forms of title-short
+
+:commit:
+    `e700797 <https://github.com/Juris-M/citeproc-js/commit/e700797b10f62d1f9b38d69c0e1355ecd9cb8063>`_
+:author:
+    Frank Bennett
+:date:
+    2016-09-06 16:20 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.117
+
+:commit:
+    `58049a2 <https://github.com/Juris-M/citeproc-js/commit/58049a2823e9390edc33e790f7fea432819e6424>`_
+:author:
+    fbennett
+:date:
+    2016-09-05 10:26 (JST)
+

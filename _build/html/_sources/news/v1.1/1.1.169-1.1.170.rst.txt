@@ -1,0 +1,54 @@
+========================================================
+1.1.169-1.1.170
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES (previous commit), bundle as 1.1.170
+
+:commit:
+    `f16eee5 <https://github.com/Juris-M/citeproc-js/commit/f16eee5700d901bd7e247c4f52a46790bf547b99>`_
+:author:
+    fbennett
+:date:
+    2017-06-03 07:56 (JST)
+
+
+------
+
+Revert hanging-indent change from 1.1.150
+
+:commit:
+    `d3c6653 <https://github.com/Juris-M/citeproc-js/commit/d3c6653c1e1957cf7b657643e8bc1ee03ce40c1b>`_
+:author:
+    fbennett
+:date:
+    2017-06-03 07:54 (JST)
+
+
+------
+
+Revert 5cdc4b
+
+:commit:
+    `d6a57e7 <https://github.com/Juris-M/citeproc-js/commit/d6a57e7725000b516d6426e9ec1c33fcd552d4ca>`_
+:author:
+    fbennett
+:date:
+    2017-06-03 07:48 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `5c8ed64 <https://github.com/Juris-M/citeproc-js/commit/5c8ed6404fbabacb32c4efa472025e757ad8b3ed>`_
+:author:
+    fbennett
+:date:
+    2017-05-23 20:02 (JST)
+

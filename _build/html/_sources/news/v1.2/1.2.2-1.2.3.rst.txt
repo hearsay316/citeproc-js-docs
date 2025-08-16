@@ -1,0 +1,294 @@
+========================================================
+1.2.2-1.2.3
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.3
+
+:commit:
+    `57dbabb <https://github.com/Juris-M/citeproc-js/commit/57dbabb7fae7e21c3abd0f9c5e3b78316dc0be82>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-23 14:55 (JST)
+
+
+------
+
+Update .gitignore
+
+:commit:
+    `f99b99a <https://github.com/Juris-M/citeproc-js/commit/f99b99ab4cb3523a38bd446df2455676d5882965>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-23 14:46 (JST)
+
+
+------
+
+Adjust test to reflect new style logic
+
+:commit:
+    `31b03e2 <https://github.com/Juris-M/citeproc-js/commit/31b03e24967c4df14a4aa38169646e5e6504b0c9>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-23 14:43 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `6f86e99 <https://github.com/Juris-M/citeproc-js/commit/6f86e99b30870a1c6ac72af23dcc2f6a95506256>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-23 14:27 (JST)
+
+
+------
+
+Update juris-modules
+
+:commit:
+    `9fed3c2 <https://github.com/Juris-M/citeproc-js/commit/9fed3c21199e4b653bd618479348f5efc85d8a9f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-23 14:25 (JST)
+
+
+------
+
+Send raw institution keys to abbrevs filter
+
+:commit:
+    `97e54b9 <https://github.com/Juris-M/citeproc-js/commit/97e54b9d8398d726f8ef4bbdfccee7db1f3db89f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-15 07:51 (JST)
+
+
+------
+
+Merge branch 'master-fix-title-splits'
+
+:commit:
+    `c187b10 <https://github.com/Juris-M/citeproc-js/commit/c187b10cae8a0a692fa3487fae2dcd9deffc0db0>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-14 15:25 (JST)
+
+
+------
+
+Remove style tests to make way for submodule
+
+:commit:
+    `0af321c <https://github.com/Juris-M/citeproc-js/commit/0af321c7c4f801251252581860b2bc2ef811da87>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-14 15:24 (JST)
+
+
+------
+
+Recognize division as a numeric variable
+
+:commit:
+    `ee1b5f7 <https://github.com/Juris-M/citeproc-js/commit/ee1b5f785063c9421964afbf7278f8df3a725fe7>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-14 15:18 (JST)
+
+
+------
+
+Update csl-schemata
+
+:commit:
+    `f68431f <https://github.com/Juris-M/citeproc-js/commit/f68431f203f29e1c10031a374e3ecc16b4df931a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-14 15:17 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `9cda99f <https://github.com/Juris-M/citeproc-js/commit/9cda99f83c987bc2914398a0a005754372bf7aad>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-14 15:16 (JST)
+
+
+------
+
+Update style modules
+
+:commit:
+    `b42317b <https://github.com/Juris-M/citeproc-js/commit/b42317b9078966a6b45d7c467f204d691281dda5>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-14 15:16 (JST)
+
+
+------
+
+Remove files to make way for submodule
+
+:commit:
+    `2b9420a <https://github.com/Juris-M/citeproc-js/commit/2b9420a0c47eaf1154aec85735a1956f07927c08>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-14 15:06 (JST)
+
+
+------
+
+Broaden French subtitle spacing in multiple subtitles to include ? and !
+
+:commit:
+    `d3d158a <https://github.com/Juris-M/citeproc-js/commit/d3d158a884c06f136511b79f8258ea2f0ccde4b8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-04 08:51 (JST)
+
+
+------
+
+Extend uppercase-subtitle tests, add tests of fr locale
+
+:commit:
+    `64f1f55 <https://github.com/Juris-M/citeproc-js/commit/64f1f55a1c04557969d7fbfcd5b82acf37f2df0e>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-02 19:54 (JST)
+
+
+------
+
+Tweaks for narrow no-break-space in fr locale
+
+:commit:
+    `e5225a5 <https://github.com/Juris-M/citeproc-js/commit/e5225a53e899caa10403188841d66ac01f156ccd>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-02 19:54 (JST)
+
+
+------
+
+Add groupID to cslrun.yaml
+
+:commit:
+    `fb645c1 <https://github.com/Juris-M/citeproc-js/commit/fb645c1158a9a0cf5541b404fc9669dda8e1d891>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-02 12:26 (JST)
+
+
+------
+
+Remove unused flags from state.js
+
+:commit:
+    `da164b0 <https://github.com/Juris-M/citeproc-js/commit/da164b0427196854874ccc7aeafc6d12658dda01>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-22 07:55 (JST)
+
+
+------
+
+Fix tests a little again
+
+:commit:
+    `3c18819 <https://github.com/Juris-M/citeproc-js/commit/3c1881905a9126b270353d843443c405aecc2284>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-21 15:10 (JST)
+
+
+------
+
+Fix tests a littlefixtures/local/abbrevs_TitleMainTitleSub.txt
+
+:commit:
+    `23ad8dd <https://github.com/Juris-M/citeproc-js/commit/23ad8dd1be914307eb05c34012657102b2374ced>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-21 15:09 (JST)
+
+
+------
+
+More generous subtitle capitalization
+
+:commit:
+    `19951b0 <https://github.com/Juris-M/citeproc-js/commit/19951b0af2188b8fc01c0b9a8b70fc3df7471264>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-21 12:02 (JST)
+
+
+------
+
+Tests of new title split/subtitle caps code
+
+:commit:
+    `f7eb9e2 <https://github.com/Juris-M/citeproc-js/commit/f7eb9e210bfba21748a2684eb24238fd497da894>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-21 12:01 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `507e634 <https://github.com/Juris-M/citeproc-js/commit/507e6346463e8c61f5ab6b67ad7c647d9a98b81b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-20 21:36 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.2
+
+:commit:
+    `2d91671 <https://github.com/Juris-M/citeproc-js/commit/2d9167127fcb1268f4c7e5a04e34f2df779cc1a2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-20 21:34 (JST)
+

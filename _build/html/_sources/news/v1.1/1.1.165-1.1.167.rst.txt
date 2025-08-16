@@ -1,0 +1,90 @@
+========================================================
+1.1.165-1.1.167
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.167
+
+:commit:
+    `066951a <https://github.com/Juris-M/citeproc-js/commit/066951a53b053db17ecc96bf735cb86e539c2d85>`_
+:author:
+    fbennett
+:date:
+    2017-05-19 11:04 (JST)
+
+
+------
+
+Update std tests again
+
+:commit:
+    `434f495 <https://github.com/Juris-M/citeproc-js/commit/434f4955c038b816297cfb9f8d97c9bf34c16d9b>`_
+:author:
+    fbennett
+:date:
+    2017-05-19 11:04 (JST)
+
+
+------
+
+Set any moving punctuation found on user-supplied suffix to blob suffix.
+
+:commit:
+    `24b6b91 <https://github.com/Juris-M/citeproc-js/commit/24b6b912140003dc1966e1e04575e444104397a6>`_
+:author:
+    fbennett
+:date:
+    2017-05-19 11:01 (JST)
+
+
+------
+
+Update std tests again
+
+:commit:
+    `4420613 <https://github.com/Juris-M/citeproc-js/commit/44206130539dc0d70c6dab2fbfa7d4571c4dfae7>`_
+:author:
+    fbennett
+:date:
+    2017-05-19 10:04 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `99053be <https://github.com/Juris-M/citeproc-js/commit/99053be187eac529f2dbe60cdc56f66ab95fbc1b>`_
+:author:
+    fbennett
+:date:
+    2017-05-19 10:00 (JST)
+
+
+------
+
+Preserve leading spaces on strings processed by flipflop
+
+:commit:
+    `b1796df <https://github.com/Juris-M/citeproc-js/commit/b1796df4a911456feb5f48ce785a2b1608bee542>`_
+:author:
+    fbennett
+:date:
+    2017-05-19 09:58 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.165
+
+:commit:
+    `8689ba6 <https://github.com/Juris-M/citeproc-js/commit/8689ba67d7912437f8229923c54c5752bc7e742b>`_
+:author:
+    fbennett
+:date:
+    2017-05-03 16:14 (JST)
+

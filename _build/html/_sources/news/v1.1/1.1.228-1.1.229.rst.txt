@@ -1,0 +1,94 @@
+========================================================
+1.1.228-1.1.229
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.229
+
+:commit:
+    `c3995fe <https://github.com/Juris-M/citeproc-js/commit/c3995fef1fd05cb7711f6e05013bb661cd60e411>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-31 10:53 (JST)
+
+
+------
+
+Recognize literal names when reading raw name data
+
+:commit:
+    `ad5e235 <https://github.com/Juris-M/citeproc-js/commit/ad5e235c961f4f5d0a2b79bbfeb1a64d156327f9>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-31 10:45 (JST)
+
+
+------
+
+Make test exercise what it claims
+
+:commit:
+    `336d61e <https://github.com/Juris-M/citeproc-js/commit/336d61e95b3212456faee60fc94a7250b094da5d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-30 18:49 (JST)
+
+
+------
+
+Avoid running processNumber on fields with no data
+
+:commit:
+    `68f8827 <https://github.com/Juris-M/citeproc-js/commit/68f88272faa4a20d075003e174bff41bcc085f3d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-30 18:36 (JST)
+
+
+------
+
+Bugfixes around supplement variable term 
+
+* Add its long form to locales if not present 
+
+* Add its nick to pattern data and mappings
+
+:commit:
+    `d7d6a1c <https://github.com/Juris-M/citeproc-js/commit/d7d6a1cd6e1494c03741012a01068557a976933b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-30 18:32 (JST)
+
+
+------
+
+Fix path to styletests, drop unused styles entry
+
+:commit:
+    `a11b46c <https://github.com/Juris-M/citeproc-js/commit/a11b46cdc6a1983673b2a54c7f76e31310299f7d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-30 18:30 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.228
+
+:commit:
+    `5569ed3 <https://github.com/Juris-M/citeproc-js/commit/5569ed3230f9231b480386f7f0c127fa71f80d1b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-29 06:40 (JST)
+

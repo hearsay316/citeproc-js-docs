@@ -1,0 +1,54 @@
+========================================================
+1.1.202-1.1.203
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.203
+
+:commit:
+    `b828d0e <https://github.com/Juris-M/citeproc-js/commit/b828d0e49ba6b80330eb116777d64475e871dd0f>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-11 08:28 (JST)
+
+
+------
+
+Quash lone country names on explicit abbreviations
+
+:commit:
+    `5f3f991 <https://github.com/Juris-M/citeproc-js/commit/5f3f991b6a0684f5d15e0fbf9f239844de7cee40>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-11 08:26 (JST)
+
+
+------
+
+Adjust tests to fit revise handling of country abbrevs
+
+:commit:
+    `cd42d46 <https://github.com/Juris-M/citeproc-js/commit/cd42d4616a930fb2ddcde6e3620267d0bf64fb71>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-11 08:21 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.202
+
+:commit:
+    `ad2cf14 <https://github.com/Juris-M/citeproc-js/commit/ad2cf14b015dfe6c6dbb6feac89e7f891dcf327c>`_
+:author:
+    Frank Bennett
+:date:
+    2018-04-11 07:30 (JST)
+

@@ -1,0 +1,127 @@
+========================================================
+1.1.177-1.1.178
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Merge branch 'master' of github.com:Juris-M/citeproc-js
+
+:commit:
+    `8f88341 <https://github.com/Juris-M/citeproc-js/commit/8f88341834af5e144c4fab7e7782d8239dfc86a6>`_
+:author:
+    Frank Bennett
+:date:
+    2017-09-11 07:29 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.178
+
+:commit:
+    `63021cb <https://github.com/Juris-M/citeproc-js/commit/63021cbab567a65b0659cbbf66f317ae23a86819>`_
+:author:
+    Frank Bennett
+:date:
+    2017-09-11 07:29 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `7d70504 <https://github.com/Juris-M/citeproc-js/commit/7d70504f3a79fdb00ad2e699f53e39070396e545>`_
+:author:
+    Frank Bennett
+:date:
+    2017-09-11 07:28 (JST)
+
+
+------
+
+Refinements for jurisdiction handling.
+
+:commit:
+    `7c30100 <https://github.com/Juris-M/citeproc-js/commit/7c30100c2c27c11ce96258ae95ad221d9c949538>`_
+:author:
+    Frank Bennett
+:date:
+    2017-09-11 07:21 (JST)
+
+
+
+* Recognize a normalizeAbbrevsKey hook, to be used for lowercasing
+  keys etc.
+
+
+* Implement a new attribute jurisdiction-depth.
+
+
+* Extend expected signature of getHumanForm with a toggle to
+  return the raw key if no match is found to a known human-readable
+  form.
+
+
+------
+
+Update docs
+
+:commit:
+    `e1fbd21 <https://github.com/Juris-M/citeproc-js/commit/e1fbd215c6faaad89932e92a8c30d7528d302f31>`_
+:author:
+    Frank Bennett
+:date:
+    2017-09-04 07:49 (JST)
+
+
+------
+
+Fix indenting
+
+:commit:
+    `4597a8d <https://github.com/Juris-M/citeproc-js/commit/4597a8dbc2da729924439c4b42ada0d16999d018>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-24 20:23 (JST)
+
+
+------
+
+Amend test to reflect sort behavior
+
+:commit:
+    `635af80 <https://github.com/Juris-M/citeproc-js/commit/635af80b7eb65be037464fe0f399acdb65da9cb6>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-24 20:12 (JST)
+
+
+------
+
+Tweak to test.
+
+:commit:
+    `efa8d45 <https://github.com/Juris-M/citeproc-js/commit/efa8d458f67ed89eeac145af3fc053832a5f2ae3>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-24 16:25 (JST)
+
+
+------
+
+Update CHANGES
+
+:commit:
+    `c902651 <https://github.com/Juris-M/citeproc-js/commit/c902651b104e602a43d7068b1b2711abf4c4f4af>`_
+:author:
+    Frank Bennett
+:date:
+    2017-08-23 17:33 (JST)
+

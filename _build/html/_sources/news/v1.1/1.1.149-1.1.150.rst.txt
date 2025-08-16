@@ -1,0 +1,114 @@
+========================================================
+1.1.149-1.1.150
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Add test of negative raw date
+
+:commit:
+    `3db36d4 <https://github.com/Juris-M/citeproc-js/commit/3db36d46d3dbc6742790706a603db2e8a4ded127>`_
+:author:
+    fbennett
+:date:
+    2017-02-06 11:39 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `35a16e4 <https://github.com/Juris-M/citeproc-js/commit/35a16e4a96d450d936022dd63d773194ca980a70>`_
+:author:
+    fbennett
+:date:
+    2017-02-06 11:38 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.150
+
+:commit:
+    `ca3c83c <https://github.com/Juris-M/citeproc-js/commit/ca3c83c82bca78289280b21521e2794194d0d8f5>`_
+:author:
+    fbennett
+:date:
+    2017-02-06 11:36 (JST)
+
+
+------
+
+Amend test fixture
+
+:commit:
+    `a124e5e <https://github.com/Juris-M/citeproc-js/commit/a124e5e32e17d3a31e6b57acf1941b3e875ef6b9>`_
+:author:
+    fbennett
+:date:
+    2017-02-06 11:28 (JST)
+
+
+------
+
+Recognize small and negative years in date parser (but for single year only)
+
+:commit:
+    `62dfec9 <https://github.com/Juris-M/citeproc-js/commit/62dfec94a261aa94bef3755c0ffd432758f21f8f>`_
+:author:
+    fbennett
+:date:
+    2017-02-06 11:28 (JST)
+
+
+------
+
+Fix spelling error in code
+
+:commit:
+    `e00594e <https://github.com/Juris-M/citeproc-js/commit/e00594ed57a75d934b548a6e83ec5bd1750568c6>`_
+:author:
+    fbennett
+:date:
+    2017-02-06 09:15 (JST)
+
+
+------
+
+Set true (boolean) not 2 (int) as hangingindent param
+
+:commit:
+    `5cdc4b3 <https://github.com/Juris-M/citeproc-js/commit/5cdc4b36b8019454cd1effc18b75c205043d8633>`_
+:author:
+    fbennett
+:date:
+    2017-02-06 08:58 (JST)
+
+
+------
+
+Correct documentation of appendCitationCluster()
+
+:commit:
+    `83e65f3 <https://github.com/Juris-M/citeproc-js/commit/83e65f301795ac6b63e33855dca4d2b82267e90b>`_
+:author:
+    fbennett
+:date:
+    2017-02-06 08:31 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.149
+
+:commit:
+    `2720269 <https://github.com/Juris-M/citeproc-js/commit/2720269fdd5ebae24f47856d4ec5f19a938d9788>`_
+:author:
+    fbennett
+:date:
+    2017-02-05 21:50 (JST)
+

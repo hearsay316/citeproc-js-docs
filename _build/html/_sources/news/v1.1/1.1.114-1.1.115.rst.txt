@@ -1,0 +1,54 @@
+========================================================
+1.1.114-1.1.115
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.115
+
+:commit:
+    `da7dd22 <https://github.com/Juris-M/citeproc-js/commit/da7dd221f750db80e4264d57a8f5b057385e0e06>`_
+:author:
+    Frank Bennett
+:date:
+    2016-09-02 11:31 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `1f1f6ac <https://github.com/Juris-M/citeproc-js/commit/1f1f6ac1673cace949e9bb97052abffe91b4fd45>`_
+:author:
+    Frank Bennett
+:date:
+    2016-09-02 11:26 (JST)
+
+
+------
+
+Distinguish personal and institutional names in variant styling
+
+:commit:
+    `3cb31dc <https://github.com/Juris-M/citeproc-js/commit/3cb31dcf4d85aaea621b451b34630926ac586509>`_
+:author:
+    Frank Bennett
+:date:
+    2016-09-02 11:06 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.114
+
+:commit:
+    `6c04435 <https://github.com/Juris-M/citeproc-js/commit/6c04435e04400eac6ef76587cef6d6726e445e7c>`_
+:author:
+    fbennett
+:date:
+    2016-08-19 09:49 (JST)
+

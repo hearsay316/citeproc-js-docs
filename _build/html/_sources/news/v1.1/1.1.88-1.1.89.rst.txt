@@ -1,0 +1,30 @@
+========================================================
+1.1.88-1.1.89
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Set just_did_number on cs:text with term or value
+
+:commit:
+    `5e9e42d <https://github.com/Juris-M/citeproc-js/commit/5e9e42d0a0c435134cfa5cc3ebb26b39b7eb792b>`_
+:author:
+    fbennett
+:date:
+    2016-03-26 16:51 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.88
+
+:commit:
+    `3667ec9 <https://github.com/Juris-M/citeproc-js/commit/3667ec932f42ffd4e78f4c1814f117de0cd0aa9d>`_
+:author:
+    fbennett
+:date:
+    2016-03-26 15:25 (JST)
+

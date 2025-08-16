@@ -1,0 +1,102 @@
+========================================================
+1.1.95-1.1.96
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Fix script paths
+
+:commit:
+    `bb39960 <https://github.com/Juris-M/citeproc-js/commit/bb39960f11b6510f258f05654a7f0d86729d4852>`_
+:author:
+    fbennett
+:date:
+    2016-04-16 14:15 (JST)
+
+
+------
+
+Fix deployment script
+
+:commit:
+    `817c715 <https://github.com/Juris-M/citeproc-js/commit/817c7158e5890ee857a8b40c68fedda152842fb7>`_
+:author:
+    fbennett
+:date:
+    2016-04-16 14:14 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.96
+
+:commit:
+    `f3c4a68 <https://github.com/Juris-M/citeproc-js/commit/f3c4a68eb801395e841375ee808c3c5d0255f43f>`_
+:author:
+    fbennett
+:date:
+    2016-04-16 14:11 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `194fac5 <https://github.com/Juris-M/citeproc-js/commit/194fac564acdd9e355e402e2ea2b6e4bb53fc893>`_
+:author:
+    fbennett
+:date:
+    2016-04-16 14:10 (JST)
+
+
+------
+
+Handle DOS and Mac line endings correctly when parsing serialized XML
+
+:commit:
+    `e3c60d8 <https://github.com/Juris-M/citeproc-js/commit/e3c60d8433f03f76ffac715f80404d980958b3e6>`_
+:author:
+    fbennett
+:date:
+    2016-04-16 13:44 (JST)
+
+
+------
+
+Oops. Bump processor version in bundle
+
+:commit:
+    `4274052 <https://github.com/Juris-M/citeproc-js/commit/42740522105e0fc0c3ccbcf6ce7c3a008a270251>`_
+:author:
+    fbennett
+:date:
+    2016-04-16 12:40 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `221d29a <https://github.com/Juris-M/citeproc-js/commit/221d29a954ea59d0dd95bbd4751e3d5b8be07368>`_
+:author:
+    fbennett
+:date:
+    2016-04-16 11:55 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.95
+
+:commit:
+    `3f379ad <https://github.com/Juris-M/citeproc-js/commit/3f379adff97afa842abea092d016cb83b8f12df8>`_
+:author:
+    fbennett
+:date:
+    2016-04-15 22:05 (JST)
+

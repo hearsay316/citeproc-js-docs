@@ -1,0 +1,58 @@
+========================================================
+1.1.178-1.1.179
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.179
+
+:commit:
+    `e6d54bc <https://github.com/Juris-M/citeproc-js/commit/e6d54bc1dc3bc76804bfc93891dfdd94b1d8e234>`_
+:author:
+    Frank Bennett
+:date:
+    2017-10-26 06:38 (JST)
+
+
+------
+
+Merge branch 'dsifford-patch-2'
+
+:commit:
+    `63f9d2b <https://github.com/Juris-M/citeproc-js/commit/63f9d2bba63244524cab088bcdeebdf33e867a05>`_
+:author:
+    Frank Bennett
+:date:
+    2017-10-26 06:32 (JST)
+
+Protect against potentially invalid assignment.
+
+
+------
+
+Merge branch 'patch-2' of https://github.com/dsifford/citeproc-js into dsifford-patch-2
+
+:commit:
+    `fc940d0 <https://github.com/Juris-M/citeproc-js/commit/fc940d01cedb3c51e810c3527b356aef4952f03f>`_
+:author:
+    Frank Bennett
+:date:
+    2017-10-26 06:28 (JST)
+
+Protects against potentially invalid assignment.
+
+
+------
+
+Merge branch 'master' of github.com:Juris-M/citeproc-js
+
+:commit:
+    `8f88341 <https://github.com/Juris-M/citeproc-js/commit/8f88341834af5e144c4fab7e7782d8239dfc86a6>`_
+:author:
+    Frank Bennett
+:date:
+    2017-09-11 07:29 (JST)
+

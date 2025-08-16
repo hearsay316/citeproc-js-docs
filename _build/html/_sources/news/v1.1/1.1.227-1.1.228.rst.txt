@@ -1,0 +1,78 @@
+========================================================
+1.1.227-1.1.228
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.228
+
+:commit:
+    `5569ed3 <https://github.com/Juris-M/citeproc-js/commit/5569ed3230f9231b480386f7f0c127fa71f80d1b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-29 06:40 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `4336f10 <https://github.com/Juris-M/citeproc-js/commit/4336f1048fd03dd2af213db3f8da9da6418735dd>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-29 06:28 (JST)
+
+
+------
+
+Amend test
+
+:commit:
+    `49be475 <https://github.com/Juris-M/citeproc-js/commit/49be475f9b5d94f56105607f4f60da0c91360772>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-29 06:22 (JST)
+
+
+------
+
+Fix placement of trailing punctuation with variable wrappers
+
+:commit:
+    `f07c1cb <https://github.com/Juris-M/citeproc-js/commit/f07c1cbb00f873ecec774e391776e5ca3a741a21>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-29 06:20 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `ed1bd94 <https://github.com/Juris-M/citeproc-js/commit/ed1bd9458b3d97bf8e5b2723681af383c423b7ea>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-28 10:58 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.227
+
+:commit:
+    `dcebdd9 <https://github.com/Juris-M/citeproc-js/commit/dcebdd9bf612b6b418cf102601146f635f417a2a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-03-28 00:16 (JST)
+

@@ -1,0 +1,780 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Running the Processor &mdash; citeproc-js 1.1.73 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/screen.css?v=425850a2" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=93912719"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/global.js?v=537b13e9"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CSL-JSON" href="csl-json/markup.html" />
+    <link rel="prev" title="Getting started" href="setting-up.html" /> 
+ 
+
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            citeproc-js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news/index.html">Changes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demos.html">Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="setting-up.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running the Processor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#required-sys-functions">Required <code class="docutils literal notranslate"><span class="pre">sys</span></code> functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#retrievelocale">retrieveLocale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retrieveitem">retrieveItem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#public-methods-data-and-rendering">Public methods: data and rendering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#updateitems">updateItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updateunciteditems">updateUncitedItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processcitationcluster">processCitationCluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#previewcitationcluster">previewCitationCluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#makecitationcluster">makeCitationCluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#makebibliography">makeBibliography</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dirty-tricks">Dirty Tricks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#debug-logging">Debug logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#special-citation-forms">Special citation forms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#citation-flags-with-makecitationcluster">Citation flags with <code class="docutils literal notranslate"><span class="pre">makeCitationCluster</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#citation-flags-with-processcitationcluster">Citation flags with <code class="docutils literal notranslate"><span class="pre">processCitationCluster</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#selective-output-with-makebibliography">Selective output with <code class="docutils literal notranslate"><span class="pre">makeBibliography()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="csl-json/markup.html">CSL-JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sys-extensions.html">Extended <code class="docutils literal notranslate"><span class="pre">sys</span></code> functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csl-m/index.html">CSL-M: extensions to CSL</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">citeproc-js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Running the Processor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/running.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="running-the-processor">
+<h1>Running the Processor<a class="headerlink" href="#running-the-processor" title="Link to this heading"></a></h1>
+<p><img alt="CCBYSA" src="_images/cc-by-sa-80x15.png" /> <a class="reference external" href="https://twitter.com/fgbjr">Frank Bennett</a></p>
+<hr class="docutils" />
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>The processor loads as a single <code class="docutils literal notranslate"><span class="pre">CSL</span></code> object, and must be instantiated
+before use:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">citeproc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">CSL</span><span class="p">.</span><span class="nx">Engine</span><span class="p">(</span><span class="nx">sys</span><span class="p">,</span><span class="w"> </span><span class="nx">style</span><span class="p">,</span><span class="w"> </span><span class="nx">lang</span><span class="p">,</span><span class="w"> </span><span class="nx">forceLang</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>sys</strong></dt><dd><p><em>Required.</em> A JavaScript object providing (at least) the functions
+<code class="docutils literal notranslate"><span class="pre">retrieveLocale()</span></code> and <code class="docutils literal notranslate"><span class="pre">retrieveItem()</span></code>.</p>
+</dd>
+<dt><strong>style</strong></dt><dd><p><em>Required.</em> CSL style as serialized XML (if <code class="docutils literal notranslate"><span class="pre">xmldom.js</span></code> is used)
+or as JavaScript object (if <code class="docutils literal notranslate"><span class="pre">xmljson.js</span></code> is used).</p>
+</dd>
+<dt><strong>lang</strong></dt><dd><p><em>Optional.</em> A language tag compliant with RFC 5646.  Defaults to <code class="docutils literal notranslate"><span class="pre">en</span></code>.
+Styles that contain a <code class="docutils literal notranslate"><span class="pre">default-locale</span></code> attribute value
+on the <code class="docutils literal notranslate"><span class="pre">style</span></code> node will ignore this option unless
+the <code class="docutils literal notranslate"><span class="pre">forceLang</span></code> argument is set to a non-nil value.</p>
+</dd>
+<dt><strong>forceLang</strong></dt><dd><p><em>Optional.</em> When set to a non-nil value, force the use of the
+locale set in the <code class="docutils literal notranslate"><span class="pre">lang</span></code> argument, overriding
+any language set in the <code class="docutils literal notranslate"><span class="pre">default-locale</span></code> attribute
+on the <code class="docutils literal notranslate"><span class="pre">style</span></code> node.</p>
+</dd>
+</dl>
+</section>
+<section id="required-sys-functions">
+<h2>Required <code class="docutils literal notranslate"><span class="pre">sys</span></code> functions<a class="headerlink" href="#required-sys-functions" title="Link to this heading"></a></h2>
+<p>Two locally defined synchronous functions on the <code class="docutils literal notranslate"><span class="pre">sys</span></code> object must
+be supplied to acquire runtime inputs.</p>
+<section id="retrievelocale">
+<h3>retrieveLocale<a class="headerlink" href="#retrievelocale" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">retrieveLocale()</span></code> function fetches CSL locales needed at
+runtime. The locale source is available for download from the <a class="reference external" href="https://github.com/citation-style-language/locales">CSL
+locales repository</a>.  The function
+takes a single RFC 5646 language tag as its sole argument, and returns
+a locale object. The return may be a serialized XML string, an E4X
+object, a DOM document, or a JSON or JavaScript representation of the
+locale XML.  If the requested locale is not available, the function
+must return a value that tests <code class="docutils literal notranslate"><span class="pre">false</span></code>. The function <em>must</em> return a
+value for the <code class="docutils literal notranslate"><span class="pre">us</span></code> locale.</p>
+</section>
+<section id="retrieveitem">
+<h3>retrieveItem<a class="headerlink" href="#retrieveitem" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">retrieveItem()</span></code> function fetches citation data for an item. The
+function takes an item ID as its sole argument, and returns a
+JavaScript object in <a class="reference external" href="./csl-json/markup.html">CSL JSON format</a>.</p>
+</section>
+</section>
+<section id="public-methods-data-and-rendering">
+<h2>Public methods: data and rendering<a class="headerlink" href="#public-methods-data-and-rendering" title="Link to this heading"></a></h2>
+<p>The instantiated processor offers a few basic methods for handling
+input and obtaining rendered output. A few terms will be used with
+a specific meaning in the descriptions below.</p>
+<dl class="simple">
+<dt><strong>item</strong></dt><dd><p>An item is a single bundle of metadata for a source to be referenced.
+See the <a class="reference external" href="http://docs.citationstyles.org/en/stable/specification.html">CSL Specification</a>
+for details on the fields available on an item, and the <a class="reference external" href="./csl-json/markup.html">CSL-JSON chapter of this manual</a>
+for the format of specific field types. Every item must have an <code class="docutils literal notranslate"><span class="pre">id</span></code>
+and a <code class="docutils literal notranslate"><span class="pre">type</span></code>.</p>
+</dd>
+<dt><strong>citation</strong></dt><dd><p>A citation is a set of one or more items, optionally supplemented by
+locator information, prefixes or suffixes supplied by the user.</p>
+</dd>
+<dt><strong>registry</strong></dt><dd><p>The processor maintains a stateful registry of details on each item
+submitted for processing. Registry entries are maintained
+automatically, and cover matters such as disambiguation parameters,
+sort sequence, and the first reference in which an item occurs.</p>
+</dd>
+<dt><strong>citable items</strong></dt><dd><p>Citable items are those meant for inclusion only if used in one or
+more citations.</p>
+</dd>
+<dt><strong>uncited items</strong></dt><dd><p>Uncited items are those meant for inclusion regardless of whether
+they are used in a citation.</p>
+</dd>
+</dl>
+<section id="updateitems">
+<h3>updateItems<a class="headerlink" href="#updateitems" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">updateItems()</span></code> method accepts a single argument when invoked
+as a public method, and refreshes the registry with a designated
+set of citable items. Citable items not listed in the argument are removed from the
+registry:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">citeproc</span><span class="p">.</span><span class="nx">updateItems</span><span class="p">(</span><span class="nx">idList</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl>
+<dt><strong>idList</strong></dt><dd><p><em>Required.</em> An array of item <code class="docutils literal notranslate"><span class="pre">id</span></code> values,
+which may be number or string:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Item-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Item-2&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="updateunciteditems">
+<h3>updateUncitedItems<a class="headerlink" href="#updateunciteditems" title="Link to this heading"></a></h3>
+<p>Like its corollary above, the <code class="docutils literal notranslate"><span class="pre">updateUncitedItems()</span></code> method  the registry accepts a single
+argument, but refreshes the registry with a designated set of uncited items.
+Uncited items not listed in the argument are removed from the registry.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">citeproc</span><span class="p">.</span><span class="nx">updateUncitedItems</span><span class="p">(</span><span class="nx">idList</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl>
+<dt><strong>idList</strong></dt><dd><p><em>Required.</em> A JavaScript array of item <code class="docutils literal notranslate"><span class="pre">id</span></code> values,
+which may be number or string:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Item-1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Item-2&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+<section id="processcitationcluster">
+<h3>processCitationCluster<a class="headerlink" href="#processcitationcluster" title="Link to this heading"></a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">processCitationCluster()</span></code> method to generate and
+maintain citations dynamically in the text of a document. The method
+takes three arguments:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">citeproc</span><span class="p">.</span><span class="nx">processCitationCluster</span><span class="p">(</span><span class="nx">citation</span><span class="p">,</span><span class="w"> </span><span class="nx">citationsPre</span><span class="p">,</span><span class="w"> </span><span class="nx">citationsPost</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>citation</strong></dt><dd><p>The citation argument is a citation object as described in the <a class="reference external" href="./csl-json/markup.html">CSL-JSON section</a> of
+this manual.</p>
+</dd>
+<dt><strong>citationsPre</strong></dt><dd><p>An array citationID/note-number pairs preceding the target citation.</p>
+</dd>
+<dt><strong>citationsPost</strong></dt><dd><p>A list of citationID/note-number pairs following the target citation
+(note numbers to reflect the state of the document after the insertion).</p>
+</dd>
+</dl>
+<p>The result is an array of two elements: a data object, and
+an array of one or more index/string pairs, one for each citation
+affected by the citation edit or insertion operation.</p>
+<p>Code invoking <code class="docutils literal notranslate"><span class="pre">processCitationCluster()</span></code> on a document from which several citations
+have already been registered in the processor might look like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">citation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">properties</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">noteIndex</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">citationItems</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">         </span><span class="p">{</span>
+<span class="w">             </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Item-X&#39;</span><span class="w"> </span><span class="c1">// A work by Richard Snoakes</span>
+<span class="w">         </span><span class="p">}</span>
+<span class="w">     </span><span class="p">]</span>
+<span class="p">}</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">citationsPre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;citation-quaTheb4&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;citation-mileiK4k&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">]</span><span class="w"> </span><span class="p">];</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">citationsPost</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;citation-adaNgoh1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">]</span><span class="w"> </span><span class="p">];</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">citeproc</span><span class="p">.</span><span class="nx">processCitationCluster</span><span class="p">(</span><span class="nx">citation</span><span class="p">,</span><span class="w"> </span><span class="nx">citationsPre</span><span class="p">,</span><span class="w"> </span><span class="nx">citationsPost</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">result</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;bibchange&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">result</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span>
+<span class="p">[</span>
+<span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="s2">&quot;(Ronald Snoakes 1950)&quot;</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="c1">// Existing citation modified by disambiguation</span>
+<span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="s2">&quot;(Richard Snoakes 1950)&quot;</span><span class="w"> </span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>A worked example showing the result of multiple transactions can be
+found in the <a class="reference external" href="https://github.com/citation-style-language/test-suite/blob/master/processor-tests/humans/integration_IbidOnInsert.txt">processor test suite</a>.</p>
+</section>
+<section id="previewcitationcluster">
+<h3>previewCitationCluster<a class="headerlink" href="#previewcitationcluster" title="Link to this heading"></a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">previewCitationCluster()</span></code> to generate accurately formatted
+citations as they would appear at a given location within a document
+managed using <code class="docutils literal notranslate"><span class="pre">processCitationCluster()</span></code>. The method accepts four
+arguments, the first three of which are identical to those accepted
+by <code class="docutils literal notranslate"><span class="pre">processCitationCluster()</span></code>. The fourth argument may be used to
+control the output mode.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">citeproc</span><span class="p">.</span><span class="nx">previewCitationCluster</span><span class="p">(</span><span class="nx">citation</span><span class="p">,</span><span class="w"> </span><span class="nx">citationsPre</span><span class="p">,</span><span class="w"> </span><span class="nx">citationsPost</span><span class="p">,</span><span class="w"> </span><span class="nx">format</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>citation</strong></dt><dd><p><em>See ``processCitationCluster()`` above.</em></p>
+</dd>
+<dt><strong>citationsPre</strong></dt><dd><p><em>See ``processCitationCluster()`` above.</em></p>
+</dd>
+<dt><strong>citationsPost</strong></dt><dd><p><em>See ``processCitationCluster()`` above.</em></p>
+</dd>
+<dt><strong>format</strong></dt><dd><p>The optional format argument may be one of <code class="docutils literal notranslate"><span class="pre">html</span></code>, <code class="docutils literal notranslate"><span class="pre">text</span></code> or <code class="docutils literal notranslate"><span class="pre">rtf</span></code>.
+If this argument is not provided, the default value set in the instantiated
+processor is used.</p>
+</dd>
+</dl>
+<p>The result is a string representation of the target citation, in the
+specified format. Changes made to the registry (necessary for correct
+disambiguation, sorting and other adjustments) are reversed after the
+citation is generated, leaving the registry in its original state.</p>
+</section>
+<section id="makecitationcluster">
+<h3>makeCitationCluster<a class="headerlink" href="#makecitationcluster" title="Link to this heading"></a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">makeCitationCluster()</span></code> to generate citations without the burden of
+registry adjustments. The method accepts an array of cite-items as its
+sole argument:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">citeproc</span><span class="p">.</span><span class="nx">makeCitationCluster</span><span class="p">(</span><span class="nx">idList</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>idList</strong></dt><dd><p>An array of cite-items, as specified in the <a class="reference external" href="./csl-json/markup.html">CSL-JSON section</a> of
+this manual. Note the additional cite-item options noted there.</p>
+</dd>
+</dl>
+<p>While <code class="docutils literal notranslate"><span class="pre">makeCitationCluster()</span></code> is faster than its companions, note that
+it does not perform the citation sort, if any, that might be required by the
+style, and that it does not perform disambiguation or apply style rules to
+adjust the cites as appropriate to the context. This method is primarily
+useful for writing simplified test fixtures. It should not be relied on
+in production.</p>
+</section>
+<section id="makebibliography">
+<h3>makeBibliography<a class="headerlink" href="#makebibliography" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">makeBibliography()</span></code> method returns a single bibliography object based on
+the current state of the processor registry. It accepts on optional argument.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">citeproc</span><span class="p">.</span><span class="nx">makeBibliography</span><span class="p">(</span><span class="nx">filter</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The value returned by this command is a two-element list, composed of
+a JavaScript array containing certain formatting parameters, and a
+list of strings representing bibliography entries.  It is the responsibility
+of the calling application to compose the list into a finish string
+for insertion into the document.  The first
+element —- the array of formatting parameters —- contains the key/value
+pairs shown below (the values shown are the processor defaults in the
+HTML output mode, with registered items “Item-1” and “Item-2”).</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">   </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">maxoffset</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">entryspacing</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">linespacing</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">hangingindent</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">second</span><span class="o">-</span><span class="nx">field</span><span class="o">-</span><span class="nx">align</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">bibstart</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&lt;div class=\&quot;csl-bib-body\&quot;&gt;\n&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">bibend</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&lt;/div&gt;&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">bibliography_errors</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">      </span><span class="nx">entry_ids</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="err">\</span><span class="s2">&quot;Item-1\&quot;, \&quot;Item-2\&quot;]</span>
+<span class="s2">   },</span>
+<span class="s2">   [</span>
+<span class="s2">      &quot;</span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="err">\</span><span class="s2">&quot;csl-entry\&quot;&gt;Book A&lt;/div&gt;&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;&lt;div class=\&quot;csl-entry\&quot;&gt;Book C&lt;/div&gt;&quot;</span>
+<span class="w">   </span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><em>maxoffset</em></dt><dd><p>Some citation styles apply a label (either a number or an
+alphanumeric code) to each bibliography entry, and use this label
+to cite bibliography items in the main text.  In the bibliography,
+the labels may either be hung in the margin, or they may be set
+flush to the margin, with the citations indented by a uniform
+amount to the right.  In the latter case, the amount of indentation
+needed depends on the maximum width of any label.  The
+<code class="docutils literal notranslate"><span class="pre">maxoffset</span></code> value gives the maximum number of characters that
+appear in any label used in the bibliography.  The client that
+controls the final rendering of the bibliography string should use
+this value to calculate and apply a suitable indentation length.</p>
+</dd>
+<dt><em>entryspacing</em></dt><dd><p>An integer representing the spacing between entries in the bibliography.</p>
+</dd>
+<dt><em>linespacing</em></dt><dd><p>An integer representing the spacing between the lines within
+each bibliography entry.</p>
+</dd>
+<dt><em>hangingindent</em></dt><dd><p>A boolean value indicating whether hanging indent should be applied.</p>
+</dd>
+<dt><em>second-field-align</em></dt><dd><p>When the <code class="docutils literal notranslate"><span class="pre">second-field-align</span></code> CSL option is set, this returns
+either “flush” or “margin”.  The calling application should
+align text in bibliography output as described in the <a class="reference external" href="http://citationstyles.org/downloads/specification.html#bibliography-specific-options">CSL specification</a>.
+Where <code class="docutils literal notranslate"><span class="pre">second-field-align</span></code> is not set, this return value is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt><em>bibstart</em></dt><dd><p>A string to be appended to the front of the finished bibliography
+string.</p>
+</dd>
+<dt><em>bibend</em></dt><dd><p>A string to be appended to the end of the finished bibliography
+string.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="dirty-tricks">
+<h2>Dirty Tricks<a class="headerlink" href="#dirty-tricks" title="Link to this heading"></a></h2>
+<section id="debug-logging">
+<h3>Debug logging<a class="headerlink" href="#debug-logging" title="Link to this heading"></a></h3>
+<p>Errors and warnings are issued by the functions <code class="docutils literal notranslate"><span class="pre">CSL.error</span></code> and <code class="docutils literal notranslate"><span class="pre">CSL.debug</span></code>
+respectively, both of which take a single string as argument. The former
+throws an error. The latter reports the string to <code class="docutils literal notranslate"><span class="pre">console.log</span></code> if available,
+otherwise <code class="docutils literal notranslate"><span class="pre">dump</span></code> is used. The functions can be redefined to use any reporting
+mechanism you like. For example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">CSL</span><span class="p">.</span><span class="nx">debug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">MyApp</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="special-citation-forms">
+<h3>Special citation forms<a class="headerlink" href="#special-citation-forms" title="Link to this heading"></a></h3>
+<p>In ordinary operation, the processor generates citation strings
+suitable for a given position in the document, in accordance with the
+<a class="reference external" href="http://docs.citationstyles.org/en/1.0.1/specification.html">CSL Specification</a>.  The
+processor is also capable of rendering citation content in three special
+forms:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">author-only</span></code></dt><dd><p>Render only the author of the item, or where a title is substituted
+in lieu of an author, the title, without citation affixes or styling.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">suppress-author</span></code></dt><dd><p>Render the citation omitting the author, or where the title was
+substituted in lieu of an author, the title.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">composite</span></code></dt><dd><p>Render the <code class="docutils literal notranslate"><span class="pre">author-only</span></code> form, optionally followed by a user-supplied
+<code class="docutils literal notranslate"><span class="pre">infix</span></code>, followed by the <code class="docutils literal notranslate"><span class="pre">suppress-author</span></code> form.</p>
+</dd>
+</dl>
+<p>These effects are achieved by setting “citation flags” on processor
+input items.  For styles that do not produce satisfactory results for
+the <code class="docutils literal notranslate"><span class="pre">author-only</span></code> form by default (such as numeric or “trigraph”
+styles), an optional <code class="docutils literal notranslate"><span class="pre">cs:intext</span></code> element can be added to the style
+as a sibling to <code class="docutils literal notranslate"><span class="pre">cs:citation</span></code> and <code class="docutils literal notranslate"><span class="pre">cs:bibliography</span></code>. (Note that
+the <code class="docutils literal notranslate"><span class="pre">cs:intext</span></code> element is outside the official CSL Specification.)</p>
+<p>The citation flags are applied differently in the two methods of running the
+processor (<code class="docutils literal notranslate"><span class="pre">makeCitationCluster</span></code> and <code class="docutils literal notranslate"><span class="pre">processCitationCluster</span></code>). As the
+former is used primarily for testing purposes, it is explained only briefly
+below, followed by a more complete explanation of citation flags with
+the <code class="docutils literal notranslate"><span class="pre">processCitationCluster</span></code> method.</p>
+<section id="citation-flags-with-makecitationcluster">
+<h4>Citation flags with <code class="docutils literal notranslate"><span class="pre">makeCitationCluster</span></code><a class="headerlink" href="#citation-flags-with-makecitationcluster" title="Link to this heading"></a></h4>
+<p>With the <code class="docutils literal notranslate"><span class="pre">makeCitationCluster</span></code> method, citation flags are added to
+input citation items as boolean flags. For example, citations to
+Ken Kesey’s novel <em>Sometimes a Great Notion</em> might be called as follows:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;ITEM-1&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;ITEM-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;author-only&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;ITEM-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;suppress-author&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>With a simple author-date style, this produces the following citation strings:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>(Kesey 1964)
+Kesey
+(1964)
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">composite</span></code> citation flag is not available in the
+<code class="docutils literal notranslate"><span class="pre">makeCitationCluster</span></code> method. If applied, it will have no effect.</p>
+</section>
+<section id="citation-flags-with-processcitationcluster">
+<h4>Citation flags with <code class="docutils literal notranslate"><span class="pre">processCitationCluster</span></code><a class="headerlink" href="#citation-flags-with-processcitationcluster" title="Link to this heading"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">processCitationCluster</span></code> method provides full support for
+citation flags. In addition to recognizing <code class="docutils literal notranslate"><span class="pre">composite</span></code>, this method
+will ignore citations set with the <code class="docutils literal notranslate"><span class="pre">author-only</span></code> flag for
+back-referencing purposes (i.e. ibid and targeted references using
+<code class="docutils literal notranslate"><span class="pre">first-reference-note-number</span></code>). The following input sample
+exercises the flags in a series of four citations. Note the use
+of the <code class="docutils literal notranslate"><span class="pre">mode</span></code> attribute on the <code class="docutils literal notranslate"><span class="pre">properties</span></code> segment of each
+citation:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;citationID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CITATION-1&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;citationItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ITEM-1&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;noteIndex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">[],</span>
+<span class="w">        </span><span class="p">[]</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;citationID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CITATION-2&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;citationItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ITEM-1&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;noteIndex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;author-only&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">[[</span><span class="s2">&quot;CITATION-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]],</span>
+<span class="w">        </span><span class="p">[]</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;citationID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CITATION-3&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;citationItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ITEM-1&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;noteIndex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;suppress-author&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">[[</span><span class="s2">&quot;CITATION-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],[</span><span class="s2">&quot;CITATION-2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]],</span>
+<span class="w">        </span><span class="p">[]</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;citationID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CITATION-4&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;citationItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ITEM-1&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;noteIndex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;composite&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">[[</span><span class="s2">&quot;CITATION-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],[</span><span class="s2">&quot;CITATION-2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],[</span><span class="s2">&quot;CITATION-3&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]],</span>
+<span class="w">        </span><span class="p">[]</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>In a simple author-date style that italicizes author names, this
+produces the following citation strings. Note that formatting is
+stripped from the <code class="docutils literal notranslate"><span class="pre">author-only</span></code> and <code class="docutils literal notranslate"><span class="pre">composite</span></code> renderings of the
+author name:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>(<span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Kesey<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> 1964)
+Kesey
+(1964)
+Kesey (1964)
+</pre></div>
+</div>
+<p>When <code class="docutils literal notranslate"><span class="pre">suppress-author</span></code> or <code class="docutils literal notranslate"><span class="pre">composite</span></code> are set on a multiple
+citation, collapsing is performed in the usual way. For example, in
+our simple italicizing author-date style, a citation to Ken Kesey’s
+novels <em>One Flew Over the Cuckoo’s Nest</em> and <em>Sometimes a Great
+Notion</em>, followed by Ursula Le Guin’s <em>Left Hand of Darkness</em> will
+render as follows if <code class="docutils literal notranslate"><span class="pre">collapse=&quot;year&quot;</span></code> is set on the <code class="docutils literal notranslate"><span class="pre">cs:citation</span></code>
+element:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Kesey (1962, 1964; <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Le Guin<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> 1969)
+</pre></div>
+</div>
+<p>An <code class="docutils literal notranslate"><span class="pre">infix</span></code> attribute can be used to insert text between the two
+halves of a <code class="docutils literal notranslate"><span class="pre">composite</span></code> citation, with input like the following:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;citationID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CITATION-1&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;citationItems&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ITEM-1&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ITEM-2&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ITEM-3&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cf.&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;composite&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;noteIndex&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;infix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&#39;s early work&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">[],</span>
+<span class="w">        </span><span class="p">[]</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>In our simple style, this produces the following output:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Kesey’s early work (1962, 1964; cf. &lt;i&gt;Le Guin&lt;/i&gt; 1969)
+</pre></div>
+</div>
+<p>In the example above, space before the apostrophe is quashed
+automatically: text without leading punctuation will attract
+a leading space. Note also that affixes are recognized
+within items.</p>
+<p>To support styles that require discrete formatting of names written
+into the document text, the processor recognizes a <code class="docutils literal notranslate"><span class="pre">cs:intext</span></code>
+element as a sibling to <code class="docutils literal notranslate"><span class="pre">cs:citation</span></code> and <code class="docutils literal notranslate"><span class="pre">cs:bibliography</span></code>.  The
+following minimal style will render author names joined by <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> in citations,
+and by <code class="docutils literal notranslate"><span class="pre">and</span></code> in the <code class="docutils literal notranslate"><span class="pre">author-only</span></code> or <code class="docutils literal notranslate"><span class="pre">composite</span></code> forms:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;style</span>
+<span class="w">      </span><span class="na">xmlns=</span><span class="s">&quot;http://purl.org/net/xbiblio/csl&quot;</span>
+<span class="w">      </span><span class="na">class=</span><span class="s">&quot;in-text&quot;</span>
+<span class="w">      </span><span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;info&gt;</span>
+<span class="w">    </span><span class="nt">&lt;id</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;updated&gt;</span>2009-08-10T04:49:00+09:00<span class="nt">&lt;/updated&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/info&gt;</span>
+<span class="w">  </span><span class="nt">&lt;citation</span><span class="w"> </span><span class="na">collapse=</span><span class="s">&quot;year&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">prefix=</span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="na">suffix=</span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="na">delimiter=</span><span class="s">&quot;; &quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;group</span><span class="w"> </span><span class="na">delimiter=</span><span class="s">&quot; &quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;names</span><span class="w"> </span><span class="na">variable=</span><span class="s">&quot;author&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;name</span><span class="w"> </span><span class="na">form=</span><span class="s">&quot;short&quot;</span><span class="w"> </span><span class="na">font-style=</span><span class="s">&quot;italic&quot;</span><span class="w"> </span><span class="na">and=</span><span class="s">&quot;symbol&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/names&gt;</span>
+<span class="w">        </span><span class="nt">&lt;date</span><span class="w"> </span><span class="na">variable=</span><span class="s">&quot;issued&quot;</span><span class="w"> </span><span class="na">date-parts=</span><span class="s">&quot;year&quot;</span><span class="w"> </span><span class="na">form=</span><span class="s">&quot;text&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/group&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/citation&gt;</span>
+<span class="w">  </span><span class="nt">&lt;bibliography&gt;</span>
+<span class="w">    </span><span class="nt">&lt;layout</span><span class="w"> </span><span class="na">prefix=</span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="na">suffix=</span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="na">delimiter=</span><span class="s">&quot;; &quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;group</span><span class="w"> </span><span class="na">delimiter=</span><span class="s">&quot; &quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;group</span><span class="w"> </span><span class="na">delimiter=</span><span class="s">&quot;, &quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;names</span><span class="w"> </span><span class="na">variable=</span><span class="s">&quot;author&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;name</span><span class="w"> </span><span class="na">form=</span><span class="s">&quot;short&quot;</span><span class="w"> </span><span class="na">and=</span><span class="s">&quot;symbol&quot;</span><span class="nt">/&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/names&gt;</span>
+<span class="w">          </span><span class="nt">&lt;text</span><span class="w"> </span><span class="na">variable=</span><span class="s">&quot;title&quot;</span><span class="nt">/&gt;</span>
+<span class="w">          </span><span class="nt">&lt;date</span><span class="w"> </span><span class="na">variable=</span><span class="s">&quot;issued&quot;</span><span class="w"> </span><span class="na">date-parts=</span><span class="s">&quot;year&quot;</span><span class="w"> </span><span class="na">form=</span><span class="s">&quot;text&quot;</span><span class="w"> </span><span class="na">prefix=</span><span class="s">&quot;(&quot;</span><span class="w"> </span><span class="na">suffix=</span><span class="s">&quot;)&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/group&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/group&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/bibliography&gt;</span>
+<span class="w">  </span><span class="nt">&lt;intext&gt;</span>
+<span class="w">    </span><span class="nt">&lt;layout&gt;</span>
+<span class="w">      </span><span class="nt">&lt;names</span><span class="w"> </span><span class="na">variable=</span><span class="s">&quot;author&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name</span><span class="w"> </span><span class="na">and=</span><span class="s">&quot;text&quot;</span><span class="w"> </span><span class="na">form=</span><span class="s">&quot;short&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/names&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/layout&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/intext&gt;</span>
+<span class="nt">&lt;/style&gt;</span>
+</pre></div>
+</div>
+<p>The style produces the output below when called against Fisher &amp;
+Ury’s classic negotiation text, <em>Getting to Yes: Reaching Agreement
+Without Giving In</em>, with no citation flags, and with the <code class="docutils literal notranslate"><span class="pre">composite</span></code>
+flag respectively:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>(<span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Fisher<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> <span class="ni">&amp;#38;</span> <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>Ury<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> 1991)
+Fisher and Ury (1991)
+</pre></div>
+</div>
+<p>In some cases, the processor will be unable to produce content for an
+<code class="docutils literal notranslate"><span class="pre">author-only</span></code> citation flag, or for the corresponding portion of a
+<code class="docutils literal notranslate"><span class="pre">composite</span></code> citation. This may occur when no <code class="docutils literal notranslate"><span class="pre">cs:intext</span></code> is
+provided, and the item begins with a bare <code class="docutils literal notranslate"><span class="pre">cs:text</span></code> or other
+non-names element. This may be true for a legal item type, and is
+always true of numeric and trigraph styles; and a <code class="docutils literal notranslate"><span class="pre">cs:intext</span></code>
+element may itself fail to produce output for a particular item.  By
+default in such cases, the processor will output an ugly slug:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>(Unauthored thing 1964)
+[NO_PRINTED_FORM]
+(Unauthored thing 1964)
+[NO_PRINTED_FORM] (Unauthored thing 1964)
+</pre></div>
+</div>
+<p>The instantiated processor can be set to throw a JavaScript error with
+code <code class="docutils literal notranslate"><span class="pre">ECSEMPTY</span></code> rather than printing the slug:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">citeproc</span><span class="p">.</span><span class="nx">opt</span><span class="p">.</span><span class="nx">development_extensions</span><span class="p">.</span><span class="nx">throw_on_empty</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The toggle can be switched on and off to select the behavior appropriate
+to context in the calling application.</p>
+</section>
+</section>
+<section id="selective-output-with-makebibliography">
+<h3>Selective output with <code class="docutils literal notranslate"><span class="pre">makeBibliography()</span></code><a class="headerlink" href="#selective-output-with-makebibliography" title="Link to this heading"></a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">makeBibliography()</span></code> command accepts one optional argument,
+which is a nested JavaScript object that may contain
+<em>one of</em> the objects <code class="docutils literal notranslate"><span class="pre">select</span></code>, <code class="docutils literal notranslate"><span class="pre">include</span></code> or <code class="docutils literal notranslate"><span class="pre">exclude</span></code>, and
+optionally an additional  <code class="docutils literal notranslate"><span class="pre">quash</span></code> object.  Each of these four objects
+is an array containing one or more objects with <code class="docutils literal notranslate"><span class="pre">field</span></code> and <code class="docutils literal notranslate"><span class="pre">value</span></code>
+attributes, each with a simple string value (see the examples below).
+The matching behavior for each of the four object types, with accompanying
+input examples, is as follows:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">select</span></code></dt><dd><p>For each item in the bibliography, try every match object in the array against
+the item, and include the item if, and only if, <em>all</em> of the objects match.</p>
+</dd>
+</dl>
+<div class="admonition-hint admonition">
+<p class="admonition-title">Hint</p>
+<p>The target field in the data items registered in the processor
+may either be a string or an array.  In the latter case,
+an array containing a value identical to the
+relevant value is treated as a match.</p>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">myarg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;select&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="s2">&quot;field&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;book&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="w">  </span><span class="s2">&quot;field&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;categories&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1990s&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">mybib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cp</span><span class="p">.</span><span class="nx">makeBibliography</span><span class="p">(</span><span class="nx">myarg</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">include</span></code></dt><dd><p>Try every match object in the array against the item, and include the
+item if <em>any</em> of the objects match.</p>
+</dd>
+</dl>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">myarg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;include&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="s2">&quot;field&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;book&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">mybib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cp</span><span class="p">.</span><span class="nx">makeBibliography</span><span class="p">(</span><span class="nx">myarg</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">exclude</span></code></dt><dd><p>Include the item if <em>none</em> of the objects match.</p>
+</dd>
+</dl>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">myarg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;exclude&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="s2">&quot;field&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;legal_case&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="s2">&quot;field&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;legislation&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">mybib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cp</span><span class="p">.</span><span class="nx">makeBibliography</span><span class="p">(</span><span class="nx">myarg</span><span class="p">);</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">quash</span></code></dt><dd><p>Regardless of the result from <code class="docutils literal notranslate"><span class="pre">select</span></code>, <code class="docutils literal notranslate"><span class="pre">include</span></code> or <code class="docutils literal notranslate"><span class="pre">exclude</span></code>,
+skip the item if <em>all</em> of the objects match.</p>
+</dd>
+</dl>
+<div class="admonition-hint admonition">
+<p class="admonition-title">Hint</p>
+<p>An empty string given as the field value will match items
+for which that field is missing or has a nil value.</p>
+</div>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">myarg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="s2">&quot;include&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="s2">&quot;field&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;categories&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;classical&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">],</span>
+<span class="w">   </span><span class="s2">&quot;quash&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="s2">&quot;field&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;type&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;manuscript&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">         </span><span class="s2">&quot;field&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;issued&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="s2">&quot;value&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">   </span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="kd">var</span><span class="w"> </span><span class="nx">mybib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cp</span><span class="p">.</span><span class="nx">makeBibliography</span><span class="p">(</span><span class="nx">myarg</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="setting-up.html" class="btn btn-neutral float-left" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="csl-json/markup.html" class="btn btn-neutral float-right" title="CSL-JSON" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016, Frank Bennett.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

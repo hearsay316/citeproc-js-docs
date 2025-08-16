@@ -1,0 +1,78 @@
+========================================================
+1.1.78-1.1.79
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.79
+
+:commit:
+    `73bbaeb <https://github.com/Juris-M/citeproc-js/commit/73bbaebfc7ecc9ee1306b8a4864b7002503c6ec5>`_
+:author:
+    fbennett
+:date:
+    2016-03-12 08:12 (JST)
+
+
+------
+
+Fix validation error in test
+
+:commit:
+    `2ad7bdc <https://github.com/Juris-M/citeproc-js/commit/2ad7bdca7a2cfb7ac24e0cbd836492abe8723e00>`_
+:author:
+    fbennett
+:date:
+    2016-03-12 08:10 (JST)
+
+
+------
+
+Apply require and reject attributes to cs:text value and term modes
+
+:commit:
+    `51cd6be <https://github.com/Juris-M/citeproc-js/commit/51cd6be15725892255249fa63d620c31b47a54e7>`_
+:author:
+    fbennett
+:date:
+    2016-03-12 07:55 (JST)
+
+
+------
+
+Remove code that is not reached
+
+:commit:
+    `51fb7b6 <https://github.com/Juris-M/citeproc-js/commit/51fb7b61ce8930b88ea3b430c370d0bc5c4ec939>`_
+:author:
+    fbennett
+:date:
+    2016-03-12 07:54 (JST)
+
+
+------
+
+Adjustments to require and reject tests
+
+:commit:
+    `c079500 <https://github.com/Juris-M/citeproc-js/commit/c079500413eded8a4d07319cbb06046929ab49c1>`_
+:author:
+    fbennett
+:date:
+    2016-03-12 07:53 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.78
+
+:commit:
+    `2780216 <https://github.com/Juris-M/citeproc-js/commit/2780216f4d451384609f29bd8930618c205457f6>`_
+:author:
+    fbennett
+:date:
+    2016-03-11 11:49 (JST)
+

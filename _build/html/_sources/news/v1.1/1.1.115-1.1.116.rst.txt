@@ -1,0 +1,70 @@
+========================================================
+1.1.115-1.1.116
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.116
+
+:commit:
+    `76cfdfa <https://github.com/Juris-M/citeproc-js/commit/76cfdfaa649ad10eefeff26cf7425b8722305c97>`_
+:author:
+    fbennett
+:date:
+    2016-09-04 20:21 (JST)
+
+
+------
+
+Update std test fixtures
+
+:commit:
+    `07cbea4 <https://github.com/Juris-M/citeproc-js/commit/07cbea4ff38cd4cd34753a39171f1e74a97b5eba>`_
+:author:
+    fbennett
+:date:
+    2016-09-04 20:20 (JST)
+
+
+------
+
+Adjustments to test fixtures
+
+:commit:
+    `ed9bfd3 <https://github.com/Juris-M/citeproc-js/commit/ed9bfd3f06e1f4d2acace52fecb654808ac1cae6>`_
+:author:
+    fbennett
+:date:
+    2016-09-04 16:35 (JST)
+
+
+------
+
+Large refactoring for name attributes
+
+:commit:
+    `7899ce3 <https://github.com/Juris-M/citeproc-js/commit/7899ce3d62983caca1a93b21e2de065bb625b7f9>`_
+:author:
+    fbennett
+:date:
+    2016-09-04 16:33 (JST)
+
+- Fixes inheritance issues encountered when macros were used
+  in both cs:citation and cs:bibliography. Essential for
+  modular styles.
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.115
+
+:commit:
+    `da7dd22 <https://github.com/Juris-M/citeproc-js/commit/da7dd221f750db80e4264d57a8f5b057385e0e06>`_
+:author:
+    Frank Bennett
+:date:
+    2016-09-02 11:31 (JST)
+

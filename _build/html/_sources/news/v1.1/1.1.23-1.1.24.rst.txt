@@ -1,0 +1,54 @@
+========================================================
+1.1.23-1.1.24
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `0eba265 <https://github.com/Juris-M/citeproc-js/commit/0eba265083473b402ab6a44264f673a4c34ddc02>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-25 23:00 (JST)
+
+
+------
+
+The proper fix for fallbacks. Sorry for the clutter, folks.
+
+:commit:
+    `65a1df5 <https://github.com/Juris-M/citeproc-js/commit/65a1df5e8818b38ed5548767432c08004fe82f78>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-25 22:54 (JST)
+
+
+------
+
+Added tag 1.1.23 for changeset 3aec92b2b570
+
+:commit:
+    `22a450a <https://github.com/Juris-M/citeproc-js/commit/22a450a687839a69541670edf74167b6138b7888>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-25 22:19 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `5c2cf02 <https://github.com/Juris-M/citeproc-js/commit/5c2cf027cdf20658085cce61c11b63ec36d8a356>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-25 22:18 (JST)
+

@@ -1,0 +1,59 @@
+========================================================
+1.2.26-1.2.27
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.27
+
+:commit:
+    `3674b4a <https://github.com/Juris-M/citeproc-js/commit/3674b4ad553118c66ee21cc142fe2a64293f368d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-25 21:43 (JST)
+
+
+------
+
+Update submodules
+
+:commit:
+    `c661670 <https://github.com/Juris-M/citeproc-js/commit/c661670abcbefd50b435a3927183461523a35417>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-25 20:28 (JST)
+
+
+------
+
+Fixes for court-class support
+
+:commit:
+    `ba67ae4 <https://github.com/Juris-M/citeproc-js/commit/ba67ae4cf59bbcde40d2ceef43408b7107f9d210>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-25 18:11 (JST)
+
+- Match on multiple court classes
+- Enable court-class variable in sorts
+- Remove support for court-class as a rendering variable
+- Use setting in module for conditions, setting in style for sorts
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.26
+
+:commit:
+    `f7ba34c <https://github.com/Juris-M/citeproc-js/commit/f7ba34c99f550c644a550c1cea24da943b2ca07f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-24 06:50 (JST)
+

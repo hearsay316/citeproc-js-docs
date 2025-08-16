@@ -1,0 +1,54 @@
+========================================================
+1.1.130-1.1.131
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.131
+
+:commit:
+    `bb74634 <https://github.com/Juris-M/citeproc-js/commit/bb7463420a8e67b34c88c4f7e0d156c7684a64c6>`_
+:author:
+    fbennett
+:date:
+    2016-09-21 07:12 (JST)
+
+
+------
+
+Add a style debugging test from inventory
+
+:commit:
+    `270824c <https://github.com/Juris-M/citeproc-js/commit/270824cf372b946f07a6bae56d5faec24f6b7784>`_
+:author:
+    fbennett
+:date:
+    2016-09-21 07:12 (JST)
+
+
+------
+
+Do not dereference citation objects
+
+:commit:
+    `9d379a2 <https://github.com/Juris-M/citeproc-js/commit/9d379a26f5a17cf038c119f01d3606f7e0b93051>`_
+:author:
+    fbennett
+:date:
+    2016-09-21 07:11 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.130
+
+:commit:
+    `b730523 <https://github.com/Juris-M/citeproc-js/commit/b730523d74e166e0cce46632b494e0ad8912d81d>`_
+:author:
+    fbennett
+:date:
+    2016-09-17 21:59 (JST)
+

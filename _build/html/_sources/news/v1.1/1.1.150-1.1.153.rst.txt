@@ -1,0 +1,127 @@
+========================================================
+1.1.150-1.1.153
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Update std tests
+
+:commit:
+    `30c312f <https://github.com/Juris-M/citeproc-js/commit/30c312fb3baba844c73cb8443a14a94934933987>`_
+:author:
+    fbennett
+:date:
+    2017-02-11 11:31 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.153
+
+:commit:
+    `dd645cb <https://github.com/Juris-M/citeproc-js/commit/dd645cb3e948ed0e40ec2ce440dc39d22a48eff2>`_
+:author:
+    fbennett
+:date:
+    2017-02-11 11:28 (JST)
+
+
+------
+
+Cover getAbbreviation() hook function that does not return jurisdiction
+
+:commit:
+    `2874397 <https://github.com/Juris-M/citeproc-js/commit/287439794068b42810276abe8c1ea13422b56a14>`_
+:author:
+    fbennett
+:date:
+    2017-02-11 11:15 (JST)
+
+
+------
+
+Bump version, update CHANGES,  bundle as 1.1.152
+
+:commit:
+    `ac69ec5 <https://github.com/Juris-M/citeproc-js/commit/ac69ec5498a55563c8ef90f822c05483acdc9c7b>`_
+:author:
+    fbennett
+:date:
+    2017-02-10 10:54 (JST)
+
+
+------
+
+Changes to abbreviation code
+
+:commit:
+    `0b04ad8 <https://github.com/Juris-M/citeproc-js/commit/0b04ad8e3d6d0ad1295feac73d641c0ce1934df6>`_
+:author:
+    fbennett
+:date:
+    2017-02-10 10:51 (JST)
+
+
+------
+
+Simplify getAbbreviation in test runner
+
+:commit:
+    `7f8027b <https://github.com/Juris-M/citeproc-js/commit/7f8027bf2dbd59aacb6b66f2301f06efbd2d5da4>`_
+:author:
+    fbennett
+:date:
+    2017-02-10 10:49 (JST)
+
+
+------
+
+Capitalize stop-words if followed by a hyphen
+
+:commit:
+    `3dc7e61 <https://github.com/Juris-M/citeproc-js/commit/3dc7e610a64fad8e9fe5e19f5228c681f393396b>`_
+:author:
+    fbennett
+:date:
+    2017-02-10 10:48 (JST)
+
+
+------
+
+Amend two tests -- jurisdiction fallback no longer in processor core
+
+:commit:
+    `751cbf4 <https://github.com/Juris-M/citeproc-js/commit/751cbf4c48b6a161772f5061e810eb9db2568a51>`_
+:author:
+    fbennett
+:date:
+    2017-02-10 10:48 (JST)
+
+
+------
+
+Merge pull request #21 from mdmower/dev
+
+:commit:
+    `9f16899 <https://github.com/Juris-M/citeproc-js/commit/9f16899294f0c616a1574169219dd090004a5913>`_
+:author:
+    Frank Bennett
+:date:
+    2017-02-06 19:00 (JST)
+
+Workaround using reserved names as property names
+
+------
+
+Add test of negative raw date
+
+:commit:
+    `3db36d4 <https://github.com/Juris-M/citeproc-js/commit/3db36d46d3dbc6742790706a603db2e8a4ded127>`_
+:author:
+    fbennett
+:date:
+    2017-02-06 11:39 (JST)
+

@@ -1,0 +1,66 @@
+========================================================
+1.1.140-1.1.141
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.141
+
+:commit:
+    `7b1b215 <https://github.com/Juris-M/citeproc-js/commit/7b1b215261dbdffdcfb5e8c3fea342426d7c4da4>`_
+:author:
+    fbennett
+:date:
+    2016-11-17 08:54 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `0afdb12 <https://github.com/Juris-M/citeproc-js/commit/0afdb12ad98643a867788037d7eac085fba93bda>`_
+:author:
+    fbennett
+:date:
+    2016-11-17 08:40 (JST)
+
+
+------
+
+Invoke special affix handling only if @display set as top-level node
+
+:commit:
+    `9842043 <https://github.com/Juris-M/citeproc-js/commit/9842043f51b4d18000d53d545f0aca31dadd52e2>`_
+:author:
+    fbennett
+:date:
+    2016-11-17 08:36 (JST)
+
+
+------
+
+Add a comment about failure when cs:sort is cleanly nested
+
+:commit:
+    `778214f <https://github.com/Juris-M/citeproc-js/commit/778214f24485087d1431f73b3320e8e9e659b529>`_
+:author:
+    fbennett
+:date:
+    2016-11-17 08:35 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.140
+
+:commit:
+    `101c799 <https://github.com/Juris-M/citeproc-js/commit/101c7991b102f9bf2340efd7826b724a99cdf414>`_
+:author:
+    fbennett
+:date:
+    2016-11-13 12:59 (JST)
+

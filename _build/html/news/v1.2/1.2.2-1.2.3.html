@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1.2.2-1.2.3 &mdash; citeproc-js 1.1.73 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/screen.css?v=425850a2" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=93912719"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/js/global.js?v=537b13e9"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.2.1-1.2.2" href="1.2.1-1.2.2.html" />
+    <link rel="prev" title="1.2.3-1.2.4" href="1.2.3-1.2.4.html" /> 
+ 
+
+  
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            citeproc-js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Changes</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../v1.1/index.html">Citeproc-js changes for v1.1</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Citeproc-js changes for v1.2</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="1.2.36-1.3.1.html">1.2.36-1.3.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.35-1.2.36.html">1.2.35-1.2.36</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.34-1.2.35.html">1.2.34-1.2.35</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.32-1.2.34.html">1.2.32-1.2.34</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.31-1.2.32.html">1.2.31-1.2.32</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.30-1.2.31.html">1.2.30-1.2.31</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.29-1.2.30.html">1.2.29-1.2.30</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.27-1.2.29.html">1.2.27-1.2.29</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.26-1.2.27.html">1.2.26-1.2.27</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.25-1.2.26.html">1.2.25-1.2.26</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.24-1.2.25.html">1.2.24-1.2.25</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.22-1.2.24.html">1.2.22-1.2.24</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.21-1.2.22.html">1.2.21-1.2.22</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.20-1.2.21.html">1.2.20-1.2.21</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.19-1.2.20.html">1.2.19-1.2.20</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.18-1.2.19.html">1.2.18-1.2.19</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.17-1.2.18.html">1.2.17-1.2.18</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.16-1.2.17.html">1.2.16-1.2.17</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.15-1.2.16.html">1.2.15-1.2.16</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.14-1.2.15.html">1.2.14-1.2.15</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.11-1.2.14.html">1.2.11-1.2.14</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.10-1.2.11.html">1.2.10-1.2.11</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.5-1.2.10.html">1.2.5-1.2.10</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.4-1.2.5.html">1.2.4-1.2.5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.3-1.2.4.html">1.2.3-1.2.4</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1.2.2-1.2.3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1.2.1-1.2.2.html">1.2.1-1.2.2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../demos.html">Demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../setting-up.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../running.html">Running the Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csl-json/markup.html">CSL-JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sys-extensions.html">Extended <code class="docutils literal notranslate"><span class="pre">sys</span></code> functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../csl-m/index.html">CSL-M: extensions to CSL</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">citeproc-js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Changes</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Citeproc-js changes for v1.2</a></li>
+      <li class="breadcrumb-item active">1.2.2-1.2.3</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/news/v1.2/1.2.2-1.2.3.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>1.2.2-1.2.3<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<p><a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="CCBYSA" src="../../_images/cc-by-sa-80x155.png" /></a> Frank Bennett &lt;<a class="reference external" href="https://twitter.com/fgbjr">https://twitter.com/fgbjr</a>&gt;_</p>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle as 1.2.3</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/57dbabb7fae7e21c3abd0f9c5e3b78316dc0be82">57dbabb</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-23 14:55 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Update .gitignore</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/f99b99ab4cb3523a38bd446df2455676d5882965">f99b99a</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-23 14:46 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Adjust test to reflect new style logic</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/31b03e24967c4df14a4aa38169646e5e6504b0c9">31b03e2</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-23 14:43 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Update style tests</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/6f86e99b30870a1c6ac72af23dcc2f6a95506256">6f86e99</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-23 14:27 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Update juris-modules</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/9fed3c21199e4b653bd618479348f5efc85d8a9f">9fed3c2</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-23 14:25 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Send raw institution keys to abbrevs filter</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/97e54b9d8398d726f8ef4bbdfccee7db1f3db89f">97e54b9</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-15 07:51 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Merge branch ‘master-fix-title-splits’</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/c187b10cae8a0a692fa3487fae2dcd9deffc0db0">c187b10</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-14 15:25 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Remove style tests to make way for submodule</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/0af321c7c4f801251252581860b2bc2ef811da87">0af321c</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-14 15:24 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Recognize division as a numeric variable</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/ee1b5f785063c9421964afbf7278f8df3a725fe7">ee1b5f7</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-14 15:18 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Update csl-schemata</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/f68431f203f29e1c10031a374e3ecc16b4df931a">f68431f</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-14 15:17 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Update style tests</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/9cda99f83c987bc2914398a0a005754372bf7aad">9cda99f</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-14 15:16 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Update style modules</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/b42317b9078966a6b45d7c467f204d691281dda5">b42317b</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-14 15:16 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Remove files to make way for submodule</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/2b9420a0c47eaf1154aec85735a1956f07927c08">2b9420a</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-14 15:06 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Broaden French subtitle spacing in multiple subtitles to include ? and !</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/d3d158a884c06f136511b79f8258ea2f0ccde4b8">d3d158a</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-04 08:51 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Extend uppercase-subtitle tests, add tests of fr locale</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/64f1f55a1c04557969d7fbfcd5b82acf37f2df0e">64f1f55</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-02 19:54 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Tweaks for narrow no-break-space in fr locale</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/e5225a53e899caa10403188841d66ac01f156ccd">e5225a5</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-02 19:54 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Add groupID to cslrun.yaml</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/fb645c1158a9a0cf5541b404fc9669dda8e1d891">fb645c1</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-05-02 12:26 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Remove unused flags from state.js</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/da164b0427196854874ccc7aeafc6d12658dda01">da164b0</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-04-22 07:55 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix tests a little again</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/3c1881905a9126b270353d843443c405aecc2284">3c18819</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-04-21 15:10 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Fix tests a littlefixtures/local/abbrevs_TitleMainTitleSub.txt</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/23ad8dd1be914307eb05c34012657102b2374ced">23ad8dd</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-04-21 15:09 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>More generous subtitle capitalization</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/19951b0af2188b8fc01c0b9a8b70fc3df7471264">19951b0</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-04-21 12:02 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Tests of new title split/subtitle caps code</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/f7eb9e210bfba21748a2684eb24238fd497da894">f7eb9e2</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-04-21 12:01 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Update docs</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/507e6346463e8c61f5ab6b67ad7c647d9a98b81b">507e634</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-04-20 21:36 (JST)</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p>Bump version, update CHANGES, bundle as 1.2.2</p>
+<dl class="field-list simple">
+<dt class="field-odd">commit<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/Juris-M/citeproc-js/commit/2d9167127fcb1268f4c7e5a04e34f2df779cc1a2">2d91671</a></p>
+</dd>
+<dt class="field-even">author<span class="colon">:</span></dt>
+<dd class="field-even"><p>Frank Bennett</p>
+</dd>
+<dt class="field-odd">date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>2019-04-20 21:34 (JST)</p>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="1.2.3-1.2.4.html" class="btn btn-neutral float-left" title="1.2.3-1.2.4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="1.2.1-1.2.2.html" class="btn btn-neutral float-right" title="1.2.1-1.2.2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016, Frank Bennett.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

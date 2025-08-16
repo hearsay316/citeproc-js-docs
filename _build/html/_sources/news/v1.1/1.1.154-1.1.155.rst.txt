@@ -1,0 +1,54 @@
+========================================================
+1.1.154-1.1.155
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.155
+
+:commit:
+    `75b155a <https://github.com/Juris-M/citeproc-js/commit/75b155a1d2d9e5d12237cda5224da2b235d0e23f>`_
+:author:
+    fbennett
+:date:
+    2017-02-16 10:29 (JST)
+
+
+------
+
+Remove authority from category map
+
+:commit:
+    `484d100 <https://github.com/Juris-M/citeproc-js/commit/484d10087552ddf6e5335dfe12a4d025c101b865>`_
+:author:
+    fbennett
+:date:
+    2017-02-16 10:23 (JST)
+
+
+------
+
+Force string authority to name shape
+
+:commit:
+    `0b21539 <https://github.com/Juris-M/citeproc-js/commit/0b21539d3d769cfd944b4d6df79b8bd256ea8ee9>`_
+:author:
+    fbennett
+:date:
+    2017-02-16 10:20 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.154
+
+:commit:
+    `65a2a3b <https://github.com/Juris-M/citeproc-js/commit/65a2a3bfb5e96a307a8583a2191261c8f4ac1170>`_
+:author:
+    fbennett
+:date:
+    2017-02-11 16:12 (JST)
+

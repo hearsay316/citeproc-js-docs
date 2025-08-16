@@ -1,0 +1,294 @@
+========================================================
+1.1.137-1.1.140
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.140
+
+:commit:
+    `101c799 <https://github.com/Juris-M/citeproc-js/commit/101c7991b102f9bf2340efd7826b724a99cdf414>`_
+:author:
+    fbennett
+:date:
+    2016-11-13 12:59 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `be60f08 <https://github.com/Juris-M/citeproc-js/commit/be60f0846350ffda359d826ae1fd478b80dc1a13>`_
+:author:
+    fbennett
+:date:
+    2016-11-13 12:56 (JST)
+
+
+------
+
+Fix subsequent-author-substitute for single-field names
+
+:commit:
+    `d82aa8c <https://github.com/Juris-M/citeproc-js/commit/d82aa8cd3cc41a987062ede7753bb8c0b8ea6bdb>`_
+:author:
+    fbennett
+:date:
+    2016-11-13 12:56 (JST)
+
+
+------
+
+Fix result strings
+
+:commit:
+    `eb4ee13 <https://github.com/Juris-M/citeproc-js/commit/eb4ee133053a0c58c093c79bc876bc34a1cc218b>`_
+:author:
+    fbennett
+:date:
+    2016-11-13 12:55 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `429b546 <https://github.com/Juris-M/citeproc-js/commit/429b546dfc42b7b4ee83b9e9a9996f2447415b22>`_
+:author:
+    fbennett
+:date:
+    2016-11-13 12:52 (JST)
+
+
+------
+
+Add single-field data to tests
+
+:commit:
+    `73e36d4 <https://github.com/Juris-M/citeproc-js/commit/73e36d43508aa49ea4cf94a4f717c14c066975fa>`_
+:author:
+    fbennett
+:date:
+    2016-11-13 12:46 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `6504ce4 <https://github.com/Juris-M/citeproc-js/commit/6504ce4886ce63dea67f4e1b44b6bb9ca6426937>`_
+:author:
+    Frank Bennett
+:date:
+    2016-10-31 18:59 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.139
+
+:commit:
+    `6459343 <https://github.com/Juris-M/citeproc-js/commit/64593433421d3b4a6e23631d5d6e068f6fb1e899>`_
+:author:
+    fbennett
+:date:
+    2016-10-31 18:57 (JST)
+
+
+------
+
+Set a comment on some superfluous code
+
+:commit:
+    `9398000 <https://github.com/Juris-M/citeproc-js/commit/9398000088ded0793805cd72a6c99038b39f32d0>`_
+:author:
+    fbennett
+:date:
+    2016-10-31 18:52 (JST)
+
+
+------
+
+Check in some alternative data and styles for the demo
+
+:commit:
+    `f1ae653 <https://github.com/Juris-M/citeproc-js/commit/f1ae653af8b9c74b82813a111a669deffe6c5a49>`_
+:author:
+    fbennett
+:date:
+    2016-10-31 18:52 (JST)
+
+
+------
+
+Fix bib name disambiguation failure in some (most?) environments
+
+:commit:
+    `ffa12aa <https://github.com/Juris-M/citeproc-js/commit/ffa12aa37f18a885401223e3d8cc663d8351a749>`_
+:author:
+    fbennett
+:date:
+    2016-10-31 08:06 (JST)
+
+
+------
+
+Fix demo, use raw input.
+
+:commit:
+    `7f40696 <https://github.com/Juris-M/citeproc-js/commit/7f40696f0190df420b659122719231679f0957ac>`_
+:author:
+    fbennett
+:date:
+    2016-10-31 08:03 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.139
+
+:commit:
+    `123d1e3 <https://github.com/Juris-M/citeproc-js/commit/123d1e3e9e936b2358516e8e14abbdc9ebe82cb4>`_
+:author:
+    fbennett
+:date:
+    2016-10-30 09:42 (JST)
+
+
+------
+
+Append non-numeric character to all generated citationIDs
+
+:commit:
+    `e5c6ae2 <https://github.com/Juris-M/citeproc-js/commit/e5c6ae2d7c764516b48770c67298ecd2bfcbf66f>`_
+:author:
+    fbennett
+:date:
+    2016-10-30 09:21 (JST)
+
+
+------
+
+Fix hyphenated-strings bug in numeric variables
+
+:commit:
+    `51bb1a3 <https://github.com/Juris-M/citeproc-js/commit/51bb1a3856ddbf601e8fbedb6cb85dac7d3533d9>`_
+:author:
+    fbennett
+:date:
+    2016-10-30 09:20 (JST)
+
+
+------
+
+Result string for bugreport fixture
+
+:commit:
+    `de1d23b <https://github.com/Juris-M/citeproc-js/commit/de1d23b71514be2aa8a870fb2b787cfc1a9cb419>`_
+:author:
+    fbennett
+:date:
+    2016-10-30 09:19 (JST)
+
+
+------
+
+Test of numeric hyphenated-strings bug
+
+:commit:
+    `16029c6 <https://github.com/Juris-M/citeproc-js/commit/16029c6d3bab3e3f89d8dea09b77d65039cb2a35>`_
+:author:
+    fbennett
+:date:
+    2016-10-30 09:18 (JST)
+
+
+------
+
+Add a further test of disambiguation
+
+:commit:
+    `56860a0 <https://github.com/Juris-M/citeproc-js/commit/56860a097b4febb625a4f8317213b91902336f19>`_
+:author:
+    fbennett
+:date:
+    2016-10-25 13:52 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.138
+
+:commit:
+    `6706c25 <https://github.com/Juris-M/citeproc-js/commit/6706c2543dbee925eefafebc557b27552f90f55e>`_
+:author:
+    fbennett
+:date:
+    2016-10-12 05:32 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `1d0802c <https://github.com/Juris-M/citeproc-js/commit/1d0802c913061c5a8f3b1d2b865f3befac46dfd8>`_
+:author:
+    fbennett
+:date:
+    2016-10-12 05:22 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `7c180a9 <https://github.com/Juris-M/citeproc-js/commit/7c180a9e1407840c47c3034484d726f6eeeb5176>`_
+:author:
+    fbennett
+:date:
+    2016-10-12 05:21 (JST)
+
+
+------
+
+Adjust tests to retention of leading zeros on numeric variables
+
+:commit:
+    `8aac3ed <https://github.com/Juris-M/citeproc-js/commit/8aac3ed0c8ae87656517fed54427165fdd97a80a>`_
+:author:
+    fbennett
+:date:
+    2016-10-12 05:19 (JST)
+
+
+------
+
+Merge branch 'master' of github.com:Juris-M/citeproc-js
+
+:commit:
+    `c2aef6a <https://github.com/Juris-M/citeproc-js/commit/c2aef6a3903a20fa2babcb34c387d18f79687579>`_
+:author:
+    fbennett
+:date:
+    2016-10-05 09:40 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.137
+
+:commit:
+    `2d1bb8d <https://github.com/Juris-M/citeproc-js/commit/2d1bb8dddf152f7c3e034dda3df3ec7e426939a3>`_
+:author:
+    fbennett
+:date:
+    2016-10-05 09:38 (JST)
+

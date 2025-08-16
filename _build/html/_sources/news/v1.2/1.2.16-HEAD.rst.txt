@@ -1,0 +1,18 @@
+========================================================
+1.2.16-HEAD
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.16
+
+:commit:
+    `b76f6ba <https://github.com/Juris-M/citeproc-js/commit/b76f6ba3cd2e16ac5250f96619af46189e3ac465>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-14 23:11 (JST)
+

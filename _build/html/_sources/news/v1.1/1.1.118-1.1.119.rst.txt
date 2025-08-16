@@ -1,0 +1,54 @@
+========================================================
+1.1.118-1.1.119
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.119
+
+:commit:
+    `9309e4b <https://github.com/Juris-M/citeproc-js/commit/9309e4b802edd236c81f7dff195e8f5057cc3979>`_
+:author:
+    fbennett
+:date:
+    2016-09-07 05:18 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `43b4f78 <https://github.com/Juris-M/citeproc-js/commit/43b4f785907a85d809da36725cf55c3fcd8ee1f5>`_
+:author:
+    fbennett
+:date:
+    2016-09-07 05:17 (JST)
+
+
+------
+
+Fix delimiter bug affecting numeric styles
+
+:commit:
+    `b8552e8 <https://github.com/Juris-M/citeproc-js/commit/b8552e858fb104258d4d2121dad826a81d395ebc>`_
+:author:
+    fbennett
+:date:
+    2016-09-07 05:14 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.118
+
+:commit:
+    `eb7f471 <https://github.com/Juris-M/citeproc-js/commit/eb7f47132166b2bc27fe1453cb9a7d2b70a4797a>`_
+:author:
+    Frank Bennett
+:date:
+    2016-09-06 16:21 (JST)
+

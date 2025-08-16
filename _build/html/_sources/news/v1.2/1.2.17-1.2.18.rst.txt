@@ -1,0 +1,78 @@
+========================================================
+1.2.17-1.2.18
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Add sys option for casing alignment
+
+:commit:
+    `a7973df <https://github.com/Juris-M/citeproc-js/commit/a7973df16ee390e32445f730976c77f854c51362>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-20 12:49 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.18
+
+:commit:
+    `e8f129e <https://github.com/Juris-M/citeproc-js/commit/e8f129e8b6d70ba722b4c9f2f78b7da820dee2de>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-20 12:41 (JST)
+
+
+------
+
+Force alignment of title-sort casing with main title
+
+:commit:
+    `9f09ce2 <https://github.com/Juris-M/citeproc-js/commit/9f09ce27b4c2b275706bce03c43a6fef427f20ae>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-20 12:37 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `8f4e0b8 <https://github.com/Juris-M/citeproc-js/commit/8f4e0b87b92bcf8534a3c8c7107cfdd5f8448860>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-20 09:04 (JST)
+
+
+------
+
+With form=short, truncate URL to host only, and protocol only if no www
+
+:commit:
+    `9e93d49 <https://github.com/Juris-M/citeproc-js/commit/9e93d49404d8f72d3cd69418238a849eb05172a4>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-20 09:03 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.17
+
+:commit:
+    `f13ccf7 <https://github.com/Juris-M/citeproc-js/commit/f13ccf7b2e14c4b6665138a4f9820f9780965160>`_
+:author:
+    Frank Bennett
+:date:
+    2019-07-16 14:32 (JST)
+

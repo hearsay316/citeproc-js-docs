@@ -1,0 +1,42 @@
+========================================================
+1.1.156-1.1.157
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.157
+
+:commit:
+    `140370a <https://github.com/Juris-M/citeproc-js/commit/140370afab3a3ff1a01f3d6860b72b1a70fee0b3>`_
+:author:
+    fbennett
+:date:
+    2017-03-03 08:21 (JST)
+
+
+------
+
+Essentially disable special handling of citation-number
+
+:commit:
+    `268aaf0 <https://github.com/Juris-M/citeproc-js/commit/268aaf00daf804f8ce4f86c5c01be6c4b4b511c0>`_
+:author:
+    fbennett
+:date:
+    2017-03-03 08:20 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `9c838cc <https://github.com/Juris-M/citeproc-js/commit/9c838cce3ebdbac2b0f0d44e82791c837cc3fb1e>`_
+:author:
+    fbennett
+:date:
+    2017-02-24 08:19 (JST)
+

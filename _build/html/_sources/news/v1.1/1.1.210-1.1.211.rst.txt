@@ -1,0 +1,222 @@
+========================================================
+1.1.210-1.1.211
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.211
+
+:commit:
+    `c93166f <https://github.com/Juris-M/citeproc-js/commit/c93166f598470ea8e5c4bcdf66ec40f9c56e0d2a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 17:20 (JST)
+
+
+------
+
+Update processor images
+
+:commit:
+    `d5962f9 <https://github.com/Juris-M/citeproc-js/commit/d5962f99cd002dc803b9bdeecda37ba4270dc8b8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 17:13 (JST)
+
+
+------
+
+Update standard tests
+
+:commit:
+    `3dd9d5d <https://github.com/Juris-M/citeproc-js/commit/3dd9d5d5a05eba64d84f961b232939f86fa548e1>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 17:12 (JST)
+
+
+------
+
+Update standard tests
+
+:commit:
+    `1e18f4c <https://github.com/Juris-M/citeproc-js/commit/1e18f4ccd7535b0b9c8f49cdb16d845919bc84c1>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 17:10 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `f95b836 <https://github.com/Juris-M/citeproc-js/commit/f95b836d1e84890dd80ebd484674dc7a15a0ed8f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 17:07 (JST)
+
+
+------
+
+In test, fix result string
+
+:commit:
+    `ea92745 <https://github.com/Juris-M/citeproc-js/commit/ea927450df4d28686be43a2f86d5a49ba2fc11c7>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 16:56 (JST)
+
+
+------
+
+In test, set explicit form=long on cs:label
+
+:commit:
+    `45f150e <https://github.com/Juris-M/citeproc-js/commit/45f150e62a064e83501941c0d2493ffbea005fd8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 16:55 (JST)
+
+
+------
+
+Add plain, asciidoc, and xslfo output options for test script
+
+:commit:
+    `2c2eb3e <https://github.com/Juris-M/citeproc-js/commit/2c2eb3e7db94a26d2d15b40edf34a28d4ab4ffae>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 16:53 (JST)
+
+
+------
+
+Set page-range-delimiter on ranged numbers with trailing alpha chars
+
+:commit:
+    `c469311 <https://github.com/Juris-M/citeproc-js/commit/c4693114e3ad2057ac9d9ab338b3764637bcfc76>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 14:14 (JST)
+
+
+------
+
+Reset position info when processing full cs:names objects
+
+:commit:
+    `717fb26 <https://github.com/Juris-M/citeproc-js/commit/717fb26deb0cdd6c476f23eae157c3cd8db3464f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 14:12 (JST)
+
+
+------
+
+Fix bug in wrapped DOI/URL, properly recognize container-title-short
+
+:commit:
+    `c2c6583 <https://github.com/Juris-M/citeproc-js/commit/c2c6583b70a4610299010bb955a0156514881c6d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 14:11 (JST)
+
+
+------
+
+Default to form=long on explicit label nodes
+
+:commit:
+    `780c86e <https://github.com/Juris-M/citeproc-js/commit/780c86e0ba0c62882ebf85fa35b4a5da66f665c5>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 14:09 (JST)
+
+
+------
+
+Add list of CREATORS, reclassify some abbrevs
+
+:commit:
+    `e849a13 <https://github.com/Juris-M/citeproc-js/commit/e849a13edfd152716062857bd6cec8ba53b0bbae>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-17 14:08 (JST)
+
+
+------
+
+Fix handling of suffix on DOI renderings without a protocol prefix
+
+:commit:
+    `31f2d2e <https://github.com/Juris-M/citeproc-js/commit/31f2d2e7d011aade88c4a9ce4d2025a2bb5b455c>`_
+:author:
+    Frank Bennett
+:date:
+    2019-01-15 20:50 (JST)
+
+
+------
+
+Merge branch 'additional-formats' of https://github.com/michel-kraemer/citeproc-js into michel-kraemer-additional-formats
+
+:commit:
+    `b374f2a <https://github.com/Juris-M/citeproc-js/commit/b374f2a32136013f4c59bf33236e24f3f8dd591f>`_
+:author:
+    Frank Bennett
+:date:
+    2018-08-21 21:23 (JST)
+
+
+------
+
+Implicit nocase for sub, sub and sc tags
+
+:commit:
+    `30ceaf5 <https://github.com/Juris-M/citeproc-js/commit/30ceaf50a0ef86517a9a8cd46362e450133c7f91>`_
+:author:
+    Frank Bennett
+:date:
+    2018-07-23 08:01 (JST)
+
+
+------
+
+(Re)capitalize only stop-list words in last position
+
+:commit:
+    `88f672e <https://github.com/Juris-M/citeproc-js/commit/88f672e595c7c93f26b3fcacd300cb406e6772a1>`_
+:author:
+    Frank Bennett
+:date:
+    2018-07-23 06:11 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.210
+
+:commit:
+    `5d24189 <https://github.com/Juris-M/citeproc-js/commit/5d241893f957e471970782c594a38f0ef7d1fbb3>`_
+:author:
+    Frank Bennett
+:date:
+    2018-07-15 14:40 (JST)
+

@@ -1,0 +1,150 @@
+========================================================
+1.1.102-1.1.103
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Fix markup
+
+:commit:
+    `dbeb4df <https://github.com/Juris-M/citeproc-js/commit/dbeb4df7b87fcd61a815b2299b0a52089c587de3>`_
+:author:
+    fbennett
+:date:
+    2016-05-30 22:28 (JST)
+
+
+------
+
+Fix invalid test fixture
+
+:commit:
+    `f100764 <https://github.com/Juris-M/citeproc-js/commit/f100764269b3e96e9f978afca66e1268d8496846>`_
+:author:
+    fbennett
+:date:
+    2016-05-30 15:07 (JST)
+
+
+------
+
+Add cs to ru and fr for non-breaking joins from initials to family names
+
+:commit:
+    `25e979d <https://github.com/Juris-M/citeproc-js/commit/25e979decfcc10839c5a8863aa2c628dbeb52d86>`_
+:author:
+    fbennett
+:date:
+    2016-05-29 21:49 (JST)
+
+
+------
+
+Merge branch 'master' of github.com:Juris-M/citeproc-js
+
+:commit:
+    `4d08951 <https://github.com/Juris-M/citeproc-js/commit/4d08951b6949ca5e7c7281331856f2bcba875f16>`_
+:author:
+    fbennett
+:date:
+    2016-05-29 09:39 (JST)
+
+
+------
+
+Test of disabling italics in secondary slots
+
+:commit:
+    `eafa667 <https://github.com/Juris-M/citeproc-js/commit/eafa66727607de93a0b7c4b73f7897d173d094c6>`_
+:author:
+    fbennett
+:date:
+    2016-05-29 09:38 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `a9235c6 <https://github.com/Juris-M/citeproc-js/commit/a9235c697d35153cbb900e3ce1ed2ae6ea0382ca>`_
+:author:
+    fbennett
+:date:
+    2016-05-29 09:37 (JST)
+
+
+------
+
+Suppress italics and boldface on secondary and tertiary variant elements
+
+:commit:
+    `0918424 <https://github.com/Juris-M/citeproc-js/commit/09184242a7fe2130aa38cce82cb98aa0de31cdd1>`_
+:author:
+    fbennett
+:date:
+    2016-05-29 09:21 (JST)
+
+
+------
+
+Capitalize after forward slash
+
+:commit:
+    `30259a5 <https://github.com/Juris-M/citeproc-js/commit/30259a5626b1a4b308bcc3d3fea55b2fa4e925c2>`_
+:author:
+    fbennett
+:date:
+    2016-05-29 06:56 (JST)
+
+
+------
+
+Fold title into citation-label if no author
+
+:commit:
+    `0ef6c98 <https://github.com/Juris-M/citeproc-js/commit/0ef6c98f0369a51b0b9c83aec987c8a07f3c23fc>`_
+:author:
+    fbennett
+:date:
+    2016-05-29 06:55 (JST)
+
+
+------
+
+Escape sup and sub markup
+
+:commit:
+    `c7e5338 <https://github.com/Juris-M/citeproc-js/commit/c7e53389cb3cf425d298c6238caefd4219ea1214>`_
+:author:
+    fbennett
+:date:
+    2016-05-29 06:54 (JST)
+
+
+------
+
+.gitmodules
+
+:commit:
+    `975dcbb <https://github.com/Juris-M/citeproc-js/commit/975dcbb02fc64b9aff2792c996e3e400be240feb>`_
+:author:
+    fbennett
+:date:
+    2016-05-06 00:16 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.102
+
+:commit:
+    `3453852 <https://github.com/Juris-M/citeproc-js/commit/3453852df31df0c7494eeada029bddabf4610531>`_
+:author:
+    fbennett
+:date:
+    2016-05-05 17:12 (JST)
+

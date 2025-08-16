@@ -1,0 +1,86 @@
+========================================================
+1.1.105-1.1.106
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.106
+
+:commit:
+    `bf4d157 <https://github.com/Juris-M/citeproc-js/commit/bf4d157403465fdfffd93b5623b231dea033cfda>`_
+:author:
+    fbennett
+:date:
+    2016-06-04 20:44 (JST)
+
+
+------
+
+Adjust fixture to use new default-layout attribute
+
+:commit:
+    `b39a9e1 <https://github.com/Juris-M/citeproc-js/commit/b39a9e1d7f28aa460faeef5c13e4703daa4176de>`_
+:author:
+    fbennett
+:date:
+    2016-06-04 20:42 (JST)
+
+
+------
+
+Test multilingual Turabian in language_Condition fixture
+
+:commit:
+    `0e7cd7e <https://github.com/Juris-M/citeproc-js/commit/0e7cd7ef968d994dd19efe8874c9aa58c34bf92f>`_
+:author:
+    fbennett
+:date:
+    2016-06-04 18:51 (JST)
+
+
+------
+
+Enable default-locale on label and text term nodes
+
+:commit:
+    `30ccf9e <https://github.com/Juris-M/citeproc-js/commit/30ccf9eadd0c9e0ab60515a03a0a9d86df06c378>`_
+:author:
+    fbennett
+:date:
+    2016-06-04 18:48 (JST)
+
+
+
+* Set value for default_locale on label and text term nodes
+
+
+* Pass default_locale as flag to getTerm() in cs:label and cs:text for
+  terms
+
+
+------
+
+Avoid array comprehensions
+
+:commit:
+    `2ab2001 <https://github.com/Juris-M/citeproc-js/commit/2ab200193bf099386a9282a3cef7b1eec7042a50>`_
+:author:
+    fbennett
+:date:
+    2016-06-04 18:47 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.105
+
+:commit:
+    `361b342 <https://github.com/Juris-M/citeproc-js/commit/361b342a77b2988ca7b119692022cece02a68579>`_
+:author:
+    fbennett
+:date:
+    2016-06-03 10:46 (JST)
+

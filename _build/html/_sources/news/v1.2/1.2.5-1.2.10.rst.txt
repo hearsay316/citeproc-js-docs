@@ -1,0 +1,306 @@
+========================================================
+1.2.5-1.2.10
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, release as 1.2.10
+
+:commit:
+    `1ea011b <https://github.com/Juris-M/citeproc-js/commit/1ea011b22c764aa85aae2539f42b29d7a88e0759>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-20 21:36 (JST)
+
+
+------
+
+Update style modules
+
+:commit:
+    `5cf9cec <https://github.com/Juris-M/citeproc-js/commit/5cf9cec5c505ae5cefeb8a0219420d9e0b45b8c4>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-20 21:28 (JST)
+
+
+------
+
+Update tests
+
+:commit:
+    `2fe1d4f <https://github.com/Juris-M/citeproc-js/commit/2fe1d4f5b01f79665068ba4b60da6e442a2c5cc8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-20 21:26 (JST)
+
+
+------
+
+Avoid crash under some obscure disambig conditions
+
+:commit:
+    `12125e3 <https://github.com/Juris-M/citeproc-js/commit/12125e379c6f82bbc138dd674da9460412f818a2>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-18 08:23 (JST)
+
+
+------
+
+Add comment on possible addition to numerics list
+
+:commit:
+    `7a2bbba <https://github.com/Juris-M/citeproc-js/commit/7a2bbba82ac1025e02f437124d216dc1a198420d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-18 05:12 (JST)
+
+
+------
+
+Fix npm dependency for security warning
+
+:commit:
+    `09be9a1 <https://github.com/Juris-M/citeproc-js/commit/09be9a1fdea7723233722855a0c6eeb4b89a0094>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-08 19:16 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.9
+
+:commit:
+    `fd47f0c <https://github.com/Juris-M/citeproc-js/commit/fd47f0c6fc332c02d54b64e2c6d9e834f4f6441f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-07 10:41 (JST)
+
+
+------
+
+Update modules and styles
+
+:commit:
+    `54c8095 <https://github.com/Juris-M/citeproc-js/commit/54c80955ce0fb4ea9ef65ac387da3d0144d8f0e8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-07 10:37 (JST)
+
+
+------
+
+Split jurisdiction prefs on space, not comma, as in CSL
+
+:commit:
+    `cf4f7e8 <https://github.com/Juris-M/citeproc-js/commit/cf4f7e8579a33b172be66aee8e6d86f81675d70d>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-07 10:34 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.8
+
+:commit:
+    `0fa4fe1 <https://github.com/Juris-M/citeproc-js/commit/0fa4fe1bbc4bd081d070bfc312ee603d61bb3d02>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-03 09:32 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `e30dcec <https://github.com/Juris-M/citeproc-js/commit/e30dcec1e14317c6a6cc07d93393df40f1e266da>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-03 08:57 (JST)
+
+
+------
+
+Update modules
+
+:commit:
+    `232cf81 <https://github.com/Juris-M/citeproc-js/commit/232cf8156933702ba8651099c265680d8f120eec>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-03 08:55 (JST)
+
+
+------
+
+Process extra date if no main entry
+
+:commit:
+    `7c4b6e4 <https://github.com/Juris-M/citeproc-js/commit/7c4b6e426494c77b05a7749dc2c4c6dab3097be8>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-03 07:40 (JST)
+
+
+------
+
+Extend cheater syntax test slightly
+
+:commit:
+    `8875129 <https://github.com/Juris-M/citeproc-js/commit/88751299e9e7668d976ea623e9611af87cd48195>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-03 07:21 (JST)
+
+
+------
+
+Update style tests (UN)
+
+:commit:
+    `4d99541 <https://github.com/Juris-M/citeproc-js/commit/4d99541dbcdbfdc71f150746943fbde29d2cf26a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-03 07:21 (JST)
+
+
+------
+
+Update style modules (UN)
+
+:commit:
+    `3c2b897 <https://github.com/Juris-M/citeproc-js/commit/3c2b897deac81d4ad2c6f387269685ae36a3e9de>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-03 07:19 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.7
+
+:commit:
+    `4ad9761 <https://github.com/Juris-M/citeproc-js/commit/4ad97611aa9f7c052856dbce3a0ea6b11723b0fb>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-02 07:17 (JST)
+
+
+------
+
+Localize ampersand join, passthrough for full forms
+
+:commit:
+    `32444e8 <https://github.com/Juris-M/citeproc-js/commit/32444e8b27dcc0af3e1aff6525d4cf1d701c466e>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-02 07:09 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `585b715 <https://github.com/Juris-M/citeproc-js/commit/585b715e1d62dcf0da1d4f1f919d5a1942153fae>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-02 07:08 (JST)
+
+
+------
+
+Fix APA bug triggered by multilingual settings
+
+:commit:
+    `66e5a9c <https://github.com/Juris-M/citeproc-js/commit/66e5a9cb3684377d3c6be55af32e9e419023c2ac>`_
+:author:
+    Frank Bennett
+:date:
+    2019-06-01 18:56 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.6
+
+:commit:
+    `9892496 <https://github.com/Juris-M/citeproc-js/commit/9892496bd28cd63c9dfa4698932caed2763dbf73>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-30 07:57 (JST)
+
+
+------
+
+Update style tests
+
+:commit:
+    `184f15e <https://github.com/Juris-M/citeproc-js/commit/184f15e64a42035148555f1fc2e224a523809fc7>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-30 07:54 (JST)
+
+
+------
+
+Avoid type error and consolidate code to function
+
+:commit:
+    `ae4c774 <https://github.com/Juris-M/citeproc-js/commit/ae4c77482fb14127dadba62100d96050501d4104>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-30 07:51 (JST)
+
+
+------
+
+Bump npm version
+
+:commit:
+    `d08f6d8 <https://github.com/Juris-M/citeproc-js/commit/d08f6d81b3989c6b647d56d13b81507279d0be0b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-25 07:51 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.5
+
+:commit:
+    `fc352c5 <https://github.com/Juris-M/citeproc-js/commit/fc352c5022d58a4312e58db29d623f0e7b39f60c>`_
+:author:
+    Frank Bennett
+:date:
+    2019-05-25 07:48 (JST)
+

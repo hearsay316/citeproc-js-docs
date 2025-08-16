@@ -1,0 +1,174 @@
+========================================================
+1.1.58-1.1.61
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `c7088f2 <https://github.com/Juris-M/citeproc-js/commit/c7088f2a97162474d772add2637b8ad593757694>`_
+:author:
+    Frank Bennett
+:date:
+    2015-10-10 04:27 (JST)
+
+
+------
+
+Parse out multiple creators from Extra, and parse for articlar and particles
+
+:commit:
+    `15c6e2d <https://github.com/Juris-M/citeproc-js/commit/15c6e2d358fda114ece1087d7412b7163ea6f3bf>`_
+:author:
+    Frank Bennett
+:date:
+    2015-10-10 04:27 (JST)
+
+
+------
+
+Restore Zotero build
+
+:commit:
+    `0d40081 <https://github.com/Juris-M/citeproc-js/commit/0d4008160390b5e6ec0ed13bed84f115f09b4163>`_
+:author:
+    Frank Bennett
+:date:
+    2015-10-03 22:31 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `0e439da <https://github.com/Juris-M/citeproc-js/commit/0e439da45ab1749419e73e38e2c55094e28658c6>`_
+:author:
+    Frank Bennett
+:date:
+    2015-10-03 22:07 (JST)
+
+
+------
+
+Block only the accessed date variable when generating internal cites
+
+:commit:
+    `7ffaa59 <https://github.com/Juris-M/citeproc-js/commit/7ffaa59ea29997984fd759ff5a704ca8da16445c>`_
+:author:
+    Frank Bennett
+:date:
+    2015-10-03 22:04 (JST)
+
+
+------
+
+Edits to processor manual
+
+:commit:
+    `f2e760d <https://github.com/Juris-M/citeproc-js/commit/f2e760d4fea2228a91fba295d67587bee4d3158b>`_
+:author:
+    Frank Bennett
+:date:
+    2015-10-03 21:59 (JST)
+
+
+------
+
+Remove parse-names from manual
+
+:commit:
+    `ed40666 <https://github.com/Juris-M/citeproc-js/commit/ed406663c9b6341e6a595174dae5b45d9a84cd94>`_
+:author:
+    Frank Bennett
+:date:
+    2015-09-27 23:31 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `b68f6de <https://github.com/Juris-M/citeproc-js/commit/b68f6deeaeb3f19d5341d307aa1b56be8b5a43bc>`_
+:author:
+    Frank Bennett
+:date:
+    2015-09-27 23:25 (JST)
+
+
+------
+
+Fix for dropping particle + articular parsing
+
+:commit:
+    `cf5cca1 <https://github.com/Juris-M/citeproc-js/commit/cf5cca158252221366a66bad1ec8b6beb2ad628b>`_
+:author:
+    Frank Bennett
+:date:
+    2015-09-27 23:24 (JST)
+
+
+------
+
+Revisions to processor manual
+
+:commit:
+    `121c3a1 <https://github.com/Juris-M/citeproc-js/commit/121c3a1183f1acfe2be0cc85b7c4a878d3c2cef7>`_
+:author:
+    Frank Bennett
+:date:
+    2015-09-27 23:06 (JST)
+
+
+------
+
+Remove some likely-unused options (can restore if this hurts anyone)
+
+:commit:
+    `bd4f354 <https://github.com/Juris-M/citeproc-js/commit/bd4f35468ed033c8c789611941b0c503945e71e6>`_
+:author:
+    Frank Bennett
+:date:
+    2015-09-27 23:06 (JST)
+
+
+------
+
+Make name particle parser compatible with node.js
+
+:commit:
+    `4af9445 <https://github.com/Juris-M/citeproc-js/commit/4af9445d86e6fb09e834ac354671dab9cb3c3047>`_
+:author:
+    Frank Bennett
+:date:
+    2015-09-26 21:54 (JST)
+
+
+------
+
+Added tag 1.1.58 for changeset caf45aa87090
+
+:commit:
+    `2a15259 <https://github.com/Juris-M/citeproc-js/commit/2a15259d1113f1f79d9ce68d479e06d82365585d>`_
+:author:
+    Frank Bennett
+:date:
+    2015-09-22 23:09 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `5558464 <https://github.com/Juris-M/citeproc-js/commit/55584640aabcd74f112d5564f3144bff83fba4d4>`_
+:author:
+    Frank Bennett
+:date:
+    2015-09-22 23:09 (JST)
+

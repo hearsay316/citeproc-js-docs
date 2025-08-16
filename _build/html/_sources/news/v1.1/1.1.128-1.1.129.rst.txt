@@ -1,0 +1,54 @@
+========================================================
+1.1.128-1.1.129
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.129
+
+:commit:
+    `825afbe <https://github.com/Juris-M/citeproc-js/commit/825afbe54b8359688fc3378287bb4bb610e34e53>`_
+:author:
+    fbennett
+:date:
+    2016-09-17 14:09 (JST)
+
+
+------
+
+Update modules
+
+:commit:
+    `5004236 <https://github.com/Juris-M/citeproc-js/commit/5004236dc2dbea778a0cc7e6fea25348b52a273e>`_
+:author:
+    fbennett
+:date:
+    2016-09-17 13:43 (JST)
+
+
+------
+
+Fix dropping-label issue for non-numeric elements
+
+:commit:
+    `f6a7e76 <https://github.com/Juris-M/citeproc-js/commit/f6a7e768e433116eb85a49c8460c49299aa41b01>`_
+:author:
+    fbennett
+:date:
+    2016-09-17 13:37 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.128
+
+:commit:
+    `4b8ef53 <https://github.com/Juris-M/citeproc-js/commit/4b8ef5359294a5a3b858887e70c9add85cf76b43>`_
+:author:
+    fbennett
+:date:
+    2016-09-15 10:13 (JST)
+

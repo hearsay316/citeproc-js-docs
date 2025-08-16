@@ -1,0 +1,119 @@
+========================================================
+1.1.146-1.1.148
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.148
+
+:commit:
+    `ab147e2 <https://github.com/Juris-M/citeproc-js/commit/ab147e2fa29c18c81a35ec007cbb2849c83e5578>`_
+:author:
+    fbennett
+:date:
+    2017-02-05 21:04 (JST)
+
+
+------
+
+Add missing multi setting to test runner
+
+:commit:
+    `2a93539 <https://github.com/Juris-M/citeproc-js/commit/2a935393c1ba24db6cb412a98eacdfd85420c047>`_
+:author:
+    fbennett
+:date:
+    2017-02-05 21:03 (JST)
+
+
+------
+
+By default use only original segments, not variants
+
+:commit:
+    `8267255 <https://github.com/Juris-M/citeproc-js/commit/82672556928ba75e6a3d3281b1534ead99a892a5>`_
+:author:
+    fbennett
+:date:
+    2017-02-05 20:43 (JST)
+
+
+------
+
+Recognize additional space characters in text-case word parse
+
+:commit:
+    `bbeb54b <https://github.com/Juris-M/citeproc-js/commit/bbeb54bc96f351c522a77f6bfbbac6dde0340cf0>`_
+:author:
+    fbennett
+:date:
+    2017-02-05 19:01 (JST)
+
+
+------
+
+Do not capitalise last stop word if followed by a nocase
+
+:commit:
+    `7cf974d <https://github.com/Juris-M/citeproc-js/commit/7cf974d467b86a6eebfafac653a29bc74c3c22c4>`_
+:author:
+    fbennett
+:date:
+    2017-02-05 15:22 (JST)
+
+
+------
+
+Recognize nbsp as space when splitting for text-case conversions
+
+:commit:
+    `ac7bc72 <https://github.com/Juris-M/citeproc-js/commit/ac7bc723aa8034676b831ad27b78308a3039b66b>`_
+:author:
+    fbennett
+:date:
+    2017-02-05 13:37 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.147
+
+:commit:
+    `4ecaef0 <https://github.com/Juris-M/citeproc-js/commit/4ecaef0f397df3d13d74ddf585582efe84110f89>`_
+:author:
+    fbennett
+:date:
+    2017-02-05 00:39 (JST)
+
+
+------
+
+Rewrite of "flipflop" parsing module
+
+:commit:
+    `6a8a47f <https://github.com/Juris-M/citeproc-js/commit/6a8a47fc8d5c736faeb7860e6bd6e6c1f595026f>`_
+:author:
+    fbennett
+:date:
+    2017-01-27 22:40 (JST)
+
+- A complete reimplementation that is more orderly
+  that the previous version, more stable, and better
+  at parsing straight-single-quote characters
+  used as apostrophes and the like.
+
+
+------
+
+Bump version, update CHANGES.txt, bundle was 1.1.146
+
+:commit:
+    `e42d85b <https://github.com/Juris-M/citeproc-js/commit/e42d85b7904610c3013eb6f40ae3e400e5d2ba33>`_
+:author:
+    fbennett
+:date:
+    2017-01-27 19:11 (JST)
+

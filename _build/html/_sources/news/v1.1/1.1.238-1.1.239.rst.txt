@@ -1,0 +1,86 @@
+========================================================
+1.1.238-1.1.239
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.239
+
+:commit:
+    `985bd5d <https://github.com/Juris-M/citeproc-js/commit/985bd5d7b4b2d1bfeaed52b141f0be93339efc07>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-14 06:31 (JST)
+
+
+------
+
+General cleanup around ./demo
+
+:commit:
+    `33fe3e2 <https://github.com/Juris-M/citeproc-js/commit/33fe3e20e8b6faa5bbae8adcf0243065b980873a>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-13 23:13 (JST)
+
+
+------
+
+Short-circuit cs:substitute if initial variable succeeds
+
+:commit:
+    `6b021ea <https://github.com/Juris-M/citeproc-js/commit/6b021ea0f4a1d952080bfde945e3eeb55c985107>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-13 19:59 (JST)
+
+The performance gain from this is miniscule, but may be significant
+on very large runs.
+
+
+------
+
+Pretty-printing for node traces in util_nodes.js
+
+:commit:
+    `b91a317 <https://github.com/Juris-M/citeproc-js/commit/b91a317f044811c7b7cd57e4d9132b7c9507ebfc>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-13 19:59 (JST)
+
+
+------
+
+Input sanity check control
+
+:commit:
+    `4801a91 <https://github.com/Juris-M/citeproc-js/commit/4801a918067347f1327df07ae3a879b5c1c6b9b9>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-13 19:40 (JST)
+
+Wrap input sanity checks for processCitationCluster in an option.
+"citeproc.opt.development_extensions.strict_inputs". The option is
+enabled by default, and should really never be disabled. Processor
+performance can be greatly affected by malarranged inputs.
+
+
+------
+
+Update docs
+
+:commit:
+    `012ef86 <https://github.com/Juris-M/citeproc-js/commit/012ef8682542138cfb648e7c3744924587d5a1ff>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-10 07:08 (JST)
+

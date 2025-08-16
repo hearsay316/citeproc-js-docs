@@ -1,0 +1,54 @@
+========================================================
+1.1.133-1.1.134
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.134
+
+:commit:
+    `7528f1e <https://github.com/Juris-M/citeproc-js/commit/7528f1e1e89898b6ed39cf3ad1150c956df2c21f>`_
+:author:
+    fbennett
+:date:
+    2016-09-23 13:32 (JST)
+
+
+------
+
+Fix bug in placeholder label handling
+
+:commit:
+    `5666d46 <https://github.com/Juris-M/citeproc-js/commit/5666d46ac18f3ad185db2fc5eef0ac428c5aeb55>`_
+:author:
+    fbennett
+:date:
+    2016-09-23 13:26 (JST)
+
+
+------
+
+Add test of placeholder label on edition
+
+:commit:
+    `59d6607 <https://github.com/Juris-M/citeproc-js/commit/59d66074c23527a61c28490876324213a3254eda>`_
+:author:
+    fbennett
+:date:
+    2016-09-23 13:25 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.133
+
+:commit:
+    `22e86b4 <https://github.com/Juris-M/citeproc-js/commit/22e86b46576bde2c2b78896bbe00644017d02d39>`_
+:author:
+    fbennett
+:date:
+    2016-09-22 08:58 (JST)
+

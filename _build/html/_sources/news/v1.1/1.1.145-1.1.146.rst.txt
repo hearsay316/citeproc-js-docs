@@ -1,0 +1,138 @@
+========================================================
+1.1.145-1.1.146
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES.txt, bundle was 1.1.146
+
+:commit:
+    `e42d85b <https://github.com/Juris-M/citeproc-js/commit/e42d85b7904610c3013eb6f40ae3e400e5d2ba33>`_
+:author:
+    fbennett
+:date:
+    2017-01-27 19:11 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `2832a62 <https://github.com/Juris-M/citeproc-js/commit/2832a6231433ec6450cbfba9bcc6908a93ba87a3>`_
+:author:
+    fbennett
+:date:
+    2017-01-27 19:11 (JST)
+
+
+------
+
+Minor code reorganization
+
+:commit:
+    `75f92b5 <https://github.com/Juris-M/citeproc-js/commit/75f92b5c98433334ded18f2d0f76434afaf39666>`_
+:author:
+    fbennett
+:date:
+    2017-01-27 18:54 (JST)
+
+
+------
+
+Use a single parameterized function for text-case transforms
+
+:commit:
+    `78c2198 <https://github.com/Juris-M/citeproc-js/commit/78c2198a01800385baccbcf0c442a84a07992944>`_
+:author:
+    fbennett
+:date:
+    2017-01-27 18:43 (JST)
+
+
+------
+
+Test of text-case without capitalization of first subtitle char
+
+:commit:
+    `a313e31 <https://github.com/Juris-M/citeproc-js/commit/a313e310bb76a5dfc3fc6a1a40a1ebe2d26c5cf4>`_
+:author:
+    fbennett
+:date:
+    2017-01-27 10:46 (JST)
+
+
+------
+
+Refactored text-case code
+
+:commit:
+    `fbb2654 <https://github.com/Juris-M/citeproc-js/commit/fbb26545a15ffd710af32f11ee7855d792479779>`_
+:author:
+    fbennett
+:date:
+    2017-01-27 10:45 (JST)
+
+
+------
+
+Extensions and corrections to tests
+
+:commit:
+    `4d11df9 <https://github.com/Juris-M/citeproc-js/commit/4d11df9b3887e56a922080761362f3b7a0b59486>`_
+:author:
+    fbennett
+:date:
+    2017-01-27 10:44 (JST)
+
+
+------
+
+Interim checkin
+
+:commit:
+    `1158ac1 <https://github.com/Juris-M/citeproc-js/commit/1158ac175d89cd1b264a729c127a4735474386c2>`_
+:author:
+    fbennett
+:date:
+    2017-01-26 12:46 (JST)
+
+
+------
+
+Adjust test result
+
+:commit:
+    `c11a73c <https://github.com/Juris-M/citeproc-js/commit/c11a73cd57dddd0f8214532132521e29e1112c27>`_
+:author:
+    fbennett
+:date:
+    2017-01-24 11:38 (JST)
+
+
+------
+
+Fix subtitle caps bugs, extend to multilingual, cover quoted text
+
+:commit:
+    `da41898 <https://github.com/Juris-M/citeproc-js/commit/da41898bd70895853d19301236bbd402bf83c5cb>`_
+:author:
+    fbennett
+:date:
+    2017-01-24 11:37 (JST)
+
+
+------
+
+Update locales
+
+:commit:
+    `1faaa0a <https://github.com/Juris-M/citeproc-js/commit/1faaa0a0972a72213f772e02e577d02e398a3cfb>`_
+:author:
+    fbennett
+:date:
+    2017-01-18 18:09 (JST)
+

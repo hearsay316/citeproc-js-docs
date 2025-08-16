@@ -1,0 +1,90 @@
+========================================================
+1.1.237-1.1.238
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Update docs
+
+:commit:
+    `012ef86 <https://github.com/Juris-M/citeproc-js/commit/012ef8682542138cfb648e7c3744924587d5a1ff>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-10 07:08 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.238
+
+:commit:
+    `5351017 <https://github.com/Juris-M/citeproc-js/commit/5351017c7a21ea40b70ea7787e901bffc1a7b092>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-10 07:07 (JST)
+
+
+------
+
+Update std tests
+
+:commit:
+    `e00d88f <https://github.com/Juris-M/citeproc-js/commit/e00d88f37a26f17b75225746b948672d864dc410>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-10 06:58 (JST)
+
+
+------
+
+Check sanity of declared citation context
+
+:commit:
+    `81f72a9 <https://github.com/Juris-M/citeproc-js/commit/81f72a947ac64f96d19f8216e44be6fb93e844e4>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-09 17:39 (JST)
+
+
+------
+
+Add reverse lookup example
+
+:commit:
+    `79443d7 <https://github.com/Juris-M/citeproc-js/commit/79443d7e36ddb48ddd1ddde7234601a0fff7b6a6>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-09 20:47 (JST)
+
+
+------
+
+Remove csl_reverse_lookup_support from test fiddle
+
+:commit:
+    `2ec6e25 <https://github.com/Juris-M/citeproc-js/commit/2ec6e25f58d8137dfb7dd2306cf3166303522ac3>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-09 17:35 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.237
+
+:commit:
+    `50a2db1 <https://github.com/Juris-M/citeproc-js/commit/50a2db1dea9aad4d616f25d5d1470b37c0d49f8b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-08 04:53 (JST)
+

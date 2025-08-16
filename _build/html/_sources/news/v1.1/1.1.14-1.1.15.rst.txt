@@ -1,0 +1,66 @@
+========================================================
+1.1.14-1.1.15
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `54d82c2 <https://github.com/Juris-M/citeproc-js/commit/54d82c2571a5ffe3020c6840970943c8bc00fb20>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-10 17:01 (JST)
+
+
+------
+
+Make the juris-locator-label macro shy like a bare label
+
+:commit:
+    `6225ae1 <https://github.com/Juris-M/citeproc-js/commit/6225ae117ee715dc878d56490832ba50d5654323>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-10 16:57 (JST)
+
+
+------
+
+Send updates to the right projects
+
+:commit:
+    `578a6bc <https://github.com/Juris-M/citeproc-js/commit/578a6bca3121d65d2ab62ad0fd7fca9163f8f634>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-09 22:38 (JST)
+
+
+------
+
+Added tag 1.1.14 for changeset 90e4f4895346
+
+:commit:
+    `c5f06b1 <https://github.com/Juris-M/citeproc-js/commit/c5f06b1d2ff9c369142f186f943a4f8cdd180f2b>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-09 22:35 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `fa570e7 <https://github.com/Juris-M/citeproc-js/commit/fa570e7bb6b02390dbb6c1fee6e60bdeb1ddcd39>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-09 22:35 (JST)
+

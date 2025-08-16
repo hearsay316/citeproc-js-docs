@@ -1,0 +1,54 @@
+========================================================
+1.1.15-1.1.16
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `05311c7 <https://github.com/Juris-M/citeproc-js/commit/05311c7ce615bb7864b79926c01a57f20d3b7ec7>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-10 20:55 (JST)
+
+
+------
+
+Align locator handling of regulation with legislation etc.
+
+:commit:
+    `0613cc5 <https://github.com/Juris-M/citeproc-js/commit/0613cc55eebdfd4b3a78b569d27601794b10d817>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-10 20:54 (JST)
+
+
+------
+
+Added tag 1.1.15 for changeset 38f4507748b9
+
+:commit:
+    `aa26afd <https://github.com/Juris-M/citeproc-js/commit/aa26afdc934bb186c2dd2c2c922e19b6157acbca>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-10 17:01 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle
+
+:commit:
+    `54d82c2 <https://github.com/Juris-M/citeproc-js/commit/54d82c2571a5ffe3020c6840970943c8bc00fb20>`_
+:author:
+    Frank Bennett
+:date:
+    2015-05-10 17:01 (JST)
+

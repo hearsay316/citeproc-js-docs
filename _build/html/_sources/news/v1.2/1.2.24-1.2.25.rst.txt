@@ -1,0 +1,54 @@
+========================================================
+1.2.24-1.2.25
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.25
+
+:commit:
+    `d5e8182 <https://github.com/Juris-M/citeproc-js/commit/d5e8182d10c55fa7ee18e1d52141469fec56c280>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-02 08:25 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `f5a0f1b <https://github.com/Juris-M/citeproc-js/commit/f5a0f1b1b798d7adeb7f5d2489e751e590e38753>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-02 08:24 (JST)
+
+
+------
+
+Load correct state object when parallels invoke for module
+
+:commit:
+    `4348a26 <https://github.com/Juris-M/citeproc-js/commit/4348a26eda974d21a59e0889c69bbd901b6820c1>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-02 08:22 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.2.24
+
+:commit:
+    `c0d4556 <https://github.com/Juris-M/citeproc-js/commit/c0d45560e79aa93148935c18320b3118c7f6f8d3>`_
+:author:
+    Frank Bennett
+:date:
+    2019-09-01 22:28 (JST)
+

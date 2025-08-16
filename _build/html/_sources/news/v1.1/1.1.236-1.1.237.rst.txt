@@ -1,0 +1,56 @@
+========================================================
+1.1.236-1.1.237
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.237
+
+:commit:
+    `50a2db1 <https://github.com/Juris-M/citeproc-js/commit/50a2db1dea9aad4d616f25d5d1470b37c0d49f8b>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-08 04:53 (JST)
+
+
+------
+
+Merge branch 'master-remove-rtl'
+
+:commit:
+    `a4eb1fe <https://github.com/Juris-M/citeproc-js/commit/a4eb1fe0bf800443ab1c8a8853b774efa7359327>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-08 04:47 (JST)
+
+
+------
+
+Add "al" to the list of non-capitalizing terms.
+
+:commit:
+    `b816c3f <https://github.com/Juris-M/citeproc-js/commit/b816c3f9638762befb179b935f93f52052f0bb9f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-07 21:09 (JST)
+
+See https://forums.zotero.org/discussion/76783/chicago-17th-full-note-erroneous-title-capitalization
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.236
+
+:commit:
+    `d411663 <https://github.com/Juris-M/citeproc-js/commit/d411663445e0e5dbd60db61a05d21ae2c935c15f>`_
+:author:
+    Frank Bennett
+:date:
+    2019-04-07 15:46 (JST)
+

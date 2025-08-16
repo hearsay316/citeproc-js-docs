@@ -1,0 +1,54 @@
+========================================================
+1.1.100-1.1.101
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.101
+
+:commit:
+    `86a737f <https://github.com/Juris-M/citeproc-js/commit/86a737faaf089c0cf9e853f804b76364e4e9bad8>`_
+:author:
+    fbennett
+:date:
+    2016-04-25 08:32 (JST)
+
+
+------
+
+Suppress year-suffix render if no variable content, fix missing-delimiter bug
+
+:commit:
+    `c21bcd5 <https://github.com/Juris-M/citeproc-js/commit/c21bcd5baabb7ed4eaa020eab27ea381d8e8116c>`_
+:author:
+    fbennett
+:date:
+    2016-04-25 08:28 (JST)
+
+
+------
+
+Bugfix test
+
+:commit:
+    `ec86b89 <https://github.com/Juris-M/citeproc-js/commit/ec86b89d34619a02761160005177c3456d93bfb9>`_
+:author:
+    fbennett
+:date:
+    2016-04-25 08:25 (JST)
+
+
+------
+
+Make test a little more challenging
+
+:commit:
+    `6bfa956 <https://github.com/Juris-M/citeproc-js/commit/6bfa956f9e9d80821be746a4b91391b2ecddedf1>`_
+:author:
+    fbennett
+:date:
+    2016-04-24 19:35 (JST)
+

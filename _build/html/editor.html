@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo: Editor &mdash; citeproc-js 1.1.73 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/screen.css?v=425850a2" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=93912719"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/global.js?v=537b13e9"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started" href="setting-up.html" />
+    <link rel="prev" title="Demo: Dynamic Citations" href="dynamic-editing.html" /> 
+ 
+
+  
+  
+  <script src="_static/tinymce/js/tinymce/tinymce.min.js"></script>
+  <script>
+    tinyMCE.baseURL = '_static/tinymce/js/tinymce'
+    tinymce.init({
+        selector:"textarea",
+        content_css: "_static/css/screen.css",
+        plugins: "noneditable citesupport citeaddedit citestylemenu",
+        toolbar: [ "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+                   "citeaddedit | citestylemenu"
+        ],
+        height: "300"
+    });
+  </script>
+  
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            citeproc-js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">Acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news/index.html">Changes</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="demos.html">Demos</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="deployments.html">Demo: Standalone Bibliography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic-editing.html">Demo: Dynamic Citations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Demo: Editor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#editor">Editor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-locally">Running locally</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#local-setup">Local setup</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#source-file-overview">Source File Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#worker-api">Worker API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setting-up.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">Running the Processor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csl-json/markup.html">CSL-JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sys-extensions.html">Extended <code class="docutils literal notranslate"><span class="pre">sys</span></code> functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csl-m/index.html">CSL-M: extensions to CSL</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">citeproc-js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="demos.html">Demos</a></li>
+      <li class="breadcrumb-item active">Demo: Editor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/editor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="demo-editor">
+<h1>Demo: Editor<a class="headerlink" href="#demo-editor" title="Link to this heading"></a></h1>
+<p><img alt="CCBYSA" src="_images/cc-by-sa-80x15.png" /> <a class="reference external" href="https://twitter.com/fgbjr">Frank Bennett</a></p>
+<hr class="docutils" />
+<section id="editor">
+<h2>Editor<a class="headerlink" href="#editor" title="Link to this heading"></a></h2>
+<p><textarea>
+<p>
+This page illustrates dynamic citation support in the tinyMCE
+WYSIWYG editor. The text here is open for editing. Edits will
+persist across page refreshes. A full reload of the page URL will
+restore this text.
+</p>
+<p>
+Click on the "Add/Edit citation" button in the toolbar to add a
+citation at the current cursor position. Highlight a citation
+and click on the button again to edit the citation content.
+To remove a citation, either save it with no content, or delete
+it in the usual way and refresh the page to reformat any remaining
+citations.
+</p>
+<p>
+Use the style selector in the toolbar to change citation styles.
+</p>
+</textarea></p>
+<p><button id="more" hidden="true">More ...</button></p>
+</section>
+<section id="running-locally">
+<h2>Running locally<a class="headerlink" href="#running-locally" title="Link to this heading"></a></h2>
+<p>Like the previous page, the main purpose here is to provide a worked
+example for developers. A good way to explore the way it all works is
+to run the page locally. Here is how to set that up.</p>
+<section id="requirements">
+<h3>Requirements<a class="headerlink" href="#requirements" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://git-scm.com/">git</a></p></li>
+<li><p><a class="reference external" href="https://nodejs.org/en/">node.js</a></p></li>
+<li><p><a class="reference external" href="https://www.npmjs.com/">npm</a></p></li>
+<li><p><a class="reference external" href="http://www.sphinx-doc.org/en/stable/">Sphinx</a></p></li>
+</ul>
+</section>
+<section id="local-setup">
+<h3>Local setup<a class="headerlink" href="#local-setup" title="Link to this heading"></a></h3>
+<dl>
+<dt>Fetch the repo</dt><dd><p>Clone the <code class="docutils literal notranslate"><span class="pre">citeproc-js</span></code> documentation project and enter
+its top-level directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Juris-M/citeproc-js-docs.git<span class="w"> </span>--recursive
+<span class="nb">cd</span><span class="w"> </span>citeproc-js-docs
+</pre></div>
+</div>
+</dd>
+<dt>Build the docs</dt><dd><p>The following command should work:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>html
+</pre></div>
+</div>
+</dd>
+<dt>Run a server using <code class="docutils literal notranslate"><span class="pre">node.js</span></code></dt><dd><p>The built page uses <code class="docutils literal notranslate"><span class="pre">XMLHttpRequest()</span></code> calls, so it must be
+viewed through a web server. To run a simple server using
+<code class="docutils literal notranslate"><span class="pre">node.js</span></code>, an incantation like this should do the trick:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>http-server
+http-server<span class="w"> </span>_build/html
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+</section>
+<section id="source-file-overview">
+<h2>Source File Overview<a class="headerlink" href="#source-file-overview" title="Link to this heading"></a></h2>
+<p>As this demo is built as a Sphinx page for deployment on ReadTheDocs,
+the source files are kind of scattered and mixed. The following list
+should help you find the essentials.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">_static/tinymce/js/tinymce/plugins/citesupport.js</span></code></dt><dd><p>This is the core plugin for citation support. It spins up a web
+worker (from <code class="docutils literal notranslate"><span class="pre">classes/citeworker.js</span></code>) that runs <code class="docutils literal notranslate"><span class="pre">citeproc.js</span></code>
+to handle the actual formatting of citations, and manages page
+updates.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/tinymce/js/tinymce/plugins/citestylemenu.js</span></code></dt><dd><p>This supplies a tinyMCE menu for changing citation styles.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/tinymce/js/tinymce/plugins/citeaddedit.js</span></code></dt><dd><p>This supplies the primitive citation widget used in the demo
+editor. In production you would obviously want something a
+<em>little</em> more sophisticated. This plugin is the place to
+implement that.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/css/screen.css</span></code></dt><dd><p>There is some CSS code in here that is relevant to the layout
+of bibliographies and the decoration of citations and footnotes.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_templates/layout.html</span></code></dt><dd><p>Check here (particularly at the bottom of the file) for the
+incantations that bring up tinyMCE with citation support.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">substitutions.txt</span></code></dt><dd><p>The placeholder that tinyMCE installs itself to is supplied
+by the “editor” substitution element.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/data/items</span></code></dt><dd><p>A few sample items for the dynamic editing demo, in CSL JSON format.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/data/locales</span></code></dt><dd><p>The <a class="reference external" href="https://github.com/citation-style-language/locales">standard CSL locales</a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/data/styles</span></code></dt><dd><p>The CSL styles used in the demo. The “JM” styles are from the
+<a class="reference external" href="https://github.com/juris-m/jm-styles">Juris-M styles repository</a>, and have modular legal
+style support. The remainder are from the <a class="reference external" href="https://github.com/citation-style-language/styles/">official CSL repository</a>,
+which feeds the <a class="reference external" href="https://www.zotero.org/styles">Zotero styles</a> distribution site.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/data/juris</span></code></dt><dd><p>A set of legal style modules resides here. Legal citation
+support is easily extensible to jurisdictions worldwide
+via the <a class="reference external" href="https://juris-m.github.io/editor/">Juris-M Style Editor</a>
+(GitHub account required).</p>
+</dd>
+</dl>
+</section>
+<section id="worker-api">
+<h2>Worker API<a class="headerlink" href="#worker-api" title="Link to this heading"></a></h2>
+<p>The heavy lifting is done by the CSL processor, which runs in a
+separate thread as a web worker. Only the document-facing interface of
+the worker is described here: it should not be necessary to tangle
+with the internals of the worker itself. Its only idiosyncracy is that
+it assigns note numbers (reflected in the return) in citation
+sequence—in contrast to word processor context, it assumes that the
+only footnotes in the document are those generated automatically by a
+note style. If that is not true in your context, you will want to
+disable that behavior, and do whatever is necessary on document side
+to extract real note numbers for delivery to the processor.</p>
+<p>The worker is controlled by two methods, <code class="docutils literal notranslate"><span class="pre">callInitProcessor()</span></code> and
+<code class="docutils literal notranslate"><span class="pre">callRegisterCitation()</span></code>, each with a corresponding message and
+return event.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">citesupport.callInitProcessor(styleID,</span> <span class="pre">localeID)</span></code></dt><dd><p>This method is used on page load, on change of style, and when all
+citations have been removed from the document.  The <code class="docutils literal notranslate"><span class="pre">styleID</span></code>
+argument is mandatory. If <code class="docutils literal notranslate"><span class="pre">localeID</span></code> is not provided, the
+processor will be configured with the <code class="docutils literal notranslate"><span class="pre">en-US</span></code> locale.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">citesupport.callInitProcessor</span></code> method implicitly accesses the
+<code class="docutils literal notranslate"><span class="pre">config.citationByIndex</span></code> array, which must be accessible in page
+context. If the array is empty, the processor will be initialized
+without citations. If the array contains citations, the processor
+will be initialized to that document state, and return an array of
+arrays as <code class="docutils literal notranslate"><span class="pre">rebuildData</span></code>, for use in reconstructing citations in
+the document text. Each sub-array contains a citation ID, a note
+number, and a citation string. For example, if the <code class="docutils literal notranslate"><span class="pre">styleID</span></code> is
+for a <code class="docutils literal notranslate"><span class="pre">note</span></code> style, and if <code class="docutils literal notranslate"><span class="pre">config.citationByIndex</span></code> yields the
+citations “Wurzel Gummidge (1990)” and “My Aunt Sally (2001),” the
+<code class="docutils literal notranslate"><span class="pre">rebuildData</span></code> structure would look like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">       </span><span class="s2">&quot;lu7Tu3ki&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;Wurzel Gummidge (1990)&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">       </span><span class="s2">&quot;ko4aNoo9&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;My Aunt Sally (2001)&quot;</span>
+
+<span class="w">    </span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">citesupport.callRegisterCitation(citation,</span> <span class="pre">preCitations,</span> <span class="pre">postCitations)</span></code></dt><dd><p>This method is used to add or to edit citations. All three
+arguments are mandatory. <code class="docutils literal notranslate"><span class="pre">citation</span></code> is an ordinary citation
+object as described above. <code class="docutils literal notranslate"><span class="pre">preCitations</span></code> and <code class="docutils literal notranslate"><span class="pre">postCitations</span></code>
+are arrays of arrays, in which each sub-array is composed of a
+citation ID and a note number. For example, if a note citation
+is to be inserted between the “Wurzel Gummidge” and “Aunt Sally”
+citations in the example above, these would have the following form:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">preCitations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;lu7Tu3ki&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;1&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">];</span>
+
+<span class="nx">postCitations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;ko4aNoo9&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;3&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">];</span>
+</pre></div>
+</div>
+<p>Notice the change to the note number: the processor registers
+note numbers for use in back-references, but maintenance of
+correct note numbering must be handled in document-side code.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">citesupport.callRegisterCitation</span></code> method returns two values from the
+processor: <code class="docutils literal notranslate"><span class="pre">citationByIndex</span></code> (described above) and <code class="docutils literal notranslate"><span class="pre">citations</span></code>.
+The latter is an array of one or more arrays, each composed of a
+citation position index, a string, and a citation ID. For example,
+the return value to insert a citation “Calvin (1995); Hobbes
+(2016)” between the “Wurzel Gummidge” and “My Aunt Sally” citations
+would look something like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">   </span><span class="p">[</span>
+<span class="w">       </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;Calvin (1995); Hobbes (2016)&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;Ith7eg8T&quot;</span>
+<span class="w">   </span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>Note that the return value might contain updates for multiple
+citations.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dynamic-editing.html" class="btn btn-neutral float-left" title="Demo: Dynamic Citations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="setting-up.html" class="btn btn-neutral float-right" title="Getting started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016, Frank Bennett.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

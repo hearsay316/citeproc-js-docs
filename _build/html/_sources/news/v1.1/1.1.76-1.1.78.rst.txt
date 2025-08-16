@@ -1,0 +1,229 @@
+========================================================
+1.1.76-1.1.78
+========================================================
+
+.. include:: ../../substitutions.txt
+|CCBYSA|_ Frank Bennett <https://twitter.com/fgbjr>_
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.78
+
+:commit:
+    `2780216 <https://github.com/Juris-M/citeproc-js/commit/2780216f4d451384609f29bd8930618c205457f6>`_
+:author:
+    fbennett
+:date:
+    2016-03-11 11:49 (JST)
+
+
+------
+
+Remove Oops test to attic, add tests for reject and require
+
+:commit:
+    `15b2c73 <https://github.com/Juris-M/citeproc-js/commit/15b2c73506705759f11602bdfe640dc45ad8353c>`_
+:author:
+    fbennett
+:date:
+    2016-03-11 11:48 (JST)
+
+
+------
+
+Update docs
+
+:commit:
+    `6c83189 <https://github.com/Juris-M/citeproc-js/commit/6c831898391562a6f1fb4956cce63b63892c196e>`_
+:author:
+    fbennett
+:date:
+    2016-03-11 11:47 (JST)
+
+
+------
+
+Support require and reject conditions on cs:group
+
+:commit:
+    `a13f0b3 <https://github.com/Juris-M/citeproc-js/commit/a13f0b34741d2295121ea52ebad6e02dfc4320a9>`_
+:author:
+    fbennett
+:date:
+    2016-03-11 11:22 (JST)
+
+
+------
+
+Update CSL-M schema
+
+:commit:
+    `bd8486f <https://github.com/Juris-M/citeproc-js/commit/bd8486f9eda6e7432f4461bc4fcb209fe0881182>`_
+:author:
+    fbennett
+:date:
+    2016-03-11 11:19 (JST)
+
+
+------
+
+Remove oops test
+
+:commit:
+    `21d2835 <https://github.com/Juris-M/citeproc-js/commit/21d2835974a37dd83da7828233cac6a05853a3e4>`_
+:author:
+    fbennett
+:date:
+    2016-03-11 08:06 (JST)
+
+
+------
+
+Merge branch 'master' of github.com:Juris-M/citeproc-js
+
+:commit:
+    `5ac7fa8 <https://github.com/Juris-M/citeproc-js/commit/5ac7fa8ac46fa2ae15cdbcd74e96d34be825f848>`_
+:author:
+    fbennett
+:date:
+    2016-03-11 07:38 (JST)
+
+
+------
+
+Cleanup of group context tracking
+
+:commit:
+    `5741c15 <https://github.com/Juris-M/citeproc-js/commit/5741c15b0ee09f325f41d743c850e8672464d195>`_
+:author:
+    fbennett
+:date:
+    2016-03-11 06:39 (JST)
+
+
+
+* use named keys rather than array
+
+
+* remove stale code for oops option
+
+
+------
+
+Framework code for a require-label-type attribute
+
+:commit:
+    `ef028bb <https://github.com/Juris-M/citeproc-js/commit/ef028bbeba00103418522192f7f846beb50933ed>`_
+:author:
+    Frank Bennett
+:date:
+    2016-03-10 18:35 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.77
+
+:commit:
+    `45eac6e <https://github.com/Juris-M/citeproc-js/commit/45eac6e64259f8349014c7f4d6d71e660d14ff30>`_
+:author:
+    fbennett
+:date:
+    2016-03-09 15:07 (JST)
+
+
+------
+
+Amend label in test
+
+:commit:
+    `f304988 <https://github.com/Juris-M/citeproc-js/commit/f3049888713a5b974324738846ae52ec8dab7b03>`_
+:author:
+    fbennett
+:date:
+    2016-03-09 14:57 (JST)
+
+
+------
+
+Update CSL-M schema
+
+:commit:
+    `ecedeee <https://github.com/Juris-M/citeproc-js/commit/ecedeeebcedfe302a90ce2017a4a395f2b49b50c>`_
+:author:
+    fbennett
+:date:
+    2016-03-09 14:55 (JST)
+
+
+------
+
+Mask new label form "static" from label-form changes
+
+:commit:
+    `604b412 <https://github.com/Juris-M/citeproc-js/commit/604b41247ecfd7b652c4afaf589f6b37ec9c1366>`_
+:author:
+    fbennett
+:date:
+    2016-03-09 14:52 (JST)
+
+
+------
+
+Add nojuris option to test.py
+
+:commit:
+    `9737573 <https://github.com/Juris-M/citeproc-js/commit/9737573d07bdada27525c5f376d5878abe7586e6>`_
+:author:
+    fbennett
+:date:
+    2016-03-09 14:50 (JST)
+
+
+------
+
+Update test suite
+
+:commit:
+    `9c47029 <https://github.com/Juris-M/citeproc-js/commit/9c47029434a563996fe706c16b6b93f502ec3129>`_
+:author:
+    fbennett
+:date:
+    2016-03-09 14:49 (JST)
+
+
+------
+
+Update test suite
+
+:commit:
+    `ab63e1e <https://github.com/Juris-M/citeproc-js/commit/ab63e1e9245fe5adb14471a9687d50b1d81b1cfa>`_
+:author:
+    fbennett
+:date:
+    2016-03-09 14:48 (JST)
+
+
+------
+
+Update CSL-M schema
+
+:commit:
+    `411ecc6 <https://github.com/Juris-M/citeproc-js/commit/411ecc6f1bafbd3620b5a14a0213da9999f25b08>`_
+:author:
+    fbennett
+:date:
+    2016-03-09 14:46 (JST)
+
+
+------
+
+Bump version, update CHANGES, bundle as 1.1.76
+
+:commit:
+    `a1924e2 <https://github.com/Juris-M/citeproc-js/commit/a1924e2adf9eea93e7c2026294e162a3344c57ac>`_
+:author:
+    fbennett
+:date:
+    2016-03-08 20:25 (JST)
+
