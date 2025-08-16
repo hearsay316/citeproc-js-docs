@@ -1,8 +1,8 @@
-tinymce.PluginManager.add('citeaddedit', function(editor) {
-    
+tinymce.PluginManager.add('citeaddedit', function (editor) {
+
     var citesupport = editor.plugins.citesupport.citesupport;
 
-    function getIDs (citationID) {
+    function getIDs(citationID) {
         var itemIDs = [];
         var citation = null;
         for (var i = 0, ilen = citesupport.config.citationByIndex.length; i < ilen; i++) {
@@ -13,7 +13,7 @@ tinymce.PluginManager.add('citeaddedit', function(editor) {
         }
         // Although citation should ALWAYS exist if document data has cleared validation
         if (citation) {
-            itemIDs = citation.citationItems.map(function(obj){
+            itemIDs = citation.citationItems.map(function (obj) {
                 return obj.id;
             });
         }
@@ -24,25 +24,25 @@ tinymce.PluginManager.add('citeaddedit', function(editor) {
         var menu = [];
         var itemData = [
             {
-                title: "Geller 2002",
-                id: "item01"
+                title: 'Geller 2002',
+                id: 'item01',
             },
             {
-                title: "West 1934",
-                id: "item02"
+                title: 'West 1934',
+                id: 'item02',
             },
             {
-                title: "Allen 1878",
-                id: "item03"
+                title: 'Allen 1878',
+                id: 'item03',
             },
             {
-                title: "American case",
-                id: "item04"
+                title: 'American case',
+                id: 'item04',
             },
             {
-                title: "British case",
-                id: "item05"
-            }
+                title: 'British case',
+                id: 'item05',
+            },
         ];
         for (var i = 0, ilen = itemData.length; i < ilen; i++) {
             menu.push({
@@ -50,7 +50,7 @@ tinymce.PluginManager.add('citeaddedit', function(editor) {
                 name: itemData[i].id,
                 label: ' ',
                 text: itemData[i].title,
-                value: itemData[i].id
+                value: itemData[i].id,
             });
         }
         return menu;
@@ -79,18 +79,19 @@ tinymce.PluginManager.add('citeaddedit', function(editor) {
         return retList;
     }
 
-	function showDialog() {
+    function showDialog() {
         // Get selected node, and citationID if any
         var doc = editor.getDoc();
-		var selectedNode = editor.selection.getNode(), citationID = '';
-		var isCitation = selectedNode.tagName == 'SPAN' && editor.dom.hasClass(selectedNode, 'citation');
-		if (isCitation) {
-			citationID = selectedNode.id || '';
-		}
-        
+        var selectedNode = editor.selection.getNode(),
+            citationID = '';
+        var isCitation = selectedNode.tagName == 'SPAN' && editor.dom.hasClass(selectedNode, 'citation');
+        if (isCitation) {
+            citationID = selectedNode.id || '';
+        }
+
         // Reconcile citationByIndex and editor nodes
         citesupport.config.citationByIndex = citesupport.spoofCitations();
-        
+
         // Okay!
         // So if we're at a citation, we check its ID and look up its itemIDs in
         // the current citationByIndex map. It has to be in there.
@@ -99,33 +100,33 @@ tinymce.PluginManager.add('citeaddedit', function(editor) {
         var menu = configMenu(menu, itemIDs);
 
         // Popup
-		editor.windowManager.open({
-			title: 'Add/Edit citation',
-			body: menu,
-			onsubmit: function(e) {
+        editor.windowManager.open({
+            title: 'Add/Edit citation',
+            body: menu,
+            onsubmit: function (e) {
                 // What has been selected???
                 var newCitationItems = [];
                 for (var key in e.data) {
                     if (e.data[key]) {
                         newCitationItems.push({
-                            id: key
+                            id: key,
                         });
                     }
                 }
                 var citation;
-				if (!isCitation) {
+                if (!isCitation) {
                     if (newCitationItems.length) {
-					    editor.selection.collapse(true);
-					    editor.execCommand('mceInsertContent', false, '<span id="new-citation" class="citation mceNonEditable">{Citation}</span>');
+                        editor.selection.collapse(true);
+                        editor.execCommand('mceInsertContent', false, '<span id="new-citation" class="citation mceNonEditable">{Citation}</span>');
                         selectedNode = doc.getElementById('new-citation');
                         selectedNode.removeAttribute('id');
                         // Get citation and proceed
                         citation = {
                             citationItems: newCitationItems,
                             properties: {
-                                noteIndex: 0
-                            }
-                        }
+                                noteIndex: 0,
+                            },
+                        };
                     } else {
                         // Did not add anything, so just quit
                         return;
@@ -140,7 +141,7 @@ tinymce.PluginManager.add('citeaddedit', function(editor) {
                         }
                     }
                     if (citationPos === -1) {
-                        throw "Menu node not found"
+                        throw 'Menu node not found';
                     } else {
                         citation = citesupport.config.citationByIndex[citationPos];
                     }
@@ -150,7 +151,8 @@ tinymce.PluginManager.add('citeaddedit', function(editor) {
                     } else {
                         // Remove this citation from data and from DOM
                         var citationNodes = pruneNodeList(doc.getElementsByClassName('citation'));
-                        citesupport.config.citationByIndex = citesupport.config.citationByIndex.slice(0, citationPos).concat(citesupport.config.citationByIndex.slice(citationPos + 1));
+                        citesupport.config.citationByIndex = citesupport.config.citationByIndex.slice(0, citationPos)
+                            .concat(citesupport.config.citationByIndex.slice(citationPos + 1));
                         if (citesupport.config.citationByIndex.length === 0) {
                             // If no citations remain, reinit
                             callInitProcessor();
@@ -176,14 +178,17 @@ tinymce.PluginManager.add('citeaddedit', function(editor) {
                             offset = 1;
                         }
                         if (citesupport.config.citationByIndex.slice(0, i).length) {
-                            citationsPre = citesupport.config.citationByIndex.slice(0, i).map(function(obj){
-                                return [obj.citationID, 0]
-                            });
+                            citationsPre = citesupport.config.citationByIndex.slice(0, i)
+                                .map(function (obj) {
+                                    return [obj.citationID, 0];
+                                });
                         }
                         if (citesupport.config.citationByIndex.slice(i + offset).length) {
-                            citationsPost = citesupport.config.citationByIndex.slice(i + offset).map(function(obj){
-                                return [obj.citationID, 0];
-                            });;
+                            citationsPost = citesupport.config.citationByIndex.slice(i + offset)
+                                .map(function (obj) {
+                                    return [obj.citationID, 0];
+                                });
+                            ;
                         }
                         break;
                     }
@@ -203,25 +208,25 @@ tinymce.PluginManager.add('citeaddedit', function(editor) {
                 //console.log('citationsPre: '+JSON.stringify(citationsPre));
                 //console.log('citationsPost: '+JSON.stringify(citationsPost));
                 citesupport.callRegisterCitation(citation, citationsPre, citationsPost);
-			}
-		});
-	}
+            },
+        });
+    }
 
-	editor.addCommand('mceCite', showDialog);
+    editor.addCommand('mceCite', showDialog);
 
-	editor.addButton('citeaddedit', {
-		icon: false,
-		text: 'Add/Edit citation',
-		onclick: showDialog
-		//stateSelector: 'span:not([class*="citation"])'
-	});
+    editor.addButton('citeaddedit', {
+        icon: false,
+        text: 'Add/Edit citation',
+        onclick: showDialog,
+        //stateSelector: 'span:not([class*="citation"])'
+    });
 
-	editor.addMenuItem('citeaddedit', {
-		icon: false,
-		text: 'AddEdit citation',
-		context: 'insert',
-		onclick: showDialog
-	});
+    editor.addMenuItem('citeaddedit', {
+        icon: false,
+        text: 'AddEdit citation',
+        context: 'insert',
+        onclick: showDialog,
+    });
 
 
 });

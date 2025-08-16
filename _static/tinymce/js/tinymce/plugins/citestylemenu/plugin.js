@@ -1,12 +1,13 @@
 tinymce.PluginManager.add('citestylemenu', function(editor) {
-
+    console.log(editor,'5555555');
     var citesupport = editor.plugins.citesupport.citesupport;
-    
+
     editor.addButton('citestylemenu', {
         type: 'listbox',
         text: 'Citation style',
         icon: false,
         onselect: function (e) {
+            console.log(5555);
             // Style
             var styleContainer = citesupport.editor.getDoc().getElementById('citesupport-style-container');
             if (!styleContainer) {

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>演示：编辑器 &mdash; citeproc-js 1.1.73 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/screen.css?v=425850a2" />
+
+
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=93912719"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/js/global.js?v=537b13e9"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="入门指南" href="setting-up.html" />
+    <link rel="prev" title="演示：动态引用" href="dynamic-editing.html" />
+
+
+
+
+  <script src="_static/tinymce/js/tinymce/tinymce.min.js"></script>
+  <script>
+    tinyMCE.baseURL = '_static/tinymce/js/tinymce'
+    tinymce.init({
+        selector:"textarea",
+        content_css: "_static/css/screen.css",
+        plugins: "noneditable citesupport citeaddedit citestylemenu",
+        toolbar: [ "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+                   "citeaddedit | citestylemenu"
+        ],
+        height: "300"
+    });
+  </script>
+
+
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+          <a href="index.html" class="icon icon-home">
+            citeproc-js
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="acknowledgements.html">致谢</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news/index.html">更新日志</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="demos.html">演示</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="deployments.html">演示：独立参考文献</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dynamic-editing.html">演示：动态引用</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">演示：编辑器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#editor">编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-locally">本地运行</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#requirements">要求</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#local-setup">本地设置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#source-file-overview">源文件概述</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#worker-api">Worker API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="setting-up.html">入门指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">运行处理器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csl-json/markup.html">CSL-JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sys-extensions.html">扩展的 <code class="docutils literal notranslate"><span class="pre">sys</span></code> 函数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="csl-m/index.html">CSL-M：对CSL的扩展</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">citeproc-js</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="demos.html">演示</a></li>
+      <li class="breadcrumb-item active">演示：编辑器</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/editor.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="demo-editor">
+<h1>演示：编辑器<a class="headerlink" href="#demo-editor" title="Link to this heading"></a></h1>
+<p><img alt="CCBYSA" src="_images/cc-by-sa-80x15.png" /> <a class="reference external" href="https://twitter.com/fgbjr">Frank Bennett</a></p>
+<hr class="docutils" />
+<section id="editor">
+<h2>编辑器<a class="headerlink" href="#editor" title="Link to this heading"></a></h2>
+<p><textarea>
+<p>
+此页面展示了 tinyMCE WYSIWYG 编辑器中的动态引用支持。
+此处的文本可供编辑。编辑内容将在页面刷新后保留。
+完全重新加载页面 URL 将恢复此文本。
+</p>
+<p>
+点击工具栏中的"添加/编辑引用"按钮，在当前光标位置添加引用。
+高亮显示引用并再次点击按钮以编辑引用内容。
+要删除引用，可以将其保存为空内容，或以通常方式删除它，
+然后刷新页面以重新格式化任何剩余的引用。
+</p>
+<p>
+使用工具栏中的样式选择器更改引用样式。
+</p>
+</textarea></p>
+<p><button id="more" hidden="true">更多 ...</button></p>
+</section>
+<section id="running-locally">
+<h2>本地运行<a class="headerlink" href="#running-locally" title="Link to this heading"></a></h2>
+<p>与上一页类似，这里的主要目的是为开发人员提供一个完整的工作示例。
+探索其工作原理的好方法是本地运行该页面。以下是设置方法。</p>
+<section id="requirements">
+<h3>要求<a class="headerlink" href="#requirements" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://git-scm.com/">git</a></p></li>
+<li><p><a class="reference external" href="https://nodejs.org/en/">node.js</a></p></li>
+<li><p><a class="reference external" href="https://www.npmjs.com/">npm</a></p></li>
+<li><p><a class="reference external" href="http://www.sphinx-doc.org/en/stable/">Sphinx</a></p></li>
+</ul>
+</section>
+<section id="local-setup">
+<h3>本地设置<a class="headerlink" href="#local-setup" title="Link to this heading"></a></h3>
+<dl>
+<dt>获取仓库</dt><dd><p>克隆 <code class="docutils literal notranslate"><span class="pre">citeproc-js</span></code> 文档项目并进入其顶级目录：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Juris-M/citeproc-js-docs.git<span class="w"> </span>--recursive
+<span class="nb">cd</span><span class="w"> </span>citeproc-js-docs
+</pre></div>
+</div>
+</dd>
+<dt>构建文档</dt><dd><p>以下命令应该可行：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>html
+</pre></div>
+</div>
+</dd>
+<dt>使用 <code class="docutils literal notranslate"><span class="pre">node.js</span></code> 运行服务器</dt><dd><p>构建的页面使用 <code class="docutils literal notranslate"><span class="pre">XMLHttpRequest()</span></code> 调用，因此必须通过
+Web 服务器查看。要使用 <code class="docutils literal notranslate"><span class="pre">node.js</span></code> 运行简单服务器，
+这样的咒语应该可以解决问题：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>http-server
+http-server<span class="w"> </span>_build/html
+</pre></div>
+</div>
+</dd>
+</dl>
+</section>
+</section>
+<section id="source-file-overview">
+<h2>源文件概述<a class="headerlink" href="#source-file-overview" title="Link to this heading"></a></h2>
+<p>由于此演示是作为 Sphinx 页面构建，用于在 ReadTheDocs 上部署，
+源文件有些分散和混合。以下列表应该可以帮助您找到基本要素。</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">_static/tinymce/js/tinymce/plugins/citesupport.js</span></code></dt><dd><p>这是引用支持的核心插件。它启动一个 Web worker
+（来自 <code class="docutils literal notranslate"><span class="pre">classes/citeworker.js</span></code>）运行 <code class="docutils literal notranslate"><span class="pre">citeproc.js</span></code>
+来处理引用的实际格式化，并管理页面更新。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/tinymce/js/tinymce/plugins/citestylemenu.js</span></code></dt><dd><p>这为 tinyMCE 提供了一个用于更改引用样式的菜单。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/tinymce/js/tinymce/plugins/citeaddedit.js</span></code></dt><dd><p>这为演示编辑器提供了基本的引用小部件。
+在生产环境中，您显然会使用
+<em>更高级</em> 的东西。这个插件是实现此功能的地方。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/css/screen.css</span></code></dt><dd><p>这里有一些 CSS 代码与参考文献的布局以及
+引用和脚注的装饰有关。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_templates/layout.html</span></code></dt><dd><p>在此处查看（特别是文件底部）用于启动带有引用支持的 tinyMCE 的咒语。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">substitutions.txt</span></code></dt><dd><p>tinyMCE 安装到的占位符由"editor"替换元素提供。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/data/items</span></code></dt><dd><p>动态编辑演示的几个示例项目，采用 CSL JSON 格式。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/data/locales</span></code></dt><dd><p><a class="reference external" href="https://github.com/citation-style-language/locales">标准 CSL 语言环境</a>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/data/styles</span></code></dt><dd><p>演示中使用的 CSL 样式。"JM" 样式来自
+<a class="reference external" href="https://github.com/juris-m/jm-styles">Juris-M 样式仓库</a>，具有模块化的法律样式支持。
+其余的来自 <a class="reference external" href="https://github.com/citation-style-language/styles/">官方 CSL 仓库</a>，
+它为 <a class="reference external" href="https://www.zotero.org/styles">Zotero 样式</a> 分发站点提供内容。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">_static/data/juris</span></code></dt><dd><p>一组法律样式模块驻留于此。法律引用支持可以轻松扩展到
+世界各地的司法管辖区，通过 <a class="reference external" href="https://juris-m.github.io/editor/">Juris-M 样式编辑器</a>
+（需要 GitHub 账户）。</p>
+</dd>
+</dl>
+</section>
+<section id="worker-api">
+<h2>Worker API<a class="headerlink" href="#worker-api" title="Link to this heading"></a></h2>
+<p>繁重的工作由 CSL 处理器完成，它在单独的线程中作为 Web worker 运行。
+此处仅描述面向文档的 worker 接口：没有必要纠缠 worker 内部本身。
+它唯一的特性是它在引用序列中分配脚注编号（在返回中反映）——
+与文字处理器上下文相反，它假设文档中唯一的脚注是由
+note 样式自动生成的。如果您的上下文并非如此，您将需要
+禁用该行为，并在文档端执行必要的操作以提取真实的脚注编号
+以交付给处理器。</p>
+<p>Worker 由两个方法控制，<code class="docutils literal notranslate"><span class="pre">callInitProcessor()</span></code> 和
+<code class="docutils literal notranslate"><span class="pre">callRegisterCitation()</span></code>，每个方法都有相应的消息和
+返回事件。</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">citesupport.callInitProcessor(styleID,</span> <span class="pre">localeID)</span></code></dt><dd><p>此方法用于页面加载时、样式更改时以及所有引用
+已从文档中移除时。<code class="docutils literal notranslate"><span class="pre">styleID</span></code> 参数是必需的。
+如果未提供 <code class="docutils literal notranslate"><span class="pre">localeID</span></code>，处理器将配置为使用
+<code class="docutils literal notranslate"><span class="pre">en-US</span></code> 语言环境。</p>
+<p><code class="docutils literal notranslate"><span class="pre">citesupport.callInitProcessor</span></code> 方法隐式访问
+<code class="docutils literal notranslate"><span class="pre">config.citationByIndex</span></code> 数组，该数组必须在页面上下文中可访问。
+如果该数组为空，处理器将初始化为不带引用的状态。
+如果该数组包含引用，处理器将初始化为该文档状态，
+并返回一个数组作为 <code class="docutils literal notranslate"><span class="pre">rebuildData</span></code>，用于在文档文本中重建引用。
+每个子数组包含一个引用 ID、一个脚注编号和一个引用字符串。
+例如，如果 <code class="docutils literal notranslate"><span class="pre">styleID</span></code> 是针对 <code class="docutils literal notranslate"><span class="pre">note</span></code> 样式，并且如果
+<code class="docutils literal notranslate"><span class="pre">config.citationByIndex</span></code> 生成引用"Wurzel Gummidge (1990)"和
+"My Aunt Sally (2001)"，则 <code class="docutils literal notranslate"><span class="pre">rebuildData</span></code> 结构将如下所示：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">       </span><span class="s2">&quot;lu7Tu3ki&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;Wurzel Gummidge (1990)&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">       </span><span class="s2">&quot;ko4aNoo9&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;My Aunt Sally (2001)&quot;</span>
+
+<span class="w">    </span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">citesupport.callRegisterCitation(citation,</span> <span class="pre">preCitations,</span> <span class="pre">postCitations)</span></code></dt><dd><p>此方法用于添加或编辑引用。所有三个参数都是必需的。
+<code class="docutils literal notranslate"><span class="pre">citation</span></code> 是如上所述的普通引用对象。
+<code class="docutils literal notranslate"><span class="pre">preCitations</span></code> 和 <code class="docutils literal notranslate"><span class="pre">postCitations</span></code> 是数组的数组，
+其中每个子数组由引用 ID 和脚注编号组成。
+例如，如果要在上述示例中的"Wurzel Gummidge"和"Aunt Sally"引用
+之间插入一个脚注引用，这些将具有以下形式：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">preCitations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;lu7Tu3ki&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;1&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">];</span>
+
+<span class="nx">postCitations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;ko4aNoo9&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;3&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">];</span>
+</pre></div>
+</div>
+<p>注意脚注编号的变化：处理器注册脚注编号用于反向引用，
+但正确脚注编号的维护必须在文档端代码中处理。</p>
+<p><code class="docutils literal notranslate"><span class="pre">citesupport.callRegisterCitation</span></code> 方法从处理器返回两个值：
+<code class="docutils literal notranslate"><span class="pre">citationByIndex</span></code>（如上所述）和 <code class="docutils literal notranslate"><span class="pre">citations</span></code>。
+后者是一个或多个数组的数组，每个数组由引用位置索引、字符串和引用 ID 组成。
+例如，要在"Wurzel Gummidge"和"My Aunt Sally"引用之间插入引用
+"Calvin (1995); Hobbes (2016)"，返回值将如下所示：</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">   </span><span class="p">[</span>
+<span class="w">       </span><span class="mf">1</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;Calvin (1995); Hobbes (2016)&quot;</span><span class="p">,</span>
+<span class="w">       </span><span class="s2">&quot;Ith7eg8T&quot;</span>
+<span class="w">   </span><span class="p">]</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>请注意，返回值可能包含对多个引用的更新。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="dynamic-editing.html" class="btn btn-neutral float-left" title="演示：动态引用" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="setting-up.html" class="btn btn-neutral float-right" title="入门指南" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2016, Frank Bennett.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+
+</html>

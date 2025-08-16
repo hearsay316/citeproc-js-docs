@@ -1,17 +1,28 @@
+/**
+ * TinyMCE插件：citeaddedit
+ * 用于添加和编辑引用的插件
+ */
 tinymce.PluginManager.add('citeaddedit', function(editor) {
     
+    // 获取引用支持对象
     var citesupport = editor.plugins.citesupport.citesupport;
 
+    /**
+     * 根据引用ID获取项目ID列表
+     * @param {string} citationID - 引用的ID
+     * @returns {Array} 包含项目ID的数组
+     */
     function getIDs (citationID) {
         var itemIDs = [];
         var citation = null;
+        // 遍历所有引用，查找匹配的引用ID
         for (var i = 0, ilen = citesupport.config.citationByIndex.length; i < ilen; i++) {
             if (citesupport.config.citationByIndex[i].citationID === citationID) {
                 citation = citesupport.config.citationByIndex[i];
                 break;
             }
         }
-        // Although citation should ALWAYS exist if document data has cleared validation
+        //  如果找到引用，则获取其项目ID列表
         if (citation) {
             itemIDs = citation.citationItems.map(function(obj){
                 return obj.id;
@@ -20,6 +31,10 @@ tinymce.PluginManager.add('citeaddedit', function(editor) {
         return itemIDs;
     }
 
+    /**
+     * 构建菜单项
+     * @returns {Array} 包含菜单项的数组
+     */
     function buildMenu() {
         var menu = [];
         var itemData = [
@@ -44,6 +59,7 @@ tinymce.PluginManager.add('citeaddedit', function(editor) {
                 id: "item05"
             }
         ];
+        // 遍历项目数据，创建菜单项
         for (var i = 0, ilen = itemData.length; i < ilen; i++) {
             menu.push({
                 type: 'checkbox',
