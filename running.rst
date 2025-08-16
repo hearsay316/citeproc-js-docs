@@ -15,7 +15,7 @@ Introduction
 The processor loads as a single ``CSL`` object, and must be instantiated
 before use:
 
-.. code-block:: javascript
+.. code-block:: json
 
    var citeproc = new CSL.Engine(sys, style, lang, forceLang);
 
@@ -84,7 +84,7 @@ a specific meaning in the descriptions below.
     for details on the fields available on an item, and the `CSL-JSON chapter of this manual <./csl-json/markup.html>`_
     for the format of specific field types. Every item must have an ``id``
     and a ``type``.
-    
+
 **citation**
     A citation is a set of one or more items, optionally supplemented by
     locator information, prefixes or suffixes supplied by the user.
@@ -103,7 +103,7 @@ a specific meaning in the descriptions below.
     Uncited items are those meant for inclusion regardless of whether
     they are used in a citation.
 
-    
+
 !!!!!!!!!!!
 updateItems
 !!!!!!!!!!!
@@ -119,7 +119,7 @@ registry:
 
 **idList**
     *Required.* An array of item ``id`` values,
-    which may be number or string: 
+    which may be number or string:
 
     .. code-block:: javascript
 
@@ -140,7 +140,7 @@ Uncited items not listed in the argument are removed from the registry.
 
 **idList**
     *Required.* A JavaScript array of item ``id`` values,
-    which may be number or string: 
+    which may be number or string:
 
     .. code-block:: javascript
 
@@ -155,7 +155,7 @@ maintain citations dynamically in the text of a document. The method
 takes three arguments:
 
 .. code-block:: javascript
-   
+
    var result = citeproc.processCitationCluster(citation, citationsPre, citationsPost);
 
 **citation**
@@ -241,7 +241,7 @@ specified format. Changes made to the registry (necessary for correct
 disambiguation, sorting and other adjustments) are reversed after the
 citation is generated, leaving the registry in its original state.
 
-    
+
 !!!!!!!!!!!!!!!!!!!
 makeCitationCluster
 !!!!!!!!!!!!!!!!!!!
@@ -287,10 +287,10 @@ element —- the array of formatting parameters —- contains the key/value
 pairs shown below (the values shown are the processor defaults in the
 HTML output mode, with registered items "Item-1" and "Item-2").
 
-.. code-block:: javascript
+.. code-block:: json
 
    [
-      { 
+      {
          maxoffset: 0,
          entryspacing: 0,
          linespacing: 0,
@@ -340,7 +340,7 @@ HTML output mode, with registered items "Item-1" and "Item-2").
 *bibstart*
    A string to be appended to the front of the finished bibliography
    string.
-   
+
 *bibend*
    A string to be appended to the end of the finished bibliography
    string.
@@ -494,7 +494,7 @@ In a simple author-date style that italicizes author names, this
 produces the following citation strings. Note that formatting is
 stripped from the ``author-only`` and ``composite`` renderings of the
 author name:
-    
+
 .. code-block:: html
 
     (<i>Kesey</i> 1964)
@@ -558,7 +558,7 @@ and by ``and`` in the ``author-only`` or ``composite`` forms:
 
 .. code-block:: xml
 
-    <style 
+    <style
           xmlns="http://purl.org/net/xbiblio/csl"
           class="in-text"
           version="1.0">
@@ -744,7 +744,3 @@ input examples, is as follows:
    }
 
    var mybib = cp.makeBibliography(myarg);
-
-
-
-

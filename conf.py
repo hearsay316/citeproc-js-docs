@@ -65,7 +65,7 @@ release = u'1.1.73'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -117,8 +117,8 @@ html_theme = 'sphinx_rtd_theme'
 #html_theme_options = {}
 
 def setup(app):
-    app.add_stylesheet('css/screen.css')  # may also be an URL
-    app.add_javascript('js/global.js')
+    app.add_css_file('css/screen.css')  # may also be an URL
+    app.add_js_file('js/global.js')
     
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
